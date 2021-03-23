@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Artefacto: Modelo de an&aacute;lisis de carga de trabajo</title>
+<meta content="Artifact" name="uma.type">
+<meta content="rup_workload_analysis_model" name="uma.name">
+<meta content="Modelo de an&aacute;lisis de carga de trabajo" name="uma.presentationName">
+<meta content="@Type:@Name:@DisplayName" name="uma.category">
+<meta content="WorkProductType:model:Modelo" name="uma.category">
+<meta content="Artifact" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_1yMJAN7YEdmjRZts2c4ZjQ", "{8728060F-9DAD-42AD-B0B6-668C9AEA531D}", "{008164B1-3AC3-47E8-9F93-EE4C36B58A97}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{008164B1-3AC3-47E8-9F93-EE4C36B58A97}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{008164B1-3AC3-47E8-9F93-EE4C36B58A97}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_1yMJAN7YEdmjRZts2c4ZjQ", "{8728060F-9DAD-42AD-B0B6-668C9AEA531D}", "{008164B1-3AC3-47E8-9F93-EE4C36B58A97}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{008164B1-3AC3-47E8-9F93-EE4C36B58A97}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{008164B1-3AC3-47E8-9F93-EE4C36B58A97}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Artefacto: Modelo de an&aacute;lisis de carga de trabajo</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../core.base_rup/workproducts/resources/wrkloadm.jpg"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Este artefacto es un modelo que identifica uno o más perfiles de carga de trabajo estimados para que definan con precisión el estado del sistema de interés donde se pueda llevar a cabo la evaluación del software y/o su entorno operativo.</td>
+</tr>
+<tr>
+<td>Dominios: <a href="./../../core.base_rup/domains/test_FBB424F8.html" guid="_SPvXcN7IEdm8G6yT7-Wdqw">Prueba</a>
+<br>Clases de producto de trabajo: <a href="./../../core.base_rup/workproducttypes/model_C75A0621.html" guid="_mTMIkN7REdmjRZts2c4ZjQ">Modelo</a>
+<br>Ampl&iacute;a: <a href="./../../core.base_rup/workproducts/rup_test_case_8AFEC963.html" guid="{D525758B-EBA2-4F59-9BA6-226820C27ADD}">Caso de prueba</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="modelo de análisis de carga de trabajo" text="definición de artefacto" name="XE_workload_analysis_model__artifact_definition" id="XE_workload_analysis_model__artifact_definition" class="index"></a><a id="Purpose" name="Purpose"></a><a key="modelo de análisis de carga de trabajo" text="finalidad de" name="XE_workload_analysis_model__purpose_of" id="XE_workload_analysis_model__purpose_of" class="index"></a> 
+<ul>
+    <li>
+        Para definir con precisión las condiciones de carga bajo las cuales los elementos del destino de la prueba deben
+        operar en el entorno de destino de configuración.
+    </li>
+    <li>
+        Para definir una carga de trabajo realista representativa que permita valorar con precisión el riesgo de
+        rendimiento.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Responsable:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_test_analyst_4637F9F0.html" guid="{8728060F-9DAD-42AD-B0B6-668C9AEA531D}">Analista de pruebas</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Modificado por:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_test_analyst_4637F9F0.html" guid="{8728060F-9DAD-42AD-B0B6-668C9AEA531D}">Analista de pruebas</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Tareas</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Entrada a:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/tasks/analyze_test_failure_7E42EE55.html" guid="{EA0E3D2C-F87E-49CA-8832-F791886D5741}">Analizar las anomal&iacute;as en la prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/define_test_environment_configurations_605902BA.html" guid="{187268D3-3166-4823-8DD8-5E1112004AC3}">Definir las configuraciones del entorno de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/define_testability_elements_B792858D.html" guid="{CDA7EC1B-2D50-46BE-A3BA-C621EAF22D84}">Definir los elementos de comprobabilidad</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/determine_test_results_630C9EC9.html" guid="{74E51E86-ECAB-4A61-9A88-FD358EE6F2B1}">Determinar resultados de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/implement_test_35C1B0AA.html" guid="{BC805E79-736B-42D5-BDC1-B95E7D002312}">Implementar la prueba</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Salida de:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/tasks/define_test_details_2B6BD36F.html" guid="{1F825D50-70B1-48BA-B99F-010F6B44B77B}">Definir detalles de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Uso del proceso</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">Análisis y diseño</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/design_components_13B33BFC.html" guid="{9C683674-97C1-4AEE-8DB0-9514AEFF698E}">Componentes de diseño</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_workload_analysis_model_26476156.html" guid="_r5gT1EocEdqrjq4i3fchvA">Modelo de análisis de carga de trabajo</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/deployment_7AEEEFEA.html" guid="{1A85DC2F-36E6-4D1C-ACF0-6658CE7108A0}">Despliegue</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/manage_acceptance_test_for_custom_install_60E767DE.html" guid="_64Ee0DK4EdqHc6VRvq68Uw">Gestionar la prueba de aceptación para una instalación personalizada</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_workload_analysis_model_CFFC52EA.html" guid="_Rzb38UoeEdqrjq4i3fchvA">Modelo de análisis de carga de trabajo</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/deployment_7AEEEFEA.html" guid="{1A85DC2F-36E6-4D1C-ACF0-6658CE7108A0}">Despliegue</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/manage_acceptance_test_3F0A2A1D.html" guid="_tASIQDK7EdqseP6pgOfC6g">Gestionar la prueba de aceptación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_workload_analysis_model_14CAA60B.html" guid="_FKgokUoeEdqrjq4i3fchvA">Modelo de análisis de carga de trabajo</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">Prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/validate_build_stability_72BD9103.html" guid="{0AE0042B-034C-4296-9FA0-D9DCC61FC7B4}">Validar la estabilidad de la compilación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_workload_analysis_model_9C231806.html" guid="_CSvwhhi2Edq_uI8xTPML6g">Modelo de análisis de carga de trabajo</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">Prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/verify_test_approach_A743008A.html" guid="{7BD514AF-19F9-408F-8279-309BD153C157}">Verificar el enfoque de prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_workload_analysis_model_4EE75D9A.html" guid="_CTmsJxi2Edq_uI8xTPML6g">Modelo de análisis de carga de trabajo</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">Prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/improve_test_assets_1C99FFB9.html" guid="{CD77CBDA-CC13-4593-BB81-41AF3FF7A84C}">Mejorar los activos de prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_workload_analysis_model_C020A072.html" guid="_CUdnwxi2Edq_uI8xTPML6g">Modelo de análisis de carga de trabajo</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">Prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/test_and_evaluate_4D17BD6A.html" guid="{93B7D625-C83A-4EFB-9772-B88F2EB02CE2}">Probar y evaluar</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_workload_analysis_model_EEBB8BC1.html" guid="_CWqAJRi2Edq_uI8xTPML6g">Modelo de análisis de carga de trabajo</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">Prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/achieve_acceptable_mission_18DE9944.html" guid="{5DA9C9E9-1538-4433-8B57-B28667D67514}">Alcanzar una misión aceptable</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_workload_analysis_model_3B9AA8D7.html" guid="_PYah8ksZEdqlNo9QEt4izQ">Modelo de análisis de carga de trabajo</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Descripci&oacute;n principal</th><td class="sectionTableCell">Los perfiles de carga de trabajo que componen el modelo de análisis de carga de trabajo &nbsp;representan las condiciones
+necesarias que deben simularse contra los elementos del destino de la prueba debajo de una o más configuraciones de entorno
+de prueba.&nbsp;Estas se determinan habitualmente analizando las características anticipadas o existentes del actor, las
+estadísticas de la empresa del usuario (casos de uso), etc. <!--EndFragment--></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Esquematizaci&oacute;n breve</th><td class="sectionTableCell"><a id="BriefOutline" name="BriefOutline"></a><a key="modelo de análisis de carga de trabajo" text="breve esquema de" name="XE_workload_analysis_model__brief_outline_of" id="XE_workload_analysis_model__brief_outline_of" class="index"></a> 
+<p>
+    <b>1. Introducción</b>
+</p>
+<blockquote>
+    <p>
+        Identifica la finalidad, los antecedentes y los objetivos de la prueba de rendimiento dentro de este proyecto.
+    </p>
+</blockquote>
+<p>
+    <b>2. Atributos y variables del sistema</b>
+</p>
+<blockquote>
+    <p>
+        Identifica los atributos y las variables del sistema que identifican de manera exclusiva la carga de trabajo del
+        sistema que se está modelando.
+    </p>
+</blockquote>
+<p>
+    <b>4. Definiciones de actor</b>
+</p>
+<blockquote>
+    <p>
+        Identifica las clases de clientes externos cuyos casos de ejemplo de caso de uso deberán modelarse para simular /
+        emular las cargas en el sistema que se somete a prueba. Además, esta sección identifica la proporción que supone
+        para cualquier actor la carga de una prueba de rendimiento.
+    </p>
+</blockquote>
+<p>
+    <b>7. Atributos del actor</b>
+</p>
+<blockquote>
+    <p>
+        Identifica los atributos y las variables de cada actor que identifican de manera exclusiva las diferentes
+        características de los clientes externos del sistema. Para cada actor, identifica información como por ejemplo
+        humano o no humano, velocidad de entrada de datos, tiempo de pensamiento, estilo de la transacción, complejidad de
+        la transacción y patrones de comportamiento que caracterizan la variabilidad de la interacción del usuario con el
+        sistema.
+    </p>
+</blockquote>
+<p>
+    <b>6. Perfil de trabajo del actor</b>
+</p>
+<blockquote>
+    <p>
+        Identifica los casos de ejemplo de caso de uso que ejecuta un actor y el porcentaje de tiempo o proporción de
+        esfuerzo que emplea el actor que ejecuta los casos de ejemplo de caso de uso para llevar a cabo sus
+        responsabilidades empresariales totales.
+    </p>
+</blockquote>
+<p>
+    <b>3. Perfil de carga de trabajo</b>
+</p>
+<blockquote>
+    <p>
+        Para un determinado perfil, identifica el número de clientes externos que se simulan / emulan durante la prueba,
+        incluyendo el número, tipo y distribución de las transacciones. Un perfil puede definirse en términos de "carga
+        máxima", "carga media", etc.
+    </p>
+</blockquote>
+<p align="left">
+    <b>5. Medidas y criterios</b>
+</p>
+<blockquote>
+    <p align="left">
+        Identifica las medidas y los criterios que deben utilizarse para evaluar la consecución satisfactoria de los
+        objetivos de rendimiento identificados. Las medidas normalmente incluyen límites de tiempos de respuesta o
+        capacidad de rendimiento.
+    </p>
+</blockquote>
+<p>
+    <b>8. Requisitos de emulación de terminal remoto</b>
+</p>
+<blockquote>
+    <p>
+        Identifica los requisitos y las restricciones que deben tenerse en cuenta a la hora de crear una configuración de
+        entorno de prueba que sea aceptable para implementar y ejecutar las pruebas de rendimiento.
+    </p>
+</blockquote></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Ilustraciones	</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Informes</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../extend.formal_resources/guidances/reports/test_design_specification_C7516DBB.html" guid="2.814781091755941E-306">Test Design Specification</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Personalizaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Opciones de representaci&oacute;n</th><td class="sectionTableCell"><a id="Tailoring" name="Tailoring"></a> 
+<p>
+    Es posible que se deba modificar el modelo de análisis de carga de trabajo (contenido y formato) para que satisfaga las
+    necesidades de estándares internos o externos, directrices, etc. Opcionalmente, algunos aspectos del modelo de análisis
+    de carga de trabajo pueden encapsularse en el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_test_plan_53712941.html" guid="{B95CA9FA-A00E-4C6C-AA16-133297812CC0}">plan de
+    prueba</a>&nbsp;
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Listas de comprobaci&oacute;n</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/checklists/workload_analysis_model_7BD173BB.html" guid="3.8638768315454073E-305">Modelo de análisis de carga de trabajo</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/checklists/test_case_3D3B8089.html" guid="4.184028082950642E-305">Caso de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Conceptos</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/performance_testing_37A31809.html" guid="8.027577129450698E-306">Prueba de rendimiento</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/workload_analysis_model_6436F5D3.html" guid="2.7672246217039647E-305">Modelo de análisis de carga de trabajo</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/equivalence_class_analysis_F89FE998.html" guid="3.8675740383428907E-305">Análisis de clase de equivalencia</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/test_case_81FD1D9F.html" guid="1.3981505661923931E-304">Caso de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

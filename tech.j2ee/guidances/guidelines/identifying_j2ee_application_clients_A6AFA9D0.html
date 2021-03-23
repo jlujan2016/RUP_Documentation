@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Identificaci&oacute;n de clientes de aplicaci&oacute;n J2EE</title>
+<meta content="Guideline" name="uma.type">
+<meta content="identifying_j2ee_application_clients" name="uma.name">
+<meta content="Identificaci&oacute;n de clientes de aplicaci&oacute;n J2EE" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.2221823675598937E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.2221823675598937E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Identificaci&oacute;n de clientes de aplicaci&oacute;n J2EE</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la forma en que identificar y modelar los clientes de aplicación que se necesitan para una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identificar elementos de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h2>
+    Introducción
+</h2>
+<p>
+    Esta directriz se centra en identificar clientes de aplicación. En la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_client_3499CC99.html" guid="8.333388171077014E-306">Directriz de producto de trabajo: cliente de aplicación</a> encontrará guías adicionales
+    sobre los clientes de aplicación.
+</p>
+<h2>
+    Identificación de clientes de aplicación
+</h2>
+<p>
+    Los clientes de aplicación normalmente se identifican como parte del proceso de definición de la arquitectura global de
+    una aplicación J2EE distribuida. Un cliente de aplicación se identifica cuando hay una necesidad de una aplicación de
+    escritorio autónoma. Algunos ejemplos típicos son:
+</p>
+<ul>
+    <li>
+        Aplicaciones para administrar sistemas o aplicaciones J2EE.
+    </li>
+    <li>
+        Aplicaciones de clientes pesados que precisan un mayor control sobre la experiencia de usuario de la que es posible
+        con una interfaz basada en la web.
+    </li>
+</ul>
+<h3>
+    Comparación entre clientes de aplicación J2EE y clientes autónomos
+</h3>
+<p>
+    En general, es preferible un cliente de aplicación J2EE a una aplicación Java autónoma, por las siguientes razones:
+</p>
+<ul>
+    <li>
+        Un cliente de aplicación J2EE tiene acceso a los servicios de autenticación J2EE. De esta forma se ahorra el
+        desarrollar código de autenticación exclusivo, como el que se necesita para iniciar una sesión.
+    </li>
+    <li>
+        Para que una aplicación Java autónoma acceda a un EJB buscando su nombre mediante la utilización de JNDI, debe
+        conocer el nombre JNDI del bean. Un cliente de aplicación J2EE puede utilizar nombres diferentes y correlacionar
+        nombres con EJB mediante descriptores de despliegue.
+    </li>
+    <li>
+        Los clientes de aplicación J2EE son más portables que los clientes de aplicación Java, en que en general se pueden
+        desplegar en cualquier entorno J2EE compatible.<br />
+    </li>
+</ul>
+<h3>
+    Modelado de clientes de aplicación
+</h3>
+<p>
+    Puesto que un cliente de aplicación es en general una parte lógica importante del sistema, se recomienda considerarla
+    como un <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">Producto de trabajo: diseño de subsistema</a> y modelarlo apropiadamente.
+    Esto es, modelarla como un subsistema, estereotipo &lt;&lt;ApplicationClient&gt;&gt;, con el estereotipo implicando
+    todas las características de una aplicación de cliente.<br />
+</p>
+<p>
+    Puesto que una aplicación de cliente es un programa de ejecución concurrente, también puede aparecer en la Vista de
+    proceso y en la Vista de despliegue. <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/describing_the_run-time_architecture_for_j2ee_applications_58C0C0A2.html" guid="1.7390519818410197E-305">Directriz: descripción de la arquitectura de tiempo de ejecución para aplicaciones
+    J2EE</a> y <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/describing_distribution_for_j2ee_applications_93B5A232.html" guid="2.0306406686133254E-306">Directriz: descripción de la distribución para aplicaciones J2EE</a>.
+</p>
+<p>
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">Producto de trabajo: diseño de subsistema</a> y las directrices
+    relacionadas, que proporcionan consejos sobre el modelado y los fundamentos en el diseño de subsistemas. Un módulo J2EE
+    puede desplegar clientes de aplicación. Consulte la sección &nbsp;<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">Directriz: módulo J2EE</a> para obtener más información.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,1174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Tarea: An&aacute;lisis de la operaci&oacute;n</title>
+<meta content="Task" name="uma.type">
+<meta content="operation_analysis" name="uma.name">
+<meta content="An&aacute;lisis de la operaci&oacute;n" name="uma.presentationName">
+<meta content="Discipline:rup_analysis_design_discipline:An&aacute;lisis y dise&ntilde;o" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="Dise&ntilde;ador">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_cnJO4N9yEdmvvvV6NEU6eA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_ydt62NnmEdmO6L4XMImrsA", "_cnJO4N9yEdmvvvV6NEU6eA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_cnJO4N9yEdmvvvV6NEU6eA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_IY0NkAISEdqTna4sZVFRow", "_ydt62NnmEdmO6L4XMImrsA", "_cnJO4N9yEdmvvvV6NEU6eA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_cnJO4N9yEdmvvvV6NEU6eA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', true, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_cnJO4N9yEdmvvvV6NEU6eA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: An&aacute;lisis de la operaci&oacute;n</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta tarea se define cómo realizar la transformación de una descripción de comportamiento a nivel de sistema en una estructura de sistema sin detallar.</td>
+</tr>
+<tr>
+<td>Disciplinas: <a href="./../../core.base_rup/disciplines/rup_analysis_design_discipline_29760231.html" guid="_ydt62NnmEdmO6L4XMImrsA">Análisis y diseño</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><ul>
+    <li>
+        Elaborar el texto de flujo de sucesos de caja negra para cada operación del sistema de cada caso de uso
+        arquitectónicamente significativo en secuencias de pasos de caja blanca, hablando en términos de acciones y
+        colaboraciones de subsistema.
+    </li>
+    <li>
+        Aumentar&nbsp; estas descripciones de caja blanca con decisiones de localidad, decisiones de proceso, decisiones de
+        trabajador y requisitos presupuestados de caja blanca.
+    </li>
+    <li>
+        Crear interacciones de subsistema en diagramas de colaboración o secuencia (en el modelo de análisis), basadas en
+        los pasos de caja blanca.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Realizador principal:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Dise&ntilde;ador</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Otras actividades adicionales que realiza:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Arquitecto de software</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_analysis_model_76C3B70C.html" guid="{98EA224C-36F6-46E6-AB36-2999382B58B3}">Modelo de an&aacute;lisis</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">Modelo de caso de uso</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_operation_AD3B6CA6.html" guid="_vGkssN90EdmvvvV6NEU6eA">Operaci&oacute;n</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_operation_realization_FE1CAA1E.html" guid="_FViCMN91EdmvvvV6NEU6eA">Realizaci&oacute;n de una operaci&oacute;n</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_analysis_model_76C3B70C.html" guid="{98EA224C-36F6-46E6-AB36-2999382B58B3}">Modelo de an&aacute;lisis</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">Modelo de caso de uso</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_operation_AD3B6CA6.html" guid="_vGkssN90EdmvvvV6NEU6eA">Operaci&oacute;n</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_operation_realization_FE1CAA1E.html" guid="_FViCMN91EdmvvvV6NEU6eA">Realizaci&oacute;n de una operaci&oacute;n</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Uso del proceso</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">Análisis y diseño</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/define_a_candidate_architecture_A3651DA3.html" guid="{71ADFE9A-34A0-41BD-8A17-BEA3210E2BBD}">Definir una arquitectura candidata</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/operation_analysis_60073BB6.html" guid="_RJM6HkocEdqrjq4i3fchvA">Análisis de la operación</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">Análisis y diseño</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/refine_the_architecture_F40FA195.html" guid="{F2160C54-F666-4736-9982-FC7F58F15FAD}">Perfeccionar la arquitectura</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/operation_analysis_834CABD.html" guid="_Tzxp8EocEdqrjq4i3fchvA">Análisis de la operación</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">Análisis y diseño</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/analyze_behavior_59C89065.html" guid="{DAFB461E-9ADB-4849-8285-B7E3E72BDB43}">Analizar el comportamiento</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/operation_analysis_F9BB2A10.html" guid="_gqW60EocEdqrjq4i3fchvA">Análisis de la operación</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell">En esta tarea, el diseñador inicia la transformación de una descripción de comportamiento a nivel de sistema en una
+estructura de sistema sin detallar (y en sus interacciones asociadas) y comportamiento a nivel de subsistema.</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableSingleCell">
+<div class="stepHeading">Elaborar texto de caja negra en pasos de caja blanca de subsistema</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    En este paso, se toma el modelo de caso de uso y se elabora el texto de flujo de sucesos de caja negra (que es una
+    propiedad de cada caso de uso) en secuencias de pasos de caja blanca (que hablan en términos de acciones e
+    interacciones de subsistema, utilizando los subsistemas y las colaboraciones esquematizadas del análisis de la
+    arquitectura del sistema). Si esta tarea se realiza en un subsistema para el que ya se han especificado las
+    operaciones, el punto de partida serán las operaciones y podrá ir directamente al apartado <a href="#Initial White-Box Step Expansion">Expansión de los pasos de caja blanca iniciales</a>.
+</p>
+<p>
+    Por ejemplo, si había utilizado una descripción tabular como en la tabla, Ejemplo de flujo de sucesos de caja negra:
+</p>
+<div align="center">
+    <center>
+        <table width="86%" border="1">
+            <tbody>
+                <tr>
+                    <td width="200%" colspan="5">
+                        <p align="center">
+                            <font face="Arial" size="3"><b><i>Caso de uso del sistema &lt;nombre&gt;</i></b></font>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="middle" width="10%">
+                        <font face="Arial" size="2"><b>Paso</b></font>
+                    </td>
+                    <td align="middle" width="18%">
+                        <font face="Arial" size="2"><b>Acción del actor</b></font>
+                    </td>
+                    <td align="middle" width="28%">
+                        <font face="Arial" size="2"><b>Descripción del paso de caja negra</b></font>
+                    </td>
+                    <td align="middle" width="44%">
+                        <font face="Arial" size="2"><b>Requisitos presupuestados de caja negra</b></font>
+                    </td>
+                    <td align="middle" width="44%">
+                        <font face="Arial" size="2"><b>Operación del sistema</b></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="middle" width="10%">
+                        <font face="Arial" size="2"><b><i>1</i></b></font>
+                    </td>
+                    <td width="18%">
+                        <font face="Arial" size="2"><span                         style="mso-bidi-font-size: 12.0pt; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">(identificador
+                        de acción del actor): descripción de lo que hace el actor; por ejemplo, "AA1: este caso de uso
+                        empieza cuando el <b>Asistente</b> pulsa el botón Nueva venta"</span></font>
+                    </td>
+                    <td width="28%">
+                        <font face="Arial" size="2"><span                         style="mso-bidi-font-size: 12.0pt; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">(identificador
+                        de paso de caja negra): descripción de la respuesta del sistema (sin revelar la estructura interna
+                        del sistema); por ejemplo, "BBS1: el sistema muestra el asistente de nuevas ventas y las pantallas
+                        del cliente y activa el escáner"</span></font>
+                    </td>
+                    <td width="44%">
+                        <font face="Arial" size="2"><span                         style="mso-bidi-font-size: 12.0pt; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">(identificador
+                        de requisitos de paso de caja negra): descripción de cómo el sistema debe realizar este paso; por
+                        ejemplo, en términos de tiempo o velocidad de respuesta, por ejemplo, "SUP36.2: el tiempo de
+                        respuesta total es de 0,5 segundos"</span></font>
+                    </td>
+                    <td width="44%">
+                        <font face="Arial" size="2"><span                         style="mso-bidi-font-size: 12.0pt; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">(identificador
+                        de operación del sistema): nombre de la operación del sistema que se invoca para este paso; por
+                        ejemplo, "&lt;&lt;operación&gt;&gt; Iniciar nueva venta" (del diagrama de contexto, definido en la
+                        <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/define_system_context_D2899FFE.html" guid="_Ub-SUN90EdmvvvV6NEU6eA">Tarea: Definir el contexto del sistema</a>)</span></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="middle" width="10%">
+                        <font face="Arial" size="2"><b><i>2</i></b></font>
+                    </td>
+                    <td width="18%">
+                        &nbsp;
+                    </td>
+                    <td width="28%">
+                        &nbsp;
+                    </td>
+                    <td width="44%">
+                        &nbsp;
+                    </td>
+                    <td width="44%">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td align="middle" width="10%">
+                        <font face="Arial" size="2"><b><i>3</i></b></font>
+                    </td>
+                    <td width="18%">
+                        &nbsp;
+                    </td>
+                    <td width="28%">
+                        &nbsp;
+                    </td>
+                    <td width="44%">
+                        &nbsp;
+                    </td>
+                    <td width="44%">
+                        &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+</div>
+<p class="tableheading" align="center">
+    Ejemplo de flujo de sucesos de caja negra
+</p>
+<p align="left">
+    Si esta tarea se realiza en un subsistema para el que sólo se han han definido las operaciones
+</p>
+<p align="left">
+    A continuación, una operación del sistema (paso de caja negra) se expande en uno o varios pasos de caja blanca, cada
+    uno de los cuales es realizado por un subsistema especificado. El diseñador se guía por el trabajo que ha realizado el
+    arquitecto (durante el análisis de la arquitectura) en la selección de subsistemas e interacciones que se utilizan para
+    describir los pasos de caja blanca. Tenga en cuenta que ahora el análisis continúa bajo la dirección de la operación
+    del sistema; es decir, trate el siguiente paso de realización como la realización de cada operación del sistema (y no
+    como la noción más abstracta de paso de caja negra de casos de uso del sistema). &nbsp;
+</p>
+<h4 align="left">
+    <a id="Initial White-Box Step Expansion" name="Initial White-Box Step Expansion">Expansión de los pasos de caja blanca
+    iniciales</a>
+</h4>
+<p align="left">
+    Los pasos de caja blanca de cada operación del sistema (fondo gris en la tabla siguiente) se capturan (inicialmente) en
+    el modelo de análisis, asociados con la correspondiente operación del sistema como su realización. Los pasos de caja
+    blanca no se almacenan con el caso de uso del sistema (aquí se muestran así simplemente a modo de ilustración), pero
+    pueden rastrearse desde el caso de uso del sistema a través de la operación del sistema. <!--StartFragment -->
+</p>
+<div align="center">
+    <table width="88%" border="1">
+        <tbody>
+            <tr>
+                <td width="100%" colspan="10">
+                    <p align="center">
+                        <font face="Arial" size="3"><b><i>Caso de uso del sistema &lt;nombre&gt;</i></b></font>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="10%">
+                    <font face="Arial" size="2"><b>Operación del sistema</b></font>
+                </td>
+                <td align="middle" width="10%">
+                    <font face="Arial" size="2"><b>Paso</b></font>
+                </td>
+                <td align="middle" width="18%">
+                    <font face="Arial" size="2"><b>Acción del actor</b></font>
+                </td>
+                <td align="middle" width="28%">
+                    <font face="Arial" size="2"><b>Descripción del paso de caja negra</b></font>
+                </td>
+                <td align="middle" width="44%">
+                    <font face="Arial" size="2"><b>Requisitos presupuestados del paso de caja negra</b></font>
+                </td>
+                <td align="middle" width="44%" bgcolor="#CCCCCC">
+                    <font face="Arial" size="2"><b>Descripción del paso de caja blanca del subsistema</b></font>
+                </td>
+                <td align="middle" width="44%" bgcolor="#CCCCCC">
+                    <font face="Arial" size="2"><b>Requisitos presupuestados del paso de caja blanca</b></font>
+                </td>
+                <td align="middle" width="44%">
+                    <font face="Arial" size="2"><b>Localidad</b></font>
+                </td>
+                <td align="middle" width="44%">
+                    <font face="Arial" size="2"><b>Proceso</b></font>
+                </td>
+                <td align="middle" width="44%">
+                    <font face="Arial" size="2"><b>Trabajador</b></font>
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="10%" rowspan="3">
+                    <p align="left">
+                        <font face="Arial" size="2"><span>(identificador&nbsp;de operación del sistema): nombre de la
+                        operación&nbsp;del sistema que se invoca para este paso; por ejemplo, "&lt;&lt;operación del
+                        sistema&gt;&gt; Iniciar nueva venta" (del diagrama de contexto)</span></font>
+                    </p>
+                </td>
+                <td align="middle" width="10%" rowspan="3">
+                    <font face="Arial" size="2"><b><i>1</i></b></font>
+                </td>
+                <td width="18%" rowspan="3">
+                    <font face="Arial" size="2"><span>(identificador de acción del actor): descripción de lo que hace el
+                    <b>actor</b>; p.ej., "AA1: este caso de uso empieza cuando el <b>Asistente</b> pulsa el botón Nueva
+                    venta"</span></font>
+                </td>
+                <td width="28%" rowspan="3">
+                    <font face="Arial" size="2"><span>(identificador de paso de caja negra): descripción de la respuesta
+                    del sistema (sin revelar la estructura interna del sistema); p.ej., "BBS1: el sistema muestra el
+                    asistente de nuevas ventas y las pantallas del cliente y activa el escáner"</span></font>
+                </td>
+                <td width="44%" rowspan="3">
+                    <font face="Arial" size="2"><span>(identificador de requisitos de paso de caja negra): descripción de
+                    cómo el sistema debe realizar este paso; por ejemplo, en términos de tiempo o velocidad de respuesta,
+                    p.ej. "SUP36.2: el tiempo de respuesta total es de 0,5 segundos"</span></font>
+                </td>
+                <td width="44%" bgcolor="#CCCCCC">
+                    <font face="Arial" size="2">(identificador de paso de caja blanca): descripción de una acción realizada
+                    por un <b>subsistema</b> (parte de realización del paso de caja negra) en forma de entrada, proceso,
+                    salida; p.ej., "WBS1: la <b>Interfaz de punto de venta</b> borra la transacción, muestra las pantallas
+                    de nuevas ventas y solicita que el <b>Proceso de pedidos</b> inicie una lista de ventas"</font>
+                </td>
+                <td width="44%" bgcolor="#CCCCCC">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td width="44%" bgcolor="#CCCCCC">
+                    <font face="Arial" size="2">(identificador de paso de caja blanca):...</font>
+                </td>
+                <td width="44%" bgcolor="#CCCCCC">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td width="44%" bgcolor="#CCCCCC">
+                    &nbsp;
+                </td>
+                <td width="44%" bgcolor="#CCCCCC">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="10%">
+                    &nbsp;
+                </td>
+                <td align="middle" width="10%">
+                    <font face="Arial" size="2"><b><i>2</i></b></font>
+                </td>
+                <td width="18%">
+                    &nbsp;
+                </td>
+                <td width="28%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%" bgcolor="#CCCCCC">
+                    &nbsp;
+                </td>
+                <td width="44%" bgcolor="#CCCCCC">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="10%">
+                    &nbsp;
+                </td>
+                <td align="middle" width="10%">
+                    <font face="Arial" size="2"><b><i>3</i></b></font>
+                </td>
+                <td width="18%">
+                    &nbsp;
+                </td>
+                <td width="28%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%" bgcolor="#CCCCCC">
+                    &nbsp;
+                </td>
+                <td width="44%" bgcolor="#CCCCCC">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p class="tableheading" align="center">
+    Ejemplo de flujo de sucesos de caja blanca
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Aumentar los pasos de caja blanca con decisiones de localidad, proceso y trabajo</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    La descripción se aumenta más con decisiones de localidad, decisiones de proceso y decisiones de trabajador. La
+    decisión de localidad sitúa, con una cierta latitud (dado el nivel de abstracción de la localidad), dónde se realizan
+    los pasos de caja blanca del subsistema. La decisión de proceso sólo es necesaria cuando se decide que (al menos para
+    este paso) el subsistema es "pasivo"; es decir, sus operaciones se invocan mediante procesos externos al subsistema. Un
+    subsistema "activo" puede responder de forma autónoma, utilizando procesos internos al subsistema. De nuevo, el
+    diseñador del sistema se guía por el trabajo del arquitecto del sistema (para producir el modelo de localidad y el
+    modelo de proceso). En las decisiones de trabajador, adecuadas cuando se realizan asignaciones a recursos humanos, se
+    empieza identificando las entidades organizativas y luego los recursos de trabajadores del sistema necesarios para una
+    operación del sistema.
+</p>
+<p>
+    Si el análisis muestra que un paso de caja blanca requiere más de una localidad (o proceso), descompóngalo en pasos más
+    pequeños, de modo que cada uno de ellos pueda asociarse a una única localidad (y proceso, cuando sea apropiado). Esta
+    descomposición puede tener importantes ramificaciones arquitectónicas (podría requerir refactorizar el subsistema) y
+    debe examinarse en profundidad con el equipo o la persona con el rol de arquitecto del sistema. <!--StartFragment -->
+</p>
+<div align="center">
+    <table width="88%" border="1">
+        <tbody>
+            <tr>
+                <td width="100%" colspan="10">
+                    <p align="center">
+                        <font face="Arial" size="3"><b><i>Caso de uso del sistema &lt;nombre&gt;</i></b></font>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="10%">
+                    <p>
+                        <font face="Arial" size="2"><b>Operación del&nbsp;</b></font><font face="Arial"                         size="2"><b>sistema&nbsp;</b></font>
+                    </p>
+                </td>
+                <td align="middle" width="10%">
+                    <font face="Arial" size="2"><b>Paso</b></font>
+                </td>
+                <td align="middle" width="18%">
+                    <font face="Arial" size="2"><b>Acción del actor</b></font>
+                </td>
+                <td align="middle" width="28%">
+                    <font face="Arial" size="2"><b>Descripción del paso de caja negra</b></font>
+                </td>
+                <td align="middle" width="44%">
+                    <font face="Arial" size="2"><b>Requisitos presupuestados del paso de caja negra</b></font>
+                </td>
+                <td align="middle" width="44%">
+                    <font face="Arial" size="2"><b>Descripción del paso de caja blanca del subsistema</b></font>
+                </td>
+                <td align="middle" width="44%">
+                    <font face="Arial" size="2"><b>Requisitos presupuestados del paso de caja blanca</b></font>
+                </td>
+                <td align="middle" width="44%">
+                    <font face="Arial" size="2"><b>Localidad</b></font>
+                </td>
+                <td align="middle" width="44%">
+                    <font face="Arial" size="2"><b>Proceso</b></font>
+                </td>
+                <td align="middle" width="44%">
+                    <font face="Arial" size="2"><b>Trabajador</b></font>
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="10%" rowspan="3">
+                    <p align="left">
+                        <font face="Arial" size="2"><span>(identificador&nbsp;de operación del sistema): nombre de la
+                        operación&nbsp;del sistema que se invoca para este paso; por ejemplo, "&lt;&lt;operación del
+                        sistema&gt;&gt; Iniciar nueva venta" (del diagrama de contexto)</span></font>
+                    </p>
+                </td>
+                <td align="middle" width="10%" rowspan="3">
+                    <font face="Arial" size="2"><b><i>1</i></b></font>
+                </td>
+                <td width="18%" rowspan="3">
+                    <font face="Arial" size="2"><span>(identificador de acción del actor): descripción de lo que hace el
+                    <b>actor</b>; por ejemplo, "AA1: este caso de uso empieza cuando el <b>Asistente</b> pulsa el botón
+                    Nueva venta"</span></font>
+                </td>
+                <td width="28%" rowspan="3">
+                    <font face="Arial" size="2"><span>(identificador de paso de caja negra): descripción de la respuesta
+                    (sin revelar la estructura interna del sistema); por ejemplo, "BBS1: el sistema muestra el asistente de
+                    nuevas ventas y las pantallas del cliente y activa el escáner"</span></font>
+                </td>
+                <td width="44%" rowspan="3">
+                    <font face="Arial" size="2"><span>(identificador de requisitos de paso de caja negra): descripción de
+                    cómo el sistema debe realizar este paso; por ejemplo, en términos de tiempo o velocidad de respuesta,
+                    por ejemplo, "SUP36.2: el tiempo de respuesta total es de 0,5 segundos"</span></font>
+                </td>
+                <td width="44%">
+                    <font face="Arial" size="2">(identificador de paso de caja blanca): descripción de una acción realizada
+                    por un <b>subsistema</b> (parte de realización del paso de caja negra) en forma de entrada, proceso,
+                    salida; por ejemplo, "WBS1: la <b>Interfaz de punto de venta</b> borra la transacción, muestra las
+                    pantallas de nuevas ventas y solicita que el <b>Proceso de pedidos</b> inicie una lista de
+                    ventas"</font>
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    <font face="Arial" size="2">Identificador de localidad</font>
+                </td>
+                <td width="44%">
+                    <font face="Arial" size="2">Identificador de proceso</font>
+                </td>
+                <td width="44%">
+                    <font face="Arial" size="2">Identificador del trabajador del sistema u organización</font>
+                </td>
+            </tr>
+            <tr>
+                <td width="44%">
+                    <font face="Arial" size="2">(identificador de paso de caja blanca):...</font>
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="10%">
+                    &nbsp;
+                </td>
+                <td align="middle" width="10%">
+                    <font face="Arial" size="2"><b><i>2</i></b></font>
+                </td>
+                <td width="18%">
+                    &nbsp;
+                </td>
+                <td width="28%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="10%">
+                    &nbsp;
+                </td>
+                <td align="middle" width="10%">
+                    <font face="Arial" size="2"><b><i>3</i></b></font>
+                </td>
+                <td width="18%">
+                    &nbsp;
+                </td>
+                <td width="28%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p align="center">
+    Ejemplo de flujo de sucesos de caja blanca aumentado
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Asignar requisitos presupuestados de caja blanca</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    A continuación, asigne requisitos presupuestados de paso de caja negra a los pasos de caja blanca. Esta asignación
+    ayuda a determinar los requisitos de rendimiento tanto para el subsistema como para la localidad asociada. En el caso
+    de un subsistema pasivo, es una entrada en el análisis de latencia del proceso que realiza la invocación (que podría
+    tener otras responsabilidades).
+</p>
+<div align="center">
+    <table width="88%" border="1">
+        <tbody>
+            <tr>
+                <td width="100%" colspan="10">
+                    <p align="center">
+                        <font face="Arial" size="3"><b><i>Caso de uso del sistema &lt;nombre&gt;</i></b></font>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="10%">
+                    <font face="Arial" size="2"><b>Operación del&nbsp;sistema</b></font>
+                </td>
+                <td align="middle" width="10%">
+                    <font face="Arial" size="2"><b>Paso</b></font>
+                </td>
+                <td align="middle" width="18%">
+                    <font face="Arial" size="2"><b>Acción del actor</b></font>
+                </td>
+                <td align="middle" width="28%">
+                    <font face="Arial" size="2"><b>Descripción del paso de caja negra</b></font>
+                </td>
+                <td align="middle" width="44%">
+                    <font face="Arial" size="2"><b>Requisitos presupuestados del paso de caja negra</b></font>
+                </td>
+                <td align="middle" width="44%">
+                    <font face="Arial" size="2"><b>Descripción del paso de caja blanca del subsistema</b></font>
+                </td>
+                <td align="middle" width="44%">
+                    <font face="Arial" size="2"><b>Requisitos presupuestados del paso de caja blanca</b></font>
+                </td>
+                <td align="middle" width="44%">
+                    <font face="Arial" size="2"><b>Localidad</b></font>
+                </td>
+                <td align="middle" width="44%">
+                    <font face="Arial" size="2"><b>Proceso</b></font>
+                </td>
+                <td align="middle" width="44%">
+                    <font face="Arial" size="2"><b>Trabajador</b></font>
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="10%" rowspan="3">
+                    <p align="left">
+                        <font face="Arial" size="2"><span>(identificador&nbsp;de operación del sistema): nombre de la
+                        operación&nbsp;del sistema que se invoca para este paso; por ejemplo, "&lt;&lt;operación del
+                        sistema&gt;&gt; Iniciar nueva venta" (del diagrama de contexto)</span></font>
+                    </p>
+                </td>
+                <td align="middle" width="10%" rowspan="3">
+                    <font face="Arial" size="2"><b><i>1</i></b></font>
+                </td>
+                <td width="18%" rowspan="3">
+                    <font face="Arial" size="2"><span>(identificador de acción del actor): descripción de lo que hace el
+                    <b>actor</b>; por ejemplo, "AA1: este caso de uso empieza cuando el <b>Asistente</b> pulsa el botón
+                    Nueva venta"</span></font>
+                </td>
+                <td width="28%" rowspan="3">
+                    <font face="Arial" size="2"><span>(identificador de paso de caja negra): descripción de la respuesta
+                    del sistema (sin revelar la estructura interna del sistema); por ejemplo, "BBS1: el sistema muestra el
+                    asistente de nuevas ventas y las pantallas del cliente y activa el escáner"</span></font>
+                </td>
+                <td width="44%" rowspan="3">
+                    <font face="Arial" size="2"><span>(identificador de requisitos de paso de caja negra): descripción de
+                    cómo el sistema debe realizar este paso; por ejemplo, en términos de tiempo o velocidad de respuesta,
+                    por ejemplo, "SUP36.2: el tiempo de respuesta total es de 0,5 segundos"</span></font>
+                </td>
+                <td width="44%">
+                    <font face="Arial" size="2">(identificador de paso de caja blanca): descripción de una acción realizada
+                    por un <b>subsistema</b> (parte de realización del paso de caja negra) en forma de entrada, proceso,
+                    salida; por ejemplo, "WBS1: la <b>Interfaz de punto de venta</b> borra la transacción, muestra las
+                    pantallas de nuevas ventas y solicita que el <b>Proceso de pedidos</b> inicie una lista de
+                    ventas"</font>
+                </td>
+                <td width="44%">
+                    <font face="Arial" size="2"><span>(identificador de requisitos de paso de caja blanca): descripción de
+                    cómo el subsistema debe realizar este paso; por ejemplo, en términos de tiempo o velocidad de
+                    respuesta, por ejemplo, "SUP36.2.1: tiempo transcurrido 0,16 segundos"</span></font>
+                </td>
+                <td width="44%">
+                    <font face="Arial" size="2">Identificador de localidad (en el modelo de localidad)</font>
+                </td>
+                <td width="44%">
+                    <font face="Arial" size="2">Identificador de proceso (en el modelo de proceso)</font>
+                </td>
+                <td width="44%">
+                    <font face="Arial" size="2">Identificador del trabajador del sistema u organización</font>
+                </td>
+            </tr>
+            <tr>
+                <td width="44%">
+                    <font face="Arial" size="2">(identificador de paso de caja blanca):...</font>
+                </td>
+                <td width="44%">
+                    <font face="Arial" size="2"><span>(identificador de requisitos de paso de caja
+                    blanca):...</span></font>
+                </td>
+                <td width="44%">
+                    <font face="Arial" size="2">Identificador de localidad</font>
+                </td>
+                <td width="44%">
+                    <font face="Arial" size="2">Identificador de proceso</font>
+                </td>
+                <td width="44%">
+                    <font face="Arial" size="2">Identificador del trabajador del sistema u organización</font>
+                </td>
+            </tr>
+            <tr>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="10%">
+                    &nbsp;
+                </td>
+                <td align="middle" width="10%">
+                    <font face="Arial" size="2"><b><i>2</i></b></font>
+                </td>
+                <td width="18%">
+                    &nbsp;
+                </td>
+                <td width="28%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="10%">
+                    &nbsp;
+                </td>
+                <td align="middle" width="10%">
+                    <font face="Arial" size="2"><b><i>3</i></b></font>
+                </td>
+                <td width="18%">
+                    &nbsp;
+                </td>
+                <td width="28%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+                <td width="44%">
+                    &nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p align="center">
+    Ejemplo de requisitos presupuestados de flujo de sucesos de caja blanca asignados
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Ordenar pasos de caja blanca por subsistema</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    En este paso, se recopilan y se juntan todos los pasos de caja blanca de cada subsistema (es decir, los pasos de caja
+    blanca que <i>pertenecen</i> a cada subsistema). Esto se hace para preparar la identificación de las operaciones del
+    <i>sub</i>sistema (que son para el subsistema lo que las operaciones del sistema son para el sistema), examinando las
+    descripciones de paso de caja blanca del subsistema. Al igual que con la identificación de las operaciones del sistema,
+    <i>podría</i> no haber una operación del subsistema exclusiva para cada paso de caja blanca. Tenga en cuenta también
+    que los pasos de caja blanca se agrupan por operación del sistema. Por ejemplo, también se podría hacer en forma de
+    tabla, agrupados por subsistema:
+</p>
+<p class="tableheading" align="center">
+    Ejemplo de inspección de casos de uso del subsistema
+</p>
+<div align="center">
+    <center>
+        <table width="85%" border="1">
+            <tbody>
+                <tr>
+                    <td colspan="8">
+                        <p align="center">
+                            <font face="Arial" size="3"><b><i>Subsistema &lt;nombre&gt;</i></b></font>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="middle" width="17%">
+                        <font face="Arial" size="2"><b>Operación del sistema</b></font>
+                    </td>
+                    <td align="middle" width="17%">
+                        <font face="Arial" size="2"><b>Localidad</b></font>
+                    </td>
+                    <td align="middle" width="17%">
+                        <font face="Arial" size="2"><b>Proceso</b></font>
+                    </td>
+                    <td align="middle" width="17%">
+                        <font face="Arial" size="2"><b>Trabajador</b></font>
+                    </td>
+                    <td align="middle" width="17%">
+                        <font face="Arial" size="2"><b>Descripción del paso de caja blanca del subsistema</b></font>
+                    </td>
+                    <td align="middle" width="17%">
+                        <font face="Arial" size="2"><b>Operación del subsistema</b></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="17%" rowspan="6">
+                        <p align="center">
+                            &lt;nombre&gt;
+                        </p>
+                    </td>
+                    <td align="middle" width="17%">
+                        <font face="Arial" size="2">Identificador de localidad</font>
+                    </td>
+                    <td align="middle" width="17%">
+                        <font face="Arial" size="2">Identificador de proceso</font>
+                    </td>
+                    <td align="middle" width="17%">
+                        <font face="Arial" size="2">Identificador del trabajador del sistema u organización</font>
+                    </td>
+                    <td width="17%">
+                        <font face="Arial" size="2">(identificador de paso de caja blanca): descripción de una acción
+                        realizada por un <b>subsistema</b> (parte de realización del paso de caja negra) en forma de
+                        entrada, proceso, salida</font>
+                    </td>
+                    <td width="17%" bgcolor="#c0c0c0">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%" bgcolor="#c0c0c0">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%" bgcolor="#c0c0c0">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%" bgcolor="#c0c0c0">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%" bgcolor="#c0c0c0">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%">
+                        &nbsp;
+                    </td>
+                    <td width="17%" bgcolor="#c0c0c0">
+                        &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+</div>
+<p class="tableheading" align="center">
+    Ejemplo de inspección de casos de uso de operación
+</p>
+<p>
+    En el caso de "sistemas de sistemas", donde se mantiene un modelo de caso de uso para cada sistema/subsistema, esta
+    agrupación es una guía sólida para la identificación de casos de uso del subsistema: puede identificar inicialmente un
+    caso de uso del subsistema para cada operación del sistema en que participa el subsistema. Es posible que observe que
+    las secuencias de pasos de caja blanca iguales para algunos de estos casos de uso; por tanto, pueden agregarse, y de
+    este modo se puede realizar un único caso de uso del subsistema para satisfacer las necesidades de varias operaciones
+    del sistema.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Perfeccionar las colaboraciones esquematizadas para cada operaci&oacute;n del sistema</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    A partir de los pasos de caja blanca, se crean interacciones de subsistema en diagramas de colaboración o secuencia (en
+    el modelo de análisis). Esto perfecciona el trabajo realizado previamente por el arquitecto del sistema. En esta fase,
+    las colaboraciones podrían ser todavía abstractas, quizás sólo se identifiquen enlaces o mensajes a un nivel abstracto.
+    Sin embargo, este trabajo proporciona una perspectiva del acoplamiento y la cohesión de los subsistemas. Esto
+    perfecciona la expansión de los pasos de caja blanca realizada anteriormente (consulte el apartado <a href="#Initial White-Box Step Expansion">Expansión de los pasos de caja blanca iniciales</a>).
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Evaluar el an&aacute;lisis</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    El diseñador del sistema debe solicitar una revisión informal al final de esta tarea para garantizar que todos los
+    problemas emergentes se registran y planifican para su resolución.<br />
+    <br />
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Conceptos</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/derived_requirements_736A0AC0.html" guid="_khKN4OM9EdmaZcY4PeqVxA">Requisitos derivados</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/locality_E2133437.html" guid="_qmDvkOM9EdmaZcY4PeqVxA">Localidad</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/supplementary_reqs_flowdown_69E8E8A9.html" guid="_vt06oOM9EdmaZcY4PeqVxA">Divulgación de requisitos suplementarios</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/use_case_flowdown_6BF482DB.html" guid="_6SxgEOM9EdmaZcY4PeqVxA">Divulgación de casos de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

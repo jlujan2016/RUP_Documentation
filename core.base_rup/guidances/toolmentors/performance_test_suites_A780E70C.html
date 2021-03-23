@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Creaci&oacute;n de conjuntos de aplicaciones de pruebas de rendimiento con Rational TestManager</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="performance_test_suites" name="uma.name">
+<meta content="Creaci&oacute;n de conjuntos de aplicaciones de pruebas de rendimiento con Rational TestManager" name="uma.presentationName">
+<meta content="Tool:rup_test_manager_tool:Rational TestManager" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational TestManager" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{FC006EA3-BFB8-4B16-B23A-753A15126A67}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{FC006EA3-BFB8-4B16-B23A-753A15126A67}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{FC006EA3-BFB8-4B16-B23A-753A15126A67}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{FC006EA3-BFB8-4B16-B23A-753A15126A67}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Creaci&oacute;n de conjuntos de aplicaciones de pruebas de rendimiento con Rational TestManager</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo utilizar Rational TestManager para crear un conjunto de aplicaciones de prueba de rendimiento.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_test_manager_tool_2C79A4DC.html" guid="{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}">Rational TestManager</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_the_test_implementation_AAB73625.html" guid="{ED9DF0C0-744A-443A-AEBA-604382E05A5F}">Estructurar la implementación de la prueba</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_test_suite_94F58DEC.html" guid="{1C759E0D-B364-4095-A7CF-CD9E39301689}">Implementar el conjunto de aplicaciones de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    Visión general
+</h3>
+<p>
+    Un conjunto de aplicaciones muestra una representación jerárquica de la carga de trabajo y la población de usuarios que
+    se emulan en una prueba de rendimiento. Muestra elementos como, por ejemplo, grupos de usuarios, los scripts que
+    ejecuta cada grupo y el número o porcentaje de verificadores virtuales asignado a cada grupo.
+</p>
+<p>
+    Esta guía de la herramienta se aplica a plataformas Microsoft&reg; Windows 98/2000/NT 4.0.
+</p>
+<h4>
+    Pasos de la herramienta
+</h4>
+<p>
+    Para diseñar conjuntos de aplicaciones de prueba de rendimiento automatizadas utilizando TestManager, efectúe los pasos
+    siguientes:
+</p>
+<ol type="1">
+    <li>
+        <a href="#Create a suite">Crear un conjunto de aplicaciones</a>
+    </li>
+    <li>
+        <a href="#Insert user groups into a suite">Insertar grupos de usuarios en un conjunto de aplicaciones</a>
+    </li>
+    <li>
+        <a href="#Insert test scripts into a suite">Insertar scripts de prueba en un conjunto de aplicaciones</a>
+    </li>
+</ol>
+<h3>
+    1.&nbsp;<a id="Create a suite" name="Create a suite">Crear un conjunto de aplicaciones</a>
+</h3>
+<p>
+    Un conjunto de aplicaciones le permite ejecutar scripts de prueba y, lo que es más importante, emular las acciones de
+    usuarios reales que acceden a la aplicación multiusuario. Un conjunto de aplicaciones puede ser tan simple como un
+    verificador virtual que ejecuta un script de prueba, o tan complejo como millares de verificadores virtuales que
+    ejecutan diversos scripts de prueba.
+</p>
+<p>
+    Puede crear un conjunto de aplicaciones de rendimiento utilizando uno de los procedimientos siguientes:
+</p>
+<ul>
+    <li>
+        Utilizando el asistente para el conjunto de aplicaciones de prueba de rendimiento
+    </li>
+    <li>
+        Basándose en una sesión de Robot existente
+    </li>
+    <li>
+        Utilizando un conjunto de aplicaciones de prueba de rendimiento en blanco
+    </li>
+</ul>
+<p>
+    En esta guía de la herramienta se describe la utilización de un conjunto de aplicaciones de prueba de rendimiento en
+    blanco.
+</p>
+<p>
+    Para crear el conjunto de aplicaciones:
+</p>
+<ol type="1">
+    <li>
+        Pulse <b>Archivo &gt; Nuevo conjunto de aplicaciones</b>.
+    </li>
+    <li>
+        Pulse <b>Conjunto de aplicaciones de prueba de rendimiento en blanco</b>.
+    </li>
+</ol>
+<p>
+    <img height="16" alt="icono de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte el tema de
+    la ayuda en línea de TestManager que trata sobre la <i>creación de un nuevo conjunto de aplicaciones</i>.
+</p>
+<h3>
+    2.&nbsp;<a id="Insert user groups into a suite" name="Insert user groups into a suite">Insertar grupos de usuarios en
+    un conjunto de aplicaciones</a>
+</h3>
+<p>
+    Los grupos de usuarios son el bloque de compilación básico para todos los conjuntos de aplicaciones de prueba de
+    rendimiento. Un grupo de usuarios es una recopilación de verificadores virtuales que llevan a cabo el mismo conjunto de
+    actividades. Todos los conjuntos de aplicaciones de prueba de rendimiento deben contener uno o más grupos de usuarios,
+    fijos o escalables.
+</p>
+<p>
+    Por lo general, los grupos de usuarios escalables permiten más flexibilidad que los grupos de usuarios fijos. Con los
+    grupos de usuarios escalables, un solo conjunto de aplicaciones de prueba de rendimiento puede emular un número
+    diferente de usuarios en cada ejecución de prueba. Si el conjunto de aplicaciones de prueba contiene grupos fijos, y
+    desea ejecutar pruebas con números diferentes de verificadores virtuales, debe modificar el número de verificadores
+    virtuales de cada grupo de usuarios del conjunto de aplicaciones en el tiempo de ejecución de la prueba.
+</p>
+<p>
+    Para insertar un grupo de usuarios en un conjunto de aplicaciones abierto:
+</p>
+<ol type="1">
+    <li>
+        Pulse <b>Conjunto de aplicaciones &gt; Insertar &gt; Grupo de usuarios</b>.
+    </li>
+    <li>
+        Elija entre grupos de usuarios <b>Fijos</b> o <b>Escalables</b>.
+    </li>
+    <li>
+        Establezca el Número de usuarios (para un grupo de usuarios fijo) o el Porcentaje (para un grupo de usuarios
+        escalable). Si el porcentaje para un grupo de usuarios escalable es inferior al 100 %, se debe añadir otro grupo de
+        usuarios (el porcentaje de la suma total de todos los grupos de usuarios debe ser 100).
+    </li>
+</ol>
+<h3>
+    3.&nbsp;&nbsp;&nbsp;<a id="Insert test scripts into a suite" name="Insert test scripts into a suite">Insertar scripts
+    de prueba en un conjunto de aplicaciones</a>
+</h3>
+<p>
+    En un conjunto de aplicaciones abierto, efectúe los pasos siguientes:
+</p>
+<ol>
+    <li>
+        Seleccione los grupos de usuarios que van a ejecutar el script de prueba.
+    </li>
+    <li>
+        Pulse <b>Conjunto de aplicaciones &gt; Insertar &gt; Script de prueba</b>.
+    </li>
+    <li>
+        Cuando aparezca el diálogo Ejecutar propiedades del script de prueba, se pueden establecer las propiedades
+        siguientes:
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            <p>
+                <b>Origen de script de prueba</b> - Elija el tipo de script (GUI, VU, VB, Java) que desea insertar.
+            </p>
+        </li>
+        <li>
+            <p>
+                <b>Consulta</b> - Especifique las características de los scripts que desea insertar en el conjunto de
+                aplicaciones. Si el almacén de datos contiene un gran número de scripts de prueba, compile una consulta
+                para que sólo se muestren los scripts que satisfagan ciertos criterios (por ejemplo, creados por una
+                persona determinada o modificados a partir de una fecha concreta).
+            </p>
+        </li>
+        <li>
+            <p>
+                <b>Condición previa</b> - Selecciónelo para especificar si la terminación satisfactoria de un script de
+                prueba es una condición previa para el resto de la secuencia del conjunto de aplicaciones. Significa que el
+                script de prueba se debe haber completado satisfactoriamente para que se ejecuten elementos subordinados de
+                la secuencia del conjunto de aplicaciones.
+            </p>
+        </li>
+        <li>
+            <p>
+                <b>Iteraciones</b> - Especifique la frecuencia con la que se deben repetir los scripts seleccionados.
+            </p>
+        </li>
+        <li>
+            <p>
+                <b>Método de planificación</b> - Especifique el retardo, si procede, antes del inicio del script, o bien,
+                especifique otros sucesos que desencadenen la ejecución del script.
+            </p>
+        </li>
+    </ul>
+</blockquote>
+<ol start="4">
+    <li>
+        Una vez que haya establecido las propiedades que desea, seleccione el <b>nombre de la prueba que insertar</b> y
+        pulse <b>Aceptar</b>.
+    </li>
+</ol>
+<p>
+    <b>Nota</b>: No puede mezclar scripts de prueba de GUI y VU en un grupo de usuarios. Sin embargo, puede mezclar otros
+    tipos de script de prueba.
+</p>
+<p>
+    <img height="16" alt="icono de Ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte los temas
+    de la ayuda en línea de TestManager que tratan sobre:
+</p>
+<ul>
+    <li>
+        <i>Definición de scripts de prueba</i>
+    </li>
+    <li>
+        <i>Ejecución de propiedades del script de prueba</i>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

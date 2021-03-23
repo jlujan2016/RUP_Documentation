@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Creaci&oacute;n de aplicaciones web con el UML</title>
+<meta content="Guideline" name="uma.type">
+<meta content="building_web_applications_with_the_uml" name="uma.name">
+<meta content="Creaci&oacute;n de aplicaciones web con el UML" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "4.559124609104376E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.559124609104376E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.559124609104376E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Creaci&oacute;n de aplicaciones web con el UML</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz, el análisis de guión de uso avanza un paso en el diseño de aplicaciones web.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Clase de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a id="References" name="References">Referencias</a>
+</h3>
+<p>
+    Los libros y los documentos siguientes son referencias para estas directrices:
+</p>
+<ul>
+    <li>
+        <i>Building Web Applications with UML,</i> de Jim Conallen [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">CONA99</a>]
+    </li>
+    <li>
+        La&nbsp;<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/modeling_web_application_architectures_with_uml_54011136.html" guid="_TACPgEWgEdqT6eCCQuiftQ"><u><font color="#0000ff">Documentación: Modeling Web Application Architectures with
+        UML</font></u></a>
+    </li>
+</ul>
+<h3>
+    <a id="Elaborate on Use-Case Analysis" name="Elaborate on Use-Case Analysis">Elaborar un análisis de guión de uso</a>
+</h3>
+<p>
+    La diferencia, en comparación con lo que se encuentra en <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">Tarea:
+    Análisis de guión de uso</a> es que las clases de límite están más centradas en un objetivo concreto. Los objetos de
+    estas clases tienen una vida corta, y cualquier estado de cliente (en páginas web) necesita gestionarse explícitamente
+    con mecanismos específicos. Por ejemplo, las páginas de Microsoft Active Server utilizan "cookies" como índice en una
+    correlación del estado de todos los clientes activos actualmente.
+</p>
+<p>
+    Asimismo, cuando lea la especificación de un guión de uso, se aplica lo siguiente:&nbsp;
+</p>
+<ul>
+    <li>
+        Cualquier mención a una página web se traduce en una clase de límite.&nbsp;
+    </li>
+    <li>
+        Cualquier mención un hiperenlace se traduce en una asociación de una clase de límite a otras clases de límite o
+        clase de controlador.&nbsp;
+    </li>
+    <li>
+        Los verbos o descripciones de procesos tienden a correlacionar con clases de controlador.&nbsp;
+    </li>
+    <li>
+        Los nombres se correlacionan con clases de entidad.&nbsp;
+    </li>
+</ul>
+<p>
+    La clase de límite, a través de la cual se inicia la comunicación, habla a una clase de controlador. La clase de
+    controlador no responderá típicamente a través de la misma instancia de esta clase de límite.
+</p>
+<h3>
+    <a id="Using Interaction Diagrams" name="Using Interaction Diagrams">Utilización de diagramas de interacción</a>
+</h3>
+<p>
+    Cuando el guión de uso está en marcha, los casos de ejemplo se pueden describir con diagramas de secuencia. Esto ayuda
+    a validar la existencia de objetos de análisis contra un caso de ejemplo de un guión de uso. Si se descubre que los
+    objetos de análisis no participan en ninguno de los casos de ejemplo, serán sospechosos y deberán volverse a evaluar.
+    El riesgo es que si profundiza demasiado, los diagramas resultan grandes y difíciles de gestionar. Para evitar esto,
+    concéntrese en casos de ejemplo breves y separados, e incluya sólo objetos de controlador de límite y principal y
+    objetos de entidad.
+</p>
+<p>
+    Recuerde que los objetos de límite en las aplicaciones web tienen una duración limitada. Una clase de límite puede, no
+    obstante, crear varias instancias durante la ejecución de un caso de ejemplo, lo que significa que diferentes objetos
+    de límite crean instancias desde la misma clase del diagrama.
+</p>
+<p>
+    El actor en un diagrama de secuencia de nivel de análisis interactúa con un objeto de límite. Se envía un mensaje de
+    navegación desde el actor hasta el objeto de límite.
+</p>
+<h3>
+    <a id="Creating Initial Design Classes" name="Creating Initial Design Classes">Creación de las clases de diseño
+    inicial</a>
+</h3>
+<h4>
+    Diseños de clases de límite iniciales
+</h4>
+<p>
+    Una clase de límite se puede correlacionar con una clase de página de cliente.
+</p>
+<p>
+    Si la clase de límite implica la entrada de información, habitualmente se asociará con un formulario (o un formulario
+    web) a través de la agregación. Un formulario se puede modelar como una clase anidada de la página cliente, ya que todo
+    su ciclo de vida está gobernado por la página cliente. Los formularios siempre tienen una relación enviar a la página
+    servidor, que procesa los valores del formulario, que finalmente conduce a una nueva página de cliente devuelta.
+</p>
+<p>
+    Si la interfaz de usuario requiere cualquier comportamiento dinámico en el cliente, la forma más sencilla de cumplirlo
+    puede ser mediante el uso de HTML dinámico en el cliente. En el modelo de diseño, esto suele aparecer como operaciones
+    en la página cliente. Las operaciones en la página cliente se correlacionan directamente con las funciones de scripts
+    de Java. Los atributos de la página Java se correlacionan directamente con la página de variables de ámbito de la
+    página. Los manejadores de sucesos HTML dinámicos se capturan como valores etiquetados.
+</p>
+<p>
+    Si la interfaz de usuario tiene un comportamiento muy sofisticado, debe considerar la asociación de un applet con la
+    clase de límite, mediante una agregación.
+</p>
+<p>
+    Si la arquitectura se basa en un sistema de objeto distribuido (como un RMI, IIOP o DCOM), la página de cliente puede
+    hacer referencia a interfaces a componentes que comunican directamente con el servidor mediante RMI, IIOP o DCOM,
+    superando el HTTP. Estos tipos de relaciones están habitualmente estereotipadas &lt;&lt;rmi&gt;&gt;,
+    &lt;&lt;iiop&gt;&gt; o &lt;&lt;dcom&gt;&gt; para indicar al diseñador las áreas donde se producirá el tráfico de red,
+    donde se pueden producir los cuellos de botella.
+</p>
+<h4>
+    Diseños de clases de entidad iniciales
+</h4>
+<p>
+    En el diseño de una aplicación web, la única diferencia sobre clases de entidad es, si el objeto se encuentra en el
+    ámbito de la página cliente, que el objeto de entidad correlacionará con un objeto de java script.
+</p>
+<h4>
+    Diseños de clases de controlador iniciales
+</h4>
+<p>
+    Las clases de control se correlacionan con páginas servidor. Los controladores expresan y coordinan la lógica
+    empresarial y coordinan otras lógicas. Habitualmente se encuentran en el servidor. Muchos objetos de controlador son
+    responsables de construir páginas cliente (esencialmente, producen HTML como salida principal). Los objetos de
+    controlador pueden interactuar con recursos del lado del servidor, como bases de datos, componentes de nivel medio,
+    monitores de transacción, etc. &nbsp;
+</p>
+<p>
+    Las clases de controlador habitualmente correlacionan con páginas web con scripts del servidor (página de servidor
+    activo, páginas de servidor java).
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

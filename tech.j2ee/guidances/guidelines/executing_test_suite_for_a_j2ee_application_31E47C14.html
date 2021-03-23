@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Ejecuci&oacute;n de un conjunto de pruebas para una aplicaci&oacute;n J2EE</title>
+<meta content="Guideline" name="uma.type">
+<meta content="executing_test_suite_for_a_j2ee_application" name="uma.name">
+<meta content="Ejecuci&oacute;n de un conjunto de pruebas para una aplicaci&oacute;n J2EE" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "5.236825716449536E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="5.236825716449536E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Ejecuci&oacute;n de un conjunto de pruebas para una aplicaci&oacute;n J2EE</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se describen algunas consideraciones adicionales que hay que tener en cuenta al realizar pruebas de integración de componentes J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/execute_test_suite_492795DE.html" guid="{6B420194-5EB7-4A12-A061-09FAA5DC18DE}">Ejecutar el conjunto de aplicaciones de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Pruebas de integración de subsistemas
+</h3>
+<p>
+    Para las pruebas de integración de subsistemas, la <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_build_BA336272.html" guid="{53728CD9-FA47-4B58-A443-E9F9DC196916}">compilación</a> a probar (empaquetada en&nbsp;uno o más&nbsp;<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">módulos J2EE</a>) se debe ensamblar en una&nbsp;<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_436A58D2.html" guid="1.6057780853529704E-306">aplicación J2EE</a> y, a continuación, se debe desplegar en el entorno de pruebas.
+</p>
+<p>
+    Para obtener más información sobre las compilaciones de aplicaciones J2EE, consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/builds_for_j2ee_applications_5F120A77.html" guid="4.964235556359333E-307">Directriz: compilaciones para aplicaciones J2EE.</a> .
+</p>
+<p>
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_applications_38E5D5D5.html" guid="3.347498143656868E-305">Directriz: ensamblaje de aplicaciones J2EE</a> para obtener más información sobre la
+    forma en que ensamblar aplicaciones J2EE.
+</p>
+<p>
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/deploying_j2ee_modules_and_applications_62A4A967.html" guid="5.3908533897796765E-306">Directriz: despliegue de módulos y aplicaciones J2EE</a> para obtener más información
+    sobre la forma en que desplegar aplicaciones J2EE.
+</p>
+<h3>
+    Pruebas de integración de sistemas
+</h3>
+<p>
+    Para las pruebas de integración de sistemas, la <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_build_BA336272.html" guid="{53728CD9-FA47-4B58-A443-E9F9DC196916}">compilación</a> a probar (empaquetada en una <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_436A58D2.html" guid="1.6057780853529704E-306">aplicación J2EE</a>) se debe desplegar en un entorno de pruebas.
+</p>
+<p>
+    Para obtener más información sobre las compilaciones de aplicaciones J2EE, consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/builds_for_j2ee_applications_5F120A77.html" guid="4.964235556359333E-307">Directriz: compilaciones para aplicaciones J2EE.</a> .
+</p>
+<p>
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/deploying_j2ee_modules_and_applications_62A4A967.html" guid="5.3908533897796765E-306">Directriz: despliegue de módulos y aplicaciones J2EE</a> para obtener más información
+    sobre la forma en que desplegar aplicaciones J2EE.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

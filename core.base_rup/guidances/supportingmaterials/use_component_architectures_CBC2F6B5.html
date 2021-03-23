@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Material de soporte: Arquitecturas de componentes</title>
+<meta content="SupportingMaterial" name="uma.type">
+<meta content="use_component_architectures" name="uma.name">
+<meta content="Arquitecturas de componentes" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_ydt62NnmEdmO6L4XMImrsA", "1.2991947604188333E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "__yoNMDIcEdqDs_9ORT1Rig", "1.2991947604188333E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_IY0NkAISEdqTna4sZVFRow", "_ydt62NnmEdmO6L4XMImrsA", "1.2991947604188333E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.2991947604188333E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Arquitecturas de componentes</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../core.base_rup/guidances/supportingmaterials/resources/pract_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">La práctica de desarrollar y utilizar arquitecturas de componentes ayuda a gestionar la complejidad y potencia la reutilización porque las arquitecturas de componentes se basan en componentes modulares, sustituibles e independientes.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/disciplines/rup_analysis_design_discipline_29760231.html" guid="_ydt62NnmEdmO6L4XMImrsA">Análisis y diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<p align="center">
+    <img height="187" alt="Imagen de arquitecturas de componentes" src="./../../../core.base_rup/guidances/supportingmaterials/resources/softarch.gif" width="312" />
+</p>
+<p class="picturetext">
+    Arquitectura <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/component-based_development_cbd_1E319741.html" guid="_yCcUGdnmEdmO6L4XMImrsA">basada en componentes</a> <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/architecture_122F321F.html" guid="_x7SjMNnmEdmO6L4XMImrsA"></a> con <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/layer_F3814B38.html" guid="_yMbWgNnmEdmO6L4XMImrsA">capas</a>
+</p>
+<h2>
+    <a id="What are Component Architectures" name="What are Component Architectures">¿Qué significa arquitectura de
+    componentes</a>?
+</h2>
+<p>
+    Una arquitectura de componentes es una arquitectura basada en componentes sustituibles, como se describe en <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/component_A2E2B3B1.html" guid="3.524150980437479E-305">Concepto: Componente</a>. Como las arquitecturas de componentes se basan en componentes
+    modulares, sustituibles e independientes, facilitan la gestión de la complejidad y potencian la reutilización .
+</p>
+<h2>
+    <a id="Architectural Emphasis" name="Architectural Emphasis">Énfasis en la arquitectura</a>
+</h2>
+<p>
+    Los guiones de uso conducen Rational Unified Process (RUP) de principio a fin en todo el ciclo vital, pero las
+    actividades de diseño se centran en la noción de <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/architecture_122F321F.html" guid="_x7SjMNnmEdmO6L4XMImrsA">arquitectura</a> de sistema y, en el caso de sistemas de software intensivo, en
+    arquitectura de software. El objetivo principal de las primeras iteraciones del proceso, sobre todo en la fase de la
+    elaboración, es producir y validar una <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/software_architecture_2B63D9D.html" guid="_yV0jFdnmEdmO6L4XMImrsA">arquitectura de software</a><i>,</i> que en el ciclo de desarrollo inicial adopta la
+    forma de un prototipo de arquitectura ejecutable que evoluciona gradualmente hasta convertirse en el sistema final en
+    las últimas iteraciones.
+</p>
+<p>
+    Una arquitectura ejecutable quiere decir una implementación parcial del sistema construido para demostrar funciones y
+    propiedades seleccionadas del sistema, en concreto las que satisfacen requisitos no funcionales. El objetivo de una
+    arquitectura ejecutable es mitigar riesgos relacionados con el rendimiento, el resultado, la capacidad, la fiabilidad y
+    otros, de modo que todas las posibilidades funcionales del sistema se vayan añadiendo en la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/construction_2AA70F9.html" guid="_yEPD3dnmEdmO6L4XMImrsA">fase de construcción</a> con una base sólida, sin miedo a que se produzcan rupturas.
+</p>
+<p>
+    Si desea una introducción a la noción de arquitectura, y sobre todo arquitectura de software, y una explicación de por
+    qué es crucial esta noción, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/software_architecture_4269A354.html" guid="3.066252221588648E-305">Concepto:
+    Arquitectura de software</a>.
+</p>
+<p>
+    RUP proporciona un modo sistemático y metódico para diseñar, desarrollar y validar una arquitectura. Se ofrecen
+    plantillas para la descripción de arquitectura en cuanto a conceptos de varias vistas de la arquitectura, y para la
+    captura de estilos de arquitectura, reglas de diseño y restricciones. La disciplina de <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">análisis y diseño</a> contiene actividades específicas con el objetivo de
+    identificar restricciones de arquitectura y elementos significativos en arquitectura, además de directrices sobre cómo
+    realizar elecciones de arquitectura. El proceso de gestión muestra cómo la planificación de las primeras iteraciones
+    toma en cuenta el diseño de una arquitectura y la resolución de los riesgos técnicos más importantes. Consulte la
+    disciplina de <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/project_management_FC6669AF.html" guid="{EA0C1D32-E39A-4D96-B956-E178DB776A96}">gestión de proyectos</a> y todas las actividades relacionadas con el <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Rol: Arquitecto de software</a> para obtener más información.
+</p>
+<p>
+    La arquitectura es importante por diversos motivos:
+</p>
+<ul>
+    <li>
+        Le permite obtener y retener control intelectual sobre el proyecto para gestionar su complejidad y conservar la
+        integridad del sistema.
+    </li>
+</ul>
+<blockquote>
+    <p>
+        Un sistema complejo es más que la suma de sus partes, más que una sucesión de pequeñas decisiones tácticas
+        independientes. Debe tener una estructura coherente, unificadora que organice dichas partes sistemáticamente y debe
+        proporcionar reglas precisas sobre cómo ampliar el sistema sin que su complejidad escape al entendimiento humano.
+    </p>
+    <p>
+        La arquitectura establece los medios para conseguir una comunicación y una compresión mejoradas en todo el proyecto
+        al establecer un conjunto común de referencias, un vocabulario común con el que debatir problemas de diseño.
+    </p>
+</blockquote>
+<ul>
+    <li>
+        Es una base eficaz para la reutilización a gran escala.
+    </li>
+</ul>
+<blockquote>
+    <p>
+        Al definir con claridad los componentes principales y las interfaces importantes entre ellos, una arquitectura
+        permite reflexionar acerca de la reutilización, tanto la reutilización interna (que es la identificación de partes
+        comunes) como la reutilización externa (que es la incorporación de componentes estándar, ya fabricados). No
+        obstante, también permite la reutilización a mayor escala: la reutilización de la arquitectura en el contexto de
+        una línea de productos que trata diferentes funciones en un dominio común.
+    </p>
+</blockquote>
+<ul>
+    <li>
+        Proporciona una base para la gestión de proyectos.
+    </li>
+</ul>
+<blockquote>
+    <p>
+        La planificación y los asuntos de personal se organizan siguiendo las líneas de los componentes principales. Un
+        equipo de arquitectura unido y pequeño es el que toma las decisiones estructurales fundamentales, no se
+        distribuyen. El desarrollo, en cambio, sí se reparte en un conjunto de pequeños equipos, cada uno responsable de
+        una o varias partes del sistema.
+    </p>
+</blockquote>
+<h2>
+    <a id="Component-Based Development (CBD)" name="Component-Based Development (CBD)">Desarrollo basado en componentes</a>
+</h2>
+<p>
+    El desarrollo basado en componentes es una variación del desarrollo general de aplicaciones en el que:
+</p>
+<blockquote>
+    <ul>
+        <li>
+            La aplicación se <b>construye a partir de componentes ejecutables discretos</b> que se <b>desarrollan de forma
+            relativamente independiente</b>, potencialmente por equipos diferentes. En RUP éstos se denominan "componentes
+            de ensamblaje". Consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/component_A2E2B3B1.html" guid="3.524150980437479E-305">Concepto:
+            Componente</a> para obtener una definición más detallada.
+        </li>
+        <li>
+            La aplicación se puede <b>actualizar en incrementos más pequeños</b> mediante la actualización de únicamente
+            los componentes de ensamblaje que componen la aplicación.
+        </li>
+        <li>
+            Los componentes de ensamblaje se pueden compartir entre aplicaciones mediante la creación de oportunidades de
+            <b>reutilización</b>, y también mediante la creación de <b>dependencias entre proyectos</b>.
+        </li>
+        <li>
+            Aunque no está estrictamente relacionado con el hecho de estar basado en componentes, las aplicaciones basadas
+            en componentes suelen ser <b>distribuidas</b>.
+        </li>
+    </ul>
+</blockquote>
+<p>
+    Los componentes de ensamblaje se derivan de lo siguiente:
+</p>
+<ul>
+    <li>
+        Al definir una arquitectura modular, está definiendo, aislando, diseñando, desarrollando y probando componentes
+        bien formados. Estos componentes pueden probarse de forma individual e integrarse gradualmente para conformar el
+        sistema completo.
+    </li>
+    <li>
+        Además, algunos de estos componentes pueden desarrollarse para ser reutilizados, sobre todo los componentes que
+        proporcionan soluciones comunes a una amplia gama de problemas comunes. Estos componentes reutilizables, que pueden
+        ser más que una simple recopilación de programas de utilidades o bibliotecas de clases, forman la base de la
+        reutilización dentro de una empresa, aumentando la productividad y la calidad globales de software.
+    </li>
+    <li>
+        Más recientemente, el gran éxito comercial de infraestructuras de componentes, como CORBA, Internet, ActiveX,
+        JavaBeans, .NET y J2EE, ha desencadenado toda una industria de componentes ya preparados para diversos dominios, lo
+        que le permite comprar e integrar componentes en lugar que tener que desarrollarlos todos en la empresa.
+    </li>
+</ul>
+<p>
+    El primer punto en la lista anterior explota los viejos conceptos de modularidad y encapsulación, lo que lleva un paso
+    más allá los conceptos de la tecnología orientada a objetos. Los últimos dos puntos de la lista cambian el desarrollo
+    de software desde la programación de línea a línea a la composición del software mediante el ensamblado de componentes.
+</p>
+<p>
+    <a key="desarrollo basado en componentes (CBD)" text="como característica en Unified Process" name="XE_component-based_development_(CBD)__as_a_feature_in_the_Unified_Process" id="XE_component-based_development_(CBD)__as_a_feature_in_the_Unified_Process" class="index"></a>RUP admite el
+    desarrollo basado en componentes de las siguientes maneras:
+</p>
+<ul>
+    <li>
+        El enfoque iterativo permite identificar componentes de forma progresiva y decidir cuáles desarrollar, cuáles
+        reutilizar y cuáles comprar.
+    </li>
+    <li>
+        La arquitectura de software de RUP permite definir la estructura (los componentes y las formas de integración) que
+        incluye los mecanismos fundamentales y los patrones de interacción. Esto a su vez admite los aspectos de
+        planificación de la gestión de proyectos, ya que las dependencias de los componentes pueden ayudar a determinar qué
+        componentes pueden desarrollarse de forma concurrente y cuáles de forma secuencial.<br />
+    </li>
+    <li>
+        Conceptos como paquetes, subsistemas y capas se utilizan durante el análisis y el diseño para organizar componentes
+        y especificar interfaces.
+    </li>
+    <li>
+        La realización de pruebas se organiza a partir de conceptos y poco a poco a partir de conjuntos mayores de
+        componentes integrados.
+    </li>
+</ul>
+<p>
+    Para obtener más información sobre los componentes, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/component_A2E2B3B1.html" guid="3.524150980437479E-305">Concepto:
+    Componente</a>.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

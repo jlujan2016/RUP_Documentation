@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Identificaci&oacute;n de clases de Java</title>
+<meta content="Guideline" name="uma.type">
+<meta content="identifying_java_classes" name="uma.name">
+<meta content="Identificaci&oacute;n de clases de Java" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.5015077375422883E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.5015077375422883E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Identificaci&oacute;n de clases de Java</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la forma en que identificar y modelar clases de Java para una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identificar elementos de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    En una aplicación Java, las clases de Java son los elementos constructivos fundamentales de todas las construcciones de
+    implementación como, por ejemplo, JavaBeans, EJB, servlets y applets. Toda la implementación lógica se proporciona con
+    las clases de Java.
+</p>
+<p>
+    Las clases son plantillas de las que se crean objetos. Las clases encapsulan estructuras de datos junto con algoritmos
+    para manipular los datos. Una clase normalmente es una fábrica de los objetos que define.
+</p>
+<p>
+    En esta directriz no se explica en detalle el concepto de las clases o el diseño orientado a objetos. En el resto de la
+    sección se presupone que el lector está familiarizado con el diseño orientado a objetos. Si desea información detallada
+    sobre el diseño orientado a objetos, consulte la sección de referencias.
+</p>
+<h3>
+    <a id="Java_Class_Features" name="Java_Class_Features"></a>Características de las clases de Java
+</h3>
+<p>
+    Las clases de Java incluyen:
+</p>
+<ul>
+    <li>
+        Funciones de miembro
+    </li>
+    <li>
+        Datos de miembros
+    </li>
+    <li>
+        Funciones estáticas
+    </li>
+    <li>
+        Datos estáticos
+    </li>
+    <li>
+        Herencia
+    </li>
+    <li>
+        Implementación de interfaces
+    </li>
+</ul>
+<p>
+    Las funciones de miembro implementan parte del comportamiento relacionado con objetos individuales. Las funciones de
+    miembro se ejecutan en el contexto de un objeto individual.
+</p>
+<p>
+    Los datos de miembro definen las estructuras de datos de los objetos, en forma de un conjunto de declaraciones de
+    variables. En principio sólo se accede a los datos de miembro a través de las funciones de miembro.
+</p>
+<p>
+    Las funciones estáticas son métodos que se ejecutan fuera del contexto de los objetos individuales que definen.
+</p>
+<p>
+    Los datos estáticos pertenecen a la clase que los define más que a los objetos individuales que define. En una
+    aplicación en ejecución hay una, y sólo una, instancia de datos estáticos. De forma habitual, sólo se accede a los
+    datos estáticos mediante funciones estáticas, a pesar de que algunos diseños llaman directamente a las instancias
+    accediendo a los datos estáticos.
+</p>
+<p>
+    Las clases Java se pueden relacionar mediante la herencia, que se expresa en Java con la palabra clave "extends". La
+    herencia proporciona una técnica sofisticada para reutilizar código, permite que los diseñadores extraigan estructuras
+    de datos y comportamientos comunes en superclases, dejando el comportamiento específico en subclases.
+</p>
+<p>
+    Una interfaz declara un conjunto de métodos cuya implementación está proporcionada por las clases. Una clase puede
+    implementar varias interfaces y muchas clases pueden implementar interfaces. La separación de la interfaz de la
+    implementación incrementa la disociación de las clases. El acceder a los objetos mediante interfaces proporciona una
+    forma clara de utilizar el polimorfismo.
+</p>
+<h3>
+    <a id="Identifying_Java_Classes" name="Identifying_Java_Classes"></a>Identificación de clases de Java
+</h3>
+<p>
+    En una aplicación J2EE, se pueden identificar las clases de Java para dar soporte al diseño de elementos J2EE. Consulte
+    las directrices que se indican a continuación para obtener más información sobre la identificación de estos otros
+    elementos:
+</p>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_enterprise_javabeans_ejbs_2581AEE5.html" guid="9.931732120190802E-307">Directriz: identificación de Enterprise JavaBeans (EJB)</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_servlets_951FE427.html" guid="6.749276633239724E-306">Directriz: identificación de servlets</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_javabeans_B4489D75.html" guid="2.8184208504373704E-306">Técnica: identificación de Java Beans</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_j2ee_application_clients_A6AFA9D0.html" guid="1.2221823675598937E-305">Técnica: identificación de clientes de aplicación J2EE</a>
+    </li>
+</ul>
+<p>
+    Las directrices para identificar clases Java adicionales no son distintas que las directrices para identificar
+    cualquier otro tipo de clases. Consulte la sección <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Tarea: Identificar elementos de diseño en el diseño en tiempo real</a>.
+</p>
+<h3>
+    <a id="Modeling_Java_Classes" name="Modeling_Java_Classes"></a>Modelado de clases de Java
+</h3>
+<p>
+    Las clases de Java se modelan como clases UML.
+</p>
+<p>
+    En el diagrama que aparece a continuación, se muestra la representación UML de una clase Java y el correspondiente
+    código fuente Java.
+</p>
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/myclass.gif" />
+            </td>
+            <td>
+                class MyClass {<br />
+                 private int myMemberData;<br />
+                 private String myOtherMemberData;<br />
+                 private static int myStaticData;<br />
+                 public int getMyMemberData() {<br />
+                 return this.myOtherMemberData;<br />
+                 }<br />
+                 public static int getMyStaticData() {<br />
+                 return MyClass.myStaticData;<br />
+                 }<br />
+                 }<br />
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.inferdata.com" target="_blank"><img alt="logotipo de Inferdata"                 src="./../../../tech.j2ee/guidances/supportingmaterials/resources/inferdata.gif" width="100" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Contenido desarrollado o parcialmente desarrollado por <a href="http://www.inferdata.com/" target="_blank">Inferdata Corporation</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; Copyright&nbsp;IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

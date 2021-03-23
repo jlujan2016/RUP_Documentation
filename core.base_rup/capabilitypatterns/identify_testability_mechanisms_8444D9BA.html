@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de tareas: Identificar los mecanismos de comprobabilidad</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="identify_testability_mechanisms" name="uma.name">
+<meta content="Identificar los mecanismos de comprobabilidad" name="uma.presentationName">
+<meta content="_oBDCTEohEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="Dise&ntilde;ador de pruebas">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={35359DDF-6361-43E5-8B1B-18D204DA8CFF}&path={35359DDF-6361-43E5-8B1B-18D204DA8CFF},{7BD514AF-19F9-408F-8279-309BD153C157},_oBDCTEohEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_C6jF0EdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_oBDCTEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_dTvnIEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_oBDCTEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_zvv6IEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_oBDCTEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_C6jF0EdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_oBDCTEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_dTvnIEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_oBDCTEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_zvv6IEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_oBDCTEohEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_C6jF0EdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_oBDCTEohEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_dTvnIEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_oBDCTEohEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_zvv6IEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_oBDCTEohEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_oBDCTEohEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Identificar los mecanismos de comprobabilidad</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta tarea se describe cómo identificar los mecanismos generales de la solución técnica que son necesarios para facilitar el enfoque de prueba y cómo describir el ámbito general y las características principales de estos mecanismos.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Principal:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_designer_911E8755.html" guid="_CTmsIRi2Edq_uI8xTPML6g">Dise&ntilde;ador de pruebas</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Adicional:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">Asistencia:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_8A557B7B.html" guid="_CTmsIxi2Edq_uI8xTPML6g">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_strategy_7FB79B6B.html" guid="_CTmsIhi2Edq_uI8xTPML6g">Estrategia de prueba</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_automation_architecture_55B06974.html" guid="_CTmsJRi2Edq_uI8xTPML6g">Arquitectura de automatizaci&oacute;n de pruebas</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_project_specific_guidelines_D5281D11.html" guid="_CTy5Yhi2Edq_uI8xTPML6g">Directrices espec&iacute;ficas del proyecto</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_interface_specification_D4364DA2.html" guid="_CTmsLBi2Edq_uI8xTPML6g">Especificaci&oacute;n de interfaz de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_deployment_model_44497D8A.html" guid="_CTmsJhi2Edq_uI8xTPML6g">Modelo de despliegue</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_user_interface_prototype_6855A548.html" guid="_oBPPgEohEdqrjq4i3fchvA">Prototipo de interfaz de usuario</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_automation_architecture_55B06974.html" guid="_CTmsJRi2Edq_uI8xTPML6g">Arquitectura de automatizaci&oacute;n de pruebas</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_interface_specification_D4364DA2.html" guid="_CTmsLBi2Edq_uI8xTPML6g">Especificaci&oacute;n de interfaz de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> Examinar la arquitectura de software y sus entornos de destino</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ExamineArchitectureEnvironment" name="ExamineArchitectureEnvironment"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Conocer mejor la arquitectura de software y su relación con los entornos de despliegue de destino. &nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Para realizar esta tarea en el contexto apropiado, es importante conocer a fondo el software que se está desarrollando,
+    su arquitectura y los principales mecanismos y características a los que dará soporte. Examine la documentación
+    disponible sobre la arquitectura de software para obtener una idea inicial y compleméntela con entrevistas o charlas
+    con el arquitecto de software según sea necesario. Considere el impacto que cada entorno de despliegue de destino puede
+    tener sobre esta información y anote cualquier hallazgo importante que piense que puede ser relevante para el esfuerzo
+    de prueba.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar los mecanismos candidatos de la prueba</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="IdentifyCandidateMechanisms" name="IdentifyCandidateMechanisms"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Identificar los mecanismos de prueba potenciales que requerirá el enfoque de prueba.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Utilizando los conocimientos que tiene sobre la arquitectura de software y sus entornos de destino, examine la
+    información proporcionada en el enfoque de prueba. Considere los aspectos técnicos más importantes del enfoque y
+    confeccione una lista de mecanismos candidatos que se necesitarán para dar soporte al mismo. A continuación se indica
+    una lista parcial de mecanismos habituales que debe considerar como candidatos; permanencia, concurrencia,
+    distribución, comunicación, seguridad, gestión de transacciones, recuperación, manejo e informe de la detección de
+    errores, y sincronización y control de procesos.
+</p>
+<p>
+    Tenga en cuenta que estos mecanismos a menudo se aplican tanto a los esfuerzos de prueba manuales como a los
+    automatizados, aunque un mecanismo específico pueda tener más o menos relevancia para la prueba manual o automatizada.
+    Tenga en cuenta también que incluso cuando el mismo mecanismo es necesario tanto para los esfuerzos de prueba manuales
+    como para los automatizados, las características de la solución implementada normalmente serán distintas.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Inventariar los mecanismos de prueba existentes</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="InventoryExistingMechanisms" name="InventoryExistingMechanisms"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Identificar oportunidades para reutilizar las implementaciones existentes para los mecanismos candidatos e
+                identificar qué implementaciones adiciones deberán desarrollarse. &nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Examine las herramientas de prueba disponibles y las implementaciones de prueba existentes y cree un inventario de
+    mecanismos que tienen una o más soluciones existentes. Aunque este paso es evidentemente más relevante para esfuerzo de
+    prueba automatizado, existen algunas consideraciones equivalentes para el esfuerzo de prueba manual.
+</p>
+<p>
+    <b>Subtemas:</b>
+</p>
+<ul>
+    <li>
+        <a href="#ExistingAutomationMechanisms">Mecanismos de automatización de pruebas</a>
+    </li>
+    <li>
+        <a href="#ExistingManualMechanisms">Mecanismos de prueba manuales</a>
+    </li>
+</ul>
+<h4>
+    <a id="ExistingAutomationMechanisms" name="ExistingAutomationMechanisms">Mecanismos de automatización de pruebas</a> <a href="#InventoryExistingMechanisms"><img src="./../../core.base_rup/resources/top.gif" alt="Ir a la parte superior de la página"     border="0" width="20" height="15" /></a>
+</h4>
+<p>
+    Empiece compilando una lista de las herramientas que están a su disposición o que tiene la intención de adquirir.
+    Recuerde que las herramientas de automatización tienen muchas formas y la lista normalmente incluirá más herramientas
+    que las de implementación y ejecución de prueba automatizadas. Para cada herramienta, examine los mecanismos que
+    proporciona la herramienta. Por ejemplo, ¿la herramienta de creación de scripts que va a utilizar proporciona un propio
+    mecanismo de permanencia de datos y, en caso afirmativo, es adecuada para sus necesidades o necesitará complementarla?
+    Otras preguntas podrían ser: ¿La herramienta de ejecución permite la ejecución concurrente de scripts de prueba en
+    varias máquinas cliente de host? ¿La herramienta de ejecución permite la distribución de scripts desde un sistema
+    maestro central a varias máquinas cliente de host?
+</p>
+<p>
+    En los casos en que las implementaciones de automatización de prueba existentes estén disponibles, habrá mecanismos
+    adicionales para inventariar. Algunos aspectos de estas implementaciones ampliarán o complementarán los mecanismos
+    básicos que proporcionan las herramientas para hacerlas más útiles. Otros aspectos ofrecerán implementaciones para
+    mecanismos adicionales no proporcionados en la herramienta base. 
+    <!--- See [[[Guidelines: Test Automation Architecture]]] 
+          for further suggestions.</p>=-->
+</p>
+<h4>
+    <a id="ExistingManualMechanisms" name="ExistingManualMechanisms">Mecanismos de prueba manuales</a> <a href="#InventoryExistingMechanisms"><img src="./../../core.base_rup/resources/top.gif" alt="Ir a la parte superior de la página"     border="0" width="20" height="15" /></a>
+</h4>
+<p>
+    A un nivel básico, esto implicará revisar las directrices de prueba que existen para la implementación y ejecución de
+    la prueba. Debe buscar soluciones de proceso existentes para problemas tales como la concurrencia: cómo pueden
+    compartir los verificadores conjuntos de datos, especialmente los conjuntos de datos existentes sin que se afecten
+    negativamente entre sí; o la distribución: si el equipo de prueba está distribuido, qué soluciones están disponibles
+    para coordinar los distintos esfuerzos de prueba. <!--- See [[[Guidelines: Test Guidelines (Test Approach)]]] 
+          for further suggestions.=-->
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Definir los mecanismos de prueba que utilizar&aacute;</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="DefineUsedMechanisms" name="DefineUsedMechanisms"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Comunicar las decisiones tomadas acerca de los mecanismos de prueba necesarios.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Ahora que ha decidido los mecanismos de prueba necesarios, debe comunicar su elección al equipo de prueba y a otros
+    interesados en el esfuerzo de prueba. Se recomienda documentar las decisiones sobre los mecanismos de prueba necesarios
+    para la automatización como parte de la documentación de la arquitectura de automatización de pruebas, y las que están
+    relacionadas con las pruebas manuales como parte de las directrices de prueba.
+</p>
+<p>
+    Como alternativa a la documentación formal, puede elegir registrar esta información simplemente como un conjunto de
+    notas informales de arquitectura y proceso acompañadas de algunos diagramas explicativos, posiblemente dibujados en una
+    pizarra. Durante la implementación y ejecución de la prueba, verificadores individuales utilizarán esta información
+    para tomar decisiones tácticas.
+</p>
+<p>
+    Cuando haya identificado el requisito potencial para las interfaces de prueba especiales que deben incorporarse en el
+    software que se está desarrollando, debe considerar la posibilidad de registrar este requisito creando una o varias
+    especificaciones de interfaz de prueba esquematizadas; el esquema debe incluir un nombre, una descripción breve y
+    enumerar los requisitos o características principales de la interfaz de prueba. No emplee mucho tiempo en estos
+    esquemas; la lista de requisitos y características se detallará posteriormente en la <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/define_testability_elements_B792858D.html" guid="{CDA7EC1B-2D50-46BE-A3BA-C621EAF22D84}">Tarea:
+    Definir los elementos de comprobabilidad</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Evaluar y verificar los resultados </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="EvaluateResults" name="EvaluateResults"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Verificar que la tarea se ha realizado correctamente y que los productos de trabajo resultantes son
+                aceptables.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Ahora que ha terminado el trabajo, se recomienda verificar que el trabajo tenía el valor suficiente y que no sólo ha
+    gastado una gran cantidad de papel. Debe evaluar si el trabajo tiene la calidad correcta y si es lo suficientemente
+    completo para que resulte útil a aquellos miembros del equipo que vayan a utilizarlo posteriormente como entrada de su
+    trabajo. Siempre que sea posible, utilice las listas de comprobación proporcionadas en RUP para verificar que la
+    calidad y la completitud son lo "suficientemente buenas".
+</p>
+<p>
+    Fomente la participación en la revisión del trabajo interno por parte de las personas que realizan tareas basadas en
+    los resultados de su trabajo. Hágalo mientras todavía tenga tiempo para realizar acciones para solucionar sus
+    problemas. También debe evaluar su trabajo en los productos de trabajo de entrada clave para asegurarse de que los ha
+    representado de forma precisa y suficiente. Para ello, es muy útil hacer que el autor del producto de trabajo de
+    entrada revise su trabajo.
+</p>
+<p>
+    Recuerde que RUP es un proceso de entrega iterativo y que en muchos casos los productos de trabajo evolucionan con el
+    tiempo. Como tal, no siempre es necesario (y a veces es contraproducente) formar completamente un producto de trabajo
+    que sólo se utilizará de forma parcial o que no se utilizará en absoluto en un trabajo inmediatamente posterior. Esto
+    se debe a que existe una alta probabilidad de que la situación alrededor del producto de trabajo cambie (y que las
+    suposiciones realizadas cuando se creó el producto de trabajo se demuestre que son incorrectas) antes de que se utilice
+    el producto, lo que da como resultado un esfuerzo inútil y una revisión costosa. Asimismo, evite la trampa de invertir
+    demasiados ciclos en la presentación en detrimento del valor del contenido. En entornos de proyecto en los que la
+    presentación tenga importancia y un gran valor económico como entregable del proyecto, puede utilizar un recurso
+    administrativo para ejecutar tareas de presentación.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Varias apariciones" abbr="Varias apariciones">Varias apariciones</th><td align="left" class="sectionTableCell" headers="property_Varias apariciones"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Condicionado por sucesos" abbr="Condicionado por sucesos">Condicionado por sucesos</th><td align="left" class="sectionTableCell" headers="property_Condicionado por sucesos"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Continuo" abbr="Continuo">Continuo</th><td align="left" class="sectionTableCell" headers="property_Continuo"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Se puede repetir" abbr="Se puede repetir">Se puede repetir</th><td align="left" class="sectionTableCell" headers="property_Se puede repetir"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

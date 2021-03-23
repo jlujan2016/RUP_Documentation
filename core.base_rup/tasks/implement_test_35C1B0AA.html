@@ -1,0 +1,860 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Tarea: Implementar la prueba</title>
+<meta content="Task" name="uma.type">
+<meta content="implement_test" name="uma.name">
+<meta content="Implementar la prueba" name="uma.presentationName">
+<meta content="Discipline:rup_test_discipline:Prueba" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="Verificador">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_1yMJAN7YEdmjRZts2c4ZjQ", "{A719CEAE-35FB-42F6-A076-F501B83E5B85}", "{BC805E79-736B-42D5-BDC1-B95E7D002312}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_yd3EzdnmEdmO6L4XMImrsA", "{BC805E79-736B-42D5-BDC1-B95E7D002312}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_1yMJAN7YEdmjRZts2c4ZjQ", "{A719CEAE-35FB-42F6-A076-F501B83E5B85}", "{BC805E79-736B-42D5-BDC1-B95E7D002312}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_u2yEADIEEdqwaNnSEheSAg", "_yd3EzdnmEdmO6L4XMImrsA", "{BC805E79-736B-42D5-BDC1-B95E7D002312}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', true, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="{BC805E79-736B-42D5-BDC1-B95E7D002312}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Implementar la prueba</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta tarea se describe cómo desarrollar pruebas autónomas o de colaboración.</td>
+</tr>
+<tr>
+<td>Disciplinas: <a href="./../../core.base_rup/disciplines/rup_test_discipline_9DFAFB2F.html" guid="_yd3EzdnmEdmO6L4XMImrsA">Prueba</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="prueba de sistema" text="implementación de" name="XE_system_test__implementation_of" id="XE_system_test__implementation_of" class="index"></a> 
+<p>
+    El objetivo de esta tarea es:
+</p>
+<ul>
+    <li>
+        Implementar uno o más productos de trabajo de prueba que permitan la validación del producto de software mediante
+        la ejecución física
+    </li>
+    <li>
+        Desarrollar pruebas que se puedan ejecutar conjuntamente con otras pruebas como parte de una infraestructura de
+        prueba mayor
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Realizador principal:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_tester_8ADFF3FA.html" guid="{A719CEAE-35FB-42F6-A076-F501B83E5B85}">Verificador</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Otras actividades adicionales que realiza:
+								</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_data_AD333F7A.html" guid="{5FFF9828-AB23-4C09-8293-42A90E90378B}">Datos de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_strategy_C1677B8.html" guid="{DC3E85E6-C5A9-4AC6-8DDF-E2CF2CB0573E}">Estrategia de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_ideas_list_2A0F8E03.html" guid="{45219F27-0F84-4FD5-A7BC-73C19226303B}">Lista de ideas de prueba</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_automation_architecture_650DD06A.html" guid="{B5B77528-E14B-43CA-BC73-D64A90A17E2D}">Arquitectura de automatizaci&oacute;n de pruebas</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_case_8AFEC963.html" guid="{D525758B-EBA2-4F59-9BA6-226820C27ADD}">Caso de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_class_790117F2.html" guid="{1C78947B-33D4-49AF-9E1F-655E7D74C53F}">Clase de comprobabilidad</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_build_BA336272.html" guid="{53728CD9-FA47-4B58-A443-E9F9DC196916}">Compilaci&oacute;n</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_environment_configuration_B6BBDD6.html" guid="{DB50EF75-2B05-4487-8299-D82D2A0AD45C}">Configuraci&oacute;n de entorno de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_project_specific_guidelines_8DC8DA32.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">Directrices espec&iacute;ficas del proyecto</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_tools_BB931C14.html" guid="{FE332FA8-1BAF-4BF8-A855-CB4B8A01A7AE}">Herramientas</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_development_infrastructure_21BD206E.html" guid="{A40A3A6E-A090-46B4-B2FE-5F1AC36F010B}">Infraestructura de desarrollo</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_workload_analysis_model_E86A32FF.html" guid="{008164B1-3AC3-47E8-9F93-EE4C36B58A97}">Modelo de an&aacute;lisis de carga de trabajo</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_script_2140080.html" guid="{293A9F23-BB20-4993-AABE-76C1E8E1A589}">Script de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_script_2140080.html" guid="{293A9F23-BB20-4993-AABE-76C1E8E1A589}">Script de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Uso del proceso</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">Prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/validate_build_stability_72BD9103.html" guid="{0AE0042B-034C-4296-9FA0-D9DCC61FC7B4}">Validar la estabilidad de la compilación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/implement_test_9086C75A.html" guid="_rx6EwEohEdqrjq4i3fchvA">Implementar la prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">Prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/verify_test_approach_A743008A.html" guid="{7BD514AF-19F9-408F-8279-309BD153C157}">Verificar el enfoque de prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/implement_test_B8187D13.html" guid="_qS-oskohEdqrjq4i3fchvA">Implementar la prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">Prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/improve_test_assets_1C99FFB9.html" guid="{CD77CBDA-CC13-4593-BB81-41AF3FF7A84C}">Mejorar los activos de prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/implement_test_9DA51D47.html" guid="_yfaCEEoiEdqrjq4i3fchvA">Implementar la prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">Prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/test_and_evaluate_4D17BD6A.html" guid="{93B7D625-C83A-4EFB-9772-B88F2EB02CE2}">Probar y evaluar</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/implement_test_63F0D54A.html" guid="_6SZ50kohEdqrjq4i3fchvA">Implementar la prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableSingleCell">
+<div class="stepHeading"> Seleccionar la t&eacute;cnica de implementaci&oacute;n adecuada</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="SelectImplementTechnique" name="SelectImplementTechnique"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%">
+                    <b>Objetivo:</b>&nbsp;
+                </td>
+                <td width="95%">
+                    Determinar la técnica adecuada para implementar la prueba.&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Seleccione la técnica más adecuada para implementar la prueba. Para cada prueba que desee llevar a cabo, considere la
+    posibilidad de implementar como mínimo un script de prueba. En algunos casos, la implementación de una determinada
+    prueba incluirá varios scripts de prueba. En otros, un único script de prueba proporcionará la implementación de varias
+    pruebas.
+</p>
+<p>
+    Los métodos habituales para implementar pruebas incluyen escribir una descripción textual en el formato de un script
+    que debe seguir (para la prueba manual) y la programación, registro capturado o generación de un lenguaje de
+    programación basado en scripts (para la prueba automatizada). En las secciones siguientes se describe cada método.
+</p>
+<p>
+    Al igual que con la mayoría de enfoques, se recomienda utilizar una combinación de las técnicas siguientes para obtener
+    los resultados más útiles. Aunque no es necesario utilizar todas las técnicas, tampoco debe limitarse a utilizar una
+    única técnica.
+</p>
+<p>
+    <b>Subtemas:</b>
+</p>
+<ul>
+    <li>
+        <a href="#ManualTestScripts">Scripts de prueba manuales</a>
+    </li>
+    <li>
+        <a href="#ProgramTestScripts">Scripts de prueba programados</a>
+    </li>
+    <li>
+        <a href="#RecordTestScripts">Scripts de prueba registrados o capturados</a>
+    </li>
+    <li>
+        <a href="#GenerateTests">Pruebas generadas</a>
+    </li>
+</ul>
+<h4>
+    <a id="ManualTestScripts" name="ManualTestScripts">Scripts de prueba manuales</a> <a href="#SelectImplementTechnique"><img height="20" alt="Para seleccionar implementar la técnica"     src="./../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    Muchas pruebas se realizan mejor manualmente, por lo que debe evitar caer en la trampa de intentar automatizar pruebas
+    inapropiadamente. Las pruebas de utilización son un área en la que una prueba manual es en muchos casos una solución
+    mejor que una prueba automatizada. Además, las pruebas que requieren validar la precisión y la calidad de las salidas
+    físicas de un sistema de software normalmente requieren una validación manual. Como norma general, es una buena idea
+    empezar las primeras pruebas de un determinado elemento del destino de la prueba con una implementación manual; este
+    enfoque permite al verificador conocer el elemento de destino, adaptarse a un comportamiento inesperado del mismo y
+    aplicar lógica humana para determinar la siguiente acción adecuada que debe tomarse.
+</p>
+<p>
+    A veces, las pruebas realizadas manualmente más tarde se automatizan y se reutilizan como parte de una estrategia de
+    pruebas de regresión. Sin embargo, tenga en cuenta que no es necesario ni deseable, ni tan siquiera posible,
+    automatizar todas y cada una de las pruebas que por otro lado pueden llevarse a cabo manualmente. La automatización
+    aporta determinadas ventajas respecto a la velocidad y precisión de la ejecución de la prueba, a la visibilidad y
+    recopilación de resultados detallados de la prueba y a su eficacia a la hora de crear y mantener pruebas complejas,
+    pero al igual que todas las herramientas útiles, no es la solución para todas las necesidades.
+</p>
+<p>
+    La automatización tiene algunos inconvenientes: básicamente pueden resumirse en la ausencia de lógica y razonamiento
+    humano durante la ejecución de la prueba. Las soluciones de automatización disponibles actualmente simplemente no
+    tienen las capacidades cognitivas que tiene un ser humano y es improbable que alguna vez las tengan. Durante la
+    implementación de una prueba manual, se puede aplicar el razonamiento humano a las respuestas observadas del sistema
+    frente a los estímulos. Las actuales técnicas de prueba automatizadas y sus herramientas de soporte tienen una
+    capacidad limitada de percibir las implicaciones de determinados comportamientos del sistema y tienen una capacidad
+    mínima de inferir posibles problemas a través de un razonamiento deductivo.
+</p>
+<h4>
+    <a id="ProgramTestScripts" name="ProgramTestScripts">Scripts de prueba programados</a> <a href="#SelectImplementTechnique"><img height="20" alt="Para seleccionar implementar la técnica"     src="./../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    Seguramente el método de elección que practican la mayoría de verificadores que utilizan la automatización de pruebas.
+    En su forma más pura, esta práctica se realiza de la misma manera y utilizando los mismos principios generales que la
+    programación de software. Como tales, la mayoría de métodos y herramientas que se utilizan para la programación de
+    software son generalmente aplicables y útiles en la programación de la automatización de pruebas.
+</p>
+<p>
+    Utilizando un entorno de desarrollo de software estándar (como por ejemplo Microsoft Visual Studio o IBM Visual Age) o
+    un entorno de desarrollo de automatización de pruebas especializado (como por ejemplo el IDE proporcionado con Rational
+    Robot), el verificador puede elegir utilizar las características y la potencia del entorno de desarrollo que
+    proporcionen los mejores resultados.
+</p>
+<p>
+    Los aspectos negativos de la programación de pruebas automatizadas están relacionados con los aspectos negativos de la
+    propia programación como técnica general. Para que la programación sea eficaz, se debe prestar atención al diseño
+    apropiado: sin éste, la implementación probablemente no será satisfactoria. Si el software desarrollado va a ser
+    modificado por diferentes personas a lo largo del tiempo, la situación más habitual, se deberá adoptar un estilo y
+    forma comunes para el desarrollo del programa y se deberá asegurar su uso correcto. Posiblemente los dos problemas más
+    importantes están relacionados con la mala utilización de esta técnica.
+</p>
+<p>
+    En primer lugar, existe el riesgo de que un verificador se vea absorbido por las características del entorno de
+    programación y dedique demasiado tiempo elaborando soluciones elegantes y sofisticadas para problemas que podrían
+    solucionarse con medios más sencillos. El resultado es que el verificador malgasta un tiempo valioso en lo que
+    básicamente son tareas de programación a costa del tiempo que podría dedicarse en probar y evaluar realmente los
+    elementos del destino de la prueba. Para no caer en esta trampa hace falta a la vez disciplina y experiencia.
+</p>
+<p>
+    En segundo lugar, existe el riesgo de que en el propio código de programa utilizado para implementar la prueba se
+    introduzcan errores debido a una omisión o un error humano. Algunos de estos errores podrán depurarse y corregirse
+    fácilmente en el transcurso normal de la implementación de la prueba automatizada; otros no. Del mismo modo que los
+    errores pueden ser difíciles de detectar en el elemento del destino de la prueba, también puede resultar difícil
+    detectar errores en el software de automatización de pruebas. Además, los errores pueden introducirse donde se basan
+    los algoritmos utilizados en la implementación de la prueba automatizada en los mismos algoritmos defectuosos que
+    utiliza la propia implementación de software. Esto hace que los errores no se detecten, ocultados por la falsa
+    seguridad de las pruebas automatizadas que aparentemente se ejecutan correctamente. Mitigue este riesgo utilizando
+    diferentes algoritmos en las pruebas automatizadas siempre que sea posible.
+</p>
+<h4>
+    <a id="RecordTestScripts" name="RecordTestScripts">Scripts de prueba registrados o capturados</a> <a href="#SelectImplementTechnique"><img height="20" alt="Para seleccionar implementar la técnica"     src="./../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    Existen diversas herramientas de automatización de pruebas que proporcionan la capacidad de registrar o capturar la
+    interacción humana con una aplicación de software y producir un script de prueba básico. Existen varias soluciones de
+    herramientas distintas para ello. La mayoría de herramientas producen un script de prueba implementado en alguna forma
+    de lenguaje de programación de nivel superior y normalmente editable. Los diseños más comunes funcionan de una de las
+    siguientes maneras:
+</p>
+<ul>
+    <li>
+        Capturando la interacción con la <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/ui_929A0D03.html" guid="_yZZbg9nmEdmO6L4XMImrsA">UI</a>&nbsp;de cliente
+        de una aplicación que se basa en interceptar las entradas enviadas desde los dispositivos de entrada periféricos
+        del hardware del cliente (ratón, teclado, etc.) al sistema operativo del cliente. En algunas soluciones, esto se
+        hace interceptando los mensajes de nivel superior intercambiados entre el sistema operativo y el controlador de
+        dispositivo que describen las interacciones de una forma más o menos significativa; en otras soluciones, se
+        capturan los mensajes de nivel inferior, a menudo basados en el nivel de los movimientos basados en el tiempo en
+        las coordenadas del ratón o los sucesos de presionar y soltar una tecla.
+    </li>
+    <li>
+        Interceptando los mensajes enviados y recibidos a través de red entre la aplicación cliente y una o varias
+        aplicaciones servidor. La interpretación correcta de estos mensajes normalmente depende de la utilización de
+        protocolos de mensajería reconocidos estándar, como por ejemplo <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/http_17BB6CED.html" guid="_yKCw5tnmEdmO6L4XMImrsA">HTTP</a>, <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/sql_E258F221.html" guid="_yV9tCdnmEdmO6L4XMImrsA">SQL</a>&nbsp;y otros. Algunas herramientas también permiten capturar protocolos de
+        comunicaciones "básicos", como por ejemplo <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/tcp_ip_CE2F490E.html" guid="_yXmrw9nmEdmO6L4XMImrsA">TCP/IP</a>K sin
+        embargo puede ser más complicado trabajar con scripts de prueba de esta naturaleza.
+    </li>
+</ul>
+<p>
+    A pesar de que estas técnicas normalmente son útiles cuando se incluyen como parte del enfoque para las pruebas
+    automatizadas, algunos profesionales creen que estas técnicas tienen limitaciones. Uno de los principales problemas es
+    que algunas herramientas simplemente capturan la interacción de la aplicación y no hacen nada más. Sin la inclusión
+    adicional de puntos de observación que capturen y comparen el estado del sistema durante la posterior ejecución del
+    script, el script de prueba básica no puede considerarse como una prueba completamente formada. Cuando éste sea el
+    caso, el registro inicial deberá aumentarse posteriormente con código de programa personalizado adicional para
+    implementar los puntos de observación dentro del script de prueba.
+</p>
+<p>
+    Varios autores han publicado libros y ensayos sobre éste y otros problemas relacionados con la utilización del registro
+    o captura del procedimiento de prueba como técnica de automatización de la prueba. Para obtener información más
+    detallada, recomendamos revisar el trabajo disponible en Internet de los siguientes autores: <a href="http://www.satisfice.com/" target="_blank">James Bach</a>, <a href="http://www.kaner.com/articles.html" target="_blank">Cem Kaner</a>, <a href="http://www.testing.com/writings.html" target="_blank">Brian Marick</a> y <a href="http://www.io.com/~wazmo/papers/" target="_blank">Bret Pettichord</a>, y el contenido relevante de la publicación
+    <i>Lessons Learned in Software Testing</i> <a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html#KAN01" guid="7.755968586980351E-308">[KAN01]</a>
+</p>
+<h4>
+    <a id="GenerateTests" name="GenerateTests">Pruebas generadas</a> <a href="#SelectImplementTechnique"><img height="20"     alt="Para seleccionar implementar la técnica" src="./../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    Algunos de los programas de software de automatización de pruebas más sofisticados permiten la generación real de
+    varios aspectos de la prueba, ya sean aspectos de procedimiento o los aspectos de datos de prueba del script de prueba,
+    basados en algoritmos de generación. Este tipo de automatización puede ser de gran utilidad en el esfuerzo de prueba,
+    pero no debe considerarse un enfoque suficiente por sí solo. La herramienta Rational TestFactory y la característica de
+    generación de agrupaciones de datos Rational TestManager son implementaciones de ejemplo de este tipo de tecnología.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Configurar condiciones previas del entorno de prueba</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Setup" name="Setup"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%">
+                    <b>Objetivo:</b>&nbsp;
+                </td>
+                <td width="95%">
+                    Preparar el entorno para el estado inicial correcto.&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Configure el entorno de prueba, incluido todo el hardware, software, herramientas y datos. Asegúrese de que todos los
+    componentes funcionan correctamente. Normalmente, esto implicará alguna forma de restablecimiento del entorno básico
+    (por ej., restablecer el <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/windows_registry_2A6006F9.html" guid="_ycE8E9nmEdmO6L4XMImrsA">registro de
+    Windows</a>&nbsp;y otros archivos de configuración), la restauración de las bases de datos subyacentes a un estado
+    conocido, además de tareas como cargar el papel en las impresoras. Aunque algunas tareas se pueden realizar
+    automáticamente, otros aspectos requieren la intervención humana.
+</p>
+<p>
+    <b>Subtemas:</b>
+</p>
+<ul>
+    <li>
+        <a href="#ManualCheck">(Opcional) Ensayo manual de la prueba</a>
+    </li>
+    <li>
+        <a href="#ConfirmTestOracles">Identificar y confirmar la adecuación de los oráculos de prueba</a>
+    </li>
+    <li>
+        <a href="#ResetEnvTools">Restablecer el entorno y las herramientas de prueba</a>
+    </li>
+</ul>
+<h4>
+    <a id="ManualCheck" name="ManualCheck">(Opcional) Ensayo manual de la prueba</a> <a href="#Setup"><img height="20"     alt="Para configurar" src="./../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    Especialmente aplicable a los scripts de prueba automatizados, puede ser beneficioso realizar manualmente un ensayo
+    inicial de la prueba para confirmar que los requisitos previos esperados están presentes. Durante el ensayo, debe
+    verificar la integridad del entorno, el software y el diseño de prueba. El ensayo es más relevante cuando se utiliza
+    una técnica de registro interactiva y menos relevante cuando se programa el script de prueba. El objetivo es verificar
+    que todos los elementos necesarios para implementar la prueba satisfactoriamente están presentes.
+</p>
+<p>
+    Cuando se sabe que el software es suficientemente estable o maduro, puede elegir saltarse este paso donde considere que
+    existe un riesgo relativamente bajo de que se produzcan problemas en las áreas tratadas por el ensayo manual.
+</p>
+<h4>
+    <a id="ConfirmTestOracles" name="ConfirmTestOracles">Identificar y confirmar la adecuación de los oráculos de
+    prueba</a> <a href="#Setup"><img height="20" alt="Para configurar" src="./../../core.base_rup/resources/top.gif" width="26"     border="0" /></a>
+</h4>
+<p>
+    Confirme que los <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/test_oracle_CB9E18A9.html" guid="_yYNIs9nmEdmO6L4XMImrsA">oráculos de
+    prueba</a>&nbsp;que tiene la intención de utilizar son apropiados. Si todavía no se han identificado, ahora es el
+    momento de hacerlo.
+</p>
+<p>
+    Debe intentar confirmar mediante métodos alternativos que el oráculo u oráculos de prueba elegidos proporcionarán
+    resultados exactos y fiables. Por ejemplo, si tiene la intención de validar los resultados de la prueba utilizando un
+    campo que se visualiza a través de la UI de la aplicación que indica que se realizado una actualización de la base de
+    datos, considere la posibilidad de consultar de manera independiente la base de datos de fondo para verificar el estado
+    de los registros correspondientes de la base de datos. Como alternativa, puede ignorar los resultados presentados en un
+    diálogo de confirmación de la actualización y, en su lugar, confirmar la actualización consultando el registro mediante
+    una función u operación frontal alternativa.
+</p>
+<h4>
+    <a id="ResetEnvTools" name="ResetEnvTools">Restablecer el entorno y las herramientas de prueba</a> <a href="#Setup"><img height="20" alt="Para configurar" src="./../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    A continuación, debe restaurar el entorno, incluidas las herramientas de soporte, de nuevo a su estado original. Como
+    se ha indicado en pasos anteriores, esto normalmente implica alguna forma de restablecimiento del entorno operativo
+    básico, la restauración de las bases de datos subyacentes a un estado conocido, además de tareas como cargar el papel
+    en las impresoras. Aunque algunas tareas de restablecimiento se pueden realizar automáticamente, otros aspectos
+    requieren la intervención humana.
+</p>
+<p>
+    Establezca las opciones de implementación de las herramientas de soporte de la prueba, que variarán en función de la
+    sofisticación de la herramienta. Siempre que sea posible, debe considerar la posibilidad de almacenar los valores de
+    las opciones de cada herramienta de modo que se puedan volver a cargar fácilmente a partir de uno o varios perfiles
+    predeterminados. En el caso de las pruebas manuales, ello incluye tareas como, por ejemplo, crear una partición de una
+    nueva entrada en un sistema de soporte para registrar los resultados de la prueba o registrarse en un sistema de
+    registro de solicitudes de cambio o problemas.
+</p>
+<p>
+    En el caso de las herramientas de implementación de pruebas automatizadas, es posible que se deban tener en cuenta
+    muchos valores distintos. Si no se establecen correctamente estas opciones, puede disminuir la utilidad y el valor de
+    los activos de prueba resultantes.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Implementar la prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ImplementTest" name="ImplementTest"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%">
+                    <b>Objetivo:</b>&nbsp;
+                </td>
+                <td width="95%">
+                    Implementar uno o más activos de implementación de prueba reutilizables.&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Utilizando la lista de ideas de prueba, o uno o más artefactos de caso de prueba seleccionados, empiece a implementar
+    la prueba. Empiece dando a la prueba un nombre identificable de manera exclusiva (si todavía no lo tiene) y prepare el
+    IDE, la herramienta de captura, la hoja de cálculo o documento para empezar a registrar los pasos específicos de la
+    prueba. Lleve a cabo las subsecciones siguientes tantas veces como sea necesario para implementar la prueba.
+</p>
+<p>
+    Tenga en cuenta que para algunas pruebas o tipos de pruebas en concreto, es posible que no sirva de mucho documentar
+    los pasos explícitos necesarios para realizar la prueba. En determinados estilos de <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/exploratory_testing_B3C6EB1B.html" guid="_yItULNnmEdmO6L4XMImrsA">pruebas
+    exploratoria</a>&nbsp;, la repetición de la prueba no es entregable esperado. En pruebas muy simples, una breve
+    descripción del objetivo de las pruebas será suficiente en muchos casos para permitir su reproducción.
+</p>
+<p>
+    <b>Subtemas:</b>
+</p>
+<ul>
+    <li>
+        <a href="#NavigationActions">Implementar acciones de navegación</a>
+    </li>
+    <li>
+        <a href="#ObservationPoint">Implementar puntos de observación</a>
+    </li>
+    <li>
+        <a href="#ControlPoint">Implementar puntos de control</a>
+    </li>
+    <li>
+        <a href="#ResolveImplementErrors">Resolver errores de implementación</a>
+    </li>
+</ul>
+<h4>
+    <a id="NavigationActions" name="NavigationActions">Implementar acciones de navegación</a> <a href="#ImplementTest"><img     height="20" alt="Ir a la parte superior de la página" src="./../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    Programe, registre o genere las acciones de navegación necesarias. Empiece seleccionando el método de navegación
+    apropiado de su elección. Para la mayoría de clases de sistema actuales, un "ratón" u otro dispositivo de puntero es el
+    medio de navegación principal y preferido. Por ejemplo, el dispositivo de puntero y escritura que se utiliza en las
+    agendas personales digitales (PDA) es conceptualmente equivalente un ratón.
+</p>
+<p>
+    El medio de navegación secundario es generalmente la interacción con el teclado. En la mayoría de casos, la navegación
+    consistirá en una combinación de acciones realizadas con el ratón y el teclado.
+</p>
+<p>
+    En algunos casos, deberá considerar el reconocimiento visual, por luz, activado por la voz u otras formas de
+    reconocimiento. Estos métodos pueden ser más problemáticos para automatizar las pruebas y pueden requerir la adición de
+    ampliaciones especiales de la interfaz de prueba a la aplicación para permitir cargar y procesar elementos de audio y
+    visuales a partir del archivo en lugar de capturarlos dinámicamente.
+</p>
+<p>
+    En algunas situaciones, es posible que desee, o necesite, realizar la misma prueba utilizando varios métodos de
+    navegación. Existen diferentes enfoques que puede elegir para lograrlo, como por ejemplo: automatizar todas las pruebas
+    utilizando un método y realizar todas o algún subconjunto de las pruebas utilizando otros métodos; separar los aspectos
+    de navegación de las pruebas de los datos de prueba que caracterizan la prueba específica, proporcionando y creando una
+    interfaz de navegación lógica que permita seleccionar cualquiera de los métodos para realizar la prueba; simplemente
+    mezclar y emparejar métodos de navegación.
+</p>
+<h4>
+    <a id="ObservationPoint" name="ObservationPoint">Implementar puntos de observación</a> <a href="#ImplementTest"><img     height="20" alt="Ir a la parte superior de la página" src="./../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    En cada punto del script de prueba donde debe tomarse una observación, utilice el oráculo de prueba apropiado para
+    capturar la información deseada. En muchos casos, la información obtenida del punto de observación deberá registrarse y
+    conservarse para que se pueda hacer referencia a ella en posteriores puntos de control.
+</p>
+<p>
+    Si se trata de una prueba automatizada, decida cómo debe notificarse la información observada del script de prueba. En
+    la mayoría de casos, normalmente basta con simplemente registrar la observación en un registro de prueba central
+    relativo a su tiempo delta desde el principio del script de prueba; en otros casos, las observaciones específicas
+    pueden enviarse por separado a una hoja de cálculo o archivo de datos para usos más sofisticados.
+</p>
+<h4>
+    <a id="ControlPoint" name="ControlPoint">Implementar puntos de control</a> <a href="#ImplementTest"><img height="20"     alt="Ir a la parte superior de la página" src="./../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    En cada punto del script de prueba donde debe tomarse una decisión de control, obtenga y valore la información
+    apropiada para determinar la ramificación correcta que debe seguir el flujo de control. Los datos recuperados de puntos
+    de observación anteriores constituyen normalmente la entrada para los puntos de puntos.
+</p>
+<p>
+    Cuando se produce un punto de control y se toma una decisión acerca de la siguiente acción del flujo de control, se
+    recomienda registrar los valores de entrada en el punto de control y el flujo resultante que se selecciona en el
+    registro de prueba.
+</p>
+<h4>
+    <a id="ResolveImplementErrors" name="ResolveImplementErrors">Resolver errores en la implementación de prueba</a> <a href="#ImplementTest"><img height="20" alt="Ir a la parte superior de la página" src="./../../core.base_rup/resources/top.gif"     width="26" border="0" /></a>
+</h4>
+<p>
+    Durante la implementación de la prueba, es probable que introduzca errores en la propia implementación de prueba. Estos
+    errores pueden ser incluso el resultado de algo que haya omitido en la implementación de prueba o pueden estar
+    relacionados con algo que no haya tenido en cuenta en el entorno de prueba. Estos errores deben resolverse antes de que
+    la prueba pueda considerarse completamente implementada. Identifique cada error que encuentre y lleve a cabo los pasos
+    necesarios para solucionarlos.
+</p>
+<p>
+    En el caso de la automatización de pruebas en que se utiliza un lenguaje de programación, se pueden producir errores de
+    compilación debido a variables o funciones no declaradas o al uso no válido de dichas funciones. Revise y corrija los
+    mensajes de error que muestra el compilador u otros orígenes de mensajes de error hasta que el script de prueba esté
+    libre de errores sintácticos y otros errores de la implementación básica.
+</p>
+<p>
+    Tenga en cuenta que durante la ejecución subsiguiente de la prueba, pueden encontrarse otros errores en la
+    implementación de prueba. Inicialmente, estos errores pueden parecer anomalías en el elemento del destino de la prueba;
+    es necesario analizar las anomalías de prueba de forma diligente para confirmar que las anomalías están realmente en el
+    elemento del destino de la prueba y no en algún aspecto de la implementación de prueba.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Establecer conjuntos de datos externos </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="EstablishExternalData" name="EstablishExternalData"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Crear y mantener datos, almacenados externamente al script de la prueba, que utiliza la prueba durante la
+                ejecución.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    En muchos casos, es más apropiado mantener los datos de prueba externos al script de prueba. Esto proporciona
+    flexibilidad, simplicidad y seguridad en el mantenimiento del script de prueba y de los datos de prueba. Los conjuntos
+    de datos externos proporcionan valor a la prueba de las siguientes maneras:
+</p>
+<ul>
+    <li>
+        Los datos de prueba son externos al script de prueba, eliminando las referencias codificadas en el script de
+        prueba.
+    </li>
+    <li>
+        Los datos de prueba externos pueden modificarse fácilmente, normalmente con un impacto mínimo sobre el script de
+        prueba
+    </li>
+    <li>
+        Los datos de prueba pueden dar soporte fácilmente a casos de prueba adicionales con pocas modificaciones, o
+        ninguna, en el script de prueba.
+    </li>
+    <li>
+        Los datos de prueba externos pueden compartirse con muchos scripts de prueba
+    </li>
+    <li>
+        Se pueden desarrollar scripts de prueba de modo que utilicen datos de prueba externos para controlar la lógica de
+        ramificaciones condicionales dentro del script de prueba.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Verificar la implementaci&oacute;n de prueba</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="VerifyTestImplementation" name="VerifyTestImplementation"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%">
+                    <b>Objetivo:</b>&nbsp;
+                </td>
+                <td width="95%">
+                    Verificar el funcionamiento correcto del script de prueba ejecutando el script de prueba.&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Especialmente en el caso de la automatización de pruebas, probablemente necesitará emplear un cierto tiempo para
+    estabilizar el funcionamiento de la prueba mientras ésta se ejecuta. Cuando haya finalizado la implementación básica
+    del script de prueba, éste deberá probarse para garantizar que implementa adecuadamente las pruebas individuales y que
+    éstas se ejecutan correctamente.
+</p>
+<h4>
+    <a id="Recover" name="Recover">Restaurar el entorno de prueba a un estado conocido</a> <a href="#VerifyTestImplementation"><img height="20" alt="Verificar la implementación de prueba"     src="./../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    Una vez más, debe restaurar el entorno a su estado original, haciendo limpieza después de que funcione la
+    implementación de prueba. Como se ha indicado en pasos anteriores, esto normalmente implica alguna forma de
+    restablecimiento del entorno operativo básico, la restauración de las bases de datos subyacentes a un estado conocido,
+    además de tareas como cargar el papel en las impresoras. Aunque algunas tareas se pueden realizar automáticamente,
+    otros aspectos requieren la intervención humana.
+</p>
+<h4>
+    <a id="SetupandPlayback" name="SetupandPlayback">Configurar las herramientas e iniciar la ejecución de la prueba</a> <a href="#VerifyTestImplementation"><img height="20" alt="Verificar la implementación de la prueba"     src="./../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    Especialmente en el caso de la automatización de pruebas, se deben cambiar los valores en las herramientas de soporte.
+    El objetivo es verificar el funcionamiento correcto del script de prueba ejecutando el script de prueba.
+</p>
+<p>
+    Es una buena idea realizar este paso utilizando la misma versión de compilación del software utilizado para implementar
+    los scripts de prueba. Con ello se elimina la posibilidad de que se produzcan problemas debido a los errores
+    introducidos en las compilaciones posteriores.
+</p>
+<h4>
+    <a id="ResolveExecutionErrors" name="ResolveExecutionErrors">Resolver errores de ejecución</a> <a href="#VerifyTestImplementation"><img height="20" alt="Verificar la implementación de prueba"     src="./../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    Es bastante habitual que algunas de las acciones realizadas y enfoques utilizados durante la implementación necesiten
+    un cierto grado de ajuste para permitir que la prueba se ejecute desatendida, especialmente por lo que se refiere a la
+    ejecución de la prueba en varias configuraciones de entorno de prueba.
+</p>
+<p>
+    En el caso de la automatización de pruebas, debe emplear un cierto tiempo comprobando que las pruebas "funcionan dentro
+    de las tolerancias" y ajustándolas hasta que funcionen de manera fiable antes de declarar la prueba como implementada.
+    Aunque puede retrasar este paso para más adelante en el ciclo de vida (p.ej., durante el desarrollo de conjuntos de
+    aplicaciones de prueba), se recomienda no hacerlo: si lo hace, podría terminar con una acumulación importante de
+    anomalías que deben solucionarse.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Restaurar el entorno de prueba a un estado de conocido </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Restore" name="Restore"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Dejar el entorno tal como lo ha encontrado o en el estado necesario para implementar la siguiente
+                prueba.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Aunque este paso pueda parecer trivial, es importante crear el hábito de trabajar de forma eficaz con los otros
+    verificadores del equipo, especialmente cuando se comparte el entorno de implementación. También es importante
+    establecer una rutina que facilite pensar en el estado del sistema.
+</p>
+<p>
+    Aunque en un esfuerzo de prueba básicamente manual suele ser sencillo identificar y arreglar problemas de restauración
+    del entorno, recuerde que la automatización de pruebas tiene mucha menos capacidad de tolerar problemas no anticipados
+    con el estado del entorno.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Mantener relaciones de rastreabilidad </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Traceability" name="Traceability"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Permitir ejecutar el análisis de impactos y el informe de valoración en los elementos rastreados.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Utilizando los requisitos de rastreabilidad descritos en el plan de prueba, actualice las relaciones de rastreabilidad
+    según sea necesario.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Evaluar y verificar los resultados </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="EvaluateResults" name="EvaluateResults"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%">
+                    <b>Objetivo:</b>&nbsp;
+                </td>
+                <td width="95%">
+                    Verificar que la tarea se ha realizado correctamente y que los productos de trabajo resultantes son
+                    aceptables.&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Ahora que ha terminado el trabajo, se recomienda verificar que el trabajo tenía el valor suficiente. Debe evaluar si el
+    trabajo tiene la calidad correcta y si es lo suficientemente completo para que resulte útil a aquellos miembros del
+    equipo que vayan a utilizarlo posteriormente como entrada de su trabajo. Siempre que sea posible, utilice las listas de
+    comprobación proporcionadas en RUP para verificar que la calidad y la completitud son lo "suficientemente buenas".
+</p>
+<p>
+    Intente que las personas que utilizarán el producto como entrada para realizar tareas en sentido descendente formen
+    parte de la revisión del trabajo interno. Hágalo mientras todavía tenga tiempo para realizar acciones para solucionar
+    sus problemas. También debe evaluar su trabajo en los productos de trabajo de entrada clave para asegurarse de que los
+    ha representado o considerado de forma precisa y suficiente. Para ello, es muy útil hacer que el autor del producto de
+    trabajo de entrada revise su trabajo.
+</p>
+<p>
+    Recuerde que RUP es un proceso de entrega iterativo y que en muchos casos los productos de trabajo evolucionan con el
+    tiempo. Como tal, no siempre es necesario (y en muchos casos es contraproducente) formar completamente un producto de
+    trabajo que sólo se utilizará de forma parcial o que no se utilizará en absoluto en los trabajos en sentido descendente
+    inmediatamente posteriores. Esto se debe a que existe una alta probabilidad de que la situación alrededor del producto
+    de trabajo cambie (y que las suposiciones realizadas cuando se creó el producto de trabajo se demuestre que son
+    incorrectas) antes de que se utilice el producto, lo que da como resultado un esfuerzo inútil y la necesidad de
+    revisión.
+</p>
+<p>
+    Asimismo, evite la trampa de invertir un exceso de ciclos en la presentación en detrimento del valor del propio
+    contenido. En entornos de proyecto en los que la presentación tenga importancia y un gran valor económico como
+    entregable del proyecto, puede utilizar un recurso administrativo o secundario para ejecutar trabajo en un producto de
+    trabajo y mejorar de esta forma su presentación.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/record_test_scripts_7A61D605.html" guid="{279B8DDC-F3D9-4087-87CE-AC8D718D8C8E}">Implementación de scripts de prueba utilizando Rational Robot</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/implement_developer_tests_23B4C147.html" guid="{FD49B4B3-FA09-4475-A99A-DA8EBBEA220E}">Implementación de pruebas de desarrollador utilizando Rational Test RealTime</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/structure_test_implementation_3CC01B9C.html" guid="{AD403709-9F1A-496A-B5F7-F7CF823F8BDD}">Estructuración de la implementación de la prueba con Rational TestFactory</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/generate_test_scripts_71EF254E.html" guid="{19F8AE86-E40A-42F5-8B81-673C306F5C35}">Implementación de scripts de prueba generados utilizando Rational TestFactory</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/create_perf_test_scripts_F89F2B01.html" guid="{DEBC41D9-6B28-40CE-BD55-4888609A46FA}">Creación de un script de prueba de rendimiento automatizada utilizando Rational Robot</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/setup_testfactory_C77C34F4.html" guid="{FAC387D8-BA1A-4056-A53B-E1C43571D1DC}">Establecimiento del entorno de prueba en Rational TestFactory</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,756 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Interfaz de usuario (General)</title>
+<meta content="Guideline" name="uma.type">
+<meta content="user_interface_general" name="uma.name">
+<meta content="Interfaz de usuario (General)" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{351D0945-8FD3-458D-B514-E25E3B445264}", "6.780901688276357E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{351D0945-8FD3-458D-B514-E25E3B445264}", "6.780901688276357E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "6.780901688276357E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{351D0945-8FD3-458D-B514-E25E3B445264}", "6.780901688276357E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="6.780901688276357E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Interfaz de usuario (General)</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz proporciona normas generales para el desarrollo de interfaces de usuario basadas en ventanas</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Diseño de clase</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/design_user_interface_DAABE09F.html" guid="{7414C358-6188-4E5C-8C35-F9D4DF3E0123}">Diseñar la interfaz de usuario</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_navmap_73AF74E2.html" guid="{351D0945-8FD3-458D-B514-E25E3B445264}">Mapa de navegación</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a key="interfaces de usuario basadas en ventanas" text="conceptos fundamentales" name="XE_window-based_user_interfaces__fundamentals" id="XE_window-based_user_interfaces__fundamentals" class="index"></a><a id="Window Fundamentals: Setting the Context" name="Window Fundamentals: Setting the Context"></a>Fundamentos de las ventanas: Establecer el contexto
+</h3>
+<p>
+    En esta sección se proporciona una visión general de la anatomía de una interfaz de usuario basada en ventanas. Esta
+    visión general es necesaria para comprender el resto de directrices.
+</p>
+<p>
+    Una interfaz de usuario basada en ventanas se divide en ventanas. Las ventanas se pueden mover alrededor de la
+    pantalla, superponerse e iconizarse. Un sistema suele tener una ventana principal, y una serie de ventanas secundarias.
+    La ventana principal gestiona las principales interacciones con el usuario, y suele contener un número de objetos
+    arbitrario. Las ventanas secundarias se utilizan para proporcionar soporte en las interacciones con las ventanas
+    principales proporcionando detalles sobre sus objetos y operaciones en estos objetos.
+</p>
+<h4>
+    Ventana principal
+</h4>
+<p>
+    La ventana principal suele contener un número arbitrario de objetos con qué el usuario interactúa. El usuario suele
+    interactuar con el sistema seleccionando primero uno o varios objetos, por ejemplo pulsando sobre ellos, y escogiendo
+    una operación (por ejemplo, con un menú) que se ejecuta en todos los objetos seleccionados. Las operaciones comunes son
+    <b>Cortar</b>, <b>Copiar</b>, <b>Pegar</b>, <b>Suprimir</b> y <b>Ver propiedades</b>.
+</p>
+<p>
+    La ventana principal normalmente contiene una barra de menús, desde la cual los usuarios pueden escoger las
+    operaciones. Los usuarios también escogen operaciones a través de los menús emergentes (pulsando el botón derecho del
+    ratón sobre el mismo objeto) y con la manipulación directa (pulsando y arrastrando el objeto). Como el número total de
+    objetos puede no adecuarse dentro de la ventana principal, los usuarios pueden desplazarse a través de los objetos con
+    la barra de desplazamiento, o cambiando el tamaño de la ventana. Además, la ventana principal puede dividirse en
+    paneles (definiendo subáreas de la ventana), cuyo tamaño también puede cambiar el usuario.
+</p>
+<h4>
+    Compuestos
+</h4>
+<p>
+    Un objeto compuesto en una interfaz de usuario es un objeto que está compuesto visualmente de otros objetos. Por
+    ejemplo, un <b>párrafo</b> es un compuesto de <b>caracteres</b>, o un <b>objeto de dibujo complejo</b> es un compuesto
+    de más <b>objetos de dibujo primitivos</b>.
+</p>
+<h4>
+    Ventana secundaria
+</h4>
+<p>
+    Las ventanas secundarias dan soporte a la ventana principal proporcionando detalles (como las propiedades) sobre sus
+    objetos, y las operaciones sobre estos objetos. Sólo unas cuantas propiedades del objeto se muestran normalmente en la
+    ventana principal. Las propiedades de un objeto se pueden visualizar abriendo una ventana de propiedades (que es una
+    ventana secundaria) que muestra todos los atributos de un objeto. El usuario puede cambiar a menudo los atributos por
+    controles como los botones conmutadores y de selección, escalas, cuadros combinados y campos de texto.
+</p>
+<p>
+    Tenga en cuenta que existe una delgada línea, a veces bastante artificial, entre las ventanas principales y las
+    secundarias - pueden mostrar los mismos niveles de complejidad. Sin embargo, dos diferencias esenciales entre la
+    ventana principal y la secundaria son:
+</p>
+<ul>
+    <li>
+        Las ventanas principales se suelen considerar más importantes para la aplicación ya que deben proporcionar una
+        utilización extensiva. Por lo tanto, los esfuerzos de desarrollo tienden a centrarse en las ventanas principales.
+    </li>
+    <li>
+        Las ventanas secundarias suelen mostrarse navegando a través de ventanas principales, y no viceversa.
+    </li>
+</ul>
+<p>
+    Además de las ventanas de propiedades, existen otros tipos de ventanas secundarias, como los recuadros de diálogo,
+    recuadros de mensaje, paletas y ventanas emergentes.
+</p>
+<p>
+    Muchas aplicaciones basadas en archivos. Los usuarios pueden iniciar estas aplicaciones con la operación <b>Abrir</b>
+    en un objeto de archivo (por ejemplo, efectuando una doble pulsación en el icono de un archivo en una carpeta). La
+    ventana principal muestra los objetos almacenados en ese archivo. Las operaciones comunes en los archivos son
+    <b>Guardar</b>, <b>Guardar como</b>, <b>Abrir</b> y <b>Nuevo</b>, que habitualmente se seleccionan mediante el menú
+    Archivo de la ventana principal. La ventana principal también puede mostrar múltiples archivos (también denominada
+    Interfaz de documento múltiple, o MDI), permitiendo al usuario cambiar entre diferentes archivos.
+</p>
+<h3>
+    <a key="dimensiones visuales" text="introducción a" name="XE_visual_dimensions__introduction_to" id="XE_visual_dimensions__introduction_to" class="index"></a><a id="Visual Dimensions" name="Visual Dimensions"></a>Dimensiones visuales
+</h3>
+<p>
+    La clave para las ventanas principales utilizables es usar las dimensiones visuales cuando se visualicen los objetos
+    contenidos y sus atributos. Las ventajas de presentar más atributos de los necesarios para la identificación son:
+</p>
+<ul>
+    <li>
+        El usuario evita el coste general de navegación de ventanas ya que reduce el número de ventanas que se deben
+        mostrar (cuando el usuario necesita ver un atributo que se presenta en la ventana principal).
+    </li>
+    <li>
+        El usuario puede ver los diferentes aspectos (de diferentes objetos) al mismo tiempo, que suelen ser útiles para
+        comparaciones y para empezar a reconocer patrones. Una buena utilización de la dimensión visual puede animar a los
+        usuarios a desarrollar una sensación completamente nueva por su trabajo.
+    </li>
+</ul>
+<p>
+    Las dimensiones visuales son:
+</p>
+<ul>
+    <li>
+        <a href="#Position">Posición</a>
+    </li>
+    <li>
+        <a href="#Size">Tamaño</a>
+    </li>
+    <li>
+        <a href="#Shape">Forma</a>
+    </li>
+    <li>
+        <a href="#Color">Color</a>
+    </li>
+</ul>
+<p>
+    Estas dimensiones se presentan a continuación. Sin embargo, tenga en cuenta el área de pantalla disponible cuando
+    diseñe la visualización de los objetos. Intente que los gastos generales al explotar el área de pantalla sean tan
+    pequeños como sea posible, y considere si utilizar varias dimensiones visuales compensa el gasto extra del área de
+    pantalla. Quizás el usuario estará mejor servido con sólo una lista de nombres, porque lo que el usuario realmente
+    necesita es ver todos los objetos que sea posible.
+</p>
+<p>
+    Tenga en cuenta que es importante utilizar estas dimensiones visuales, o ampliarlas, para poder identificar
+    exclusivamente los objetos. A continuación también incluimos una discusión sobre este tema (consulte la sección
+    siguiente, "<a href="#Identification">Identificación</a>").
+</p>
+<p>
+    Tenga en cuenta también que las dimensiones visuales se pueden utilizar en correlación con la dimensión de tiempo, por
+    ejemplo desplazando objetos (su posición se cambia con el tiempo), o cambiando la forma o el color de los objetos (su
+    estado se cambia con el tiempo); el último caso se discute en la sección siguiente "<a href="#Shape">Forma</a>".
+</p>
+<h4>
+    <a key="dimensiones visuales" text="posición" name="XE_visual_dimensions__position" id="XE_visual_dimensions__position" class="index"></a><a id="Position" name="Position"></a>Posición
+</h4>
+<p>
+    Los aspectos más intuitivos que las posiciones pueden presentar son las posiciones de mundo real. Los ejemplos son:
+</p>
+<ul>
+    <li>
+        Los Sistemas de Información Geográfica (GIS) que muestran un mapa en el que usted presenta los objetos en la misma
+        longitud y latitud en que se encuentran en el mundo real.
+    </li>
+    <li>
+        Los programas de Diseño asistido por ordenador (CAD) que presentan los objetos y su entorno exactamente de acuerdo
+        con sus coordinadas del mundo real.
+    </li>
+    <li>
+        Los editores Lo que se ve es lo que se obtiene (WYSIWYG) que muestran los objetos (caracteres) en la misma
+        ubicación de la ventana como aparecerán en una impresión en papel.
+    </li>
+</ul>
+<p>
+    A veces es relevante mostrar mostrar el tamaño real (ejemplos de editor del programa CAD y WYSIWYG), y a veces no lo
+    es; por ejemplo, cuando el tamaño de los objetos es mucho menor que la distancia entre los objetos.
+</p>
+<p>
+    Por ejemplo, imagine que tiene un sistema de reserva de vuelos donde el usuario debe entrar las destinos. Una posible
+    presentación de esto sería mostrar un mapa que contenga los diferentes aeropuertos (donde un aeropuerto es un objeto).
+    Naturalmente, como los tamaños reales de los aeropuertos son irrelevantes (y demasiado pequeños para ser vistos) todos
+    los aeropuertos se muestran como iconos del mismo tamaño.
+</p>
+<p>
+    Este ejemplo también ilustra que las posiciones del mundo real se pueden utilizar incluso si no son relevantes, siempre
+    que ayuden al usuario a identificar los objetos. En el ejemplo, el usuario no necesita conocer la ubicación de un
+    aeropuerto. Pero, si el usuario está familiarizado con la geografía, será más sencillo encontrar las destinos en un
+    mapa que en una lista.
+</p>
+<p>
+    También puede utilizar una posición para representar posiciones reales "virtuales". Por ejemplo, imagine un sistema de
+    compra desde el hogar donde los usuarios puedan comprar cosas de diferentes tiendas. Una posible presentación de esto
+    sería mostrar una imagen esquemática de un almacén (virtual) donde se colocarían las diferentes tiendas (donde una
+    tienda es un objeto). Esta imagen esquemática no tiene nada que ver con las ubicaciones reales de estos almacenes -sólo
+    se explota la memoria espacial del usuario: es más sencillo recordar una posición x-y que un elemento en una lista o en
+    una jerarquía.
+</p>
+<p>
+    Otra utilización alternativa para la posición es mostrar asociaciones entre objetos: todos los objetos que tienen la
+    misma posición vertical se asocian de un modo, y todos los objetos que tienen la misma posición horizontal se asocian
+    de otro modo. Las hojas de cálculo son un ejemplo de esto.
+</p>
+<p>
+    Una alternativa similar es permitir que un eje represente el rango de valor de algún atributo. Por ejemplo, en un
+    sistema de reserva de vuelos, los vuelos reservados (donde un vuelo es un objeto) se podría presentar a lo largo del
+    eje horizontal de tiempo mostrando su relación en el tiempo, cuánto durarán, y la duración de tiempo que el usuario
+    permanecerá en cada destino. Todo esto son aspectos que el usuario no tiene que conocer, pero está bien verlos si se
+    puede presentar de forma discreta.
+</p>
+<p>
+    Si no desea utilizar tanta área de pantalla presentando todo el rango de valor, puede contraer las distancias entre los
+    objetos. En el ejemplo de reserva de viajes, esto significaría que todos los vuelos reservados se disponen
+    horizontalmente sin espacios entre ellos, pero el primer vuelo está a la izquierda, el segundo vuelo está
+    inmediatamente a la derecha del primer vuelo, etc. Los usuarios no verán toda la duración de tiempo que permanecerán en
+    cada destino, sino que verían la duración de los vuelos.
+</p>
+<h4>
+    <a key="dimensiones visuales" text="tamaño" name="XE_visual_dimensions__size" id="XE_visual_dimensions__size" class="index"></a><a id="Size" name="Size"></a>Tamaño
+</h4>
+<p>
+    En muchos casos, el "tamaño" debe representar lo mismo que la posición. En un sistema CAD, por ejemplo, el tamaño debe
+    representar naturalmente la extensión del mundo real. Algunas veces, sin embargo, podemos elegir con qué tamaño deben
+    representarse, por ejemplo, los aeropuertos en el mapa que admiten la selección de destino.
+</p>
+<p>
+    En estos casos, el tamaño debe representar lo que se perciba más intuitivamente como tamaño real del objeto. Para un
+    archivo, el tamaño de un objeto debe representar la cantidad de espacio en disco que ocupa. Para una cuenta bancaria,
+    el tamaño del objeto debe representar un balance. Para la mayoría de tamaños, la escala logarítmica es mejor que una
+    escala proporcional, ya que una escala proporcional normalmente consume demasiado área de pantalla.
+</p>
+<p>
+    El tamaño es, en realidad, tan intuitivo que puede considerar mostrarlo aunque no sea relevante. Después de todo, en el
+    mundo real, varias cosas (objetos) ocupan diferentes proporciones de nuestro campo visual debido a sus diferentes
+    tamaños. Y esto no es inoportuno; sólo ayuda a discriminar entre las cosas. Del mismo modo, la utilización de
+    diferentes tamaños en la interfaz de usuario ayudará a los usuarios a discriminar entre diferentes objetos.
+</p>
+<p>
+    El tamaño debería utilizarse para presentar sólo un atributo, aunque sería posible permitir que la extensión horizontal
+    presente un atributo y que la extensión vertical presente otro (que no es intuitivo, y puede confundir al usuario).
+</p>
+<p>
+    La extensión horizontal o vertical debe ser (logarítmicamente) proporcional al atributo cuyo tamaño tiene que ilustrar
+    -la otra extensión debe fijarse (o debe depender de la longitud del nombre, por ejemplo). Si la extensión horizontal y
+    vertical es proporcional al mismo atributo, prácticamente no añade ningún valor: parece obtrusivo y sólo consume más
+    área de pantalla.
+</p>
+<h4>
+    <a key="dimensiones visuales" text="forma" name="XE_visual_dimensions__shape" id="XE_visual_dimensions__shape" class="index"></a><a id="Shape" name="Shape"></a>Forma
+</h4>
+<p>
+    Las formas normalmente se representan con iconos en una interfaz gráfica de usuario; la forma es más adecuada para
+    representar el tipo porque es más intuitiva para correlacionar una diferencia de vistas que para correlacionar una
+    diferencia de tipo. En el mundo real, diferentes objetos del mismo tipo de cosa normalmente son parecidos, mientras que
+    los objetos de diferentes tipos son diferentes. Por ejemplo, diferentes objetos silla son similares (todos tienen
+    cuatro patas, un asiento y un respaldo), mientras que los coches son muy diferentes de una silla.
+</p>
+<p>
+    Así pues, ¿cuáles son los criterios cuando diferentes objetos son de diferentes tipos? Bien, clases diferentes
+    ciertamente deben considerarse como tipos diferentes. Asimismo, algunos atributos son parecidos al tipo. Estos
+    atributos deben tener un conjunto limitado de posibles valores y su valor normalmente determina qué se puede hacer con
+    los objetos (en términos de operaciones y posibles valores de otros atributos). Ocurre lo mismo en el mundo real -la
+    diferencia más importante entre silla y coche es cómo se utilizan: una silla se utiliza para descansar y un coche para
+    el transporte.
+</p>
+<p>
+    Sin embargo, cuando analice lo que se deben considerar tipos diferentes, recuerde que lo más importante es: qué
+    atributo percibirá más probablemente el usuario como tipo.
+</p>
+<p>
+    Si no tiene múltiples clases o ningún atributo de tipo, puede utilizar iconos para representar los diferentes valores
+    para otros atributos de valor limitado, pero sólo si este atributo es de interés fundamental para el usuario.
+</p>
+<p>
+    Los iconos también se suelen utilizar para mostrar diferentes estados del objeto (además de mostrar el tipo). Cuando
+    selecciona un objeto, se suele mostrar de dos modos: el color cambia a negro, o muestra un rectángulo alrededor de
+    este. Otro posible estado es que ha abierto una ventana de propiedad para el objeto. Normalmente, tiene los otros
+    estados específicos de la aplicación que se pueden mostrar como, por ejemplo, si se ha leído o no un mensaje de correo
+    electrónico. Asegúrese de que la presentación del estado no dificulta la percepción del usuario del tipo y viceversa.
+</p>
+<h4>
+    <a key="dimensiones visuales" text="color" name="XE_visual_dimensions__color" id="XE_visual_dimensions__color" class="index"></a><a id="Color" name="Color"></a>Color
+</h4>
+<p>
+    El color se puede dividir en tres componentes, basándose en la percepción visual. Estos son: tono (es decir, rojo,
+    azul, marrón, etc.), saturación y contraste. Sin embargo, no debe utilizar diferentes componentes para representar
+    diferentes atributos, ya que será demasiado difícil para la percepción del usuario.
+</p>
+<p>
+    El tono se puede utilizar para representar tipos o atributos con un conjunto limitado de posibles valores. Sin embargo,
+    es mejor utilizar un icono para esto, porque el icono se puede diseñar para que el usuario comprenda qué valor
+    representa, mientras que no existe tal correlación intuitiva entre contenido de color y (la mayoría de tipos de)
+    valores. El tono se puede utilizar, por lo tanto, en lugar de los iconos, si no se encuentran iconos intuitivos. Una
+    alternativa si tiene muchos iconos de tipo es utilizar el tono para categorizar los iconos de tipo (para que algunos
+    iconos con un significado similar sean rojos, los que tienen otro significado sean azules, etc.).
+</p>
+<p>
+    La saturación se podría utilizar para representar un atributo con un rango de valor, pero esto generará una interfaz de
+    usuario más bien fea y obtrusiva -el uso de diferentes saturaciones inestabiliza el ojo y utilizar una saturación alta
+    es bastante obtrusivo.
+</p>
+<p>
+    El contraste es el componente más utilizable del color. Se puede utilizar para representar un atributo con un rango de
+    valor, y no resulta obtrusivo de modo que también se puede utilizar para atributos de importancia secundaria. Para que
+    el contraste no sea obtrusivo, no debe ir de contraste cero (blanco) a contraste total (negro), sino de un contraste
+    bajo (gris claro) a un contraste alto (gris oscuro). Para muchos sistemas en que los usuarios crean la mayoría de
+    objetos, es muy útil presentar los objetos según la edad; por ejemplo, la cantidad de tiempo desde el último cambio.
+    Esto ayuda a los usuarios a identificar el objeto con el que desean trabajar (que suele ser el objeto con el "tiempo
+    desde el último cambio" más breve). Por lo tanto, si no dispone de un atributo de rango de valor que realmente necesite
+    presentar al usuario, considere presentar la edad.
+</p>
+<p>
+    A veces el color se utiliza para hacer los iconos más llamativos estéticamente y esto también ayuda al usuario a
+    discriminar rápidamente entre los iconos. Si proporciona iconos de múltiples colores, probablemente no utilizará el
+    color para otros objetivos.
+</p>
+<p>
+    Como algunas personas son daltónicas, y como no todas las pantallas admiten color, no debe utilizar el color como el
+    único medio de mostrar la información vital. Además, una utilización bien planificada y no obtrusiva del color hace la
+    interfaz de usuario más llamativa estéticamente.
+</p>
+<h4>
+    <a key="dimensiones visuales" text="otros aspectos, identificación" name="XE_visual_dimensions__further_aspects,_identification" id="XE_visual_dimensions__further_aspects,_identification" class="index"></a><a id="Identification" name="Identification"></a>Identificación
+</h4>
+<p>
+    El usuario debe poder identificar de forma exclusiva cada objeto. A veces, las otras dimensiones visuales son
+    suficientes para la identificación, pero en la mayoría de casos, no. Mostrar un nombre al lado o cerca de un icono es
+    la técnica más popular para dar soporte a la identificación. La ventaja de los nombres es que un área de pantalla muy
+    pequeña puede mostrar un gran número de nombres distintivamente diferentes.
+</p>
+<p>
+    Es mejor si un nombre se puede generar a partir de un valor de atributo (que normalmente es textual). La alternativa es
+    permitir que los usuarios especifiquen los nombres cuando crean los objetos, pero esto requiere tiempo, y por lo tanto
+    reduce la utilización.
+</p>
+<p>
+    A veces puede dar la forma al icono para que el nombre pueda estar contenido dentro del icono. Esto ahorra área de
+    pantalla y proporciona una indicación más fuerte de la relación entre el icono y el nombre. Sin embargo, esto puede
+    crear los problemas siguientes:
+</p>
+<ul>
+    <li>
+        El icono debe estar vacío en medio (donde aparece el nombre).
+    </li>
+    <li>
+        Los nombres tienen longitudes variables, lo que significa que la extensión horizontal del icono debe depender de la
+        longitud del nombre, o que algunos nombres se deben trucar.
+    </li>
+    <li>
+        El icono debe ser mucho más ancho que alto, ya que todo texto de longitud razonable es más largo que ancha.
+    </li>
+</ul>
+<p>
+    Como resultado, a menudo tiene que mostrar el nombre debajo o a la derecha del icono, lo que tiene la ventaja de
+    consumir menos área de pantalla pero el inconveniente que el objeto (icono + nombre) acaba siendo incluso más ancho que
+    alto. Si no tiene espacio suficiente para mostrar el nombre (que es posible, porque puede identificar un icono sin
+    nombrarlo), puede mostrar el nombre mediante ventanas emergentes que se muestran cuando el cursor está encima del
+    icono.
+</p>
+<p>
+    El font del nombre se puede utilizar para mostrar un atributo de opciones limitadas, si puede encontrar una correlación
+    intuitiva entre los valores de font y atributo; por ejemplo, puede utilizar negrita o cursiva para distinguir el
+    objeto, o para enfatizar su importancia. En muchos casos, sin embargo, no es apropiado utilizar el font, ya que es
+    bastante obtrusivo y poco intuitivo.
+</p>
+<p>
+    Si muestra el nombre (o, para esta cuestión, cualquier otro texto que el usuario pueda cambiar) debe proporcionar
+    soporte a la edición directa del nombre en la ventana principal. La alternativa del usuario sería solicitar una
+    operación de cambio de nombre y, a continuación, entrar el nuevo nombre, o abrir la ventana de propiedades y editar
+    allí el nombre. No sólo resulta más rápido editar directamente el nombre en la ventana principal, sino que también
+    admite el principio "donde se ve es donde se cambia".
+</p>
+<h3>
+    <a key="directrices para la interfaz de usuario" text="seleccionar" name="XE_user-interface_guidelines__select" id="XE_user-interface_guidelines__select" class="index"></a><a key="directrices para la interfaz de usuario" text="buscar" name="XE_user-interface_guidelines__find" id="XE_user-interface_guidelines__find" class="index"></a><a key="buscar y seleccionar" text="directrices de la interfaz de usuario" name="XE_power_find_and_select__user-interface_guidelines" id="XE_power_find_and_select__user-interface_guidelines" class="index"></a><a id="Power Find and Select" name="Power Find and Select"></a>Buscar y Seleccionar
+</h3>
+<p>
+    Si el grupo de objetos que se debería cambiar o operar está compuesto de modo que el usuario pueda expresar los
+    criterios de selección identificándolos, la herramienta de búsqueda de la ventana principal puede solucionar el
+    problema seleccionando siempre todas las coincidencias del criterio.
+</p>
+<p>
+    Hay dos formas posibles de gestionar la búsqueda:
+</p>
+<ul>
+    <li>
+        Todos los objetos a los que se aplica el criterio de búsqueda se seleccionan en la ventana principal. Si no puede
+        garantizar que todos los objetos encontrados se muestran simultáneamente en la ventana principal (porque pueden
+        estar demasiado lejos), también puede mostrar una lista de coincidencias en la ventana de búsqueda. Después de una
+        búsqueda, el usuario especifica criterios de búsqueda adicionales o realiza una operación en los objetos
+        seleccionados. La ventaja de este enfoque es que permite que el usuario solicite algunas operaciones en todos los
+        objetos de acuerdo con estos criterios de búsqueda.
+    </li>
+    <li>
+        Proporcione un botón <b>Búsqueda</b> en la ventana de búsqueda que seleccione el objeto siguiente de acuerdo con
+        los criterios de búsqueda y desplace el contenido de la ventana principal para que este objeto sea visible. Después
+        de una búsqueda, el usuario puede realizar una operación en el objeto seleccionado y continuar para buscar
+        secuencialmente a través de los objetos de acuerdo con los criterios de búsqueda. La ventaja de este enfoque es que
+        el usuario puede ver todos los objetos encontrados en su entorno (en la ventana principal mejor que en una lista de
+        coincidencias separada).
+    </li>
+</ul>
+<p>
+    En muchas ocasiones, querrá combinar ambos casos, por ejemplo incluyendo un botón <b>Seleccionar todo</b> en la ventana
+    de búsqueda secuencial o un botón <b>Ver siguiente</b> en la ventana de búsqueda paralela.
+</p>
+<h3>
+    <a key="directrices para la interfaz de usuario" text="clasificar" name="XE_user-interface_guidelines__sorting" id="XE_user-interface_guidelines__sorting" class="index"></a><a key="clasificar" text="directrices de la interfaz de usuario" name="XE_sorting__user-interface_guidelines" id="XE_sorting__user-interface_guidelines" class="index"></a><a id="Sorting" name="Sorting"></a>Orden
+</h3>
+<p>
+    Un ejemplo de clasificación puede ser que el sistema organice todos los objetos verticalmente, en orden alfabético por
+    nombre o según el valor de un atributo. El usuario entonces examina los objetos desplazándose. Este es el soporte más
+    sencillo posible para examinar respecto a la implementación y respecto a la operación del usuario. Los trabajos se
+    ordenan mejor cuando el usuario conoce siempre el nombre (o el atributo por el que hemos ordenado) del objeto que se
+    desea. Un ejemplo de un sistema que se debería implementar de este modo es un libro de teléfonos. La ventana principal
+    debe tener una operación con frecuencia para cambiar el orden de clasificación y/o los criterios.
+</p>
+<h3>
+    <a key="directrices para la interfaz de usuario" text="herencia controlada por el usuario" name="XE_user-interface_guidelines__user-controlled_inheritance" id="XE_user-interface_guidelines__user-controlled_inheritance" class="index"></a><a key="herencia controlada por el usuario" text="directrices de la interfaz de usuario" name="XE_user-controlled_inheritance__user-interface_guidelines" id="XE_user-controlled_inheritance__user-interface_guidelines" class="index"></a><a id="User-Controlled Inheritance" name="User-Controlled Inheritance"></a>Herencia controlada por el usuario
+</h3>
+<p>
+    Un ejemplo de herencia controlada por el usuario son los editores WYSIWYG donde el usuario define a qué "estilo"
+    pertenece cada párrafo y, a continuación, se define cómo se distribuye este estilo (es decir, cada carácter pertenece a
+    este estilo).
+</p>
+<p>
+    Una desventaja en comparación con una herramienta de búsqueda es que una herencia controlada por el usuario da soporte
+    sólo al cambio de los atributos (y posiblemente asociaciones) para múltiples objetos, pero no a la realización de
+    operaciones. También la herencia controlada por el usuario añade gastos porque el usuario debe definir explícitamente y
+    mantener los grupos (es decir, los estilos disponibles). También es un concepto más complicado.
+</p>
+<p>
+    Sin embargo, si el criterio de búsqueda no se puede especificar para los objetos, o si el usuario necesita realizar
+    cambios relativos a los valores de los atributos (como aumentar por dos), proporcionar una herencia controlada por el
+    usuario puede ser una solución.
+</p>
+<p>
+    Para que la herencia controlada por el usuario sea útil, la naturaleza de la clase debe ser tal que los objetos se
+    puedan categorizar en grupos (que tengan algún significado lógico para el usuario) en que la mayoría de los valores de
+    atributo sean lo mismo.
+</p>
+<p>
+    Una ventaja comparada con una herramienta de búsqueda es que la herencia controlada por el usuario da soporte a la
+    alteración temporal; por ejemplo, cambia el valor del atributo pero sólo si no se ha definido explícitamente en el
+    objeto. Asimismo, la herencia controlada por el usuario puede habilitar que el usuario realice definiciones de valor de
+    atributo más genéricas (y por lo tanto, más potentes); por ejemplo, heredar el font de este estilo, pero hacerlo dos
+    píxeles mayor. La herencia controlada por el usuario es especialmente útil cuando los grupos no tienen criterios de
+    búsqueda fáciles de especificar.
+</p>
+<p>
+    La clase para la cual soportará la herencia controlada por el usuario, puede heredarse a si mismo o puede crear una
+    nueva clase desde la cual se heredará el objetivo. Conseguir que la clase se herede a si misma es algo más potente, ya
+    que el mismo objeto se puede utilizar para heredar desde y hacia las cosas que estaban previstas originalmente para el
+    objeto, como ser una factura, una cuenta, etc. Esto genera menos clases para que el usuario (y el sistema) las
+    gestione. Por otro lado, crear una nueva clase desde la que heredar tiene la ventaja de ser más fácil de comprender ya
+    que la herencia se separa claramente de la operación normal de la clase. Crear una nueva clase es la mejor solución en
+    la mayoría de casos, especialmente si los usuarios no tienen demasiada experiencia con los ordenadores y los modelos
+    orientados a objetos. La nueva clase que cree preferiblemente se heredará a si mismo para proporcionar soporte a
+    múltiples niveles de herencia.
+</p>
+<p>
+    Para la mayoría de sistemas, el usuario a menudo tiene que cambiar el grupo de herencia para objetos concretos ya que
+    el usuario no sabe con antelación exactamente cómo se deben estructurar los grupos de herencia. Proporcione una
+    operación para esto.
+</p>
+<p>
+    Si decide proporcionar soporte a la herencia controlada por el usuario en el sistema, analice qué cosas (atributos,
+    asociaciones, clase) deben heredarse y proporcione soporte a la herencia sólo para estas cosas. Esto llevará a un modo
+    menos genérico pero más sencillo (para usuarios y desarrolladores) de gestionar la funcionalidad. Modele estas cosas
+    que se deberían heredar en la nueva clase. Muchos atributos se modelarán en las clases que los heredan y en la clase
+    heredada. Recuerde que la herencia controlada por el usuario pretende ahorrar tiempo al usuario, no a usted. Si la
+    clase se hereda a si misma, esto implica que todo es heredable.
+</p>
+<p>
+    Decida si el usuario realmente necesita crear nuevos objetos de la clase heredada o si el sistema puede proporcionar un
+    número suficiente de objetos una vez y para todos. Prohibir que el usuario cree nuevos objetos reducirá ampliamente la
+    flexibilidad de la herencia pero, por otro lado, facilitará el funcionamiento.
+</p>
+<p>
+    Decida también si los cambios de los atributos numéricos de los objetos que heredan se deben interpretar como relativos
+    al valor heredado o como fijos. Digamos, por ejemplo, que un objeto hereda el tamaño de font 12 y el usuario lo cambia
+    a 14. Por interpretación relativa, el sistema recordará el tamaño de font del objeto como valor heredado +2; es decir,
+    si el tamaño de font del objeto heredado cambia el tamaño de font, el objeto que hereda también cambiará el tamaño de
+    font. Si proporciona soporte a la interpretación relativa, debe indicarse en el atributo del objeto heredado (porque es
+    el que mira cuando desea examinar la herencia). Es importante que la interpretación relativa se presenta al usuario
+    (por ej., "tamaño de font: 12+2=14," en lugar de sólo "tamaño de font: 14"). Puede explorar con casos de ejemplo para
+    encontrar situaciones a favor de interpretaciones relativas o fijas. Es posible que deba proporcionar soporte a ambas.
+</p>
+<p>
+    Como la herencia controlada por el usuario sólo es para usuarios intermediarios y de alimentación, debe diseñarlo para
+    que no interfiera con la utilización normal (por ejemplo, cuando el usuario no utiliza la herencia); si no, los
+    usuarios noveles se intimidarán.
+</p>
+<p>
+    Recuerde que la herencia controlada por el usuario que construye está prevista para facilitar la vida del usuario; no
+    tiene que ser genérica ni pura, pero tiene que ser útil.
+</p>
+<h3>
+    <a key="directrices para la interfaz de usuario" text="examinar jerarquías" name="XE_user-interface_guidelines__browsing_hierarchies" id="XE_user-interface_guidelines__browsing_hierarchies" class="index"></a><a id="Browsing Hierarchies" name="Browsing Hierarchies"></a><a key="examinar jerarquías" text="directrices de la interfaz de usuario" name="XE_browsing_hierarchies__user-interface_guidelines" id="XE_browsing_hierarchies__user-interface_guidelines" class="index"></a>
+</h3>
+<p>
+    Una jerarquía de navegación permite que el usuario (o posiblemente el sistema) categorice los objetos en ventanas
+    principales o compuestas, que se organizan jerárquicamente. La navegación de las jerarquías garantiza que el usuario
+    sólo tenga que buscar una (o unas cuantas) categorías. Esto reduce el número de objetos que se deben mostrar en un
+    momento concreto. Un inconveniente es que el usuario (habitualmente) tiene que gestionar la categorización. Un ejemplo
+    de esta técnica es el navegador de archivos: el motivo para tener directorios o carpetas es ayudar al usuario a
+    encontrar archivos.
+</p>
+<h3>
+    <a key="gestión de ventanas" text="directrices de la interfaz de usuario" name="XE_window_management__user-interface_guidelines" id="XE_window_management__user-interface_guidelines" class="index"></a><a key="directrices para la interfaz de usuario" text="gestión de ventanas" name="XE_user-interface_guidelines__window_management" id="XE_user-interface_guidelines__window_management" class="index"></a><a id="Window Management" name="Window Management"></a>Gestión de ventanas
+</h3>
+<p>
+    El tamaño de las ventanas y su posición está totalmente controlado para el usuario. Puede, sin embargo, considerar
+    reducir el gasto en ventanas permitiendo que el sistema afecte el tamaño y la posición de las ventanas.
+</p>
+<p>
+    Cuanto más grande sea la ventana principal, más objetos se pueden mostrar, pero más área de pantalla se consume. Una
+    ventana principal debe mostrar, normalmente, cuantos más objeto sean posibles pero sin consumo innecesario de área de
+    pantalla.
+</p>
+<ul>
+    <li>
+        La ventana principal debe ser suficientemente grande para que se puedan mostrar todos los objetos, pero no más
+        grande que la pantalla. Haga que cada ventana principal sea suficientemente grande para mostrar los objetos
+        completos pero evite las áreas que no muestran nada útil como los márgenes en un editor de escritorio. Aunque tenga
+        espacio para mostrar estas áreas vacías, es posible que oculten otras aplicaciones.
+    </li>
+    <li>
+        Recuerde que un usuario cambia de tamaño entre sesiones. Si el número de objetos aumenta, aumente el tamaño de
+        ventana para que todos los objetos estén visibles, a menos que ya tenga la altura completa de ventana o si el
+        usuario ha elegido un tamaño inferior al tamaño por omisión. Si el número de objetos disminuye, reduzca el tamaño,
+        a menos que el usuario haya escogido un tamaño superior al tamaño por omisión. Esta regla garantiza que sigue la
+        intención de las operaciones de cambio de tamaño de los usuarios.
+    </li>
+</ul>
+<p>
+    Una posible licitación posterior sobre el tamaño de la ventana principal es si necesita utilizar la aplicación en
+    paralelo con otras aplicaciones. Puede maximizar el tamaño por omisión de la ventana a media ventana (en oposición a la
+    pantalla completa).
+</p>
+<p>
+    Haga que la posición por omisión de una ventana principal oculte lo mínimo posible de otras aplicaciones. Si tiene que
+    ocultar algunas ventanas, escoja las que no se han utilizado durante más tiempo, e intente dejar como mínimo una parte
+    de las ventanas visibles para que el usuario pueda activarlas fácilmente.
+</p>
+<p>
+    Una desventaja de aplicar las reglas es que restará alguna cantidad de control al usuario (el sistema cambiará el
+    tamaño sin preguntarlo, y no recordará los cambios de posición del usuario entre sesiones). Por lo tanto, si aplica
+    estas reglas, debe permitir que el usuario las desactive (con un control).
+</p>
+<p>
+    Para ventanas secundarias, el tamaño y la posición sería el que no oculte la ventana desde la que se llamaron y
+    posiblemente para que no oculten a otras ventanas secundarias. Si tienen que ocultar la ventana desde la que se
+    llamaron, intente asegurarse de que no ocultan objetos seleccionados. Ocultar cosas vitales, como objetos
+    seleccionados, es un defecto de utilización común para las ventanas secundarias.
+</p>
+<p>
+    Para las ventanas principales diferentes de la ventana principal primaria, también debe aplicar la norma del tamaño del
+    último párrafo.
+</p>
+<p>
+    Los recuadros de diálogo, sin embargo, deben colocarse para que bloqueen la visión de la ventana activa. Como suelen
+    ser pequeños y temporales, el usuario no necesita ver la ventana activa mientras la ventana de diálogo está abierta.
+    Colocar recuadros de diálogo en la ventana activa garantiza que el usuario las reconoce y reduce el movimiento de ratón
+    necesario porque el cursor normalmente está listo sobre la ventana activa.
+</p>
+<p>
+    Para ventanas propietarias, el número de atributos determina el tamaño. Si el tamaño es demasiado grande
+    (aproximadamente 1/4 de la pantalla), debe utilizar más pestañas.
+</p>
+<h3>
+    <a key="directrices para la interfaz de usuario" text="información de sesión" name="XE_user-interface_guidelines__session_information" id="XE_user-interface_guidelines__session_information" class="index"></a><a key="información de sesión" text="directrices de la interfaz de usuario" name="XE_session_information__user-interface_guidelines" id="XE_session_information__user-interface_guidelines" class="index"></a><a id="Session Information" name="Session Information"></a>Información de la sesión
+</h3>
+<p>
+    Todas las configuraciones de la aplicación deben guardarse entre sesiones (sin que el usuario tenga que especificarlo).
+    El tamaño y la posición de las ventanas, qué vista se selecciona y las posiciones de las barras de desplazamiento
+    también debe guardarse. Cuando los usuarios reinicien la aplicación, debe ser exactamente igual que cuando se salió la
+    última vez. El motivo de esto es que habitualmente lo primero que hacen los usuarios cuando inician la sesión es volver
+    a trabajar donde salieron en la última sesión.
+</p>
+<h3>
+    <a key="directrices para la interfaz de usuario" text="ayuda en línea" name="XE_user-interface_guidelines__online_help" id="XE_user-interface_guidelines__online_help" class="index"></a><a key="ayuda en línea" text="directrices de la interfaz de usuario" name="XE_online_help__user-interface_guidelines" id="XE_online_help__user-interface_guidelines" class="index"></a><a id="Online Help" name="Online Help"></a>Ayuda en
+    línea
+</h3>
+<p>
+    La ayuda en línea es una parte muy importantes del sistema. Un sistema de ayuda bien diseñado también debería poder
+    reemplazar los manuales de usuario de la mayoría de sistemas. La mayoría de proyectos gastan esfuerzos considerables en
+    la construcción y la producción de manuales cuando es conocido que la mayoría de usuarios nunca los utiliza. Debe
+    considerar invertir estos esfuerzos en un buen sistema de ayuda.
+</p>
+<p>
+    Existe una serie de posibles herramientas de ayuda que debe tener en cuenta:
+</p>
+<ul>
+    <li>
+        <b>Ayuda según tema</b> es la herramienta de ayuda más importante. Permite que el usuario entre un tema o navegue
+        en un tema existente y proporciona ayuda sobre estos temas. La clave es proporcionar un gran índice de ayuda con
+        muchos sinónimos. Recuerde: es posible que el usuario no conozca el término correcto cuando lo necesite.
+    </li>
+    <li>
+        <b>Ayuda según objeto</b> es una ayuda según contexto. Muestra el texto que explica la parte específica (objeto) de
+        la interfaz de usuario. El usuario solicita ayuda según contexto y, a continuación, selecciona la parte de la
+        interfaz de usuario donde es necesaria la ayuda. Este tipo de ayuda debe soportarse para cada parte de la interfaz
+        de usuario, si también se puede utilizar. Otra alternativa es proporcionar una ayuda implícita en ventanas
+        emergentes -una forma condensada de ayuda sensible al contexto que el sistema presenta adyacente al cursor cuando
+        el usuario pasa el cursor por en encima unos segundos. La utilización de una ayuda implícita en ventanas emergentes
+        tiene la ventaja de que no interfiere con la operación normal de la interfaz de usuario.
+    </li>
+    <li>
+        <b>Área de mensajes</b> es un área (habitualmente en la ventana principal) donde el sistema imprime los
+        "comentarios" no solicitados sobre las acciones de los usuarios. Debe ser opcional si se proporciona.
+    </li>
+    <li>
+        <b>Asistentes</b> son una técnica popular que debe considerar cuando un usuario solicite ayuda sobre cómo hacer
+        algo. Un asistente orienta al usuario a través de una tarea (no trivial) mediante la técnica de acompañamiento.
+        Muestra texto descriptivo junto con las operaciones (botones) que permiten que el usuario desarrolle las partes de
+        la tarea que se explican en el texto. De forma alternativa, un asistente realizará una pregunta y, basándose en las
+        respuestas del usuario, desarrollará automáticamente la tarea. Los asistentes son excelentes para tareas que no son
+        triviales y que se utilizan con poca frecuencia.
+    </li>
+</ul>
+<p>
+    La necesidad de ayuda según contexto y asistentes es probable que se identifique durante las pruebas de utilización.
+    Si, durante las pruebas de utilización, los usuarios no comprenden qué partes diferentes de la interfaz de usuario son,
+    es una indicación de la necesidad de una ayuda según contexto. Si tienen dificultades para efectuar una cierta tarea,
+    es una indicación de la necesidad de los asistentes.
+</p>
+<p>
+    El problema con muchos sistemas de ayuda es que se escriben para usuarios noveles (gastando una enorme cantidad de
+    texto para explicar lo que es obvio) o para expertos (manuales de consulta que presuponen que el usuario sabe casi
+    tanto como el programador que hizo la aplicación). Para la mayoría de sistemas, muchos usuarios son "intermediarios de
+    mejora". Escriba el texto de ayuda para ellos.
+</p>
+<h3>
+    <a key="directrices para la interfaz de usuario" text="deshacer" name="XE_user-interface_guidelines__undo" id="XE_user-interface_guidelines__undo" class="index"></a><a key="deshacer" text="directrices de la interfaz de usuario" name="XE_undo__user-interface_guidelines" id="XE_undo__user-interface_guidelines" class="index"></a><a id="Undo" name="Undo"></a>Deshacer
+</h3>
+<p>
+    Deshacer es una función muy útil, aunque es difícil de alcanzar (implementar) en general. Permite que los usuarios
+    aprendan más rápidamente, ya que no tendrán miedo de romper nada. También reduce el riesgo de perder información. Una
+    solución alternativa para evitar la pérdida de información es requerir que el usuario confirme todas las operaciones
+    que podrían provocar una pérdida de información. Esta es una mala solución, sin embargo, ya que añade un gasto de
+    interacción considerable y los usuarios aprenderán pronto a confirmar inconscientemente, presentando esta solución
+    inadecuadamente.
+</p>
+<p>
+    Una opción ambiciosa también es proporcionar rehacer y posiblemente múltiples niveles de deshacer y rehacer. No
+    obstante, el primer nivel de deshacer alcanza la mayor parte de utilización aumentada.
+</p>
+<h3>
+    <a key="directrices para la interfaz de usuario" text="agente de macros" name="XE_user-interface_guidelines__macro_agent" id="XE_user-interface_guidelines__macro_agent" class="index"></a><a key="agente de macros" text="directrices de la interfaz de usuario" name="XE_macro_agent__user-interface_guidelines" id="XE_macro_agent__user-interface_guidelines" class="index"></a><a id="Macro Agent" name="Macro Agent"></a>Agente de
+    macros
+</h3>
+<p>
+    Si proporciona macros, puede resultar muy útil emplear un agente que supervise continuamente las acciones del usuario,
+    buscando secuencias de interacción repetidas. Cuando se detecta una secuencia de interacción repetida, el agente crea
+    una macro para ella (después de solicitar permiso al usuario). Pongamos que el usuario ha solicitado "Subrayar" dos
+    párrafos de texto y ambas veces el usuario también ha cambiado el color del texto a azul inmediatamente después de
+    solicitar "Subrayado". El agente debería preguntar al usuario si desea una macro que "subraye" y "establezca el color
+    en azul" el párrafo de texto seleccionado. Si lo desea, el agente debe crear esta macro y un pulsador (o elemento de
+    menú) que ejecute la macro.
+</p>
+<p>
+    Si el usuario selecciona un objeto durante la grabación, esto se interpretará normalmente como especificación "delta",
+    es decir, que el objeto se ha seleccionado en relación con la selección previa (como "seleccionar el siguiente",
+    "seleccionar primer hijo", etc.).
+</p>
+<p>
+    Si debe interpretar el cambio de los atributos de un objeto como especificación delta (por ejemplo, interpretar el
+    cambio de un valor de atributo de 12 a 14 como un aumento de 2 en lugar de establecer 14) no es tan obvio.
+    Interpretarlo como especificación delta suele ser más potente, ya que cambiar un atributo a un valor fijo para
+    múltiples objetos se puede cumplir, a menudo, seleccionando múltiples objetos y abriendo una ventana de atributos para
+    ellos, en que establece el atributo (en 14) una única vez.
+</p>
+<h3>
+    <a key="directrices para la interfaz de usuario" text="resaltado dinámico" name="XE_user-interface_guidelines__dynamic_highlighting" id="XE_user-interface_guidelines__dynamic_highlighting" class="index"></a><a key="resaltado dinámico" text="directrices de interfaz de usuario para" name="XE_dynamic_highlighting__user-interface_guidelines_for" id="XE_dynamic_highlighting__user-interface_guidelines_for" class="index"></a><a id="Dynamic Highlighting" name="Dynamic Highlighting"></a>Resaltado dinámico
+</h3>
+<p>
+    Con frecuencia, las asociaciones entre clases son bidireccionales, lo que significa que en la interfaz de usuario real,
+    la asociación se muestra en ambos objetos. Si un usuario, centrándose en el objeto <b>A</b>, puede ver que <b>A</b>
+    está asociado con el objeto <b>B</b>, la inversa normalmente también es interesante para el usuario (es decir, cuando
+    se centra en el objeto <b>B</b>, el usuario puede ver que <b>B</b> está asociado con <b>A</b>). La asociación se
+    muestra normalmente en la ventana de propiedades de los objetos, identificando el objeto asociado por nombre.
+</p>
+<p>
+    En general, la visualización de asociaciones entre objetos en una ventana principal es engañosa. La visualización de
+    asociaciones como flechas o líneas suele generar un embrollo poco llamativo y obtrusivo. Una forma agradable de
+    visualizar asociaciones es resaltar todos los objetos asociados cuando el cursor está encima de un objeto de
+    asociación. Un ejemplo de esto es cuando las notas a pie de página se asocian con caracteres en un editor de
+    documentos, y las notas a pie de página se resaltan cuando el cursor está encima del carácter asociado.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

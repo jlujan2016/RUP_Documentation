@@ -1,0 +1,320 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2// EN">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ejemplo: Ejemplo de modelo de SOA</title>
+<link type="text/css" href="../../../../css/default.css" rel="StyleSheet">
+<script src="../../../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = './../../';
+				</script>
+</head>
+<body>
+ 
+<h2>Ejemplo: Ejemplo de modelo de SOA</h2>
+<h5></h5>
+<ul>
+        <li><a href="#Problem_Description">Descripción del problema</a>
+        <li><a href="#Scope_and_Goals">Ámbito del proyecto y objetivos</a>
+        <li><a href="#Service_Identification">Identificación de servicios</a>
+        <li><a href="#Service_Design">Diseño de servicios</a>
+        <li><a href="#Service_Realization">Realización de servicios</a>
+      </ul>
+
+<h3><a name="Problem_Description">Descripción del problema</a> <a href="#Top"><img src="top.gif" alt="Ir a la parte superior de la página" border="0" width="26" height="20"></a></h3>
+      En este ejemplo contemplamos los problemas de un minorista que ha elegido
+      reimplementar determinadas funciones utilizadas por las aplicaciones en sus terminales
+      de punto de venta (PoS) como servicios. En la actualidad la <i>aplicación empresarial</i> se desarrolla como aplicación monolítica con componentes estrechamente acoplados pero con algunos componentes residiendo en los servidores en el almacén (ISS) y algunas solicitudes incluso se envían mediante el ISS a servidores situados de forma centralizada en la empresa. La cuestión es que la infraestructura del almacén en general y la aplicación empresarial en particular pueden ser difíciles de mantener debido al estrecho acoplamiento de los componentes y al uso de protocolos propietarios y de la tecnología en el desarrollo de los componentes y la conexión entre ellos.
+      <p>En generaciones anteriores de sistemas de almacenamiento se utilizaban máquinas propietarias y de baja capacidad
+      para los terminales PoS y había restricciones sobre el ancho de banda en el almacén así como
+      fuera del almacén; ahora estas restricciones ya no existen.
+      Teniendo esto en cuenta y la tendencia actual a la arquitectura orientada a los
+      servicios dentro de los sistemas de fondo de la empresa, se ha decidido
+      que algunas de las funciones suministradas por los ISS y los servidores centrales
+      deben exponerse a la aplicación empresarial como servicios.</p>
+      
+<h3><a name="Scope_and_Goals">Ámbito del proyecto y objetivos</a> <a href="#Top"><img src="top.gif" alt="Ir a la parte superior de la página" border="0" width="26" height="20"></a></h3>
+      Inicialmente las funciones que hay que contemplar se han elegido porque comparten
+      un patrón común en el sentido de que requieren actualmente lógica en las aplicaciones
+      empresariales para consultar información en más de un almacén de datos. Por ello, los servicios
+      propuestos no sólo proporcionan una interfaz común sino que también dividen la aplicación
+      empresarial del conocimiento explícito de la ubicación de los datos y de tener que tratar
+      con múltiples protocolos.
+      <ul>
+        <li><b>Búsqueda de clientes</b>: Se trata de un proceso en dos pasos desde el terminal en el sentido
+        de que hay una base de datos local en el almacén de clientes que ya ha adquirido artículos del
+        almacén o que ha dado servicio a los artículos en el almacén. Si el cliente no se
+        encuentra en la base de datos del almacén (se realiza una conexión directa
+        a la base de datos y se ejecuta una consulta SQL) entonces, la aplicación empresarial
+        consulta una base de datos de clientes central utilizando un enfoque de cola de mensajes
+        mediante un servidor de colas en el ISS. El nuevo servicio debe estar situado en el ISS
+        y actuar de punto único de comunicación desde la aplicación empresarial; la aplicación
+        establecerá comunicación con el ISS que a su vez consultará la base de datos local
+        antes de enviar la solicitud a otro servicio (implementando la misma especificación de
+        servicio) en el servidor central que consultará su base de datos local. 
+        <li><b>Planificación de servicio</b>: En este caso un cliente desea planificar un servicio sobre un
+        elemento que ha adquirido; en la actualidad la aplicación empresarial tiene que consultar
+        la base de datos del cliente (véase más arriba), consultar la base de datos de garantía
+        central para ver si el elemento está en garantía y actualizar la planificación de servicio
+        con la fecha/hora en la que el cliente está pensando en recoger el elemento. Parece que hay una forma
+        mejor de resolver el problema y el nuevo servicio de planificación funcionará de la manera
+        siguiente. Dado que un elemento tiene un número de serie, la base de de datos de garantía
+        puede consultarse; esta base de datos ya contiene el ID de cliente de forma que los
+        datos del cliente pueden extraerse en cualquier momento. Si el cliente sólo dispone del ID
+        de tipo de elemento, debemos consultar el cliente y el elemento tal como hemos indicado anteriormente. Esto
+        lo realizará totalmente el servicio, eliminando la lógica de la aplicación empresarial.
+        <li><b>Comprobación de inventario</b>: En este caso, existe un problema similar; el servicio consulta
+        primero en la base de datos de tiempo real el inventario y si se no se encuentra un elemento, consulta
+        la base de datos de la empresa que contiene menos información sobre los productos pero contiene el
+        inventario de todos los almacenes (excepto que sólo se actualiza por lotes durante
+        la noche y, por consiguiente, no está garantizado. El nuevo servicio ISS agregará las consultas tal
+        como se ha indicado anteriormente, pero también proporcionará actualizaciones en tiempo real al
+        servidor central para pasar los sucesos de cambio de inventario al centro y permitir que las consultas
+        en otros almacenes sean más exactas. Esto implica que el servicio de inventario en el centro
+        tiene la posibilidad de recibir estos sucesos de cambio de inventario y el servicio local no.
+      </ul>
+      Estos servicios se accederán a través de RMI desde la aplicación empresarial al
+      servicio ISS y utilizando SOAP a través de JMS desde el ISS al servicio central.
+      
+<h3><a name="Service_Identification">Identificación de servicios</a> <a href="#Top"><img src="top.gif" alt="Ir a la parte superior de la página" border="0" width="26" height="20"></a></h3>
+      A continuación se resaltan los pasos seguidos por el equipo de arquitectos que
+consta de miembros de la propia organización de TI de los minoristas y de consultores
+externos que están en calidad de expertos en el desarrollo de soluciones orientadas a
+servicios. Observe que los pasos siguientes no pretenden representar una serie de actividades de RUP
+recomendadas, simplemente catalogan las actividades de un proyecto real.
+<p>Es importante destacar que este proyecto es para mejorar la implementación técnica de
+      las funciones actualmente existentes y, por lo tanto, no incluye todo el
+      tiempo invertido en el modelado o análisis empresarial, dado que podemos reutilizar
+      los modelos creados para la aplicación empresarial original. El conjunto actual de modelos
+      (a la izquierda del diagrama que se muestra a continuación) sigue la estructura que se indica
+      debajo, que muestra un modelo de casos de uso de RUP, un modelo de análisis para los componentes
+      comunes de la aplicación empresarial, seguido del modelo de diseño detallado y finalmente un
+      conjunto de modelos de implementación para los equipos de desarrollo de Java.</p>
+      
+<p align="center"><img src="soa_mdlex_analysis-01.gif" alt="El diagrama se describe en el contenido textual." width="425" height="203" border="0"></p>
+      Se ha introducido el modelo de servicio (a la derecha del diagrama inferior)
+      como un perfeccionamiento del modelo de análisis en un conjunto de servicios con
+      sus propios modelos de implementación. El diseño de la aplicación empresarial puede ahora
+      modificarse para mostrar el uso de estos servicios comunes y también aparece la relación entre la
+      aplicación empresarial y los modelos Java de servicio.
+      <h4>Creación del modelo de servicio</h4>
+      El modelo de servicio de soporte de almacén se creó según el perfil de UML para
+      servicios de software y un modelo de plantilla (incluido en Rational Software
+      Architect), tal como se ha descrito en el diagrama siguiente. El modelo se ha identificado
+      como un <u>perfeccionamiento</u> del modelo de análisis, tal como se ha mostrado anteriormente. Tal como se puede ver, la estructura
+      se presenta en un diagrama de visión general que muestra las dependencias entre las vistas recomendadas por la plantilla.
+      
+<p align="center"><img src="soa_mdlex_template-01.gif" alt="El diagrama se describe en el contexto textual." width="342" height="215" border="0"></p>
+      Los enlaces del diagrama junto a los paquetes de vista permiten una rápida navegación
+      del modelo y se completarán en los apartados siguientes.
+      
+<p>Para obtener más información consulte la guía de la herramienta <i><strong>Creación de un modelo de
+  servicio en RSA</strong></i>.</p>
+      <h4>Identificar particiones del servicio (localidad)</h4>
+      Se desprende claramente de la descripción del problema anterior que existe
+      una serie de formas para poder examinar el particionamiento del sistema, por ejemplo
+      podemos introducir particiones que representan la gestión de inventarios, la gestión
+      del servicio/garantía, operaciones de punto de venta (búsqueda de precios, clientes, etc.) No obstante,
+      hay preocupaciones básicas para el arquitecto y, por consiguiente, las particiones
+      añadidas al modelo representan localidades lógicas para los servicios suministrados
+      en el almacén o en el ámbito empresarial.
+      
+<p align="center"><img src="soa_mdlex_partitions-01.gif" alt="El diagrama se describe en el contenido contextual." width="178" height="155" border="0"></p>
+      Cuando indicamos que se trata de particiones lógicas, estamos identificando que la
+      partición Servicios de almacén contiene un conjunto de servicios de los que se crean instancias
+      en el nivel de almacén y no decimos nada sobre el despliegue físico de estos
+      servicios (servidor único, clúster, etc.). Estas particiones lógicas se proporcionan
+      para que el arquitecto represente los aspectos significativos de la solución.
+      <p>También cabe destacar que en la imagen superior el arquitecto ha introducido un elemento adicional, la propia aplicación empresarial, para permitir descripciones de comunicación entre la aplicación y los servicios. La aplicación empresarial es un componente de UML 2.0 con el estereotipo <i>Consumidor de servicio</i>.</p>
+      Para obtener más información, consulte el concepto <i><strong>Particionamiento de soluciones</strong></i>. 
+<h4>Analizar funciones existentes</h4>
+      El paso siguiente es analizar la implementación actual de la aplicación empresarial,
+      para examinar los detalles del acceso a la base de datos identificado en la sentencia
+      del problema superior. A continuación, se ha desarrollado la tabla siguiente (observe que sólo
+      contiene detalles para las búsquedas de clientes y de inventario).<br>&nbsp;
+      <table border="1" width="100%">
+        <tbody>
+          <tr>
+            <th valign="top" width="15%">Nombre</th>
+            <th valign="top" width="15%">Tecnología</th>
+            <th valign="top" width="20%">Entradas</th>
+            <th valign="top" width="20%">Salidas</th>
+            <th valign="top" width="30%">Comentarios</th>
+          </tr>
+          <tr>
+            <td valign="top" width="15%">sp_get_custlist_by_phone</td>
+            <td valign="top" width="15%">Procedimiento almacenado del servidor SQL</td>
+            <td valign="top" width="20%">phonenum (char 10)</td>
+            <td valign="top" width="20%">Lista de:
+            <blockquote>custid (id) <br>
+            custname (char 40)</blockquote>
+            </td>
+            <td valign="top" width="30%">Este procedimiento almacenado devuelve una lista de detalles del cliente por
+            número de teléfono; la lista puede presentarse al cliente para su selección. La llamada sp_get_cust_details
+            se utiliza para devolver un registro único del cliente.</td>
+          </tr>
+          <tr>
+            <td valign="top" width="15%">sp_get_cust_details</td>
+            <td valign="top" width="15%">Procedimiento almacenado del servidor SQL</td>
+            <td valign="top" width="20%">custid (id)</td>
+            <td valign="top" width="20%">Registro del cliente</td>
+            <td valign="top" width="30%">Se devuelven los detalles de un cliente, su nombre, dirección, información de contacto, etc.</td>
+          </tr>
+          <tr>
+            <td valign="top" width="15%">CUST_QUERY</td>
+            <td valign="top" width="15%">IBM MQSeries</td>
+            <td valign="top" width="20%">phonenum (char 10)<br>
+            return-queue-name (char 120)<br>
+            correlation-id (char 120)</td>
+            <td valign="top" width="20%">N/D</td>
+            <td valign="top" width="30%">En esta cola la aplicación coloca los detalles de los clientes que hay que
+            consultar, el mensaje se entrega en el centro donde el servidor publica el mensaje de respuesta a la cola
+            de retorno identificada.</td>
+          </tr>
+          <tr>
+            <td valign="top" width="15%">&lt;nombre-cola-retorno&gt;</td>
+            <td valign="top" width="15%">IBM MQSeries</td>
+            <td valign="top" width="20%">N/D</td>
+            <td valign="top" width="20%">correlation-id (char 120)<br>
+            Lista de registro del cliente</td>
+            <td valign="top" width="30%">Al devolver los registros del cliente el mensaje de retorno también contiene
+            el correlation-id para garantizar que la respuesta se puede asociar con una solicitud determinada. Esto permite que el servidor en el almacén tenga una sola cola de retorno para todos los terminales, el terminal consulta en la cola un mensaje de respuesta con su ID de correlación.</td>
+          </tr>
+          <tr>
+            <td valign="top" width="15%">sp_get_invstate_for_sku</td>
+            <td valign="top" width="15%">Procedimiento almacenado del servidor SQL</td>
+            <td valign="top" width="20%">sku (char 13)</td>
+            <td valign="top" width="20%">Registro del inventario</td>
+            <td valign="top" width="30%"></td>
+          </tr>
+          <tr>
+            <td valign="top" width="15%">INVENTORY_QUERY</td>
+            <td valign="top" width="15%">IBM MQSeries</td>
+            <td valign="top" width="20%">sku (char 13)<br>
+            return-queue-name (char 120)<br>
+            correlation-id (char 120)</td>
+            <td valign="top" width="20%">N/D</td>
+            <td valign="top" width="30%"></td>
+          </tr>
+          <tr>
+            <td valign="top" width="15%">&lt;nombre-cola-retorno&gt;</td>
+            <td valign="top" width="15%">IBM MQSeries</td>
+            <td valign="top" width="20%">N/D</td>
+            <td valign="top" width="20%">Registro del inventario</td>
+            <td valign="top" width="30%"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      Como se puede ver, estas entradas representan la implementación existente,
+      que se sustituirá por una nueva implementación, pero se mantendrán el propósito
+      y la función.
+      <h4>Desarrollo de la especificación de servicio inicial</h4>
+La actividad <i><strong>Identificación de servicios</strong></i> introduce una serie
+de técnicas para identificar los servicios y las operaciones sobre los servicios,
+solicitadas para dar soporte a una solución. En el caso de este ejemplo, estamos observando una forma
+de renovación heredada, la formación de la funcionalidad existente en un modelo de servicios
+y específicamente la tecnología de implementación de servicios. Al hacerlo, el primer aspecto es
+desarrollar el conjunto de <i><strong>Especificaciones de servicios</strong></i> que proporcionarán
+los contratos para los servicios que implementan las funciones descritas anteriormente. 
+El diagrama siguiente muestra las tres, actualmente vacías, especificaciones de servicios
+creadas en esta fase, una para cada uno de los servicios que se han tratado en la introducción. 
+<p align="center"><img src="soa_mdlex_specifications-01.gif" alt="El diagrama se describe en el contenido textual." width="126" height="150" border="0"></p>
+      <p>A continuación, analizaremos los posibles patrones de uso para los servicios;
+por ejemplo podríamos en realidad tener dos servicios, uno en el almacén y uno
+en la empresa, donde la lógica para el acceso a la base de datos y el acceso a la empresa
+estén ambos encapsulados en el servicio en el almacén. O  bien, se puede elegir tener un servicio
+de fachada en el almacén que encapsule la lógica y llame a dos servicios idénticos,
+uno que encapsule el acceso a la base de datos local y el segundo en el nivel de la
+empresa. La segunda opción añade flexibilidad en el cambio de la lógica
+para acceder a los dos almacenes, pero añade costes de sobrecarga y de comunicación
+para una función relativamente simple. De este modo, para la búsqueda de clientes y
+la búsqueda de inventario, se ha elegido la primera opción. Como todavía no se han decidido los
+detalles de la distribución de servicios y los proveedores de servicios, la identificación de
+servicio es mucho más eficaz si se centra solamente en especificaciones de servicios.</p>
+<p>Para identificar los roles y responsabilidades de estos servicios, utilizamos una <i><strong>Colaboración
+  de servicio</strong></i> y en particular un diagrama de estructura compuesta de UML 2.0
+  que representa la configuración de los servicios para la búsqueda de clientes. El diagrama de
+  estructura se muestra a continuación y podemos ver partes de UML 2.0 que representan cada elemento en
+  la colaboración. Observe que los conectores entre la aplicación empresarial y el
+  servicio en el almacén y entre los servicios en el almacén y en la empresa están
+  estereotipados como <i><strong>Canal de servicio</strong></i> y destacan los enlaces que hay que utilizar (RMI
+  o JMS tal como se ha identificado anteriormente). El enlace para el conector entre el servicio en el almacén
+  y el componente de la base de datos local (más adelante) no está definido.</p>
+<p align="center"><img src="soa_mdlex_lookup-01.gif" alt="El diagrama se describe en el contenido textual." width="284" height="175" border="0"></p>
+<p>Un elemento clave que hay que resaltar es que el LocalCustomerLookupProvider es un
+servicio generado, es un servicio de derivador fino en torno a una consulta de base de datos,
+hay una sola operación que representa una selección SQL. Este enfoque se ha elegido
+a través del acceso directo a la base de datos mediante el servicio de búsqueda de
+clientes en el almacén para permitir que el servicio local incluya reglas
+empresariales adicionales o incluso se convierta en un servicio más completo en una fecha posterior. </p>
+<p>No obstante, este diagrama sólo muestra la estructura de la colaboración, el siguiente
+      diagrama de interacción (Diagrama de secuencia de UML 2.0) representa las comunicaciones
+      reales entre los servicios. Observe que hemos añadido la operación
+      getCustomerByPhone a la especificación de servicio. También observe que
+      UML 2.0 permite la especificación de un &quot;fragmento&quot; opcional de
+      un diagrama de secuencia, en este caso para indicar que sólo establecemos
+      comunicación con el servicio empresarial si la búsqueda local no se realiza correctamente.</p>
+      
+<p align="center"><img src="soa_mdlex_lookup-02.gif" alt="El diagrama se describe en el contexto textual." width="550" height="321" border="0"></p>
+      <p>La combinación de diagramas de estructura estática y de comunicación nos permite
+      documentar la composición de servicios y la colaboración y tener en este caso sólo
+      identificada la necesidad de una sola operación en la especificación de servicio.</p>
+Para obtener más información, consulte la actividad <i><strong>Identificación de servicios</strong></i>. 
+<h3><a name="Service_Design">Diseño de servicios</a> <a href="#Top"><img src="top.gif" alt="Ir a la parte superior de la página" border="0" width="26" height="20"></a></h3>
+<p>Tomando el modelo de la actividad Identificación de servicios, pasamos la identificación
+  de un conjunto de servicios candidatos al diseño detallado de los servicios que pretendemos
+  crear. El primer paso consiste en correlacionar las especificaciones de servicios que
+  realizan las especificaciones anteriores; como se puede imaginar, hay que adoptar
+  decisiones sobre cómo los servicios llevan a cabo las especificaciones de servicios
+  del modelo anterior. En este ejemplo, tenemos una estructura relativamente simple, pero
+  que probablemente será común a muchos proyectos. En este caso, tenemos un único <i><strong>Proveedor
+  de servicios</strong></i> que presenta un único servicio que es la realización de una única
+  especificación. Es ciertamente posible tener más de un servicio por proveedor. También observamos ciertas relaciones de uso entre los servicios en este modelo;
+  estas dependencias son importantes para comprender cómo pueden evolucionar los
+  servicios con el tiempo.</p>
+<p align="center"><img src="soa_mdlex_services-01.gif" alt="El diagrama se describe en el contenido textual." width="462" height="236" border="0"></p>
+<p>Esta estructura nos permite ahora movernos más en el espacio de distribución,
+mientras el modelo sigue siendo una vista lógica de los servicios, ya que los proveedores
+de servicios representan las unidades de despliegue para el modelo de servicio. Los proveedores
+de servicios también son necesarios para la definición de servicios compuestos dado que
+un servicio propio (un puerto de UML 2.0) no puede tener la estructura necesaria para
+describir la composición.</p>
+<h4>Diseño de mensajes</h4>
+<p>No hemos señalado nada anteriormente, en la actividad de identificación
+del servicio, sobre los mensajes reales intercambiados entre las operaciones
+descritas sobre las especificaciones de servicios. Este enfoque puede ser bastante común
+para capturar las responsabilidades de los servicios en cuanto a operaciones
+que retrasan el diseño detallado de los mensajes para más adelante; en algunos
+casos este enfoque es el inverso, las estructuras de mensajes se conocen con antelación y
+a continuación se agregan a un conjunto de operaciones.</p>
+<p>En este caso, podemos aprovechar un modelo de dominio desarrollado como
+parte del modelo de análisis de componentes (activo desarrollado anteriormente) y, de esta forma,
+nuestro modelo de mensaje no se crea a partir de nada sino que identifica un
+subconjunto del modelo de dominio que se va a reutilizar. El ejemplo siguiente muestra esta relación,
+las clases de dominios ignoran por completo la tecnología y la plataforma;
+por otra parte, se supone que nuestros mensajes son objetos de transferencia de datos,
+estructuras transferidas entre servicios. Por consiguiente, en lugar de cambiar el modelo de
+dominio, creamos los mensajes &quot;fuera&quot; de la estructura de clase, compuesta de
+elementos en el interior.</p>
+<p align="center"><img src="soa_mdlex_message-01.gif" alt="El diagrama se describe en el contenido textual." width="608" height="210" border="0"></p>
+      Para obtener más información, consulte el concepto <i><strong>Diseño de mensajes</strong></i>. 
+<h3><a name="Service_Realization">Realización de servicios</a> <a href="#Top"><img src="top.gif" alt="Ir a la parte superior de la página" border="0" width="26" height="20"></a></h3>
+<p>En este caso, nos centraremos en la realización del servicio de búsqueda de clientes
+en el almacén; este servicio es habitual en la transformación del modelo de servicio
+al modelo de diseño. La propia transformación está documentada en una directriz y
+el resultado es la estructura de modelo siguiente.</p>
+<p align="center"><img src="soa_mdlex_realize-01.gif" alt="El diagrama está descrito en el contenido textual." width="544" height="182" border="0"></p>
+<p>Mientras esto sigue siendo un modelo de diseño podemos, mediante herramientas,
+transformar este modelo todavía más en la implementación EJB que se indica a continuación. Básicamente, esta
+implementación se transforma de la clase CustomerByPhone anterior y los mensajes que
+detallan el cliente se transforman en el bean de entidades que se utiliza para consultar la base de datos.</p>
+<p align="center"><img src="soa_mdlex_realize-02.gif" alt="El diagrama se describe en el contenido textual." width="595" height="354" border="0"></p>
+<p>Para obtener más información, consulte la directriz <i><strong>Cómo pasar de servicios a componentes
+  de servicios</strong></i>.</p>
+
+
+
+
+</body>
+</html>
+

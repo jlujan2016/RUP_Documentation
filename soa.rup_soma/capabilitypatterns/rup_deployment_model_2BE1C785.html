@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de productos de trabajo: Modelo de despliegue</title>
+<meta content="WorkProductDescriptor" name="uma.type">
+<meta content="rup_deployment_model" name="uma.name">
+<meta content="Modelo de despliegue" name="uma.presentationName">
+<meta content="WorkProductDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc=_RRv38Sv-EduYBoDegGQopA&path=_RRv38Sv-EduYBoDegGQopA,_QR1wQE-DEdu0EMZ-3o0kDQ,_zXvjAE-DEdu0EMZ-3o0kDQ';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, false, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_zXvjAE-DEdu0EMZ-3o0kDQ"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Producto de trabajo: Modelo de despliegue</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/workdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Este producto de trabajo muestra la configuración de los nodos de proceso en el tiempo de ejecución, los enlaces de comunicación entre ellos, y las instancias de componente y los objetos que residen en ellas.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="modelo de despliegue" text="como artefacto" name="XE_deployment_model__as_artifact" id="XE_deployment_model__as_artifact" class="index"></a><a key="modelo de despliegue" text="finalidad" name="XE_deployment_model__purpose" id="XE_deployment_model__purpose" class="index"></a><a id="Purpose" name="Purpose"></a>
+
+<ul>
+    <li>
+        Para capturar la configuración de los elementos de proceso y las conexiones entre elementos de proceso, en el
+        sistema.&nbsp;
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Responsable:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_software_architect_DD54BBFB.html" guid="_jSkPMk-DEdu0EMZ-3o0kDQ">Arquitecto de software</a>
+</li>
+</ul>
+</td><td colspan="2" class="sectionTableCell"><span class="sectionTableCellHeading">Modificado por:
+								</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entrada a</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/soa_construct_arch_proof_23C1D835.html" guid="_zXdPIE-DEdu0EMZ-3o0kDQ">Construir prueba de concepto arquitect&oacute;nica (SOA)</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    El modelo de despliegue consta de uno o más <b>nodos</b> (elementos de proceso con, como mínimo, un procesador, memoria
+    y posiblemente otros dispositivos), <b>dispositivos</b> (nodos estereotipados sin capacidad de proceso en el nivel
+    modelado de abstracción) y <b>conectores</b>, entre nodos, y entre nodos y dispositivos. El modelo de despliegue
+    también correlaciona <b>procesos</b> con los elementos de proceso, permitiendo la distribución de comportamiento entre
+    los nodos que se deben representar.
+</p>
+<p>
+    Los roles siguientes utilizan el modelo de despliegue:
+</p>
+<ul>
+    <li>
+        El <b>arquitecto de software</b>, para capturar y comprender el entorno de ejecución física del sistema y para
+        comprender las cuestiones de distribución.
+    </li>
+    <li>
+        Los <b>diseñadores</b> (incluidos los diseñadores de software <i>y</i> de bases de datos), para comprender la
+        distribución del proceso y los datos en el sistema.
+    </li>
+    <li>
+        El <strong>administrador del sistema</strong>, para comprender el entorno físico en que se ejecuta el sistema.
+    </li>
+    <li>
+        El <strong>gestor de despliegue</strong> en la planificación de la transición del producto hacia la comunidad de
+        usuarios.
+    </li>
+    <li>
+        El <b>gestor de proyectos</b>, en la estimación de costes, para el caso de negocio, y para la planificación de la
+        adquisición, instalación y mantenimiento.
+    </li>
+</ul><!--EndFragment--></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="Yes" alt="Yes" height="15" width="20" src="./../../images/true.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Ilustraciones	</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Ejemplos</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.informal_resources/guidances/examples/csps_rose_model_FD17FE6B.html" guid="1.9326841150612072E-306">CSPS Rose Model</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Personalizaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Opciones de representaci&oacute;n</th><td class="sectionTableCell"><p>
+    Representación UML: Modelo.
+</p>
+<p>
+    Un <strong>modelo de despliegue</strong> puede tener las siguientes <strong>propiedades</strong>:
+</p>
+<ul>
+    <li>
+        <strong>Introducción:</strong> Una descripción textual que sirve como breve introducción al
+        modelo.&nbsp;<strong>&nbsp;</strong>
+    </li>
+    <li>
+        <strong>Nodos:</strong> Elementos de proceso en el sistema.&nbsp;Los nodos pueden tener las siguientes propiedades:
+        
+        <ul>
+            <li>
+                Nombre
+            </li>
+            <li>
+                Una descripción que proporciona información sobre el procesador, capacidad de almacenamiento, capacidad de
+                memoria o cualquier otra información sobre las posibilidades del dispositivo.
+            </li>
+            <li>
+                Una lista de los procesos y hebras que se ejecutan en el procesador. Esta lista también puede enumerar los
+                componentes de software que se ejecutan dentro de cada proceso.
+            </li>
+            <li>
+                Una lista de las unidades de despliegue que se instalarán en el nodo.
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>Dispositivos:</strong> Dispositivos físicos, que no tienen ninguna capacidad de proceso (al nivel modelado
+        de abstracción), que dan soporte a los nodos de procesador. Los dispositivos pueden tener las siguientes
+        propiedades: 
+        <ul>
+            <li>
+                Nombre
+            </li>
+            <li>
+                Una descripción, que proporciona información sobre las posibilidades del
+                dispositivo.<strong>&nbsp;</strong>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>Conectores:</strong> Conexiones entre nodos, y entre nodos y dispositivos. Los conectores pueden tener
+        información asociada en relación con la capacidad o ancho de banda del conector.&nbsp;&nbsp;
+    </li>
+    <li>
+        <strong>Diagramas</strong>: Los diagramas del modelo, propiedad de los paquetes. &nbsp;
+    </li>
+</ul>
+<p>
+    <a id="Tailoring" name="Tailoring"></a>
+</p>
+<p>
+    El modelo de despliegue normalmente se representa en un diagrama como el que se muestra a continuación:
+</p>
+<p align="center">
+    <img height="456" alt="Interfaz de cliente, Interfaz de la red de cajeros, Controlador de dispositivos"     src="./../../core.base_rup/workproducts/resources/dist1.gif" width="594" />
+</p>
+<p>
+    El modelo de despliegue es opcional para sistemas con un único procesador, o sistemas simples con poca o sin ningún
+    tipo de distribución del procesamiento.
+</p>
+<p>
+    Es obligatorio para los sistemas con configuraciones complejas de red o de procesador. &nbsp;
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

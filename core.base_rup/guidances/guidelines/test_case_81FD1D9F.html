@@ -1,0 +1,1883 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Caso de prueba</title>
+<meta content="Guideline" name="uma.type">
+<meta content="test_case" name="uma.name">
+<meta content="Caso de prueba" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{D525758B-EBA2-4F59-9BA6-226820C27ADD}", "1.3981505661923931E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{008164B1-3AC3-47E8-9F93-EE4C36B58A97}", "1.3981505661923931E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3aJCcN7REdmjRZts2c4ZjQ", "{D525758B-EBA2-4F59-9BA6-226820C27ADD}", "1.3981505661923931E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{008164B1-3AC3-47E8-9F93-EE4C36B58A97}", "1.3981505661923931E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.3981505661923931E-304"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{D525758B-EBA2-4F59-9BA6-226820C27ADD}", "1.3981505661923931E-304"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{008164B1-3AC3-47E8-9F93-EE4C36B58A97}", "1.3981505661923931E-304"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.3981505661923931E-304"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Caso de prueba</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se explica cómo identificar y diseñar software de prueba.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_test_case_8AFEC963.html" guid="{D525758B-EBA2-4F59-9BA6-226820C27ADD}">Caso de prueba</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_workload_analysis_model_E86A32FF.html" guid="{008164B1-3AC3-47E8-9F93-EE4C36B58A97}">Modelo de análisis de carga de trabajo</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_developer_test_66FE6BEE.html" guid="{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}">Implementar la prueba de desarrollador</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="guión de prueba" text="directrices para" name="XE_test_case__guidelines_for" id="XE_test_case__guidelines_for" class="index"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">Explicación</a>
+</h3>
+<p>
+    Nada tiene mayor influencia en la posibilidad de que los equipos de diseño garanticen la satisfacción del interesado
+    con el software que la disponibilidad de una especificación clara de lo que son las expectativas de los interesados.
+    Con o sin un conjunto de especificaciones de requisitos lo suficientemente bueno, los casos de uso son un artefacto que
+    ayuda a reflejar las expectativas de los interesados, puesto que permite verificar y validar dichas expectativas.
+</p>
+<p>
+    Cuando un conjunto útil de requisitos está disponible, el equipo de prueba debe planificar pruebas que validen
+    adecuadamente dichos requisitos. Tenga en cuenta que se puede validar el software con respecto a los requisitos de modo
+    diferente, dependiendo del tipo de requisito. Por ejemplo, un verificador puede ejecutar el software para validar sus
+    requisitos de funcionamiento y rendimiento utilizando técnicas de prueba automatizadas, mientras que es posible que
+    para verificar un requisito de configuración como, por ejemplo, la conclusión de un sistema, se deban utilizar técnicas
+    de prueba manual.
+</p>
+<p>
+    Puesto que quizá no pueda (o no sea responsable) de verificar todos los requisitos, es importante que se centre en los
+    requisitos críticos o más adecuados para el ámbito del esfuerzo de trabajo actual. Los requisitos que elija para
+    verificar serán un equilibrio entre el coste, el riesgo y la necesidad de tener el requisito verificado y, por lo
+    general, se limitarán al ámbito de la iteración actual.
+</p>
+<p>
+    Mientras que los requisitos son una fuente importante de la que pueden derivar las pruebas, no son la única fuente de
+    información. De hecho, en muchos casos resultan insuficientes para facilitar una base completa para el desarrollo de
+    las pruebas. También se deben tener en cuenta los guiones de prueba, puesto que se basan en fuentes de información
+    como, por ejemplo, riesgos, restricciones, tecnologías, solicitudes de cambio (defectos) o anomalías, entre
+    otras.<br />
+     Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/test-ideas_list_A6CEF011.html" guid="6.149711039531016E-305">Concepto: Ideas de
+    prueba</a> para obtener más información sobre cómo obtener ideas de las que derivar las pruebas.
+</p>
+<p>
+    Identificar los guiones de prueba resulta útil por varios motivos.
+</p>
+<ul>
+    <li>
+        Los guiones de prueba se pueden utilizar como base sobre la que diseñar e implementar las pruebas reales. El tiempo
+        dedicado a considerar el caso de uso ayuda a comprender los requisitos de diseño e implementación, y permite
+        ahorrar tiempo en tareas de diseño e implementación.
+    </li>
+    <li>
+        Algunas pruebas son especialmente complejas o detalladas. Las pruebas de este tipo pueden aprovechar por anticipado
+        las ventajas de una consideración cuidadosa antes de empezar la implementación de la prueba, y los artefactos de
+        guión de prueba y guión de diseño son herramientas adecuadas para explorar dichas consideraciones.
+    </li>
+    <li>
+        Por lo general, la "profundidad" de la prueba se considera proporcional al número de pruebas. Con frecuencia se
+        obtiene mayor seguridad en el proceso de la prueba en sí cuando se puede razonar la posible "profundidad" de la
+        prueba en función del número de guiones de prueba identificados.
+    </li>
+    <li>
+        Una medida de completitud del esfuerzo de la prueba se basa en al cobertura de supervisión con respecto a algún
+        conjunto de elementos de motivación. El informe de cobertura se puede basar en medidas como, por ejemplo, el número
+        de guiones de prueba identificados y el número de pruebas implementadas o ejecutadas con respecto a cada guión de
+        prueba, o bien, el esfuerzo gastado con respecto a cada guión de prueba.
+    </li>
+    <li>
+        La escala y la complejidad del esfuerzo de prueba es, hasta cierto punto, proporcional al número de guiones de
+        prueba. Con un análisis de los guiones de prueba, se puede razonar el esfuerzo de prueba sobre un nivel de
+        granularidad más fino.
+    </li>
+    <li>
+        El número y la complejidad de los guiones de prueba rigen, en parte, los tipos de desarrollo y diseño de pruebas, y
+        los recursos necesarios.
+    </li>
+</ul>
+<p>
+    Sin embargo, existen algunos problemas que vale la pena considerar con respecto a los guiones de prueba:
+</p>
+<ul>
+    <li>
+        No todas las pruebas son lo suficientemente complejos como para garantizar los gastos generales de crear un
+        artefacto de guión de prueba que se debe revisar y mantener: la prueba es lo bastante simple como para que una
+        descripción de texto breve sea suficiente para transmitir lo que se necesita. En realidad, la mayoría de guiones de
+        prueba pueden entrar dentro de esta categoría. El tiempo dedicado a documentar un vasto volumen de casos de uso
+        simples puede tener como resultado la pérdida de tiempo para tareas de prueba más importantes.
+    </li>
+    <li>
+        Se comprueba que algunas de las ideas iniciales sobre las pruebas fracasan posteriormente en algún aspecto.
+        Significa que se abandonan algunos guiones de prueba que había identificado inicialmente en base a dichas ideas.
+        Esta realidad supone que cualquier trabajo que realice documentando guiones de prueba con detalle se puede
+        abandonar posteriormente y que cualquier informe de cobertura que se base en los casos de uso debe considerar dicha
+        situación. Como tal, quizá sea mejor basar el informe de cobertura de los guiones de prueba en función de aspectos
+        de nivel superior a los guiones de prueba y tratar los guiones de prueba como artefactos del equipo de prueba
+        interno que se utilicen según se requiera.
+    </li>
+</ul>
+<p>
+    Con frecuencia, los casos de prueba se pueden clasificar por categorías en función del tipo de prueba o requisito para
+    la prueba al que están asociados, y variar de acuerdo con esto. Una heurística para identificar guiones de prueba
+    empieza con lo siguiente:
+</p>
+<ul>
+    <li>
+        demostrar que se ha alcanzado el requisito (guión de prueba positivo)
+    </li>
+    <li>
+        demostrar que el requisito <b>sólo</b> se ha alcanzado en las condiciones deseadas, a las que se hace referencia
+        como una prueba negativa. Este guión de prueba refleja condiciones inaceptables, anómalas o inesperadas, o bien,
+        datos a los que el software puede estar, razonablemente, sujeto.
+    </li>
+</ul><!-- !RPV COMMAND! name="VariantContent" tag="rup_req_usecases" class="process_component"!RPV COMMAND! -->
+<h3>
+    <a id="DerivingTestCasesFromUseCases" name="DerivingTestCasesFromUseCases">Derivación de guiones de prueba de casos de
+    uso</a>
+</h3>
+<p>
+    Los guiones de prueba para prueba de funcionamiento derivan de los casos de uso de la prueba de destino (consulte el
+    apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">Producto de trabajo: Caso de uso</a> ). Se deben desarrollar guiones de
+    prueba para cada caso de ejemplo de caso de uso . Los casos de ejemplo de caso de uso se identifican al describir las
+    vías de acceso a través del caso de uso que cruzan el flujo básico y el inicio de flujos alternativos para finalizar a
+    través del caso de uso .
+</p>
+<p>
+    En el diagrama que se incluye más abajo, se representan con las flechas cada una de las distintas vías de acceso a
+    través del caso de uso que reflejan los flujos básico y alternativo. El flujo básico, representado mediante la línea
+    recta negra, es la vía de acceso más simple a través del caso de uso . Cada flujo alternativo empieza con el flujo
+    básico y, a continuación, dependiendo de una condición específica, se ejecuta el flujo alternativo. Los flujos
+    alternativos se pueden volver a unir al flujo básico (flujos alternativos 1 y 3), se pueden originar a partir de otro
+    flujo alternativo (flujo alternativo 2), o bien, pueden terminar el caso de uso sin volver a unirse a un flujo (flujos
+    alternativos 2 y 4).
+</p>
+<p align="center">
+    <img height="347" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/tstcs_1.gif" width="400" border="0" />
+</p>
+<p class="picturetext" align="center">
+    Flujos de sucesos de ejemplo para un caso de uso
+</p>
+<p align="left">
+    Siguiendo cada vía de acceso posible a través del caso de uso del diagrama anterior, se pueden identificar los
+    diferentes casos de ejemplos del caso de uso . Empezando por el flujo básico y, a continuación, combinando el flujo
+    básico con flujos alternativos, se pueden identificar los casos de ejemplo de caso de uso siguientes:&nbsp;
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="row" width="14%">
+                    Caso de ejemplo 1
+                </th>
+                <td width="18%">
+                    Flujo básico
+                </td>
+                <td width="23%">
+                    &nbsp;
+                </td>
+                <td width="23%">
+                    &nbsp;
+                </td>
+                <td width="22%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    Caso de ejemplo 2
+                </th>
+                <td width="18%">
+                    Flujo básico
+                </td>
+                <td width="23%">
+                    Flujo alternativo 1
+                </td>
+                <td width="23%">
+                    &nbsp;
+                </td>
+                <td width="22%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    Caso de ejemplo 3
+                </th>
+                <td width="18%">
+                    Flujo básico
+                </td>
+                <td width="23%">
+                    Flujo alternativo 1
+                </td>
+                <td width="23%">
+                    Flujo alternativo 2
+                </td>
+                <td width="22%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    Caso de ejemplo 4
+                </th>
+                <td width="18%">
+                    Flujo básico
+                </td>
+                <td width="23%">
+                    Flujo alternativo 3
+                </td>
+                <td width="23%">
+                    &nbsp;
+                </td>
+                <td width="22%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    Caso de ejemplo 5
+                </th>
+                <td width="18%">
+                    Flujo básico
+                </td>
+                <td width="23%">
+                    Flujo alternativo 3
+                </td>
+                <td width="23%">
+                    Flujo alternativo 1
+                </td>
+                <td width="22%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    Caso de ejemplo 6
+                </th>
+                <td width="18%">
+                    Flujo básico
+                </td>
+                <td width="23%">
+                    Flujo alternativo 3
+                </td>
+                <td width="23%">
+                    Flujo alternativo 1
+                </td>
+                <td width="22%">
+                    Flujo alternativo 2
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    Caso de ejemplo 7
+                </th>
+                <td width="18%">
+                    Flujo básico
+                </td>
+                <td width="23%">
+                    Flujo alternativo 4
+                </td>
+                <td width="23%">
+                    &nbsp;
+                </td>
+                <td width="22%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    Caso de ejemplo 8
+                </th>
+                <td width="18%">
+                    Flujo básico
+                </td>
+                <td width="23%">
+                    Flujo alternativo 3
+                </td>
+                <td width="23%">
+                    Flujo alternativo 4
+                </td>
+                <td width="22%">
+                    &nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    <b>Nota</b>:&nbsp;Para ofrecer mayor simplicidad, los casos de ejemplo 5, 6 y 8 sólo ilustran una única ejecución del
+    bucle que indica el flujo alternativo 3.&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+<p>
+    La derivación de los guiones de prueba para cada caso de ejemplo se lleva a cabo identificando la condición específica
+    que hace que se ejecute el caso de ejemplo del guión de prueba específico.
+</p>
+<p>
+    Por ejemplo, suponga que el caso de uso que se ilustra en el diagrama anterior establece lo siguiente para el flujo
+    alternativo 3:
+</p>
+<blockquote>
+    "Este flujo de sucesos ocurre si el importe en dólares que se ha indicado en el Paso 2 más arriba, "Entrar importe de
+    la retirada" es mayor que el saldo de cuenta actual. El sistema muestra un mensaje de aviso y, a continuación, se
+    vuelve a unir al flujo básico del Paso 2 "Entrar importe de la retirada" anterior, donde el cliente del banco puede
+    entrar una nuevo importe de retirada."
+</blockquote>
+<p>
+    Con esta información, puede empezar a identificar los guiones de prueba necesarios para ejecutar el flujo alternativo
+    3:
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="14%">
+                    ID del guión de prueba
+                </th>
+                <th scope="col" width="23%">
+                    Caso de ejemplo
+                </th>
+                <th scope="col" width="33%">
+                    Condición
+                </th>
+                <th scope="col" width="30%">
+                    Resultado esperado
+                </th>
+            </tr>
+            <tr>
+                <td width="14%">
+                    TC x
+                </td>
+                <td width="23%">
+                    Caso de ejemplo 4
+                </td>
+                <td width="33%">
+                    Paso 2 - Importe de retirada &gt; Saldo de cuenta
+                </td>
+                <td width="30%">
+                    Volver a unir flujo básico en el Paso 2
+                </td>
+            </tr>
+            <tr>
+                <td width="14%">
+                    TC y
+                </td>
+                <td width="23%">
+                    Caso de ejemplo 4
+                </td>
+                <td width="33%">
+                    Paso 2 - Importe de retirada &lt; Saldo de cuenta
+                </td>
+                <td width="30%">
+                    No ejecuta el Flujo alternativo 3, toma el flujo básico
+                </td>
+            </tr>
+            <tr>
+                <td width="14%">
+                    TC z
+                </td>
+                <td width="23%">
+                    Caso de ejemplo 4
+                </td>
+                <td width="33%">
+                    Paso 2 - Importe de retirada = Saldo de cuenta
+                </td>
+                <td width="30%">
+                    No ejecuta el Flujo alternativo 3, toma el flujo básico
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    <b>Nota</b>: Los guiones de prueba que se muestran más arriba son muy simplistas, puesto que no se facilita más
+    información. Rara vez los guiones de prueba son tan simples.
+</p>
+<p>
+    Más abajo se proporciona un ejemplo más realista de derivación de guiones de prueba de casos de uso :
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p align="center">
+    <img height="226" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/tstcs002.gif" width="354" />
+</p>
+<p class="picturetext">
+    Actores y casos de uso en una máquina cajero automático.
+</p>
+<p>
+    La tabla siguiente contiene el flujo básico y algunos flujos alternativos para el caso de uso Retirada de dinero del
+    diagrama anterior:
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="row" width="17%">
+                    Flujo básico
+                </th>
+                <td width="83%">
+                    Este caso de uso empieza con el cajero automático en el estado Preparado. 
+                    <ol>
+                        <li>
+                            Iniciar Retirada - El cliente inserta la tarjeta bancaria en el lector de tarjetas del cajero
+                            automático.<br />
+                        </li>
+                        <li>
+                            Verificar tarjeta bancaria - El cajero automático lee el código de cuenta de la banda magnética
+                            de la tarjeta bancaria&nbsp; y comprueba si es una tarjeta bancaria aceptable.<br />
+                        </li>
+                        <li>
+                            Entrar PIN - El cajero automático solicita al cliente el código PIN del cliente (4
+                            dígitos)<br />
+                        </li>
+                        <li>
+                            Verificar código de cuenta y PIN - Se verifica el código de cuenta y el PIN para determinar si
+                            la cuenta es válida y si el PIN entrado es el correcto para la cuenta. Para este flujo, la
+                            cuenta y el PIN asociados a esta cuenta son correctos.<br />
+                        </li>
+                        <li>
+                            Opciones del cajero automático - El cajero automático muestra las diferentes alternativas
+                            disponibles en el cajero automático.&nbsp;En este flujo, el cliente del banco siempre
+                            selecciona "Retirada de dinero".<br />
+                        </li>
+                        <li>
+                            Entrar importe - El cajero solicita la cantidad a retirar. Para este flujo, el cliente
+                            selecciona un importe preestablecido ($10, $20, $50 ó $100).<br />
+                        </li>
+                        <li>
+                            Autorización - El cajero automático inicia el proceso de verificación con el Sistema de banca
+                            enviando el ID de la tarjeta, el PIN, el Importe y la información de Cuenta como una
+                            transacción.&nbsp;Para este flujo, el Sistema de banca está en línea, responde con la
+                            autorización para completar la retirada de dinero satisfactoriamente, y actualiza el saldo de
+                            cuenta en consecuencia.<br />
+                        </li>
+                        <li>
+                            Dispensar - Se dispensa el dinero.<br />
+                        </li>
+                        <li>
+                            Devolver tarjeta - Se devuelve la tarjeta bancaria.<br />
+                        </li>
+                        <li>
+                            Recibo - Se imprime y entrega el recibo.&nbsp; El cajero automático también actualiza el
+                            registro interno según corresponda.&nbsp;
+                        </li>
+                    </ol>
+                    <p>
+                        El caso de uso finaliza con el cajero automático en el estado Preparado.<br />
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    Flujo alternativo - La tarjeta no es válida
+                </th>
+                <td width="83%">
+                    En el flujo básico del Paso 2 - Verificar tarjeta bancaria, si la tarjeta no es válida, se rechaza con
+                    un mensaje adecuado.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    Flujo alternativo 2 - El cajero automático no dispone de dinero&nbsp;
+                </th>
+                <td width="83%">
+                    En el flujo básico del Paso 5 - Opciones del cajero automático, si el cajero automático no dispone de
+                    dinero, la opción "Retirada de dinero" no está disponible.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    Flujo alternativo 3 - El cajero automático no dispone de fondos suficientes&nbsp;
+                </th>
+                <td width="83%">
+                    En el flujo básico del Paso 6 - Entrar importe, si el cajero automático no dispone de fondos
+                    suficientes para dispensar el importe solicitado, se muestra un mensaje adecuado y se vuelve a unir al
+                    flujo básico del Paso 6 - Entrar importe.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    Flujo alternativo 4 - PIN incorrecto&nbsp;
+                </th>
+                <td width="83%">
+                    En el flujo básico del Paso 4 - Verificar código de cuenta y PIN, el cliente dispone de tres intentos
+                    para entrar el PIN correcto.&nbsp;&nbsp;<br />
+                    <br />
+                     Si se entra un PIN incorrecto, el cajero automático muestra el mensaje adecuado y, si el cliente sigue
+                    disponiendo de tres intentos, se vuelve a unir al flujo básico del Paso 3 - Entrar PIN.&nbsp;<br />
+                    <br />
+                     Si, en el último intento, el número de PIN entrado es incorrecto, se retiene la tarjeta, el cajero
+                    automático vuelve al estado Preparado y termina este caso de uso .
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    Flujo alternativo 5 - No existe cuenta&nbsp;
+                </th>
+                <td width="83%">
+                    En el flujo básico del Paso 4 - Verificar código de cuenta y PIN, si el Sistema de banca devuelve un
+                    código que indica que no se ha podido encontrar la cuenta o que la cuenta permite retiradas, el cajero
+                    automático muestra el mensaje adecuado y se vuelve a unir al flujo básico del Paso 9 - Devolver
+                    tarjeta.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    Flujo alternativo 6 - Fondo en cuenta insuficiente
+                </th>
+                <td width="83%">
+                    En&nbsp; el flujo básico del Paso 7 - Autorización, el Sistema de banca devuelve un código que indica
+                    que el saldo de cuenta es inferior al importe entrado en el flujo básico del Paso 6 - Entrar importe,
+                    el cajero automático muestra el mensaje adecuado y se vuelve a unir al flujo básico del paso 6 - Entrar
+                    importe.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    Flujo alternativo 7 - Se ha alcanzado el importe de retirada máximo diario&nbsp;
+                </th>
+                <td width="83%">
+                    En el flujo básico del Paso 6 - Autorización, el Sistema de banca devuelve un código que indica que,
+                    incluida esta solicitud de retirada, el cliente ha o habrá excedido el importe máximo permitido en un
+                    período de 24 horas, el cajero automático muestra el mensaje adecuado y se vuelve a unir al flujo
+                    básico del Paso 6 - Entrar importe.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    Flujo alternativo x - Registro de errores
+                </th>
+                <td width="83%">
+                    En el flujo básico del Paso 10 - Recibo, no se puede actualizar el registro, el cajero automático entra
+                    en la "modalidad segura" en la que se suspenden todas las funciones. Se envía una alarma adecuada al
+                    Sistema de banca para indicar que el cajero automático ha suspendido las operaciones.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    Flujo alternativo y - Abandonar
+                </th>
+                <td width="83%">
+                    En cualquier momento, el cliente puede decidir terminar la transacción (abandonar). Se detiene la
+                    transacción y se expulsa la tarjeta.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    Flujo alternativo z - "Inclinación"
+                </th>
+                <td width="83%">
+                    El cajero automático contiene numerosos sensores que supervisan funciones diferentes como, por ejemplo,
+                    la alimentación eléctrica, la presión ejercida en las puertas y entradas, así como detectores del
+                    movimiento.&nbsp; Si se activa un sensor en cualquier momento, se envía una señal de alarma a la
+                    policía y el cajero automático entra en un "modo seguro" en el que se suspenden todas las funciones
+                    hasta que se llevan a cabo las acciones de reiniciar/reinicializar adecuadas.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="example">
+        <br />
+         En la primera iteración, según el plan de iteración, se debe verificar que el caso de uso Retirada de dinero se
+        haya implementado correctamente. El caso de uso completo aún no se ha implementado, sólo se han implementado los
+        flujos siguientes:
+    </p>
+    <blockquote>
+        <ul>
+            <li>
+                Flujo básico - Retirada de un importe preestablecido ($10, $20, $50, $100)
+            </li>
+            <li>
+                Flujo alternativo 2 - El cajero automático no dispone de dinero
+            </li>
+            <li>
+                Flujo alternativo 3 - El cajero automático no dispone de fondos suficientes
+            </li>
+            <li>
+                Flujo alternativo 4 - PIN incorrecto
+            </li>
+            <li>
+                Flujo alternativo 5 - No existe cuenta / Tipo de cuenta incorrecto
+            </li>
+            <li>
+                Flujo alternativo 6 - Fondos en cuenta insuficientes
+            </li>
+        </ul>
+    </blockquote>
+</div>
+<p>
+    De este caso de uso pueden derivar los casos de ejemplo siguientes:
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="row" width="14%">
+                    Caso de ejemplo 1 - Retirada de dinero satisfactoria
+                </th>
+                <td width="15%">
+                    Flujo básico&nbsp;
+                </td>
+                <td width="15%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    Caso de ejemplo 2 - El cajero automático no dispone de dinero
+                </th>
+                <td width="15%">
+                    Flujo básico
+                </td>
+                <td width="15%">
+                    Flujo alternativo 2
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    Caso de ejemplo 3 - El cajero automático no dispone de fondos suficientes
+                </th>
+                <td width="15%">
+                    Flujo básico
+                </td>
+                <td width="15%">
+                    Flujo alternativo 3
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    Caso de ejemplo 4 - PIN incorrecto (quedan intentos)
+                </th>
+                <td width="15%">
+                    Flujo básico
+                </td>
+                <td width="15%">
+                    Flujo alternativo 4&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    Caso de ejemplo 5 - PIN incorrecto (no quedan intentos)
+                </th>
+                <td width="15%">
+                    Flujo básico
+                </td>
+                <td width="15%">
+                    Flujo alternativo 4&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    Caso de ejemplo 6 - No existe cuenta / Tipo de cuenta incorrecto
+                </th>
+                <td width="15%">
+                    Flujo básico
+                </td>
+                <td width="15%">
+                    Flujo alternativo 5
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    Caso de ejemplo 7 - Saldo en cuenta insuficiente&nbsp;
+                </th>
+                <td width="15%">
+                    Flujo básico
+                </td>
+                <td width="15%">
+                    Flujo alternativo 6
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    <b>Nota</b>: Para ofrecer mayor simplicidad, en la tabla anterior no se han incluido los bucles de los flujos
+    alternativos 3 y 6 (Casos de ejemplo 3 y 7) y las combinaciones de los bucles.
+</p>
+<p>
+    Se deben identificar guiones de prueba para cada uno de estos siete casos de ejemplo. Los guiones de prueba se pueden
+    identificar utilizando matrices o tablas de decisión. Más abajo se muestra un formato común, donde cada fila representa
+    un guión de prueba individual y las columnas identifican la información del guión de prueba.&nbsp; En este ejemplo,
+    para cada guión de prueba hay un ID de guión de prueba, la Condición (o descripción), todos los elementos de datos que
+    participan en el guión de prueba (como entrada o ya en la base de datos) y el resultado esperado.
+</p>
+<p>
+    Para iniciar el desarrollo de la matriz, empiece por identificar los elementos de datos que se necesitan para ejecutar
+    los casos de ejemplo de caso de uso . A continuación, para cada caso de ejemplo identifique, como mínimo, el guión de
+    prueba que contenga la condición adecuada para ejecutar el caso de ejemplo. Por ejemplo, en la matriz que se muestra
+    más abajo, se utiliza V (válida) para indicar que esta condición debe ser VÁLIDA para que se ejecute el flujo básico e
+    I (no válida) para indicar la condición que invoca el flujo alternativo deseado.&nbsp;En la tabla siguiente, "n/a"
+    indica que esta condición no se aplica al guión de prueba.
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="6%">
+                    Nº ID TC
+                </th>
+                <th scope="col" align="middle" width="17%">
+                    Caso de ejemplo / Condición
+                </th>
+                <th scope="col" align="middle" width="6%">
+                    PIN
+                </th>
+                <th scope="col" align="middle" width="11%">
+                    Nº cuenta
+                </th>
+                <th scope="col" align="middle" width="11%">
+                    Importe entrado 
+                    <p>
+                        (importe elegido)
+                    </p>
+                </th>
+                <th scope="col" align="middle" width="12%">
+                    Importe en cuenta
+                </th>
+                <th scope="col" align="middle" width="11%">
+                    Importe en cajero automático
+                </th>
+                <th scope="col" align="middle" width="16%">
+                    Resultado esperado
+                </th>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW1.
+                </td>
+                <td width="17%">
+                    Caso de ejemplo 1 - Retirada de dinero satisfactoria
+                </td>
+                <td align="middle" width="6%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td width="16%">
+                    Retirada de dinero satisfactoria.
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW2.
+                </td>
+                <td width="17%">
+                    Caso de ejemplo 2 - El cajero automático no dispone de dinero
+                </td>
+                <td align="middle" width="6%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%" bgcolor="#c0c0c0">
+                    I
+                </td>
+                <td width="16%">
+                    Opción Retirada de dinero no disponible, fin del caso de uso .
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW3.
+                </td>
+                <td width="17%">
+                    Caso de ejemplo 3 - El cajero automático no dispone de fondos suficientes
+                </td>
+                <td align="middle" width="6%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%" bgcolor="#c0c0c0">
+                    I
+                </td>
+                <td width="16%">
+                    Mensaje de aviso, volver al flujo básico del Paso 6 - Entrar importe
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW4.
+                </td>
+                <td width="17%">
+                    Caso de ejemplo 4 - PIN incorrecto (&gt; queda 1 intento)
+                </td>
+                <td align="middle" width="6%" bgcolor="#c0c0c0">
+                    I&nbsp;
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    n/a
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td width="16%">
+                    Mensaje de aviso, volver al flujo básico del Paso 4, Entrar PIN
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW5.
+                </td>
+                <td width="17%">
+                    Caso de ejemplo 4 - PIN incorrecto (= queda 1 intentos)
+                </td>
+                <td align="middle" width="6%" bgcolor="#c0c0c0">
+                    I&nbsp;
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    n/a
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td width="16%">
+                    Mensaje de aviso, volver al flujo básico del Paso 4, Entrar PIN
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW6.
+                </td>
+                <td width="17%">
+                    Caso de ejemplo 4 - PIN incorrecto (= quedan 0&nbsp; intentos)
+                </td>
+                <td align="middle" width="6%" bgcolor="#c0c0c0">
+                    I&nbsp;
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    n/a
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td width="16%">
+                    Mensaje de aviso, tarjeta retenida, fin del caso de uso
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    En la matriz anterior, los seis guiones de prueba ejecutan los cuatro casos de ejemplo. Para el flujo básico, el guión
+    de prueba CW1 anterior se muestra como un guión de prueba positivo. Ejecuta la vía de acceso del flujo básico a través
+    del caso de uso sin ninguna desviación. La prueba completa del flujo básico debe incluir guiones de prueba negativos
+    con el objeto de garantizar que sólo se toma el flujo básico cuando las condiciones son correctas. Los guiones de
+    prueba negativos se representan por medio de los guiones de prueba CW2 a 6 (la celda sombreada indica la condición
+    necesaria para ejecutar los flujos alternativos).&nbsp;Mientras que CW2 a 6 son guiones de prueba negativos para el
+    flujo básico, son guiones de prueba positivos para los flujos alternativos 2 a 4 y hay, como mínimo un guión de prueba
+    negativo para cada uno de los flujos alternativos (CW1 - el flujo básico).
+</p>
+<p>
+    El caso de ejemplo 4 es un ejemplo en el que tener un guión de prueba negativo y otro positivo en cada caso de ejemplo
+    resulta insuficiente. Para probar el Caso de ejemplo 4 - PIN incorrecto minuciosamente, se necesitan, como mínimo, tres
+    casos de uso positivos (para invocar el Caso de ejemplo 4):
+</p>
+<ul>
+    <li>
+        el PIN entrado es incorrecto, quedan intentos y este flujo alternativo se vuelve a unir al flujo básico de Paso 3 -
+        Entrar PIN.
+    </li>
+    <li>
+        el PIN entrado no es correcto, no quedan más intentos y el flujo alternativo retiene la tarjeta y termina el caso
+        de uso .
+    </li>
+    <li>
+        se ha entrado el PIN CORRECTO cuando ya no quedaban más intentos.&nbsp; Este flujo alternativo se vuelve a unir al
+        flujo básico del Paso 5 - Entrar importe.&nbsp;
+    </li>
+</ul>
+<p>
+    Observe que, en la matriz anterior, no se han entrado valores reales para las condiciones (datos). Una de las ventajas
+    de crear la matriz de guión de prueba es que, de este modo resulta más fácil ver las condiciones que se están probando.
+    También resulta muy fácil determinar si se han identificado suficientes guiones de prueba, puesto que sólo se deben
+    observar las V y las I (o, como se ha hecho en este caso, las celdas sombreadas). Al observar la tabla anterior,
+    existen varias condiciones para las que no hay ninguna celda sombreada y, por lo tanto, faltan guiones de prueba, por
+    ejemplo, para el Caso de ejemplo 6 - No existe cuenta o Tipo de cuenta incorrecto y el Caso de ejemplo 7 - Saldo en
+    cuenta insuficiente.
+</p>
+<p>
+    Una vez que se hayan identificado suficientes guiones de prueba, se deben revisar y validar a fin garantizar su
+    precisión y adecuación, además de eliminar guiones de prueba duplicados, equivalente o, por el contrario, redundantes.
+    Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/test-ideas_list_A6CEF011.html" guid="6.149711039531016E-305">Concepto: Lista de
+    ideas de prueba</a> para obtener más detalles. Consulte también el apartado <a href="#DefiningTestDataForTestCases">Definición de datos de prueba para guiones de prueba</a> para obtener información
+    detallada.
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="6%">
+                    Nº ID TC
+                </th>
+                <th scope="col" align="middle" width="17%">
+                    Caso de ejemplo / Condición
+                </th>
+                <th scope="col" align="middle" width="6%">
+                    PIN
+                </th>
+                <th scope="col" align="middle" width="11%">
+                    Nº cuenta
+                </th>
+                <th scope="col" align="middle" width="11%">
+                    Importe entrado 
+                    <p>
+                        (importe elegido)
+                    </p>
+                </th>
+                <th scope="col" align="middle" width="12%">
+                    Importe en cuenta
+                </th>
+                <th scope="col" align="middle" width="11%">
+                    Importe en cajero automático
+                </th>
+                <th scope="col" align="middle" width="16%">
+                    Resultado esperado
+                </th>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW1.
+                </td>
+                <td width="17%">
+                    Caso de ejemplo 1 - Retirada de dinero satisfactoria
+                </td>
+                <td align="middle" width="6%">
+                    4987
+                </td>
+                <td align="middle" width="11%">
+                    809 - 498
+                </td>
+                <td align="middle" width="11%">
+                    50,00
+                </td>
+                <td align="middle" width="12%">
+                    500,00
+                </td>
+                <td align="middle" width="11%">
+                    2.000
+                </td>
+                <td width="16%">
+                    Retirada de dinero satisfactoria. Saldo en cuenta actualizado a 450,00
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW2.
+                </td>
+                <td width="17%">
+                    Caso de ejemplo 2 - El cajero automático no dispone de dinero
+                </td>
+                <td align="middle" width="6%">
+                    4987
+                </td>
+                <td align="middle" width="11%">
+                    809 - 498
+                </td>
+                <td align="middle" width="11%">
+                    100,00
+                </td>
+                <td align="middle" width="12%">
+                    500,00
+                </td>
+                <td align="middle" width="11%">
+                    0,00
+                </td>
+                <td width="16%">
+                    Opción Retirada de dinero no disponible, fin del caso de uso .
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW3.
+                </td>
+                <td width="17%">
+                    Caso de ejemplo 3 - El cajero automático no dispone de fondos suficientes
+                </td>
+                <td align="middle" width="6%">
+                    4987
+                </td>
+                <td align="middle" width="11%">
+                    809 - 498
+                </td>
+                <td align="middle" width="11%">
+                    100,00
+                </td>
+                <td align="middle" width="12%">
+                    500,00
+                </td>
+                <td align="middle" width="11%">
+                    70,00
+                </td>
+                <td width="16%">
+                    Mensaje de aviso, volver al flujo básico del Paso 6 - Entrar importe
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW4.
+                </td>
+                <td width="17%">
+                    Caso de ejemplo 4 - PIN incorrecto (&gt; queda 1 intento)
+                </td>
+                <td align="middle" width="6%">
+                    49<u>78</u>&nbsp;
+                </td>
+                <td align="middle" width="11%">
+                    809 - 498
+                </td>
+                <td align="middle" width="11%">
+                    n/a
+                </td>
+                <td align="middle" width="12%">
+                    500,00
+                </td>
+                <td align="middle" width="11%">
+                    2.000
+                </td>
+                <td width="16%">
+                    Mensaje de aviso, volver al flujo básico del Paso 4, Entrar PIN
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW5.
+                </td>
+                <td width="17%">
+                    Caso de ejemplo 4 - PIN incorrecto (= queda 1 intentos)
+                </td>
+                <td align="middle" width="6%">
+                    49<u>78</u>
+                </td>
+                <td align="middle" width="11%">
+                    809 - 498
+                </td>
+                <td align="middle" width="11%">
+                    n/a
+                </td>
+                <td align="middle" width="12%">
+                    500,00
+                </td>
+                <td align="middle" width="11%">
+                    2.000
+                </td>
+                <td width="16%">
+                    Mensaje de aviso, volver al flujo básico del Paso 4, Entrar PIN
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW6.
+                </td>
+                <td width="17%">
+                    Caso de ejemplo 4 - PIN incorrecto (= quedan 0&nbsp; intentos)
+                </td>
+                <td align="middle" width="6%">
+                    49<u>78</u>&nbsp;
+                </td>
+                <td align="middle" width="11%">
+                    809 - 498
+                </td>
+                <td align="middle" width="11%">
+                    n/a
+                </td>
+                <td align="middle" width="12%">
+                    500,00
+                </td>
+                <td align="middle" width="11%">
+                    2.000
+                </td>
+                <td width="16%">
+                    Mensaje de aviso, tarjeta retenida, fin del caso de uso
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Los guiones de prueba anteriores son sólo unos cuantos de los guiones de prueba que se necesitan para verificar el caso
+    de uso Retirada de dinero para esta iteración. Otros casos de uso que se necesitan incluyen:
+</p>
+<ul>
+    <li>
+        Caso de ejemplo 6 - No existe cuenta o Tipo de cuenta incorrecto: Cuenta no encontrada o no disponible
+    </li>
+    <li>
+        Caso de ejemplo 6 - No existe cuenta o Tipo de cuenta incorrecto: La cuenta no permite retiradas
+    </li>
+    <li>
+        Caso de ejemplo 7 - Saldo en cuenta insuficiente: El importe solicitado es mayor que el importe en cuenta.
+    </li>
+</ul>
+<p>
+    En futuras iteraciones, cuando se implementen otros flujos, se necesitan guiones de prueba para:
+</p>
+<ul>
+    <li>
+        Tarjetas no válidas (se informa que la tarjeta se ha perdido, robado, no pertenece a un banco aceptado o tiene la
+        banda magnética estropeada, por ejemplo).
+    </li>
+    <li>
+        Imposibilidad de leer la tarjeta (el lector de tarjetas está atascado, fuera de línea o no funciona correctamente)
+    </li>
+    <li>
+        Cuenta cerrada congelada o, de lo contrario, no disponible
+    </li>
+    <li>
+        El importe que contiene el cajero automático es insuficiente o no se puede crear el importe solicitado (se
+        diferencia de CW3 en que una denominación está fuera, pero no toda)
+    </li>
+    <li>
+        No se puede contactar con el Sistema de banca para la aprobación
+    </li>
+    <li>
+        La red del banco se queda fuera de línea, o bien, se produce una interrupción de la alimentación a mitad de la
+        transacción
+    </li>
+</ul>
+<p>
+    Al identificar guiones de prueba funcionales, asegúrese de lo siguiente:
+</p>
+<ul>
+    <li>
+        se han identificado suficientes guiones de prueba, positivos y negativos, para cada caso de ejemplo de caso de uso
+        &nbsp;
+    </li>
+    <li>
+        los guiones de prueba tratan todas las reglas empresariales que implementan los casos de uso , garantizando que
+        haya guiones de prueba dentro, fuera y en el valor/condición de límite para la regla empresarial.
+    </li>
+    <li>
+        los guiones de prueba tratan todas las secuencias de sucesos o acciones como, por ejemplo, las que identifican los
+        diagramas de secuencia del modelo de diseño, o bien, las condiciones o los estados de objeto de la interfaz de
+        usuario.
+    </li>
+    <li>
+        los guiones de prueba tratan todos los requisitos especiales definidos para el caso de uso , por ejemplo,
+        rendimiento mínimo/máximo, en ocasiones combinados con cargas o volúmenes de datos mínimos/máximos durante la
+        ejecución de los casos de uso .
+    </li>
+</ul>
+<p>
+    Consulte el apartado <a href="#DefiningTestDataForTestCases">Definición de datos de prueba para guiones de prueba</a>
+    para obtener más instrucciones.
+</p><!-- !RPV COMMAND! -->
+<h3>
+    <a id="DerivingTestCasesFromSupplementarySpecifications" name="DerivingTestCasesFromSupplementarySpecifications">Derivación de guiones de prueba de especificaciones
+    suplementarias</a>
+</h3>
+<p>
+    No todos los requisitos para un destino de la prueba se reflejan en artefactos de requisitos funcionales como, por
+    ejemplo, especificaciones de casos de uso . Los requisitos no funcionales, por ejemplo, rendimiento, seguridad y
+    acceso, y los requisitos de configuración, especifican características o comportamientos adicionales del destino de la
+    prueba y, con frecuencia, se documentan por separado de los requisitos funcionales. El especificación suplementaria es
+    uno de los orígenes principales para la derivación de guiones de prueba de estos requisitos adicionales.
+</p>
+<p>
+    Más abajo se describen las directrices para derivar estos guiones de prueba adicionales:
+</p>
+<ul>
+    <li>
+        <a href="#DerivingTestCasesForPerformanceTests">Derivación de guiones de prueba para pruebas de rendimiento</a>
+    </li>
+    <li>
+        <a href="#DerivingTestCasesForSecurityAccessTests">Derivación de guiones de prueba para pruebas de acceso /
+        seguridad</a>
+    </li>
+    <li>
+        <a href="#DerivingTestCasesForConfigurationTests">Derivación de guiones de prueba para pruebas de configuración</a>
+    </li>
+    <li>
+        <a href="#DerivingTestCasesForInstallationTests">Derivación de guiones de prueba para pruebas de instalación</a>
+    </li>
+    <li>
+        <a href="#DerivingTestCasesForOtherNon-functionalTests">Derivación de guiones de prueba para otras pruebas no
+        funcionales</a>
+    </li>
+</ul>
+<h4>
+    <a id="DerivingTestCasesForPerformanceTests" name="DerivingTestCasesForPerformanceTests">Derivación de guiones de
+    prueba para pruebas de rendimiento</a>
+</h4>
+<p>
+    La entrada principal para guiones de prueba de rendimiento son las especificaciones suplementarias que contienen los
+    requisitos no funcionales (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">Producto de trabajo: Especificaciones suplementarias</a>). Utiliza las
+    directrices siguientes para derivar guiones de prueba para la prueba de rendimiento:
+</p>
+<ul>
+    <li>
+        asegúrese de que se ha identificado, como mínimo, un guión de prueba para cada sentencia de la especificación
+        suplementaria que establece un criterio de rendimiento. Por lo general, los criterios de rendimiento se expresan
+        como tiempo por transacción, número de transacciones/usuarios o percentiles.
+    </li>
+    <li>
+        asegúrese de que se identifique, como mínimo, un guión de prueba para cada caso de uso crítico. Los casos de uso
+        críticos son los que identifican en las sentencias anteriores o en el documento de análisis de carga de trabajo y
+        que se deben evaluar utilizando medidas de rendimiento (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_workload_analysis_model_E86A32FF.html" guid="{008164B1-3AC3-47E8-9F93-EE4C36B58A97}">Producto de trabajo: Documento de análisis de carga de trabajo</a>).
+    </li>
+</ul>
+<p>
+    Como sucede con los guiones de prueba para pruebas funcionales, por lo general, suele haber más de un guión de prueba
+    por requisito o caso de ejemplo de uso. Es habitual definir varios guiones de prueba, por ejemplo, uno que se sitúe por
+    debajo del valor de umbral de rendimiento (índice promedio de transacciones), otro en el valor de umbral (índice alto
+    de transacciones) y un tercer guión de prueba por encima del valor de umbral (índice punta de transacciones).
+</p>
+<p>
+    Además de los criterios de rendimiento anteriores, asegúrese de que identifica las condiciones específicas que afectan
+    a los tiempos de respuestas, incluidas:
+</p>
+<ul>
+    <li>
+        Tamaño de la base de datos - ¿cuántos registros existen?
+    </li>
+    <li>
+        Carga de trabajo - patrones de transacción: 
+        <ul>
+            <li>
+                tipo, número y frecuencia de acciones simultáneas de usuario,
+            </li>
+            <li>
+                tipo, número, frecuencia y duración de las transacciones simultáneas realizadas
+            </li>
+        </ul>
+    </li>
+    <li>
+        Características del entorno (configuración de hardware, netware y software)
+    </li>
+</ul>
+<p>
+    Una práctica común consiste en capturar guiones de prueba para pruebas de rendimiento en matrices tabulares similares a
+    las que se utilizan para la prueba de función.
+</p>
+<p>
+    Consulte el apartado <a href="#DefiningTestDataForTestCases">Definición de datos de prueba para guiones de prueba</a>
+    para obtener información detallada.
+</p>
+<p>
+    A continuación se presentan algunos ejemplos para los diferentes tipos de pruebas de rendimiento:
+</p>
+<p>
+    Para la Prueba de carga:
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="1%">
+                    Nº ID TC
+                </th>
+                <th scope="col" align="middle" width="9%">
+                    Carga de trabajo
+                </th>
+                <th scope="col" align="middle" width="24%">
+                    Condición
+                </th>
+                <th scope="col" align="middle" width="24%">
+                    Resultado esperado
+                </th>
+            </tr>
+            <tr>
+                <td align="right" width="1%">
+                    PCW1.
+                </td>
+                <td width="9%">
+                    <p align="center">
+                        1
+                    </p>
+                    <p align="center">
+                        (un solo cajero automático)
+                    </p>
+                </td>
+                <td align="middle" width="24%">
+                    <p align="left">
+                        Transacción de retirada completa
+                    </p>
+                </td>
+                <td width="24%">
+                    La transacción completa (el tiempo no depende de ningún actor) se produce en &lt; 20 segundos
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="1%">
+                    PCW2.
+                </td>
+                <td width="9%">
+                    <p align="center">
+                        2
+                    </p>
+                    <p align="center">
+                        (1.000 cajeros automáticos simultáneos)
+                    </p>
+                </td>
+                <td align="middle" width="24%">
+                    <p align="left">
+                        Transacción de retirada completa
+                    </p>
+                </td>
+                <td width="24%">
+                    La transacción completa (el tiempo no depende de ningún actor) se produce en &lt; 30 segundos
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="1%">
+                    PCW3.
+                </td>
+                <td width="9%">
+                    <p align="center">
+                        3
+                    </p>
+                    <p align="center">
+                        (10.000 cajeros automáticos simultáneos)
+                    </p>
+                </td>
+                <td align="middle" width="24%">
+                    <p align="left">
+                        Transacción de retirada completa
+                    </p>
+                </td>
+                <td width="24%">
+                    La transacción completa (el tiempo no depende de ningún actor) se produce en &lt; 50 segundos
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Para la Prueba de tensión:
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="1%">
+                    Nº ID TC
+                </th>
+                <th scope="col" align="middle" width="14%">
+                    Carga de trabajo
+                </th>
+                <th scope="col" align="middle" width="19%">
+                    Condición
+                </th>
+                <th scope="col" align="middle" width="24%">
+                    Resultado esperado
+                </th>
+            </tr>
+            <tr>
+                <td align="right" width="1%">
+                    SCW1.
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        2
+                    </p>
+                    <p align="center">
+                        (1.000 cajeros automáticos simultáneos)
+                    </p>
+                </td>
+                <td align="middle" width="19%">
+                    <p align="left">
+                        Bloqueo de base de datos - 2 cajeros automáticos solicitan la misma cuenta
+                    </p>
+                </td>
+                <td width="24%">
+                    La solicitudes de los cajeros automáticos se ponen en cola
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="1%">
+                    SCW2.
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        2
+                    </p>
+                    <p align="center">
+                        (1.000 cajeros automáticos simultáneos)
+                    </p>
+                </td>
+                <td align="middle" width="19%">
+                    <p align="left">
+                        La comunicación del Sistema de banca no está disponible
+                    </p>
+                </td>
+                <td width="24%">
+                    La transacción se pone en cola o se excede el tiempo de espera
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="1%">
+                    SCW3.
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        2
+                    </p>
+                    <p align="center">
+                        (1.000 cajeros automáticos simultáneos)
+                    </p>
+                </td>
+                <td align="middle" width="19%">
+                    <p align="left">
+                        La comunicación del Sistema de banca termina durante la transacción
+                    </p>
+                </td>
+                <td width="24%">
+                    Se muestra un mensaje de aviso
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h4>
+    <a id="DerivingTestCasesForSecurityAccessTests" name="DerivingTestCasesForSecurityAccessTests">Derivación de guiones de
+    prueba para pruebas de acceso /seguridad</a>
+</h4>
+<p>
+    Los actores y los casos de uso describen la interacción entre usuarios externos del sistema y las acciones que lleva a
+    cabo el sistema para producir un valor para un actor concreto. Los sistemas complejos contienen varios actores, por lo
+    que resulta de extrema importancia desarrollar guiones de prueba para garantizar que sólo los actores especificados
+    puedan ejecutar los casos de uso . En especial, esto es cierto si existen diferencias en el flujo de sucesos de casos
+    de uso basados en el tipo de actor.
+</p>
+<p>
+    Por ejemplo, en los casos del cajero automático, se pueden ejecutar diferentes flujos de sucesos de casos de uso para
+    el actor "Cliente del banco" si la tarjeta y la cuenta es del banco que posee el cajero automático contra el "Cliente
+    del banco" que utiliza una tarjeta bancaria (y cuenta) de un banco de la competencia, o bien, que intenta utilizar una
+    tarjeta bancaria no participante.
+</p>
+<p>
+    Para los guiones de prueba funcionales, siga las mismas directrices que se indican más arriba.
+</p>
+<p>
+    Consulte el apartado <a href="#DefiningTestDataForTestCases">Definición de datos de prueba para guiones de prueba</a>
+    para obtener más instrucciones.
+</p>
+<p>
+    Guiones de prueba de ejemplo para Acceso y seguridad:
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="6%">
+                    Nº ID TC
+                </th>
+                <th scope="col" align="middle" width="11%">
+                    Condición
+                </th>
+                <th scope="col" align="middle" width="12%">
+                    Tarjeta 
+                    <p>
+                        <font size="-2">(V indica tarjeta válida)</font>
+                    </p>
+                </th>
+                <th scope="col" align="middle" width="12%">
+                    Lector de tarjetas 
+                    <p>
+                        <font size="-2">(V indica que el cajero funciona correctamente)</font>
+                    </p>
+                </th>
+                <th scope="col" align="middle" width="12%">
+                    Red del banco
+                </th>
+                <th scope="col" align="middle" width="16%">
+                    Resultado esperado
+                </th>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    ACW1.
+                </td>
+                <td width="11%">
+                    En red bancaria
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td width="16%">
+                    Todos los casos de uso disponibles
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    ACW2.
+                </td>
+                <td width="11%">
+                    Fuera de la red bancaria
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td align="middle" width="12%">
+                    I
+                </td>
+                <td width="16%">
+                    Sólo caso de uso Retirada de dinero
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    ACW3.
+                </td>
+                <td width="11%">
+                    No se puede leer la tarjeta
+                </td>
+                <td align="middle" width="12%">
+                    I
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td width="16%">
+                    Mensaje de aviso, se expulsa la tarjeta
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    ACW4.
+                </td>
+                <td width="11%">
+                    Se informa del robo de la tarjeta
+                </td>
+                <td align="middle" width="12%">
+                    I
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td width="16%">
+                    Mensaje de aviso, se retiene la tarjeta
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    ACW5.
+                </td>
+                <td width="11%">
+                    Tarjeta caducada
+                </td>
+                <td align="middle" width="12%">
+                    I
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td width="16%">
+                    Mensaje de aviso, se retiene la tarjeta
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h4>
+    <a id="DerivingTestCasesForConfigurationTests" name="DerivingTestCasesForConfigurationTests">Derivación de guiones de
+    prueba para guiones de configuración</a>
+</h4>
+<p>
+    En los sistemas distribuidos típicos puede haber varias combinaciones de hardware y software permitidas a las que se da
+    soporte. Se debe realizar la prueba para verificar si el destino de la prueba funciona o si se lleva a cabo de modo
+    aceptable en configuraciones diferentes como, por ejemplo, con velocidades de CPU, navegadores o sistemas operativos
+    diferentes. Además, la prueba también debe abarcar combinaciones de componentes para descubrir defectos que proceden de
+    interacciones de componentes diferentes, por ejemplo, garantizando que la versión de las DLL que instala una aplicación
+    no entran en conflicto con las versiones de las mismas DLL que espera otra aplicación.
+</p>
+<p>
+    Para derivar guiones de prueba para la prueba de configuración, utilice las directrices siguientes:
+</p>
+<ul>
+    <li>
+        Asegúrese de que haya, como mínimo, un guión de prueba para identificar cada configuración crítica. Para ello, se
+        deben identificar las configuraciones de hardware y software necesarias para el entorno del destino de la prueba y
+        dar prioridad a las configuraciones, garantizando que las más comunes se prueban primero, incluidas: 
+        <ul>
+            <li>
+                Soporte de impresora
+            </li>
+            <li>
+                Conexiones de red - redes local y de área amplia
+            </li>
+            <li>
+                Configuraciones del servidor - controladores y hardware del servidor
+            </li>
+            <li>
+                Otro software instalado en el escritorio o los servidores
+            </li>
+            <li>
+                Versiones de software para todo el software instalado
+            </li>
+        </ul>
+    </li>
+    <li>
+        Asegúrese de que haya, como mínimo, un caso de uso para cada configuración que pueda tener problemas. Pueden
+        incluir: 
+        <ul>
+            <li>
+                Hardware con el rendimiento más bajo.
+            </li>
+            <li>
+                Software coresidente que tenga un historial de problemas de compatibilidad.
+            </li>
+            <li>
+                Clientes que acceden al servidor a través de la conexión LAN/WAN más lenta posible.
+            </li>
+            <li>
+                Recursos insuficientes (baja velocidad de CPU, resolución o memoria mínima o espacio en disco, entre
+                otros).
+            </li>
+        </ul>
+    </li>
+</ul>
+<h4>
+    <a id="DerivingTestCasesForInstallationTests" name="DerivingTestCasesForInstallationTests">Derivación de guiones de
+    prueba para pruebas de instalación</a>
+</h4>
+<p>
+    La prueba de instalación debe verificar que se pueda instalar el destino de la prueba en todos los casos de ejemplo de
+    instalación posibles. Los casos de ejemplo de instalación pueden incluir la primera instalación del destino de la
+    prueba, o bien, la instalación de una compilación o versión más reciente del destino de la prueba (en una máquina que
+    contenga la versión anterior). La prueba de instalación también debe garantizar que el destino de la prueba se lleva a
+    cabo de modo aceptable en caso de producirse situaciones anómalas como, por ejemplo, espacio en disco insuficiente.
+</p>
+<p>
+    Los guiones de prueba deben cubrir casos de ejemplo de instalación para el software, incluidos:
+</p>
+<ul>
+    <li>
+        Medios de distribución, por ejemplo, disquetes, CD-ROM o servidor de archivos.
+    </li>
+    <li>
+        Nueva instalación.
+    </li>
+    <li>
+        Instalación completa.
+    </li>
+    <li>
+        Instalaciones personalizadas.
+    </li>
+    <li>
+        Instalaciones de actualizaciones.
+    </li>
+</ul>
+<p>
+    Los programas de instalación para software cliente-servidor tienen un conjunto especializado de guiones de prueba. A
+    diferencia de los sistemas basados en sistema principal, generalmente, el programa de instalación se divide entre el
+    servidor y el cliente. Por este motivo, es importante que la prueba de instalación lleve a cabo la instalación en todos
+    los componentes del destino de la prueba, incluido el cliente, las capas centrales y los servidores.
+</p>
+<h4>
+    <a id="DerivingTestCasesForOtherNon-functionalTests" name="DerivingTestCasesForOtherNon-functionalTests">Derivación de
+    guiones de prueba para otras pruebas no funcionales</a>
+</h4>
+<p>
+    Lo más adecuado es que busque toda la entrada necesaria para derivar guiones de prueba al modelo de caso de uso , el
+    modelo de diseño y los artefactos de especificación suplementaria. No obstante, en este punto no es extraño que
+    necesite complementar lo encontrado.
+</p>
+<p>
+    Algunos ejemplos serían:
+</p>
+<ul>
+    <li>
+        Guiones de prueba para pruebas operativas (para verificar que el software funciona cuando está en uso durante mucho
+        tiempo durante anomalías).
+    </li>
+    <li>
+        Guiones de prueba que investiguen cuellos de botella de rendimiento, posibilidades de volumen del sistema o tensión
+        del destino de la prueba para anomalías.
+    </li>
+</ul>
+<p>
+    En la mayoría de casos, estos guiones de prueba se encuentran al crear variantes o agregados de los guiones de prueba
+    que se han derivado de los identificados previamente.
+</p>
+<h3>
+    <a id="DerivingTestCasesForAcceptanceTests" name="DerivingTestCasesForAcceptanceTests">Derivación de guiones de prueba
+    para pruebas de aceptación</a>
+</h3>
+<p>
+    La prueba de aceptación del producto es la acción de prueba final antes de desplegar el software. El objetivo de la
+    prueba de aceptación es verificar si el software está preparado y lo pueden utilizar lo usuarios para realizar las
+    funciones y las tareas para las que se diseñó. Con frecuencia, la prueba de aceptación del producto implica algo más
+    que la ejecución del software para su estado de preparación, también implica todos los productos de trabajo que se
+    entregan al cliente como, por ejemplo, formación, documentación y empaquetado.&nbsp;
+</p>
+<p>
+    La derivación de guiones de prueba para los productos de trabajo de software se lleva a cabo del modo descrito en los
+    apartados anteriores. Dependiendo del grado y la formalidad de la prueba de aceptación del producto, los guiones de
+    prueba pueden ser los mismos o similares a los identificados más arriba (formales), o un subconjunto (informales).
+    Independientemente del nivel de los guiones de prueba, se debe alcanzar un acuerdo sobre los casos de uso y los
+    criterios de aceptación del producto antes de implementar y ejecutar la prueba del producto.
+</p>
+<p>
+    La evaluación de los productos de trabajo que no son software varía considerablemente en función del producto de
+    trabajo que se evalúa. Consulte las Listas de comprobación y las Directrices de cada producto de trabajo específico que
+    no sea de software para obtener información sobre qué y cómo evaluarlo.
+</p>
+<h3>
+    <a id="BuildVerificationTestCasesForRegressionTests" name="BuildVerificationTestCasesForRegressionTests">Guiones de
+    prueba de verificación de compilación para guiones de regresión</a><a key="guión de prueba" text="priorizar basándose en el riesgo" name="XE_test_case__prioritizing_based_on_risk" id="XE_test_case__prioritizing_based_on_risk" class="index"></a><a key="priorizar" text="guiones de prueba" name="XE_prioritizing__test_cases" id="XE_prioritizing__test_cases" class="index"></a>
+</h3>
+<p>
+    Las pruebas de regresión comparan dos compilaciones o versiones del mismo destino de la prueba e identifican
+    diferencias como posibles defectos. Por lo tanto, dan por supuesto que una nueva versión se debe comportar como una
+    versión anterior y garantizan que no se incluyan defectos como resultado de los cambios.
+</p>
+<p>
+    Lo más adecuado es que todos los guiones de prueba de una iteración se utilicen como guiones de prueba en las
+    iteraciones posteriores. Las directrices siguientes se deben utilizar para identificar, diseñar e implementar guiones
+    de prueba que maximicen el valor de la reutilización y prueba de regresión, además de minimizar el mantenimiento:
+</p>
+<ul>
+    <li>
+        Asegúrese de que el guión de prueba identifica sólo los elementos de datos críticos (los que se necesitan para
+        crear o dar soporte a la condición que se está probando)
+    </li>
+    <li>
+        Asegúrese de que cada guión de prueba describe o representa un conjunto exclusivo de entradas o secuencia de
+        sucesos cuyo resultado sea el comportamiento exclusivo del destino de la prueba
+    </li>
+    <li>
+        Elimine casos de uso redundantes o equivalentes
+    </li>
+    <li>
+        Agrupe los guiones de prueba que tengan el mismo estado inicial del destino de la prueba y el mismo estado de los
+        datos de prueba.
+    </li>
+</ul>
+<h3>
+    <a id="DefiningTestDataForTestCases" name="DefiningTestDataForTestCases">Definición de datos de prueba para guiones de
+    prueba</a><a key="guión de prueba" text="definir datos de prueba para" name="XE_test_case__defining_test_data_for" id="XE_test_case__defining_test_data_for" class="index"></a>
+</h3>
+<p>
+    Una vez que se hayan tratado los guiones de prueba y exista una aprobación/acuerdo general para estos, se pueden
+    identificar los valores de datos con más detalle (es decir, en la matriz de implementación de guiones de prueba), y
+    crear los artefactos de datos de prueba.
+</p>
+<p>
+    Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_data_CD55235A.html" guid="1.0508352805829607E-304">Directriz: Datos de
+    prueba</a> para obtener información adicional sobre la definición y el mantenimiento de datos de prueba.
+</p><br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

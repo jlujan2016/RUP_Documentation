@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: An&aacute;lisis de arquitectura para aplicaciones J2EE </title>
+<meta content="Guideline" name="uma.type">
+<meta content="architectural_analysis_for_j2ee_applications" name="uma.name">
+<meta content="An&aacute;lisis de arquitectura para aplicaciones J2EE " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.041153751920514E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.041153751920514E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: An&aacute;lisis de arquitectura para aplicaciones J2EE </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se tratan algunas de las tecnologías que J2EE proporciona y que el arquitecto de software debe considerar. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Análisis de la arquitectura</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    Con el <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">análisis de arquitectura</a> el <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">arquitecto de software</a> determina la mejor manera de aprovechar las
+    tecnologías que se proporcionan en la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307">Visión general de Java 2 Platform Enterprise Edition (J2EE)</a> para satisfacer los
+    requisitos funcionales y no funcionales del sistema. Esta directriz trata algunas de estas tecnologías.
+</p>
+<h3>
+    <a id="J2EE_Deployment_Configurations" name="J2EE_Deployment_Configurations"></a>Configuraciones de despliegue de J2EE
+</h3>
+<p>
+    J2EE da soporte a varias <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/j2ee_deployment_configurations_C0F819AF.html" guid="7.671163061311939E-306">configuraciones de despliegue de J2EE</a>. La elección de una configuración de despliegue
+    en concreto es un paso importante en el análisis de la arquitectura puesto que se convierte en el fundamento en que se
+    basa&nbsp;la arquitectura&nbsp;inicial.
+</p>
+<p>
+    La elección de una configuración de despliegue de J2EE da lugar a la definición del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_deployment_model_57DF1DF5.html" guid="{5981B6BE-2FD1-4984-AA94-2F7428439BA6}">modelo de despliegue</a> inicial. La&nbsp;configuración de despliegue
+    J2EE seleccionada define la configuración de nodos físicos (esto es, máquinas) y nodos lógicos (<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307">contenedores J2EE</a>). Es&nbsp;aquí cuando se decide tener un servidor web distinto y un
+    servidor EJB distinto, y es también cuando se decide si los clientes serán navegadores con HTTP o si serán clientes de
+    aplicación pesados.
+</p>
+<p>
+    Cada una de estas configuraciones de despliegue presenta características distintas, de forma que la elección se debe
+    basar en varios factores. Algunos factores que se deberían considerar para seleccionar una configuración de despliegue
+    deberían ser: la facilidad del mantenimiento (cómo aislar los cambios en una capa de forma que no afecten a otras
+    capas, cómo ha de ser de fácil desplegar actualizaciones), el rendimiento y la escalabilidad (cómo es de fácil añadir
+    recursos de cálculo) y la fiabilidad (qué ocurre cuando un recurso deja de estar disponible).
+</p>
+<p>
+    La selección de una configuración de despliegue limita el número de otras decisiones de la arquitectura en relación con
+    mecanismos arquitectónicos que se deben definir, la posibilidad de concurrencia en la aplicación (consulte la sección
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">Tarea: descripción de la arquitectura de tiempo de ejecución</a> para
+    obtener más información) y la distribución de la aplicación (consulte la sección <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/describe_distribution_9BA1477C.html" guid="{6A112808-0A90-427A-BAB9-E14F3FBF72B5}">Tarea:
+    descripción de la distribución</a> para obtener más información). &nbsp;
+</p>
+<h3>
+    <a id="J2EE_Mechanisms" name="J2EE_Mechanisms"></a>Mecanismos de J2EE
+</h3>
+<p>
+    La sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307">Visión general de Java 2 Platform Enterprise Edition (J2EE)</a> proporciona una serie de
+    mecanismos que dan soporte al desarrollo de sistemas empresariales de varias capas (persistencia, comunicación entre
+    procesos, gestión de transacciones, etc.).&nbsp;Durante el análisis de la arquitectura, el arquitecto de software
+    define las necesidades que hay que construir, frente a lo que la plataforma J2EE proporcionará.
+</p>
+<p>
+    Una gestión efectiva del estado de la aplicación es un aspecto importante del diseño de las aplicaciones distribuidas.
+    Para obtener una visión general sobre algunas de las consideraciones de diseño y de los mecanismos más comunes para la
+    gestión del estado en una aplicación J2EE, consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_state_for_j2ee_applications_C145BCA3.html" guid="7.896195949843941E-306">Directriz: diseño del estado para aplicaciones J2EE</a> para obtener más información.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

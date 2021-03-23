@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Diagrama de secuencia</title>
+<meta content="Guideline" name="uma.type">
+<meta content="sequence_diagram" name="uma.name">
+<meta content="Diagrama de secuencia" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "3.211008403369512E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "3.211008403369512E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "3.211008403369512E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "3.211008403369512E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.211008403369512E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Diagrama de secuencia</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Un diagrama de secuencia es una construcción UML que se utiliza para mostrar la secuencia de interacciones de objetos que realizan el comportamiento de un caso de ejemplo de guión de uso. En esta directriz se describe la notación UML para esta construcción.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Modelo de diseño</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">Análisis de caso de uso</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">Diseño de caso de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="diagrama de secuencia" text="directrices para" name="XE_sequence_diagram__guidelines_for" id="XE_sequence_diagram__guidelines_for" class="index"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">Introducción</a>
+</h3>
+<p>
+    En muchos casos se utiliza un diagrama de secuencia para ilustrar realizaciones de casos de uso (consulte el apartado
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">Producto de trabajo: Realizaciones de casos de uso</a> ), es decir, para
+    mostrar cómo interactúan los objetos para llevar a cabo el comportamiento de todo o parte de un caso de uso . Uno o más
+    diagramas de secuencia pueden ilustrar las interacciones de objetos que llevan a cabo un caso de uso . Una organización
+    típica tiene un diagrama de secuencia para el flujo de sucesos principal y un diagrama de secuencia para cada subflujo
+    independiente del caso de uso .
+</p>
+<p>
+    Los diagramas de secuencia son especialmente importantes para los diseñadores, puesto que aclaran los roles de los
+    objetos de un flujo, proporcionando así la entrada básica para determinar las interfaces y las responsabilidades de las
+    clases.
+</p>
+<p>
+    A diferencia de un diagrama de comunicación, un diagrama de secuencia incluye secuencias cronológicas, pero no incluye
+    relaciones de objetos. Los diagramas de secuencia y los diagramas de comunicación expresan una información similar,
+    pero de modos diferentes. Los diagramas de secuencia muestran la secuencia explícita de mensajes y resultan más
+    adecuados cuando lo importante es visualizar el orden de tiempo de los mensajes. Cuando le interesen las relaciones
+    entre las instancias de una interacción, utilice un diagrama de comunicación. Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/communication_diagram_FFFEA1B5.html" guid="4.5194432001390347E-305">Technique: Communication Diagram</a> para obtener más información.
+</p>
+<h3>
+    <b><a id="Contents" name="Contents">Contenido de los diagramas de secuencia</a></b>
+</h3>
+<p>
+    En los diagramas de secuencia puede tener objetos e instancias de actor, junto con mensajes que describan cómo
+    interactúan. El diagrama describe lo que ocurre en los objetos participantes, en términos de activaciones, y cómo se
+    comunican los objetos enviando mensajes entre sí. Puede realizar un diagrama de secuencia para cada variante del flujo
+    de sucesos del caso de uso .
+</p>
+<p class="picturelarge" align="center">
+    <img height="417" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/seqdiag1.gif" width="672" />
+</p>
+<p class="picturetext">
+    Un diagrama de secuencia que describe parte del flujo de sucesos del caso de uso <b>Colocar llamada local</b> en un
+    conmutador telefónico sencillo.
+</p>
+<h4>
+    <a key="diagrama de secuencia" text="objetos en" name="XE_sequence_diagram__objects_in" id="XE_sequence_diagram__objects_in" class="index"></a><a key="objeto" text="en diagrama de secuencia" name="XE_object__in_sequence_diagram" id="XE_object__in_sequence_diagram" class="index"></a><b><a id="Objects" name="Objects">Objetos</a></b>
+</h4>
+<p>
+    Un objeto se muestra como una línea de guiones vertical denominada la "línea de vida". La línea de vida representa la
+    existencia del objeto en un tiempo concreto. En la cabecera de la línea de vida se dibujo un símbolo de objeto, y
+    muestra el nombre del objeto y su clase subrayada, separados por dos puntos:
+</p>
+<p>
+    objectname : classname
+</p>
+<p>
+    Puede utilizar objetos en diagramas de secuencia de los modos siguientes:
+</p>
+<ul>
+    <li>
+        Una línea de vida puede representar un objeto o su clase. Por lo tanto, puede utilizar una línea de vida para
+        modelar el comportamiento de la clase y del objeto. No obstante, normalmente, una línea de vida representa todos
+        los objetos de una clase determinada.
+    </li>
+    <li>
+        La clase de un objeto puede estar sin especificar. Habitualmente, crea un diagrama de secuencia con objetos primero
+        y especifica sus clases posteriormente.
+    </li>
+    <li>
+        Los objetos pueden no tener nombre, pero debería nombrarlos si desea discriminar diferentes objetos de la misma
+        clase.
+    </li>
+    <li>
+        Varias líneas de vida del mismo diagrama pueden representar objetos diferentes de la misma clase, pero, tal como se
+        ha indicado anteriormente, se debe dar nombre a los objetos, lo que le permite discriminar entre los objetos.
+    </li>
+    <li>
+        Una línea de vida que represente una clase puede existir en paralelo con líneas de vida que representen objetos de
+        dicha clase. El nombre de objeto de la línea de vida que representa la clase se puede establecer en el nombre de la
+        clase.
+    </li>
+</ul>
+<h4>
+    <a id="Actors" name="Actors">Actores</a>
+</h4>
+<p>
+    Normalmente, una instancia de actor se puede representar por la primera línea de vida (situada más a la izquierda) en
+    el diagrama de secuencia, como la parte invocadora de la interacción. Si dispone de varias instancia de actor en el
+    mismo diagrama, intente mantenerlas en las líneas de vida situadas más a la izquierda o más a la derecha.
+</p>
+<h4>
+    <a key="diagrama de secuencia" text="mensajes en" name="XE_sequence_diagram__messages_in" id="XE_sequence_diagram__messages_in" class="index"></a><a key="mensaje" text="en diagrama de secuencia" name="XE_message__in_sequence_diagram" id="XE_message__in_sequence_diagram" class="index"></a><a id="Messages" name="Messages">Mensajes</a>
+</h4>
+<p>
+    Un mensaje es una comunicación entre objetos que transfiere información con la expectativa de que esa actividad se
+    llevará a cabo; en los diagramas de secuencia, un mensaje se muestra como una flecha compacta horizontal de la línea de
+    vida de un objeto a la línea de vida de otro objeto. En el caso de un mensaje del objeto a sí mismo, la flecha puede
+    empezar y finalizar en la misma línea de vida. La flecha está etiquetada con el nombre del mensaje, y sus parámetros.
+    La flecha también puede estar etiquetada con un número de secuencia para mostrar la secuencia del mensaje en la
+    interacción global. Los números de secuencia con frecuencia se omiten en los diagramas de secuencia, en los que la
+    ubicación física de la flecha muestra la secuencia relativa.
+</p>
+<p>
+    Un mensaje puede estar sin asignar, lo que significa que el nombre de una cadera de caracteres temporal que describe el
+    significado global del mensaje, y no el nombre de una operación del objeto receptor. Posteriormente, podrá asignar el
+    mensaje especificando la operación del objeto de destino del mensaje. La operación especificada reemplazará entonces el
+    nombre del mensaje.
+</p>
+<h4>
+    <a key="diagrama de secuencia" text="script en" name="XE_sequence_diagram__script_in" id="XE_sequence_diagram__script_in" class="index"></a><a key="script" text="en diagramas de secuencia" name="XE_script__in_sequence_diagrams" id="XE_script__in_sequence_diagrams" class="index"></a><a id="Scripts" name="Scripts">Scripts</a>
+</h4>
+<p>
+    Los scripts describen textualmente el flujo de sucesos en un diagrama de secuencia.
+</p>
+<p>
+    Debe situar los scripts a la izquierda de las líneas de vida, de modo que se pueda leer el flujo completo de arriba
+    abajo (vea la figura que se muestra más abajo). Puede adjuntar scripts a un mensaje determinado, garantizando así que
+    el script se mueva con el mensaje.
+</p>
+<h3>
+    <a id="Distributing Control" name="Distributing Control">Distribución del flujo de control en los diagramas de
+    secuencia</a>
+</h3>
+<p>
+    El <b>control centralizado</b> de un flujo de sucesos como parte del flujo de sucesos significa que algunos objetos
+    dirigen el flujo enviando y recibiendo mensajes de otros objetos. Estos objetos de control deciden el orden en el que
+    se activan los demás objetos en el caso de uso . La interacción entre el resto de los objetos apenas tiene
+    trascendencia o no existe.
+</p>
+<p class="exampleheading">
+    Ejemplo
+</p>
+<p class="example">
+    En el <b>sistema de máquina de reciclaje</b>, el caso de uso <b>Imprimir informe diario</b>, hace un seguimiento del
+    número y tipo de objetos devueltos, entre otras cosas y escribe el total en un recibo. El objeto de control
+    <b>Generador de informes</b> decide el orden en el que se van a extraer y escribir las sumas.
+</p>
+<p class="picturecenter" align="center">
+    <img height="334" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_seqd3.gif" width="385" />
+</p>
+<p class="picturetext">
+    La estructura de comportamiento del caso de uso <b>Imprimir informe diario</b> se centraliza en el objeto de control
+    <b>Generador de informes</b>.
+</p>
+<p>
+    Este es un ejemplo del comportamiento centralizado. La estructura de control se centraliza, principalmente, debido a
+    que las diferentes fases de subsucesos del flujo de sucesos no dependen entre sí. La ventaja más importante de esta
+    propuesta es que cada objeto no tiene que hacer el seguimiento del total del objeto siguiente. Para cambiar el orden de
+    las fases de subsucesos, sólo debe cambiarlo en el objeto de control. También puede añadir fácilmente otra fase de
+    subsucesos si, por ejemplo, se incluye un nuevo tipo de elemento de retorno. Otra ventaja de esta estructura es que le
+    permite volver a utilizar las distintas fases de subsucesos en otros casos de uso , puesto que el orden del
+    comportamiento no está construido en los objetos.
+</p>
+<p>
+    El <b>control</b> <b>descentralizado</b> surge cuando los objetos participantes se comunican directamente con otro, no
+    a través de uno o más objetos de control.
+</p>
+<p class="exampleheading">
+    Ejemplo
+</p>
+<p class="example">
+    En el caso de uso <b>Enviar carta</b> una persona envía una carta por correo a otro país a través de una oficina de
+    correos. La carta primero se envía al país del destinatario. En el país, la carta se envía a la ciudad específica. En
+    la ciudad, a su vez, se envía la carta al domicilio del destinatario.
+</p>
+<p class="picturelarge" align="center">
+    <img height="310" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_seqd4.gif" width="499" />
+</p>
+<p class="picturetext">
+    La estructura de comportamiento del caso de uso <b>Enviar carta</b> es descentralizada.
+</p>
+<p class="example">
+    El comportamiento del caso de uso es un flujo de sucesos descentralizado. Las fases de subsucesos permanecen unidas. El
+    remitente de la carta se refiere en términos de "enviar una carta a alguien". Ni necesita, ni desea conocer los
+    detalles de cómo se envían las cartas a los países o las ciudades. (Probablemente, si una persona enviara una carta
+    dentro del mismo país, no ocurriría ninguna de estas acciones).
+</p>
+<p>
+    El tipo de control utilizada depende de la aplicación. Por lo general, debe intentar conseguir objetos independientes,
+    es decir, delegar distintas tareas a los objetos que están mejor preparados para llevarlas a cabo.
+</p>
+<p>
+    Un flujo de sucesos control centralizado tiene un diagrama de secuencia en "forma de horquilla". Por otra parte, un
+    diagrama de secuencia "escalonado" ilustra que la estructura de control es descentralizada para los objetos
+    participantes.
+</p>
+<p class="picturecenter" align="center">
+    <img height="399" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_seqd5.gif" width="326" />
+</p>
+<p class="picturetext">
+    Una estructura de control centralizado en un flujo de sucesos produce un diagrama de secuencia en "forma de horquilla".
+    Una estructura de control descentralizado produce un diagrama de secuencia "escalonado".
+</p>
+<p>
+    Con frecuencia, la estructura de comportamiento de una realización de caso de uso consta de una mezcla de
+    comportamiento centralizado y descentralizado.
+</p>
+<p>
+    Una estructura descentralizada es adecuada:
+</p>
+<ul>
+    <li>
+        Si las fases de subsucesos están estrechamente acopladas como, por ejemplo, en caso de que los objetos
+        participantes:. 
+        <ul>
+            <li>
+                Formen una parte o consten de una jerarquía, por ejemplo, País - Estado - Ciudad;
+            </li>
+            <li>
+                Formen una jerarquía de información, por ejemplo, Director general - Gestor de departamento - Gestor de
+                sección;
+            </li>
+            <li>
+                Representen una progresión cronológica fija (la secuencia de fases de subsucesos siempre se lleva a cabo en
+                el mismo orden), por ejemplo Anuncio - Pedido - Factura - Entrega - Pago, o bien
+            </li>
+            <li>
+                Formen una jerarquía de herencia conceptual, por ejemplo, Animal - Mamífero - Gato.
+            </li>
+        </ul>
+    </li>
+    <li>
+        Si desea encapsular y, por consiguiente, hacer abstracciones de la funcionalidad. Resulta adecuado para quienes
+        desean utilizar siempre toda la funcionalidad, puesto que la funcionalidad puede convertirse, innecesariamente, en
+        algo difícil de comprender si la estructura de comportamiento es centralizada.
+    </li>
+</ul>
+<p>
+    Una estructura centralizada es adecuada:
+</p>
+<ul>
+    <li>
+        Si es probable que cambie el orden en el que se llevan a cabo las fases de subsucesos.
+    </li>
+    <li>
+        Si se espera insertar nuevas fases de subsucesos.
+    </li>
+    <li>
+        Si se desea mantener partes de la funcionalidad reutilizables como componentes separados.
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

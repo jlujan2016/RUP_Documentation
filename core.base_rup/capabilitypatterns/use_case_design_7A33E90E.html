@@ -1,0 +1,976 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de tareas: Dise&ntilde;o de caso de uso</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="use_case_design" name="uma.name">
+<meta content="Dise&ntilde;o de caso de uso" name="uma.presentationName">
+<meta content="_mL0YQEocEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="Dise&ntilde;ador">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={002674F9-6511-4D15-8623-B761D8C48986}&path={002674F9-6511-4D15-8623-B761D8C48986},{9C683674-97C1-4AEE-8DB0-9514AEFF698E},_mL0YQEocEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_XSr4YCFtEdqrX8YVzvtlIg", "_RP00kCCdEdq3qtLcbHn6PQ", "_mL0YQEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_J1u8gCGYEdqMcovRzkCQow", "_RP00kCCdEdq3qtLcbHn6PQ", "_mL0YQEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_vllcADIKEdqGgPtrSpB0vQ", "_RP00kCCdEdq3qtLcbHn6PQ", "_mL0YQEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_XSr4YCFtEdqrX8YVzvtlIg", "_RP00kCCdEdq3qtLcbHn6PQ", "_mL0YQEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_J1u8gCGYEdqMcovRzkCQow", "_RP00kCCdEdq3qtLcbHn6PQ", "_mL0YQEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_vllcADIKEdqGgPtrSpB0vQ", "_RP00kCCdEdq3qtLcbHn6PQ", "_mL0YQEocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_XSr4YCFtEdqrX8YVzvtlIg", "_RP00kCCdEdq3qtLcbHn6PQ", "_mL0YQEocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_J1u8gCGYEdqMcovRzkCQow", "_RP00kCCdEdq3qtLcbHn6PQ", "_mL0YQEocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_vllcADIKEdqGgPtrSpB0vQ", "_RP00kCCdEdq3qtLcbHn6PQ", "_mL0YQEocEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_mL0YQEocEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Dise&ntilde;o de caso de uso</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta tarea se define cómo perfeccionar los productos de Análisis de guión de uso desarrollando realizaciones de guión de uso a nivel de diseño.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="guión de uso" text="diseño" name="XE_use_case__design" id="XE_use_case__design" class="index"></a> 
+<ul>
+    <li>
+        Perfeccionar las realizaciones de caso de uso en términos de interacciones
+    </li>
+    <li>
+        Perfeccionar los requisitos en las operaciones de las clases de diseño
+    </li>
+    <li>
+        Perfeccionar los requisitos en las operaciones de los subsistemas de diseño y/o sus interfaces
+    </li>
+    <li class="reactive">
+        Perfeccionar los requisitos en las operaciones de las cápsulas
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Principal:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_designer_FCD65796.html" guid="_CQ1sARi2Edq_uI8xTPML6g">Dise&ntilde;ador</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Adicional:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">Asistencia:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_usecase_3C5CB7B5.html" guid="_lPfDIL9dEdqBwpaAk4N49g">Caso de uso</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_usecase_498EF5E2.html" guid="_me4Ocb9dEdqBwpaAk4N49g">Caso de uso</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_supplementary_specification_BA9F2DDB.html" guid="_CQ1sBxi2Edq_uI8xTPML6g">Especificaciones suplementarias</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_analysis_model_FDB6F428.html" guid="_CQ1sEhi2Edq_uI8xTPML6g">Modelo de an&aacute;lisis</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_7D6F5DFE.html" guid="_CQ7yohi2Edq_uI8xTPML6g">Modelo de dise&ntilde;o</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_7D6F5DFE.html" guid="_CQ7yohi2Edq_uI8xTPML6g">Modelo de dise&ntilde;o</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    <a key="interacción" text="describir interacciones entre los objetos de diseño" name="XE_interaction__describing_interactions_between_design_objects" id="XE_interaction__describing_interactions_between_design_objects" class="index"></a>El comportamiento de un sistema
+    se puede describir utilizando varias técnicas: colaboraciones o interacciones. En esta tarea se describe el uso de
+    interacciones, en concreto, diagramas de secuencia, para describir el comportamiento del sistema. Los diagramas de
+    secuencia son más útiles cuando el comportamiento del sistema o subsistema se puede describir principalmente mediante
+    mensajería síncrona. La mensajería asíncrona, sobre todo en sistemas dirigidos por sucesos, se describe a menudo más
+    fácilmente en términos de máquinas de estado y colaboraciones, lo que ofrece una forma compacta de definir las
+    interacciones posibles entre los objetos. Los mensajes asíncronos juegan un papel importante en los sistemas reactivos
+    o en tiempo real, y se utilizan para la comunicación entre instancias de <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_capsule_FC4A34FD.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">Producto de
+    trabajo: Cápsula</a>.
+</p>
+<h4>
+    &nbsp;Representación UML 1.x
+</h4>
+<p>
+    Puede utilizar una clase de proxy para representar el subsistema en diagramas de secuencia. Esta clase de proxy está
+    contenida en el subsistema y se utiliza para representar el subsistema en diagramas que no dan soporte al uso directo
+    de paquetes y subsistemas como elementos de comportamiento. Utilice la clase de proxy en aquellos casos en los que
+    desee mostrar que un subsistema específico responde a un mensaje. En este caso, puede mostrar los mensajes que se
+    envían desde el proxy del subsistema a otros objetos.
+</p>
+<p>
+    Consulte el apartado <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/supportingmaterials/differences_between_uml_1_x_and_uml_2_0_CA70F2E6.html" guid="4.792914878943572E-306">Diferencias entre UML 1.x y UML 2.0</a> para obtener más información.<br />
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> Crear realizaciones de caso de uso  </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Create Use-Case Realizations" name="Create Use-Case Realizations"></a>
+<p>
+    <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">Producto de trabajo: Realización de caso de uso de diseño</a> ofrece una
+    forma de rastrear hacia atrás el comportamiento en el modelo de diseño hasta el modelo de caso de uso , y organiza
+    colaboraciones en el modelo de diseño alrededor del concepto de caso de uso .
+</p>
+<p>
+    Cree una realización de caso de uso de diseño en el modelo de diseño para cada caso de uso que se va a diseñar. El
+    nombre de la realización de caso de uso de diseño debe ser el mismo que el del caso de uso asociado, y se debe
+    establecer una relación "realiza" desde la realización de caso de uso de análisis con el caso de uso asociado.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Describir interacciones entre objetos de dise&ntilde;o</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Describe Interactions Between Design Objects" name="Describe Interactions Between Design Objects"></a> 
+<p>
+    Para cada realización de caso de uso , debe ilustrar las interacciones entre los objetos de diseño participantes
+    creando uno o más diagramas de secuencia. Las primeras versiones de éstas pueden haberse creado durante <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">Tarea: Análisis de caso de uso</a> .&nbsp; Estas "versiones de análisis"
+    de las realizaciones de caso de uso describen las interacciones entre las <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">clases
+    de análisis</a>.&nbsp; Deben evolucionar para describir las interacciones entre los elementos de diseño.
+</p>
+<p>
+    La actualización de diagramas de secuencia implica los pasos siguientes:
+</p>
+<ul>
+    <li>
+        Identifique cada objeto que participe en el flujo del caso de uso . Para ello se crea una instancia de las clases y
+        los subsistemas de diseño identificados en <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Tarea: Identificar elementos de diseño</a>. En los sistemas en tiempo
+        real, también se identificarán las instancias de cápsula que participan en el flujo del caso de uso .
+    </li>
+    <li>
+        Represente cada objeto participante en un diagrama de secuencia. Cree una línea de vida para cada objeto
+        participante en el diagrama de secuencia. Para representar los subsistemas de diseño, tiene varias opciones: 
+        <ul>
+            <li>
+                Puede mostrar instancias del subsistema en el diagrama de secuencia.
+            </li>
+            <li>
+                Puede utilizar las interfaces realizadas por el subsistema. Esta opción es la preferida en aquellos casos
+                en los que desea mostrar que cualquier elemento de modelo que realiza la misma interfaz se puede utilizar
+                en lugar de la interfaz. Si elige mostrar interfaces en el diagrama de secuencia, tenga en cuenta que
+                deseará garantizar que no se envíen mensajes desde la interfaz a otros objetos. Esto se debe a que las
+                interfaces encapsulan completamente la realización interna de sus operaciones. Por lo tanto, no podemos
+                estar seguros de que todos los elementos de modelo que realizan las interfaces estarán diseñados de la
+                misma forma. Por lo tanto, en los diagramas de secuencia no se deben mostrar los mensajes que se envían
+                desde las interfaces.
+            </li>
+            <li>
+                Puede utilizar el componente para representar el subsistema en diagramas de secuencia. Utilice el
+                componente en aquellos casos en los que desee mostrar que un subsistema específico responde a un mensaje.
+                En este caso, puede mostrar los mensajes que se envían desde el componente a otros objetos.
+            </li>
+        </ul>
+        <p>
+            Tenga en cuenta que estos son diagramas de secuencia a nivel de sistema, que muestran cómo interactúan las
+            instancias de elementos de diseño de nivel superior (normalmente subsistemas e interfaces de subsistema). Los
+            diagramas de secuencia que muestran el diseño interno de los subsistemas se producen de forma independiente,
+            como parte de <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}">Tarea: Diseño de subsistemas</a>.
+        </p>
+    </li>
+    <li>
+        <p>
+            Tenga en cuenta que las interacciones de los objetos activos se describen normalmente utilizando colaboraciones
+            de especificaciones y máquinas de estado. Aquí se utilizarán para mostrar cómo pueden enviar mensajes a los
+            objetos activos los otros elementos del sistema en una realización de caso de uso de mayor tamaño. En una
+            utilización típica, los objetos activos se encapsulan dentro de los subsistemas para ejecutar esta tarea, de
+            forma que la realización de los casos de uso consiste en un conjunto de subsistemas que interactúan. Las
+            interacciones definen las responsabilidades y las interfaces de los subsistemas. Dentro de los subsistemas, los
+            objetos activos representan hebras de ejecución concurrentes. Los subsistemas permiten dividir el trabajo entre
+            los equipos de desarrollo, utilizando las interfaces como contratos formales entre los equipos. En los sistemas
+            en tiempo real, se utilizarán <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_capsule_FC4A34FD.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">Producto de trabajo: Cápsula</a>s para representar los objetos
+            activos.
+        </p>
+        <p>
+            Una nota secundaria sobre cómo mostrar los mensajes que surgen de los subsistemas: la restricción de los
+            mensajes sólo a las interfaces reduce el acoplamiento entre los elementos de modelo y aumenta la elasticidad
+            del diseño. Siempre que sea posible, intente hacerlo de esta forma y, en aquellos casos en los que existan
+            mensajes que emanan de los subsistemas a elementos de modelo que no son interfaces, busque oportunidades de
+            cambiarlos por mensajes a interfaces, para mejorar así el desacoplamiento en el modelo.
+        </p>
+    </li>
+    <li>
+        Represente la interacción que tiene lugar con los actores. Represente cada instancia de actor y cada objeto externo
+        con el que interactúan los objetos participantes mediante una línea de vida en el diagrama de secuencia.
+    </li>
+    <li>
+        Ilustre el envío de mensajes entre los objetos participantes. El flujo de sucesos empieza en la parte superior del
+        diagrama y continúa hacia abajo, indicando un eje cronológico vertical. Ilustre el envío de mensajes entre objetos
+        creando mensajes (flechas) entre las líneas de vida. El nombre del mensaje debe ser el nombre de la operación
+        invocada por el mensaje. En las primeras fases del diseño, no se asignan muchas operaciones a los objetos, por lo
+        que puede que tenga que dejar fuera esta información y dar al mensaje un nombre temporal; estos mensajes se dice
+        que están "desasignados". Posteriormente, cuando encuentre más operaciones de los objetos participantes, deberá
+        actualizar el diagrama de secuencia "asignando" estas operaciones a los mensajes.
+    </li>
+    <li>
+        Describa qué hace un objeto cuando recibe un mensaje. Para ello, adjunte un script al mensaje correspondiente.
+        Coloque estos scripts en el margen del diagrama. Utilice texto estructurado o pseudocódigo. Si utiliza
+        pseudocódigo, asegúrese de utilizar constructos en el lenguaje de implementación, para que la implementación de las
+        operaciones correspondientes sea más sencilla. Cuando la persona responsable de la clase de un objeto asigna y
+        define sus operaciones, los scripts del objeto proporcionarán la base para ese trabajo.
+    </li>
+</ul>
+<p align="center">
+    <img height="417" alt="Diagrama descrito en el texto adjunto."     src="./../../core.base_rup/guidances/guidelines/resources/seqdiag1.gif" width="672" border="0" />
+</p>
+<p class="picturetext">
+    El comportamiento del caso de uso ejecutado por los objetos se documenta en un diagrama de secuencia.
+</p>
+<p>
+    Si tiene el comportamiento distribuido entre los objetos, debe decidir cómo se controlará el flujo. Los objetos se han
+    encontrado suponiendo que interactuarán de cierta forma en la realización del caso de uso y que tienen un determinado
+    rol. Cuando distribuya el comportamiento, puede empezar a probar estas suposiciones. En algunas partes del flujo,
+    deberá utilizar una estructura centralizada; en otras, será preferible una estructura centralizada. Para ver una
+    definición de estas variantes y recomendaciones sobre cuándo utilizar cada tipo de estructura, consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/sequence_diagram_AFA76EBB.html#Distributing Control" guid="3.211008403369512E-306">Técnica: Diagramas de secuencia</a>.
+</p>
+<p>
+    Puede que necesite nuevos objetos en este punto, por ejemplo, si utiliza una estructura centralizada y necesita un
+    nuevo objeto para controlar el flujo. Recuerde que todo objeto que añada al modelo de diseño debe cumplir los
+    requisitos creados en el modelo de objeto.
+</p>
+<h4>
+    <a id="Incorporate Applicable Design Mechanisms" name="Incorporate Applicable Design Mechanisms">Incorporar mecanismos
+    de diseño aplicables</a>
+</h4>
+<p>
+    Durante la <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Tarea: Análisis de la arquitectura</a>, se han identificado mecanismos de
+    análisis.&nbsp; Durante la <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}">Tarea:
+    Identificar los mecanismos de diseño</a>, se han perfeccionado mecanismos de análisis en mecanismos de diseño, se ha
+    capturado la correlación de los mecanismos de análisis con los mecanismos de diseño en el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">Documento de arquitectura de software</a>, y los mecanismos de diseño se
+    han documentado en las <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_project_specific_guidelines_8DC8DA32.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">Directrices específicas del proyecto</a>.&nbsp;&nbsp;
+</p>
+<p>
+    Durante esta tarea, Diseño de caso de uso , todos los mecanismos de diseño aplicables se han incorporado en las
+    realizaciones de los casos de uso .&nbsp; El diseñador encuesta los mecanismos de diseño disponibles y determina cuáles
+    se aplican a la realización de caso de uso que se está desarrollando, según las recomendaciones y las directrices
+    documentadas en el Documento de arquitectura de software y las Directrices específicas del proyecto.&nbsp;&nbsp;<br />
+     <b>Nota:</b> puede que se haya identificado un mecanismo de diseño aplicable en la <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">Tarea: Análisis
+    de caso de uso</a> , durante la que se han "etiquetado" clases de análisis con un determinado mecanismo de análisis, lo
+    que indica que se debe manejar en el diseño una determinada parte de la funcionalidad.&nbsp; En tal caso, los
+    mecanismos de diseño aplicables son aquellos asociados con los mecanismos de análisis con los que se han etiquetado las
+    clases de análisis que participan en la realización del caso de uso .
+</p>
+<p>
+    El diseñador incorpora los mecanismos de diseño aplicables en las realizaciones de caso de uso , e incluye los
+    elementos de diseño necesarios y las interacciones de elementos de diseño en las realizaciones de caso de uso siguiendo
+    las reglas de uso documentadas en las Directrices de diseño.
+</p>
+<h4>
+    <a id="Handle All Variants of the Flow of Events" name="Handle All Variants of the Flow of Events">Manejar todas las
+    variantes del flujo de sucesos</a>
+</h4>
+<p>
+    Debe describir cada variante del flujo en un diagrama de secuencia aparte. Los diagramas de secuencia generalmente son
+    preferibles al diagrama de comunicación, ya que tienden a ser más fáciles de leer cuando el diagrama debe contener el
+    nivel de detalle deseable cuando se diseña el sistema.
+</p>
+<p>
+    Empiece describiendo el flujo básico, que es el flujo de sucesos más común o más importante. A continuación, describa
+    variantes como, por ejemplo, los flujos excepcionales. No es necesario describir todos los flujos de sucesos, siempre
+    que emplee y ejemplifique todas las operaciones de los objetos participantes. A partir de aquí, se pueden omitir los
+    flujos muy triviales como, por ejemplo, aquellos relacionados sólo con un objeto.
+</p>
+<p>
+    Estudie el caso de uso para ver si hay variantes de flujo distintas de las descritas en el análisis y la captura de
+    requisitos como, por ejemplo, aquellas que dependen de la implementación. Cuando identifique nuevos flujos, describa
+    cada uno en un diagrama de secuencia. A continuación se proporcionan ejemplos de flujos excepcionales.
+</p>
+<ul>
+    <li>
+        <b>Manejo de errores</b>. Si una interfaz informa de que se ha producido un error en la comunicación con algún
+        sistema externo, por ejemplo, el caso de uso debe tratar con él. Una solución posible es abrir una nueva ruta de
+        comunicación.
+    </li>
+    <li>
+        <b>Manejo de tiempo de espera</b>. Si el usuario no responde en un determinado periodo, el caso de uso tomará
+        medidas especiales.
+    </li>
+    <li>
+        <b>Manejo de entrada con error en los objetos que participan en el caso de uso</b> . Los errores como este pueden
+        provenir de una entrada incorrecta del usuario.
+    </li>
+</ul>
+<h4>
+    <a id="Handle Optional Parts of the Use Case" name="Handle Optional Parts of the Use Case">Manejar las partes
+    opcionales del caso de uso</a>
+</h4>
+<p>
+    Puede describir una vía de acceso alternativa de un flujo como un flujo opcional, en lugar de como una variante. En la
+    lista siguiente se incluyen dos ejemplos de flujos opcionales.
+</p>
+<ul>
+    <li>
+        Al enviar una señal, el actor decide (entre varias opciones) qué debe hacer el caso de uso a continuación. Por
+        ejemplo, el caso de uso ha solicitado al actor que responda sí o no a una pregunta, o ha proporcionado al actor
+        varias funciones que el sistema puede ejecutar en el estado actual del caso de uso .
+    </li>
+    <li>
+        La vía de acceso del flujo varía según el valor de los atributos o las relaciones que hay almacenados. El siguiente
+        flujo de sucesos depende del tipo de datos que se va a procesar.
+    </li>
+</ul>
+<p>
+    Si desea que un flujo opcional, o un subflujo completo, se perciba especialmente, utilice un diagrama de secuencia
+    aparte. Cada diagrama de secuencia aparte debe referenciarse desde el diagrama de secuencia del flujo de sucesos
+    principal utilizando scripts, texto al margen o notas para indicar dónde se produce el comportamiento de subflujo u
+    opcional.
+</p>
+<p>
+    En aquellos casos en los que el comportamiento de flujo opcional o excepcional se produce en cualquier parte, por
+    ejemplo, el comportamiento que se ejecuta cuando se produce un determinado suceso, el diagrama de secuencia del flujo
+    de sucesos principal se debe anotar para indicar que, cuando se produce el suceso, el comportamiento descrito en el
+    diagrama de secuencia opcional/excepcional se ejecutará. De manera alternativa, si hay un comportamiento significativo
+    dirigido por sucesos, considere el uso de diagramas de gráfico de estados para describir el comportamiento del sistema.
+    Para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/statechart_diagram_640B5D0B.html" guid="1.4528459404144188E-304">Directriz:
+    Diagrama de gráfico de estados</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Simplificar los diagramas de secuencia utilizando subsistemas (opcional) </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Simplify Sequence Diagrams Using Subsystems (optional)" name="Simplify Sequence Diagrams Using Subsystems (optional)"></a> 
+<p>
+    Cuando se realiza un caso de uso , el flujo de sucesos se describe normalmente en términos de los objetos en ejecución,
+    es decir, como una interacción entre objetos de diseño. Para simplificar los diagramas e identificar el comportamiento
+    reutilizable, puede encapsular un subflujo de sucesos dentro de un subsistema. De esta forma, las subsecciones grandes
+    del diagrama de secuencia se sustituyen por un único mensaje al subsistema. Dentro del subsistema, un diagrama de
+    secuencia aparte puede ilustrar las interacciones internas dentro del subsistema que proporcionan el comportamiento
+    necesario (para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}">Tarea: Diseño de
+    subsistemas</a>).
+</p>
+<p>
+    Las subsecuencias de mensajes dentro de los diagramas de secuencia se deben encapsular dentro de un subsistema cuando:
+</p>
+<ul>
+    <li>
+        La subsecuencia se produce repetidamente en realizaciones de casos de uso diferentes; esto es, se envían los mismos
+        mensajes (o parecidos) a los mismos objetos (o parecidos), proporcionando el mismo resultado final. Se especifica
+        'parecidos' porque puede que se deba realizar algún trabajo de diseño para que el comportamiento sea reutilizable.
+    </li>
+    <li>
+        La subsecuencia se produce sólo en una realización de caso de uso , pero se espera que se ejecute repetidamente en
+        futuras iteraciones, o en sistemas parecidos en el futuro. El comportamiento puede ser un buen componente
+        reutilizable.
+    </li>
+    <li>
+        La subsecuencia se produce sólo en una realización de caso de uso , es compleja pero fácilmente encapsulable, debe
+        ser responsabilidad de una persona o un equipo, y proporciona un resultado bien definido. En este tipo de
+        situaciones, el comportamiento complejo normalmente requiere un conocimiento técnico especial, o un conocimiento de
+        dominios especial, y por lo tanto está especialmente indicado para encapsularse en un subsistema.
+    </li>
+    <li>
+        La subsecuencia está determinada para encapsularse en un componente reemplazable (consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/component_A2E2B3B1.html" guid="3.524150980437479E-305">Concepto: Componente</a>). En este caso, un subsistema es la representación adecuada
+        para el componente en el modelo de diseño.
+    </li>
+</ul>
+<p align="center">
+    <img height="121" alt="Diagrama descrito en el texto adjunto." src="./../../core.base_rup/tasks/resources/seqdiag6.gif" width="409" border="0" />
+</p>
+<p class="picturetext">
+    La realización de un caso de uso se puede describir, si es necesario, a varios niveles en la jerarquía de subsistemas.
+    Las líneas de vida en el diagrama medio representan subsistemas; las interacciones en los círculos representan la
+    interacción interna de los miembros del subsistema como respuesta al mensaje.
+</p>
+<p>
+    Las ventajas de este enfoque son:
+</p>
+<ul>
+    <li>
+        Las realizaciones de caso de uso quedan menos desordenadas, especialmente si el diseño interno de algunos
+        subsistemas es complejo.
+    </li>
+    <li>
+        Las realizaciones de caso de uso se pueden crear antes que los diseños internos de los subsistemas; esto es muy
+        útil, por ejemplo, en los entornos de desarrollo paralelos (consulte "<a href="#How to Work in Parallel">Cómo trabajar en paralelo</a>").
+    </li>
+    <li>
+        Las realizaciones de caso de uso son más genéricas y fáciles de modificar, especialmente si se tiene que sustituir
+        un subsistema por otro.
+    </li>
+</ul>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    Considere el siguiente diagrama de secuencia, que forma parte de una realización del caso de uso <b>Llamada local</b>:
+</p>
+<p align="center">
+    <img height="396" alt="Diagrama descrito en el texto adjunto." src="./../../core.base_rup/tasks/resources/seqdiag7.gif" width="729" />
+</p>
+<p class="example">
+    En este diagrama, las clases grises pertenecen a un subsistema Manejo de redes; las otras clases pertenecen a un
+    subsistema Manejo de suscriptores. Esto significa que es un diagrama de secuencia de varios subsistemas, es decir, un
+    diagrama en el que están incluidos todos los objetos que participan en el flujo de sucesos, independientemente de si
+    sus clases están en distintos subsistemas o no.
+</p>
+<p class="example">
+    Como alternativa, podemos mostrar la invocación de comportamiento en el subsistema Manejo de redes, y el ejercicio de
+    una determinada interfaz en ese subsistema. Supongamos que el subsistema Manejo de redes proporciona una interfaz
+    ICoordinator, que es utilizada por el subsistema Manejo de suscriptores.
+</p>
+<p align="center">
+    <img height="100" alt="Diagrama descrito en el texto adjunto." src="./../../core.base_rup/tasks/resources/subs_if.gif" width="425" />
+</p>
+<p class="example">
+    La clase Coordinador dentro de Manejo de redes realiza la interfaz ICoordinator. Según esto, podemos utilizar el propio
+    subsistema Manejo de redes y la interfaz ICoordinator en el diagrama de secuencia, en lugar de instancias de clases
+    dentro de Manejo de redes.
+</p>
+<p align="center">
+    <img height="417" alt="Diagrama descrito en el texto adjunto."     src="./../../core.base_rup/guidances/guidelines/resources/seqdiag1.gif" width="672" />
+</p>
+<p class="example">
+    Tenga en cuenta que las instancias de clase Coordinador, Información de dígitos y Red se sustituyen por el subsistema
+    que las contienen. Todas las llamadas al subsistema se realizan en su lugar a través de la interfaz ICoordinator.
+</p>
+<h4>
+    Mostrar interfaces en líneas de vida
+</h4>
+<p>
+    Para poder conseguir una auténtica capacidad de sustitución de subsistemas que realizan la misma interfaz, sólo debe
+    estar visible su interfaz en las interacciones (y en los diagramas en general); de lo contrario, las interacciones (o
+    diagramas) se tienen que modificar cuando se sustituyen los subsistemas por otros.
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example" align="left">
+    Podemos incluir sólo la interfaz ICoordinator, pero no el subsistema que la proporciona, en un diagrama de secuencia:
+</p>
+<p align="center">
+    <img height="309" alt="Diagrama descrito en el texto adjunto." src="./../../core.base_rup/tasks/resources/seqdiag2.gif" width="519" />
+</p>
+<p class="example">
+    El envío de un mensaje a una línea de vida de interfaz significa que cualquier subsistema que realiza la interfaz se
+    puede sustituir por la interfaz en el diagrama. Tenga en cuenta que la línea de vida de la interfaz ICoordinator no
+    tiene mensajes salientes, ya que distintos subsistemas que realizan la interfaz pueden enviar distintos mensajes. No
+    obstante, si desea describir qué mensajes se deben enviar (o están permitidos para su envío) desde cualquier subsistema
+    que realice la interfaz, dichos mensajes pueden salir de la línea de vida de la interfaz.
+</p>
+<h4>
+    <a id="How to Work in Parallel" name="How to Work in Parallel">Cómo trabajar en paralelo</a>
+</h4>
+<p>
+    En algunos casos, puede ser adecuado desarrollar un subsistema de forma más o menos independiente y en paralelo con el
+    desarrollo de otros subsistemas. Para ello, debemos encontrar primero dependencias de subsistemas identificando las
+    interfaces entre ellos.
+</p>
+<p>
+    El trabajo se puede hacer de la siguiente manera:
+</p>
+<ol>
+    <li>
+        Concéntrese en los requisitos que afectan a las interfaces entre los subsistemas.
+    </li>
+    <li>
+        Realice esquemas de las interfaces necesarias, mostrando los mensajes que van a pasar los límites del subsistema.
+    </li>
+    <li>
+        Dibuje diagramas de secuencia en términos de subsistemas para cada caso de uso .
+    </li>
+    <li>
+        Perfeccione las interfaces necesarias para proporcionar mensajes.
+    </li>
+    <li>
+        Desarrolle cada subsistema en paralelo y utilice las interfaces como instrumentos de sincronización entre equipos
+        de desarrollo.
+    </li>
+</ol>
+<p>
+    También puede elegir si desea organizar los diagramas de secuencia en términos de subsistemas o sólo en términos de sus
+    interfaces. En algunos proyectos, incluso deberá implementar las clases proporcionando las interfaces para poder
+    continuar con el resto del modelado.<br />
+    <br />
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Describir el comportamiento relacionado con la persistencia</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="objeto persistente" text="describir" name="XE_persistent_object__describing" id="XE_persistent_object__describing" class="index"></a><a id="Describe Persistence-Related Behavior" name="Describe Persistence-Related Behavior"></a> 
+<p>
+    El objetivo global del paradigma orientado a los objetos es <b>encapsular</b> los detalles de implementación. Por lo
+    tanto, en cuanto a la persistencia, nos interesa que el objeto persistente <b>parezca</b> un objeto transitorio. No
+    deseamos notar que el objeto es persistente, ni tratarlo de forma diferente a como lo haríamos con cualquier otro
+    objeto. Al menos, ese es el objetivo.
+</p>
+<p>
+    En la práctica, habrá veces en las que la aplicación necesitará controlar varios aspectos de la persistencia:
+</p>
+<ul>
+    <li>
+        cuándo se leen y se escriben los objetos persistentes
+    </li>
+    <li>
+        cuándo se suprimen los objetos persistentes
+    </li>
+    <li>
+        cómo se gestionan las transacciones
+    </li>
+    <li>
+        cómo se consigue el control de concurrencia y el bloqueo
+    </li>
+</ul>
+<h4>
+    <a id="Writing Persistent Objects" name="Writing Persistent Objects">Escribir objetos persistentes</a>
+</h4>
+<p>
+    Se deben tener en cuenta dos casos: la primera vez que se escribe el objeto en el almacén de objetos persistentes, y
+    las siguientes veces cuando la aplicación desea actualizar el almacén de objetos persistentes con un cambio en el
+    objeto.
+</p>
+<p>
+    En ambos casos, el mecanismo específico depende de las operaciones soportadas por la infraestructura de persistencia.
+    Normalmente, el mecanismo utilizado es enviar un mensaje a la infraestructura de persistencia para crear el objeto
+    persistente. Una vez el objeto es persistente, la infraestructura de persistencia es lo suficientemente inteligente
+    para detectar los cambios posteriores en el objeto persistente y escribirlos en el almacén de objetos persistentes
+    cuando sea necesario (normalmente, cuando se compromete una transacción).
+</p>
+<p>
+    A continuación se muestra un ejemplo de un objeto persistente que se está creando:
+</p>
+<p align="center">
+    <img height="230" alt="Diagrama descrito en el texto adjunto." src="./../../core.base_rup/tasks/resources/vbos1.gif" width="325" />
+</p>
+<p class="picturetext" align="center">
+    El objeto PersistenceMgr es una instancia de VBOS, una infraestructura de persistencia. OrderCoordinator crea un Pedido
+    persistente, al enviarlo como argumento de un mensaje 'createPersistentObject' a PersistenceMgr.
+</p>
+<p>
+    <b>Generalmente</b> no es necesario modelarlo explícitamente, a menos que sea importante saber que el objeto se está
+    almacenando de forma explícita en un determinado punto en la secuencia de sucesos. Si las posteriores operaciones
+    necesitan consultar el objeto, el objeto debe existir en la base de datos y, por lo tanto, es importante saber que el
+    objeto se encuentra en ella.
+</p>
+<h4>
+    <a id="Reading Persistent Objects" name="Reading Persistent Objects">Leer objetos persistentes</a>
+</h4>
+<p>
+    La recuperación de objetos del almacén de objetos persistentes es necesaria para que la aplicación pueda enviar
+    mensajes a esos objetos. Recuerde que el trabajo en un sistema orientado a los objetos se realiza enviando mensajes a
+    los objetos. No obstante, si el objeto al que desea enviar un mensaje está en la base de datos pero no en la memoria,
+    tiene un problema: no puede enviar un mensaje a algo que no existe todavía.
+</p>
+<p>
+    En resumen, necesita enviar un mensaje a un objeto que sabe cómo consultar la base de datos, recuperar el objeto
+    correcto y crear una instancia para él. A continuación, y sólo entonces, puede enviar el mensaje original que deseaba
+    enviar. El objeto que crea una instancia de un objeto persistente se denomina a veces objeto de <i>fábrica</i>. Un
+    objeto de <b>fábrica</b> es responsable de crear instancias de objetos, incluidos los objetos persistentes. Dada una
+    consulta, la <b>fábrica</b> se puede diseñar para devolver un conjunto de uno o varios objetos que coincidan con la
+    consulta.
+</p>
+<p>
+    En general, los objetos están ampliamente conectados entre ellos mediante asociaciones, por lo que sólo será necesario
+    recuperar el objeto <b>raíz</b> en un gráfico de objetos; el resto se 'extraen' de forma transparente de la base de
+    datos mediante sus asociaciones con el objeto raíz. (Un buen mecanismo de persistencia tiene esto en cuenta: sólo
+    recupera los objetos cuando son necesarios; de lo contrario, terminaríamos creando instancias de un gran número de
+    objetos de forma innecesaria. La recuperación de objetos antes de que sean necesarios es uno de los principales
+    problemas de rendimiento provocados por mecanismos de persistencia simplistas).
+</p>
+<p>
+    En el siguiente ejemplo se muestra cómo se puede modelar la recuperación de objetos desde el almacén de objetos
+    persistentes. En un diagrama de secuencia real, no se mostrará el DBMS, ya que estará encapsulado en el objeto de
+    <b>fábrica</b>.
+</p>
+<p align="center">
+    <img height="297" alt="Diagrama descrito en el texto adjunto." src="./../../core.base_rup/tasks/resources/retriev.gif" width="489" />
+</p>
+<h4>
+    <a id="Deleting Persistent Objects" name="Deleting Persistent Objects">Suprimir objetos persistentes</a>
+</h4>
+<p>
+    El problema con los objetos persistentes es precisamente que persisten. A diferencia de los objetos transitorios, que
+    simplemente desaparecen cuando termina el proceso que los ha creado, los objetos persistentes existen hasta que se
+    suprimen de forma explícita. Por lo tanto, es importante suprimir el objeto cuando ya no se esté utilizando.
+</p>
+<p>
+    El problema es que esto es difícil de determinar. Que una aplicación haya terminado con un objeto no significa que
+    todas las aplicaciones, actuales y futuras, hayan terminado con él. Asimismo, como los objetos puedan tener y tienen
+    asociaciones que incluso ellos no conocen, no siempre es fácil determinar si es correcto suprimir un objeto.
+</p>
+<p>
+    En diseño, esto se puede representar semánticamente utilizando <b>diagramas de estado</b>: cuando el objeto alcanza el
+    estado <b>fin</b>, se puede decir que está <b>liberado</b>. A continuación, los desarrolladores responsables de
+    implementar las clases persistentes pueden utilizar la información del diagrama de estado para invocar el
+    comportamiento del mecanismo de persistencia adecuado para liberar el objeto. La responsabilidad del diseñador de la
+    realización del caso de uso es invocar las operaciones adecuadas para que el objeto alcance el estado <b>fin</b> cuando
+    sea correcto suprimir el objeto.
+</p>
+<p>
+    Si un objeto está ampliamente conectado a otros objetos, será difícil determinar si el objeto se puede suprimir. Como
+    un objeto de <b>fábrica</b> conoce la estructura del objeto así como los objetos con los que está conectado, a menudo
+    es útil cargar el objeto de fábrica para una clase con la responsabilidad de determinar si se puede suprimir una
+    determinada instancia. La infraestructura de persistencia también puede dar soporte a esta capacidad.
+</p>
+<h4>
+    <a id="Modeling Transactions" name="Modeling Transactions">Modelar transacciones</a>
+</h4>
+<p>
+    Las transacciones definen un conjunto de invocaciones de operaciones que son <b>atómicas</b>; o se ejecutan todas, o no
+    se ejecuta ninguna. En el contexto de la persistencia, una transacción define un conjunto de cambios en un conjunto de
+    objetos que, o se ejecutan todos, o no se ejecuta ninguno. Las transacciones proporcionan coherencia y garantizan que
+    los conjuntos de objetos pasan de un estado coherente a otro.
+</p>
+<p>
+    Existen varias opciones para mostrar las transacciones en las realizaciones de caso de uso :
+</p>
+<ul>
+    <li>
+        <b>Textualmente</b>. Utilizando scripts en el margen del diagrama de secuencia, se pueden documentar los límites de
+        transacción, tal como se muestra a continuación. Este método es sencillo y permite utilizar un número cualquiera de
+        mecanismos para implementar la transacción.
+    </li>
+</ul>
+<p align="center">
+    <img height="466" alt="Diagrama descrito en el texto adjunto." src="./../../core.base_rup/tasks/resources/txn1.gif" width="496" />
+</p>
+<p class="picturetext">
+    Representación de límites de transacción utilizando anotaciones textuales.
+</p>
+<ul>
+    <li>
+        <b>Utilizando mensajes explícitos</b>. Si el mecanismo de gestión de transacciones que se está utilizando utiliza
+        mensajes explícitos para empezar y finalizar las transacciones, estos mensajes se pueden visualizar explícitamente
+        en el diagrama de secuencia, tal como se muestra a continuación:
+    </li>
+</ul>
+<p align="center">
+    <img height="575" alt="Diagrama descrito en el texto adjunto." src="./../../core.base_rup/tasks/resources/txn2.gif" width="558" />
+</p>
+<p class="picturetext">
+    Un diagrama de secuencia que muestra mensajes explícitos para iniciar y detener transacciones.
+</p>
+<h4>
+    <a id="Handling Error Conditions" name="Handling Error Conditions"></a>Manejar condiciones de error
+</h4>
+<p>
+    Si no se pueden ejecutar todas las operaciones especificadas en una transacción (normalmente porque se ha producido un
+    error), la transacción <b>termina anormalmente</b> y se invierten todos los cambios realizados durante la misma. Las
+    condiciones de error anticipadas representan a menudo flujos excepcionales de sucesos en los casos de uso . En otros
+    casos, se producen condiciones de error debido a alguna anomalía del sistema. Las condiciones de error se deben
+    documentar también en las interacciones. Los errores y las excepciones simples se pueden mostrar en la interacción
+    donde se producen; los errores y las excepciones más complejos pueden necesitar sus propias interacciones.
+</p>
+<p>
+    Las modalidades de anomalía de objetos específicos se pueden mostrar en gráficos de estado. El manejo del flujo de
+    control condicional de estas modalidades de anomalía se puede mostrar en la interacción en la que se produce el error o
+    la excepción.
+</p>
+<h4>
+    <a id="Handling Concurrency Control" name="Handling Concurrency Control">Manejo del control de concurrencia</a>
+</h4>
+<p>
+    La concurrencia describe el control del acceso a recursos críticos del sistema en el curso de una transacción. Para
+    mantener el sistema en un estado coherente, la transacción necesitará acceso exclusivo a determinados recursos clave
+    del sistema. Esta exclusividad puede incluir la capacidad de leer un conjunto de objetos, escribir un conjunto de
+    objetos, o ambos.
+</p>
+<p>
+    Observemos un ejemplo sencillo de por qué puede ser necesario restringir el acceso a un conjunto de objetos. Supongamos
+    que estamos ejecutando un sistema de entrada de pedido sencillo. Las personas llaman para hacer pedidos y nosotros los
+    procesamos y los enviamos. Podemos ver el pedido como un tipo de transacción.
+</p>
+<p>
+    Para ilustrar la necesidad del control de concurrencia, supongamos que hago una llamada para solicitar un nuevo par de
+    botas de montaña. Cuando el pedido entra en el sistema, comprueba si las botas que deseo están en el inventario en la
+    talla correcta. Si lo están, deseamos <b>reservar</b> ese par, para que nadie más pueda comprarlas antes de que se
+    envíe el pedido. Una vez enviado el envío, las botas se eliminan del inventario.
+</p>
+<p>
+    Durante el periodo entre la realización y el envío del pedido, las botas están en un estado especial& están en el
+    inventario, pero están "comprometidas" a mi pedido. Si mi pedido se cancela por algún motivo (cambio de opinión, o mi
+    tarjeta de crédito ha caducado), las botas se devuelven al inventario. Una vez enviado el pedido, se supone que la
+    pequeña empresa no desea mantener un registro de que una vez tuvo las botas.
+</p>
+<p>
+    El objetivo de la concurrencia, como en las transacciones, es garantizar que el sistema cambia de un estado coherente a
+    otro. Asimismo, la concurrencia intenta garantizar que una transacción tenga todos los recursos que necesita para
+    completar su trabajo. El control de concurrencia se puede implementar de varias formas, por ejemplo, mediante el
+    bloqueo de recursos, los semáforos, los cierres de memoria compartida y los espacios de trabajo privados.
+</p>
+<p>
+    En un sistema orientado a los objetos, es difícil determinar sólo a partir de los patrones de mensajes si un
+    determinado mensaje puede provocar un cambio de estado en un objeto. Asimismo, implementaciones diferentes pueden
+    obviar la necesidad de restringir el acceso a determinados tipos de recursos; por ejemplo, algunas implementaciones
+    proporcionan a cada transacción su propia vista del estado del sistema al principio de la transacción. En este caso,
+    otros procesos pueden cambiar el estado de un objeto sin afectar a la 'vista' de las demás transacciones en ejecución.
+</p>
+<p>
+    Para evitar la restricción de la implementación, en diseño sólo deseamos indicar los recursos a los que la transacción
+    debe tener acceso exclusivo. Utilizando el ejemplo anterior, deseamos indicar que necesitamos acceso exclusivo a las
+    botas que hemos solicitado. Una alternativa sencilla es anotar la descripción del mensaje que se está enviando,
+    indicando que la aplicación necesita acceso exclusivo al objeto. A continuación, el implementador puede utilizar esta
+    información para determinar cómo implementar mejor el requisito de concurrencia. A continuación se muestra un diagrama
+    de secuencia de ejemplo donde se muestra la anotación de qué mensajes requiere acceso exclusivo. Se supone que se
+    liberan todos los bloqueos cuando finaliza la transacción.
+</p>
+<p align="center">
+    <img height="569" alt="Diagrama descrito en el texto adjunto." src="./../../core.base_rup/tasks/resources/locking.gif" width="630" />
+</p>
+<p class="picturetext">
+    Un ejemplo donde se muestra el control de acceso anotado en un diagrama de secuencia.
+</p>
+<p>
+    El motivo de no restringir el acceso a todos los objetos necesarios en una transacción es que a menudo sólo unos pocos
+    deben tener restricciones de acceso; si se restringe el acceso a todos los objetos que participan en una transacción,
+    se pierden recursos valiosos y se pueden crear cuellos de botella de rendimiento, en lugar de impedirlos.<br />
+    <br />
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Perfeccionar la descripci&oacute;n del flujo de sucesos</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Refine the Flow of Events Description" name="Refine the Flow of Events Description"></a> 
+<p>
+    En el flujo de sucesos de la realización de casos de uso , deberá añadir una descripción adicional de los diagramas de
+    secuencia en aquellos casos en los que el flujo de sucesos no esté totalmente claro al examinar los mensajes enviados
+    entre los objetos participantes. Algunos ejemplos incluyen los casos en los que se necesitan anotaciones de tiempo,
+    notas sobre el comportamiento condicional o una aclaración del comportamiento de las operaciones para facilitar la
+    lectura de los diagramas a los observadores externos.
+</p>
+<p>
+    El flujo de sucesos se describe inicialmente en <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">Tarea: Análisis
+    de caso de uso</a> . En este paso, se perfecciona el flujo de sucesos, según sea necesario para aclarar los diagramas
+    de secuencia.
+</p>
+<p>
+    A menudo, el nombre de la operación no es suficiente para entender por qué se está ejecutando la operación. Se
+    necesitarán notas textuales o scripts al margen del diagrama para aclarar el diagrama de secuencia. También se pueden
+    necesitar notas textuales y scripts para representar el flujo de control como, por ejemplo, los pasos de decisiones,
+    los bucles y las ramificaciones. Asimismo, se necesitarán etiquetas textuales para correlacionar los puntos de
+    extensión en el caso de uso con ubicaciones específicas en los diagramas de secuencia.
+</p>
+<p>
+    En los ejemplos anteriores de esta tarea se han mostrado varias formas de anotar diagramas de secuencia.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Unificar los subsistemas y las clases de dise&ntilde;o</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="subsistema de diseño" text="unificar" name="XE_design_subsystem__unifying" id="XE_design_subsystem__unifying" class="index"></a><a id="Unify Classes and Subsystems" name="Unify Classes and Subsystems"></a>
+<p>
+    A medida que se realizan los casos de uso , debe unificar las clases y los subsistemas de diseño identificados para
+    garantizar la homogeneidad y la coherencia en el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Modelo de
+    diseño</a>.
+</p>
+<p>
+    Debe tener en cuenta los siguientes puntos:
+</p>
+<ul>
+    <li>
+        Los nombres de los elementos de modelo deben describir su función.
+    </li>
+    <li>
+        Evite los nombres parecidos y los sinónimos, ya que dificultan la distinción entre los elementos de modelo.
+    </li>
+    <li>
+        Fusione los elementos de modelo que definan un comportamiento parecido o que representen el mismo fenómeno.
+    </li>
+    <li>
+        Fusione las clases de entidad que representen el mismo concepto o que tengan los mismos atributos, aunque su
+        comportamiento definido sea diferente.
+    </li>
+    <li>
+        Utilice la herencia para abstraer los elementos de modelo, lo que tiende a fortalecer el modelo.
+    </li>
+    <li>
+        Cuando actualice un elemento de modelo, actualice también la descripción de flujo de sucesos correspondiente de las
+        realizaciones de casos de uso .<br />
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Evaluar los resultados</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Evaluate Your Results" name="Evaluate Your Results"></a> 
+<p>
+    Debe comprobar el modelo de diseño en esta fase para verificar que el trabajo sigue la dirección correcta. No es
+    necesario revisar el modelo en detalle, pero debe tener en cuenta el <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/checklists/design_model_18BE347C.html" guid="1.4639852935143625E-305">Modelo de diseño</a>
+    mientras trabaja en él.
+</p>
+<p>
+    Consulte especialmente <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/checklists/use-case_realization_444C8317.html" guid="9.828360528787822E-305">Realización de
+    casos de uso</a> en <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/review_the_design_34CB80A9.html" guid="{9574768B-7886-40C9-9938-A7E36E9B0739}">Tarea: Revisar el diseño</a>.
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Varias apariciones" abbr="Varias apariciones">Varias apariciones</th><td align="left" class="sectionTableCell" headers="property_Varias apariciones"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Condicionado por sucesos" abbr="Condicionado por sucesos">Condicionado por sucesos</th><td align="left" class="sectionTableCell" headers="property_Condicionado por sucesos"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Continuo" abbr="Continuo">Continuo</th><td align="left" class="sectionTableCell" headers="property_Continuo"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Se puede repetir" abbr="Se puede repetir">Se puede repetir</th><td align="left" class="sectionTableCell" headers="property_Se puede repetir"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Listas de comprobaci&oacute;n</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/checklists/use-case_realization_444C8317.html" guid="9.828360528787822E-305">Ejecución de casos de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/use-case_realization_C690D81F.html" guid="1.6790343052744206E-305">Ejecución de casos de uso</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/sequence_diagram_AFA76EBB.html" guid="3.211008403369512E-306">Diagrama de secuencia</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/statechart_diagram_640B5D0B.html" guid="1.4528459404144188E-304">Diagrama de gráfico de estados</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/create_use_case_realization_1212EF9.html" guid="{AAB8D0D6-C666-4F4D-9D26-2AF026558A4C}">Creación de ejecuciones de guiones de uso utilizando Rational Rose</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/designing_use_cases_11581AAA.html" guid="{89CA76CF-37A6-4590-B9B5-90942D2B50E8}">Diseño de guiones de uso utilizando Rational XDE Developer</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_collaboration_diagram_42655C1D.html" guid="{49ACA284-8922-4308-BEA7-2EDE22B77AA2}">Gestión de diagramas de colaboración utilizando Rational Rose</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_sequence_diagrams_C11A1E78.html" guid="{70C1E98C-D6AC-4278-8554-1E000AF5A57D}">Gestión de diagramas de secuencia utilizando Rational Rose</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_design_model_1D45D75E.html" guid="{BD1DD906-031C-4D8C-8078-87B6869A8C14}">Gestión del modelo de diseño utilizando Rational Rose</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/toolmentors/designing_use_cases_using_rsa_ext_77B50154.html" guid="_zBVoEK4HEdqFg48R_ivTjA">Diseño de guiones de uso mediante la plataforma de desarrollo de software Rational</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/toolmentors/designing_use_cases_using_rsd_C4C833CF.html" guid="_uCUwYK4HEdqFg48R_ivTjA">Diseño de guiones de uso utilizando Rational Systems Developer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concepto: Fragmentos para simulaci&oacute;n</title>
+<meta content="Concept" name="uma.type">
+<meta content="stubs" name="uma.name">
+<meta content="Fragmentos para simulaci&oacute;n" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_OKm3oN7UEdmjRZts2c4ZjQ", "{6EF8936C-371E-4B2D-B172-0AF461980480}", "6.347489919609074E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "6.347489919609074E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="6.347489919609074E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concepto: Fragmentos para simulaci&oacute;n</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se describe cómo crear un fragmento para simulación que se pueda utilizar como marcador de posición para componentes que todavía hay que desarrollar. Un fragmento para simulación es un componente que, en realidad, lo único que hace es declararse a sí mismo y a los parámetros de acepta. El fragmento para simulación contiene el código suficiente para poder ser compilado y enlazado con el resto de los componentes.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_stub_5B2BA807.html" guid="{6EF8936C-371E-4B2D-B172-0AF461980480}">Prueba de fragmento para simulación</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="fragmentos" text="concepto de" name="XE_stubs__concept_of" id="XE_stubs__concept_of" class="index"></a><a id="XE_test__stubs__concept_of" name="XE_test__stubs__concept_of" class="index" key="test" text="concept of"></a><a id="XE_test__developer_testing__stubs__concept_of" name="XE_test__developer_testing__stubs__concept_of" class="index" key="test" text="concept of"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">Introducción</a>
+</h3>
+<p>
+    Los componentes se prueban mediante el envío de entradas a la interfaz, hay que esperar a que el componente las procese
+    y, a continuación, comprobar los resultados. En el curso de este proceso, es muy probable que un componente utilice
+    otros componentes enviándole entradas y utilizando sus resultados.
+</p>
+<p align="center">
+    <img height="283" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/concepts/resources/co_stubs-img1.gif" width="356" />
+</p>
+<p class="picturetext">
+    Figura 1: Prueba de un componente que implementó
+</p>
+<p>
+    Los otros componentes pueden causar problemas a la prueba:
+</p>
+<ol>
+    <li>
+        Puede que todavía no se hayan implementado.
+    </li>
+    <li>
+        Puede que tengan defectos que impidan que las pruebas funcionen o que le hagan perder mucho tiempo para descubrir
+        que el error de la prueba no lo causó su componente.
+    </li>
+    <li>
+        Dificultan la ejecución de pruebas cuando debe ejecutarlas. Si un componente es una base de datos comercial, es
+        posible que su empresa no tengan las suficientes licencias flotantes para todo el mundo. También es posible que uno
+        de los componentes sea hardware y sólo esté disponible en horas planificadas en un laboratorio diferente.
+    </li>
+    <li>
+        Pueden ralentizar tanto el proceso de prueba que las pruebas no se ejecuten con la frecuencia necesaria. Por
+        ejemplo, inicializar la base de datos puede tardar cinco minutos en cada prueba.
+    </li>
+    <li>
+        Puede ser difícil conseguir que los componentes produzcan ciertos resultados. Por ejemplo, que todos los métodos
+        que escriben en el disco manejen los errores de "disco lleno". ¿Cómo puede asegurarse de que el disco se llena
+        justo en el momento en que se invoca el método?
+    </li>
+</ol>
+<p>
+    Para evitar estos problemas, puede decidir utilizar componentes <b>fragmento para simulación</b> (también llamados
+    <b>objetos de simulacro</b>). Los componentes de fragmento para simulación se comportan como componentes reales, por lo
+    menos en cuanto a los valores que les envía el componente mientras responde a las pruebas. Estos componentes pueden ir
+    todavía más allá: pueden ser <b>emuladores</b> generales que pretenden imitar fielmente la mayoría o todos los
+    comportamientos del componente. Por ejemplo, suele ser una buena estrategia construir emuladores de software para
+    hardware. Los emuladores se comportan igual que el hardware, pero son más lentos. Son útiles porque soportan una mejor
+    depuración, hay más copias disponibles y se pueden utilizar antes de que termine el hardware.
+</p>
+<p align="center">
+    <img height="283" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/concepts/resources/co_stubs-img2.gif" width="356" />
+</p>
+<p class="picturetext">
+    Figura 2: Prueba de un componente que implementó apagando un componente del que depende
+</p>
+<p>
+    Los fragmentos para simulación tienen dos desventajas.
+</p>
+<ol>
+    <li>
+        Su compilación puede ser cara. (Sobre todo, en el caso de los emuladores). Son componentes de software, por lo que
+        también necesitan mantenimiento.
+    </li>
+    <li>
+        Pueden ocultar errores. Por ejemplo, suponga que el componente utiliza funciones trigonométricas, pero todavía no
+        hay ninguna biblioteca disponible. Los tres guiones de prueba solicitan el seno de tres ángulos: 10 grados, 45
+        grados y 90 grados. Utilice la calculadora para obtener los valores correctos y, después, construya un fragmento
+        para simulación para el seno que devuelva, respectivamente, 0,173648178, 0,707106781 y 1,0. Todo es correcto hasta
+        que integra el componente con la biblioteca trigonométrica real, cuya función del seno toma los argumentos en
+        <i>radianes</i> y, por lo tanto, devuelve -0,544021111, 0,850903525 y 0,893996664. Éste es un defecto de código que
+        se descubre más tarde y con más esfuerzo de lo que sería deseable.
+    </li>
+</ol>
+<h3>
+    <a id="SoftwareDesignwithStubs" name="SoftwareDesignwithStubs">Prácticas de diseño de software y fragmentos para
+    simulación</a>
+</h3>
+<p>
+    A no ser que los fragmentos para simulación se hayan construido porque el componente real todavía no estaba disponible,
+    lo normal es retenerlos hasta después del despliegue. Es probable que las pruebas a las que dan soporte sean
+    importantes durante el mantenimiento del producto. Por lo tanto, los fragmentos para simulación deben escribirse con
+    estándares superiores al código desechable. No es necesario que los fragmentos para simulación cumplan los estándares
+    de código del producto (por ejemplo, la mayoría no necesitan un conjunto de aplicaciones de prueba propio), pero
+    después los desarrolladores tendrán que mantenerlos como componentes del cambio de producto. Si este mantenimiento es
+    demasiado difícil, los fragmentos para simulación se rechazarán y se perderá la inversión realizada en ellos.
+</p>
+<p>
+    Los componentes, sobre todo cuando hay que retenerlos, alteran el diseño de componentes. Por ejemplo, suponga que el
+    componente va a utilizar una base de datos para almacenar pares clave/valor de forma permanente. Considere dos casos de
+    ejemplo de diseño:
+</p>
+<p>
+    <b>Caso de ejemplo 1: La base de datos se utiliza para las pruebas y para su función normal</b>. No es necesario
+    ocultar al componente la existencia de la base de datos. Puede inicializarlo con el nombre de la base de datos:
+</p>
+<p>
+    <!--webbot bot="HTMLMarkup" startspan -->
+</p>
+<pre>
+ public Component(<b>
+<font color="#ff0000">
+String databaseURL</font></b>) { try {     databaseConnection =         DriverManager.getConnection(databaseURL);     ... } catch (SQLException e) {...}     }
+</pre>
+<!--webbot bot="HTMLMarkup" endspan --><br />
+Aunque no desease que todas las ubicaciones que leyeron o escribieron un valor construyan una sentencia SQL, seguro que ha
+tenido varios métodos que contienen SQL. Por ejemplo, el código del componente que necesite un valor puede invocar este
+método del componente: <br />
+<!--webbot bot="HTMLMarkup" startspan -->
+<pre>
+ public String get(String key) { try {     Statement stmt =       databaseConnection.createStatement();     ResultSet rs = stmt.executeQuery(       <b>
+<font color="#ff0000">
+"SELECT value FROM Table1 WHERE key=" + key</font></b>);     ... } catch (SQLException e) {...}     }
+</pre>
+<!--webbot bot="HTMLMarkup" endspan --><br />
+<b>Caso de ejemplo 2: En la prueba, la base de datos se sustituye por un fragmento para simulación.</b> El código del
+componente debería tener el mismo aspecto independientemente de si se está ejecutando en la base de datos real o en el
+fragmento para simulación; por lo debe codificarse para que utilice métodos de una interfaz abstracta: <br />
+<!--webbot bot="HTMLMarkup" startspan -->
+<pre>
+ <b>
+<font color="#ff0000">
+interface KeyValuePairs</font></b> { String <b>
+<font color="#ff0000">
+get</font></b>(String key); void <b>
+<font color="#ff0000">
+put</font></b>(String key, String value);     }
+</pre>
+<!--webbot bot="HTMLMarkup" endspan --><br />
+Las pruebas implementan <b>KeyValuePairs</b> con algo simple, como una tabla hash: <br />
+<!--webbot bot="HTMLMarkup" startspan -->
+<pre>
+ <b>
+<font color="#ff0000">
+class FakeDatabase implements KeyValuePairs</font></b>  { Hashtable table = new Hashtable(); public String <b>
+<font color="#ff0000">
+get</font></b>(String key) {     return (String) table.get(key); } public void <b>
+<font color="#ff0000">
+put</font></b>(String key, String value) {     table.put(key, value); }     }
+</pre>
+<!--webbot bot="HTMLMarkup" endspan -->Cuando no se utiliza en una prueba, el componente utiliza un objeto adaptador que
+convierte llamadas a <font size="+0">KeyValuePairs</font> en sentencias SQL: <br />
+<!--webbot bot="HTMLMarkup" startspan -->
+<pre>
+ <b>
+<font color="#ff0000">
+class DatabaseAdapter implements KeyValuePairs</font></b> { private Connection databaseConnection; public DatabaseAdapter(String databaseURL) {     try {         databaseConnection =             DriverManager.getConnection(databaseURL);         ...     } catch (SQLException e) {...} } public String <b>
+<font color="#ff0000">
+get</font></b>(String key) {     try {         Statement stmt =            databaseConnection.createStatement();         ResultSet rs = stmt.executeQuery(           "SELECT value FROM Table1 WHERE key=" + key);         ...     } catch (SQLException e) {...} } public void <b>
+<font color="#ff0000">
+put</font></b>(String key, String value) {     ... }     }
+</pre>
+<!--webbot bot="HTMLMarkup" endspan --><br />
+Puede que el componente tenga un solo constructor para las pruebas y para otros clientes. Dicho constructor escogerá un
+objeto que implemente <font size="+0">KeyValuePairs</font>. O puede que sólo proporcione esa interfaz para las pruebas y
+requiera que los clientes ordinarios del componente pasen el nombre de una base de datos: <br />
+<!--webbot bot="HTMLMarkup" startspan -->
+<pre>
+ class Component { <b>
+<font color="#ff0000">
+public</font></b> Component(String databaseURL) {     this.valueStash = new DatabaseAdapter(databaseURL); } // For testing. <b>
+<font color="#ff0000">
+protected</font></b> Component(KeyValuePairs valueStash) {     this.valueStash = valueStash; }     }
+</pre>
+<!--webbot bot="HTMLMarkup" endspan --><br />
+Desde el punto de vista de los programadores del cliente, los dos casos de ejemplo de diseño producen la misma API, aunque
+uno es más fácil de probar. (Tenga en cuenta que algunas pruebas pueden utilizar la base de datos real y otras la base de
+datos del fragmento para simulación). 
+<h3>
+    <a id="FurtherInformation" name="FurtherInformation">Más información</a>
+</h3><br />
+Para obtener más información relacionada con los fragmentos para simulación, consulte lo siguiente: 
+<ul>
+    <li>
+        <a href="http://www.connextra.com/aboutUs/mockobjects.pdf" target="_blank"><i>Endo-Testing: Unit testing with Mock
+        Objects</i></a>, "eXtreme Programming and Flexible Processes in Software Engineering - XP2000". &copy; 2000 Tim
+        Mackinnon, Steve Freeman, Philip Craig.
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <br />
+         (<a href="http://www.adobe.com/products/acrobat/alternate.html" target="_blank">Obtener Adobe Reader</a>)
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/tools/rup_quality_architect_3444CDC5.html" guid="{11A91795-5221-4C65-A9DE-EE431CEA6993}">Herramienta: Rational QualityArchitect</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/tools/rup_test_realtime_861C5353.html" guid="{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}">Herramienta: Rational Test RealTime</a><br />
+        <br />
+    </li>
+</ul><br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

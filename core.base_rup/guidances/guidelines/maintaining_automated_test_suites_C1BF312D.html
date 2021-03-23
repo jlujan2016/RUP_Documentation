@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Mantenimiento de conjuntos de aplicaciones de prueba automatizados</title>
+<meta content="Guideline" name="uma.type">
+<meta content="maintaining_automated_test_suites" name="uma.name">
+<meta content="Mantenimiento de conjuntos de aplicaciones de prueba automatizados" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{33DE37A2-ECFE-483B-934B-629F5802F87C}", "2.0721213907815595E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_OKm3oN7UEdmjRZts2c4ZjQ", "{33DE37A2-ECFE-483B-934B-629F5802F87C}", "2.0721213907815595E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.0721213907815595E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{33DE37A2-ECFE-483B-934B-629F5802F87C}", "2.0721213907815595E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.0721213907815595E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Mantenimiento de conjuntos de aplicaciones de prueba automatizados</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz presenta principios de diseño y gestión que facilitan el mantenimiento de los conjuntos de aplicaciones de prueba.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_developer_test_66FE6BEE.html" guid="{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}">Implementar la prueba de desarrollador</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_the_test_implementation_AAB73625.html" guid="{ED9DF0C0-744A-443A-AEBA-604382E05A5F}">Estructurar la implementación de la prueba</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_test_suite_DA8938D2.html" guid="{33DE37A2-ECFE-483B-934B-629F5802F87C}">Conjunto de aplicaciones de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="prueba" text="mantener pruebas automatizadas" name="XE_test__developer_testing__maintaining_automated_tests" id="XE_test__developer_testing__maintaining_automated_tests" class="index"></a><a key="prueba de desarrollador" text="mantenimiento de" name="XE_developer_testing__automated_tests__maintanence_of" id="XE_developer_testing__automated_tests__maintanence_of" class="index"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">Introducción</a>
+</h3>
+<p>
+    Al igual que los objetos físicos, las pruebas se pueden estropear. No se estropean, sino que algo ha cambiado en su
+    entorno. Quizás se han trasladado a un sistema operativo nuevo. O, más probablemente, el código que ejercen ha cambiado
+    de modo que provoca <i>correctamente</i> que la prueba falle. Imagine que está trabajando en la versión 2.0 de una
+    aplicación de banca electrónica. En la versión 1.0, este método se utilizaba para iniciar la sesión:
+</p>
+<blockquote>
+    <p align="left">
+        <font size="+0">registro booleano público (cadena de caracteres nombre de usuario);</font>
+    </p>
+</blockquote>
+<p>
+    En la versión 2.0, el departamento de marketing ha considerado que la protección por contraseña puede ser una buena
+    idea. El método ha pasado a ser este:
+</p>
+<blockquote>
+    <p align="left">
+        <font size="+0">registro booleano público (Cadena de caracteres nombre de usuario<i><b>, Cadena de caracteres
+        contraseña</b></i>);</font>
+    </p>
+</blockquote>
+<p>
+    Todas las pruebas que utilicen el Inicio de sesión fallarán Ni siquiera compilará. Como no se puede hacer demasiado
+    trabajo útil en este punto, no se pueden escribir demasiadas pruebas útiles sin iniciar la sesión. Puede encontrar
+    cientos o miles de pruebas con fallos.
+</p>
+<p>
+    Estas pruebas se pueden solucionar utilizando una herramienta de buscar y reemplazar global que encuentre todas las
+    instancias de registro (<i>algo</i>) y lo reemplace con registro (<i>algo</i>, "contraseña ficticia"). A continuación,
+    establezca que todas las cuentas de prueba utilicen esta contraseña, y estará solucionando el problema.
+</p>
+<p>
+    Más adelante, cuando marketing decida que las contraseñas no pueden contener espacios, deberá repetirlo todo de nuevo.
+</p>
+<p>
+    Esto es una carga inútil, especialmente cuando los cambios en las pruebas no son tan sencillos -lo que ocurre a menudo.
+    Existe un modo mejor.
+</p>
+<p>
+    Imagine que las pruebas originalmente no llamaron el <font size="+0">registro</font> del método del producto. En su
+    lugar, llamaron un método de biblioteca que hace lo que puede para registrar la prueba y está listo para continuar.
+    Inicialmente, este método podría ser parecida al siguiente:
+</p>
+<blockquote>
+<pre>
+public boolean testLogin (String username) {
+  return product.login(username);
+}
+</pre>
+</blockquote>
+<p>
+    Cuando se produce el cambio a la versión 2.0, la biblioteca del programa de utilidad se cambia para que coincida:
+</p>
+<blockquote>
+<pre>
+public Boolean testLogin (String username) {
+  return  product.login(username<b>
+<i>
+, "dummy password"</i></b>);
+}
+</pre>
+</blockquote>
+<p>
+    En lugar de cambiar mil pruebas, cambien un método.
+</p>
+<p>
+    Idealmente, todos los métodos de biblioteca necesario estarán disponibles al principio del esfuerzo de prueba. A la
+    práctica, no se pueden anticipar todos. Es posible que no se de cuenta de que necesita un método de programa de
+    utilidad <font size="+0">testLogin</font> hasta la primera vez que cambie el <font size="+0">registro</font> del
+    producto. Por eso los métodos de programa de utilidad de prueba suelen extraerse de pruebas existentes cuando sean
+    necesarias. Es <i>muy</i> importante que efectúe esta reparación de prueba constante, incluso bajo presión de la
+    planificación. Si no lo hace, gastará mucho tiempo tratando un conjunto de aplicaciones de prueba feo e insostenible.
+    Es posible que esté desaprovechando, o que no pueda escribir los números necesarios para las nuevas pruebas porque todo
+    el tiempo de prueba disponible se dedica a mantener los antiguos.
+</p>
+<p>
+    <b>Nota</b>: las pruebas del método de <font size="+0">registro</font> del producto todavía lo llamarán directamente.
+    Si cambia este comportamiento, una parte o todas las pruebas deberán actualizarse. (Si ninguna prueba de <font     size="+0">registro</font> falla cuando cambie el comportamiento, probablemente no son demasiado buenos detectando
+    defectos).
+</p>
+<h3>
+    <a id="AbstractionManagesComplexity" name="AbstractionManagesComplexity">La abstracción ayuda a gestionar la
+    complejidad</a>
+</h3>
+<p>
+    El ejemplo anterior mostraba cómo las pruebas pueden abstraerse de la aplicación concreta. Muy probablemente puede
+    realizar más abstracción. Encontrará que una serie de pruebas empiezan con una secuencia común de llamadas a método: se
+    registran, establecen algún estado y navegan hasta la parte de la aplicación que está probando. Sólo entonces cada
+    prueba hace algo diferente. Toda esta configuración podría -y debería- contenerse en un único método con un nombre
+    evocador como <font size="+0">readyAccountForWireTransfer</font>. De este modo, ahorrará un tiempo considerable cuando
+    se escriban nuevas pruebas de un tipo concreto y también realiza la intención de que cada prueba sea mucho más
+    comprensible.
+</p>
+<p>
+    Es importante tener unas pruebas comprensibles. Un problema común con los conjuntos de aplicaciones de prueba antiguos
+    es que nadie sabe qué hacen las pruebas o por qué. Cuando se estropean, la tendencia es arreglarlos del modo más
+    sencillo posible. Esto suele resultar en pruebas más débiles a la hora de encontrar defectos. Ya no prueban lo que
+    pretendían probar originalmente.
+</p>
+<h3>
+    <a id="AnotherExample" name="AnotherExample">Otro ejemplo</a>
+</h3>
+<p>
+    Imagine que está probando un compilador. Algunas de las primeras clases escritas definen el árbol de análisis interno
+    del compilador y las transformaciones que se han realizado sobre este. Tiene una serie de pruebas que construyen
+    árboles de análisis de construcción y prueban las transformaciones. Una prueba podría ser parecida a la siguiente:
+</p>
+<blockquote>
+<pre>
+/* 
+ * Given
+ *   while (i&lt;0) { f(a+i); i++;}
+ * "a+i" cannot be hoisted from the loop because 
+ * it contains a variable changed in the loop.
+ */
+loopTest = new LessOp(new Token("i"), new Token("0"));
+aPlusI = new PlusOp(new Token("a"), new Token("i"));
+statement1 = new Statement(new Funcall(new Token("f"), aPlusI));
+statement2 = new Statement(new PostIncr(new Token("i"));
+loop = new While(loopTest, new Block(statement1, statement2));
+expect(false, loop.canHoist(aPlusI))
+</pre>
+</blockquote>
+<p>
+    Esta prueba es difícil de leer. Imagine que pasa el tiempo. Algo cambia que requiere que se actualicen las pruebas. En
+    este punto, tiene más infraestructura de producto en la que dibujar. Concretamente, puede tener una rutina de análisis
+    que convierte las cadenas de caracteres en árboles de análisis. Sería mejor reescribir completamente las pruebas para
+    utilizarlas en este punto:
+</p>
+<blockquote>
+<pre>
+loop=Parser.parse("while (i&lt;0) { f(a+i); i++; }");
+// Get a pointer to the "a+i" part of the loop. 
+aPlusI = loop.body.statements[0].args[0];
+expect(false, loop.canHoist(aPlusI));
+</pre>
+</blockquote>
+<p>
+    Estas pruebas serán mucho más fáciles de comprender, y ahorrarán tiempo inmediatamente y en el futuro. En realidad, su
+    coste de mantenimiento es muy inferior y sería lógico convertir la mayoría de ellas hasta que el analizador esté
+    disponible.
+</p>
+<p>
+    Existe un pequeño inconveniente en este enfoque: estas pruebas pueden descubrir un defecto en el código de
+    transformación (tal como estaba previsto) o en el analizador (por accidente). El problema del aislamiento y la
+    depuración puede resultar algo más difícil. Por otro lado, encontrar un problema que las pruebas de analizador no
+    detectan no es tan negativo.
+</p>
+<p>
+    También existe la posibilidad de que un defecto del analizador pueda enmascarar un defecto en el código de
+    transformación. La posibilidad de que suceda es más bien pequeña, y su coste es ciertamente inferior al coste de
+    mantener las pruebas más complicadas.
+</p>
+<h3>
+    <a id="FocusingImprovement" name="FocusingImprovement">Centrarse en la mejora de la prueba</a>
+</h3>
+<p>
+    Un conjunto de aplicaciones de prueba grande contendrá algunos bloques de prueba que no cambian. Corresponden a áreas
+    estables de la aplicación. Otros bloques de prueba cambiarán a menudo. Corresponden a áreas de la aplicación en que el
+    comportamiento cambia a menudo. Estos últimos bloques de prueba tendirán a utilizar más las bibliotecas de programas de
+    utilidad. Cada prueba probará comportamientos específicos en el área cambiable. Las bibliotecas de programa de utilidad
+    están diseñadas para permitir que esta prueba compruebe los comportamientos de destino manteniéndose relativamente
+    inmune a los cambios de los comportamientos no probados.
+</p>
+<p>
+    Por ejemplo, la prueba "loop hoisting" que se ha mostrado anteriormente ahora es inmune a los detalles de cómo se
+    construyen los árboles de análisis. Sigue siendo sensible a la estructura de un árbol de análisis del bucle <font     size="+0">mientras</font> (debido a la secuencia de accesos necesarios para buscar el subárbol para a+i). Si esta
+    estructura se puede cambiar, la prueba puede ser más abstracta creando un método de programa de utilidad <font     size="+0">fetchSubtree</font> :
+</p>
+<blockquote>
+<pre>
+loop=Parser.parse("while (i&lt;0) { f(a+i); i++; }");
+<b>
+<i>
+aPlusI = fetchSubtree(loop, "a+i");</i></b>
+
+expect(false, loop.canHoist(aPlusI));
+</pre>
+</blockquote>
+<p>
+    La prueba ahora es sensible sólo a dos cosas: la definición del lenguaje (por ejemplo, que los enteros se puedan
+    incrementar con <font size="+0">++</font>), y las reglas que gobiernan el loop hoisting (el comportamiento cuya
+    corrección se está comprobando).
+</p>
+<h3>
+    <a id="ThrowingAwayTests" name="ThrowingAwayTests">Desechar pruebas</a>
+</h3>
+<p>
+    Incluso con las bibliotecas, una prueba se puede romper periódicamente con los cambios de comportamiento que no están
+    relacionados con lo que comprueba. Al arreglar la prueba es poco probable que se encuentre un defecto debido al cambio;
+    es algo que se hace para mantener las posibilidades de que la prueba encuentre otro defecto en algún momento. Pero el
+    coste de esta serie de correcciones puede superar el valor de que la prueba encuentre, hipotéticamente, un defecto.
+    Puede ser mejor desechar, simplemente, la prueba y dedicar el esfuerzo a crear nuevas pruebas con un mayor valor.
+</p>
+<p>
+    La mayoría de personas se resisten a la noción de deshacerse de una prueba - al menos hasta que están tan cargados con
+    el peso del mantenimiento que desechan <i>todas</i> las prueba. Es mejor tomar la decisión con cuidado y con
+    continuidad, prueba a prueba, preguntando:
+</p>
+<ol>
+    <li>
+        ¿Cuánto trabajo será necesario para arreglar esta prueba, quizás añadiendo a la biblioteca del programa de
+        utilidad?
+    </li>
+    <li>
+        ¿De qué otro modo se podría utilizar el tiempo?
+    </li>
+    <li>
+        ¿Qué probabilidad existe de que la prueba encuentra defectos graves en el futuro? ¿Cuál ha sido el registro de
+        seguimiento de ésta y de las pruebas relacionadas?
+    </li>
+    <li>
+        ¿Cuánto tardará la prueba en volverse a romper?
+    </li>
+</ol>
+<p>
+    Las respuestas a estas preguntas serán estimaciones imprecisas o suposiciones. Pero preguntarlas producirá unos mejores
+    resultados que tener simplemente una política de corrección de todas las pruebas.
+</p>
+<p>
+    Otro motivo para desechar las pruebas es que ahora sean redundantes. Por ejemplo, en un estadio temprano del
+    desarrollo, puede haber una multitud de pruebas simples de métodos de construcción de árboles de análisis (el
+    constructor <font size="+0">LessOp</font> y similares). Posteriormente, durante la escritura del analizador existirán
+    una serie de pruebas de analizador. Como el analizador utiliza métodos de construcción, las pruebas de analizador
+    también las probarán indirectamente. Cuando los cambios del código rompan las pruebas de construcción es razonable
+    descartar algunas de las que son redundantes. Por supuesto, cualquier comportamiento de construcción nuevo o cambiado
+    necesitará nuevas pruebas. Se pueden implementar directamente (si es difícil probarlas exhaustivamente con el
+    analizador) o indirectamente (si las pruebas con el analizador son adecuadas y más sostenibles).
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Incorporaci&oacute;n de elementos de dise&ntilde;o mediante la plataforma de desarrollo de software Rational</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="incorporating_existing_design_elements_using_rsa" name="uma.name">
+<meta content="Incorporaci&oacute;n de elementos de dise&ntilde;o mediante la plataforma de desarrollo de software Rational" name="uma.presentationName">
+<meta name="element_type" content="tool_mentor">
+<meta content="" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{292382F9-F514-4B15-BD97-8D43953CB551}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Incorporaci&oacute;n de elementos de dise&ntilde;o mediante la plataforma de desarrollo de software Rational</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta guía de la herramienta describe cómo incorporar elementos de diseño existentes mediante el entorno de modelado SDP.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    En esta guía de la herramienta se llevan a cabo los pasos siguientes:
+</p>
+<ul>
+    <li>
+        <a href="#Identify Reuse Opportunities">Identificar oportunidades de reutilización</a>
+    </li>
+    <li>
+        <a href="#Reverse Engineer Components and Databases">Ingeniería inversa de componentes y bases de datos</a>
+    </li>
+    <li>
+        <a href="#Update the Organization of the Design Model">Actualizar la organización del modelo de
+        diseño</a>
+    </li>
+    <li>
+        <a href="#Update the Logical View">Actualizar la vista lógica</a>
+    </li>
+</ul>
+<p>
+    <a href="#MoreInfo">Información adicional sobre la herramienta</a>
+</p>
+<h3>
+    <a id="Identify Reuse Opportunities" name="Identify Reuse Opportunities">Identificar oportunidades de reutilización</a>
+</h3>
+<p>
+    Busque componentes o subsistemas existentes que ofrezcan interfaces similares. Es posible que se hayan empaquetado
+    algunos activos para su reutilización deliberada utilizando RAS (especificación de activo reutilizable). Si se han
+    creado&nbsp;con la herramienta, dichos activos se pueden examinar y cargar. Consulte <img height="16"     alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Empaquetado de activos para su
+    reutilización</i> en la ayuda en línea.
+</p>
+<h3>
+    <a id="Reverse Engineer Components and Databases" name="Reverse Engineer Components and Databases">Ingeniería inversa
+    de componentes y bases de datos</a>
+</h3>
+<p>
+    Nota: algunas de las capacidades de la herramienta mencionadas en esta sección no se soportan en RSM.
+</p>
+<p>
+    Para los activos que no incluyen un modelo, es posible que le resulte útil revertir la ingeniería de un modelo con el
+    objeto de comprender mejor el diseño. Algunos de estos componentes se pueden descubrir mediante la visualización de
+    código y las funciones de detección de patrón/antipatrón que forman parte del soporte del análisis de la arquitectura.
+    Si se demuestra que el activo puede volver a utilizarse, los diagramas servirán de base para crear o generar elementos
+    de modelo nuevos y el activo se considerará apto para ser candidato RAS. Consulte las directrices <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/guidelines/architectural_discovery,_analysis_and_control_2153BFC.html" guid="2.843707701997842E-305">Descubrimiento, análisis y control de arquitectura</a>.
+</p>
+<p>
+    Para un activo que controla la empresa, es posible que existan oportunidades de realizar cambios poco importantes en
+    una interfaz candidata que mejoren su conformidad con la interfaz deseada. Para los activos que no controla la empresa,
+    puede crear elementos de diseño de puente o adaptador que correlacionen la interfaz deseada con interfaces que
+    proporcionen los activos reutilizados. Consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identificar elementos de diseño</a> para conocer las directrices sobre la
+    creación y modificación de interfaces y clases.
+</p>
+<h3>
+    <a id="Update the Organization of the Design Model" name="Update the Organization of the Design Model">Actualizar la
+    organización del modelo de diseño</a>
+</h3>
+<p>
+    Reorganice los elementos de diseño en paquetes, según sea necesario. &nbsp;Consulte la documentación técnica: <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a> para conocer más directrices sobre la
+    organización del modelo de diseño.
+</p>
+<h3>
+    <a id="Update the Logical View" name="Update the Logical View">Actualizar la vista lógica</a>
+</h3>
+<p>
+    Si existe una vista lógica separada, se debe mantener. Consulte la documentación técnica <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a>.
+</p>
+<h3>
+    <a id="MoreInfo" name="MoreInfo">Información adicional sobre la herramienta</a>
+</h3>
+<p>
+    Tutoriales:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Aplicar
+        un&nbsp;patrón</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />Crear
+        <i>un&nbsp;patrón</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" />Importar<i>&nbsp;un&nbsp;activo RAS</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" />Exportar<i>&nbsp;un&nbsp;activo RAS</i>
+    </li>
+</ul>
+<p>
+    Ejemplos:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Activos RAS:
+        Activo RAS por importar/exportar</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Patrones:
+        Modelo UML simple</i>&nbsp;
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../tech.rsa/guidances/toolmentors/incorporating_existing_design_elements_using_rsa_ext_D44E24B9.html" guid="_r0Q2AK4KEdqFg48R_ivTjA">Incorporación de elementos de diseño existentes mediante Rational Software Architect</a>
+</li>
+<li>
+<a href="./../../../tech.rsa/guidances/toolmentors/incorporating_existing_design_elements_using_rsd_77DA241B.html" guid="_mnf2MK4KEdqFg48R_ivTjA">Incorporación de elementos de diseño mediante Rational Systems Developer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

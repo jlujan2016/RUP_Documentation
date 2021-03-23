@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de tareas: An&aacute;lisis del modelo de datos</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="soa_service_identification_data" name="uma.name">
+<meta content="An&aacute;lisis del modelo de datos" name="uma.presentationName">
+<meta content="_jqzBgCxvEdupJ8eX04kqLQ" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="Arquitecto de software">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc=_HTHEkCv-EduYBoDegGQopA&path=_HTHEkCv-EduYBoDegGQopA,_7ZObICxuEdupJ8eX04kqLQ,_jqzBgCxvEdupJ8eX04kqLQ';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_XSr4YCFtEdqrX8YVzvtlIg", "_PBJLwFj3EduKcJV_Q8r68A", "_7ZObICxuEdupJ8eX04kqLQ", "_jqzBgCxvEdupJ8eX04kqLQ"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_J1u8gCGYEdqMcovRzkCQow", "_PBJLwFj3EduKcJV_Q8r68A", "_7ZObICxuEdupJ8eX04kqLQ", "_jqzBgCxvEdupJ8eX04kqLQ"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_vllcADIKEdqGgPtrSpB0vQ", "_PBJLwFj3EduKcJV_Q8r68A", "_7ZObICxuEdupJ8eX04kqLQ", "_jqzBgCxvEdupJ8eX04kqLQ"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_XSr4YCFtEdqrX8YVzvtlIg", "_PBJLwFj3EduKcJV_Q8r68A", "_7ZObICxuEdupJ8eX04kqLQ", "_jqzBgCxvEdupJ8eX04kqLQ"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_J1u8gCGYEdqMcovRzkCQow", "_PBJLwFj3EduKcJV_Q8r68A", "_7ZObICxuEdupJ8eX04kqLQ", "_jqzBgCxvEdupJ8eX04kqLQ"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_vllcADIKEdqGgPtrSpB0vQ", "_PBJLwFj3EduKcJV_Q8r68A", "_7ZObICxuEdupJ8eX04kqLQ", "_jqzBgCxvEdupJ8eX04kqLQ"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_XSr4YCFtEdqrX8YVzvtlIg", "_PBJLwFj3EduKcJV_Q8r68A", "_7ZObICxuEdupJ8eX04kqLQ", "_jqzBgCxvEdupJ8eX04kqLQ"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_J1u8gCGYEdqMcovRzkCQow", "_PBJLwFj3EduKcJV_Q8r68A", "_7ZObICxuEdupJ8eX04kqLQ", "_jqzBgCxvEdupJ8eX04kqLQ"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_vllcADIKEdqGgPtrSpB0vQ", "_PBJLwFj3EduKcJV_Q8r68A", "_7ZObICxuEdupJ8eX04kqLQ", "_jqzBgCxvEdupJ8eX04kqLQ"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_jqzBgCxvEdupJ8eX04kqLQ"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: An&aacute;lisis del modelo de datos</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta tarea identifica los elementos de diseño de una solución orientada a servicios desde el punto de vista de los servicios y las particiones, y documenta la especificación inicial de dichos servicios.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><ul>
+    <li>
+        Identificar los elementos de diseño de una solución orientada a servicios desde el punto de vista de los servicios
+        y las particiones.
+    </li>
+    <li>
+        Documentar la especificación inicial de servicios.
+    </li>
+    <li>
+        Determina las dependencias iniciales y la comunicación entre servicios.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Principal:
+							</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_software_architect_9E92405C.html" guid="_HPglYC1bEdudYLeyb_y9tw">Arquitecto de software</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Adicional:
+							</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_designer_3E58BFF5.html" guid="_HPmsAC1bEdudYLeyb_y9tw">Dise&ntilde;ador</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_database_designer_3C256E65.html" guid="_Lla1sC1bEdudYLeyb_y9tw">Dise&ntilde;ador de base de datos</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Asistencia:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/soa_service_model_D058B247.html" guid="_HPsyoC1bEdudYLeyb_y9tw">Modelo de servicio</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_business_analysis_model_DAF69257.html" guid="_HPsyoS1bEdudYLeyb_y9tw">Modelo de an&aacute;lisis empresarial</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_business_use_case_model_C98FA66D.html" guid="_HPsyoi1bEdudYLeyb_y9tw">Modelo de gui&oacute;n de uso empresarial</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/soa_service_model_D058B247.html" guid="_HPsyoC1bEdudYLeyb_y9tw">Modelo de servicio</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    Esta tarea utiliza modelos de proceso empresarial como entrada e identifica un conjunto de servicios candidatos que se
+    incluyen en la cartera de servicios del proyecto. Estos servicios candidatos pueden necesitar todavía más ajustes; sin
+    embargo, los pasos aquí incluidos proporcionan una forma efectiva en la que producir un conjunto inicial de
+    especificaciones de servicio.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading">Identificar servicios candidatos a partir de modelos de datos</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Para la mayoría de las organizaciones de TI dirigidas por empresas, la comprensión y la gestión de datos en forma de <a class="elementLinkWithUserText" href="./../../extend.bus_model/workproducts/rup_business_entity_638A1D00.html" guid="{9A14ED32-2AC5-457E-93B8-474642D33A50}">Artefacto: Entidad empresarial</a> complejos es clave para el análisis y
+    el diseño de soluciones. Por eso, muchas soluciones incluirán servicios que actúen como servicios de gestión de datos y
+    la identificación de servicios tenderá a centrarse más en el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Artefacto:
+    Modelo de datos</a> o el <a class="elementLinkWithUserText" href="./../../extend.bus_model/workproducts/rup_business_analysis_model_9449F63A.html" guid="{CF53445C-3351-46C6-810E-8251830029A7}">Artefacto: Modelo de análisis empresarial</a>. Desde el punto de vista de
+    la reconversión de aplicaciones en soluciones orientadas a servicios, los modelos de datos deben desarrollarse a partir
+    de las aplicaciones existentes que puedan utilizarse para identificar subconjuntos coherentes tratables como servicios
+    autónomos.
+</p>
+<p>
+    Siempre que sea posible, la creación de un dominio para toda la empresa es una actividad que tiene gran valor, el
+    modelo de dominio es un nivel superior de abstracción de un modelo de datos lógico más completo (consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Artefacto: Modelo de datos</a>) y, por tanto, se puede mantener con mayor
+    regularidad. Este modelo de dominio expresa los conceptos claves, en el sentido de <a class="elementLinkWithUserText" href="./../../extend.bus_model/workproducts/rup_business_entity_638A1D00.html" guid="{9A14ED32-2AC5-457E-93B8-474642D33A50}">Artefacto: Entidad empresarial</a>, y puede considerarse que representa
+    los tipos de artefacto clave gestionados por un componente empresarial o un servicio empresarial (consulte <a class="elementLinkWithUserText" href="./../../extend.bus_model/guidances/concepts/business_component_modeling_527F8FC0.html" guid="_uKecsC7xEdu14aFGpEDchg">Concepto: Modelado empresarial de componentes</a>). De este modo, la agrupación lógica
+    de un modelo de dominio en un conjunto coherente de entidades dependiente puede ser un punto de partida para la
+    identificación de servicios (tratando el servicio como el propietario de las entidades). Por ejemplo, tenga en cuenta
+    el siguiente fragmento de modelo de dominio.
+</p>
+<p align="center">
+    <img height="405" alt="" src="./../../soa.rup_soma/tasks/./resources/soa_svce_identification-07a.gif" width="672" />
+</p>
+<p>
+    Vemos que el modelo de dominio identifica un conjunto de entidades empresariales&nbsp;que tienen dos competencias
+    empresariales&nbsp;principales: gestión de cuentas y de clientes.&nbsp;Es verdad que hay una relación importante entre
+    una cuenta y una organización; no obstante, estos dos tipos de&nbsp;artefacto&nbsp;se tratan muy a menudo por separado
+    y las operaciones tienden a&nbsp;realizarse en el nivel de la cuenta o la organización. Podemos asignar componentes
+    importantes&nbsp;del modelo de dominio a un <a class="elementLinkWithUserText" href="./../../extend.bus_model/workproducts/rup_business_system_BB28EEB.html" guid="{4064F184-314B-4965-9F08-6AE5DBF6205A}">Artefacto: Sistema empresarial</a>&nbsp;(Componente empresarial en CBM)
+    de &nbsp;RUP&nbsp;, tal como se muestra a continuación.
+</p>
+<p align="center">
+    <img height="478" alt="" src="./../../soa.rup_soma/tasks/./resources/soa_svce_identification-07b.gif" width="721" />
+</p>
+<p>
+    Aunque esto nos ofrece una imagen clara en términos de propiedad de los tipos de artefacto relevantes, necesitamos ir
+    un paso más allá e identificar los servicios que el sistema empresarial ofrece a la organización y, en este caso, el
+    servicio suministrado para gestionar los tipos de artefacto identificados. Por tanto, dado el ejemplo ofrecido,
+    identificaríamos la entidad "Cuenta" como el artefacto principal propiedad del sistema empresarial "Gestión de cuentas"
+    y "Cliente" como el artefacto principal propiedad del sistema "Gestión de clientes". Así, proporcionaríamos un servicio
+    que permite el acceso a estas entidades, así como su actualización, tal como aparece en la siguiente figura.
+</p>
+<p align="center">
+    <img height="156" alt="" src="./../../soa.rup_soma/tasks/./resources/soa_svce_identification-07c.gif" width="396" />
+</p>
+<p>
+    De nuevo, estas especificaciones de servicio sólo representan servicios candidatos (consulte la propiedad de estado
+    del&nbsp;<a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_svce_model_svce_spec_37E89A91.html" guid="{20F06B5E-95D5-422C-AB68-7C213D28533A}">Artefacto: Especificación de servicio</a>) y, como tales, necesitarían
+    ajustarse con detalles de las operaciones que proporcionan, en concreto, de las operaciones que permiten la
+    actualización de las entidades.
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Varias apariciones" abbr="Varias apariciones">Varias apariciones</th><td align="left" class="sectionTableCell" headers="property_Varias apariciones"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Condicionado por sucesos" abbr="Condicionado por sucesos">Condicionado por sucesos</th><td align="left" class="sectionTableCell" headers="property_Condicionado por sucesos"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Continuo" abbr="Continuo">Continuo</th><td align="left" class="sectionTableCell" headers="property_Continuo"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Se puede repetir" abbr="Se puede repetir">Se puede repetir</th><td align="left" class="sectionTableCell" headers="property_Se puede repetir"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Conceptos</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/guidances/concepts/service_portfolio_52FD64AC.html" guid="1.851952881072508E-305">Cartera de servicios</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/guidances/concepts/solution_partitioning_352116F8.html" guid="1.6501323286225543E-305">Particionamiento de soluciones</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/guidances/guidelines/service_data_encapsulation_F424F20E.html" guid="1.6727924656888407E-305">Encapsulación de datos de servicio</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

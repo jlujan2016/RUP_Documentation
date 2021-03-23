@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Integrating Legacy Applications Into Modern Architectures</title>
+<meta content="Guideline" name="uma.type">
+<meta content="integrating_legacy_applications_into_modern" name="uma.name">
+<meta content="Integrating Legacy Applications Into Modern Architectures" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.4617992790518683E-308"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.4617992790518683E-308"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Integrating Legacy Applications Into Modern Architectures</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This guideline provides an overview of strategies to modernize &quot;legacy systems&quot; by integrating them with new applications. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">Describir la arquitectura de tiempo de ejecución</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introduction
+</h3>
+<p>
+    The mission-critical systems, frequently called "legacy systems," of many large companies are often buried within
+    large, monolithic applications with no industry-standard interfaces and developed with older computer languages, such
+    as COBOL. Many of these companies wish to exploit internet, intranet, e-commerce, and other new technologies in order
+    to remain competitive. However, rewriting these key "legacy systems" may not be a viable option from a financial (too
+    expensive) or technical (initial programmers no more in the company) or timing (can't afford to wait) point of view.
+    The alternative chosen by many companies is to modernize their "legacy systems" by integrating them with new
+    applications.
+</p>
+<p>
+    The most popular way to make such integration is commonly called <a class="elementLinkWithUserText" href="./../../../modernize.legacy_evol/guidances/concepts/enterprise_application_integration_3CEC2399.html" guid="3.047769946860121E-305">Enterprise Application Integration or EAI</a> and consists in implementing a
+    communication infrastructure between the various enterprise applications, both new and legacy.
+</p>
+<h3>
+    <a id="Legacy_Integration_Strategy" name="Legacy_Integration_Strategy"></a>Legacy Integration Strategies
+</h3>
+<p>
+    Legacy integration can be divided into two main categories :
+</p>
+<ul>
+    <li>
+        <a href="#Non_invasive">Non-invasive</a>
+    </li>
+    <li>
+        <a href="#Invasive">Invasive</a>
+    </li>
+</ul>
+<h4>
+    <a id="Non_invasive" name="Non_invasive">Non-invasive</a>
+</h4>
+<p>
+    Non-invasive strategies are those that don't modify the legacy application or perform only minor modifications. This
+    strategy is the less expensive one but is also the less flexible. This approach is usually used when EAI integration is
+    done at <a class="elementLinkWithUserText" href="./../../../modernize.legacy_evol/guidances/concepts/enterprise_application_integration_3CEC2399.html#User_Interface_Level" guid="3.047769946860121E-305">user interface level</a>, at <a class="elementLinkWithUserText" href="./../../../modernize.legacy_evol/guidances/concepts/enterprise_application_integration_3CEC2399.html#Data_Level" guid="3.047769946860121E-305">data level</a>, or sometimes at <a class="elementLinkWithUserText" href="./../../../modernize.legacy_evol/guidances/concepts/enterprise_application_integration_3CEC2399.html#Application_Interface_Level" guid="3.047769946860121E-305">application interface level</a>.
+</p>
+<p>
+    When integration is done at the user interface level, the existing text-based screens are replaced by browser-based
+    ones integrated in an enterprise business portal. Even if this kind of integration is usually considered somewhat
+    unstable and archaic, it is sometimes the most practical way to integrate legacy systems that do not provide database-
+    or business process-level access.
+</p>
+<p>
+    Data level integration can be done by either reusing the existing legacy database or by extracting the data from the
+    existing database and updating a new database using an ETL (Extract, Transform, Load) solution. Even if this approach
+    seems attractive, it is sometimes difficult to implement because data transformation, constraints, and controls are
+    often implemented in the business logic of the legacy applications.
+</p>
+<p>
+    Non-invasive application interface-level integration, called also "legacy wrapping," can offer a little more
+    flexibility. In this approach, you build callable Application Programming Interfaces (API) around legacy transactions.
+    Since this approach leverages existing legacy transactions, it is not very expensive and avoids the inconveniences of
+    data-level integration. By transforming the transactions in APIs, it gives more flexibility than user-level
+    integration. However, to remain non-invasive, this approach cannot be used to modify and enhance business features. For
+    that, you need to use an invasive approach.
+</p>
+<h4>
+    <a id="Invasive" name="Invasive">Invasive</a>
+</h4>
+<p>
+    An invasive strategy supposes that you need to modify functional legacy code. Obviously, there is more risk and cost
+    with this kind of approach because usually legacy code is old, not well documented, and the programmers who wrote it
+    are rarely available. But this type of approach is also the one that gives more flexibility and allows you to modify
+    and enhance existing business processes and features. This approach is usually used with EAI <a class="elementLinkWithUserText" href="./../../../modernize.legacy_evol/guidances/concepts/enterprise_application_integration_3CEC2399.html#Application_Interface_Level" guid="3.047769946860121E-305">application interface level</a> integration when you need APIs that do not correspond to
+    existing legacy transactions. This approach could be also used with EAI <a class="elementLinkWithUserText" href="./../../../modernize.legacy_evol/guidances/concepts/enterprise_application_integration_3CEC2399.html#Method_Level" guid="3.047769946860121E-305">method-level</a> integration, but refactoring the existing code to provide sharable
+    methods is often too expensive.
+</p>
+<p>
+    One invasive application interface level integration approach is called "legacy e-Components." This approach consists
+    of partitioning the legacy application into a collection of autonomous business components. Each component publishes a
+    clearly defined set of APIs that facilitates the move from rigid program-to-program connectivity toward a more loosely
+    connected message-based approach that can be deployed in multiple platforms and integrated into the overall
+    architecture using appropriate component models. This approach can be refined to define each "legacy e-Component" as
+    one or more services in a Service-Oriented Architecture (SOA), using XML web services. See <a class="elementLinkWithUserText" href="./../../../modernize.legacy_evol/guidances/concepts/service-oriented_architecture_92BDF995.html" guid="1.0245783036914358E-305">Concept: Introduction to Service-Oriented Architecture</a>.
+</p>
+<p>
+    Because invasive approaches are typically more expensive and architecturally risky than non-invasive approaches, you
+    should consider adopting an iterative approach that drives down risks and proves architecture feasibility in the early
+    iterations.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

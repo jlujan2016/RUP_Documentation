@@ -1,0 +1,558 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concepto: Arquitectura de software</title>
+<meta content="Concept" name="uma.type">
+<meta content="software_architecture" name="uma.name">
+<meta content="Arquitectura de software" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "3.066252221588648E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_ydt62NnmEdmO6L4XMImrsA", "3.066252221588648E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}", "3.066252221588648E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3aJCcN7REdmjRZts2c4ZjQ", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}", "3.066252221588648E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "3.066252221588648E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "3.066252221588648E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_IY0NkAISEdqTna4sZVFRow", "_ydt62NnmEdmO6L4XMImrsA", "3.066252221588648E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}", "3.066252221588648E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "3.066252221588648E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.066252221588648E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concepto: Arquitectura de software</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">La arquitectura de software representa la estructura o las estructuras del sistema, que consta de componentes de software, las propiedades visibles externamente y las relaciones entre ellas.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/disciplines/rup_analysis_design_discipline_29760231.html" guid="_ydt62NnmEdmO6L4XMImrsA">Análisis y diseño</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Arquitecto de software</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h2>
+    <a key="arquitectura" text="introducción a" name="XE_architecture__introduction_to" id="XE_architecture__introduction_to" class="index"></a><a id="Introduction" name="Introduction">Introducción</a>
+</h2>
+<p>
+    La arquitectura de software es un concepto fácil de entender y que la mayoría de los ingenieros aprecian
+    intuitivamente, sobre todo los que tienen un poco de experiencia, pero resulta difícil definirlo con precisión. En
+    concreto, es difícil dibujar una línea precisa entre el diseño y la arquitectura, la arquitectura es un aspecto de
+    diseño que se concentra en algunas características específicas.
+</p>
+<p>
+    En <i>An Introduction to Software Architecture</i>, David Garlan y Mary Shaw sugieren que la arquitectura es un nivel
+    de diseño que se centra en aspectos: "Beyond the algorithms and data structures of the computation; designing and
+    specifying the overall system structure emerges as a new kind of problem. Structural issues include gross organization
+    and global control structure; protocols for communication, synchronization, and data access; assignment of
+    functionality to design elements; physical distribution; composition of design elements; scaling and performance; and
+    selection among design alternatives." (Más allá de los algoritmos y estructuras de datos de la computación; el diseño y
+    la especificación de la estructura general del sistema emergen como una clase nueva de problema. Los aspectos
+    estructurales incluyen la estructura global de control y la organización general; protocolos de comunicación,
+    sincronización y acceso de datos; asignación de funciones para diseñar elementos; distribución física, composición de
+    elementos de diseño; ajuste y rendimiento; y selección entre otras alternativas de diseño). [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#GAR93" guid="7.755968586980351E-308">GAR93</a>]
+</p>
+<p>
+    Pero la arquitectura es algo más que una estructura; el IEEE Working Group on Architecture la define como "the
+    highest-level concept of a system <b>in its environment</b>" (el concepto de más alto nivel de un sistema en su
+    entorno) [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#IEP1471" guid="7.755968586980351E-308">IEP1471</a>]. También incluye el "ajuste" con la integridad del sistema, con las
+    restricciones económicas, con las preocupaciones estéticas y con el estilo. No se limita a un enfoque interior, si no
+    que tiene en cuenta el sistema en su totalidad dentro del entorno de usuario y el entorno de desarrollo, un enfoque
+    exterior.
+</p>
+<p>
+    En RUP, la arquitectura de un sistema de software (en un punto determinado) es la organización o la estructura de los
+    componentes importantes del sistema que interactúan mediante interfaces, con componentes compuestos de interfaces y
+    componentes cada vez más pequeños.
+</p>
+<h2>
+    <a id="Architecture Description" name="Architecture Description">Descripción de la arquitectura</a>
+</h2>
+<p>
+    Para poder hablar y razonar sobre la arquitectura de software, antes debe definir una representación arquitectónica,
+    una manera de describir aspectos importantes de una arquitectura. En RUP, esta descripción se captura en el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">Documento de arquitectura de software</a>.
+</p>
+<h3>
+    <a id="Architectural Views" name="Architectural Views">Vistas de la arquitectura</a>
+</h3>
+<p>
+    Hemos decidido representar la arquitectura de software en varias <b>vistas de la arquitectura</b>. Cada vista de la
+    arquitectura trata un conjunto concreto de problemas, específico de interesados en el proceso de desarrollo: usuarios,
+    diseñadores, gestores, ingenieros de sistemas, mantenedores, etc.
+</p>
+<p>
+    Las vistas capturan las principales decisiones de diseño estructural y muestran cómo se descompone la estructura de
+    software en componentes y cómo se conectan los componentes mediante <b>conectores</b> para producir <b>formas</b>
+    útiles [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#PW92" guid="7.755968586980351E-308">PW92</a>]. Estas elecciones de diseño deben estar unidas a los <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/requirements_62E28784.html" guid="4.582668643506599E-305">Requisitos</a>, funcionales y suplementarios y otras restricciones. Aunque, a su vez,
+    añaden más <b>restricciones</b> a los requisitos y a las próximas decisiones de diseño en un nivel inferior.
+</p>
+<h3>
+    <a id="A Typical Set of Architectural Views" name="A Typical Set of Architectural Views">Un conjunto típico de vistas
+    de la arquitectura</a>
+</h3>
+<p>
+    La arquitectura se representa mediante un número diferente de vistas de la arquitectura, que, esencialmente, son
+    extractos que ilustran los elementos "significativos arquitectónicamente" de los modelos. En RUP, se empieza en un
+    conjunto típico de vistas, llamado el "modelo de vista 4+1" [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#KRU95" guid="7.755968586980351E-308">KRU95</a>]. Consta
+    de:
+</p>
+<ul>
+    <li>
+        La <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/use-case_view_11F15731.html" guid="6.820983346069146E-305"><b>Vista de guión de uso</b>,</a> que contiene guiones de uso y casos de ejemplo que
+        abarcan riesgos técnicos, de clases o de comportamiento significativos arquitectónicamente. Es un subconjunto del
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">Modelo de guión de uso</a>.
+    </li>
+    <li>
+        La <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/logical_view_C135365E.html" guid="6.901347907565747E-305">Vista lógica</a>, que contiene las <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">clases de diseño</a> más importantes y su organización en <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_package_8376BC8E.html" guid="{80CC5437-F481-487B-A69B-957D9D236D8D}">paquetes</a> y <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">subsistemas</a>, y la organización de estos paquetes y subsistemas en
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/layering_59FD1CD4.html" guid="3.801315327549898E-305">capas</a>. También contiene algunas <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">realizaciones de guiones de uso</a>. Es un subconjunto del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Modelo de diseño</a>.
+    </li>
+    <li>
+        La <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/implementation_view_E373E3B6.html" guid="4.693519701160983E-305"><b>Vista de implementación</b>,</a> que contiene una visión general del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">Modelo de implementación</a> y su organización en términos de módulos
+        en paquetes y capas. También se describe la asignación de paquetes y clases (de la vista lógica) a los paquetes y
+        módulos de la vista de implementación. Es un subconjunto del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">Modelo de implementación</a>.
+    </li>
+    <li>
+        La <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/process_view_E3DD0B09.html" guid="6.45284088262517E-306">Vista de proceso</a>, que contiene la descripción de las tareas (proceso y hebras)
+        implicadas, sus interacciones y configuraciones y la asignación de clases y objetos de diseño a tareas. Esta vista
+        sólo debe utilizarse si el sistema tiene un grado significativo de <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/concurrency_EE2E011A.html" guid="3.5787175388799096E-305">Concurrencia</a>.
+        En RUP, es un subconjunto del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Modelo de diseño</a>.
+    </li>
+    <li>
+        La <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/deployment_view_64CB74A6.html" guid="2.8416696002928195E-305">Vista de despliegue</a>, que contiene la descripción de los diferentes nodos físicos
+        para la mayoría de las configuraciones típicas de la plataforma y la asignación de tareas (de la vista de proceso)
+        a los nodos físicos. Esta vista sólo debe utilizarse si el sistema es distribuido. Es un subconjunto del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_deployment_model_57DF1DF5.html" guid="{5981B6BE-2FD1-4984-AA94-2F7428439BA6}">Modelo de despliegue</a>.
+    </li>
+</ul>
+<p>
+    Las vistas de la arquitectura se muestran en el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">Documento de arquitectura de software</a>. Puede visualizar vistas
+    adicionales para expresar diferentes preocupaciones especiales: vista de interfaz de usuario, vista de seguridad, vista
+    de datos, etc. En sistemas simples, puede omitir algunas de las vistas contenidas en el modelo de vista 4+1.
+</p>
+<h2>
+    <a id="Architectural Focus" name="Architectural Focus">Atención en la arquitectura</a>
+</h2>
+<p>
+    Aunque las vistas de arriba pueden representar el diseño completo de un sistema, la arquitectura trata únicamente
+    algunos aspectos específicos:
+</p>
+<ul>
+    <li>
+        La <b>estructura</b> del modelo: los patrones organizativos, por ejemplo, la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/layering_59FD1CD4.html" guid="3.801315327549898E-305">Creación de
+        capas</a>.
+    </li>
+    <li>
+        Los <b>elementos esenciales</b>: <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">guiones
+        de uso</a> críticos, <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">clases</a> principales, mecanismos comunes, etc., en oposición a
+        todos los elementos presentes en el modelo.
+    </li>
+    <li>
+        Unos cuantos <b>casos de ejemplo clave</b> que muestran los flujos de control principales en el sistema.
+    </li>
+    <li>
+        Los <b>servicios</b>, para capturar aspectos de la línea de productos, modularidad y características opcionales.
+    </li>
+</ul>
+<p>
+    Las vistas de la arquitectura son, esencialmente, <b>abstracciones</b> o simplificaciones de todo el diseño, en las que
+    las características importantes pasan a ser más visibles y se dejan de lado los detalles. Estas características son
+    importantes cuando se razona sobre:
+</p>
+<ul>
+    <li>
+        La evolución del sistema, el paso al siguiente ciclo de desarrollo.
+    </li>
+    <li>
+        La reutilización de la arquitectura, o partes de ella, en el contexto de una línea de productos.
+    </li>
+    <li>
+        La evaluación de calidades suplementarias, como rendimiento, disponibilidad, portabilidad y seguridad.
+    </li>
+    <li>
+        La asignación de trabajo de desarrollo a equipos y subcontratistas.
+    </li>
+    <li>
+        Las decisiones sobre la inclusión de componentes asequibles.
+    </li>
+    <li>
+        La inserción en un sistema más amplio.
+    </li>
+</ul>
+<h3>
+    <a id="Architectural Patterns" name="Architectural Patterns">Patrones de arquitectura</a>
+</h3>
+<p>
+    Los <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/architectural_pattern_E2E8EB79.html" guid="_x7JZRtnmEdmO6L4XMImrsA"><b>patrones de arquitectura</b></a> son formatos preparados que resuelven problemas
+    arquitectónicos recurrentes. Una <b>infraestructura de la arquitectura</b> (middleware) es un conjunto de componentes
+    sobre los que puede construir una cierta clase de arquitectura. Muchas de las principales dificultades arquitectónicas
+    deberían resolverse en la infraestructura, normalmente destinada a un dominio específico: mandato y control, MIS,
+    sistema de control, etc.
+</p>
+<h4>
+    Ejemplos de patrones de arquitectura
+</h4>
+<p>
+    [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#BUS96" guid="7.755968586980351E-308">BUS96</a>] agrupa patrones de arquitectura en función de las características de los
+    sistemas en los que son más aplicables; una de las categorías trata temas de estructura más generales. La tabla muestra
+    las categorías que se presentan en [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#BUS96" guid="7.755968586980351E-308">BUS96</a>] y los
+    patrones que contienen.
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th id="col1" width="50%">
+                    Categoría
+                </th>
+                <th id="col2" width="50%">
+                    Patrón
+                </th>
+            </tr>
+            <tr>
+                <th id="row2" align="left" headers="col1" width="50%" rowspan="3">
+                    Estructura
+                </th>
+                <td headers="row2 col2" width="50%">
+                    Capas
+                </td>
+            </tr>
+            <tr>
+                <td headers="row2 col2" width="50%">
+                    Conductos y filtros
+                </td>
+            </tr>
+            <tr>
+                <td headers="row2 col2" width="50%">
+                    Pizarra
+                </td>
+            </tr>
+            <tr>
+                <th id="row3" align="left" headers="col1" width="50%">
+                    Sistemas distribuidos
+                </th>
+                <td headers="row3 col2" width="50%">
+                    Intermediario
+                </td>
+            </tr>
+            <tr>
+                <th id="row4" align="left" headers="col1" width="50%" rowspan="2">
+                    Sistemas interactivos
+                </th>
+                <td headers="row4 col2" width="50%">
+                    Modelo-Vista-Controlador
+                </td>
+            </tr>
+            <tr>
+                <td headers="row4 col2" width="50%">
+                    Presentación-Abstracción-Control
+                </td>
+            </tr>
+            <tr>
+                <th id="row5" align="left" headers="col1" width="50%" rowspan="2">
+                    Sistemas adaptables
+                </th>
+                <td headers="row5 col2" width="50%">
+                    Reflejo
+                </td>
+            </tr>
+            <tr>
+                <td headers="row5 col2" width="50%">
+                    Microkernel
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Dos de ellas se presentan aquí más detalladamente, para clarificar estas ideas; si desea obtener un tratamiento
+    completo, consulte [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#BUS96" guid="7.755968586980351E-308">BUS96</a>]. Los
+    patrones se presentan con el siguiente formato, muy utilizado:
+</p>
+<ul>
+    <li>
+        Nombre del patrón
+    </li>
+    <li>
+        Contexto
+    </li>
+    <li>
+        Problema 
+        <ul>
+            <li>
+                Fuerza la descripción de diferentes aspectos del problema que se deberían tener en cuenta
+            </li>
+        </ul>
+    </li>
+    <li>
+        Solución 
+        <ul>
+            <li>
+                Fundamentos
+            </li>
+            <li>
+                Contexto resultante
+            </li>
+            <li>
+                Ejemplos
+            </li>
+        </ul>
+    </li>
+</ul>
+<h5>
+    Nombre del patrón
+</h5>
+<p>
+    <b><i>Capas</i></b>
+</p>
+<h5>
+    Contexto
+</h5>
+<p>
+    Un sistema grande que requiere descomposición.
+</p>
+<h5>
+    Problema
+</h5>
+<p>
+    Un sistema que debe manejar asuntos en diferentes niveles de abstracción.<span style="mso-spacerun: yes">&nbsp;</span>
+    Por ejemplo: asuntos de control de hardware, asuntos de servicios comunes y asuntos específicos del dominio. No sería
+    nada deseable escribir componentes verticales que manejen asuntos en todos los niveles. Habría que manejar el mismo
+    asunto (posiblemente de manera incoherente) varias veces en componentes distintos.
+</p>
+<blockquote>
+    <p>
+        Fuerzas
+    </p>
+    <ul>
+        <li>
+            Las partes del sistema deberían ser sustituibles.
+        </li>
+        <li>
+            Los cambios de los componentes no deberían extenderse.
+        </li>
+        <li>
+            Las responsabilidades similares deberían agruparse juntas.
+        </li>
+        <li>
+            El tamaño de los componentes: puede que sea necesario descomponer los componentes complejos<font             size="3">.</font>
+        </li>
+    </ul>
+</blockquote>
+<h5>
+    Solución
+</h5>
+<p>
+    Estructure los sistemas en grupos de componentes que formen capas unos encima de otros. Haga que las capas superiores
+    utilicen únicamente los servicios de las capas de abajo (nunca los de las capas de arriba). Intente utilizar únicamente
+    los servicios de la capa inmediatamente inferior (no se salte capas, a no ser que las capas intermedias sólo sean de
+    paso por los componentes).
+</p>
+<blockquote>
+    <p>
+        Ejemplos:
+    </p>
+    <p>
+        1. Capas genéricas
+    </p>
+    <p align="center">
+        <img height="313" alt="Diagrama descrito en el contenido." src="./../../../core.base_rup/guidances/concepts/resources/layers.gif" width="508" border="0" />
+    </p>
+    <p align="left">
+        Una arquitectura de capas estricta indica que los elementos de diseño (clases, paquetes, subsistemas) sólo utilizan
+        los servicios de la capa inmediatamente inferior.&nbsp; Los servicios pueden incluir manejo de sucesos, manejo de
+        errores, acceso a bases de datos, etc. Contiene mecanismos más palpables, en oposición a las llamadas de nivel de
+        sistema operativo bruto documentadas en la capa inferior.
+    </p>
+    <p align="left">
+        2. Capas del sistema empresarial
+    </p>
+    <p align="left">
+        <img height="398" alt="Diagrama descrito en el contenido." src="./../../../core.base_rup/guidances/concepts/resources/layers2.gif" width="615" border="0" />
+    </p>
+    <p align="left">
+        El diagrama anterior muestra otro ejemplo de creación de capas, donde hay capas específicas de la aplicación
+        vertical, capas horizontales y capas de infraestructura. Tenga en cuenta que el objetivo es tener "tubos de estufa"
+        empresariales muy cortos y promover la similitud entre las aplicaciones.<span         style="mso-spacerun: yes">&nbsp;</span> Sino, puede tener a varias personas resolviendo el mismo problema,
+        potencialmente diferente.
+    </p>
+    <p align="left">
+        Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/layering_FCCD1BDA.html" guid="4.458864982057142E-306">Directriz: Creación
+        de capas</a> para obtener más información sobre este patrón.
+    </p>
+</blockquote>
+<h5 align="left">
+    Nombre del patrón
+</h5>
+<p align="left">
+    <b><i>Pizarra</i></b>
+</p>
+<h5 align="left">
+    Contexto
+</h5>
+<p align="left">
+    Un dominio en el que no hay ningún enfoque cerrado (algorítmico) conocido o viable para resolver un problema. Por
+    ejemplo, sistemas de vigilancia, reconocimiento de voz y sistemas AI.
+</p>
+<h5 align="left">
+    Problema
+</h5>
+<p align="left">
+    Para solucionar un problema que no puede solucionar ninguno de los agentes individuales, deben cooperar varios agentes
+    de resolución de problemas (agentes de conocimiento). El resultado del trabajo de los agentes individuales debe ser
+    accesible para todos los demás agentes, de manera que puedan evaluar si pueden contribuir a encontrar una solución y
+    enviar el resultado de su trabajo.
+</p>
+<blockquote>
+    <p align="left">
+        Fuerzas
+    </p>
+    <ul>
+        <li>
+            <p align="left">
+                La secuencia en la que los agentes de conocimiento pueden contribuir a resolver el problema no es
+                determinante y puede variar en función de las estrategias de resolución de problemas.
+            </p>
+        </li>
+        <li>
+            <p align="left">
+                La entrada de agentes diferentes (el resultado o soluciones parciales) puede tener diferentes
+                representaciones.
+            </p>
+        </li>
+        <li>
+            <p align="left">
+                Los agentes no se conocen directamente, pero pueden evaluar las contribuciones enviadas por los demás.
+            </p>
+        </li>
+    </ul>
+</blockquote>
+<h5 align="left">
+    Solución
+</h5>
+<p align="left">
+    Una serie de agentes de conocimiento tienen acceso a un almacén de datos compartidos llamado Pizarra. La Pizarra
+    proporciona una interfaz para inspeccionar y actualizar su contenido. El objeto / módulo de Control activa a los
+    agentes siguiendo una estrategia. Tras ser activado, un agente inspecciona la pizarra para ver si puede contribuir a
+    resolver el problema. Si el agente decide que puede contribuir, el objeto de control permite a los agentes poner la
+    solución parcial (o final) en la pizarra.
+</p>
+<blockquote>
+    <p align="left">
+        Ejemplo:
+    </p>
+    <p align="center">
+        <img height="264" alt="Diagrama descrito en el contenido." src="./../../../core.base_rup/guidances/concepts/resources/blkbd.gif" width="464" border="0" />
+    </p>
+    <p align="left">
+        Este diagrama muestra la vista estructural o estática modelada con UML; formaría parte de una colaboración con
+        parámetros, que después se vincula a parámetros reales para crear instancias del patrón.
+    </p>
+</blockquote>
+<h3>
+    <a id="Architectural Style" name="Architectural Style">Estilo de la arquitectura</a>
+</h3>
+<p>
+    Una arquitectura de software, o simplemente una vista de la arquitectura, puede tener un atributo llamado <b>estilo de
+    la arquitectura</b>, que reduce el conjunto de formatos posibles para escoger e impone un cierto grado de uniformidad
+    con la arquitectura. El estilo puede definirse mediante un conjunto de patrones, o mediante la elección de componentes
+    o conectores específicos como bloques de compilación básicos. Para un sistema dado, el estilo se puede capturar como
+    parte de la descripción de la arquitectura en una <b>guía de estilo de la arquitectura</b>, que se proporciona a través
+    del producto de trabajo <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_project_specific_guidelines_8DC8DA32.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">Directrices específicas del proyecto</a> en RUP. El estilo desempeña un
+    papel principal en la comprensibilidad y la integridad de la arquitectura.
+</p>
+<h3>
+    <a id="Architectural Blueprints" name="Architectural Blueprints">Anteproyecto de arquitectura</a>
+</h3>
+<p>
+    La representación gráfica de una vista de la arquitectura se llama <b>anteproyecto de arquitectura</b>. Para las
+    diferentes vistas que se describen arriba, los anteproyectos constan de los siguientes diagramas de lenguaje unificado
+    de modelado [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#UML01" guid="7.755968586980351E-308">UML01</a>]:
+</p>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/logical_view_C135365E.html" guid="6.901347907565747E-305">Vista lógica</a>. Diagramas de clase, máquinas de estado y diagramas de objeto
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/process_view_E3DD0B09.html" guid="6.45284088262517E-306">Vista de proceso</a>. Diagramas de clase y diagramas de objeto (tareas contenedoras,
+        procesos y hebras)
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/implementation_view_E373E3B6.html" guid="4.693519701160983E-305">Vista de implementación</a>. Diagramas de componentes
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/deployment_view_64CB74A6.html" guid="2.8416696002928195E-305">Vista de despliegue</a>. Diagramas de despliegue
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/use-case_view_11F15731.html" guid="6.820983346069146E-305">Vista de guión de uso</a>. Diagramas de guión de uso que representan guiones de uso,
+        actores y clases de diseño ordinarias; diagramas de secuencia que representan objetos de diseño y su colaboración
+    </li>
+</ul>
+<h3>
+    <a id="The Architecting Process" name="The Architecting Process">El proceso de arquitectura</a>
+</h3>
+<p>
+    En RUP, la arquitectura es principalmente un resultado del <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">análisis y el flujo de trabajo de diseño</a>. A medida que el proyecto
+    reactiva este flujo de trabajo, de iteración e iteración, la arquitectura evoluciona hasta que está perfeccionada y
+    pulida. Dado que todas las iteraciones incluyen integración y pruebas, la arquitectura es bastante robusta cuando se
+    entrega el producto. Esta arquitectura es uno de los focos principales de las iteraciones de la fase de <a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/elaboration_6A203A50.html" guid="_-kFhcCVuEdqSZ9OimJ-AzA">Elaboración</a>, al final de cual la arquitectura suele tener su línea base.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

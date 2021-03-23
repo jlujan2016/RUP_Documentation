@@ -1,0 +1,910 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Ingenier&iacute;a inversa de bases de datos relacionales</title>
+<meta content="Guideline" name="uma.type">
+<meta content="reverse-engineering_relational_databases" name="uma.name">
+<meta content="Ingenier&iacute;a inversa de bases de datos relacionales" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "1.338740134620651E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "1.338740134620651E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.338740134620651E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "1.338740134620651E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.338740134620651E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Ingenier&iacute;a inversa de bases de datos relacionales</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se describen los pasos implicados en la ingeniería inversa de una base de datos y la correlación de las tablas de modelo de datos resultantes con clases de diseño del modelo de datos.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Modelo de datos</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="bases de datos relacionales" text="ingeniería" name="XE_relational_databases__reverse_engineering" id="XE_relational_databases__reverse_engineering" class="index"></a><a key="modelo de diseño" text="bases de datos relacionales de ingeniería inversa" name="XE_design_model__reverse-engineering_relational_databases" id="XE_design_model__reverse-engineering_relational_databases" class="index"></a><a key="modelo de datos" text="bases de datos relacionales de ingeniería inversa" name="XE_data_model__reverse-engineering_relational_databases" id="XE_data_model__reverse-engineering_relational_databases" class="index"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">Introducción</a>
+</h3>
+<p>
+    En esta directriz se describen los pasos implicados en la ingeniería inversa de una base de datos y en la correlación
+    de las tablas de <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">modelo de datos</a> resultantes con <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">clases
+    de diseño</a> en el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">modelo
+    de diseño</a>.&nbsp;El <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">diseñador
+    de base de datos</a> puede utilizar este proceso para generar el desarrollo de modificaciones para la base de datos
+    como parte de un ciclo de desarrollo de evolución. El diseñador de base de datos debe gestionar el proceso de
+    ingeniería inversa a lo largo del ciclo de vida de desarrollo del proyecto. &nbsp;En muchos casos, el proceso de
+    ingeniería inversa se lleva a cabo en una fase temprana del ciclo de vida del proyecto y, a continuación, los cambios
+    en el diseño de datos se gestionan de forma incremental, sin necesidad de realizar ingeniería inversa posterior de la
+    base de datos.
+</p>
+<p>
+    Los pasos más importantes del proceso para ingeniería inversa de una base datos y la transformación de los elementos
+    del modelo de datos resultantes en elementos del modelo de diseño son los siguientes:
+</p>
+<ul>
+    <li>
+        Crear un modelo de datos físico que contenga tablas para representar el diseño físico de datos persistentes en la
+        base de datos. &nbsp;Este paso se puede llevar a cabo automáticamente utilizando las herramientas que se
+        proporcionan con RDBMS (sistema de gestión de bases de datos relacionales), o bien, a través de las herramientas de
+        modelado visual más modernas.
+    </li>
+    <li>
+        Transformar las tablas del modelo de datos físico en clases de diseño del modelo de datos. &nbsp;Este paso se puede
+        llevar a cabo por medio de la combinación del soporte de herramientas automatizadas para la transformación inicial
+        y, a continuación, realizando ajustes manuales.
+    </li>
+    <li>
+        Definir asociaciones entre las clases en el modelo de diseño.
+    </li>
+    <li>
+        Definir operaciones adecuadas en las clases del modelo de diseño basadas en las acciones llevadas a cabo en los
+        elementos del modelo de datos correspondiente.
+    </li>
+    <li>
+        Agrupar las clases del modelo de diseño en subsistemas y paquetes, según proceda.
+    </li>
+</ul>
+<h3>
+    <a id="Reverse Engineering RDBMS Database or DDL script to Generate a Data Model" name="Reverse Engineering RDBMS Database or DDL script to Generate a Data Model">Ingeniería inversa de base de datos
+    RDBMS o script DDL para generar un modelo de datos</a>
+</h3>
+<p>
+    Normalmente, el proceso de ingeniería inversa de script DDL (lenguaje de definición de datos) o de bases de datos
+    produce un conjunto de elementos de modelo (por ejemplo, tablas, vistas o procedimientos almacenados). Dependiendo de
+    la complejidad de la base de datos, es posible que el diseñador de bases de datos deba particionar los elementos de
+    modelo de ingeniería inversa en paquetes de área temática que contengan conjuntos de tablas relacionados de forma
+    lógica.
+</p>
+<h3>
+    <a id="Transforming Data Model to Design Model" name="Transforming Data Model to Design Model">Transformación del
+    modelo de datos en modelo de diseño</a>
+</h3>
+<p>
+    Se puede seguir el procedimiento siguiente para producir clases de diseño a partir de elementos de modelo en el modelo
+    de datos. La creación de réplicas de la estructura de la base de datos en un modelo de clase es relativamente sencilla.
+    En el proceso que se indica más abajo se describe el algoritmo para transformar elementos del modelo de datos en
+    elementos del modelo de diseño.
+</p>
+<p>
+    En la tabla siguiente se muestra un resumen de la correlación general entre elementos del modelo de diseño y elementos
+    del modelo de datos.
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="50%">
+                    <p class="Text">
+                        <b>Elemento del modelo de datos</b>&nbsp;
+                    </p>
+                </th>
+                <th scope="col" width="50%">
+                    <p class="Text">
+                        <b>Elemento del modelo de diseño correspondiente</b>&nbsp;
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="50%">
+                    Tabla&nbsp;
+                </td>
+                <td width="50%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Clase</a>&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    Columna&nbsp;
+                </td>
+                <td width="50%">
+                    Atributo&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        Relación de no identificación&nbsp;
+                    </p>
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/association_98710829.html" guid="5.540135518285335E-305">Asociación</a>&nbsp;
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        Tabla de intersección
+                    </p>&nbsp;
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        Clase de asociación
+                    </p>
+                    <p class="Text">
+                        Asociación varios a varios
+                    </p>
+                    <p class="Text">
+                        Asociación calificada&nbsp;
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        Relación de identificación&nbsp;
+                    </p>
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/aggregation_A53E33AB.html" guid="1.1538495077622037E-304">Agregación</a>&nbsp;
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        Cardinalidad&nbsp;
+                    </p>&nbsp;
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        Multiplicidad&nbsp;
+                    </p>&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    Comprobar restricción con una cláusula enumerada&nbsp;
+                </td>
+                <td width="50%">
+                    Clase &lt;&lt;ENUM&gt;&gt;&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    Esquema&nbsp;
+                </td>
+                <td width="50%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_package_8376BC8E.html" guid="{80CC5437-F481-487B-A69B-957D9D236D8D}">Paquete</a>&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Algunos elementos de modelo del modelo de datos no tienen correlación directa en el modelo de diseño. Estos elementos
+    incluyen los espacios de tablas y la base de datos en sí misma, que modelan las características de almacenamiento
+    físico de la base de datos y se representan como componentes. Otro elemento son las vistas de la base de datos, que son
+    tablas "virtuales" sin significado en el modelo de diseño. &nbsp;Por último, los índices de las claves principales de
+    las tablas y las funciones de desencadenamiento de la base de datos, que se utilizan para optimizar el funcionamiento
+    de las bases de datos, y sólo tienen significado en el contexto de la base de datos y el modelo de datos.
+</p>
+<h4>
+    <a id="Transform a Table to a Class" name="Transform a Table to a Class">Transformar una tabla en una clase</a>
+</h4>
+<p>
+    Para cada tabla que desee transformar, cree una clase que la represente. Para cada columna, cree un atributo en la
+    clase con el tipo de datos adecuado. Intente que el tipo de datos del atributo y el tipo datos de la columna asociada
+    coincidan lo máximo posible.
+</p>
+<p class="exampleheading">
+    Ejemplo
+</p>
+<p class="example">
+    Considere la tabla de base de datos <b>Cliente</b>, con la estructura siguiente de la figura que se muestra más abajo:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="40%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th headers="col" width="55%">
+                    <u><b>Nombre de columna</b></u>
+                </th>
+                <th headers="col" width="45%">
+                    <u><b>Tipo de datos</b></u>
+                </th>
+            </tr>
+            <tr>
+                <td width="55%">
+                    ID_Cliente
+                </td>
+                <td width="45%">
+                    Número
+                </td>
+            </tr>
+            <tr>
+                <td width="55%">
+                    Nombre
+                </td>
+                <td width="45%">
+                    Varchar
+                </td>
+            </tr>
+            <tr>
+                <td width="55%">
+                    Calle
+                </td>
+                <td width="45%">
+                    Varchar
+                </td>
+            </tr>
+            <tr>
+                <td width="55%">
+                    Ciudad
+                </td>
+                <td width="45%">
+                    Varchar
+                </td>
+            </tr>
+            <tr>
+                <td width="55%">
+                    Estado/Provincia
+                </td>
+                <td width="45%">
+                    Char(2)
+                </td>
+            </tr>
+            <tr>
+                <td width="55%">
+                    Código postal
+                </td>
+                <td width="45%">
+                    Varchar
+                </td>
+            </tr>
+            <tr>
+                <td width="55%">
+                    País
+                </td>
+                <td width="45%">
+                    Varchar
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p class="picturetext">
+    Definición de tabla para la tabla <b>Cliente</b>
+</p>
+<p class="example">
+    Empezando a partir de este punto, se crea una clase, <b>Cliente</b>, con la estructura que se muestra en la figura
+    siguiente:
+</p>
+<p class="example" align="center">
+    <img height="154" alt="Definición de la clase Cliente" src="./../../../core.base_rup/guidances/guidelines/resources/rdb-oo1.gif" width="147" />
+</p>
+<p class="picturetext">
+    Clase <b>Cliente</b> inicial
+</p>
+<p class="example">
+    En esta clase <b>Cliente</b> inicial, en la tabla <b>Cliente</b> existe un atributo para cada columna. Cada atributo
+    tiene visibilidad <b>public</b>, puesto que se puede consultar cualquiera de las columnas de la tabla de origen.
+</p>
+<p class="example">
+    Observe que el icono "+" listado a la izquierda del atributo indica que el atributo es 'public'; por omisión, todos los
+    atributos derivados de las tablas RDBMS deben ser públicos puesto que, por lo general, RDBMS permite consultar
+    cualquier columna sin restricciones.
+</p>
+<h3>
+    <a id="Identify Embedded or Implicit Classes" name="Identify Embedded or Implicit Classes">Identificación de clases
+    implícitas o incorporadas</a>
+</h3>
+<p>
+    Con frecuencia, la clase que es resultado de la correlación de tabla-clase directa contiene atributos que se pueden
+    separar en una clase separada, especialmente, en aquellos casos en los que los atributos aparecen en varias clases
+    transformadas. Estos "atributos repetidos" pueden ser resultado de la desnormalización de tablas por motivos de
+    rendimiento, o bien, de un modelo de datos simplificado en exceso. En estos casos, divida la clase correspondiente en
+    dos o más clases que representen una vista normalizadas de las tablas.
+</p>
+<p class="exampleheading">
+    Ejemplo
+</p>
+<p class="example">
+    Después de definir la clase <b>Cliente</b>, más arriba, se puede definir una clase <b>Dirección</b> que contenga toda
+    la información relacionada con la dirección (dando por supuesto que hay otros elementos con direcciones en el sistema),
+    lo que dejaría las clases siguientes:
+</p>
+<p class="example" align="center">
+    <img height="150" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/rdb-oo2.gif" width="433" />
+</p>
+<p class="picturetext">
+    clase <b>Cliente</b> revisada, con la clase <b>Dirección</b> extraída
+</p>
+<p class="example">
+    La asociación que se dibuja entre ambas es una <b>agregación</b>, puesto que la dirección del cliente se puede
+    considerar como <b>parte</b> del cliente.
+</p>
+<h3>
+    <a id="Handle Foreign-Key Relationships" name="Handle Foreign-Key Relationships">Manejo de relaciones de claves
+    externas</a>
+</h3>
+<p>
+    Para cada relación de clave externa de la tabla, cree una asociación entre las clases asociadas, eliminando el atributo
+    de la clase que se ha correlacionado con la columna de claves externas. Si la columna de claves externas se ha
+    representado, inicialmente, como un atributo, elimínelo de la clase.
+</p>
+<p class="exampleheading">
+    Ejemplo
+</p>
+<p class="example">
+    Suponga la estructura de la tabla <b>Pedido</b> listada más abajo:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="35%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="50%">
+                    <u><b>Nombre de columna&nbsp;</b></u>
+                </th>
+                <th scope="col" width="50%">
+                    <u><b>Tipo de datos&nbsp;</b></u>
+                </th>
+            </tr>
+            <tr>
+                <td width="50%">
+                    Número&nbsp;
+                </td>
+                <td width="50%">
+                    Número&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    ID_Cliente&nbsp;
+                </td>
+                <td width="50%">
+                    Varchar&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p class="picturetext">
+    Estructura de la tabla <b>Pedido</b>
+</p>
+<p class="example">
+    En la tabla <b>Pedido</b> listada más abajo, la columna <b>ID_Cliente</b> es una <b>referencia de clave externa</b>;
+    esta columna contiene el valor de clave principal del cliente asociado al pedido, tal como se representa en el modelo
+    de diseño que se muestra más abajo:
+</p>
+<p class="example" align="center">
+    <img height="209" alt="El diagrama UML se describe a continuación." src="./../../../core.base_rup/guidances/guidelines/resources/rdb-oo3.gif" width="156" />
+</p>
+<p class="picturetext">
+    Representación de las relaciones de claves externas en el modelo de diseño
+</p>
+<p class="example">
+    La clave externa se representa como una asociación entre las clases <b>Pedido</b> y <b>Elemento</b>.
+</p>
+<h3>
+    <a id="Handle Many-to-Many Relationships" name="Handle Many-to-Many Relationships">Manejo de relaciones de varios a
+    varios</a>
+</h3>
+<p>
+    Los modelos de datos RDBMS representan relaciones de varios a varios con lo que ha dado en llamar una <b>tabla de
+    unión</b>, o bien, una <b>tabla de asociación</b>. Estas tablas permiten representar relaciones de varios a varios por
+    medio de una tabla intermedia que contiene las claves principales de dos tablas diferentes que se pueden unir entre sí.
+    El motivo por el que se necesitan tablas de unión es que una referencia de clave externa sólo puede contener una
+    referencia a un solo valor de clave externa; una sola fila se puede relacionar con otras filas de otra tabla, pero se
+    necesita una tabla de unión para asociarlas.
+</p>
+<p class="exampleheading">
+    Ejemplo
+</p>
+<p class="example">
+    Considere el caso de <b>Productos</b>, que puede proporcionar uno de varios <b>Proveedores</b>, y cualquier
+    <b>Proveedor</b> puede ofrecer cualquier número de <b>Productos</b>. Las tablas <b>Productos</b> y <b>Proveedores</b>
+    tienen la estructura que se ha definido más abajo:
+</p>
+<div align="center">
+    <table cellspacing="0" cellpadding="0" width="85%" border="0">
+        <tbody>
+            <tr>
+                <td valign="top" align="middle">
+                    <table                     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"                      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="300" bordercolorlight="#808080"                     border="1">
+                        <caption>
+                            Tabla Productos
+                        </caption>
+                        <tbody>
+                            <tr>
+                                <th scope="col" width="50%">
+                                    <u><b>Nombre de columna</b></u>
+                                </th>
+                                <th scope="col" width="50%">
+                                    <u><b>Tipo de datos</b></u>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    ID_Producto
+                                </td>
+                                <td width="20%">
+                                    Número
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Nombre
+                                </td>
+                                <td width="20%">
+                                    Varchar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Descripción
+                                </td>
+                                <td width="20%">
+                                    Varchar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Precio
+                                </td>
+                                <td width="20%">
+                                    Número
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td valign="top" align="middle">
+                    <table                     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"                      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="300" bordercolorlight="#808080"                     border="1">
+                        <caption>
+                            Tabla Proveedores
+                        </caption>
+                        <tbody>
+                            <tr>
+                                <th scope="col" width="50%">
+                                    <u><b>Nombre de columna</b></u>
+                                </th>
+                                <th scope="col" width="50%">
+                                    <u><b>Tipo de datos</b></u>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    ID_Proveedor
+                                </td>
+                                <td width="20%">
+                                    Número
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Nombre
+                                </td>
+                                <td width="20%">
+                                    Varchar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Calle
+                                </td>
+                                <td width="20%">
+                                    Varchar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Ciudad
+                                </td>
+                                <td width="20%">
+                                    Varchar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Estado/Provincia
+                                </td>
+                                <td width="20%">
+                                    Char(2)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Código postal
+                                </td>
+                                <td width="20%">
+                                    Varchar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    País
+                                </td>
+                                <td width="20%">
+                                    Varchar
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p class="picturetext">
+    Definiciones de las tablas Productos y Proveedores
+</p>
+<p class="example" align="left">
+    Con el objeto de enlazar ambas tablas entre sí para buscar los productos que ofrece un proveedor determinado, se
+    necesita una tabla <b>Productos-Proveedor</b>, que se definen en la tabla siguiente:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="45%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th id="col1" align="middle" width="100%" colspan="2">
+                    <b>Tabla Producto-Proveedor</b>
+                </th>
+            </tr>
+            <tr>
+                <td headers="col1" width="60%">
+                    <u><b>Nombre de columna&nbsp;</b></u>
+                </td>
+                <td headers="col1" width="40%">
+                    <u><b>Tipo de datos&nbsp;</b></u>
+                </td>
+            </tr>
+            <tr>
+                <td headers="col1" width="60%">
+                    ID_Producto&nbsp;
+                </td>
+                <td headers="col1" width="40%">
+                    Número&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td headers="col1" width="60%">
+                    ID_Proveedor&nbsp;
+                </td>
+                <td headers="col1" width="40%">
+                    Número&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p class="picturetext">
+    Definición de la tabla Producto-Proveedor
+</p>
+<p class="example">
+    Esta <b>tabla de unión</b> contiene las claves principales de los productos y los proveedores, enlazándolos entre sí.
+    Una fila de la tabla indica que un proveedor determinado ofrece un producto concreto. Todas las filas cuyo ID_Proveedor
+    coincide con un ID de proveedor específico proporcionan un listado de todos los productos que ofrece dicho proveedor.
+</p>
+<p class="example">
+    En el modelo de diseño, esta tabla intermedia es redundante, puesto que un modelo de objeto puede representar
+    asociaciones de varios a varios de forma directa. En la figura siguiente se muestran las clases <b>Proveedor</b> y
+    <b>Producto</b> y sus relaciones, junto con la clase <b>Dirección</b>, que se extrae del <b>Proveedor</b>, tal como se
+    ha explicado más arriba.
+</p>
+<p class="example" align="center">
+    <img height="301" alt="Diagrama UML descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/rdb-oo4.gif" width="409" />
+</p>
+<p class="picturetext">
+    Representación de las clases Producto y Proveedor
+</p>
+<h3>
+    <a id="Introduce Generalization" name="Introduce Generalization">Introducción de la generalización</a>
+</h3>
+<p>
+    A menudo, se encuentran tablas cuya estructura es similar. En el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">modelo de
+    datos</a> no hay ningún concepto de generalización, por lo que no existe ningún procedimiento para representar que dos
+    o más tablas tienen una estructura en común. A veces, la estructura común es resultado de la desnormalización para el
+    rendimiento, como sucedía en el caso anterior con la tabla <b>Dirección</b> "implícita" que se ha extraído a una clase
+    separada. En otros casos, las tablas comparten características más esenciales que se pueden extraer a una clase padre
+    generalizada con dos o más subclases. Para buscar oportunidades de generalización, observe las columnas repetidas en
+    varias tablas, donde las tablas presentan más similitudes que diferencias.
+</p>
+<p class="exampleheading">
+    Ejemplo
+</p>
+<p class="example">
+    Considere las tablas siguientes, <b>SoftwareProduct</b> y <b>HardwareProduct</b>, tal como se muestran más abajo:
+</p>
+<div align="center">
+    <table cellspacing="0" cellpadding="0" width="85%" border="0">
+        <tbody>
+            <tr>
+                <td align="middle">
+                    <table                     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"                      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="300" bordercolorlight="#808080"                     border="1">
+                        <caption>
+                            Tabla Productos de software
+                        </caption>
+                        <tbody>
+                            <tr>
+                                <th scope="col" width="20%">
+                                    <u><b>Nombre de columna&nbsp;</b></u>
+                                </th>
+                                <th scope="col" width="20%">
+                                    <u><b>Tipo de datos&nbsp;</b></u>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <font color="#0000ff">ID_Producto&nbsp;</font>
+                                </td>
+                                <td width="20%">
+                                    <font color="#0000ff">Número&nbsp;</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <font color="#0000ff">Nombre&nbsp;</font>
+                                </td>
+                                <td width="20%">
+                                    <font color="#0000ff">Varchar&nbsp;</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <font color="#0000ff">Descripción&nbsp;</font>
+                                </td>
+                                <td width="20%">
+                                    <font color="#0000ff">Varchar&nbsp;</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <font color="#0000ff">Precio&nbsp;</font>
+                                </td>
+                                <td width="20%">
+                                    <font color="#0000ff">Número&nbsp;</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Versión&nbsp;
+                                </td>
+                                <td width="20%">
+                                    Número&nbsp;
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td align="middle">
+                    <table                     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"                      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="300" bordercolorlight="#808080"                     border="1">
+                        <caption>
+                            Tabla Productos de hardware
+                        </caption>
+                        <tbody>
+                            <tr>
+                                <th scope="col" width="20%">
+                                    <u><b>Nombre de columna&nbsp;</b></u>
+                                </th>
+                                <th scope="col" width="20%">
+                                    <u><b>Tipo de datos&nbsp;</b></u>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <font color="#0000ff">ID_Producto&nbsp;</font>
+                                </td>
+                                <td width="20%">
+                                    <font color="#0000ff">Número&nbsp;</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <font color="#0000ff">Nombre&nbsp;</font>
+                                </td>
+                                <td width="20%">
+                                    <font color="#0000ff">Varchar&nbsp;</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <font color="#0000ff">Descripción&nbsp;</font>
+                                </td>
+                                <td width="20%">
+                                    <font color="#0000ff">Varchar&nbsp;</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <font color="#0000ff">Precio&nbsp;</font>
+                                </td>
+                                <td width="20%">
+                                    <font color="#0000ff">Número&nbsp;</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Versión&nbsp;
+                                </td>
+                                <td width="20%">
+                                    Número&nbsp;
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <br />
+    </p>
+</div>
+<p class="picturetext">
+    Tablas SoftwareProduct y HardwareProduct
+</p>
+<p class="example">
+    Observe que las columnas resaltadas en azul son idénticas; ambas tablas comparten gran parte de la definición, y
+    presentan ligeras diferencias. Se puede representar extrayendo una clase <b>Producto</b>, con <b>SoftwareProduct</b> y
+    <b>HardwareProduct</b> como subclases del <b>Producto</b>, tal como se muestra en la figura siguiente:
+</p>
+<p class="example" align="center">
+    <img height="231" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/rdb-oo5.gif" width="320" />
+</p>
+<p class="picturetext">
+    Clases SoftwareProduct y HardwareProduct, mostrando la generalización de la clase Producto.
+</p>
+<p class="example">
+    Al unir todas las definiciones de clases entre sí, la figura siguiente muestra un diagrama de clase consolidado para el
+    sistema de Entrada de pedido (sólo las clases principales).
+</p>
+<p class="example" align="center">
+    <img height="588" alt="Diagrama UML complejo descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/rdb-oo6.gif" width="643" />
+</p>
+<p class="picturetext">
+    Diagrama de clase consolidado para el sistema de entrada de pedido
+</p>
+<h3>
+    <a id="Replicating RDBMS Behavior in the Design Model" name="Replicating RDBMS Behavior in the Design Model">Creación
+    de réplicas del comportamiento de RDBMS en el modelo de diseño</a>
+</h3>
+<p>
+    La creación de réplicas es más difícil puesto que, normalmente, las bases de datos relacionales no están orientadas a
+    objetos y parecen no tener nada análogo con las operaciones realizadas en una clase del modelo de objeto. Los pasos
+    siguientes le pueden ayudar a volver a construir el comportamiento de las clases identificadas más arriba:
+</p>
+<ol>
+    <li>
+        <b>Crear operaciones para obtener un establecer cada atributo.</b> Debe haber un modo de establecer, cambiar y
+        consultar los valores de los atributos de los objetos. Puesto que el único procedimiento para acceder a los
+        atributos de un objeto es por medio de las operaciones que proporciona la clase, se deben definir dichas
+        operaciones en la clase. Al crear las operaciones que establecen el valor de un atributo, asegúrese de que
+        incorpora todas las restricciones de validación que pueden operar en la columna asociada. Si no existen
+        restricciones de validación, elija sólo que se represente el hecho de que los atributos se pueden <b>obtener</b> y
+        <b>establecer</b> al hacer que tengan visibilidad pública, tal como se ha realizado en los diagramas anteriores
+        (con el icono a la izquierda del nombre del atributo).
+    </li>
+    <li>
+        <b>Crear una operación en la clase para cada procedimiento almacenado que opere en la tabla asociada.</b> Los
+        procedimientos almacenados son rubrutinas ejecutables que se ejecutan en el propio DBMS. Esta lógica se debe
+        convertir al modelo de diseño. Si el procedimiento almacenado sólo opera en una clase, cree una operación en la
+        clase con los mismos parámetros y el mismo tipo de retorno que el procedimiento almacenado. Documente el
+        comportamiento del procedimiento almacenado en la operación, asegurándose de que anota en la descripción del
+        <b>método</b> que el procedimiento almacenado implementa la operación.
+    </li>
+    <li>
+        <b>Crear operaciones para gestionar asociaciones entre clases.</b> Cuando existe una asociación entre dos clases,
+        debe haber un modo de crear, gestionar y eliminar asociaciones. Las asociaciones entre objetos se gestionan a
+        través de referencias a objetos, así, para crear una asociación entre <b>Order</b> y <b>LineItem</b> (es decir,
+        para añadir <b>LineItem</b> a <b>Order</b>), se invoca una operación en <b>Order</b>, pasando <b>LineItem</b> como
+        un argumento (es decir, <b>Order.add(aLineItem)</b>). También debe haber procedimientos para eliminar y actualizar
+        la asociación (es decir, <b>Order.remove(aLineItem)</b> y <b>Order.change(aLineItem,aNewLineItem)</b>).
+    </li>
+    <li>
+        <b>Manejar supresión de objetos.</b> Si el lenguaje de destino ofrece soporte para la supresión explícita, añada
+        comportamiento al destructor de la clase que implementa la comprobación de la integridad referencial. En aquellos
+        casos en los que existen restricciones de integridad referencial en la base de datos, por ejemplo <b>cascade
+        delete</b>, se deben crear réplicas del comportamiento en las clases adecuadas. Por ejemplo, la base de datos puede
+        definir una restricción que indique que cada vez que se suprima un <b>Order</b>, también se eliminen todos los
+        <b>LineItems</b> asociados. Si el lenguaje de destino admite la recopilación de basura, cree un mecanismo por el
+        que se eliminen las filas de las tablas cuando se elimine el objeto asociado por medio de la recopilación de
+        basura. Tenga en cuenta que parece más difícil de lo que parece (y parece difícil), puesto que debe implementar un
+        mecanismo que garantice que ningún cliente de la base de datos tenga referencias al objeto que va a recopilar la
+        basura; no es suficiente para depender de las posibilidades de la recopilación de basura de la máquina
+        virtual/entorno de ejecución, puesto que es, simplemente, una vista del cliente.
+    </li>
+    <li>
+        <b>Manejar el comportamiento que implican las consultas.</b> Examine las sentencias Seleccionar que acceden a la
+        tabla para ver cómo se recupera y manipula la información. Para cada columna que devuelve una sentencia Seleccionar
+        directamente, establezca la propiedad <b>public</b> del atributo asociado en <b>true</b>; todos los demás atributos
+        deben ser <b>private</b>. Para cada columna calculada en una sentencia Seleccionar, cree una operación en la clase
+        asociada para calcular y devolver el valor. Cuando considere las sentencias Seleccionar, incluya también las
+        sentencias Seleccionar incorporadas en definiciones de Ver.
+    </li>
+</ol>
+<h3>
+    <a id="Organize Elements in the Design Model" name="Organize Elements in the Design Model">Organizar elementos en el
+    modelo de diseño</a>
+</h3>
+<p>
+    Las clases de diseño que se crean a partir de las transformaciones de tabla en clase se deben organizar en <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_package_8376BC8E.html" guid="{80CC5437-F481-487B-A69B-957D9D236D8D}">paquetes de diseño</a> o <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">subsistemas de diseño</a> adecuados en el modelo de diseño, según
+    proceda, en base a la estructura arquitectónica global de la aplicación. &nbsp;Consulte los apartados <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/layering_59FD1CD4.html" guid="3.801315327549898E-305">Concepto: Capas</a> y <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/software_architecture_4269A354.html" guid="3.066252221588648E-305">Concepto:
+    Arquitectura de software</a>, donde se proporciona una visión general de la arquitectura de la aplicación.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

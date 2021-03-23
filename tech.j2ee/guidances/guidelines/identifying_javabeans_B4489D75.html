@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Identificaci&oacute;n de JavaBeans</title>
+<meta content="Guideline" name="uma.type">
+<meta content="identifying_javabeans" name="uma.name">
+<meta content="Identificaci&oacute;n de JavaBeans" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.8184208504373704E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.8184208504373704E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Identificaci&oacute;n de JavaBeans</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la forma en que identificar y modelar JavaBeans para una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identificar elementos de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    Esta directriz se centra en identificar y modelar JavaBeans.
+</p>
+<p>
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/javabean_D488CF3B.html" guid="7.536447688812142E-306">Concepto:
+    JavaBeans</a> para obtener más información.
+</p>
+<h3>
+    <a id="Identifying_JavaBeans" name="Identifying_JavaBeans"></a>Identificación de JavaBeans
+</h3>
+<p>
+    Los JavaBeans son clases de Java, que se escriben de acuerdo a los convenios del modelo de componentes de JavaBeans.
+</p>
+<p>
+    Los JavaBeans se pueden utilizar en su forma más simple, donde un JavaBean expone propiedades mediante sus métodos
+    getter y setter, pero sin desencadenar sucesos. Un JavaBean de este tipo estaría dentro de las prácticas recomendadas
+    de denominación de métodos getter y setter para campos de clases Java sencillas. Este tipo de JavaBean se utiliza
+    habitualmente en las JSP (Java Server Pages), donde actúa como transporte de datos de un formulario en una página web.
+</p>
+<p>
+    Es posible añadir un nivel adicional de sofisticación si se desea permitir que otros sean notificados sobre los cambios
+    o intentos de cambio en una propiedad de un JavaBean. En este caso, se debe diseñar el JavaBean de forma que
+    desencadene sucesos que describen el cambio de la propiedad.
+</p>
+<p>
+    Los JavaBeans que desencadenan (y manejan) sucesos son utilizados habitualmente en infraestructuras de interfaces de
+    usuario como Swing, donde se utilizan para implementar el patrón arquitectónico de modelo-vista-controlador. Los
+    JavaBeans que representan componentes visuales a menudo tienen clases adicionales como personalizadores de bean, que
+    permiten la modificación de instancias de JavaBean en tiempo de diseño.<br />
+</p>
+<h3>
+    <a id="Modeling_JavaBeans" name="Modeling_JavaBeans"></a>Modelado de JavaBeans
+</h3>
+<p>
+    Los Java Beans se modelan como clases de Java.
+</p>
+<p>
+    Las propiedades de los JavaBeans no se modelan de una forma explícita; en lugar de ello, se identifican mediante
+    convenios de denominación.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama UML mostrando las propiedades de Customer"         src="./../../../tech.j2ee/guidances/concepts/resources/customer.gif" />
+    </p>
+</blockquote>
+<p>
+    En los diagramas de diseño, es útil utilizar dependencias que muestren qué clases desencadenan sucesos o qué clases
+    manejan sucesos. Los escuchas de sucesos se presentan como interfaces que realizan implementaciones concretas.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama UML en que se muestra escuchas de sucesos. "         src="./../../../tech.j2ee/guidances/concepts/resources/event_example.gif" />
+    </p>
+</blockquote>
+<p>
+    <br />
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.inferdata.com" target="_blank"><img alt="logotipo de Inferdata"                 src="./../../../tech.j2ee/guidances/supportingmaterials/resources/inferdata.gif" width="100" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Contenido desarrollado o parcialmente desarrollado por <a href="http://www.inferdata.com/" target="_blank">Inferdata Corporation</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; Copyright&nbsp;IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concepto: Bases de datos relacionales y orientaci&oacute;n de objetos</title>
+<meta content="Concept" name="uma.type">
+<meta content="relational_databases_and_object_orientation" name="uma.name">
+<meta content="Bases de datos relacionales y orientaci&oacute;n de objetos" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{87EE3BF5-17CA-4211-BD3D-32F361E58550}", "3.2166604011257303E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "3.2166604011257303E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{87EE3BF5-17CA-4211-BD3D-32F361E58550}", "3.2166604011257303E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{87EE3BF5-17CA-4211-BD3D-32F361E58550}", "3.2166604011257303E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.2166604011257303E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concepto: Bases de datos relacionales y orientaci&oacute;n de objetos</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Este concepto proporciona una visión general de modelos de objeto y modelos de datos relacionales, y proporciona una descripción resumida de una infraestructura de permanencia.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/database_design_8552DD3.html" guid="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}">Diseño de base de datos</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">Diseñador de base de datos</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="Concepts: Relational Databases and Object Orientation" name="Concepts: Relational Databases and Object Orientation"></a> 
+<h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    Este documento de conceptos proporciona una visión general de modelos de objeto y modelos de datos relacionales, y
+    proporciona una descripción resumida de una infraestructura de permanencia.
+</p>
+<h3>
+    <a id="Relational Databases and Object Orientation" name="Relational Databases and Object Orientation"></a>Bases de
+    datos relacionales y orientación de objetos
+</h3>
+<p>
+    Las bases de datos relacionales y la orientación de objetos no son totalmente compatibles. Representan dos vistas
+    diferentes del mundo: en un RDBMS, sólo se ven datos; en un sistema orientado a objetos, sólo se ve el comportamiento.
+    No se trata de que una perspectiva sea mejor que la otra: el modelo orientado a objetos tiende a funcionar bien en
+    sistemas con comportamiento complejo y comportamiento específico del estado en el que los datos son secundarios, o
+    sistemas en los que se accede a los datos por navegación en una jerarquía natural (por ejemplo, facturas de
+    materiales). El modelo de RDBMS se adapta a los sistemas y aplicaciones de creación de informes que tienen relaciones
+    dinámicas o ad-hoc.
+</p>
+<p>
+    El hecho real de la cuestión es que se almacena un montón de información en bases de datos relacionales y, si las
+    aplicaciones orientadas a objetos desean acceder a dichos datos, deben poder leer y escribir en un RDBMS. Además, los
+    sistemas orientados a objetos suelen tener que compartir datos con sistemas que no están orientados a objetos. Por lo
+    tanto, es normal utilizar un RDBMS como mecanismo de compartimiento.
+</p>
+<p>
+    Mientras que los diseños relacional y orientado a objetos tienen algunas características en común (un atributo de
+    objetos es, conceptualmente, similar a una columna de entidades), las diferencias fundamentales hacen que la
+    integración perfecta suponga un desafío. La diferencia fundamental es que los modelos de datos muestran datos (mediante
+    los valores de las columnas) y los modelos de objeto ocultan datos (los encapsulan tras las interfaces públicas).
+</p>
+<h4>
+    <a id="The Relational Data Model" name="The Relational Data Model">El modelo de datos relacionales</a>
+</h4>
+<p>
+    El modelo relacional está formado por entidades y relaciones. Una entidad puede ser una tabla física o un proyección
+    lógica de varias tablas, también conocida como vista. La figura de abajo ilustra las tablas LINEITEM, ORDER y PRODUCT y
+    las diferentes relaciones entre ellas. Un modelo relacional tiene los siguientes elementos:
+</p>
+<p align="center">
+    <img src="./../../../core.base_rup/guidances/concepts/resources/md_dmdl1.gif" alt="Diagrama detallado en el contenido." width="440" height="164" />
+</p>
+<p class="picturetext">
+    Un modelo relacional
+</p>
+<p>
+    Una entidad tiene columnas. Cada columna se identifica mediante un nombre y un tipo. En la figura de arriba, la entidad
+    LINEITEM tiene las columnas Id_LíneaDetalle (la clave principal), Descripción, Precio, Cantidad, Id_Producto y
+    Id_Pedido (las dos últimas son claves externas que enlazan la entidad LINEITEM con las entidades ORDER y PRODUCT).
+</p>
+<p>
+    Una entidad tiene registros o filas. Cada fila representa un conjunto exclusivo de información que normalmente
+    representa los datos permanentes de un objeto.&nbsp;
+</p>
+<p>
+    Cada entidad tiene una o varias claves principales. Las claves principales identifican de forma exclusiva a cada
+    registro (por ejemplo, ID es la clave principal de la tabla LINEITEM).
+</p>
+<p>
+    El soporte de las relaciones es específico del proveedor. El ejemplo ilustra el modelo lógico y la relación entre las
+    tablas PRODUCT y LINEITEM. En el modelo físico, las relaciones suelen implementarse utilizando las referencias clave
+    externa / clave principal. Si una entidad se relaciona con otra, contiene columnas que son claves externas. Las
+    columnas de clave externa contienen datos que pueden relacionar registros específicos de la entidad con la entidad
+    relacionada.
+</p>
+<p>
+    Las relaciones tienen multiplicidad (también conocida como cardinalidad). Las cardinalidades comunes son de uno a uno
+    (1:1), de uno a muchos (1:m), de muchos a uno (m:1) y de muchos a muchos (m:n). En el ejemplo, LINEITEM tiene una
+    relación 1:1 con PRODUCT y PRODUCT tiene una relación 0:m con LINEITEM.
+</p>
+<h4>
+    <a id="The Object Model" name="The Object Model">El modelo de objeto</a>
+</h4>
+<p>
+    Un modelo de objeto contiene, entre otras cosas, clases (consulte [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#UML01" guid="7.755968586980351E-308">UML01</a>] para una
+    definición completa de un modelo de objeto). Las clases definen la estructura y el comportamiento de un conjunto de
+    objetos, a veces llamados <strong>instancias</strong> de objetos. La estructura se representa como atributos (valores
+    de datos) y asociaciones (relaciones entre clases). La figura siguiente ilustra un diagrama de clase simple, sólo
+    muestra los atributos (datos) de las clases.
+</p>
+<p align="center">
+    <img src="./../../../core.base_rup/guidances/concepts/resources/md_dmdl3.gif" alt="Diagrama detallado en el contenido." width="446" height="364" border="0" />
+</p>
+<p class="picturetext">
+    Un modelo de objeto (diagrama de clase)
+</p>
+<p>
+    Un pedido tiene un número (el número de pedido) y una asociación de 1 o más (1..*) líneas de detalle. Cada línea de
+    detalle tiene una cantidad (la cantidad pedida).
+</p>
+<p>
+    El modelo de objeto soporta la herencia. Una clase puede heredar datos y comportamiento de otra clase (por ejemplo, los
+    productos ProductoSoftware y ProductoHardware heredan los atributos y los métodos de la clase Producto).
+</p>
+<h3>
+    <a id="Persistence Frameworks" name="Persistence Frameworks">Infraestructuras de permanencia</a>
+</h3>
+<p>
+    La mayoría de las aplicaciones empresariales utilizan la tecnología relacional como un almacén de datos físicos. El
+    reto al que se enfrentan los desarrolladores de aplicaciones orientadas a objetos es separar lo suficiente y encapsular
+    la base de datos relacional de manera que los cambios en el modelo de datos no "rompan" el modelo de objeto, y
+    viceversa. Hay muchas soluciones que proporcionan a las aplicaciones acceso directo a los datos relacionales; el reto
+    consiste en conseguir una integración perfecta entre el modelo de objeto y el modelo de datos.
+</p>
+<p>
+    La interfaces de programación de aplicaciones de base de datos (API) se proporcionan en variedades estándar (por
+    ejemplo, API de conectividad para bases de datos abiertas de Microsoft o ODBC) y son propietarias (enlaces nativos con
+    bases de datos específicas). Las API proporcionan el paso de lenguaje de manipulación de datos (DML) a través de
+    servicios, lo que permite a las aplicaciones acceder a datos relacionales brutos. En las aplicaciones orientadas a
+    objetos, los datos deben someterse a la conversión relacional de objetos antes de que los utilice la aplicación. Esto
+    requiere una cantidad considerable de código de aplicación para convertir los resultados brutos de la API de base de
+    datos en objetos de aplicación. El objetivo de la infraestructura relacional de objetos es encapsular genéricamente el
+    almacén de datos físicos y proporcionar servicios de conversión de objetos adecuados.
+</p>
+<p align="center">
+    <img src="./../../../core.base_rup/guidances/concepts/resources/md_rdb5.gif" alt="Diagrama detallado en el contenido." width="266" height="242" border="0" />
+</p>
+<p class="picturetext">
+    El objetivo de una infraestructura de permanencia
+</p>
+<p>
+    Los desarrolladores de aplicaciones invierten más del 30% de su tiempo en la implementación del acceso a bases de datos
+    relacionales en aplicaciones orientadas a objetos. Si la interfaz relacional de objetos no está implementada
+    correctamente, se pierde la inversión. La implementación de una infraestructura relacional de objetos captura esta
+    inversión. La infraestructura relacional de objetos se puede reutilizar en aplicaciones posteriores reduciendo el coste
+    de la implementación relacional de objetos a menos de un 10% del coste total de la implementación. El coste más
+    importante que se debe tener en cuenta cuando se implementa un sistema es el de mantenimiento. Más del 60% del coste
+    total de un sistema durante su ciclo vital se puede atribuir al mantenimiento. Un sistema relacional de objetos mal
+    implementado puede ser una pesadilla de mantenimiento tanto técnico como financiero.
+</p>
+<h3>
+    <a id="Essential characteristics of an object-relational framework" name="Essential characteristics of an object-relational framework">Características esenciales de una infraestructura
+    relacional de objetos</a>
+</h3>
+<ul>
+    <li>
+        <strong>Rendimiento</strong>. Debe prestar mucha atención a la descomposición de objetos en datos y la composición
+        de objetos a partir de datos. En sistemas donde la tasa de transferencia de datos es elevada y crítica, suele ser
+        el talón de Aquiles de una capa de acceso mal diseñada.
+    </li>
+    <li>
+        <strong>Minimización de los compromisos de diseño</strong>. Un patrón habitual para los tecnólogos de objetos que
+        han construido sistemas que utilizan bases de datos relacionales consiste en ajustar el modelo de objeto para
+        facilitar el almacenamiento en sistemas relacionales y alterar el modelo relacional para un almacenamiento de
+        objetos más sencillo. A menudo son necesarios pequeños ajustes, por eso una capa de acceso bien diseñada minimiza
+        la degradación del diseño de modelos relacionales y objetos.
+    </li>
+    <li>
+        <strong>Capacidad de ampliación</strong>. La capa de acceso es una infraestructura de caja blanca que permite a los
+        desarrolladores de aplicaciones ampliar la infraestructura en el caso de que necesite una función determinada.
+        Normalmente, una capa de acceso soporta, sin una ampliación, el 65-85% de los requisitos de almacenamiento de datos
+        de una aplicación. Si la capa de acceso no está diseñada como una infraestructura ampliable, alcanzar el último
+        35-15% de los requisitos de almacenamiento de datos de la aplicación puede ser muy difícil y costoso.
+    </li>
+    <li>
+        <strong>Documentación</strong>. La capa de acceso es, al mismo tiempo, un componente de caja negra y una
+        infraestructura de caja blanca. La API del componente de caja negra debe estar definida claramente, bien
+        documentada y entendida sin dificultad. Como se ha mencionado previamente, la capa de acceso está diseñada para
+        ampliarse. Una infraestructura ampliable debe estar documentada minuciosamente. Deben identificarse las clases que
+        se dividirán en subclases. Deben especificarse las características de cada protocolo relevante de la clase (por
+        ejemplo, público, privado, protegido, final, ...). Además, debe exponerse y documentarse una parte sustancial del
+        diseño de la infraestructura de la capa de acceso para facilitar la capacidad de ampliación.
+    </li>
+    <li>
+        <strong>Soporte para correlaciones relaciones de objetos comunes</strong>. Una capa de acceso debe proporcionar
+        soporte para varias correlaciones relacionales de objetos básicas sin necesidad de una ampliación. Estas
+        correlaciones relacionales de objetos se describen más detalladamente en un apartado posterior de este documento.
+    </li>
+    <li>
+        <strong>Interfaces de permanencia</strong>. En una aplicación orientada a objetos, el modelo empresarial de una
+        aplicación de objetos captura el conocimiento semántico del dominio de problemas. Los desarrolladores deben poder
+        manipular e interactuar con los objetos sin tener que preocuparse demasiado de los detalles de recuperación y
+        almacenamiento de datos. Debe proporcionarse a los desarrolladores de aplicaciones un subconjunto bien definido de
+        interfaces permanentes (guardar, suprimir, buscar).
+    </li>
+</ul>
+<h3>
+    <a id="Common Object-Relational Services" name="Common Object-Relational Services">Servicios relacionales de objetos
+    comunes</a>
+</h3>
+<p>
+    Los patrones comunes surgen de las aplicaciones relacionales de objetos. Los profesionales de IT que han cruzado
+    repetidas veces el abismo empiezan a comprender y reconocer determinadas estructuras y comportamientos que exponen
+    satisfactoriamente aplicaciones relacionales de objetos. Estas estructuras y comportamientos se han formalizado
+    mediante especificaciones de servicios CORBA de alto nivel (que también se aplican correctamente a sistemas basados en
+    COM/DCOM).<br />
+    <br />
+     Las especificaciones de servicios CORBA aplicables y útiles para la correlación relacional de objetos son:
+</p>
+<ul>
+    <li>
+        <a href="#Persistence">Permanencia</a>
+    </li>
+    <li>
+        <a href="#Query">Consulta</a>
+    </li>
+    <li>
+        <a href="#Transactions">Transacciones</a>
+    </li>
+    <li>
+        <a href="#Concurrency">Concurrencia</a>
+    </li>
+    <li>
+        <a href="#Relationships">Relaciones</a>
+    </li>
+</ul>
+<p>
+    Los siguientes apartados utilizarán estas categorías para estructurar un discusión de servicios relacionales de objetos
+    comunes. Se anima al lector a que consulte las especificaciones de CORBA adecuadas para obtener más detalles.
+</p>
+<h4>
+    <a id="Persistence" name="Persistence">Permanencia</a>
+</h4>
+<p>
+    Permanencia es un término utilizado para describir cómo utilizan los objetos un medio de almacenamiento secundario para
+    mantener su estado en sesiones discretas. La permanencia proporciona a un usuario la capacidad para guardar objetos en
+    una sesión y acceder a ellos en una sesión posterior. Cuando se accede a los objetos posteriormente, su estado (por
+    ejemplo, los atributos) será exactamente el mismo que el de la sesión anterior. En sistemas de varios usuarios, puede
+    que no sea así, ya otros usuarios pueden acceder a los objetos y modificarlos. La permanencia está interrelacionada con
+    otros servicios que se tratan en este apartado. La consideración de relación, concurrencia, etc. es intencional (y
+    coherente con la descomposición de servicios de CORBA).
+</p>
+<p>
+    Ejemplos de servicios específicos que proporciona la permanencia:
+</p>
+<ul>
+    <li>
+        <strong>Gestión de la conexión del origen de datos</strong>: las aplicaciones relacionales de objetos deben iniciar
+        la conexión con el origen de datos físico. Normalmente, los sistemas de bases de datos relacionales requieren la
+        identificación del servidor y la base de datos. Los detalles de la gestión de la conexión suelen ser específicos
+        del proveedor de bases de datos, por lo que la infraestructura debe diseñarse como corresponde de una manera
+        flexible.
+    </li>
+    <li>
+        <strong>Recuperación de objetos</strong>: cuando se restauran los objetos de la base de datos, los datos se
+        recuperan de la base de datos y se convierten en objetos. Este proceso implica la extracción de datos de
+        estructuras específicas de la base de datos del origen de datos, la ordenación de los datos de tipos de base de
+        datos en tipos y/o clases de objetos adecuados, la creación del objeto adecuado y el establecimiento de atributos
+        específicos del objeto.
+    </li>
+    <li>
+        <strong>Almacenamiento de objetos</strong>: el proceso de almacenamiento de objetos duplica la recuperación de
+        objetos. Los valores de los atributos adecuados se extraen del objeto, se crea un estructura específica de la base
+        de datos con los valores del atributo (esto puede ser una cadena de caracteres de SQL, un procedimiento almacenado
+        o una llamada especial a procedimiento remoto) y se envía la estructura a la base de datos.
+    </li>
+    <li>
+        <strong>Supresión de objetos</strong>: los datos asociados a los objetos que se suprimen de un sistema deben
+        suprimirse de la base de datos relacional. La supresión de objetos requiere la extracción de la información
+        adecuada del objeto; se puede construir una solicitud de supresión (puede tratarse de una cadena de caracteres SQL,
+        procedimientos almacenados o una llamada especial a procedimiento remoto) y se puede enviar la solicitud a la base
+        de datos. Recuerde que algunos idiomas (por ejemplo, Smalltalk y Java) no soportan la supresión explícita; en su
+        lugar, dan soporte a una estrategia llamada <strong>recopilación de basura</strong>. Las infraestructuras de
+        permanencia que dan soporte a estos lenguajes deben proporcionar una manera alternativa de eliminar los datos de la
+        base de datos una vez que las aplicaciones dejen de hacer referencia a los datos. Una manera común es que la base
+        de datos mantenga <strong>recuentos de referencia</strong> del número de veces que otros objetos hacen referencia a
+        un objeto. Cuando el recuento de referencia de un objeto es cero, no hay ningún objeto que haga referencia a él,
+        por lo que es posible que se <strong>pueda</strong> suprimir. <strong>Puede ser aceptable</strong> suprimir objetos
+        con un recuento de referencia igual a cero, puesto que incluso cuando ya no se hace referencia a un objeto, todavía
+        se le pueden realizar consultas. Es necesaria una política para toda la base de datos sobre cuándo se permite la
+        supresión de objetos.
+    </li>
+</ul>
+<h4>
+    <a id="Query" name="Query">Consulta</a>
+</h4>
+<p>
+    El almacenamiento de objetos permanentes es poco útil si no existe un mecanismo de búsqueda y recuperación de objetos
+    específicos. Los recursos de consulta permiten a las aplicaciones interrogar y recuperar objetos en función de una
+    variedad de criterios. Las operaciones de consulta básicas que proporciona una infraestructura de correlación
+    relacional de objetos son exclusivamente de búsqueda. La operación exclusiva de búsqueda recupera un objeto específico
+    y la búsqueda devuelve una recopilación de objetos basados en los criterios de consulta.
+</p>
+<p>
+    Los recursos de consulta del almacén de datos varían significativamente. Los almacenes de datos simples basados en
+    archivos puede implementar operaciones de consulta rígidas propias, mientras que los sistemas relacionales proporcionan
+    un lenguaje de manipulación de datos flexible. Las infraestructuras de correlación relacional de objetos amplían el
+    modelo de consulta relacional para que se centre en objetos, en vez de en datos. Los mecanismos de paso a través
+    también se implementan para aprovechar la flexibilidad de las consultas relacionales y las ampliaciones específicas del
+    proveedor (por ejemplo, procedimientos almacenados).
+</p>
+<p>
+    Tenga en cuenta que existe un conflicto potencial entre los mecanismos de consulta basados en bases de datos y el
+    paradigma de objeto: los mecanismos de consulta de la base de datos se basan en los <strong>valores</strong> de
+    atributos (columnas) de una tabla. En los objetos correspondientes, el principio de encapsulación nos impide ver los
+    valores de los atributos; están <strong>encapsulados</strong> por las operaciones de la clase. El motivo de la
+    encapsulación es que facilita el cambio de las aplicaciones: podemos alterar la estructura interna de una clase sin
+    preocuparnos de las clases dependientes siempre y cuando no cambien las operaciones visibles públicamente de la clase.
+    Un mecanismo de consulta basado en la base de datos depende de la representación interna de una clase, que
+    <strong>rompa</strong> la encapsulación de manera eficaz. Para la infraestructura, el reto consiste en impedir que las
+    aplicaciones sean inestables en los cambios.
+</p>
+<h4>
+    <a id="Transactions" name="Transactions">Transacciones</a>
+</h4>
+<p>
+    El soporte de transacciones permite que el desarrollador de aplicaciones defina una unidad atómica de trabajo. En
+    terminología de bases de datos, significa que el sistema debe ser capaz de aplicar un conjunto de cambios en la base de
+    datos, o debe garantizar que no se aplica ninguno de los cambios. O se ejecutan todas las operaciones de la transacción
+    satisfactoriamente o la transacción falla en su conjunto. Las infraestructuras relacionales de objetos deben
+    proporcionar, como mínimo, una base de datos relacional, como recurso para confirmar/ anular transacciones. El diseño
+    de infraestructuras relacionales de objetos en un entorno de varios usuarios puede presentar muchos retos, por lo que
+    se le debe prestar mucha atención.
+</p>
+<p>
+    Además de los recursos que proporciona la infraestructura de permanencia, la aplicación debe saber cómo manejar los
+    errores. Cuando una transacción falla o se cancela anormalmente, el sistema debe ser capaz de restaurar su estado a un
+    estado anterior estable, normalmente leyendo la información del estado anterior en la base de datos. De esta manera,
+    hay una estrecha interacción entre la infraestructura de permanencia y la infraestructura de manejo de errores.
+</p>
+<h4>
+    <a id="Concurrency" name="Concurrency">Concurrencia</a>
+</h4>
+<p>
+    Los sistemas orientados a objetos de varios usuarios deben controlar el acceso simultáneo a los objetos. Cuando varios
+    usuarios acceden a un objeto simultáneamente, el sistema debe proporcionar un mecanismo para asegurar que las
+    modificaciones del objeto del almacén permanente se producen de manera controlada y previsible. Las infraestructuras
+    relacionales de objetos pueden implementar controles de concurrencia pesimistas y/o optimistas.
+</p>
+<ul>
+    <li>
+        El <strong>control de concurrencia pesimista</strong> requiere que el desarrollador de aplicaciones especifique su
+        intención cuando recupere el objeto del almacén de datos (por ejemplo, sólo lectura, bloqueo de escritura, ...). Si
+        se bloquean los objetos, pueden bloquearse otros usuarios cuando accedan al objeto y que tengan que esperar a que
+        se anule el bloqueo. La concurrencia pesimista debería utilizarse e implementarse con precaución, ya que es posible
+        que cree situaciones de punto muerto.
+    </li>
+    <li>
+        El <strong>control de concurrencia optimista</strong> presupone que es poco probable que se acceda al mismo objeto
+        de manera simultánea. Los conflictos de concurrencia se detectan cuando se guardan las modificaciones en la base de
+        datos. Normalmente, si otro usuario modificó el objeto desde su recuperación, se devolverá un error a la aplicación
+        indicando la anomalía de la operación de modificación. La aplicación es responsable de detectar y manejar el error.
+        Esta acción llama a la infraestructura para que guarde en antememoria los valores simultáneos de los objetos y los
+        compare con la base de datos. La concurrencia optimista es menos costosa si hay pocos conflictos de concurrencia,
+        pero más cara si hay una gran cantidad de conflictos (dada la necesidad de rehacer el trabajo cuando se producen
+        conflictos).
+    </li>
+</ul>
+<p>
+    Rodas las aplicaciones que utilizan datos compartidos deben utilizar la misma estrategia de concurrencia; no se pueden
+    mezclar los controles de concurrencia pesimista y optimista en los mismos datos compartidos, ya que pueden dañarse. La
+    necesidad de una estrategia de concurrencia coherente se maneja mejor mediante una infraestructura de permanencia.
+</p>
+<h4>
+    <a id="Relationships" name="Relationships">Relaciones</a>
+</h4>
+<p>
+    Los objetos están relacionados entre sí. Un objeto Pedido tiene muchos objetos Línea de detalle. Un objeto Libro tiene
+    muchos objetos Capítulo. Un objeto Empleado pertenece exactamente a un objeto Empresa. En sistemas relacionales, las
+    relaciones entre entidades se implementan mediante referencias de clave externa / clave principal. En sistemas
+    orientados a objetos, las relaciones suelen implementarse explícitamente mediante atributos. Si un objeto Pedido tiene
+    LíneasDetalle, Pedido contendrá un atributo llamado LíneasDetalle. El atributo LíneasDetalle de Pedido contendrá muchos
+    objetos LíneaDetalle.<br />
+    <br />
+     Los aspectos de las relaciones de una infraestructura relacional de objetos son interdependientes con los servicios de
+    consulta, transacción y permanencia. Cuando se almacena, se recupera, se tramita o se consulta un objeto, deben tenerse
+    en cuenta los objetos relacionados:
+</p>
+<ul>
+    <li>
+        Cuando se recupera un objeto, ¿también hay que recuperar los objetos asociados? De manera simplista, sí, aunque
+        hacerlo cuando los objetos asociados no son necesarios resulta muy caro. Una buena infraestructura permite mezclar
+        las estrategias.
+    </li>
+    <li>
+        Cuando se almacena un objeto, ¿también se deben almacenar los objetos asociados si se han modificado? Otra vez, la
+        respuesta depende del contexto.
+    </li>
+</ul>
+<p>
+    Conceptualmente, es ventajoso considerar los servicios relacionales de objetos por separado, aunque las
+    implementaciones de infraestructuras relacionales de objeto serán codependientes. Los servicios deben implementarse
+    coherentemente no sólo en las organizaciones que no son individuales, sino también en aplicaciones que comparten los
+    mismos datos. Una infraestructura es la única manera económica de conseguirlo.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

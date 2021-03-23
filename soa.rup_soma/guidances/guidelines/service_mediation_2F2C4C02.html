@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Mediaci&oacute;n de servicios</title>
+<meta content="Guideline" name="uma.type">
+<meta content="service_mediation" name="uma.name">
+<meta content="Mediaci&oacute;n de servicios" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "2.5614739075754752E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "2.5614739075754752E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.5614739075754752E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_d5dewE7OEduvcvbnLvkXhA", "2.5614739075754752E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.5614739075754752E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Mediaci&oacute;n de servicios</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz describe las distintas formas para habilitar la comunicación entre consumidores y servicios incompatibles a través de la mediación, transformando las solicitudes del consumidor o los protocolos en formularios que los proveedores de servicios pueden entender.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../soa.rup_soma/workproducts/soa_svce_model_svce_chan_BB29CCA8.html" guid="{95AA7C70-6259-4627-B705-6A67E33A47BC}">Canal de servicio</a>
+</li>
+<li>
+<a href="./../../../soa.rup_soma/workproducts/soa_svce_model_svce_gtway_4D9ADED2.html" guid="{B0BF4414-0382-4605-9EE9-82F0DEC7292C}">Pasarela de servicio</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a key="service mediation" text="guidelines for" name="XE_service_mediation__guidelines_for" id="XE_service_mediation__guidelines_for" class="index"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">Introducción</a>
+</h3>
+<p>
+    La mediación es el acto de intervenir entre partes en conflicto para fomentar la reconciliación o el acuerdo mutuo. En
+    sistemas distribuidos, en general, y en soluciones orientadas a servicios, en particular, se necesitan tres formatos
+    comunes de reconciliación.
+</p>
+<ul>
+    <li>
+        <b>Mediación de interfaz</b>; la mediación de interfaz de sistemas basados en componentes o en objetos es el cambio
+        entre definiciones de operación entre remitente y destinatario. En una solución orientada a servicios, aparece como
+        una no coincidencia en el contenido/esquema del mensaje entre el remitente y el destinatario.
+    </li>
+    <li>
+        <b>Mediación de protocolo</b>; la mayoría de las soluciones comunes basadas en componentes o en objetos suelen
+        fundamentar la comunicación en un protocolo o conjunto de protocolos común. En soluciones orientadas a servicios,
+        lo común es una mezcla de protocolos de toda la solución, una de las ventajas de la arquitectura. Para que se
+        produzca la comunicación entre servicios, los mensajes deberán distribuir distintos protocolos entre remitente y
+        destinatario.
+    </li>
+    <li>
+        <b>Mediación de operación</b>; esta forma de mediación también resulta familiar a los desarrolladores. Está
+        relacionada con el <i>patrón de estrategia</i> común. Un componente puede seleccionar una de las implementaciones
+        de un servicio u operación en concreto según los parámetros de tiempo de ejecución o el contenido de la solicitud.
+        A esto también se le denomina direccionamiento basado en contenido.
+    </li>
+</ul>
+<p>
+    Es importante observar que cada vez más plataformas de middleware ofrecen funciones de mediación avanzada sin tener que
+    desarrollar componentes de mediación explícitos. En este caso, como el middleware detecta discrepancias en la
+    estructura de datos o en los protocolos de comunicación, puede realizar la mediación en su tiempo de ejecución. También
+    es posible que estas plataformas proporcionen mediadores que actúen como conmutadores, según el contenido del mensaje o
+    las reglas empresariales, para seleccionar la implementación correcta de una determinada solicitud del cliente.
+</p>
+<h3>
+    <a id="Data_Mediation" name="Data_Mediation">Mediación de datos en actividades</a>
+</h3>
+<p>
+    En el caso de los servicios de conexión en los que la definición de mensajes no coincide o los mensajes requieren
+    transformación entre remitente y destinatario, se puede usar una función suministrada por UML 2.0 Activities para
+    indicar la transformación entre el remitente y el destinatario. Esta función, la asociación de un UML 2.0 Behavior con
+    un ObjectFlow entre dos acciones, permite la identificación de un comportamiento de transformación reutilizable que
+    puede convertir un mensaje en otro (en concreto, a partir de la especificación UML 2.0 <i>Cambia o sustituye señales de
+    datos que fluyen por el límite</i>).
+</p>
+<p>
+    Tal como se indicaba anteriormente,la transformación es un elemento reutilizable. Como tal, se puede identificar para
+    transformar un tipo de mensaje en otro y, a continuación, usarse siempre que sea necesario en mensajes mediadores entre
+    un servicio de envío y otro de recepción. Tenga en cuenta que, aunque UML no ofrece un conjunto de acciones para
+    navegar, leer y actualizar una estructura, éstas son relativamente complejas y podrían resultar muy difíciles de usar
+    en la definición de transformaciones. Se espera que la transformación enlace con una representación más compacta
+    (teniendo en cuenta el lenguaje XSL/T) o con una nueva forma de expresión de las necesidades de acciones UML que se
+    vayan a suministrar.
+</p>
+<p>
+    La mediación de datos también se puede tratar como un patrón concreto de iteración de servicio. Por ejemplo, existe un
+    servicio de mediación explícito responsable de la implementación de una o más transformaciones de datos. En este caso,
+    el mediador debe responder a los mensajes enviados por el cliente, transformar el mensaje y transferir el servicio, tal
+    como se muestra a continuación.
+</p>
+<p align="center">
+    <img height="150" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_svce_mediation-04.gif"     width="326" border="0" />
+</p>
+<h3>
+    <a id="Protocol_Mediation" name="Protocol_Mediation">Mediación de protocolo en pasarelas de servicio</a>
+</h3>
+<p>
+    Por otro lado, en el modelo también se entiende y se da soporte explícito al protocolo de mediación. Como la
+    información de protocolo se especifica como vínculo para un canal de servicio, se pueden introducir elementos
+    adicionales del modelo de &lt;&lt;<a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_svce_model_service_1EE4C96C.html" guid="{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}">Servicio</a>&gt;&gt; o de &lt;&lt;<a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_svce_model_svce_gtway_4D9ADED2.html" guid="{B0BF4414-0382-4605-9EE9-82F0DEC7292C}">Pasarela de servicio</a>&gt;&gt; que alteren la especificación de
+    protocolo. Por ejemplo, en el siguiente diagrama de estructura compuesta verá dos particiones, una para servicios
+    presentados en Web y otra para servicios internos. También existe un canal de servicio entre las particiones con un
+    vínculo de "HTTP-SOAP", algo común para servicios presentados en Web.
+</p>
+<p align="center">
+    <img height="125" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_svce_mediation-01.gif"     width="203" border="0" />
+</p>
+<p>
+    El problema es que, para dar soporte al nivel necesario de rendimiento y a otros requisitos no funcionales, toda
+    comunicación dentro de la partición interna tiene lugar a través de protocolos específicos de plataforma. El siguiente
+    diagrama muestra cómo se conecta un servicio a la pasarela de servicio "Port : ISvcTwo" mediante el protocolo RMI de
+    Java, pero ¿qué ocurre cuando la partición web se conecta a la misma pasarela usando HTTP-SOAP?
+</p>
+<p align="center">
+    <img height="132" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_svce_mediation-02.gif"     width="348" border="0" />
+</p>
+<p>
+    La respuesta es que la propia pasarela de servicio puede actuar de mediadora del protocolo convirtiendo las estructuras
+    de mensaje y las invocaciones de un formato a otro. Se trata de las funciones comunes normalmente suministras por
+    middleware como Object Request Brokers (ORB) Message Brokers. De hecho, si fuera necesario se podría generar a partir
+    del modelo anterior a dicho middleware, o reificar "Port : ISvcTwo" como un servicio por derecho propio que realiza
+    llamadas desde la partición web y las reenvía a los servicios adjuntos.
+</p>
+<p>
+    De nuevo, la mediación se puede modelar explícitamente como servicio, en lugar de como pasarela de servicio, que
+    exponga la interfaz correcta con el vínculo del cliente y delegue la implementación al servicio del proveedor con un
+    vínculo diferente.
+</p>
+<h3>
+    <a id="Invocation_Mediation" name="Invocation_Mediation">Mediación de invocación mediante composición de servicio</a>
+</h3>
+<p>
+    Tal como se ha descrito en la introducción, es habitual definir una estructura en la que un servicio sea dependiente de
+    otro a la hora de realizar alguna operación. No obstante, el servicio real al que se llamará para una solicitud
+    específica dependerá de los detalles incluidos en la solicitud, de quién sea el solicitante y de las reglas
+    empresariales aplicadas con esta información. El ejemplo que normalmente se ofrece para esto es una solicitud de
+    cliente, el servicio de recepción puede elegir una de las dos implementaciones según el nivel del cliente. Por ejemplo,
+    aquellos clientes de los que se sepa que gastan más dinero, podrían obtener un trato preferencial.
+</p>
+<p align="center">
+    <img height="109" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_svce_mediation-03.gif"     width="157" border="0" />
+</p>
+<p>
+    Tal como se describió anteriormente, es importante en este tipo de mediación intentar externalizar las reglas usadas
+    para seleccionar entre uno o más proveedores de la implementación de operación real. En el diagrama anterior, esto se
+    muestra como un componente de regla adjunto al servicio de mediación. Obviamente se puede crear la solución como un
+    conjunto de servicios en los que el mediador, las reglas y todos los implementadores sean servicios independientes. A
+    continuación verá un ejemplo de esto.
+</p>
+<p align="center">
+    <img height="245" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_svce_mediation-05.gif"     width="285" border="0" />
+</p>
+<p>
+    Como se puede observar, el componente de mediación no sólo posee su especificación de servicio desarrollada sino
+    también una especificación de servicio que todos los servicios por los que media deben implementar. Esto nos permite
+    definir la estructura compuesta del servicio (mostrada anteriormente) y el comportamiento dinámico mostrado a
+    continuación. Observe que en la estructura anterior, la parte que representa los servicios mediados se indica mediante
+    la interfaz necesaria y aparece con una multiplicidad ilimitada.
+</p>
+<p align="center">
+    <img height="189" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_svce_mediation-06.gif"     width="405" border="0" />
+</p>
+<p>
+    De nuevo, es posible que este tipo de direccionamiento de mensajes basado en reglas o en contenido sea realizado por la
+    plataforma de middleware seleccionada como parte de la arquitectura de la solución.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

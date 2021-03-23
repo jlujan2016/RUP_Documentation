@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de productos de trabajo: Modelo de datos</title>
+<meta content="WorkProductDescriptor" name="uma.type">
+<meta content="rup_data_model" name="uma.name">
+<meta content="Modelo de datos" name="uma.presentationName">
+<meta content="WorkProductDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={002674F9-6511-4D15-8623-B761D8C48986}&path={002674F9-6511-4D15-8623-B761D8C48986},{DAFB461E-9ADB-4849-8285-B7E3E72BDB43},_lJupIEocEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, false, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_lJupIEocEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Producto de trabajo: Modelo de datos</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/workdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Este artefacto describe las representaciones lógicas y físicas de datos persistentes utilizados por la aplicación. En los casos en que la aplicación utilizará un sistema de gestión de bases de datos relacionales (RDBMS), el modelo de datos también incluye elementos de modelo para procedimientos almacenados, desencadenantes, restricciones, etc. que definen la interacción de los componentes de la aplicación con RDBMS.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_data_model__as_artifact" key="modelo de datos" text="como artefacto" name="XE_data_model__as_artifact" class="index"></a><a id="Top" name="Top"></a><a key="modelo de datos" text="finalidad de" name="XE_data_model__purpose_of" id="XE_data_model__purpose_of" class="index"></a><a id="Purpose" name="Purpose"></a> 
+<p>
+    El modelo de datos se utiliza para describir la estructura lógica y física de la información persistente gestionada por
+    el sistema. El modelo de datos se puede crear inicialmente revirtiendo la ingeniería de los almacenes de datos
+    persistentes (bases de datos) o se puede crear inicialmente desde un conjunto de <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Clases de
+    diseño</a> persistentes en el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Modelo de
+    diseño</a>.
+</p>
+<p>
+    El modelo de datos es necesario siempre que el mecanismo de almacenamiento persistente se base en alguna tecnología no
+    orientada al objeto.&nbsp; El modelo de datos es específicamente necesario donde la estructura de datos persistente no
+    se puede derivar automáticamente y mecánicamente a partir de la estructura de clases persistentes en el modelo de
+    diseño. Se utiliza para definir la correlación entre las clases de diseño persistentes y las estructuras de datos
+    persistentes, y para definir las estructuras de datos persistentes.
+</p>
+<p>
+    En la tabla de propiedades siguiente se describen los elementos del modelo de datos. &nbsp; Las definiciones de las
+    propiedades del modelo incluidas en esta tabla son coherentes con el perfil de modelado de datos para la versión 1.3 de
+    la especificación de Lenguaje unificado de modelado (UML).&nbsp; Los elementos del perfil de modelado de datos para UML
+    versión 1.4 todavía no se han definido.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entrada a</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/review_the_design_9294A7AC.html" guid="_lJQIAEocEdqrjq4i3fchvA">Revisar el dise&ntilde;o</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="Yes" alt="Yes" height="15" width="20" src="./../../images/true.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Personalizaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Opciones de representaci&oacute;n</th><td class="sectionTableCell"><p>
+    Representación UML: Un paquete estereotipado como &lt;&lt;modelo&gt;&gt;.
+</p>
+<p>
+    El <strong>modelo de datos</strong> puede tener las siguientes <strong>propiedades</strong>:&nbsp;
+</p>
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody valign="top">
+            <tr>
+                <td width="20%">
+                    <p class="tableheading">
+                        <b>Nombre de propiedad</b>
+                    </p>
+                </td>
+                <td width="40%">
+                    <p class="tableheading">
+                        <b>Descripción breve</b>
+                    </p>
+                </td>
+                <td width="40%">
+                    <p class="tableheading">
+                        <b>Representación UML</b>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Introducción
+                </td>
+                <td width="40%">
+                    Una descripción textual que sirve como breve introducción al modelo.
+                </td>
+                <td width="40%">
+                    Valor etiquetado, del tipo "texto corto".
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Paquetes
+                </td>
+                <td width="40%">
+                    Los paquetes utilizados con objetivos de agrupación.
+                </td>
+                <td width="40%">
+                    Poseído a través de la asociación "representa", o recursivamente a través de la agregación "posee".
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Tablas
+                </td>
+                <td width="40%">
+                    Las tablas en el modelo de datos, propiedad de los paquetes.
+                </td>
+                <td width="40%">
+                    Clases, estereotipadas como «Tabla».
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Relaciones
+                </td>
+                <td width="40%">
+                    Simple asociación entre tablas en el modelo.
+                </td>
+                <td width="40%">
+                    Asociación, estereotipada como «de no identificación»
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Fuerte relación
+                </td>
+                <td width="40%">
+                    Relación de agregación de compuestos entre tablas en el modelo.
+                </td>
+                <td width="40%">
+                    Asociación, estereotipada como «de identificación»
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Dependencia (Ver en tabla)
+                </td>
+                <td width="40%">
+                    Dependencia entre tablas, vistas y otros elementos de modelo
+                </td>
+                <td width="40%">
+                    Dependencia, estereotipada como «Derivar» para relaciones de dependencia entre Tabla y Vista
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Columna
+                </td>
+                <td width="40%">
+                    Los valores de datos de las tablas.
+                </td>
+                <td width="40%">
+                    Atributo, estereotipado como «Columna».
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Dominio
+                </td>
+                <td width="40%">
+                    Un tipo de datos definido por el usuario.
+                </td>
+                <td width="40%">
+                    Clase, estereotipada como «Dominio».
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Vista
+                </td>
+                <td width="40%">
+                    Una tabla virtual, compuesta por columnas de una o más tablas.
+                </td>
+                <td width="40%">
+                    Clase, estereotipada como «Vista».
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Diagramas
+                </td>
+                <td width="40%">
+                    Los diagramas del modelo, propiedad de los paquetes.
+                </td>
+                <td width="40%">
+                    Diagramas de clases que ilustran las tablas y sus relaciones y Diagramas de componente que ilustran la
+                    realización de Tablas en el modelo a componentes de espacio de tablas y componentes de base de datos.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Índice
+                </td>
+                <td width="40%">
+                    Estructuras de acceso a datos utilizadas para acelerar el acceso en las vías de acceso especificadas.
+                </td>
+                <td width="40%">
+                    Operación, estereotipada como «Índice».
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Desencadenante
+                </td>
+                <td width="40%">
+                    Comportamiento activado por sucesos asociado con tablas.
+                </td>
+                <td width="40%">
+                    Operación, estereotipada como «Desencadenante».
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Restricción de comprobación
+                </td>
+                <td width="40%">
+                    Una regla de validación en una columna o tabla. Puede consistir en un rango de valores o cálculos
+                    válidos.
+                </td>
+                <td width="40%">
+                    Operación, estereotipada como «Comprobación».
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Restricción de unicidad
+                </td>
+                <td width="40%">
+                    Designa que los datos de una columna o conjunto de columnas deben ser únicos.
+                </td>
+                <td width="40%">
+                    Operación, estereotipada como «Única».
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Paquete de procedimiento almacenado
+                </td>
+                <td width="40%">
+                    Una clase que se utiliza como "contenedor" para operaciones de procedimiento almacenado
+                </td>
+                <td width="40%">
+                    Clase, estereotipada como «SP_Container».
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Procedimiento almacenado&nbsp;
+                </td>
+                <td width="40%">
+                    Comportamiento que se invoca de forma explícita, asociado con tablas o con el modelo en conjunto.
+                </td>
+                <td width="40%">
+                    Operación, estereotipada como «SP».
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Esquema&nbsp;
+                </td>
+                <td width="40%">
+                    Contenedor para elementos del modelo de datos que representa la estructura global de la base de datos.
+                    Utilizado para gestionar la seguridad y la propiedad de las tablas.
+                </td>
+                <td width="40%">
+                    Paquete estereotipado como «Esquema».
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Base de datos
+                </td>
+                <td width="40%">
+                    Elemento de modelo que representa la base de datos física
+                </td>
+                <td width="40%">
+                    Componente, estereotipado como «Base de datos»
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Espacio de tablas
+                </td>
+                <td width="40%">
+                    Unidades de almacenamiento físico en una base de datos
+                </td>
+                <td width="40%">
+                    Componente, estereotipado como «Espacio de tablas»
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    <a id="Tailoring" name="Tailoring"></a>
+</p>
+<p>
+    Para proyectos que tienen pocos datos permanentes, o que cuentan con una transformación directa de clases de diseño a
+    mecanismo de permanencia, es posible que no sea necesario un modelo de datos separado.&nbsp; Para proyectos que
+    utilizan RDBMS para la permanencia, el modelo de datos deberá personalizarse para la semántica específica de la base de
+    datos subyacente, que puede variar ligeramente entre RDMBS.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Listas de comprobaci&oacute;n</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/checklists/data_model_D22985A5.html" guid="2.800761632096845E-305">Modelo de datos</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/data_model_80FB2539.html" guid="3.4196799396281445E-306">Modelo de datos</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/reverse-engineering_relational_databases_902803B8.html" guid="1.338740134620651E-305">Ingeniería inversa de bases de datos relacionales</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/forward-engineering_relational_databases_53C0441E.html" guid="5.250868507423771E-305">Aplicación de ingeniería en bases de datos relacionales</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

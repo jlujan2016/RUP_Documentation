@@ -1,0 +1,1580 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: T&eacute;cnicas de prueba por riesgo de calidad / tipo de prueba</title>
+<meta content="Guideline" name="uma.type">
+<meta content="testing_techniques_by_quality_risk_test_type" name="uma.name">
+<meta content="T&eacute;cnicas de prueba por riesgo de calidad / tipo de prueba" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{DC3E85E6-C5A9-4AC6-8DDF-E2CF2CB0573E}", "4.1251466462563365E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{B95CA9FA-A00E-4C6C-AA16-133297812CC0}", "4.1251466462563365E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3lZjkCxqEdqYV4MWf8PiCw", "{DC3E85E6-C5A9-4AC6-8DDF-E2CF2CB0573E}", "4.1251466462563365E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3SWfwN7OEdmjRZts2c4ZjQ", "{B95CA9FA-A00E-4C6C-AA16-133297812CC0}", "4.1251466462563365E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.1251466462563365E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{DC3E85E6-C5A9-4AC6-8DDF-E2CF2CB0573E}", "4.1251466462563365E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{B95CA9FA-A00E-4C6C-AA16-133297812CC0}", "4.1251466462563365E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.1251466462563365E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: T&eacute;cnicas de prueba por riesgo de calidad / tipo de prueba</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz es una presentación detallada de todas las áreas de prueba clave y sus objetivos asociados, técnicas, oráculos, herramientas y criterios de éxito.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_test_strategy_C1677B8.html" guid="{DC3E85E6-C5A9-4AC6-8DDF-E2CF2CB0573E}">Estrategia de prueba</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_test_plan_53712941.html" guid="{B95CA9FA-A00E-4C6C-AA16-133297812CC0}">Plan de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="estrategia de prueba" text="directrices de técnica" name="XE_test_strategy__technique_guidelines" id="XE_test_strategy__technique_guidelines" class="index"></a> 
+<h3>
+    <a id="DataAndDatabaseIntegrityTesting" name="DataAndDatabaseIntegrityTesting"><span     style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;</span>Pruebas de integridad de datos y de base de
+    datos</a>
+</h3>
+<p>
+    Las bases de datos y los procesos de base de datos deben probarse como subsistema independiente. Esta prueba debe
+    probar los subsistemas sin la interfaz de usuario de destino de la prueba como interfaz de los datos. La búsqueda
+    adicional en el sistema de gestión de bases de datos (DBMS) debe efectuarse para identificar las herramientas y las
+    técnicas que pueden existir para proporcionar soporte a las pruebas identificadas en la tabla siguiente.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Objetivo de la técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Ejercer métodos de acceso a base de datos y procesos independientes de la UI para que pueda observar y
+                    registrar los comportamientos de destino que funcionan incorrectamente o los datos dañados.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Invoque cada método de acceso a base de datos y procesos, sembrando cada uno con datos válidos o no
+                    válidos o solicitudes de datos.
+                </p>
+                <p>
+                    Inspeccione la base de datos para asegurarse de que los datos se han rellenado tal como se pretendía y
+                    que todos los sucesos de la base de datos se han producido adecuadamente, o revise los datos devueltos
+                    para garantizar que se han recuperado los datos correctos por los motivos correctos.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Oráculos:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Destacan una o más estrategias que se pueden utilizar con la técnica para observar con precisión los
+                    resultados de la prueba. El oráculo combina elementos del método por los cuales la observación se puede
+                    realizar y las características de un resultado específico que indican el éxito o la anomalía probable.
+                    Idealmente, los oráculos se verificarán automáticamente, permitiendo las pruebas automatizadas para
+                    realizar una valoración inicial de la aprobación o la anomalía de la prueba; sin embargo, tenga cuidado
+                    de mitigar los riesgos inherentes en la determinación de resultados automatizados.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Herramientas necesarias:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica requiere las herramientas siguientes:
+                </p>
+                <p>
+                    Herramienta de automatización de script de prueba
+                </p>
+                <p>
+                    Configuraciones básicas de Imager y Restorer
+                </p>
+                <p>
+                    herramientas de copia de seguridad y de recuperación
+                </p>
+                <p>
+                    herramientas de instalación-supervisión (registro, disco duro, CPU, memoria, etc.)
+                </p>
+                <p>
+                    programas de utilidad y herramientas de SQL de base de datos
+                </p>
+                <p>
+                    herramientas de generación de datos
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Criterios de éxito:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica proporciona soporte a las pruebas de todos los métodos y procesos de acceso de base de
+                    datos.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Consideraciones especiales:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Las pruebas pueden requerir un entorno de desarrollo DBMS o controladores para entrar o modificar datos
+                    directamente en la base de datos.
+                </p>
+                <p>
+                    Los procesos se deben invocar manualmente.
+                </p>
+                <p>
+                    Bases de datos pequeñas o de tamaño mínimo (con un número limitado de registros) deben utilizarse para
+                    aumentar la visibilidad de cualquier suceso no aceptable.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<h3>
+    <a id="FunctionTesting" name="FunctionTesting"><span     style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;</span> Pruebas de función</a>
+</h3>
+<p>
+    Las pruebas de función del destino de la prueba deben centrarse en cualquier requisito para la prueba que se pueden
+    rastrear directamente para los casos de uso o las funciones empresariales y las reglas empresariales. Los objetivos de
+    estas pruebas son verificar la aceptación de datos apropiada, el proceso, y la recuperación, y la implementación
+    adecuada de las reglas empresariales. Este tipo de pruebas se basa en las técnicas de caja negra; es decir, verifica la
+    aplicación y sus procesos internos interactuando con la aplicación a través de la interfaz gráfica de usuario (GUI) y
+    analizando la salida o los resultados. En la tabla siguiente se identifica una esquematización de las pruebas
+    recomendadas para cada aplicación.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Objetivo de la técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Ejercer una funcionalidad de destino de la prueba, que incluye la navegación, la entrada de datos, el
+                    proceso y la recuperación para observar y registrar el comportamiento de destino.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Ejercer los flujos de caso de uso o las funciones y características individuales de cada caso de
+                    ejemplo de caso de uso, con datos válidos o no válidos, para comprobar que:
+                </p>
+                <p>
+                    los resultados esperados ocurren cuando se utilizan datos válidos
+                </p>
+                <p>
+                    se muestran los mensajes de error o avisos apropiados cuando se utilizan datos incorrectos
+                </p>
+                <p>
+                    cada regla empresarial se aplica adecuadamente
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Oráculos:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Destacan una o más estrategias que se pueden utilizar con la técnica para observar con precisión los
+                    resultados de la prueba. El oráculo combina elementos del método por los cuales la observación se puede
+                    realizar y las características de un resultado específico que indican el éxito o la anomalía probable.
+                    Idealmente, los oráculos se verificarán automáticamente, permitiendo las pruebas automatizadas para
+                    realizar una valoración inicial de la aprobación o la anomalía de la prueba; sin embargo, tenga cuidado
+                    de mitigar los riesgos inherentes en la determinación de resultados automatizados.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Herramientas necesarias:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica requiere las herramientas siguientes:
+                </p>
+                <p>
+                    Herramienta de automatización de script de prueba
+                </p>
+                <p>
+                    Configuraciones básicas de Imager y Restorer
+                </p>
+                <p>
+                    herramientas de copia de seguridad y de recuperación
+                </p>
+                <p>
+                    herramientas de instalación-supervisión (registro, disco duro, CPU, memoria, etc.)
+                </p>
+                <p>
+                    herramientas de generación de datos
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Criterios de éxito:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica da soporte a las pruebas de:
+                </p>
+                <p>
+                    todos los casos de ejemplo de caso de uso clave
+                </p>
+                <p>
+                    todas las características clave
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Consideraciones especiales:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Identifique o describa estos elementos o cuestiones (internos o externos) que afectan la implementación
+                    y la ejecución de la prueba de función.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<h3>
+    <a id="BusinessCycle" name="BusinessCycle"><span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    Prueba de ciclo empresarial</a>
+</h3>
+<p>
+    La prueba de ciclo empresarial debe emular las tareas que se realizan en el &lt;nombre de proyecto&gt; a lo largo del
+    tiempo. Debe identificarse un periodo, como un año, y las transacciones y las tareas que deben ejecutarse durante el
+    transcurso de un año. Esto incluye todos los ciclos diarios, semanales y mensuales y los sucesos que son sensibles a
+    los datos, como las agendas.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Objetivo de la técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Ejercer los procesos de destino de la prueba y de fondo de acuerdo con los modelos empresariales
+                    necesarios y las planificaciones para observar y registrar el comportamiento de destino.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Las pruebas simularán varios ciclos empresariales efectuando lo siguiente:
+                </p>
+                <p>
+                    Las pruebas que se utilizan para la función de destino de la prueba se modificarán o mejorarán para
+                    aumentar el número de veces que cada función se ejecuta para simular varios usuarios diferentes durante
+                    un periodo especificado.
+                </p>
+                <p>
+                    Las funciones de tiempo completo o sensibles a datos se ejecutarán mediante fechas o periodos de tiempo
+                    válidos o no válidos.
+                </p>
+                <p>
+                    Todas las funciones que ocurren bajo una planificación periódica se ejecutarán o se iniciarán en el
+                    momento apropiado.
+                </p>
+                <p>
+                    Las pruebas incluirán la utilización de datos válidos y no válidos para verificar lo siguiente:
+                </p>
+                <p>
+                    Los resultados esperados ocurren cuando se utilizan datos válidos.
+                </p>
+                <p>
+                    Se muestran los mensajes de error o avisos apropiados cuando se utilizan datos incorrectos.
+                </p>
+                <p>
+                    Cada regla empresarial se aplica adecuadamente.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Oráculos:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Destacan una o más estrategias que se pueden utilizar con la técnica para observar con precisión los
+                    resultados de la prueba. El oráculo combina elementos del método por los cuales la observación se puede
+                    realizar y las características de un resultado específico que indican el éxito o la anomalía probable.
+                    Idealmente, los oráculos se verificarán automáticamente, permitiendo las pruebas automatizadas para
+                    realizar una valoración inicial de la aprobación o la anomalía de la prueba; sin embargo, tenga cuidado
+                    de mitigar los riesgos inherentes en la determinación de resultados automatizados.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Herramientas necesarias:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica requiere las herramientas siguientes:
+                </p>
+                <p>
+                    Herramienta de automatización de script de prueba
+                </p>
+                <p>
+                    Configuraciones básicas de Imager y Restorer
+                </p>
+                <p>
+                    herramientas de copia de seguridad y de recuperación
+                </p>
+                <p>
+                    herramientas de generación de datos
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Criterios de éxito:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica proporciona soporte a las pruebas de todos los ciclos empresariales críticos.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Consideraciones especiales:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Las fechas del sistema y los sucesos pueden requerir tareas especiales de soporte.
+                </p>
+                <p>
+                    Un modelo empresarial es necesario para identificar los requisitos y los procedimientos de prueba
+                    apropiados.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<h3>
+    <a id="UserInterfaceTesting" name="UserInterfaceTesting"><span     style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;</span> Pruebas de la interfaz de usuario</a>
+</h3>
+<p>
+    La prueba de la interfaz de usuario (UI) verifica la interacción de un usuario con el software. El objetivo de las
+    pruebas de la UI es garantizar que la UI proporciona al usuario el acceso apropiado y la navegación a través de las
+    funciones del destino de la prueba. Además, las pruebas de la UI garantizan que los objetos dentro de la UI funcionan
+    tal como se esperaba y conforme a los estándares corporativos o del sector.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Objetivo de la técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Ejercer lo siguiente para observar y registrar el cumplimiento de los estándares y el comportamiento de
+                    destino:
+                </p>
+                <p>
+                    Navegación a través del destino de la prueba reflejando las funciones y requisitos empresariales,
+                    incluyendo ventana a ventana, campo a campo, y uso de métodos de acceso (teclas tabulador, movimientos
+                    del ratón y teclas de aceleración).
+                </p>
+                <p>
+                    Objetos de ventana y características que se pueden ejercer -como menús, tamaño, posición, estado y
+                    enfoque.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Crear o modificar pruebas para cada ventana para verificar la navegación correcta y los estados de
+                    objeto para cada ventana de aplicación y de objeto.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Oráculos:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Destacan una o más estrategias que se pueden utilizar con la técnica para observar con precisión los
+                    resultados de la prueba. El oráculo combina elementos del método por los cuales la observación se puede
+                    realizar y las características de un resultado específico que indican el éxito o la anomalía probable.
+                    Idealmente, los oráculos se verificarán automáticamente, permitiendo las pruebas automatizadas para
+                    realizar una valoración inicial de la aprobación o la anomalía de la prueba; sin embargo, tenga cuidado
+                    de mitigar los riesgos inherentes en la determinación de resultados automatizados.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Herramientas necesarias:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica requiere la herramienta de automatización de script de prueba.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Criterios de éxito:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica da soporte a las pruebas de las principales pantallas o ventanas que utilizará ampliamente
+                    el usuario.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Consideraciones especiales:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    No todas las propiedades de los objetos personalizados y de otros proveedores están accesibles.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<h3>
+    <a id="PerformanceProfiling" name="PerformanceProfiling"><span     style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;</span> Perfilado de rendimiento</a>
+</h3>
+<p>
+    El perfilado de rendimiento es una prueba de rendimiento en que los tiempos de respuesta, los índices de transacción y
+    otros requisitos sensibles al tiempo se miden y se evalúan. El objetivo del perfilado de rendimiento es verificar los
+    requisitos de rendimiento que se han alcanzado. El perfilado de rendimiento se implementa y se ejecuta para perfilar y
+    ajustar los comportamientos de destino de la prueba como una función de condiciones, como configuraciones de carga de
+    trabajo o de hardware.
+</p>
+<p>
+    <b>Nota</b>: las transacciones de la tabla siguiente hacen referencia a "transacciones empresariales lógicas". Estas
+    transacciones se definen como casos de uso específicos que se espera que efectúe un actor del sistema mediante el
+    destino de la prueba, como adición o modificación de un contrato determinado.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Objetivo de la técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Ejercer comportamientos para transacciones funcionales designadas o funciones empresariales bajo las
+                    condiciones siguientes para observar y registrar el comportamiento del destino y de los datos de
+                    rendimiento de la aplicación:
+                </p>
+                <p>
+                    carga de trabajo normal anticipada
+                </p>
+                <p>
+                    el peor caso de carga de trabajo anticipada
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Utilice los procedimientos de prueba desarrollados para prueba de función o de ciclo empresarial.
+                </p>
+                <p>
+                    Modifique los archivos de datos para aumentar el número de transacciones o los scripts para aumentar el
+                    número de iteraciones que ocurren en cada transacción.
+                </p>
+                <p>
+                    Los scripts se deben ejecutar en una máquina (es mejor realizar el estándar de comparación en un único
+                    usuario, una única transacción) y se debe repetir con múltiples clientes (virtuales o reales, consulte
+                    el apartado Consideraciones especiales a continuación).
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Oráculos:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Destacan una o más estrategias que se pueden utilizar con la técnica para observar con precisión los
+                    resultados de la prueba. El oráculo combina elementos del método por los cuales la observación se puede
+                    realizar y las características de un resultado específico que indican el éxito o la anomalía probable.
+                    Idealmente, los oráculos se verificarán automáticamente, permitiendo las pruebas automatizadas para
+                    realizar una valoración inicial de la aprobación o la anomalía de la prueba; sin embargo, tenga cuidado
+                    de mitigar los riesgos inherentes en la determinación de resultados automatizados.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Herramientas necesarias:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica requiere las herramientas siguientes:
+                </p>
+                <p>
+                    Herramienta de automatización de script de prueba
+                </p>
+                <p>
+                    una herramientas de perfilado de rendimiento de la aplicación, como Rational Quantify
+                </p>
+                <p>
+                    herramientas de instalación-supervisión (registro, disco duro, CPU, memoria, etc.)
+                </p>
+                <p>
+                    herramientas de restricción de recursos; por ejemplo, Canned Heat
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Criterios de éxito:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica da soporte a las pruebas:
+                </p>
+                <p>
+                    Transacción única o usuario único: Emulación correcta de los scripts de transacción sin anomalías
+                    debido a los problemas de implementación de prueba.
+                </p>
+                <p>
+                    Transacciones múltiples o usuarios múltiples: Emulación correcta de la carga de trabajo sin anomalías
+                    debido a los problemas de implementación de prueba.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Consideraciones especiales:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Las pruebas de rendimiento global incluyen tener una carga de trabajo de fondo en el servidor.
+                </p>
+                <p>
+                    Existen varios métodos que se pueden utilizar para efectuar esto, que incluyen:
+                </p>
+                <p>
+                    "Dirigir las transacciones" directamente al servidor, habitualmente en forma de llamadas de lenguaje de
+                    consulta estructurado (SQL).
+                </p>
+                <p>
+                    Crear una carga de usuario "virtual" para simular muchos clientes, normalmente varios centenares. Las
+                    herramientas de emulación de terminal remoto se utilizan para cumplir esta carga. Esta técnica también
+                    se puede utilizar para cargar la red con "tráfico".
+                </p>
+                <p>
+                    Utilice múltiples clientes físicos, que ejecuten scripts de prueba, para colocar una carga en el
+                    sistema.<br />
+                </p>
+                <p>
+                    Las pruebas de rendimiento deben efectuarse en una máquina dedicada o en un tiempo dedicado. Esto
+                    permite el control total y las medidas precisas.
+                </p>
+                <p>
+                    Las bases de datos que se utilizan para las pruebas de rendimiento deben tener tamaño real o igualmente
+                    escalado.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<h3>
+    <a id="LoadTesting" name="LoadTesting"><span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;</span> Prueba
+    de carga</a>
+</h3>
+<p>
+    La prueba de carga es una prueba de rendimiento que somete el destino de la prueba a la variación de cargas de trabajo
+    para medir y evaluar los comportamientos de rendimiento y las capacidades del destino de la prueba para continuar
+    funcionando adecuadamente bajo estas diferentes cargas de trabajo. El objetivo de las pruebas de carga es determinar y
+    garantizar que el sistema funciona adecuadamente más allá de la carga de trabajo máxima esperada. De forma adicional,
+    la prueba de carga evalúa las características de rendimiento, como los tiempos de respuesta, índices de transacción y
+    otros asuntos sensibles al tiempo.
+</p>
+<p>
+    <b>Nota</b>: las transacciones de la tabla siguiente hacen referencia a "transacciones empresariales lógicas". Estas
+    transacciones se definen como funciones específicas que se espera que efectúe un usuario del sistema mediante la
+    aplicación, como la adición o modificación de un contrato determinado.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Objetivo de la técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Ejercer las transacciones o casos de negocio designados dependiendo de las condiciones de carga de
+                    trabajo variables para observar y registrar el comportamiento de destino y los datos de rendimiento del
+                    sistema.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Utilice los scripts de prueba de transacción desarrollados para las pruebas de función o de ciclo
+                    empresarial como base, pero recuerde que debe eliminar las interacciones innecesarias y los retrasos.
+                </p>
+                <p>
+                    Modifique los archivos de datos para aumentar el número de transacciones o las pruebas para aumentar el
+                    número de veces que ocurre cada transacción.
+                </p>
+                <p>
+                    Las cargas de trabajo deben incluir -por ejemplo, diariamente, semanalmente y mensualmente- cargas
+                    punta.
+                </p>
+                <p>
+                    Las cargas de trabajo deben representar cargas medias y también cargas punta.
+                </p>
+                <p>
+                    Las cargas de trabajo deben representar puntas instantáneas y sostenidas.
+                </p>
+                <p>
+                    Las cargas de trabajo se deben ejecutar bajo diferentes configuraciones de entorno de prueba.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Oráculos:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Destacan una o más estrategias que se pueden utilizar con la técnica para observar con precisión los
+                    resultados de la prueba. El oráculo combina elementos del método por los cuales la observación se puede
+                    realizar y las características de un resultado específico que indican el éxito o la anomalía probable.
+                    Idealmente, los oráculos se verificarán automáticamente, permitiendo las pruebas automatizadas para
+                    realizar una valoración inicial de la aprobación o la anomalía de la prueba; sin embargo, tenga cuidado
+                    de mitigar los riesgos inherentes en la determinación de resultados automatizados.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Herramientas necesarias:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica requiere las herramientas siguientes:
+                </p>
+                <p>
+                    Herramienta de automatización de script de prueba
+                </p>
+                <p>
+                    Herramienta de planificación de carga de transacción y de control
+                </p>
+                <p>
+                    herramientas de instalación-supervisión (registro, disco duro, CPU, memoria, etc.)
+                </p>
+                <p>
+                    herramientas de restricción de recursos; por ejemplo, Canned Heat
+                </p>
+                <p>
+                    herramientas de generación de datos
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Criterios de éxito:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica da soporte a la prueba de emulación de carga de trabajo, que es la emulación correcta de la
+                    carga de trabajo sin anomalías debido a los problemas de implementación de prueba.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Consideraciones especiales:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Las pruebas de carga deben efectuarse en una máquina dedicada o en un tiempo dedicado. Esto permite el
+                    control total y las medidas precisas.
+                </p>
+                <p>
+                    Las bases de datos que se utilizan para las pruebas de carga deben tener tamaño real o igualmente
+                    escalado.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<h3>
+    <a id="StressTesting" name="StressTesting"><span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    Prueba de tensión</a>
+</h3>
+<p>
+    La prueba de tensión es un tipo de prueba de rendimiento que se implementa y ejecuta para comprender cómo falla un
+    sistema debido a condiciones en el límite, o fuera de este, de las tolerancias esperadas. Suele implicar recursos bajos
+    o competencia de recursos. Bajas condiciones de recursos revelan cómo falla el destino de la prueba, que no es aparente
+    bajo condiciones normales. Otros defectos pueden resultar de la competencia por los recursos compartidos, como los
+    bloqueos de base de datos o el ancho de banda de red, aunque algunas de estas pruebas suelen dirigirse bajo pruebas
+    funcionales y de carga.
+</p>
+<p>
+    <b>Nota</b>: Las referencias a transacciones de la tabla siguiente hacen referencia a transacciones empresariales
+    lógicas.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Objetivo de la técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Ejercer las funciones del destino de la prueba bajo las condiciones de tensión siguientes para observar
+                    y registrar el comportamiento de destino que identifique y documente las condiciones bajo las cuales el
+                    sistema <b>no puede</b> continuar funcionando adecuadamente:
+                </p>
+                <p>
+                    poca memoria o sin memoria disponible en el servidor (RAM y espacio de almacenamiento persistente)
+                </p>
+                <p>
+                    máximo real o número capaz físicamente de clientes conectados o simulados
+                </p>
+                <p>
+                    múltiples usuarios efectúan las mismas transacciones contra los mismos datos o cuentas
+                </p>
+                <p>
+                    volumen de transacción de "sobrecarga" o mezcla (consulte el apartado Perfilado de rendimiento
+                    anterior)
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Utiliza pruebas desarrolladas para perfilado de rendimiento o prueba de carga.
+                </p>
+                <p>
+                    Para probar recursos limitados, las pruebas se deben ejecutar en una única máquina y se debe reducir o
+                    limitar la RAM y el espacio de almacenamiento persistente en el servidor.
+                </p>
+                <p>
+                    Para las pruebas de tensión restantes, deben utilizarse múltiples clientes, ejecutando las mismas
+                    pruebas o pruebas complementarias para producir el volumen o la mezcla de transacción del peor de los
+                    casos.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Oráculos:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Destacan una o más estrategias que se pueden utilizar con la técnica para observar con precisión los
+                    resultados de la prueba. El oráculo combina elementos del método por los cuales la observación se puede
+                    realizar y las características de un resultado específico que indican el éxito o la anomalía probable.
+                    Idealmente, los oráculos se verificarán automáticamente, permitiendo las pruebas automatizadas para
+                    realizar una valoración inicial de la aprobación o la anomalía de la prueba; sin embargo, tenga cuidado
+                    de mitigar los riesgos inherentes en la determinación de resultados automatizados.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Herramientas necesarias:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica requiere las herramientas siguientes:
+                </p>
+                <p>
+                    Herramienta de automatización de script de prueba
+                </p>
+                <p>
+                    Herramienta de planificación de carga de transacción y de control
+                </p>
+                <p>
+                    herramientas de instalación-supervisión (registro, disco duro, CPU, memoria, etc.)
+                </p>
+                <p>
+                    herramientas de restricción de recursos; por ejemplo, Canned Heat
+                </p>
+                <p>
+                    herramientas de generación de datos
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Criterios de éxito:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica da soporte a las pruebas de emulación de tensión. El sistema se puede emular
+                    satisfactoriamente en una o más condiciones definidas como condiciones de tensión, y se puede capturar
+                    una observación del estado resultante del sistema, durante y después de emular la condición.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Consideraciones especiales:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Presionar la red puede requerir que las herramientas de red carguen la red con mensajes o paquetes.
+                </p>
+                <p>
+                    El almacenamiento persistente que se utiliza para el sistema debe reducirse temporalmente para
+                    restringir el espacio disponible para que crezca la base de datos.
+                </p>
+                <p>
+                    Sincronice los clientes simultáneos para acceder a los mismos registros o cuentas de datos.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<h3>
+    <a id="VolumeTesting" name="VolumeTesting"><span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    Pruebas de volumen</a>
+</h3>
+<p>
+    Las pruebas de volumen someten el destino de la prueba a grandes cantidades de datos para determinar si se alcanzan los
+    límites que provocan que falle el software. Las pruebas de volumen también identifican la carga máxima continua o
+    volumen que el destino de la prueba puede manejar durante un periodo determinado. Por ejemplo, si el destino de la
+    prueba está procesando un conjunto de registros de base de datos para generar un informe, una prueba de volumen
+    utilizaría una base de datos de prueba grande, y comprobaría que el software se comporta normalmente y que produce el
+    informe correcto.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Objetivo de la técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Ejercer las funciones del destino de la prueba bajo los casos de ejemplo de volumen elevado siguientes
+                    para observar y registrar el comportamiento de destino:
+                </p>
+                <p>
+                    Número máximo (real o físicamente alcanzable) de clientes conectados, o simulados, que realizan la
+                    misma función empresarial en el peor de los casos (rendimiento) durante un periodo prolongado.
+                </p>
+                <p>
+                    Tamaño máximo que la base de datos ha alcanzado (real o escalado) y múltiples consultas o transacciones
+                    de informe que se ejecutan simultáneamente.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Utiliza pruebas desarrolladas para perfilado de rendimiento o prueba de carga.
+                </p>
+                <p>
+                    Deben utilizarse múltiples clientes, ejecutando las mismas pruebas o pruebas complementarias para
+                    producir el volumen o la mezcla de transacción del peor de los casos (consulte el apartado Prueba de
+                    tensión) durante un periodo prolongado.
+                </p>
+                <p>
+                    Se crea el tamaño máximo de la base de datos (real, escalado o rellenado con datos representativos), y
+                    se utilizan múltiples clientes para ejecutar consultas e informar sobre transacciones simultáneamente
+                    durante periodos prolongados.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Oráculos:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Destacan una o más estrategias que se pueden utilizar con la técnica para observar con precisión los
+                    resultados de la prueba. El oráculo combina elementos del método por los cuales la observación se puede
+                    realizar y las características de un resultado específico que indican el éxito o la anomalía probable.
+                    Idealmente, los oráculos se verificarán automáticamente, permitiendo las pruebas automatizadas para
+                    realizar una valoración inicial de la aprobación o la anomalía de la prueba; sin embargo, tenga cuidado
+                    de mitigar los riesgos inherentes en la determinación de resultados automatizados.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Herramientas necesarias:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica requiere las herramientas siguientes:
+                </p>
+                <p>
+                    Herramienta de automatización de script de prueba
+                </p>
+                <p>
+                    Herramienta de planificación de carga de transacción y de control
+                </p>
+                <p>
+                    herramientas de instalación-supervisión (registro, disco duro, CPU, memoria, etc.)
+                </p>
+                <p>
+                    herramientas de restricción de recursos; por ejemplo, Canned Heat
+                </p>
+                <p>
+                    herramientas de generación de datos
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Criterios de éxito:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica da soporte a las pruebas de emulación de volumen. Grandes cantidades de usuarios, datos,
+                    transacciones u otros aspectos del uso del sistema bajo volumen se pueden emular satisfactoriamente y
+                    se puede capturar una observación de los cambios de estado del sistema con la duración de la prueba de
+                    volumen.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Consideraciones especiales:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    ¿Qué periodo de tiempo se considerará un tiempo aceptable para condiciones de alto volumen, como se ha
+                    indicado anteriormente?
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<h3>
+    <a id="SecurityAndAccessControlTesting" name="SecurityAndAccessControlTesting"><span     style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;</span> Prueba de seguridad y de control de accesos</a>
+</h3>
+<p>
+    Las pruebas de seguridad y de control de accesos se centran en dos áreas clave de la seguridad:
+</p>
+<p>
+    Seguridad de nivel de aplicación, que incluyen el acceso a los datos o a las funciones empresariales
+</p>
+<p>
+    Seguridad de nivel de sistema, que incluye el registro en o el acceso remoto al sistema
+</p>
+<p>
+    Basándose en la seguridad que desea, la seguridad de nivel de aplicación garantiza que los actores se restringen a
+    funciones específicas o casos de uso, o se limitan en los datos que están disponibles para ellos. Por ejemplo,
+    cualquiera puede tener permiso para entrar datos y crear nuevas cuentas, pero sólo los gestores pueden suprimirlas. Si
+    existe seguridad en el nivel de datos, las pruebas garantizan que el "tipo de usuario uno" puede ver toda la
+    información del cliente, incluidos los datos financieros, sin embargo, el "tipo de usuario dos" sólo ve los datos
+    demográficos del mismo cliente.
+</p>
+<p>
+    La seguridad de nivel de sistema garantiza que sólo los usuarios que disponen de acceso al sistema pueden acceder a las
+    aplicaciones y sólo a través de las pasarelas apropiadas.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Objetivo de la técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Ejercer el destino de la prueba bajo las condiciones siguientes para observar y registrar el
+                    comportamiento de destino:
+                </p>
+                <p>
+                    Seguridad de nivel de aplicación: un actor sólo puede acceder a las funciones o datos para los que su
+                    tipo de usuario dispone de permisos.
+                </p>
+                <p>
+                    Seguridad de nivel de sistema: sólo los actores con acceso al sistema y las aplicaciones tienen permiso
+                    para acceder a ellos.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Seguridad de nivel de aplicación: Identifique y liste cada tipo de usuario y las funciones o los datos
+                    para los que cada tipo tiene permisos.
+                </p>
+                <p>
+                    Cree pruebas para cada tipo de usuario y verifique cada permiso creando transacciones específicas para
+                    cada tipo de usuario.
+                </p>
+                <p>
+                    Modifique el tipo de usuario y vuelva a ejecutar las pruebas para los mismos usuarios. En cada caso,
+                    verifique que las funciones adicionales o los datos están disponibles correctamente o se deniegan.
+                </p>
+                <p>
+                    Acceso de nivel de sistema: Consulte el apartado siguiente Consideraciones especiales.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Oráculos:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Destacan una o más estrategias que se pueden utilizar con la técnica para observar con precisión los
+                    resultados de la prueba. El oráculo combina elementos del método por los cuales la observación se puede
+                    realizar y las características de un resultado específico que indican el éxito o la anomalía probable.
+                    Idealmente, los oráculos se verificarán automáticamente, permitiendo las pruebas automatizadas para
+                    realizar una valoración inicial de la aprobación o la anomalía de la prueba; sin embargo, tenga cuidado
+                    de mitigar los riesgos inherentes en la determinación de resultados automatizados.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Herramientas necesarias:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica requiere las herramientas siguientes:
+                </p>
+                <p>
+                    Herramienta de automatización de script de prueba
+                </p>
+                <p>
+                    Brecha en la seguridad de un "hacker" y herramientas de análisis
+                </p>
+                <p>
+                    Herramientas de administración de seguridad del sistema operativo
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Criterios de éxito:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica proporciona soporte a las pruebas de las funciones apropiadas o datos afectados por la
+                    configuración de seguridad que se puede probar para cada tipo de actor conocido.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Consideraciones especiales:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    El acceso al sistema se debe revisar o discutir con el administrador de red o del sistema apropiado.
+                    Esta prueba puede no ser necesaria ya que puede ser una función de red o de la administración de los
+                    sistemas.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<h3>
+    <a id="FailoverAndRecoveryTesting" name="FailoverAndRecoveryTesting"><span     style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;</span> Pruebas de migración tras error y de
+    recuperación</a>
+</h3>
+<p>
+    Las pruebas de migración tras error y recuperación garantizan que el destino de la prueba puede migrar tras error y
+    recuperarse satisfactoriamente a partir de una serie de averías de hardware, software o de red con pérdida indebida de
+    datos o de integridad de datos.
+</p>
+<p>
+    Para los sistemas que deben seguir ejecutándose, las pruebas de migración tras error garantizan que cuando ocurre una
+    condición de migración tras error, los sistemas alternativo o de copia de seguridad asumen correctamente las funciones
+    del sistema que ha fallado sin perder datos ni transacciones.
+</p>
+<p>
+    Las pruebas de recuperación son un proceso de prueba antagónico en que la aplicación o el sistema se expone a
+    condiciones extremas, o condiciones simuladas, para causar una anomalía, como anomalías de Entrada/Salida (E/S) del
+    dispositivo, o punteros y claves de base de datos no válidos. Se invocan los procesos de recuperación, y la aplicación
+    o sistema se supervisa e inspecciona para verificar la aplicación correcta, o el sistema, y que se ha logrado la
+    recuperación de datos.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Objetivo de la técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Simular las condiciones anómalas y ejecutar los procesos de recuperación (manual y automatizada) para
+                    restaurar la base de datos, aplicaciones, y sistema a un estado deseado y conocido. Los tipos
+                    siguientes de condiciones se incluyen en las pruebas para observar y registrar el comportamiento
+                    después de la recuperación:
+                </p>
+                <p>
+                    interrupción de la alimentación del cliente
+                </p>
+                <p>
+                    interrupción de la alimentación del servidor
+                </p>
+                <p>
+                    interrupción de la comunicación a través de los servidores de red
+                </p>
+                <p>
+                    interrupción, comunicación, o pérdida de alimentación a DASD (Acceso directo a dispositivos de
+                    almacenamiento) y a controladores DASD
+                </p>
+                <p>
+                    ciclos incompletos (procesos de filtrado de datos interrumpidos, procesos de sincronización de datos
+                    interrumpidos)
+                </p>
+                <p>
+                    punteros o claves de base de datos no válidos
+                </p>
+                <p>
+                    elementos de datos no válidos o dañados en la base de datos
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Las pruebas ya creadas para las pruebas de función y de ciclo empresarial se pueden utilizar como base
+                    para crear una serie de transacciones para proporcionar soporte a las pruebas de migración tras error y
+                    recuperación, principalmente para definir las pruebas que se ejecutarán para probar que la recuperación
+                    se ha realizado satisfactoriamente.
+                </p>
+                <p>
+                    Interrupción de la alimentación al cliente: apague el PC.
+                </p>
+                <p>
+                    Interrupción de la alimentación del servidor: simule o inicie los procedimientos de apagado para el
+                    servidor.
+                </p>
+                <p>
+                    Interrupción a través de los servidores de red: simular o iniciar la pérdida de comunicación con la red
+                    (desconectar físicamente los cables de comunicación o cortar la alimentación de los servidores de red y
+                    los direccionadores).
+                </p>
+                <p>
+                    Interrupción, comunicación, o pérdida de alimentación a DASD y a controladores DASD: simular o eliminar
+                    físicamente la comunicación con uno o más DASD o controladores DASD.
+                </p>
+                <p>
+                    Cuando se logran las condiciones o condiciones simuladas anteriores, deben ejecutarse transacciones
+                    adicionales y cuando se alcance este segundo estado de punto de prueba, se deben invocar los
+                    procedimientos de recuperación.
+                </p>
+                <p>
+                    Las pruebas de los ciclos incompletos utilizan la misma técnica que la descrita anteriormente, excepto
+                    que los procesos de la base de datos deben cancelarse anormalmente o terminarse prematuramente.
+                </p>
+                <p>
+                    Las pruebas de las siguientes condiciones requieren que se alcance un estado de base de datos conocido.
+                    Varios campos de base de datos, punteros, y claves se deben dañar manualmente y directamente dentro de
+                    la base de datos (mediante herramientas de base de datos). Deben ejecutarse transacciones adicionales
+                    mediante las pruebas de la función de aplicación y las pruebas de ciclo empresarial y los ciclos
+                    completos ejecutados.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Oráculos:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Destacan una o más estrategias que se pueden utilizar con la técnica para observar con precisión los
+                    resultados de la prueba. El oráculo combina elementos del método por los cuales la observación se puede
+                    realizar y las características de un resultado específico que indican el éxito o la anomalía probable.
+                    Idealmente, los oráculos se verificarán automáticamente, permitiendo las pruebas automatizadas para
+                    realizar una valoración inicial de la aprobación o la anomalía de la prueba; sin embargo, tenga cuidado
+                    de mitigar los riesgos inherentes en la determinación de resultados automatizados.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Herramientas necesarias:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica requiere las herramientas siguientes:
+                </p>
+                <p>
+                    Configuraciones básicas de Imager y Restorer
+                </p>
+                <p>
+                    herramientas de instalación-supervisión (registro, disco duro, CPU, memoria, etc.)
+                </p>
+                <p>
+                    herramientas de copia de seguridad y de recuperación
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Criterios de éxito:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica da soporte a las pruebas de:
+                </p>
+                <p>
+                    Uno o más desastres simulados que implican una o más combinaciones de la aplicación, la base de datos y
+                    el sistema.
+                </p>
+                <p>
+                    Una o más recuperaciones simuladas que implican una o más combinaciones de la aplicación, la base de
+                    datos y el sistema a un estado deseado conocido.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Consideraciones especiales:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Las pruebas de recuperación son muy intrusivas. Los procedimientos para desconectar el cableado
+                    (simulando que se pierde la comunicación con la alimentación) puede no ser deseable o factible. Métodos
+                    alternativos, como las herramientas de software de diagnóstico, pueden ser necesarias.
+                </p>
+                <p>
+                    Recursos de los sistemas (u operaciones informáticas), base de datos y grupos de redes son necesarios.
+                </p>
+                <p>
+                    Estas pruebas deben ejecutarse después de horas o en una máquina aislada.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<h3>
+    <a id="ConfigurationTesting" name="ConfigurationTesting"><span     style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;</span> Pruebas de configuración</a>
+</h3>
+<p>
+    Las pruebas de configuración verifican el funcionamiento del destino de la prueba en diferentes configuraciones de
+    software y hardware. En la mayoría de entornos de producción, las especificaciones de hardware concretas para las
+    estaciones de trabajo del cliente, conexiones de red y servidores de bases de datos varían. Las estaciones de trabajo
+    del cliente pueden tener diferentes softwares cargados (por ejemplo, aplicaciones, controladores, etc.) y, en cualquier
+    momento, muchas combinaciones diferentes pueden estar activas utilizando diferentes recursos.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Objetivo de la técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Ejercer el destino de la prueba en las configuraciones de hardware y software necesarias para observar
+                    y registrar el comportamiento bajo diferentes configuraciones e identificar los cambios en el estado de
+                    configuración.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Utilice los script de prueba de función.
+                </p>
+                <p>
+                    Abra y cierre varios softwares relacionados que no sean el destino de la prueba, como las aplicaciones
+                    Microsoft&reg; Excel&reg; y Microsoft&reg; Word&reg;, como parte de la prueba o bien antes de iniciarla.
+                </p>
+                <p>
+                    Ejecute las transacciones seleccionadas para simular actores que interactúan con el software destino de
+                    la prueba y el que no es destino de la prueba.
+                </p>
+                <p>
+                    Repita el proceso anterior, minimizando la memoria convencional disponible en la estación de trabajo
+                    cliente.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Oráculos:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Destacan una o más estrategias que se pueden utilizar con la técnica para observar con precisión los
+                    resultados de la prueba. El oráculo combina elementos del método por los cuales la observación se puede
+                    realizar y las características de un resultado específico que indican el éxito o la anomalía probable.
+                    Idealmente, los oráculos se verificarán automáticamente, permitiendo las pruebas automatizadas para
+                    realizar una valoración inicial de la aprobación o la anomalía de la prueba; sin embargo, tenga cuidado
+                    de mitigar los riesgos inherentes en la determinación de resultados automatizados.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Herramientas necesarias:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica requiere las herramientas siguientes:
+                </p>
+                <p>
+                    Configuraciones básicas de Imager y Restorer
+                </p>
+                <p>
+                    herramientas de instalación-supervisión (registro, disco duro, CPU, memoria, etc.)
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Criterios de éxito:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica proporciona soporte a la prueba de una o más combinaciones de elementos del destino de la
+                    prueba que se ejecutan en entornos de despliegue esperados y admitidos.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Consideraciones especiales:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    ¿Qué software que no es destino de la prueba es necesario, está disponible y está accesible en el
+                    escritorio?
+                </p>
+                <p>
+                    ¿Qué aplicaciones se utilizan habitualmente?
+                </p>
+                <p>
+                    ¿Qué datos ejecutan las aplicaciones; por ejemplo, una hoja de cálculo grande abierta en Excel o un
+                    documento de 100 páginas en Word?
+                </p>
+                <p>
+                    Todo el netware de los sistemas, servidores de red, bases de datos, etc., también deben documentarse
+                    como parte de esta prueba.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<h3>
+    <a id="InstallationTesting" name="InstallationTesting"><span     style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;</span> Pruebas de instalación</a>
+</h3>
+<p>
+    Las pruebas de instalación tienen dos objetivos. El primero es garantizar que el software se puede instalar bajo
+    diferentes condiciones (como una nueva instalación, una actualización, y una instalación completa o personalizada) bajo
+    condiciones normales y anormales. Las condiciones anormales incluyen espacio en disco insuficiente, falta de
+    privilegios para crear directorios, etc. El segundo objetivo es verificar que, una vez instalado, el software funciona
+    correctamente. Esto habitualmente significa ejecutar una serie de pruebas que se desarrollaron para las pruebas de
+    función.<b><span style="FONT-SIZE: 12pt; FONT-FAMILY: Arial"><br style="PAGE-BREAK-BEFORE: always" clear="all" />
+    </span></b>
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Objetivo de la técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Ejercer la instalación del destino de la prueba en cada configuración de hardware necesaria bajo las
+                    condiciones siguientes para observar y registrar los cambios de estado del comportamiento y la
+                    configuración de la instalación:
+                </p>
+                <p>
+                    nueva instalación: una nueva máquina, nunca instalada anteriormente con &lt;Nombre de proyecto&gt;
+                </p>
+                <p>
+                    actualización: una máquina instalada anteriormente &lt;Nombre de proyecto&gt;, misma versión
+                </p>
+                <p>
+                    actualización: una máquina instalada anteriormente &lt;Nombre de proyecto&gt;, versión anterior
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Técnica:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Desarrollar scripts automatizados o manuales para validar la condición de la máquina de destino.
+                </p>
+                <p>
+                    nuevo: &lt;Nombre del proyecto&gt; nunca antes instalado
+                </p>
+                <p>
+                    &lt;Nombre de proyecto&gt; misma versión o anterior ya instalada
+                </p>
+                <p>
+                    Iniciar o efectuar la instalación.
+                </p>
+                <p>
+                    Utilizando un subconjunto predeterminado de scripts de prueba de función, ejecute las transacciones.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Oráculos:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    Destacan una o más estrategias que se pueden utilizar con la técnica para observar con precisión los
+                    resultados de la prueba. El oráculo combina elementos del método por los cuales la observación se puede
+                    realizar y las características de un resultado específico que indican el éxito o la anomalía probable.
+                    Idealmente, los oráculos se verificarán automáticamente, permitiendo las pruebas automatizadas para
+                    realizar una valoración inicial de la aprobación o la anomalía de la prueba; sin embargo, tenga cuidado
+                    de mitigar los riesgos inherentes en la determinación de resultados automatizados.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Herramientas necesarias:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica requiere las herramientas siguientes:
+                </p>
+                <p>
+                    Configuraciones básicas de Imager y Restorer
+                </p>
+                <p>
+                    herramientas de instalación-supervisión (registro, disco duro, CPU, memoria, etc.)
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Criterios de éxito:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    La técnica da soporte a las pruebas de la instalación del producto desarrollado en una o más
+                    configuraciones de instalación.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" width="31%">
+                <font size="2">Consideraciones especiales:</font>
+            </th>
+            <td width="69%">
+                <p>
+                    ¿Qué transacciones de &lt;nombre de proyecto&gt; deben seleccionarse para incluir una prueba de
+                    confianza que la aplicación del &lt;nombre de proyecto&gt; ha instalado satisfactoriamente y no falta
+                    ningún componente de software importante?
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

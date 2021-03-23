@@ -1,0 +1,1353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Especificaci&oacute;n de requisitos de software</title>
+<meta content="Guideline" name="uma.type">
+<meta content="software_requirements_specification" name="uma.name">
+<meta content="Especificaci&oacute;n de requisitos de software" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_KVkLoN7HEdm8G6yT7-Wdqw", "{BE8165DC-BAF2-4237-B27D-F2A037023364}", "5.0594212359881566E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_KVkLoN7HEdm8G6yT7-Wdqw", "{B16C2941-791C-44E6-B353-354109B5C9DE}", "5.0594212359881566E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3aJCcN7REdmjRZts2c4ZjQ", "{BE8165DC-BAF2-4237-B27D-F2A037023364}", "5.0594212359881566E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3aJCcN7REdmjRZts2c4ZjQ", "{B16C2941-791C-44E6-B353-354109B5C9DE}", "5.0594212359881566E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "5.0594212359881566E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_N13eYAINEdq-_NKqZM1EhA", "_KVkLoN7HEdm8G6yT7-Wdqw", "{BE8165DC-BAF2-4237-B27D-F2A037023364}", "5.0594212359881566E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_N13eYAINEdq-_NKqZM1EhA", "_KVkLoN7HEdm8G6yT7-Wdqw", "{B16C2941-791C-44E6-B353-354109B5C9DE}", "5.0594212359881566E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="5.0594212359881566E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Especificaci&oacute;n de requisitos de software</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">La especificación de requisitos de software (SRS) se centra en la recopilación y la organización de todos los requisitos que envuelven el proyecto. En esta directriz se explica cómo desarrollar un SRS.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_software_requirements_specification_934E66F.html" guid="{BE8165DC-BAF2-4237-B27D-F2A037023364}">Especificación de requisitos de software</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">Especificaciones suplementarias</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="especificación de requisitos de software" text="directrices para" name="XE_software_requirements_specification__guidelines_for" id="XE_software_requirements_specification__guidelines_for" class="index"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">Explicación</a>
+</h3>
+<p>
+    La <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_software_requirements_specification_934E66F.html" guid="{BE8165DC-BAF2-4237-B27D-F2A037023364}">especificación de requisitos de software (SRS)</a> se centra en la
+    recopilación y la organización de todos los requisitos que envuelven el proyecto. Si dispone de un plan de gestión de
+    requisitos, debe consultarlo para determinar la organización y la ubicación correcta de los requisitos. Por ejemplo,
+    quizá sea aconsejable tener un SRS separado para describir los requisitos de software completos para cada <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/types_of_requirements_528C097C.html" guid="5.360970653483052E-305">característica</a> en un release determinado del producto. Puede incluir varios <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">casos de uso</a> del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">modelo
+    de caso de uso</a> del sistema para describir los requisitos de funcionamiento de dicha característica, junto con el
+    conjunto adecuado de requisitos detallados en <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">especificaciones suplementarias</a>.
+</p>
+<p>
+    Puesto que es posible que se encuentre con varias herramientas diferentes para recopilar los requisitos, es importante
+    que sepa que la recopilación de requisitos se puede encontrar en varias herramientas y artefactos distintos. Por
+    ejemplo, quizá le resulte adecuado recopilar requisitos textuales, tales como requisitos no funcionales o restricciones
+    de diseño, entre otros, con una herramienta de documentación de texto en <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">especificaciones suplementarias</a>. Por otra parte, le puede resultar
+    útil recopilar algunos (o todos) los requisitos de funcionamiento en los <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">casos de
+    uso</a> , y le puede venir bien utilizar una herramienta adecuada para definir el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">modelo
+    de caso de uso</a> .
+</p>
+<h4>
+    <a id="A Document or a Package?" name="A Document or a Package?">¿Un documento o un paquete?</a>
+</h4>
+<p>
+    Parece que no existe una razón de peso para tratar las diferencias entre las herramientas utilizadas. Al fin y al cabo,
+    va a recopilar requisitos y, en realidad, se va a centrar en la organización y la recogida eficaz de los requisitos sin
+    tener en cuenta las herramientas que maneja. Puesto que se van a tratar los requisitos y no las herramientas, se da por
+    supuesto que la recogida de requisitos en SRS constituye un <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/package_6C588F6C.html" guid="_yPjjANnmEdmO6L4XMImrsA">paquete</a>&nbsp;
+    de información. La elaboración de los distintos requisitos para el sistema se representa en un paquete que se denomina
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_software_requirements_specification_934E66F.html" guid="{BE8165DC-BAF2-4237-B27D-F2A037023364}">especificación de requisitos de software (SRS)</a>.
+</p>
+<h4>
+    <a id="From Vision to SRS" name="From Vision to SRS">De Visión a SRS</a>
+</h4>
+<p>
+    Obviamente, el paquete SRS está relacionado con el documento <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_vision_2D6D6F1.html" guid="{417F089F-6636-451A-A8AB-AB4EAC7AC4F1}">Visión</a>. En
+    realidad, el documento Visión sirve como la entrada a SRS. Pero ambos artefactos sirven para necesidades diferentes y,
+    por lo general, los escriben autores diferentes. En esta fase del proyecto, el centro del proyecto se mueve de la
+    sentencia general de las necesidades, metas y objetivos del usuario, características y mercados de destino del sistema,
+    a los detalles sobre el modo en el que se van a implementar dichas características en la solución.
+</p>
+<p>
+    Lo que se necesita ahora es una recopilación o paquete de artefactos que describa el comportamiento externo completo
+    del sistema, es decir, un paquete que indique, específicamente, "Aquí se encuentra lo que debe realizar el sistema para
+    entregar las características". Esto es a lo que se hace referencia como paquete SRS.
+</p>
+<h4>
+    <a id="A Living Artifact" name="A Living Artifact">Un artefacto vivo</a>
+</h4>
+<p>
+    El paquete SRS no es un tomo congelado, creado para asegurar el cumplimiento con ISO 9000 y, a continuación, escondido
+    en una esquina e ignorado mientras el proyecto continúa, sino que es un artefacto activo y vivo. En realidad, tiene
+    múltiples usos cuando los desarrolladores se embarcan en su esfuerzo de implementación: sirve como una base de
+    comunicación entre todas las partes, es decir, entre los desarrolladores en sí mismos, y entre los desarrolladores y
+    los grupos externos (usuarios y otros interesados) con los que se deben comunicar. Formal o informalmente, representa
+    un acuerdo contractual entre las distintas partes; si no se encuentra en el paquete SRS, los desarrolladores no deben
+    trabajar en ello. Y, si está en el paquete SRS, son responsables de entregar dicha funcionalidad.
+</p>
+<h4>
+    <a id="The Project Members' Reference Standard" name="The Project Members' Reference Standard">El estándar de
+    referencia de los miembros del proyecto</a>
+</h4>
+<p>
+    SRS sirve como estándar de referencia del <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_project_manager_363CE680.html" guid="{EE97A8CD-66CA-4A9B-9871-E3B94CCED528}">gestor de
+    proyectos</a>. Es poco probable que el gestor de proyectos disponga de tiempo, energía o formación para leer el código
+    que generan los desarrolladores y compararlo directamente con el documento <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_vision_2D6D6F1.html" guid="{417F089F-6636-451A-A8AB-AB4EAC7AC4F1}">Visión</a>.
+    Debe utilizar el paquete SRS como referencia estándar para discusiones con el equipo del proyecto.
+</p>
+<p>
+    Tal como se ha indicado anteriormente, sirve como entrada para los grupos de implementación y diseño. En función de
+    cómo se haya organizado el proyecto, los implementadores pueden estar implicados en las primeras tareas de definición
+    de características y resolución de problemas que, finalmente, produce el documento Visión. Pero necesitan el paquete
+    SRS para centrarse al tomar decisiones sobre lo que debe llevar a cabo su código. Sirve como entrada para los grupos QA
+    y la prueba de software. Dichos grupos también se han implicado en algunas de las primeras discusiones y, obviamente,
+    les ayuda a tener una comprensión adecuada de la "visión" trazada en los documentos de Visión. Pero su privilegio es
+    crear guiones de prueba y procedimientos QA a fin de garantizar que el sistema desarrollado cumple, en realidad, los
+    requisitos trazados en el paquete SRS. El paquete SRS también sirve como referencia estándar para sus tareas de prueba
+    y planificación.
+</p>
+<h3>
+    <a id="Defining Functional Requirements" name="Defining Functional Requirements">Definición de requisitos
+    funcionales</a>
+</h3>
+<p>
+    Consulte los apartados <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use-case_model_CC121CF4.html" guid="1.7617672560167394E-305">Directriz:
+    Modelo de caso de uso</a> y <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use_case_CC89870D.html" guid="4.1983217662266927E-305">Directriz: Caso de
+    uso</a> para obtener información detallada sobre la propuesta recomendada para definir requisitos funcionales en el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">modelo de caso de uso</a> y los <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">Casos de
+    uso</a> .
+</p>
+<h3>
+    <a id="Defining Non-Functional Requirements" name="Defining Non-Functional Requirements">Definición de requisitos no
+    funcionales</a>
+</h3>
+<p>
+    Los requisitos no funcionales del sistema se deben documentar en <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">Producto de trabajo: Especificaciones suplementarias</a>.&nbsp; Para
+    definir dichos requisitos, siga las directrices que se indican a continuación:
+</p>
+<h4>
+    <b><a id="1 General" name="1 General"><font size="4">1 General</font></a></b>
+</h4>
+<h5>
+    <b><a id="1.1 Assumptions and Issues" name="1.1 Assumptions and Issues"><font size="+0">1.1 Suposiciones y
+    problemas</font></a></b>
+</h5>
+<p>
+    Mientras recoge y valida requisitos no funcionales, mantenga listas de Suposiciones y problemas.&nbsp;
+</p>
+<p>
+    Algunas tareas no ofrecen respuestas satisfactorias. Puede deberse a falta de información o, simplemente, debido a que
+    se considera que la respuesta amenaza a la viabilidad del diseño. Por este motivo, cree dos listas y manténgalas a lo
+    largo de todo el estudio del diseño:
+</p>
+<p>
+    Todas las suposiciones que se hacen durante los requisitos y el proceso de diseño, incluidos los procesos de reflexión
+    o fundamentos que están detrás de dichas suposiciones. Los supuestos se pueden utilizar para identificar subproyectos
+    relacionados o elementos de trabajo que se encuentran fuera del ámbito o después de este proyecto.
+</p>
+<p>
+    Todos los principales problemas (preocupaciones importantes que podrían convertirse en tapones)
+</p>
+<p>
+    Los problemas se deben revisar con el cliente al final de cada fase. Las suposiciones también se deben revisar al final
+    de cada fase, pero es posible que el cliente no sea siempre la persona correcta para las menos importantes.
+</p>
+<p>
+    Las suposiciones y los problemas se aplican a todos los productos de trabajo, pero son especialmente comunes para los
+    requisitos no funcionales.
+</p>
+<h5>
+    <b><a id="1.2 Geographic Organization" name="1.2 Geographic Organization"><font size="+0">1.2 Organización
+    geográfica</font></a></b>
+</h5>
+<p>
+    Documente la organización geográfica del cliente.
+</p>
+<p>
+    Documente las ubicaciones geográficas de la parte empresarial a la que afecta este sistema. La definición también debe
+    incluir los sitios no afectados, que albergan recursos de IT importantes. Preste una atención especial a cualquier
+    componente de la organización que sea itinerante. Por ejemplo, el personal de ventas que viaja y utiliza estaciones de
+    trabajo. Observe todas las ubicaciones geográficas a las que es posible que deba proporcionar soporte del idioma
+    natural (NLS) especial.
+</p>
+<h4>
+    <b><a id="2 Givens" name="2 Givens"><font size="4">2 Supuestos</font></a></b>
+</h4>
+<h5>
+    <b><a id="2.1 Pre-selected Application Packages?" name="2.1 Pre-selected Application Packages?"><font size="+0">2.1
+    ¿Paquetes de aplicaciones preseleccionadas?</font></a></b>
+</h5>
+<p>
+    ¿Especifican los requisitos el uso de algún paquete de aplicaciones? Un "supuesto" muy importante que puede dictar con
+    firmeza algunas de las decisiones de diseño del sistema es el uso de un paquete de aplicaciones específico que
+    proporcione organización de datos y lógica de software predefinidos. Algunos paquetes de software son flexibles y
+    permiten un alto nivel de personalización; otros son muy rígidos y no lo permiten. Los paquetes pueden dictar
+    componentes y decisiones como, por ejemplo:
+</p>
+<ul>
+    <li>
+        Tipo de estación de trabajo
+    </li>
+    <li>
+        Métodos de conexión
+    </li>
+    <li>
+        Procesador y tipo de DASD (dispositivo de almacenamiento de acceso directo)
+    </li>
+    <li>
+        Programa de control del sistema
+    </li>
+    <li>
+        Organización, ubicación y gestión de los datos
+    </li>
+    <li>
+        Lenguaje de programación
+    </li>
+    <li>
+        Interfaces de proceso por lotes
+    </li>
+    <li>
+        Relaciones del proceso y los datos
+    </li>
+    <li>
+        Lógica empresarial
+    </li>
+    <li>
+        Diseño de pantalla e interfaz de usuario
+    </li>
+    <li>
+        Características de rendimiento y disponibilidad
+    </li>
+    <li>
+        Cualquier arquitectura existente o necesaria para imprimir, tales como formatos de datos de impresión preferidos
+        (por ejemplo, PostScript, PCL, IPDT)
+    </li>
+    <li>
+        Soporte del idioma nacional (NLS)
+    </li>
+</ul>
+<p>
+    Es importante comprender las influencias que puede tener un paquete determinado en el diseño. Si dispone de un paquete
+    determinado, asegúrese de que puede disponer de los conocimientos y la formación adecuada en relación con dicho
+    paquete. Puede proceder de:
+</p>
+<ul>
+    <li>
+        El proveedor del paquete
+    </li>
+    <li>
+        Consultores externos
+    </li>
+    <li>
+        Miembros del equipo de diseño formados específicamente para ello
+    </li>
+</ul>
+<p>
+    No dé por supuesto que podrá disponer de los conocimientos en seguida. Asegúrese de que pueda disponer de ellos cuando
+    los necesite.
+</p>
+<h5>
+    <b><a id="2.2 Other Givens" name="2.2 Other Givens"><font size="+0">2.2 Otros supuestos</font></a></b>
+</h5>
+<p>
+    Documente todos los demás supuestos en los requisitos que limiten la flexibilidad del diseño.
+</p>
+<p>
+    Capture todos los requisitos específicos que no se han tratado, explícitamente, en tareas anteriores y que puedan
+    limitar la flexibilidad del diseño, por ejemplo, cualquiera de las siguientes:
+</p>
+<ul>
+    <li>
+        Uso de imágenes del sistema operativo o procesadores existentes
+    </li>
+    <li>
+        Uso de equipo de estación de trabajo existente
+    </li>
+    <li>
+        Uso de una red existente
+    </li>
+    <li>
+        Uso de prácticas de gestión de sistemas existentes
+    </li>
+    <li>
+        Uso de un modelo específico como, por ejemplo: "debe utilizar un modelo cliente/servidor para el diseño que muestre
+        claramente la lógica de acceso de datos/empresarial/presentación y dónde y cómo intercambian información".
+    </li>
+</ul>
+<p>
+    ¿Puede afectar alguno de estos supuestos al nuevo sistema? Si el nuevo sistema se va a ejecutar en una configuración de
+    red, imagen del sistema operativo o procesador existentes, ¿pueden afectar las características de la plataforma
+    existente y la carga de trabajo al nuevo sistema?
+</p>
+<p>
+    ¿Cuánta capacidad de proceso y conexión han tomado ya las cargas de trabajo existentes?
+</p>
+<p>
+    ¿Qué controles de seguridad utilizan las cargas de trabajo existentes? Anótelos y compruébelos en comparación con los
+    requisitos de seguridad del nuevo sistema cuando considere éste último.
+</p>
+<p>
+    ¿Cuáles son las características de disponibilidad de la carga de trabajo existente?
+</p>
+<p>
+    Anote cualquier aspecto que pueda afectar al diseño de disponibilidad del nuevo sistema. Por ejemplo, ¿insiste la carga
+    de trabajo existente en concluir el conjunto de un procesador cada noche?
+</p>
+<h5>
+    <b><a id="2.3 Special Hardware?" name="2.3 Special Hardware?"><font size="+0">2.3 ¿Hardware especial?</font></a></b>
+</h5>
+<p>
+    ¿Especifican los requisitos el uso de algún hardware especial?
+</p>
+<p>
+    Es posible que se haya establecido en términos genéricos ("el sistema debe dar soporte a un trazador flat-bed de alta
+    velocidad"), o bien, que sean más específicos ("se da soporte a los cajeros automáticos Panda Corp"). Documente tanto
+    como pueda:
+</p>
+<ul>
+    <li>
+        Todos los requisitos previos de hardware o de software
+    </li>
+    <li>
+        Los proveedores y sus organizaciones de soporte
+    </li>
+    <li>
+        Las consideraciones de idioma nacional (NLS)
+    </li>
+    <li>
+        El equipo de cifrado
+    </li>
+</ul>
+<h5>
+    <b><a id="2.4 Existing Data?" name="2.4 Existing Data?"><font size="+0">2.4 ¿Datos existentes?</font></a></b>
+</h5>
+<p>
+    ¿Especifican los requisitos el uso de datos existentes? Si es así, este hecho influye en el diseño del sistema.
+    Documente:
+</p>
+<ul>
+    <li>
+        Los sistemas en los que existen los datos actualmente
+    </li>
+    <li>
+        La estructura (por ejemplo, archivo plano o relacional)
+    </li>
+    <li>
+        El tamaño
+    </li>
+    <li>
+        Qué usuarios y qué sistemas utilizan los datos en la actualidad
+    </li>
+    <li>
+        Consideraciones de disponibilidad (por ejemplo, períodos en los que los datos no están disponibles debido a tareas
+        de proceso por lotes o mantenimiento de la base de datos)
+    </li>
+    <li>
+        ¿Se pueden mover o copiar dichos datos?
+    </li>
+</ul>
+<h4>
+    <b><a id="3 Standards" name="3 Standards"><font size="4">3 Estándares</font></a></b>
+</h4>
+<h5>
+    <b><a id="3.1 Technical Architecture / Strategic Plan" name="3.1 Technical Architecture / Strategic Plan"><font     size="+0">3.1 Arquitectura técnica / Plan estratégico</font></a></b>
+</h5>
+<p>
+    ¿Tiene el cliente una arquitectura técnica o plan estratégico de IT (o conjunto de estándares equivalente)?
+</p>
+<p>
+    Una arquitectura técnica es más o menos equivalente a lo siguiente:
+</p>
+<ul>
+    <li>
+        Plataforma técnica empresarial
+    </li>
+    <li>
+        Infraestructura técnica empresarial
+    </li>
+    <li>
+        Arquitectura tecnológica
+    </li>
+</ul>
+<p>
+    Es posible que en una arquitectura técnica se haya definido automáticamente lo siguiente:
+</p>
+<ul>
+    <li>
+        El número y el uso de centros informáticos
+    </li>
+    <li>
+        La conectividad de red de la empresa (WAN)
+    </li>
+    <li>
+        La conectividad localizada de determinados establecimientos (LAN)
+    </li>
+    <li>
+        Servicios de infraestructura cliente/servidor (middleware)
+    </li>
+</ul>
+<blockquote>
+    <p>
+        Servicios de directorio y de denominación que realizan un seguimiento de los recursos y los atributos de la
+        red<br />
+         Servicios de seguridad que protegen los recursos de red contra el uso no autorizado por medio del registro de los
+        usuarios y sus niveles de autorización<br />
+         Servicios de tiempo que regulan la fecha y la hora a través de la red<br />
+         Servicios de gestión de transacciones que coordinan la recuperación de los recursos a través de distintos sistemas
+        de una red
+    </p>
+</blockquote>
+<ul>
+    <li>
+        Los métodos de desarrollo que va a utilizar las nuevas aplicaciones&nbsp;
+    </li>
+    <li>
+        El conjunto aceptado de productos soportados como, por ejemplo:
+    </li>
+</ul>
+<blockquote>
+    <p>
+        · Hardware<br />
+         · Software de control de sistemas<br />
+         · Amplio software de aplicaciones, por ejemplo, "Office"<br />
+         · Uso del escritorio de ayuda<br />
+         · Reglas de seguridad
+    </p>
+</blockquote>
+<ul>
+    <li>
+        Arquitectura del subsistema de impresión
+    </li>
+</ul>
+<p>
+    La lista puede ser muy extensa y los elementos de la misma se pueden vigilar sobre una base muy rígida, o bien, puede
+    no imponer en absoluto.
+</p>
+<p>
+    Documente todos los requisitos que necesiten o excluyan, específicamente, el uso de subarquitecturas como, por ejemplo:
+</p>
+<ul>
+    <li>
+        OSI o SNA
+    </li>
+    <li>
+        UNIX**
+    </li>
+    <li>
+        SAA
+    </li>
+    <li>
+        PS/2* con OS/2* EE.
+    </li>
+</ul>
+<p>
+    Arquitecturas especiales que puede implicar el uso de una solución de aplicaciones empaquetada. Recuerde que algunos
+    paquetes de aplicaciones son definiciones arquitectónicas independientes.
+</p>
+<p>
+    Documente el grado de apertura (es decir, interoperatividad e independencia del proveedor) que necesita el cliente. Si
+    existe una arquitectura técnica, es casi indudable que el diseño deberá ajustarse a la misma. Debe leer y comprender
+    las reglas que van a influir en el diseño del sistema.
+</p>
+<h5>
+    <b><a id="3.2 Network Architecture" name="3.2 Network Architecture"><font size="+0">3.2 Arquitectura de
+    red</font></a></b>
+</h5>
+<p>
+    ¿Tiene el cliente una arquitectura de red a la que se deba ajustar el sistema? Una arquitectura de red es un conjunto
+    de reglas comunes para conectividad de alto nivel, además de una infraestructura de transporte común. Puede incluir una
+    definición de una red troncal, incluidos concentradores y líneas. Si se trata de este tipo de arquitectura, comprenda
+    la topología y las reglas esenciales y documente:
+</p>
+<p>
+    Consideraciones para la topología física (es decir, si la red es, básicamente, rural o urbana y si la conexión de red
+    está densamente poblada en contraposición a distribuida libremente).
+</p>
+<p>
+    Nivel de funciones de conexión de alto nivel para las que ofrece soporte la infraestructura de red actual.
+</p>
+<p>
+    Estándares de comunicación utilizados (por ejemplo, SNA, OSI, TCP/IP) para dar soporte a las funciones de las
+    conexiones.
+</p>
+<p>
+    Interfaces de programación a las que se da soporte.
+</p>
+<p>
+    Todas las definiciones de arquitectura de red de la conectividad entre las capas cliente/servidor o las capas del
+    modelo de sistema de base, por ejemplo:
+</p>
+<ul>
+    <li>
+        El acceso a datos relacionales entre estaciones de trabajo cliente y servidores relacionales LAN se debe llevar a
+        cabo a través de los protocolos de un producto de base de datos relacional específico.
+    </li>
+    <li>
+        La lógica de presentación siempre debe estar en la estación de trabajo, y la lógica de acceso a los datos siempre
+        se debe encontrar en un sistema principal centralizado.
+    </li>
+</ul>
+<h5>
+    <b><a id="3.3 Connection Policies" name="3.3 Connection Policies"><font size="+0">3.3 Políticas de
+    conexión</font></a></b>
+</h5>
+<p>
+    ¿Tiene el cliente alguna política establecida para las conexiones?
+</p>
+<p>
+    Aunque no tenga arquitecturas técnicas o de red, es posible que tenga algunas políticas de conexión.
+</p>
+<p>
+    Documente todas las políticas relacionadas con:
+</p>
+<ul>
+    <li>
+        La utilización de recursos de comunicación o protocolos determinados (para las conexiones con un único edificio o
+        externas al edificio u organización).
+    </li>
+    <li>
+        Si no se requiere de forma implícita ningún protocolo determinado para dar soporte a software o equipos existentes.
+    </li>
+    <li>
+        Si se van a utilizar los recursos de conectividad física existentes (es decir, cableado, controladores periféricos
+        o de red y recursos de portadora comunes). En el caso contrario, es posible que existan restricciones sobre el tipo
+        de recursos físicos que se pueden utilizar (políticas, normativas gubernamentales, espacio físico, propiedad del
+        local, implicación de terceras partes). Documéntelos.
+    </li>
+    <li>
+        Si es probable que se requiera la instalación o modificación de recursos físicos, quizá se necesite implicar a una
+        o más terceras partes (por ejemplo, contratistas o portadoras comunes). Debe comprender cómo se va gestionar la
+        contratación o la responsabilidad. Es especialmente importante si las interacciones empresariales van a implicar
+        conexiones internacionales.
+    </li>
+    <li>
+        Soporte para usuarios itinerantes.
+    </li>
+</ul>
+<h5>
+    <b><a id="3.4 Other Policies?" name="3.4 Other Policies?"><font size="+0">3.4 ¿Otras políticas?</font></a></b>
+</h5>
+<p>
+    ¿Tiene el cliente otras políticas, estándares o reglas no establecidas, explícitamente, en los requisitos? Por ejemplo:
+</p>
+<ul>
+    <li>
+        Se deben diseñar todas las nuevas interfaces de sistemas para los usuarios a principios orientados a objetos a fin
+        de permitir acciones de arrastrar y soltar.
+    </li>
+    <li>
+        Todos los nuevos sistemas se deben basar en el modelo de aplicación cliente/servidor.
+    </li>
+    <li>
+        Todos los nuevos sistemas se deben definir con estándares abiertos.
+    </li>
+    <li>
+        Estándares y políticas para el soporte del idioma nacional (NLS), en especial, todo lo que relacionado con la
+        operación de texto de izquierda a derecha.
+    </li>
+    <li>
+        Política de seguridad que defina la responsabilidad de gestión y los estándares para la autenticación de usuario,
+        el control de acceso y la protección de los datos.
+    </li>
+    <li>
+        Estándares de intercambio de aplicaciones (por ejemplo, UNEDIFACT o VISA) que pueden implicar la utilización de
+        equipo especial para la conexión o la seguridad.
+    </li>
+</ul>
+<p>
+    Si existen otras políticas, asegúrese de que las comprende y tiene acceso a las mismas con el objeto de garantizar que
+    el diseño cumple con los estándares en las fases siguientes del proceso de diseño. Es posible que la utilización de una
+    solución de aplicaciones empaquetada conlleve estándares implícitos.
+</p>
+<p>
+    Podría ser la política que permita a los usuarios o departamentos añadir o desarrollar sus propios programas locales
+    en:
+</p>
+<ul>
+    <li>
+        Estaciones de trabajo
+    </li>
+    <li>
+        Servidores (en especial, uso del espacio en disco)
+    </li>
+</ul>
+<p>
+    Es posible que sin controles observe que el uso local utiliza rápidamente recursos que necesitan los sistemas de
+    producción para los que se han adquirido los componentes locales en origen, y quizá no pueda instalar el sistema de
+    producción cuando esté, por fin, preparado para el despliegue.
+</p>
+<h4>
+    <b><a id="4 Numbers" name="4 Numbers"><font size="4">4 Números</font></a></b>
+</h4>
+<h5>
+    <b><font size="+0">4.1 "Unidades de medida"</font></b>
+</h5>
+<p>
+    Trabaje con el personal de desarrollo de aplicaciones para dividir los procesos empresariales en unidades más
+    granulares, por ejemplo, transacciones o procesos empresariales más pequeños.
+</p>
+<p>
+    El motivo para ello es que va a capturar números en la pregunta siguiente, y debe decidir lo que va a contar.
+</p>
+<p>
+    Tenga en cuenta que un proceso empresarial puede iniciar varias instancias de transacciones empresariales más pequeñas
+    (por ejemplo, varios pedidos de elementos por pedido de cliente), y se deben recordar dichos multiplicadores al
+    documentar los números. Sin embargo, no se deje atrapar con demasiados detalles, en especial, en el caso de un sistema
+    complejo.
+</p>
+<p>
+    Normalmente, una "aplicación" (un término IT), o más de una aplicación, implementan un proceso "empresarial" (por
+    ejemplo, "gestión de pedidos de clientes"). En cada aplicación hay, por lo general, varias "transacciones" IT, por
+    ejemplo, "consultar nivel de existencias" o "generar carta de cliente".
+</p>
+<p>
+    Comunidades diferentes utilizan sus propios nombres para identificar las unidades que se están intentando convenir. Por
+    ejemplo, "transacción" puede significar una cosa para personas que tengan un fondo de desarrollo de aplicaciones y otra
+    cosa completamente diferentes para el equipo de la infraestructura. Es importante trabajar unidos a fin de
+    correlacionar los nombres y recopilar la información.
+</p>
+<h5>
+    <b><font size="+0">4.2 "Tamaños y volúmenes empresariales"</font></b>
+</h5>
+<p>
+    Identifique y documente la información de tamaños y volúmenes para cada una de las unidades del punto 4.1: "Unidades de
+    medida", por ejemplo:
+</p>
+<ul>
+    <li>
+        Cuántos usuarios se espera que utilicen cada aplicación o proceso empresarial de promedio y en las horas punta
+    </li>
+    <li>
+        Cuándo se producen las puntas (por ejemplo, diaria, semanal o mensualmente, según proceda)
+    </li>
+    <li>
+        Cuál es el índice de proceso de las transacciones en las puntas o de media
+    </li>
+    <li>
+        Número de instancias y elementos de datos en cada grupo de datos y sus tamaños.
+    </li>
+</ul>
+<h5>
+    <b><font size="+0">4.3 "Criterios de rendimiento del proceso empresarial"</font></b>
+</h5>
+<p>
+    Es posible que el cliente tenga criterios de rendimiento especificados para parte o todos los procesos empresariales.
+    No obstante, no olvide documentar también los objetivos de rendimiento para los procesos de soporte del sistema (por
+    ejemplo, una copia de seguridad del sistema) y procesos de desarrollo de aplicaciones, si se han identificado. Para
+    cada categoría, documente:
+</p>
+<ul>
+    <li>
+        Los requisitos de respuesta para cada categoría
+    </li>
+    <li>
+        Dónde se van a medir
+    </li>
+    <li>
+        Si se aceptan criterios diferentes en horas distintas (por ejemplo, fuera de las horas punta/durante la noche)
+    </li>
+    <li>
+        Si se deben cumplir los criterios durante la recuperación
+    </li>
+    <li>
+        Si se requiere una garantía de rendimiento
+    </li>
+    <li>
+        Si va a influir en una de las partes en caso de que no se cumplan los requisitos de rendimiento
+    </li>
+    <li>
+        Exprese las condiciones mínimas de rendimiento que se necesitan para que el proceso empresarial se considere
+        disponible (es decir, el punto por debajo del cual se considera que el sistema "no está disponible", en lugar de
+        "lento").
+    </li>
+    <li>
+        Si ya se ha elegido una solución de aplicaciones empaquetada, asegúrese de que tiene acceso a sus características
+        de rendimiento. Es posible que no las necesite todas en este momento, pero debe conocer dónde obtenerlas, puesto
+        que probablemente las necesite en futuras tareas. Por otra parte, es posible que las otras empresas tarden bastante
+        en entregarle los números que necesita, de modo que solicíteselos ahora.
+    </li>
+</ul>
+<h4>
+    <b><a id="5 Availability" name="5 Availability"><font size="4">5 Disponibilidad</font></a></b>
+</h4>
+<h5>
+    <b><a id="5.1 Availability Advice" name="5.1 Availability Advice"><font size="+0">5.1 Consejo sobre
+    disponibilidad</font></a></b>
+</h5>
+<p>
+    La propuesta que se recomienda para establecer los requisitos de disponibilidad es la siguiente:
+</p>
+<ol>
+    <li>
+        Identifique los usuarios verdaderos del sistema, los procesos empresariales que llevan a cabo y las horas a las que
+        los usuarios realizan dichos procesos
+    </li>
+    <li>
+        Analice el impacto de la disponibilidad (o la no disponibilidad) del servicio en base a la posibilidad de los
+        usuarios para cumplir objetivos empresariales
+    </li>
+    <li>
+        Especifique los requisitos de disponibilidad que reflejan directamente lo que necesitan los usuarios para cumplir
+        sus objetivos empresariales
+    </li>
+    <li>
+        Tenga en cuenta que si ya se ha elegido una solución de aplicaciones empaquetada, la estructura y el diseño de la
+        misma pueden tener una influencia importante en las características de disponibilidad de la aplicación desde el
+        punto de vista de los usuarios. Un paquete que no se ha diseñado para operar de modo continuado es difícil que
+        funcione continuamente, en especial, en lo que respecta al mantenimiento y las ventanas de proceso por lotes.
+    </li>
+</ol>
+<p>
+    Cuando desarrolle los requisitos de disponibilidad, considere las directrices siguientes:
+</p>
+<ul>
+    <li>
+        En lugar de especificar requisitos "globales" para todo el sistema, especifique requisitos de disponibilidad en un
+        nivel de granularidad inferior (por ejemplo, por proceso individual, grupo de usuarios o grupo de datos). lo que
+        permite que el diseñador disponga de mayor flexibilidad para ajustarse a las necesidades de los usuarios. En
+        especial, es importante para los sistemas que tienen un alto nivel de requisitos de disponibilidad continua.
+    </li>
+</ul>
+<p>
+    Algunos ejemplos:
+</p>
+<ul>
+    <li>
+        La sentencia "El sistema debe estar en funcionamiento 24 horas al día para ajustarse a los usuarios de Nueva York y
+        Hong Kong" deja al diseñador mucha menos flexibilidad que la sentencia "Los usuarios de Nueva York deben poder
+        realizar transacciones en SUS datos desde las 7AM hasta las 7PM, huso horario de Nueva York, y los usuarios de Hong
+        Kong deben poder realizar transacciones en SUS datos desde las 7AM hasta las 7PM, huso horario de Hong Kong. En el
+        segundo caso, el diseñador tiene flexibilidad para realizar el mantenimiento en los componentes del sistema o los
+        datos de un huso horario mientras que el otro huso horario aún se encuentra en la mitad de su día de producción.
+    </li>
+    <li>
+        En una aplicación de cajeros automáticos, puede resultar crítica la aceptación de depósitos y la dispensación de
+        dinero efectivo el lunes a las 3AM de la mañana, mientras que la posibilidad de facilitar saldos contables exactos
+        a dicha hora pueden ser menos crítico.
+    </li>
+    <li>
+        Distinga entre las características de disponibilidad que ACONSEJABLES y las que son OBLIGATORIAS. Por ejemplo, "El
+        cajera automático DEBE poder aceptar depósitos y dispensar dinero efectivo las 24 horas del día. Se ACONSEJA que el
+        cajero automático facilite al cliente el saldo contable exacto las 24 horas del día; sin embargo, se pueden ajustar
+        interrupciones fortuitas en el proceso de consulta de los saldos contables, pero DEBE TENER una duración inferior a
+        10 minutos y tener lugar entre las 3:00 y las 4:00 AM".
+    </li>
+    <li>
+        Si el impacto de no satisfacer un objetivo de disponibilidad concreto no se puede relacionar directamente con la
+        disponibilidad de los usuarios para cumplir sus objetivos empresariales, es posible que el objetivo no sea el
+        adecuado para establecerlo como requisito de disponibilidad para el sistema.
+    </li>
+    <li>
+        Los requisitos de disponibilidad que sólo reflejan indirectamente la disponibilidad como la percibe el usuario (por
+        ejemplo, "La región de control IMS debe estar activada") tienden a no ser tan útiles como los que sí lo hacen (por
+        ejemplo, "Los cajeros bancarios deben poder realizar procesos X e Y").
+    </li>
+</ul>
+<h5>
+    <b><font size="+0">5.2 "Horas de servicio planificadas"</font></b>
+</h5>
+<p>
+    Para cada uno de los procesos empresariales y los grupos de usuarios que los deben realizar, identifique las horas
+    durante las que el usuario debe poder realizar dicho proceso. Recuerde hacerlo también para los procesos que no están
+    asociados directamente a los grupos de usuarios.
+</p>
+<p>
+    Si hay grupos de usuarios en husos horarios diferentes (por ejemplo, el descrito anteriormente en el ejemplo sobre
+    Nueva York y Hong Kong), trátelos como grupos de usuarios separados.
+</p>
+<p>
+    Muestre también si habrá períodos esporádicos como, por ejemplo, vacaciones, en los que no se necesite la aplicación
+    (lo que proporciona al diseñador la flexibilidad para utilizar dichos períodos para mantenimiento ampliado). ¿Qué
+    cambios se prevén en las horas de servicio durante la vida proyectada de la aplicación?
+</p>
+<p>
+    También puede afectar a las horas de servicio de este sistema las de otros sistemas con los que intercambia
+    información.
+</p>
+<p>
+    ¿Cómo se espera que cambien las horas de servicio planificadas de este sistema durante su vida proyectada?
+</p>
+<h5>
+    <b><font size="+0">5.3 "Costes de interrupción del servicio"</font></b>
+</h5>
+<p>
+    Comprenda el IMPACTO EMPRESARIAL, los COSTES FINANCIEROS y los RIESGOS asociados a las interrupciones de servicio
+    durante las horas de servicio planificadas.
+</p>
+<p>
+    Para identificar cuáles son los requisitos de disponibilidad realmente importantes para el sistema, considere el
+    conjunto de grupos de usuarios y procesos empresariales e identifique el impacto empresarial que podría resultar debido
+    a:
+</p>
+<ul>
+    <li>
+        Una breve interrupción o período de tiempo de respuesta inaceptablemente lento durante las horas planificadas.
+        Defina "breve" e "inaceptablemente lento" en la medida en que se refieren a esta aplicación particular (consulte el
+        apartado "Criterios de rendimiento del proceso empresarial")
+    </li>
+    <li>
+        Varias interrupciones de mayor duración en el servicio durante las horas indicadas más arriba (por ejemplo, un
+        minuto, unos minutos, 15 minutos, una hora, dos horas, cuatro horas).
+    </li>
+    <li>
+        Interrupciones prolongadas del servicio (por ejemplo, un turno, un día, varios días).
+    </li>
+    <li>
+        Tenga en cuenta también todos los procesos que no están asociados directamente a un grupo de usuarios (por ejemplo,
+        compensación de cheques durante la noche).
+    </li>
+</ul>
+<p>
+    Al valorar el impacto de cada interrupción, identifique los procedimientos de recuperación y considere cómo pueden
+    reducir el impacto empresarial real de la interrupción.
+</p>
+<p>
+    Intente cuantificar el impacto en términos financieros (coste de la pérdida de productividad del equipo o del personal,
+    valor de la pérdida empresarial actual, pérdida calculada empresarial futura debido a la insatisfacción del cliente,
+    gastos de intereses o penalizaciones reglamentarias, entre otros)..
+</p>
+<p>
+    Proporcione tantas respuestas como sean necesarias con objeto de reflejar las diferencias en los costes y los riesgos
+    asociados a interrupciones de distintas duraciones, a diferentes horas del día, si se han planificado o no o, por
+    ejemplo, a qué procesos empresariales afectarían.
+</p>
+<p>
+    ¿Cómo se prevé que cambie el impacto empresarial/financiero de una interrupción de servicio durante la vida proyectada
+    del sistema?
+</p>
+<p>
+    Revise cada uno de los procesos empresariales importantes acordados para identificar alternativas que permitan que los
+    elementos críticos de dichos procesos continúen en caso de que algunas partes del sistema no estén disponibles
+    temporalmente. La posibilidad de operar temporalmente con funciones empresariales reducidas puede ser un procedimiento
+    que ayude a reducir el impacto de disponibilidad de interdependencias entre datos y procesos críticos.
+</p>
+<p>
+    Algunos ejemplos:
+</p>
+<ul>
+    <li>
+        FUNCIÓN COMPLETA 1 Leer y actualizar el registro de existencias.
+    </li>
+    <li>
+        FUNCIÓN REDUCIDA 1 Entrar actualización del registro de existencias y ponerlo en cola para la actualización futura.
+    </li>
+    <li>
+        FUNCIÓN COMPLETA 2 Leer el saldo más reciente del cliente.
+    </li>
+    <li>
+        FUNCIÓN REDUCIDA 2 Leer el saldo del cliente de un origen alternativo, que puede no estar actualizado.
+    </li>
+    <li>
+        FUNCIÓN COMPLETA 3 Actualizar el sistema a diario.
+    </li>
+    <li>
+        FUNCIÓN REDUCIDA 3 Actualizar la copia en papel impreso de diario.
+    </li>
+</ul>
+<p>
+    Recuerde que cuando el sistema está en funcionamiento con funciones reducidas es posible que exista un límite de lo que
+    puede ser aceptable para los procesos empresariales. Por ejemplo, un saldo obsoleto de cliente no puede estar obsoleto
+    más de 24 horas.
+</p>
+<p>
+    Si el servicio se interrumpe durante las horas planificadas (consulte el apartado "Horas de servicio planificadas"),
+    por lo general, el impacto de la interrupción varía en función de la duración de la interrupción, entre otras
+    consideraciones. Algunas interrupciones puede tener un impacto mínimo en la disponibilidad de los usuarios para llevar
+    a cabo sus procesos empresariales (interrupciones breves, las que tienen lugar durante períodos del día en los que se
+    utilizan menos, las que afectan sólo a un subconjunto del grupo de usuarios, o bien, aquellas para las que existe un
+    procedimiento de recuperación manual aceptable). Otras interrupciones como, por ejemplo, las que tienen mayor duración
+    o se producen durante un período "crítico" del día, puede tener un mayor impacto.&nbsp;
+</p>
+<p>
+    Algunos ejemplos:
+</p>
+<ul>
+    <li>
+        Una interrupción breve de los procesos de control de la cadena de fabricación puede tener un impacto mínimo en la
+        productividad, puesto que el trabajo continúa en base a los pedidos de trabajo impresos previamente y los cambios
+        se pueden anotar de modo manual para entrarlos más tarde. Sin embargo, una interrupción cuya duración sea superior
+        a sesenta minutos puede tener como resultado la suspensión del trabajo de la cadena para el resto del turno.
+    </li>
+    <li>
+        Una interrupción de un sistema de liquidación financiera de un volumen importante de dólares durante la última hora
+        de las operaciones puede tener como resultado costes por pago de intereses y penalizaciones reglamentarias
+        importantes.
+    </li>
+    <li>
+        En las respuestas de los departamentos de policía y bomberos frente a emergencias que amenazan a la vida se pueden
+        continuar utilizando procedimientos de recuperación manual si el sistema de envío no está disponible. No obstante,
+        los tiempos de respuesta se pueden incrementar y pueden amenazar vidas debido al aumento de carga de trabajo del
+        despachador.
+    </li>
+    <li>
+        Una interrupción en un período punta del sistema de reservas de un hotel o aerolínea puede tener como resultado, no
+        sólo una pérdida empresarial actual cuando los clientes llaman a un competidor para hacer sus reservas, sino
+        también una pérdida empresarial futura, si los clientes se descontentan y la próxima vez que necesitan dichos
+        servicios llaman antes a otra aerolínea u hotel.
+    </li>
+</ul>
+<h5>
+    <b><font size="+0">5.4 "Criterios de recuperación y disponibilidad"</font></b>
+</h5>
+<p>
+    Identifique los CRITERIOS DE RECUPERACIÓN Y DISPONIBILIDAD que aplicar en situaciones "normales".
+</p>
+<p>
+    Excluya las situaciones de "desastre" como, por ejemplo, una pérdida o suspensión prolongada de todo el servicio
+    informático.
+</p>
+<p>
+    Basado en los riesgos y los costes empresariales/financieros identificados en el apartado "Costes de interrupción del
+    servicio", desarrolle una especificación de los criterios de disponibilidad que se deben cumplir para evitar que se
+    impida en la medida de lo posible que grupos de usuarios realicen sus procesos empresariales asignados. Tales criterios
+    se pueden especificar en formatos como los siguientes:
+</p>
+<ul>
+    <li>
+        Porcentaje de interrupciones recuperadas en un número determinado de minutos/segundos
+    </li>
+    <li>
+        Tiempo máximo en una semana/mes/año determinado en el que el usuario no ha podido realizar una función concreta.
+    </li>
+</ul>
+<p>
+    Sea tan específico como sea necesario a fin de reflejar factores como, por ejemplo, las diferencias entre las
+    interrupciones planificadas y no planificadas, la hora durante la que se produce la interrupción (por ejemplo, períodos
+    "críticos" en contraposición a períodos de menor utilización), si afecta a todos los usuarios o sólo a algunos
+    usuarios, etc.
+</p>
+<p>
+    No especifique criterios de disponibilidad rigurosos innecesariamente, puesto que podría afectar considerablemente al
+    coste de implementación. Por lo general, si no se pueden identificar riesgos o costes empresariales/financieros
+    importantes con un conjunto de condiciones de interrupción determinado, puede indicar que el conjunto de condiciones de
+    interrupción no se debe incluir en los criterios de disponibilidad establecidos.
+</p>
+<p>
+    Si las "Horas de servicio planificadas" sugieren que es probable que cambien las horas de servicio planificadas, o
+    bien, los "Costes de interrupción del servicio" sugieren que es probable que cambien los riesgos o costes
+    empresariales/financieros asociados a la interrupción del servicio durante la vida proyectada del sistema, calcule cómo
+    pueden cambiar los criterios de disponibilidad.
+</p>
+<p>
+    Si se va a utilizar cifrado, existen consideraciones de disponibilidad y recuperación adicionales. Por ejemplo:
+</p>
+<ul>
+    <li>
+        La posibilidad de recuperar información secreta que se puede mantener fuera del sistema.
+    </li>
+    <li>
+        La necesidad de garantizar que los datos protegidos por cifrado se recuperan en coordinación con la recuperación de
+        las claves de cifrado adecuadas.
+    </li>
+</ul>
+<h5>
+    <b><font size="+0">5.5 "¿Recuperación en caso de desastre?"</font></b>
+</h5>
+<p>
+    ¿Se requiere recuperación en caso de desastre en el ámbito del proyecto de diseño (disponibilidad durante situaciones
+    de "desastre" como, por ejemplo, una pérdida o suspensión prolongada de todo el servicio informático)? Si la respuesta
+    es afirmativa, ¿cuáles son los criterios para la recuperación?
+</p>
+<p>
+    Tenga en cuenta que, probablemente, no todos los procesos empresariales requieran recursos de recuperación en caso de
+    desastre. Seleccione sólo aquellos procesos que sean críticos y no requieran recuperación en caso de desastre e,
+    incluso en dichos procesos, es posible que no se necesite abarcar todas las funciones.
+</p>
+<ul>
+    <li>
+        ¿Con qué rapidez se debe restaurar el servicio? ¿Se ha medido a partir del momento en el que ha ocurrido el
+        desastre o cuando se ha tomado la decisión de ir a un sitio remoto?
+    </li>
+    <li>
+        ¿Bajo qué condiciones decide la organización recuperar de un sitio remoto, en lugar de localmente?
+    </li>
+    <li>
+        ¿Qué nivel de actualización deben tener los datos del sitio remoto para que la empresa siga en funcionamiento (al
+        segundo; unos minutos a partir de la anomalía, se aceptan los datos del día anterior)?
+    </li>
+    <li>
+        ¿Cuándo se ha recuperado primero el servicio desde le sitio remoto?
+    </li>
+    <li>
+        ¿En algún momento futuro?
+    </li>
+    <li>
+        ¿Cuál es la prioridad de recuperación del sitio remoto de este conjunto de aplicaciones en relación con las otras
+        aplicaciones empresariales que dependen del mismo servicio informático?
+    </li>
+</ul>
+<p>
+    Tenga en cuenta que puede haber conjuntos de criterios diferentes para partes distintas del sistema o en función del
+    tipo de desastre.
+</p>
+<p>
+    ¿Qué cambios de los requisitos de recuperación en caso de desastre anteriores se han previsto durante la vista
+    proyectada de la aplicación?
+</p>
+<h5>
+    <b><font size="+0">5.6 "Otras consideraciones de diseño de disponibilidad"</font></b>
+</h5>
+<p>
+    Para diseñar un sistema que se recupere tan pronto como sea posible, el diseñador debe conocer la flexibilidad de la
+    que dispone al implementar la aplicación, además de ajustarse a los requisitos de funcionamiento de la aplicación. A
+    continuación se plantean algunas preguntas que pueden ayudar al diseñador:
+</p>
+<p>
+    1. Para ajustar las tareas de mantenimiento necesarias, el sistema puede funcionar en períodos breves durante los
+    cuales puede:
+</p>
+<blockquote>
+    <p>
+        a. ¿Realizar consultas, pero no actualizaciones?
+    </p>
+    <p>
+        b. ¿Aceptar solicitudes de actualización del usuario, pero no actualizar en realidad la base de datos hasta después
+        de completar las tareas de mantenimiento?
+    </p>
+</blockquote>
+<p>
+    2. Para una interrupción que requiera recuperación de datos, es más importante:
+</p>
+<blockquote>
+    <p>
+        c. ¿Restaurar el servicio tan pronto como sea posible, aunque signifique utilizar datos que no se han actualizado
+        completamente?, o bien:
+    </p>
+    <p>
+        d. ¿Recuperar todos los datos a su estado actual antes de restaurar el servicio, aunque se tarde más tiempo?
+    </p>
+</blockquote>
+<p>
+    3. En caso de que un solicitud de usuario esté "en curso" en el momento de producirse la anomalía, ¿debe el usuario
+    contar con volver a entrar la solicitud una vez que se ha recuperado el servicio?
+</p>
+<p>
+    4. ¿Existen consideraciones no técnicas que puedan afectar a la disponibilidad del sistema (por ejemplo, una política
+    empresarial que indique que el proceso A no se debe poner a disposición de los usuarios a menos que el proceso B
+    también esté disponible)?
+</p>
+<p>
+    ¿Se espera que cambie alguna de las consideraciones de diseño anteriores con el tiempo?
+</p>
+<p>
+    Para procesos que son críticos a nivel empresarial, resulta útil identificar alternativas que permitan que los
+    elementos más críticos de dichos procesos se mantengan en funcionamiento, aunque otras partes del sistema no estén
+    disponibles temporalmente. La posibilidad de operar temporalmente con funciones empresariales reducidas puede ser un
+    procedimiento que ayude a reducir el impacto de disponibilidad de interdependencias entre datos y procesos críticos.
+</p>
+<h4>
+    <b><a id="6 Security" name="6 Security"><font size="4">6 Seguridad</font></a></b>
+</h4>
+<h5>
+    <b><font size="+0">6.1 "Requisitos de seguridad"</font></b>
+</h5>
+<p>
+    1. Identifique los datos que proteger
+</p>
+<p>
+    2. Identifique el tipo de amenazas a las que está expuesto cada tipo de datos:
+</p>
+<ul>
+    <li>
+        Destrucción o daños accidentales
+    </li>
+    <li>
+        Destrucción o daños deliberados
+    </li>
+    <li>
+        Inteligencia comercial
+    </li>
+    <li>
+        Fraude
+    </li>
+    <li>
+        Piratas informáticos ("Hackers")
+    </li>
+    <li>
+        Virus
+    </li>
+</ul>
+<blockquote>
+    <p>
+        1. Identifique las amenazas a la seguridad física:
+    </p>
+    <blockquote>
+        <ul>
+            <li>
+                Robo de componentes
+            </li>
+            <li>
+                Acceso físico no autorizado
+            </li>
+            <li>
+                Seguridad física de los usuarios
+            </li>
+        </ul>
+    </blockquote>
+    <p>
+        2. Identifique las personas que pueden ser el origen de las amenazas:
+    </p>
+    <blockquote>
+        <ul>
+            <li>
+                Personal del centro de datos
+            </li>
+            <li>
+                Otro personal de IT (por ejemplo, desarrollo)
+            </li>
+            <li>
+                Personal que no es de IT de la organización
+            </li>
+            <li>
+                Personas ajenas a la organización
+            </li>
+        </ul>
+    </blockquote>
+    <p>
+        3. Identifique todos los requisitos de seguridad especiales o extraordinarios, en especial con respecto a:
+    </p>
+    <blockquote>
+        <ul>
+            <li>
+                Acceso al sistema
+            </li>
+            <li>
+                Cifrado de datos
+            </li>
+            <li>
+                Auditoría
+            </li>
+        </ul>
+    </blockquote>
+    <p>
+        4. ¿Existen políticas generales como, por ejemplo, documentos de Libertad de información, que puedan influir en el
+        diseño de seguridad del sistema?
+    </p>
+    <p>
+        5. Algunas soluciones de aplicaciones empaquetadas tienen sus propios subsistemas de seguridad. Si dispone de un
+        paquete "concreto", infórmese sobre sus servicios de seguridad.
+    </p>
+</blockquote>
+<p>
+    Con el objeto de establecer y clasificar los requisitos de seguridad, es posible que desee utilizar la propuesta
+    siguiente:
+</p>
+<blockquote>
+    <p>
+        1. Liste los objetos que requieren protección por seguridad lógica o física.
+    </p>
+    <p>
+        2. Identifique la exposición adecuada a cada objeto. Las categorías típicas son las siguientes:
+    </p>
+    <blockquote>
+        <ul>
+            <li>
+                Acceso de visualización (vulneración de la confidencialidad), por ejemplo, información de cuenta, lista de
+                clientes, patentes.
+            </li>
+            <li>
+                Acceso de actualización, es decir, modificación de los datos para fraude, encubrimiento, diversificación de
+                fondos.
+            </li>
+            <li>
+                Pérdida de activos, es decir, otra persona se apodera de algo que ya no está disponible para el propietario
+                (a diferencia de la pérdida debida a un desastre). Algunos ejemplos son las listas de clientes y candidatos
+                probables, contratos, etc.
+            </li>
+        </ul>
+    </blockquote>
+    <p>
+        Tenga en cuenta que no todos los objetos son sensibles a todas las exposiciones anteriores.
+    </p>
+    <p>
+        3. Identifique todas las amenazas aplicables a su entorno. Los ejemplos son:
+    </p>
+    <blockquote>
+        <ul>
+            <li>
+                Empleados disgustados
+            </li>
+            <li>
+                Empleados no autorizados
+            </li>
+            <li>
+                Sesiones de terminales abiertos en lugares públicos
+            </li>
+            <li>
+                Piratas informáticos ("Hackers")
+            </li>
+            <li>
+                Interceptación de línea
+            </li>
+            <li>
+                Pérdida de equipo (por ejemplo, PC portátiles)
+            </li>
+        </ul>
+    </blockquote>
+    <p>
+        4. Para cada objeto establezca la amenaza que se puede aplicar y asóciele la exposición concreta.
+    </p>
+</blockquote>
+<p>
+    Es posible que deba revisar los requisitos de seguridad para el objeto tanto en una ubicación estática (por ejemplo, en
+    un disco duro), como en tránsito (por ejemplo, durante la transmisión).
+</p>
+<p>
+    Puesto que el diseño puede ampliar la ubicación del objeto a áreas no protegidas, probablemente deba retornar a este
+    asunto.
+</p>
+<p>
+    Los aspectos de seguridad de algunos diseños de sistemas pueden ser muy exigentes. Pueden dominar sus decisiones de
+    diseño y, por otra parte, podrían hacer que buenas opciones de selección de componentes y estructuras resulten
+    inaceptables. Por ello, elija ahora una opción definitiva por si el sistema que está diseñando necesita requisitos de
+    seguridad especialmente exigentes. Por ejemplo:
+</p>
+<ul>
+    <li>
+        Un sistema militar confidencial
+    </li>
+    <li>
+        Un sistema de transferencia de dinero
+    </li>
+    <li>
+        Un sistema que maneje información personal confidencial
+    </li>
+</ul>
+<p>
+    Si cree que tiene exigencias de seguridad especiales, debe identificar a un profesional o experto en seguridad que le
+    ayude en los aspectos de diseño del sistema.
+</p>
+<h4>
+    <b><a id="6 Usability" name="6 Usability"><font size="4">7 Utilización</font></a></b>
+</h4>
+<p>
+    Los requisitos de utilización definen el nivel de utilización que debe tener la interfaz de usuario.
+</p>
+<p>
+    Los requisitos de utilización se deben establecer en el nivel inferior de utilización que debe alcanzar el sistema para
+    que se pueda utilizar. No se deben establecer en el nivel que cree que puede alcanzar el sistema. En otras palabras,
+    los requisitos de utilización no se deben considerar un destino, es decir, un límite máximo. Los requisitos de
+    utilización definen la utilización aceptable más baja absoluta del sistema. Por ello, no tiene que detener
+    necesariamente la mejora de la utilización una vez que se han cumplido los requisitos de utilización.
+</p>
+<p>
+    El nivel que debe alcanzar el sistema para que se pueda utilizar depende, básicamente, de cuál es la alternativa a la
+    utilización del sistema. Lo razonable es requerir que, con respecto a las alternativas, el sistema ofrezca importantes
+    mejoras de utilización. Las alternativas pueden ser utilizar:
+</p>
+<ul>
+    <li>
+        Procedimientos manuales existentes.
+    </li>
+    <li>
+        Sistemas heredados.
+    </li>
+    <li>
+        Productos de la competencia.
+    </li>
+    <li>
+        Versiones anteriores del sistema.
+    </li>
+</ul>
+<p>
+    Los requisitos de utilización también provienen de la necesidad de justificar económicamente el nuevo sistema: si el
+    cliente tiene que pagar 3 millones de dólares por el nuevo sistema, es posible que desee imponer requisitos de
+    utilización que impliquen que se podrá ahorrar, quizá, 1 millón de dólares al año debido a la reducción de la carga de
+    trabajo en recursos humanos.
+</p>
+<p>
+    A continuación, se incluyen algunos ejemplos de algunos requisitos de utilización general:
+</p>
+<ul>
+    <li>
+        Tiempo de ejecución máximo - cuánto tiempo debe tardar un usuario con experiencia en ejecutar un caso de ejemplo
+        común.
+    </li>
+    <li>
+        Índice máximo de errores - promedio de errores puede tener un usuario con experiencia para un caso de ejemplo
+        común.<br />
+         Los únicos errores que son adecuados para medir son los que son irrecuperables y van a tener efectos negativos en
+        la organización como, por ejemplo, pérdida empresarial, o bien, que causen daños en hardware supervisado. Si la
+        única consecuencia de un error es que requiere tiempo para arreglarlo, afecta al tiempo de ejecución medido.
+    </li>
+    <li>
+        Tiempo de aprendizaje - cuánto tiempo pasa antes de que el usuario pueda ejecutar un caso de ejemplo más
+        rápidamente que el tiempo de ejecución máximo.
+    </li>
+</ul>
+<p>
+    Lo siguiente es un ejemplo de algunos requisitos de utilización específicos para un caso de uso "Gestionar mensajes de
+    correo entrantes":
+</p>
+<ul>
+    <li>
+        El usuario de correo debe poder disponer los mensajes de correo con una sola pulsación del ratón.
+    </li>
+    <li>
+        El usuario de correo debe poder desplazar los textos de los mensajes de correo pulsando botones del teclado.
+    </li>
+    <li>
+        Al usuario de correo no le deben molestar los mensajes de correo entrantes al leer mensajes de correo existentes.
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

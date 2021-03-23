@@ -1,0 +1,1004 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de tareas: Dise&ntilde;o de base de datos</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="database_design" name="uma.name">
+<meta content="Dise&ntilde;o de base de datos" name="uma.presentationName">
+<meta content="_2Bsr0EocEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="Dise&ntilde;ador de base de datos">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={002674F9-6511-4D15-8623-B761D8C48986}&path={002674F9-6511-4D15-8623-B761D8C48986},{FB3EB753-A979-4849-B57B-97F39271F82B},_2Bsr0EocEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_XSr4YCFtEdqrX8YVzvtlIg", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_2Bsr0EocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_J1u8gCGYEdqMcovRzkCQow", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_2Bsr0EocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_vllcADIKEdqGgPtrSpB0vQ", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_2Bsr0EocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_XSr4YCFtEdqrX8YVzvtlIg", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_2Bsr0EocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_J1u8gCGYEdqMcovRzkCQow", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_2Bsr0EocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_vllcADIKEdqGgPtrSpB0vQ", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_2Bsr0EocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_XSr4YCFtEdqrX8YVzvtlIg", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_2Bsr0EocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_J1u8gCGYEdqMcovRzkCQow", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_2Bsr0EocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_vllcADIKEdqGgPtrSpB0vQ", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_2Bsr0EocEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_2Bsr0EocEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Dise&ntilde;o de base de datos</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta tarea se explica cómo diseñar una base de datos para implementar la persistencia en una aplicación.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<ul>
+    <li>
+        Garantizar que los datos persistentes se almacenan de forma coherente y eficaz.
+    </li>
+    <li>
+        Definir el comportamiento que se debe implementar en la base de datos.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Principal:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_database_designer_B5A44B1E.html" guid="_pOsigTbYEdqdbfmtFQj8qA">Dise&ntilde;ador de base de datos</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Adicional:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">Asistencia:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_class_E1A6A499.html" guid="_Day3gL7XEdqboqO8QqaIwQ">Clase de dise&ntilde;o</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_analysis_class_B47A47A8.html" guid="_mju5QL9dEdqBwpaAk4N49g">Clase de an&aacute;lisis</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_analysis_class_45E0F882.html" guid="_m-5LQL9dEdqBwpaAk4N49g">Clase de an&aacute;lisis</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_project_specific_guidelines_286E840C.html" guid="_CPHNtxi2Edq_uI8xTPML6g">Directrices espec&iacute;ficas del proyecto</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_supplementary_specification_F9C7C5E1.html" guid="_oAeb4jbYEdqdbfmtFQj8qA">Especificaciones suplementarias</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_data_model_A43D5F34.html" guid="_pOsigjbYEdqdbfmtFQj8qA">Modelo de datos</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_465A5F1.html" guid="_oAeb4zbYEdqdbfmtFQj8qA">Modelo de dise&ntilde;o</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_data_model_A43D5F34.html" guid="_pOsigjbYEdqdbfmtFQj8qA">Modelo de datos</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    En los pasos que se presentan en esta tarea se supone que el diseño de datos persistentes de la aplicación se
+    implementarán utilizando un sistema de gestión de bases de datos relacionales (RDBMS). Se supone que está familiarizado
+    con los conceptos de base de datos, incluidas la normalización y la desnormalización, así como la terminología de base
+    de datos tal como se describe en referencias como, por ejemplo, [<a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html#DAT99" guid="7.755968586980351E-308">DAT99</a>].&nbsp;
+</p>
+<p>
+    Los pasos de esta tarea también hacen referencia al perfil de Lenguaje unificado de modelado (UML) para el modelado de
+    las bases de datos, que se describe en&nbsp;[<a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html#NBG01" guid="7.755968586980351E-308"><font     color="#ff0000">NBG01</font></a>]. Asimismo, [<a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html#NBG01" guid="7.755968586980351E-308"><font     color="#ff0000">NBG01</font></a>] contiene una descripción general del proceso de modelado y diseño de bases de datos
+    relacionales utilizando UML.&nbsp; Para obtener información de fondo sobre la relación entre los modelos de datos
+    relacionales y los modelos de objetos, consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/relational_databases_and_object_orientation_1C67069E.html" guid="3.2166604011257303E-305">Concepto: Bases de datos relacionales y orientación de objeto</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> Desarrollar un modelo l&oacute;gico de datos (Opcional) </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Develop Logical Data Model" name="Develop Logical Data Model"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Definir un modelo del diseño lógico de la base de datos.
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    El objetivo del modelo lógico de datos es proporcionar una vista idealizada de las entidades lógicas de datos clave y
+    sus relaciones, que es independiente de cualquier implementación específica de software o de base de datos.
+    Generalmente está en tercera forma normal (consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/normalization_47199FE9.html" guid="3.183357382287462E-306">Concepto:
+    Normalización</a>), que es una forma de modelado de datos que minimiza la redundancia y garantiza dependencias no
+    transitivas. Este tipo de modelo se ocupa del aspecto que tendrá la base de datos cuando se capturen los datos, en
+    lugar de las aplicaciones que utilizan los datos y su rendimiento. Tenga en cuenta que un modelo lógico de datos se
+    considera que forma parte del <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Producto de
+    trabajo: Modelo de datos</a> y no es un producto de trabajo diferente de RUP. No obstante, a menudo es importante
+    definir modelos lógicos de datos individuales para:
+</p>
+<ul>
+    <li>
+        proyectos en los que el diseño de las bases de datos y las aplicaciones está siendo desarrollado por equipos
+        diferentes.
+    </li>
+    <li>
+        proyectos en los que existen varias aplicaciones que compartirán una base de datos común.
+    </li>
+</ul>
+<p>
+    Si desea crear un modelo lógico de datos, puede empezar desde cero utilizando los elementos de modelo que se describen
+    en <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/data_model_80FB2539.html" guid="3.4196799396281445E-306">Directriz de producto de trabajo: Modelo de datos</a>, o puede empezar con entidades
+    para cada clase persistente en el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_analysis_model_76C3B70C.html" guid="{98EA224C-36F6-46E6-AB36-2999382B58B3}">Modelo
+    de análisis</a> o el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Modelo de diseño</a>.
+</p>
+<p>
+    Puede decidir no crear un modelo lógico de datos aparte, especialmente si está diseñando una base de datos que da
+    servicio a una única aplicación. En este caso, el <a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">Diseñador de
+    base de datos</a> desarrolla el modelo físico de datos basándose en el conjunto de clases persistentes y sus
+    asociaciones en el modelo de diseño.
+</p>
+<p>
+    En ambos enfoques, es importante que el <a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">Diseñador de
+    base de datos</a> y el <a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Diseñador</a> colaboren en el proceso de análisis y diseño para
+    identificar qué clases en el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Producto
+    de trabajo: Modelo de diseño</a> necesitan almacenar información en una base de datos. Tal como se describe en el paso
+    denominado "Identificar clases persistentes de <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Tarea: Diseño de
+    clase</a>", el diseñador de la base de datos trabaja con el diseñador para identificar qué <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">clases de diseño</a> en el modelo de diseño se consideran persistentes y
+    son candidatas a convertirse en tablas en la base de datos.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Desarrollar el dise&ntilde;o de base de datos f&iacute;sica </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Develop Physical Data Model" name="Develop Physical Data Model"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Definir el diseño físico detallado de la base de datos.
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    El diseño de bases de datos físicas incluye elementos de modelo (por ejemplo, tablas, vistas y procedimientos
+    almacenados) que representan la estructura física detallada de la base de datos y los elementos de modelo (por ejemplo,
+    esquemas y espacios de tabla) que representan el diseño de almacenamiento de datos subyacente de la base de
+    datos.&nbsp; De forma colectiva, estos elementos de modelo conforman el Modelo físico de datos de la base de
+    datos.&nbsp; Este modelo físico de datos está contenido en el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Producto de
+    trabajo: Modelo de datos</a> y no es un producto de trabajo de modelo diferente.
+</p>
+<p>
+    Los pasos detallados para desarrollar el diseño de bases de datos físicas son los siguientes:
+</p>
+<ul>
+    <li>
+        <a href="#Define Domains">Definir dominios</a>.
+    </li>
+    <li>
+        <a href="#Transform Persistent Design Elements to the Physical Data Model">Crear elementos de
+        diseño iniciales de base de datos física</a>.
+    </li>
+    <li>
+        <a href="#Define Reference Tables and Default Values">Definir tablas de referencia</a>.
+    </li>
+    <li>
+        <a href="#Create Primary Key and Unique Key Constraints">Crear restricciones de clave primaria y de
+        unicidad</a>.
+    </li>
+    <li>
+        <a href="#Define Data and Referential Integrity Enforcement Rules">Definir reglas de aplicación de
+        integridad referencial y de datos</a>.
+    </li>
+    <li>
+        <a href="#Optimize the Data Model for Performance">Desnormalizar el diseño de la base de datos para
+        optimizar el rendimiento</a>.
+    </li>
+    <li>
+        <a href="#Optimize Data Access">Optimizar el acceso a los datos</a>.
+    </li>
+    <li>
+        <a href="#Define Storage Characteristics">Definir características de almacenamiento</a>.
+    </li>
+    <li>
+        <a href="#Distribute Class behavior to the Database">Diseñar procedimientos almacenados para distribuir
+        el comportamiento de las clases en la base de datos</a>.
+    </li>
+</ul>
+<h4>
+    <a id="Define Domains" name="Define Domains">Definir dominios</a>
+</h4>
+<table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)" bordercolorlight="#808080" bordercolordark="#808080">
+    <tr>
+        <td width="5%">
+            <b>Objetivo</b>
+        </td>
+        <td width="95%">
+            Definir tipos reutilizables definidos por el usuario.&nbsp;
+        </td>
+    </tr>
+</table>
+<p>
+    El diseñador de base de datos puede utilizar los dominios para aplicar estándares de tipo en el diseño de la base de
+    datos. Los dominios son tipos de datos definidos por el usuario que se pueden aplicar a una columna en una tabla.&nbsp;
+    Los dominios tienen las propiedades de una columna sin el nombre.&nbsp;
+</p>
+<h4>
+    <a id="Transform Persistent Design Elements to the Physical Data Model" name="Transform Persistent Design Elements to the Physical Data Model">Crear elementos de diseño iniciales de base de
+    datos física</a>
+</h4>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Crear las tablas y las relaciones iniciales de la base de datos.
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    El diseñador de base de datos modela los elementos del modelo físico de datos utilizando tablas y columnas en tablas,
+    tal como se describe en <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/data_model_80FB2539.html" guid="3.4196799396281445E-306">Directriz de producto
+    de trabajo: Modelo de datos</a>.&nbsp;
+</p>
+<p>
+    Si se ha creado un modelo lógico de datos, se pueden utilizar sus entidades lógicas como base para un conjunto de
+    tablas iniciales.
+</p>
+<p>
+    De forma alternativa, el diseñador de base de datos puede avanzar un paso en el modelo físico de datos utilizando las
+    clases persistentes del modelo de diseño como punto de partida para las tablas en el modelo físico de datos.&nbsp; El
+    diseñador de base de datos modela las clases persistentes y sus atributos como&nbsp;tablas y columnas,
+    respectivamente.&nbsp; El diseñador de base de datos también debe definir las relaciones entre las tablas basándose en
+    las asociaciones entre las clases persistentes del Modelo de diseño.&nbsp; En <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/forward-engineering_relational_databases_53C0441E.html" guid="5.250868507423771E-305">Directriz de producto de trabajo: Aplicación de ingeniería directa en bases de datos
+    relacionales</a> se proporciona una descripción de cómo se correlacionan los elementos y las relaciones del modelo de
+    diseño con los elementos y las relaciones del modelo de datos.
+</p>
+<p>
+    Si está iniciando el modelo a partir de clases persistentes, y no desde un modelo lógico de datos normalizado, deberá
+    aplicar alguna normalización para eliminar las redundancias de datos y las dependencias de campos no claves. Consulte
+    <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/normalization_47199FE9.html" guid="3.183357382287462E-306">Concepto: Normalización</a> para obtener más información sobre la normalización de bases
+    de datos.
+</p>
+<h4>
+    <a id="Define Reference Tables and Default Values" name="Define Reference Tables and Default Values">Definir tablas de
+    referencia</a>
+</h4>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Definir las tablas de referencia estándar que se utilizan en el proyecto.
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    A menudo, en el proyecto se utilizan tablas de búsqueda estándar, tablas de validación o tablas de referencia. Como
+    normalmente se accede con frecuencia a los datos de estas tablas y rara vez se modifican, estos datos merecen una
+    consideración especial. En el modelo de diseño, estas tablas pueden contener códigos de producto estándar, códigos de
+    estado o provincia, códigos postales o zip, tablas de impuestos, tablas de validación de código de área u otra
+    información de acceso frecuente. En los sistemas financieros, estas tablas pueden contener listas de códigos de
+    políticas, categorías de índices de políticas de seguros o índices de conversiones. Busque en el modelo de diseño las
+    clases que sean principalmente de sólo lectura, que proporcionan información de validación para un gran número de
+    clientes.
+</p>
+<p>
+    Si la tabla de referencia es pequeña, no se moleste en indexarla, ya que la indexación puede añadir unos gastos
+    generales adicionales a las tablas pequeñas. Una tabla pequeña a la que se accede con frecuencia también suele
+    permanecer en memoria, ya que los algoritmos de antememoria a menudo mantienen las tablas a las que se accede con
+    frecuencia en la antememoria de datos.
+</p>
+<p>
+    Si es posible, asegúrese de que la antememoria de base de datos sea lo suficientemente grande para mantener todas las
+    tablas de referencia en memoria, junto con un "espacio de conjunto de trabajo" normal para las consultas y
+    transacciones. A menudo, el secreto para aumentar el rendimiento de la base de datos es reducir la E/S de disco.
+</p>
+<p>
+    Una vez definidas las estructuras de las tablas de referencia, determine una estrategia para rellenarlas. Como
+    normalmente se accede a estas tablas al principio del proyecto, la determinación de los valores de referencia y la
+    carga de las tablas se suele realizar relativamente al principio del tiempo de ejecución de la aplicación. Aunque el
+    diseñador de base de datos no es responsable de obtener los datos, sí es responsable de determinar cómo y cuándo se
+    deben renovar las tablas de referencia.
+</p>
+<h4>
+    <a id="Create Primary Key and Unique Key Constraints" name="Create Primary Key and Unique Key Constraints">Crear
+    restricciones de clave primaria y de unicidad</a>
+</h4>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Definir la(s) columna(s) que identifica(n) de forma exclusiva una fila en la tabla.<br />
+                 Definir restricciones en las columnas que garanticen la exclusividad de los datos o la recopilación de
+                datos.
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    Una clave primaria consta de una o varias columnas que identifican de forma exclusiva las filas de una tabla. Una tabla
+    tiene una única clave primaria. A menudo, existe una clave "natural" que se puede utilizar para identificar de forma
+    exclusiva una fila de datos (por ejemplo, el código postal en una tabla de referencia). La clave primaria no debe
+    contener datos que puedan cambiar con el entorno de empresa. Si la clave "natural" es un valor que puede cambiar (por
+    ejemplo, el nombre de una persona), se recomienda que el diseñador de base de datos cree una columna no significativa,
+    no especificada por el usuario, cuando cree una clave primaria.&nbsp;De esta forma, se crea una estructura de datos que
+    tiene una mayor adaptabilidad a los cambios en la estructura, las reglas o el entorno de empresa.
+</p>
+<p>
+    El uso de una columna no significativa, no especificada por el usuario, como clave primaria es un concepto fundamental
+    en el diseño de un depósito de datos. Los sistemas de transacciones a menudo eligen una clave primaria "natural" que
+    puede estar sujeta a cambios mínimos en una columna no significativa, no especificada por el usuario.
+</p>
+<p>
+    Una restricción de unicidad designa que los datos en la columna o la colección de columnas deben ser exclusivos para
+    cada fila. Si la restricción de unicidad se aplica en una columna, los datos de una determinada fila de la columna
+    especificada deben ser exclusivos respecto a los datos de otra fila en la misma columna.&nbsp;
+</p>
+<p>
+    Cuando se define una restricción de unicidad para un grupo de columnas, la unicidad se basa en el conjunto de los datos
+    de las columnas que conforman esa restricción de unicidad. Los datos de una determinada fila de una columna no tienen
+    que ser exclusivos respecto a los datos de otra fila en la misma columna. El diseñador de base de datos utiliza la
+    restricción de unicidad para garantizar la exclusividad de los datos empresariales.
+</p>
+<h4>
+    <a id="Define Data and Referential Integrity Enforcement Rules" name="Define Data and Referential Integrity Enforcement Rules">Definir reglas de aplicación de integridad referencial y
+    de datos</a>
+</h4>
+<table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)" bordercolorlight="#808080" bordercolordark="#808080">
+    <tr>
+        <td width="5%">
+            <b>Objetivo</b>
+        </td>
+        <td width="95%">
+            Garantizar la integridad de la base de datos.
+        </td>
+    </tr>
+</table>
+<p>
+    Las reglas de integridad de los datos, también conocidas como restricciones, garantizan que los valores de los datos
+    entren en unos rangos definidos. Siempre que se puedan identificar estos rangos, la base de datos puede aplicarlos.
+    (Esto no significa que no se deba realizar la validación de los datos en la aplicación, sólo que la base de datos puede
+    servidor como un "validador de último recurso" en el caso de que la aplicación no funcione correctamente). Cuando
+    existen reglas de validación de datos, se deben diseñar restricciones de base de datos para aplicarlas.
+</p>
+<p>
+    Una clave externa es una o varias columnas en una tabla que se correlacionan con la clave primaria en otra tabla. Una
+    tabla puede tener muchas claves externas, y cada clave externa es una correlación con otra tabla. Esta correlación, o
+    relación, entre las tablas se conoce a menudo como relación padre-hijo.&nbsp;La tabla hijo contiene la clave externa,
+    que se correlaciona con la clave primaria en la tabla padre.&nbsp;
+</p>
+<p>
+    El optimizador de consultas también utiliza a menudo la definición de restricciones de clave externa para acelerar el
+    rendimiento de las columnas.&nbsp; En muchos casos, las reglas de aplicación de claves externas utilizan tablas de
+    referencia.
+</p>
+<h4>
+    <a id="Optimize the Data Model for Performance" name="Optimize the Data Model for Performance">Desnormalizar el diseño
+    de la base de datos para optimizar el rendimiento</a>
+</h4>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Optimizar las estructuras de datos de la base de datos para el rendimiento.
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    En el caso de un modelo de datos relacional, la correlación inicial generalmente produce una correlación sencilla de
+    clase con tabla. Si se deben recuperar al mismo tiempo objetos de clases diferentes, RDBMS utiliza una operación
+    denominada "unión de tablas" para recuperar las filas relacionadas con los objetos de interés. Para los datos a los que
+    se accede con frecuencia, las operaciones de unión pueden implicar un gasto computacional excesivo. Para eliminar el
+    coste de la unión, se utiliza a menudo una técnica relacional estándar denominada "desnormalización".
+</p>
+<p>
+    Las desnormalización combina columnas de dos o más tablas diferentes en la misma tabla, para unir previamente la
+    información de manera eficaz. La desnormalización refleja un intercambio entre las operaciones de actualización más
+    costosas a favor de las operaciones de recuperación menos costosas. Esta técnica también reduce el rendimiento del
+    sistema en las consultas que sólo están interesadas en los atributos de uno de los objetos que están unidos
+    correctamente en la tabla de desnormalización, ya que normalmente se recuperan todos los atributos en cada consulta. En
+    aquellos casos en los que la aplicación casi siempre necesita todos los atributos, puede producirse un aumento
+    significativo del rendimiento.
+</p>
+<p>
+    La desnormalización de más de dos tablas es poco común y aumenta el coste de las inserciones y las actualizaciones, así
+    como el coste de las consultas que no son de unión. La limitación de la desnormalización a dos tablas es una buena
+    política, a menos que tenga una evidencia clara y convincente de que resulte ventajoso.
+</p>
+<p>
+    La desnormalización se puede inferir de las <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">clases de
+    diseño</a> en aquellos casos en los que las clases estén anidadas. Las clases anidadas se pueden correlacionar con una
+    tabla desnormalizada.
+</p>
+<p>
+    Algunas bases de datos de objetos permiten un concepto parecido a la desnormalización, en el que los objetos
+    relacionados se agrupan en clúster en disco y se recuperan en operaciones individuales. El concepto de la utilización
+    es parecido: reducir el tiempo de recuperación de los objetos al reducir el trabajo que debe realizar el sistema para
+    recuperar los objetos relacionados de la base de datos.
+</p>
+<p>
+    En algunos casos, la optimización del modelo de datos puede desenmascarar problemas en el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Modelo de diseño</a> como, por ejemplo, cuellos de botella de
+    rendimiento, modelado deficiente o diseños incompletos. En este caso, analice los problemas con el <a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Diseñador</a> de la clase y desencadene solicitudes de cambio cuando sea
+    necesario.
+</p>
+<h4>
+    <a id="Optimize Data Access" name="Optimize Data Access">Optimizar el acceso a los datos</a>
+</h4>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Proporcionar un acceso eficaz a los datos mediante la indexación.<br />
+                 Proporcionar un acceso eficaz a los datos mediante vistas de base de datos.
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    Una vez diseñada la estructura de la tabla, debe determinar los tipos de consulta que se ejecutarán en los datos. La
+    base de datos utiliza la indexación para acelerar el acceso. La indexación es más eficaz cuando los valores de datos de
+    la columna que se está indexando son relativamente diferentes.
+</p>
+<p>
+    Tenga en cuenta los siguientes principios de indexación:
+</p>
+<ul>
+    <li>
+        La columna de clave primaria debe estar siempre indexada. Las columnas de clave primaria se utilizan a menudo como
+        claves de búsqueda y en operaciones de unión.
+    </li>
+    <li>
+        Las tablas de menos de 100 filas y con pocas columnas se benefician poco de la indexación. En general, las tablas
+        pequeñas entran fácilmente en la antememoria de la base de datos.
+    </li>
+    <li>
+        También se deben definir índices para las consultas que se ejecutan con frecuencia o para las consultas que deben
+        recuperar datos rápidamente (generalmente, en todas las búsquedas en las que una persona deba esperar). Se debe
+        definir un índice para cada conjunto de atributos que se utilizan conjuntamente como criterio de búsqueda. Por
+        ejemplo, si el sistema necesita la capacidad de encontrar todos los pedidos en los que se solicita un determinado
+        producto, será necesario un índice de la columna Número de producto en la tabla Elemento de línea.
+    </li>
+    <li>
+        Generalmente sólo se deben definir índices de las columnas que se utilizan como identificadores, no de los valores
+        numéricos como, por ejemplo, los saldos de cuenta, ni de información textual como, por ejemplo, los comentarios del
+        pedido. Los valores de las columnas de identificador se suelen asignar cuando se crea el objeto y, posteriormente,
+        permanecen sin modificar durante la vida del producto.
+    </li>
+    <li>
+        Los índices de números simples (tipos de datos numéricos y enteros) son más fáciles y rápidos que los índices de
+        las series. Teniendo en cuenta los grandes volúmenes de datos que se procesan en una consulta o una unión de gran
+        tamaño, los pequeños ahorros se suman rápidamente.&nbsp; Los índices de las columnas numéricas tienden a ocupar
+        menos espacio que los índices de caracteres.
+    </li>
+</ul>
+<p>
+    Por otro lado, el uso de índices no es gratuito; cuantos más índices haya en una tabla, más tardan las inserciones y
+    las actualizaciones en procesarse. Cuando contemple el uso de índices, tenga en cuenta las siguientes precauciones:
+</p>
+<ul>
+    <li>
+        No utilice la indexación para acelerar una consulta que se ejecute con poca frecuencia, a menos que la consulta se
+        realice en un punto crítico en el que la velocidad máxima sea fundamental.
+    </li>
+    <li>
+        En algunos sistemas, el rendimiento de las actualizaciones y las inserciones es más importante que el rendimiento
+        de las consultas. Un ejemplo clásico son las aplicaciones de adquisición de datos de fábrica en las que los datos
+        de calidad se capturan en tiempo real. En estos sistemas, sólo se ejecutan consultas en línea ocasionales, y la
+        mayoría de los datos se analizan periódicamente en aplicaciones de informes por lotes que ejecutan análisis
+        estadísticos en ellos. Para los sistemas de adquisición de datos, elimine todos los índices para obtener el máximo
+        rendimiento. Si los índices son necesarios, se pueden volver a crear justo antes de ejecutar las aplicaciones de
+        análisis e informes por lotes, y eliminarlos después cuando finalicen los informes y el análisis.
+    </li>
+    <li>
+        Recuerde siempre que los índices tienen costes ocultos. Por ejemplo, tardan tiempo en actualizarse (un gravamen que
+        se paga en cada inserción, actualización o supresión) y ocupan espacio de disco. Asegúrese de que su uso es
+        ventajoso.
+    </li>
+</ul>
+<p>
+    Muchas bases de datos ofrecen una amplia gama de tipos de índice. Los más comunes son:
+</p>
+<ul>
+    <li>
+        <b>Índices de árboles B:</b> los tipos más utilizados se basan en estructuras equilibradas de datos de índices de
+        árbol B. Son muy útiles cuando los valores de clave de índice se distribuyen de manera aleatoria y tienden a tener
+        una amplia variabilidad. No obstante, no funcionan tan bien cuando los datos que se están indexando están ya en
+        orden secuencial.
+    </li>
+    <li>
+        <b>Índices hash:</b> con menos frecuencia, los valores de clave de índice se basan en hash. La función hash ofrece
+        un mejor rendimiento cuando la gama de valores de clave de índice es conocida, exclusiva y relativamente
+        invariable. Esta técnica se basa en el uso del valor de clave para calcular la dirección de los datos de interés.
+        Debido a la necesidad de previsibilidad, los índices hash tienden a ser útiles sólo para tablas de búsqueda de
+        tamaño medio que cambian con muy poca frecuencia.
+    </li>
+</ul>
+<p>
+    La elección de la estrategia de índice y el tiempo de creación de índice puede tener un gran impacto en el rendimiento.
+    Las cargas de datos en masa se deben ejecutar sin índices (para ello, elimine el índice, cargue los datos y vuelva a
+    crear el índice). El motivo de esto es que la estructura del índice se vuelve a equilibrar cada vez que se añade una
+    fila. Como las siguientes filas cambiarán la estructura óptima del índice, el esfuerzo de volver a equilibrar el índice
+    al insertar cada fila es una pérdida de tiempo. Es más rápido y más eficaz cargar los datos sin índices y volver a
+    crear el índice cuando finalice la carga de datos. Algunas bases de datos proporcionan cargadores de datos en masa para
+    realizar esta operación automáticamente.
+</p>
+<p>
+    Otra estrategia para optimizar el rendimiento del acceso a la base de datos es el uso de vistas. Las vistas de base de
+    datos son tablas virtuales que no tienen un almacenamiento independiente propio. No obstante, para el programa (o
+    usuario) que realiza la llamada, una vista se comporta como una tabla. Una vista da soporte a la recuperación de datos,
+    y se puede utilizar también para actualizar datos, dependiendo de la estructura y el proveedor de la base de datos. La
+    vista contiene datos de una o varias tablas a las que se puede acceder mediante una única sentencia select. El aumento
+    del rendimiento se produce durante la selección de los datos, especialmente en las tablas consultadas con frecuencia.
+    Los datos se recuperan de una única ubicación (la vista), en lugar de buscando en las múltiples tablas o las tablas de
+    gran tamaño que existen en la base de datos.
+</p>
+<p>
+    Las vistas también juegan un papel importante en la seguridad de la base de datos. Una vista que contiene partes de una
+    tabla puede restringir el acceso a datos confidenciales contenidos en la tabla de la base de datos.
+</p>
+<h4>
+    <a id="Define Storage Characteristics" name="Define Storage Characteristics">Definir características de
+    almacenamiento</a>
+</h4>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Diseñar la asignación de espacio y la organización de páginas de disco de la base de datos.
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    Un diseñador de base de datos utiliza espacios de tabla para representar la cantidad de espacio de almacenamiento que
+    se asigna a las tablas, índices, procedimientos almacenados, etc. Uno o varios espacios de tabla están correlacionados
+    con una base de datos. El diseñador de base de datos debe analizar las tablas en el Modelo de datos para determinar
+    cómo distribuirlas, junto con otros elementos de base de datos de soporte, en el espacio de almacenamiento de la base
+    de datos.
+</p>
+<p>
+    Cuando determine las estructuras de espacios de tabla de la base de datos, tenga en cuenta que las bases de datos no
+    ejecutan E/S en filas, registros ni en tablas completas. Ejecutan E/S en bloques de disco. El motivo de ello es
+    sencillo: las operaciones de E/S de bloqueo están normalmente optimizadas en el software y el hardware del sistema.
+    Como resultado, la organización física de las tablas y los índices en la base de datos puede tener un efecto negativo
+    en el rendimiento del sistema.
+</p>
+<p>
+    Cuando planifique la asignación de espacio y la organización de páginas de disco de la base de datos, tenga en cuenta
+    los siguientes factores:
+</p>
+<ul>
+    <li>
+        la densidad de la información en las páginas de disco
+    </li>
+    <li>
+        la ubicación de las páginas de disco en el disco o en múltiples discos
+    </li>
+    <li>
+        la cantidad de espacio de disco que se debe asignar a la tabla
+    </li>
+</ul>
+<p>
+    Estos factores se describen en los siguientes apartados:
+</p>
+<blockquote>
+    <h5>
+        <b>Densidad de páginas de discos</b>
+    </h5>
+    <p>
+        La densidad de las páginas de disco depende del grado de cambio que se espera de los datos en el tiempo.
+        Básicamente, una página menos densa tiene más capacidad de aceptar cambios en los valores o la adición de datos con
+        el tiempo, mientras que las páginas de datos más llenas proporcionan un mayor rendimiento de lectura, ya que se
+        pueden recuperar más datos por lectura de bloque.
+    </p>
+    <p>
+        Para simplificar la gestión de discos, el diseñador de base de datos puede agrupar las tablas según el grado en que
+        tienden a cambiar. Los tres grupos siguientes constituyen un buen principio para este tipo de organización:
+    </p>
+    <ul>
+        <li>
+            tablas muy dinámicas
+        </li>
+        <li>
+            tablas un poco dinámicas
+        </li>
+        <li>
+            tablas mayoritariamente estáticas
+        </li>
+    </ul>
+    <p>
+        Las tablas muy dinámicas se deben correlacionar con páginas de disco que tengan una gran cantidad de espacio vacío
+        (alrededor del 30%); las tablas un poco dinámicas se deben correlacionar con páginas de disco que tengan menos
+        espacio vacío (alrededor del 15%); y las mayoritariamente estáticas se deben correlacionar con páginas de disco que
+        tenga muy poco espacio vacío (alrededor del 5%). Los índices de las tablas se deben correlacionar de forma
+        parecida.
+    </p>
+    <h5>
+        <b>Ubicación de páginas de discos</b>
+    </h5>
+    <p>
+        Una vez correlacionados los grupos de tablas, el diseñador de base de datos debe determinar dónde colocar las
+        páginas de disco. El objetivo es intentar equilibrar la carga de trabajo entre varias unidades y cabezas diferentes
+        para reducir o eliminar los cuellos de botella. Tenga en cuenta las siguientes directrices:
+    </p>
+    <ul>
+        <li>
+            No coloque nunca datos en el mismo disco que el sistema operativo, los archivos temporales o los dispositivos
+            de intercambio. Estas unidades ya tienen suficiente trabajo sin necesidad de añadirles más carga de trabajo.
+        </li>
+        <li>
+            Coloque los datos a los que se accede simultáneamente en unidades diferentes para equilibrar la carga de
+            trabajo. Algunos sistemas dan soporte a los canales de E/S paralelos. Si este es el caso, coloque los datos en
+            canales diferentes.
+        </li>
+        <li>
+            Coloque los índices en una unidad diferente de la de los datos que indexa para repartir la carga de trabajo.
+        </li>
+        <li>
+            Consulte las directrices que se incluyen en la documentación del proveedor de la base de datos.
+        </li>
+        <li>
+            El tipo de almacenamiento utilizado (por ejemplo, RAID-5, RAID-10, SAN, NAS y conectado mediante canal) afecta
+            al rendimiento de la base de datos. Utilice las directrices de rendimiento proporcionadas por el proveedor del
+            almacenamiento.
+        </li>
+    </ul>
+    <p>
+        La E/S de la base de datos es generalmente el factor límite del rendimiento de la base de datos. El equilibrio de
+        E/S es un proceso experimental iterativo. La creación del prototipo del rendimiento de acceso de la base de datos
+        durante la fase de elaboración, conjuntamente con la instrumentación adecuada para supervisar la E/S física y
+        lógica, permite descubrir problemas de rendimiento al principio, cuando todavía tiene tiempo para ajustar el diseño
+        de la base de datos.
+    </p>
+    <h5>
+        <b>Asignación de espacio de disco</b>
+    </h5>
+    <p>
+        Utilizando las características del mecanismo de diseño de persistencia, calcule el número de objetos que se debe
+        almacenar. La cantidad de espacio de disco necesario para almacenar los objetos varía de RDBMS a RDBMS.&nbsp;Cuando
+        calcule el espacio de disco, asegúrese de tener en cuenta el rendimiento debido a las adiciones de datos.&nbsp;
+        Para calcular el espacio de disco de una base de datos, calcule primero el espacio de disco necesario para cada
+        tabla y, a continuación, calcule los requisitos de espacio de todas las tablas.&nbsp; Consulte el manual del
+        administrador de la base de datos del producto RDBMS específico para determinar la fórmula precisa de cálculo del
+        tamaño.&nbsp; A continuación se proporcionan algunos pasos generales para calcular los requisitos de espacio de una
+        tabla:
+    </p>
+    <ul>
+        <li>
+            Calcule el tamaño medio de las filas.&nbsp; Este cálculo debe incluir la información de control a nivel de
+            registro, así como la información de control necesaria para las columnas de longitud variable.
+        </li>
+        <li>
+            Calcule el número de filas que entrarán en una página o bloque de E/S.&nbsp;Como la mayoría de bases de datos
+            almacenan sólo registros completos en una página o bloque de E/S, este debe ser el número entero de filas que
+            entrarán en una página o bloque de E/S.
+        </li>
+        <li>
+            Calcule el número de páginas o bloques de E/S que se necesitan para almacenar el número estimado de registros
+            en la base de datos.&nbsp; El número estimado de registros debe incluir los factores de carga.
+        </li>
+        <li>
+            Multiplique el número de páginas o bloques de E/S que se necesitan por el tamaño de la página o bloque de E/S.
+        </li>
+        <li>
+            Súmele los gastos generales de los índices adicionales.
+        </li>
+        <li>
+            Súmele los gastos generales fijos de la tabla.
+        </li>
+    </ul>
+    <p>
+        Una vez definidos los requisitos de espacio de la tabla:
+    </p>
+    <ul>
+        <li>
+            Haga la suma del espacio que necesitan las tablas.
+        </li>
+        <li>
+            Súmele la cantidad de espacio fija necesaria para la gestión de la base de datos.
+        </li>
+        <li>
+            Súmele el espacio de disco necesario para el registro de transacciones y la pista de auditoría.&nbsp;
+        </li>
+    </ul>
+    <p>
+        En un entorno actualizado con frecuencia, los requisitos de retención de la pista de auditoría requieren una
+        cantidad significativa de almacenamiento. La documentación de los principales sistemas de gestión de bases de datos
+        comerciales normalmente proporcionan instrucciones detalladas sobre el ajuste de tamaño. Asegúrese de consultar
+        estas instrucciones cuando calcule los valores estimados de los requisitos de espacio de disco de la base de datos.
+    </p>
+</blockquote>
+<h4>
+    <a id="Distribute Class behavior to the Database" name="Distribute Class behavior to the Database">Diseñar
+    procedimientos almacenados para distribuir el comportamiento de las clases en la base de datos</a>
+</h4>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Determinar si se deben utilizar los procedimientos almacenados o los desencadenantes para implementar
+                operaciones de clase de acceso a datos.
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    La mayoría de bases de datos dan soporte a la capacidad de procedimiento almacenado. Un procedimiento almacenado es
+    código ejecutable que se ejecuta en el espacio de proceso del sistema de gestión de bases de datos. Ofrece la
+    posibilidad de ejecutar acciones relacionadas con la base de datos en el servidor sin necesidad de transferir datos en
+    una red. El uso correcto de los procedimientos almacenados puede aumentar el rendimiento del sistema.
+</p>
+<p>
+    Los procedimientos almacenados normalmente pueden ser de dos tipos: procedimientos reales o desencadenantes. Los
+    procedimientos los ejecuta explícitamente una aplicación, generalmente tienen parámetros y proporcionan un valor de
+    retorno explícito. Por otro lado, los desencadenantes se invocan implícitamente cuando se produce algún suceso de base
+    de datos (por ejemplo, se inserta, se actualiza o se suprime una fila), no tienen parámetros aparte de la fila que se
+    está modificando (ya que se invocan de forma implícita), y no proporcionan un valor de retorno explícito.
+</p>
+<p>
+    En los sistemas de base de datos que no tienen restricciones, los desencadenantes se utilizan a menudo para forzar la
+    integridad referencial y de datos. De lo contrario, tienden a utilizarse cuando un suceso debe desencadenar (o
+    provocar) otro suceso. Los desencadenantes también se utilizan a efectos de seguridad mediante auditorías del suceso
+    desencadenante.
+</p>
+<p>
+    Las clases de diseño en el Modelo de diseño se deben examinar para ver si tienen operaciones que se implementan
+    utilizando el procedimiento almacenado o el recurso de desencadenante. Las posibles candidatas son:
+</p>
+<ul>
+    <li>
+        las operaciones que tratan principalmente con datos persistentes (crear, actualizar, recuperar o suprimir datos
+        persistentes).
+    </li>
+    <li>
+        las operaciones en las que hay implicada una consulta en un cálculo (por ejemplo, calcular la cantidad media y el
+        valor medio de un producto en el inventario).
+    </li>
+    <li>
+        las operaciones que deben acceder a la base de datos para validar los datos.
+    </li>
+</ul>
+<p>
+    Recuerde que aumentar el rendimiento de la base de datos significa normalmente reducir la E/S. Por lo tanto, si la
+    realización de un cálculo en el servidor de DBMS reduce la cantidad de datos que se pasa en la red, el cálculo deberá
+    realizarse probablemente en el servidor.
+</p>
+<p>
+    Trabaje con el diseñador de la clase de diseño para determinar cómo se puede utilizar la base de datos para aumentar el
+    rendimiento. El diseñador actualizará el método de operación para indicar si se pueden utilizar uno o más
+    procedimientos almacenados para implementar la operación.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Revisar los resultados </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Review the Results" name="Review the Results"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%">
+                    <b>Objetivo</b>
+                </td>
+                <td width="95%">
+                    Garantizar la calidad y la integridad del <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Modelo de datos</a>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p>
+    De forma continua en esta tarea, debe considerar la <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/checklists/data_model_D22985A5.html" guid="2.800761632096845E-305">Lista de comprobación:
+    Modelo de datos</a> para valorar la completitud y la calidad del esfuerzo.&nbsp; Asimismo, el diseñador de la base de
+    datos debe revisar regularmente la estructura implementada de la base de datos para garantizar que el modelo de datos
+    sea coherente con los cambios que se han realizado directamente en la base de datos.&nbsp; Si el proyecto utiliza
+    herramientas de modelado de datos que dan soporte a la sincronización del modelo de datos con la estructura física de
+    la base de datos, el diseñador de la base de datos debe comprobar periódicamente el estado del modelo de datos con la
+    base de datos y realizar los ajustes que sean necesarios.&nbsp;
+</p>
+<p>
+    Los defectos identificados que no se corrijan en este momento se deben documentar en <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_change_request_F2E6419.html" guid="{694A7BC8-3D20-4172-BC56-6C7BD4590BA5}">Solicitudes de cambio</a> y asignar finalmente a alguien como propietario
+    para que llegue a una solución.
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Varias apariciones" abbr="Varias apariciones">Varias apariciones</th><td align="left" class="sectionTableCell" headers="property_Varias apariciones"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Condicionado por sucesos" abbr="Condicionado por sucesos">Condicionado por sucesos</th><td align="left" class="sectionTableCell" headers="property_Condicionado por sucesos"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Continuo" abbr="Continuo">Continuo</th><td align="left" class="sectionTableCell" headers="property_Continuo"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Se puede repetir" abbr="Se puede repetir">Se puede repetir</th><td align="left" class="sectionTableCell" headers="property_Se puede repetir"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Listas de comprobaci&oacute;n</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/checklists/data_model_D22985A5.html" guid="2.800761632096845E-305">Modelo de datos</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Conceptos</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/conceptual_data_modeling_5CF78A88.html" guid="7.217811033438091E-305">Modelado de datos conceptuales</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/relational_databases_and_object_orientation_1C67069E.html" guid="3.2166604011257303E-305">Bases de datos relacionales y orientación de objetos</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/data_model_80FB2539.html" guid="3.4196799396281445E-306">Modelo de datos</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/forward-engineering_relational_databases_53C0441E.html" guid="5.250868507423771E-305">Aplicación de ingeniería en bases de datos relacionales</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/modeling_and_designing_databases_C61A6907.html" guid="{C1A09291-4091-4300-AF91-B7715DE432F9}">Diseño y modelado de bases de datos utilizando Rational Rose Data Modeler</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/database_design_51B0B5D9.html" guid="{A7B13419-14D8-4C55-B98C-497B2E17CC73}">Diseño de bases de datos utilizando XDE Developer.</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/reverse_engineering_db_31C775E7.html" guid="{8F40AECA-8AAA-4409-81F0-BFB7B6BECDBC}">Ingeniería inversa de bases de datos utilizando Rational XDE Developer</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/forward_engineering_db_14F5AD0B.html" guid="{F55D370E-F820-4646-A0B8-C2242A07A83F}">Ingeniería directa de bases de datos utilizando Rational XDE</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/managing_db_ACA9AB6E.html" guid="{3B09E5BE-4AC8-4206-B9D8-4F85D36B9C75}">Gestión de bases de datos utilizando Rational XDE Developer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

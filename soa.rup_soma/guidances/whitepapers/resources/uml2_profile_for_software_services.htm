@@ -1,0 +1,351 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2// EN">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Perfil de UML para servicios de software</title>
+<link type="text/css" href="../../../../css/default.css" rel="StyleSheet">
+<script src="../../../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = './../../';
+				</script>
+</head>
+<body>
+<h1><a name="Top">Perfil de UML 2.0 para servicios de software</a></h1>
+<p>Por <a href="mailto:skjohn@us.ibm.com">Simon Johnston</a>, arquitecto, IBM Corporation.</p>
+<h2><a name="Abstract">Resumen</a></h2>
+<p>Este documento describe un perfil de UML para servicios de software, un perfil para UML 2.0 que permite la modelación de los servicios, SOA y soluciones orientadas a servicios. 
+  El objetivo del perfil es proporcionar un lenguaje común para describir servicios que cubra un gran número de actividades a través del ciclo vital de desarrollo y también proporcione vistas a los distintos interesados. Así, por ejemplo, el perfil proporciona funciones para que el arquitecto correlacione los servicios pronto en el ciclo vital usando particiones lógicas para describir toda la cartera de servicios de la empresa. 
+  Esta vista es detallada posteriormente por los diseñadores que desarrollan especificaciones de servicio, tanto estructurales como de comportamiento, que actúen como los contrastes entre los clientes de servicio y los implementadores. La vista de mensaje ofrece la posibilidad de que los diseñadores reutilicen los modelos de información para definiciones de datos de servicios comunes.</p>
+<p>El perfil se ha implementado en Rational Software Architect y se utiliza correctamente en modelos de desarrollo de escenarios de cliente complejos y también en educar a las personas en los problemas relevantes del desarrollo de soluciones orientadas a servicios.</p>
+<h2><a name="Overview">Visión general del perfil de UML para servicios de software</a></h2>
+<h3><a name="OV_Conceptual">Modelo conceptual</a></h3>
+<p>El siguiente diagrama es un modelo que muestra los conceptos importantes en el modelado de servicios. Como puede observarse, el número de conceptos es relativamente pequeño y debería resultar relativamente familiar a cualquiera que haya trabajado con soluciones orientadas a servicios. 
+  Observe, no obstante, que aunque el perfil es una realización de este modelo, un determinado número de los conceptos no son estereotipos explícitos del perfil. Por ejemplo, no existe ningún estereotipo para operación o para protocolo ya que existen nociones en UML 2.0 que el perfil reutiliza sin ninguna ambigüedad ni restricción.</p>
+<p align="center"><img src="profile-01.gif" alt="El diagrama se describe en el contenido textual." width="616" height="415" border="0"></p>
+<h3><a name="OV_Subset">Subconjunto identificado de UML 2.0</a></h3>
+<p>En la siguiente tabla se enumeran los elementos del metamodelo de UML 2.0 que se usan como metaclases para estereotipos del perfil de UML.</p>
+<table border="1" width="100%">
+  <tbody>
+    <tr>
+      <th width="30%">Metaclase de UML 2.0</th>
+      <th width="70%">Estereotipos</th>
+    </tr>
+    <tr>
+      <td width="30%">Clase</td>
+      <td width="70%">Mensaje, Partición de servicio, Proveedor de servicio</td>
+    </tr>
+    <tr>
+      <td width="30%">Clasificador</td>
+      <td width="70%">Cliente del servicio</td>
+    </tr>
+    <tr>
+      <td width="30%">Colaboración</td>
+      <td width="70%">Colaboración de servicio</td>
+    </tr>
+    <tr>
+      <td width="30%">Conector</td>
+      <td width="70%">Canal de servicio</td>
+    </tr>
+    <tr>
+      <td width="30%">Interfaz</td>
+      <td width="70%">Especificación de servicio</td>
+    </tr>
+    <tr>
+      <td width="30%">Puerto</td>
+      <td width="70%">Servicio, Pasarela de servicio</td>
+    </tr>
+    <tr>
+      <td width="30%">Propiedad</td>
+      <td width="70%">Accesorio de mensaje</td>
+    </tr>
+  </tbody>
+</table>
+<h2><a name="Profile">El propio perfil</a></h2>
+<p>El siguiente diagrama (pulsable) es un diagrama de perfil de UML 2.0, demuestra los detalles reales del perfil con cada estereotipo, sus metaclases usando la notación de extensión (cabeza de flecha llena). También puede ver algunas restricciones de este modelo, en especial aquellas correstricciones entre elementos de perfil.</p>
+<p align="center"><img src="profile-02.gif" alt="El diagrama se describe en el contenido textual." width="682" height="420" border="0" usemap="#profile-02"></p>
+<map name="profile-02">
+  <area shape="rect" coords="7,74,101,116" href="#P_Message" alt="Mensaje">
+  <area shape="rect" coords="133,74,238,112" href="#P_Service_Partition" alt="Partición de servicio">
+  <area shape="rect" coords="267,73,389,127" href="#P_Service_Provider" alt="Proveedor de servicios">
+  <area shape="rect" coords="456,73,530,113" href="#P_Service" alt="Servicio">
+  <area shape="rect" coords="555,73,661,112" href="#P_Service_Gateway" alt="Pasarela de servicio">
+  <area shape="rect" coords="2,296,128,343" href="#P_Message_Attachment" alt="Accesorio de mensaje">
+  <area shape="rect" coords="131,299,246,339" href="#P_Service_Consumer" alt="Cliente de servicio">
+  <area shape="rect" coords="276,298,405,339" href="#P_Service_Collaboration" alt="Colaboración de servicio">
+  <area shape="rect" coords="428,299,533,341" href="#P_Service_Channel" alt="Canal de servicio">
+  <area shape="rect" coords="556,299,683,338" href="#P_Service_Specification" alt="Especificación de servicio">
+</map>
+<p class=MsoBodyTextIndent>Las siguientes secciones describen los elementos del perfil de UML 2.0 tal como está definido actualmente. Cada sección describe un estereotipo individual; los detalles de cada uno de ellos especifica sus metaclases, propiedades y las restricciones que deberían aplicarse cuando se usa el perfil.</p>
+
+<h3><a name="P_Message">Mensaje de estereotipo</a></h3>
+<h4>Ampliaciones</h4>
+<p>Clase</p>
+<h4>Semántica</h4>
+<p class=MsoBodyTextIndent>Un mensaje representa el concepto tal como se definió en la especificación WSDL, por ejemplo, un contenedor para datos reales que tiene significado para el servicio y el cliente. Un mensaje puede no tener operaciones, puede tener propiedades y asociaciones con otras clases (uno asume clases de algún modelo de dominio). 
+  Un estereotipo de mensaje tiene una propiedad para denotar su formato de codificación (por ejemplo, <code>SOAP-literal</code>, <code>SOAP-rpc</code>, <code>ASN.1</code>, etc.).</p>
+<p>El uso de este elemento puede ser opcional en una herramienta por dos razones. En primer lugar, el modelador puede simplemente desear usar elementos de un modelo de dominio directamente como los parámetros de una operación en lugar de especificar un mensaje. En segundo lugar, el modelador puede desear utilizar la convención de especificar un conjunto de mensajes de entrada y de salida en una operación, en cuyo caso la herramienta de modelado debería construir un mensaje de entrada y salida que coincidiese con los parámetros al generar descripciones de servicios en WSDL.</p>
+<h4>Propiedades</h4>
+<table border="1" width="100%">
+  <tbody>
+    <tr>
+      <th width="20%">Tipo</th>
+      <th width="20%">Nombre</th>
+      <th width="20%">Tipo</th>
+      <th width="40%">Descripción</th>
+    </tr>
+    <tr>
+      <td width="20%" valign="top" align="left">Propiedad</td>
+      <td width="20%" valign="top" align="left">codificación</td>
+      <td width="20%" valign="top" align="left">Serie</td>
+      <td width="40%" valign="top" align="left">Indica el mecanismo de codificación de la plataforma que debe utilizarse a la hora de generar el esquema para el mensaje; los ejemplos podrían ser <code>SOAP-RPC, Doc-Literal, ASN.1</code>, etc.
+</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Notación</h4>
+<p><img src="soa_message_48.gif" alt="Notación del mensaje" width="48" height="48" border="0"></p>
+<h4>Restricciones</h4>
+<ul>
+  <li>No tendrá ninguna operación de propiedad.
+  <li>No tendrá ningún comportamiento de propiedad.
+  <li>Todas las propiedades de propiedad serán públicas.
+</ul>
+<h3><a name="P_Message_Attachment">estereotipo Accesorio de mensaje</a></h3>
+<h4>Ampliaciones</h4>
+<p>Propiedad</p>
+<h4>Semántica</h4>
+<p class=MsoBodyTextIndent>Este estereotipo se usa para indicar que <i>algún componente de un mensaje es un accesorio del mismo</i> (lo contrario de una parte directa del propio mensaje). En general, éste probablemente no se utilice mucho en las actividades de diseño de nivel superior, pero en muchos procesos es importante diferenciar los datos adjuntados de los datos del mensaje incrustados. Por ejemplo, un servicio de catálogo puede devolver detalles generales de producto como parte del mensaje estructurado pero las imágenes como accesorios del mensaje; esto también nos permite indicar que la codificación de las imágenes es binaria (al contrario que la codificación textual del mensaje principal).</p>
+
+<h4>Propiedades</h4>
+<table border="1" width="100%">
+  <tbody>
+    <tr>
+      <th width="20%" valign="top">Tipo</th>
+      <th width="20%" valign="top">Nombre</th>
+      <th width="20%" valign="top">Tipo</th>
+      <th width="40%" valign="top">Descripción</th>
+    </tr>
+    <tr>
+      <td width="20%" valign="top">Propiedad</td>
+      <td width="20%" valign="top">codificación</td>
+      <td width="20%" valign="top">Serie</td>
+      <td width="40%" valign="top">Indica el mecanismo de codificación de la plataforma que debe utilizarse a la hora de generar el esquema para el mensaje; los ejemplos podrían ser <code>SOAP-RPC, Doc-Literal, ASN.1</code>, etc.
+</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Notación</h4>
+<p><img src="soa_msg_attachment_48.gif" alt="Notación de accesorio de mensaje" width="48" height="48" border="0"></p>
+<h4>Restricciones</h4>
+<ul>
+  <li>Sólo se usará en propiedades de clases estereotipadas como &lt;&lt;Mensaje&gt;&gt;..
+</ul>
+  <h3><a name="P_Service">estereotipo Servicio</a></h3>
+<h4>Ampliaciones</h4>
+<p>Puerto</p>
+<h4>Semántica</h4>
+<p class=MsoBodyTextIndent>El elemento de modelo de servicio proporciona el punto final de interacción de servicio (en terminología de servicio web) ya que la definición de estas interacciones forman parte de la especificación de servicio. En el modelo, un servicio no sólo identifica la interfaz proporcionada sino también las interfaces necesarias (caso de las interfaces de devolución de llamadas). Un servicio tiene una propiedad adicional que indica el vínculo que vaya a usarse, caso de <code>SOAP-HTTP</code>, <code>SOAP-JMS</code>, etc.</p>
+
+<h4>Propiedades</h4>
+<p>Ninguna.</p>
+<h4>Notación</h4>
+<p><img src="soa_service_48.gif" alt="Notación de servicio" width="48" height="48" border="0"></p>
+<h4>Restricciones</h4>
+<ul>
+  <li>Sólo se utilizará en una clase estereotipada como &lt;&lt;Proveedor de servicios&gt;&gt;.
+  <li>Sólo se clasificará mediante una interfaz estereotipada como &lt;&lt;Especificación de servicio&gt;&gt;.
+</ul>
+  <h3><a name="P_Service_Channel">estereotipo Canal de servicio</a></h3>
+<h4>Ampliaciones</h4>
+<p>Conector</p>
+<h4>Semántica</h4>
+<p class=MsoBodyTextIndent>Un canal representa <i>la vía de acceso de comunicación entre dos servicios</i>. Es importante observar que la interacción se puede producir a través de un canal, pero el canal no representará ninguna interacción particular. En el mundo de los servicios web, cada servicio indica los vínculos asociados con él (para que un cliente pueda tener acceso a él). En un perfil de modelado, se indica el vínculo en la comunicación entre servicios o entre un servicio y los clientes. De esta forma, puede ser flexible en la comprensión de los requisitos de vinculación.</p>
+
+<h4>Propiedades</h4>
+<table border="1" width="100%">
+  <tbody>
+    <tr>
+      <th width="20%" valign="top">Tipo</th>
+      <th width="20%" valign="top">Nombre</th>
+      <th width="20%" valign="top">Tipo</th>
+      <th width="40%" valign="top">Descripción</th>
+    </tr>
+    <tr>
+      <td width="20%" valign="top">Propiedad</td>
+      <td width="20%" valign="top">vinculación</td>
+      <td width="20%" valign="top">Serie</td>
+      <td width="40%" valign="top">Indica el mecanismo de vinculación de plataformas que se vaya a usar en la generación de vínculos de servicio en WSDL; los ejemplos pueden ser <code>SOAP-RPC</code>, <code>SOAP-Doc</code>, <code>HTTP-Get</code>, etc.</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Notación</h4>
+<p><img src="soa_svc_channel_48.gif" alt="Notación de canal de servicio" width="48" height="48" border="0"></p>
+<h4>Restricciones</h4>
+<ul>
+  <li>Al menos un extremo del conector se conectará con un puerto estereotipado como &lt;&lt;Servicio&gt;&gt;.
+  <li>Como máximo un extremo del conector podrá conectarse con un puerto estereotipado como &lt;&lt;Pasarela de servicio&gt;&gt;, una clase estereotipada como &lt;&lt;Proveedor de servicios&gt;&gt; o un clasificador estereotipado como &lt;&lt;Cliente de servicio&gt;&gt;.
+</ul>
+<h3><a name="P_Service_Collaboration">estereotipo Colaboración de servicio</a></h3>
+<p>Colaboración</p>
+<h4>Ampliaciones</h4>
+<h4>Semántica</h4>
+<p class=MsoBodyTextIndent>Una colaboración de servicio es una <i>forma de especificar la implementación de un servicio como colaboración de otros servicios</i>. Desde el punto de vista de los servicios web esto corresponde al uso de BPEL4WS en la especificación de la implementación de servicios. De ahí que esto signifique que una colaboración de servicio se use como comportamiento de un servicio y, si con ello se pretende generar un lenguaje como BPEL, puede tener otras restricciones específicas de la implementación.</p>
+
+<h4>Propiedades</h4>
+<table border="1" width="100%">
+  <tbody>
+    <tr>
+      <th width="20%" valign="top">Tipo</th>
+      <th width="20%" valign="top">Nombre</th>
+      <th width="20%" valign="top">Tipo</th>
+      <th width="40%" valign="top">Descripción</th>
+    </tr>
+    <tr>
+      <td width="20%" valign="top">Propiedad</td>
+      <td width="20%" valign="top">Vínculo</td>
+      <td width="20%" valign="top">Serie</td>
+      <td width="40%" valign="top">Indica el mecanismo de vinculación de plataformas que se vaya a utilizar en la generación de la colaboración como coreografía de procesos; ejemplos pueden ser &quot;BPEL&quot;, &quot;WSFL&quot;,
+      etc.</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Notación</h4>
+<p><img src="soa_svc_collaboration_48.gif" alt="Notación de colaboración de servicios" width="48" height="48" border="0"></p>
+<h4>Restricciones</h4>
+<ul>
+  <li>Los participantes en la colaboración serán elementos &lt;&lt;ClienteServicios&gt;&gt;,
+    &lt;&lt;ProveedorServicios&gt;&gt; o &lt;&lt;EspecificaciónServicios&gt;&gt;. 
+</ul>
+<h3><a name="P_Service_Consumer">estereotipo Cliente de servicio</a></h3>
+<p>Clasificador</p>
+<h4>Ampliaciones</h4>
+<h4>Semántica</h4>
+<p class=MsoBodyTextIndent><i>Cualquier</i> clasificador (clase, componente, ...) <i>puede actuar como cliente de un servicio</i>, e incluir otro servicio. Aunque este estereotipo sea definitivamente más opcional puede ser útil en la identificación de elementos de un modelo (que no sean ellos mismos servicios) como los <i>clientes de servicios</i>. Por otro lado puede ser una carga y no usarse.</p>
+
+<h4>Propiedades</h4>
+<p>Ninguna.</p>
+<h4>Notación</h4>
+<p><img src="soa_svc_consumer_48.gif" alt="Notación de cliente de servicio" width="48" height="48" border="0"></p>
+<h4>Restricciones</h4>
+<p>Ninguna.</p>
+<h3><a name="P_Service_Gateway">estereotipo Pasarela de servicio</a></h3>
+<h4>Ampliaciones</h4>
+<p>Puerto</p>
+<h4>Semántica</h4>
+<p class=MsoBodyTextIndent>Una pasarela de servicio se parece a un servicio pero <i>sólo está disponible para uso en particiones y no en proveedores de servicios</i>. Una pasarela actúa como un servicio proxy y se puede usar para mediar protocolos o indicar la interfaz disponible para una partición. Por ejemplo, podríamos indicar que aunque un determinado número de servicios se implementan dentro de una partición, sólo algunos están disponibles para uso fuera de la partición y por lo tanto se proporcionan pasarelas para estos servicios. Esto impide que otros servicios o particiones se comuniquen con los servicios que no estén expuestos a través de pasarelas.</p>
+
+<h4>Propiedades</h4>
+<p>Ninguna.</p>
+<h4>Notación</h4>
+<p><img src="soa_svc_gateway_48.gif" alt="Notación de pasarela de servicio" width="48" height="48" border="0"></p>
+<h4>Restricciones</h4>
+<ul>
+  <li>Sólo se utilizará en una clase estereotipada como &lt;&lt;Partición de servicios&gt;&gt;.
+  <li>Sólo se clasificará mediante una interfaz estereotipada como &lt;&lt;Especificación de servicio&gt;&gt;.
+</ul>
+  <h3><a name="P_Service_Partition">estereotipo Partición de servicio</a></h3>
+<h4>Ampliaciones</h4>
+<p>Clase</p>
+<h4>Semántica</h4>
+<p class=MsoBodyTextIndent>Una partición representa <i>un límite lógico o físico del sistema</i>. Es opcional modelar particiones pero es útil. Por ejemplo, las particiones podrían usarse para representar niveles web, empresariales o de datos de una aplicación de nivel n tradicional. Las particiones podrían también usarse para indicar más fronteras físicas (como, por ejemplo, mi centro de datos principal, mi sitio secundario, mi sitio de clientes, socios, etc.) en cuyo caso el cruce de particiones podría tener restricciones especiales de seguridad, protocolos permitidos, ancho de banda, etc. </p>
+<p class=MsoBodyTextIndent>Una partición sólo puede tener propiedades que representen a las partes anidadas, sean servicios u otras particiones. Observe que <i>ésta es una restricción</i> (ningún otro elemento puede actualmente representarse en una partición).</p>
+<p>Una partición también tiene la noción de ser &quot;estricta&quot;, si una partición indica que toda la comunicación entre ella y las demás particiones debe dirigirse a través de pasarelas clasificadas entonces se dirá que es una <i>partición estricta</i>.</p>
+<h4>Propiedades</h4>
+<table border="1" width="100%">
+  <tbody>
+    <tr>
+      <th width="20%" valign="top">Tipo</th>
+      <th width="20%" valign="top">Nombre</th>
+      <th width="20%" valign="top">Tipo</th>
+      <th width="40%" valign="top">Descripción</th>
+    </tr>
+    <tr>
+      <td width="20%" valign="top">Propiedad</td>
+      <td width="20%" valign="top">Clasificador</td>
+      <td width="20%" valign="top">Serie</td>
+      <td width="40%" valign="top">Un nombre de clasificación, para indicar el ámbito de espacio de nombres de esta partición.</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Notación</h4>
+<p><img src="soa_svc_partition_48.gif" alt="Notación de particiones de servicio" width="48" height="48" border="0"></p>
+<h4>Restricciones</h4>
+<ul>
+  <li>No tendrá ninguna propiedad.
+  <li>No tendrá ninguna operación de propiedad.
+  <li>No tendrá ningún comportamiento de propiedad.
+  <li>Todas las partes de propiedad serán elementos &lt;&lt;Cliente de servicio&gt;&gt;, &lt;&lt;Proveedor de servicios&gt;&gt; o &lt;&lt;Especificación de servicios&gt;&gt;.
+</ul>
+  <h3><a name="P_Service_Provider">estereotipo Proveedor de servicios</a></h3>
+<h4>Ampliaciones</h4>
+<p>Clase</p>
+<h4>Semántica</h4>
+<p class=MsoBodyTextIndent>El proveedor de servicios es un <i>elemento de software que proporciona uno o más servicios</i>. En términos de modelado uno debería esperar ver un componente UML aquí, sin embargo tal restricción parece arbitraria y por lo tanto la metaclase se anota como clase, para mayor flexibilidad. Un proveedor de servicios tiene una propiedad que captura información acerca de su ubicación aunque el significado de esto sea dependiente de implementación. La clase que actúa como proveedor de servicios puede no exponer atributos u operaciones directamente, sólo se pueden proporcionar puertos públicos (estereotipados como servicio) y éstos se clasifican mediante especificaciones de servicios.</p>
+<p>La propiedad de la ubicación, aunque la implementación/plataforma sea útil a la hora de generar nombres de punto final de servicios. Por ejemplo, con WSDL la ubicación puede ser <code>http://svc.myco.com/</code> y un servicio puede llamarse <code>CustInfo</code>, en cuyo caso el nombre de punto final para el servicio podría generarse como <code>http://svc.myco.com/CustInfo</code>.</p>
+<h4>Propiedades</h4>
+<table border="1" width="100%">
+  <tbody>
+    <tr>
+      <th width="20%" valign="top">Tipo</th>
+      <th width="20%" valign="top">Nombre</th>
+      <th width="20%" valign="top">Tipo</th>
+      <th width="40%" valign="top">Descripción</th>
+    </tr>
+    <tr>
+      <td width="20%" valign="top">Propiedad</td>
+      <td width="20%" valign="top">Vínculos permitidos</td>
+      <td width="20%" valign="top">Serie</td>
+      <td width="40%" valign="top">Indica el mecanismo de vinculación de plataformas permitido que un canal puede utilizar en la conexión con el servicio; ejemplos podrían ser <code>SOAP-RPC</code>, <code>SOAP-Doc</code>, <code>HTTP-Get</code>, etc.</td>
+    </tr>
+    <tr>
+      <td width="20%" valign="top">Propiedad</td>
+      <td width="20%" valign="top">ubicación</td>
+      <td width="20%" valign="top">Serie</td>
+      <td width="40%" valign="top">La ubicación del proveedor puede ser usada por los generadores para crear nombres de punto final. </td>
+    </tr>
+  </tbody>
+</table>
+<h4>Notación</h4>
+<p><img src="soa_svc_provider_48.gif" alt="Notación de proveedor de servicios" width="48" height="48" border="0"></p>
+<h4>Restricciones</h4>
+<ul>
+  <li>No tendrá ninguna propiedad.
+  <li>No tendrá ninguna operación de propiedad.
+  <li>No tendrá ningún comportamiento de propiedad.
+  <li>Todos los puertos de propiedad se estereotiparán como &lt;&lt;Servicio&gt;&gt;.
+</ul>
+  <h3><a name="P_Service_Specification">estereotipo Especificación de servicio</a></h3>
+<h4>Ampliaciones</h4>
+<p>Interfaz</p>
+<h4>Semántica</h4>
+<p class=MsoBodyTextIndent>El uso de una interfaz <i>indica un conjunto de operaciones proporcionadas por un servicio</i>. Observe que un servicio puede implementar más de una interfaz. Mediante convención se puede adjuntar una máquina de estado de protocolo o de colaboración UML 2.0 a dicha especificación para indicar el orden de invocación de operaciones en una especificación de servicio. Con tal especificación de comportamiento cualquier servicio de implementación puede validarse no sólo frente a una especificación estática sino también frente a una dinámica de su estructura y comportamiento. Observe que la especificación de servicio sólo puede proporcionar operaciones públicas.</p>
+
+<h4>Propiedades</h4>
+<table border="1" width="100%">
+  <tbody>
+    <tr>
+      <th width="20%" valign="top">Tipo</th>
+      <th width="20%" valign="top">Nombre</th>
+      <th width="20%" valign="top">Tipo</th>
+      <th width="40%" valign="top">Descripción</th>
+    </tr>
+    <tr>
+      <td width="20%" valign="top">Propiedad</td>
+      <td width="20%" valign="top">publicadas</td>
+      <td width="20%" valign="top">Booleana</td>
+      <td width="40%" valign="top">Esta propiedad indica si el servicio se presupone que va a publicarse en un repositorio de servicio; se trata de una noción diferente de la propiedad pública/privada proporcionada por UML.</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Notación</h4>
+<p><img src="soa_svc_specification_48.gif" alt="Notación de especificación de servicio" width="48" height="48" border="0"></p>
+<h4>Restricciones</h4>
+<ul>
+  <li>No tendrá ninguna propiedad.
+  <li>Todas las operaciones se marcarán como &quot;públicas&quot;.
+  <li>Sólo se puede usar como el tipo para un puerto estereotipado como &lt;&lt;Servicio&gt;&gt; o &lt;&lt;Pasarela de servicio&gt;&gt;.
+</ul>
+<div align="left">
+<address><font size="-1">&copy; Copyright IBM Corp. 2005. Reservados todos los derechos.</font></address>
+</div>
+</body>
+</html>

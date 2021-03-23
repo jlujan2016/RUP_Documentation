@@ -1,0 +1,648 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Modelo de datos</title>
+<meta content="Guideline" name="uma.type">
+<meta content="data_model" name="uma.name">
+<meta content="Modelo de datos" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "3.4196799396281445E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "3.4196799396281445E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "3.4196799396281445E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "3.4196799396281445E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.4196799396281445E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Modelo de datos</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">El modelo de datos captura el diseño de los almacenes de datos persistentes utilizados por el sistema. En esta directriz se introduce el modelado de datos y su utilización dentro de RUP.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/database_design_8552DD3.html" guid="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}">Diseño de base de datos</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Modelo de datos</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a id="Overview" name="Overview"></a><a key="permanencia" text="bases de datos relacionales y orientación de objetos" name="XE_persistence__relational_databases_and_object_orientation" id="XE_persistence__relational_databases_and_object_orientation" class="index"></a><a id="Relational Databases and Object Orientation" name="Relational Databases and Object Orientation">Visión general</a>
+</h3>
+<p>
+    Los <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Modelos de datos</a> se utilizan para diseñar la estructura de los
+    almacenes de datos persistentes que se utilizan en el sistema.&nbsp;&nbsp;El perfil de Lenguaje unificado de modelado
+    (UML) para el diseño de bases de datos proporciona a los diseñadores de bases de datos un conjunto de elementos de
+    modelado que se pueden utilizar para desarrollar el diseño detallado de las tablas en la base de datos y modelar el
+    diseño del almacenamiento físico de la base de datos.&nbsp; El perfil de base de datos UML también proporciona
+    construcciones para la integridad referencial de modelado (restricciones y desencadenantes), y también procedimientos
+    almacenados que se utilizan para gestionar el acceso a la base de datos.
+</p>
+<p>
+    Los modelos de datos se pueden construir en el nivel de empresa, de departamento o en la aplicación individual. Los
+    modelos de datos de nivel de empresa y de departamento se pueden utilizar para proporcionar definiciones estándar para
+    entidades empresariales clave (como cliente y empleado) que se utilizarán en todas las aplicaciones de una empresa o de
+    una unidad de negocio.&nbsp;Estos tipos de modelos de datos también pueden utilizarse para definir qué sistemas de la
+    empresa son "propietarios" de los datos de una entidad empresarial específica y qué otros sistemas son usuarios de
+    (suscritos a) los datos.
+</p>
+<p>
+    En esta directriz se describen los elementos de modelo del perfil UML para el modelado de base de datos que se utiliza
+    para construir un modelo de datos para una base de datos relacional.&nbsp;Como existen numerosas publicaciones sobre la
+    teoría general de las bases de datos, no cubre esta área.&nbsp; Para obtener información de fondo sobre modelos de
+    datos relacionales y modelos de objeto, consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/relational_databases_and_object_orientation_1C67069E.html" guid="3.2166604011257303E-305">Concepto: Bases de datos relacionales y orientación de objeto</a>
+</p>
+<p>
+    Nota: las representaciones de modelado de datos contenidas en esta directriz se basan en el UML 1.3. En el momento en
+    que se ha desarrollado esta directriz, el perfil de modelado de datos UML 1.4 no estaba disponible.
+</p>
+<h3>
+    <a id="Stages of Data Modeling" name="Stages of Data Modeling"></a><a id="Persistence Frameworks" name="Persistence Frameworks">Estadios del modelado de datos</a>
+</h3>
+<p>
+    Tal como se describe en [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#NBG01" guid="7.755968586980351E-308">NBG01</a>], existen
+    tres estadios generales en el desarrollo de un modelo de datos: conceptual, lógico y físico.&nbsp; Estos estadios del
+    modelado de datos reflejan los diferentes niveles de detalle en el diseño del almacenamiento de datos persistentes y
+    los mecanismos de recuperación de la aplicación. Se facilita una discusión del modelado de datos conceptuales en <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/conceptual_data_modeling_5CF78A88.html" guid="7.217811033438091E-305">Conceptos</a><a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/conceptual_data_modeling_5CF78A88.html" guid="7.217811033438091E-305">Modelado
+    de datos conceptuales</a>.&nbsp; Los resúmenes del modelado de datos lógicos y físicos se proporcionan en las dos
+    secciones siguientes de esta directriz.
+</p>
+<h4>
+    Modelado de datos <a id="Logical data modeling" name="Logical data modeling">lógicos</a>
+</h4>
+<p>
+    En el modelado de datos lógicos, el <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">Diseñador
+    de base de datos</a> identifica las entidades clave y las relaciones que capturan la información crítica que la
+    aplicación necesita persistir en la base de datos.&nbsp; Durante las tareas de <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">análisis de
+    caso de uso</a> , <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">diseño de caso de uso</a> y <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">diseño de
+    clase</a>, el <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">diseñador de base de datos</a> y el <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">diseñador</a>
+    deben trabajar juntos para garantizar que los diseños en desarrollo del análisis y las clases de diseño de la
+    aplicación soportarán de forma adecuada el desarrollo de la base de datos.&nbsp; Durante la tarea de <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Diseño de clase</a>, el diseñador de base de datos y el diseñador deben
+    identificar el conjunto de clases del modelo de diseño que deberán persistir en la base de datos.
+</p>
+<p>
+    Este conjunto de clases persistentes en el modelo de diseño proporcionan una vista del modelo de diseño que, si bien es
+    diferente del modelo de diseño lógico tradicional, cumple muchas de las mismas necesidades.&nbsp;Las clases
+    persistentes que se utilizan en la función de modelo de diseño del mismo modo que las entidades tradicionales en el
+    modelo de diseño lógico. Estas clases de diseño reflejan de forma precisa los datos que deben persistir, incluyendo
+    todas las columnas de datos (atributos) que deben persistir y las relaciones clave. Esto convierte a las clases de
+    diseño en excelentes puntos de partida para el diseño de bases de datos físicas.
+</p>
+<p>
+    Crear un modelo lógico de datos separado es una opción. Sin embargo, en el mejor de los casos, acabara capturando la
+    misma información de forma diferente. En el peor de los casos, no lo hará, y al final no cumplirá las necesidades
+    empresariales de la aplicación. Concretamente, si la base de datos está destinada a proporcionar servicio a una única
+    aplicación, la vista de la aplicación de los datos será el mejor punto de partida. El diseñador de base de datos crea
+    tablas a partir de este conjunto de clases de diseño persistentes para formar un modelo físico de datos inicial.
+</p>
+<p>
+    Igualmente, se pueden producir situaciones que requerirán que el diseñador de base de datos cree un diseño idealizado
+    de la base de datos que es independiente del diseño de la aplicación.&nbsp;En este caso, el diseño lógico de la base de
+    datos está representado en un modelo lógico de datos separado que forma parte del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Producto
+    de trabajo: Modelo de datos</a> global.&nbsp;Este modelo lógico de datos ilustra las entidades lógicas clave y sus
+    relaciones que son necesarias para satisfacer los requisitos del sistema para datos persistentes que sean coherentes
+    con la arquitectura global de la aplicación.&nbsp;El modelo lógico de datos se puede construir mediante los elementos
+    de modelado del perfil UML para el diseño de base de datos descrito en las secciones siguientes de esta
+    directriz.&nbsp;Para proyectos que utilicen este enfoque, la estrecha colaboración entre los diseñadores de aplicación
+    y los diseñadores de base de datos es absolutamente esencial para el desarrollo correcto del diseño de la base de
+    datos.
+</p>
+<p>
+    El modelo lógico de datos se puede perfeccionar aplicando las reglas estándar de normalización como se definen en <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/normalization_47199FE9.html" guid="3.183357382287462E-306">Concepto: Normalización</a> antes de desarrollar los elementos del modelo lógico de datos
+    para crear el diseño físico de la base de datos.
+</p>
+<p>
+    La figura siguiente ilustra el enfoque principal del uso de las clases de modelo de diseño como el origen del diseño de
+    base de datos lógica para crear un modelo físico de datos. También ilustra el enfoque alternativo de la utilización de
+    un modelo lógico de datos separado.&nbsp;&nbsp;
+</p>
+<p align="center">
+    <img height="500" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd25.gif" width="706"     border="0" />
+</p>
+<p align="center">
+    Enfoques del modelado de datos lógicos
+</p>
+<h4>
+    Modelado de datos <a id="Physical Data Modeling" name="Physical Data Modeling">físicos</a>
+</h4>
+<p>
+    El modelado de datos físicos es el estadio final del desarrollo del diseño de la base de datos.&nbsp; El modelo físico
+    de datos consta de los diseños de tabla de base de datos detallada y sus relaciones creadas inicialmente desde las
+    clases de diseño persistente y sus relaciones.&nbsp; La mecánica de realizar la transformación de las clases de modelo
+    de diseño en tablas se discute en <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/forward-engineering_relational_databases_53C0441E.html" guid="5.250868507423771E-305">Directriz: Aplicación de ingeniería directa en bases de datos relacionales</a>.&nbsp;El
+    modelo físico de datos forma parte del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">modelo de
+    datos</a>; no es un artefacto separado.
+</p>
+<p>
+    Las tablas del modelo físico de datos tiene columnas bien definidas, así como claves e índices según sea necesario. Las
+    tablas también pueden tener desencadenantes definidos como necesarios para proporcionar soporte a la funcionalidad de
+    la base de datos y la integridad referencial del sistema. Además de las tablas, se han creado, documentado y asociado
+    procedimientos almacenados con la base de datos donde residirá el procedimiento almacenado.
+</p>
+<p>
+    En el diagrama siguiente se muestra un ejemplo de algunos de los elementos del modelo físico de datos.&nbsp; Este
+    modelo de ejemplo es una parte del modelo físico de datos de una aplicación de subasta en línea de ficción. Muestra
+    cuatro tablas (Subasta, Ofertas, Elemento y Categoría de subasta), junto con un procedimiento almacenado (sp_Auction) y
+    la clase de contenedor (AuctionManagement).&nbsp; La figura también muestra las columnas de cada tabla, las
+    restricciones de clave principal y clave externa, y los índices definidos para las tablas.&nbsp;
+</p>
+<p align="center">
+    <img height="656" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd18.gif" width="748"     border="0" />
+</p>
+<p align="center">
+    Ejemplo (físico) de elementos del modelo de datos
+</p>
+<p>
+    El modelo físico de datos también contiene correlaciones de las tablas a unidades de almacenamiento (espacios de tabla)
+    en la base de datos.&nbsp;La figura siguiente muestra un ejemplo de esta correlación.&nbsp; en este ejemplo, las tablas
+    Subasta y Estado de pedido se correlacionan con un espacio de tablas denominado PRIMARY. El diagrama también ilustra el
+    modelado de la realización de las tablas a la base de datos (denominado PearlCircle en este ejemplo).
+</p>
+<p align="center">
+    <img height="668" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd19.gif" width="695"     border="0" />
+</p>
+<p align="center">
+    Ejemplo de elementos del modelo de almacenamiento de datos
+</p>
+<p>
+    En los proyectos en que ya existe una base de datos, el diseñador de base de datos puede revertir la ingeniería de la
+    base de datos existente para rellenar el modelo físico de datos.&nbsp; Consulte el apartado &nbsp; <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/reverse-engineering_relational_databases_902803B8.html" guid="1.338740134620651E-305">Directriz: Revertir la ingeniería de bases de datos relacionales</a> para obtener más
+    información.
+</p>
+<h3>
+    <a id="Data Model Elements" name="Data Model Elements">Elementos de modelo de datos</a>
+</h3>
+<p>
+    En esta sección se describen las directrices generales del modelado para cada elemento principal del modelo de datos
+    basado en el perfil UML para el modelado de bases de datos. Una breve descripción de cada elemento de modelo va seguida
+    de una ilustración de ejemplo del elemento de modelo UML. La sección <a href="#Relationship">Relaciones</a> de esta
+    directriz incluye una descripción del uso de los elementos de modelo.
+</p>
+<h4>
+    <a id="Package" name="Package">Paquete</a>
+</h4>
+<p>
+    Los paquetes UML estándar se utilizan para agrupar y organizar elementos del modelo de datos.&nbsp; Por ejemplo, los
+    paquetes se pueden definir para organizar el modelo de datos en modelos de datos lógicos y físicos separados.&nbsp; Los
+    paquetes también se pueden utilizar para identificar los grupos de tablas lógicamente relacionados en el modelo de
+    datos que constituyen las "áreas temáticas" de datos principales de importancia para el dominio empresarial de la
+    aplicación que se está desarrollando.&nbsp; La figura siguiente muestra un ejemplo de dos paquetes de área temática
+    (Gestión de subastas y Gestión de cuentas de usuario) que se utilizan para organizar vistas y tablas en el modelo de
+    datos.
+</p>
+<p align="center">
+    <img height="254" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd02.gif" width="250"     border="0" />
+</p>
+<p align="center">
+    Ejemplo de paquetes de área temática
+</p>
+<h4>
+    <a id="Table" name="Table">Tabla</a>
+</h4>
+<p>
+    En el perfil UML para el modelado de base de datos, una tabla se modela como una clase con un estereotipo de
+    &lt;&lt;Tabla&gt;&gt;.&nbsp; Las columnas de la tabla se modelan como atributos con el estereotipo de
+    &lt;&lt;columna&gt;&gt;. Una o más columnas se pueden designar como clave principal para proporcionar entradas de fila
+    únicas en la tabla. Las columnas también se pueden designar como claves externas.&nbsp; Las claves principales y las
+    claves externas tienen restricciones asociadas que se modelan como operaciones estereotipadas de &lt;&lt;clave
+    principal&gt;&gt; y &lt;&lt;clave externa&gt;&gt; respectivamente.&nbsp; La figura siguiente ilustra la estructura de
+    un ejemplo de tabla que se utiliza para gestionar información sobre elementos que se venden por subasta en un &nbsp;
+    sistema de subasta en línea de ficción.&nbsp;
+</p>
+<p align="center">
+    <img height="214" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd03.gif" width="294"     border="0" />
+</p>
+<p align="center">
+    Ejemplo de tabla
+</p>
+<p>
+    Las tablas se pueden relacionar con otras tablas a través de los tipos de relaciones siguientes:
+</p>
+<ul>
+    <li>
+        de identificación (agregación de compuestos)
+    </li>
+    <li>
+        de no identificación (asociación)
+    </li>
+</ul>
+<p>
+    La sección <a href="#Relationship">Relaciones</a> de esta directriz proporciona ejemplos de cómo se utilizan estas
+    relaciones. La información sobre estos tipos de relaciones se puede correlacionar con los elementos de modelo de diseño
+    y aparece en <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/reverse-engineering_relational_databases_902803B8.html" guid="1.338740134620651E-305">Directriz: Revertir la ingeniería de bases de datos relacionales</a>.
+</p>
+<h4>
+    <a id="Trigger" name="Trigger">Desencadenante</a>
+</h4>
+<p>
+    Un desencadenante es una función de procedimiento diseñada para ejecutar como resultado de alguna acción de la tabla
+    donde reside el desencadenante. Un desencadenante se define para ejecutar cuando se inserta una fila en la tabla, se
+    actualiza o se suprime. Adicionalmente, el desencadenante se designa para ejecutar antes o después de que se ejecute el
+    mandato de tabla. Los desencadenantes se definen como operaciones en una tabla. Las operaciones se estereotipan como
+    &lt;&lt;Desencadenante&gt;&gt;.&nbsp;
+</p>
+<p align="center">
+    <img height="218" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd13.gif" width="316"     border="0" />
+</p>
+<p align="center">
+    Ejemplo de desencadenante
+</p>
+<h4>
+    <a id="Index" name="Index">Índice</a>
+</h4>
+<p>
+    Los índices se utilizan como mecanismos para habilitar el acceso rápido de la información cuando se utilizan columnas
+    específicas para buscar la tabla.&nbsp; Un índice se modela como una operación en la tabla con un estereotipo de
+    &lt;&lt;índice&gt;&gt;.&nbsp; Los índices pueden estar designados como exclusivos y pueden designarse en clúster o sin
+    clúster. Los índices con clúster se utilizan para forzar el orden de la fila de datos en la tabla, para que se alinee
+    con el orden de los valores de índice. Un ejemplo de una operación de índice (IX_auctioncategory) se muestra en la
+    figura siguiente.
+</p>
+<p align="center">
+    <img height="150" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd14.gif" width="346"     border="0" />
+</p>
+<p align="center">
+    Ejemplo de índice
+</p>
+<h4>
+    <a id="View" name="View">Vista</a>
+</h4>
+<p>
+    Una vista es una tabla virtual sin almacenamiento persistente independiente. Una vista tiene las características y los
+    comportamientos de una tabla y accede a los datos en las columnas de las tablas con que la vista ha definido
+    relaciones.&nbsp;Las vistas se utilizan para proporcionar un acceso más eficaz a la información en más o menos tablas y
+    también se puede utilizar para forzar reglas empresariales para restringir el acceso a los datos de las tablas. En el
+    ejemplo siguiente, AuctionView se ha definido como una "vista" de información en la tabla de Subastas en la sección de
+    modelados de datos físicos de esta directriz.
+</p>
+<p>
+    Las vistas se modelan como clases con el estereotipo de &lt;&lt;vista&gt;&gt;.&nbsp;Los atributos de la clase de vista
+    son las columnas de las tablas a las que se hace referencia en la vista.&nbsp;Los tipos de datos de las columnas de la
+    vista se heredan de las tablas con una dependencia definida con la vista
+</p>
+<p align="center">
+    &nbsp;<img height="244" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd21.gif" width="451"     border="0" />
+</p>
+<p align="center">
+    Ejemplo de vista
+</p>
+<h4>
+    <a id="Domain" name="Domain">Dominio</a>
+</h4>
+<p>
+    Un dominio es un mecanismo que se utiliza para crear tipos de datos definidos por el usuario que se pueden aplicar a
+    columnas a través de múltiples tablas.&nbsp;Un dominio está modelado como clase con el estereotipo
+    &lt;&lt;Dominio&gt;&gt;.&nbsp; En el ejemplo siguiente, se ha definido un dominio para el código postal "CP + 4".&nbsp;
+</p>
+<p align="center">
+    <img height="98" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd20.gif" width="225" border="0" />
+</p>
+<p align="center">
+    Ejemplo de dominio
+</p>
+<h4>
+    <a id="Stored Procedure Container" name="Stored Procedure Container">Contenedor de procedimientos almacenados</a>
+</h4>
+<p>
+    Un contenedor de procedimiento almacenado es una agrupación de procedimientos almacenados del modelo de datos. Un
+    contenedor de procedimiento almacenado se crea como una clase UML que se estereotipa como &lt;&lt;Contenedor
+    SP&gt;&gt;. Múltiples contenedores de procedimientos almacenados se pueden crear en un diseño de base de datos. Cada
+    contenedor de procedimiento almacenado debe tener como mínimo un procedimiento almacenado.
+</p>
+<h5>
+    <a id="Stored Procedure" name="Stored Procedure">Procedimiento almacenado</a>
+</h5>
+<p>
+    Un procedimiento almacenado es un procedimiento independiente que habitualmente reside en el servidor de base de datos.
+    Los procedimientos almacenados se documentan como operaciones que se agrupan en clases estereotipadas como
+    &lt;&lt;Contenedor SP&gt;&gt;. Las operaciones se estereotipan como &lt;&lt;SP&gt;&gt;.&nbsp; En el ejemplo siguiente
+    se muestra una única operación de procedimiento almacenado (SP_Auction) en una clase de contenedor denominada
+    AuctionManagement.&nbsp; Cuando se diseñan procedimientos almacenados, el diseñador de base de datos debe estar
+    informado de cualquier convenio de denominación utilizado por el RDBMS específico.&nbsp;
+</p>
+<p align="center">
+    <img height="88" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd12.gif" width="165" border="0" />
+</p>
+<p align="center">
+    Ejemplo de contenedor de procedimientos almacenados y procedimiento almacenado
+</p>
+<h4>
+    <a id="Tablespace" name="Tablespace">Espacio de tablas</a>
+</h4>
+<p>
+    Un espacio de tablas representa la cantidad de espacio de almacenamiento que se debe asignar a elementos como tablas,
+    procedimientos almacenados e índices. Los espacios de tabla están enlazados con una base de datos específica a través
+    de una relación de dependencia. El número de espacios de tabla y cómo se correlacionarán con las tablas depende de la
+    complejidad del modelo de datos.&nbsp;Las tablas a las que se accederá con frecuencia deberán partirse en múltiples
+    espacios de tabla. Las tablas que no contienen grandes cantidades de datos a los que se accede con frecuencia se
+    agruparán en un único espacio de tablas.
+</p>
+<p>
+    Un contenedor de espacio de tablas se define para cada espacio de tablas. El contenedor de espacio de tablas es el
+    dispositivo de almacenamiento físico para el espacio de tablas. Aunque pueden existir múltiples contenedores de espacio
+    de tablas para un único espacio de tablas, se recomienda que un contenedor de espacio de tablas se asigne sólo a un
+    único espacio de tablas. Los contenedores de espacio de tablas se definen como atributos para el espacio de tablas, no
+    se modelan explícitamente.
+</p>
+<p align="center">
+    <img height="69" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd15.gif" width="132" border="0" />
+</p>
+<p align="center">
+    Ejemplo de espacio de tablas
+</p>
+<h4>
+    <a id="Schema" name="Schema">Esquema</a> <a href="#Top"><img height="20" alt="Ir a la parte superior de la página"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    Un esquema documenta la organización o la estructura de la base de datos. Un esquema se representa como un paquete que
+    se estereotipa &lt;&lt;Esquema&gt;&gt;. Cuando un esquema se define como paquete, las tablas que forman el paquete
+    deben estar contenidas en el esquema. Una dependencia entre la base de datos y el esquema se crea para documentar la
+    relación entre la base de datos y el esquema.&nbsp;
+</p>
+<p align="center">
+    <img height="86" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd17.gif" width="105" border="0" />
+</p>
+<p align="center">
+    Ejemplo de esquema
+</p>
+<h4>
+    <a id="Database" name="Database">Base de datos</a> <a href="#Top"><img height="20"     alt="Ir a la parte superior de la página" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    Una base de datos es una recopilación de datos que se organiza de modo que se pueda acceder y gestionar la información
+    que contiene.&nbsp; La gestión y el acceso a la información de la base de datos se efectúa mediante el uso de un
+    sistema de gestión de bases de datos (DBMS).&nbsp; Una base de datos se representa en el modelo de datos como un
+    componente que se estereotipa &lt;&lt;Base de datos&gt;&gt;.
+</p>
+<p align="center">
+    <img height="69" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd16.gif" width="125" border="0" />
+</p>
+<p align="center">
+    Ejemplo de base de datos
+</p>
+<h4>
+    <a id="Relationship" name="Relationship">Relación</a> <a href="#Top"><img height="20"     alt="Ir a la parte superior de la página" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    El perfil UML para el modelado de la base de datos define las relaciones válidas entre los elementos principales del
+    modelo de datos. En las secciones siguientes se proporcionan ejemplos de los diferentes tipos de relaciones.&nbsp;
+</p>
+<h5>
+    De no identificación
+</h5>
+<p>
+    Una relación de no identificación es una relación entre dos tablas que existen independientemente dentro de la base de
+    datos. Una relación de no identificación se documenta mediante una asociación entre tablas. La asociación se
+    estereotipa como &lt;&lt;De no identificación&gt;&gt;.&nbsp; En el ejemplo siguiente se ilustra una relación de no
+    identificación entre la tabla de elementos y la tabla Categoría de subasta.
+</p>
+<p align="center">
+    <img height="398" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd05.gif" width="735"     border="0" />
+</p>
+<p align="center">
+    Ejemplo de relación de no identificación
+</p>
+<h5>
+    De identificación
+</h5>
+<p>
+    Una relación de identificación es una relación entre dos tablas en que la tabla hijo debe coexistir con la tabla padre.
+    Una relación de identificación se documenta utilizando una agregación de compuestos entre dos tablas. La agregación de
+    compuestos se estereotipa como &lt;&lt;De identificación&gt;&gt;. En la figura siguiente se muestra un ejemplo de
+    relación de identificación. En este ejemplo se muestra que las instancias de tabla hijo (Tarjeta de crédito) deben
+    tener una entrada asociada con la tabla padre (Cuenta de usuario).
+</p>
+<p align="center">
+    <img height="443" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd06.gif" width="747"     border="0" />
+</p>
+<p align="center">
+    Ejemplo de relación de identificación
+</p>
+<p>
+    Para las asociaciones y las agregaciones compuestas, la multiplicidad debe definirse para documentar el número de filas
+    de la relación. En el ejemplo anterior, para cada fila de la tabla Cuenta de usuario, pueden haber 0 o Tarjetas de
+    crédito en la tabla Tarjeta de crédito. Para cada fila de la Tarjeta de crédito, hay exactamente una fila en la tabla
+    Cuenta de usuario. La multiplicidad se conoce también como cardinalidad.
+</p>
+<h5>
+    Vistas de la base de datos
+</h5>
+<p>
+    Cuando defina la vista de base de datos de una relación con una tabla, se utiliza una relación de dependencia, extraída
+    de la vista de la tabla. El estereotipo de la dependencia es &lt;&lt;Derivar&gt;&gt;. Habitualmente, la dependencia de
+    vista se denomina, y el nombre de la dependencia es el mismo que el nombre de la tabla que se define en la relación de
+    dependencia con la vista de base de datos.
+</p>
+<p align="center">
+    <img height="513" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd22.gif" width="763"     border="0" />
+</p>
+<p align="center">
+    Ejemplo de relación de dependencia de vista y de tabla
+</p>
+<h5>
+    Espacio de tablas
+</h5>
+<p>
+    Una relación de dependencia se utiliza para enlazar un espacio de tablas con una base de datos concreta. Tal como se
+    muestra en la figura siguiente, la relación se extrae para mostrar que la base de datos tiene la dependencia en el
+    espacio de tablas.&nbsp;Múltiples espacios de tablas se pueden relacionar con una única base de datos en el modelo.
+</p>
+<p align="center">
+    <img height="88" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd08.gif" width="298" border="0" />
+</p>
+<p align="center">
+    Ejemplo de relación de dependencia de espacio de tablas y base de datos
+</p>
+<p>
+    Una relación de dependencia se utiliza para documentar las relaciones entre los espacios de tablas y las tablas de un
+    espacio de tablas.&nbsp; Una o varias tablas se pueden relacionar con un único espacio de tablas, y una única tabla se
+    puede relacionar con espacios de tablas múltiples. En el ejemplo siguiente se muestra la tabla Subasta que se asigna a
+    un único espacio de tablas denominado PRIMARY.
+</p>
+<p align="center">
+    <img height="345" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd09.gif" width="560"     border="0" />
+</p>
+<p align="center">
+    Ejemplo de relación de dependencia de tabla y de espacio de tablas
+</p>
+<h5>
+    <u>Realizaciones</u>
+</h5>
+<p>
+    Las realizaciones se utilizan para establecer las relaciones entre una base de datos y las tablas que existen dentro de
+    esta.&nbsp;Una tabla se puede realizar con múltiples bases de datos en el modelo de datos.
+</p>
+<p align="center">
+    <img height="348" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd10.gif" width="561"     border="0" />
+</p>
+<p align="center">
+    Ejemplo de relación de realización de tabla y de base de datos
+</p>
+<h5>
+    Procedimientos almacenados
+</h5>
+<p>
+    Una relación de dependencia se utiliza para documentar la relación entre el contenedor de procedimientos almacenados y
+    las tablas sobre las que actúan los procedimientos almacenados del contenedor de procedimientos almacenados. El ejemplo
+    siguiente describe este tipo de relación mostrando que el procedimiento almacenado SP_Auction se utilizará para acceder
+    a la información de la tabla Subasta.
+</p>
+<p align="center">
+    <img height="344" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd11.gif" width="633"     border="0" />
+</p>
+<p align="center">
+    Ejemplo de contenedor de procedimientos almacenados y relación de dependencia de tabla
+</p>
+<h3>
+    <a id="Evolution of the Data Model" name="Evolution of the Data Model">Evolución del modelo de datos</a>
+</h3>
+<h4>
+    <a id="Inception Phase" name="Inception Phase">Fase inicial</a>
+</h4>
+<p>
+    En la <a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/inception_D506BCB4.html" guid="_vyZOwCVuEdqSZ9OimJ-AzA">fase inicial</a>, las tareas de modelado de datos iniciales se pueden efectuar junto con
+    el desarrollo de cualquiera de los prototipos de prueba de concepto como parte de las tareas de "Realizar una actividad
+    de síntesis arquitectónica".&nbsp;En los proyectos en que ya existe una base de datos, el diseñador de base de datos
+    puede revertir la ingeniería de la base de datos existente para desarrollar un modelo físico de datos inicial basado en
+    la estructura de la base de datos existente.&nbsp; Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/reverse-engineering_relational_databases_902803B8.html" guid="1.338740134620651E-305">Directriz: Revertir la ingeniería de bases de datos relacionales</a> para obtener más
+    información. Los elementos del modelo físico de datos se pueden transformar en elementos de modelo de diseño según sea
+    necesario para proporcionar soporte a las tareas de creación de prototipos de prueba de concepto.
+</p>
+<h4>
+    <a id="Elaboration Phase" name="Elaboration Phase">Fase de elaboración</a>
+</h4>
+<p>
+    El objetivo de la <a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/elaboration_6A203A50.html" guid="_-kFhcCVuEdqSZ9OimJ-AzA">fase de elaboración</a> es eliminar el riesgo técnico y producir una arquitectura
+    estable (con línea de base) para el sistema. En sistemas de gran escala, el bajo rendimiento que resulta de un modelo
+    de datos mal diseñado es una preocupación arquitectónica importante. Como resultado, el modelado de datos y el
+    desarrollo de un prototipo arquitectónico que permita que el rendimiento de la base de datos se evalúe son esenciales
+    para alcanzar una arquitectura estable.&nbsp;Como los casos de uso arquitectónicamente significativos se detallan y
+    analizan en cada iteración, los elementos del modelo de datos se definen basándose en el desarrollo de los diseños de
+    clase persistente a partir de los casos de uso . Cuando los diseños de clase se estabilizan, el diseñador de base de
+    datos puede transformar periódicamente los diseños de clase en tablas en el modelo de datos y definir los elementos de
+    modelo de datos de almacenamiento apropiados.
+</p>
+<p>
+    Al final de la fase de elaboración, las principales estructuras de base de datos (tablas, índices y columnas de clave
+    principal y de clave externa) deben colocarse en su sitio para que proporcionen soporte a la ejecución de los casos de
+    ejemplo arquitectónicamente significativos definidos para la aplicación. Además, los volúmenes de datos representativos
+    deben cargarse en la base de datos para dar soporte a la prueba de rendimiento de la arquitectura. Basándose en los
+    resultados de la prueba de rendimiento, el modelo de datos puede necesitar ajustes con técnicas de optimización, que
+    incluyen pero no se limitan a, desnormalización, optimización de atributos de almacenamiento físico o distribución e
+    índices.
+</p>
+<h4>
+    <a id="Construction Phase" name="Construction Phase">Fase de construcción</a>
+</h4>
+<p>
+    La principal reestructuración del modelo de datos no debe producirse durante la <a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/construction_102AF1EA.html" guid="_SkuIwCVwEdqSZ9OimJ-AzA">fase de
+    construcción</a>. Las tablas y los elementos de almacenamiento de datos adicionales se pueden definir durante las
+    iteraciones de la fase de construcción basándose en el diseño detallado del conjunto de casos de uso y las solicitudes
+    de cambio asignadas a la iteración. Un foco principal del diseño de la base de datos durante la fase de construcción es
+    supervisar continuamente el rendimiento de la base de datos y optimizar el diseño de la base de datos según sea
+    necesario mediante la desnormalización, la definición de índices, la creación de vistas de base de datos y otras
+    técnicas de optimización.
+</p>
+<p>
+    El modelo físico de datos es el artefacto de diseño que mantiene el ingeniero de base de datos durante la fase de
+    construcción. Se puede mantener realizando actualizaciones directas en el modelo o como resultado de una herramienta
+    que lee las actualizaciones que se han realizado directamente en la base de datos.
+</p>
+<h4>
+    <a id="Transition Phase" name="Transition Phase">Fase de transición</a>
+</h4>
+<p>
+    El modelo de datos como el modelo de diseño, se mantiene durante la <a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/transition_1018F224.html" guid="_cn2akCVwEdqSZ9OimJ-AzA">fase de transición</a>
+    en respuesta a solicitudes de cambio aprobadas. El diseñador de base de datos debe mantener el modelo de datos
+    sincronizado con la base de datos a medida que la aplicación supera la prueba final de aceptación y se despliega en
+    producción.
+</p>
+<h3>
+    <a id="Roundtrip Engineering Considerations" name="Roundtrip Engineering Considerations">Consideraciones de la
+    ingeniería directa e inversa</a>
+</h3>
+<p>
+    Si un equipo de desarrollo utiliza herramientas de modelado visual modernas que tengan la capacidad de convertir clases
+    en tablas (y viceversa) y/o tiene la capacidad de revertir y aplicar la ingeniería directa a las bases de datos, el
+    equipo necesita establecer las directrices para gestionar la transformación y los procesos de ingeniería.&nbsp;Las
+    directrices son necesarias, principalmente, para grandes proyectos en que un equipo trabaja en paralelo en el diseño de
+    la base de datos y la aplicación.&nbsp;El equipo de desarrollo debe definir los puntos del desarrollo de la aplicación
+    (ciclo de build/release) en el cual será apropiado efectuar las transformaciones de clase a tabla y para aplicar la
+    ingeniería directa en la base de datos.&nbsp;Cuando se ha creado la base de datos inicial, el equipo de desarrollo debe
+    definir las directrices para que el equipo gestione la sincronización del modelo de datos y la base de datos a medida
+    que el diseño y el código del sistema evolucionan a lo largo del proyecto.
+</p><br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.appliedis.com" target="_blank"><img alt="Icono de Applied Information Sciences"                 src="./../../../core.base_rup/guidances/supportingmaterials/resources/appliedis.gif" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Contenido desarrollado o parcialmente desarrollado por <a href="http://www.appliedis.com" target="_blank">Applied Information Sciences</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

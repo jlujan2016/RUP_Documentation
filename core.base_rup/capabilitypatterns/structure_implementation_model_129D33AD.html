@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de tareas: Estructurar el modelo de implementaci&oacute;n</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="structure_implementation_model" name="uma.name">
+<meta content="Estructurar el modelo de implementaci&oacute;n" name="uma.presentationName">
+<meta content="_aaGdwUocEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="Arquitecto de software">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={002674F9-6511-4D15-8623-B761D8C48986}&path={002674F9-6511-4D15-8623-B761D8C48986},{F2160C54-F666-4736-9982-FC7F58F15FAD},_aaGdwUocEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_UNdM0CFtEdqrX8YVzvtlIg", "_aaGdwUocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_UNdM0CFtEdqrX8YVzvtlIg", "_aaGdwUocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_UNdM0CFtEdqrX8YVzvtlIg", "_aaGdwUocEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_aaGdwUocEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Estructurar el modelo de implementaci&oacute;n</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta tarea se describe cómo establecer la estructura de los elementos de implementación basándose en las responsabilidades asignadas de los subsistemas de implementación y su contenido.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Principal:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_architect_8B6C5D41.html" guid="_COWYtRi2Edq_uI8xTPML6g">Arquitecto de software</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Adicional:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">Asistencia:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_84A35167.html" guid="_COWYtxi2Edq_uI8xTPML6g">Modelo de dise&ntilde;o</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_project_specific_guidelines_CE84238E.html" guid="_COWYwBi2Edq_uI8xTPML6g">Directrices espec&iacute;ficas del proyecto</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_supplementary_specification_4FFE3F60.html" guid="_COWYuRi2Edq_uI8xTPML6g">Especificaciones suplementarias</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_deployment_model_45605F50.html" guid="_COWYuBi2Edq_uI8xTPML6g">Modelo de despliegue</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_implementation_model_3E975376.html" guid="_COWYuhi2Edq_uI8xTPML6g">Modelo de implementaci&oacute;n</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_7A057157.html" guid="_COWYthi2Edq_uI8xTPML6g">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_implementation_model_3E975376.html" guid="_COWYuhi2Edq_uI8xTPML6g">Modelo de implementaci&oacute;n</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> Establecer la estructura del modelo de implementaci&oacute;n </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Establish the Implementation Model Structure" name="Establish the Implementation Model Structure"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Establecer la estructura del modelo de implementación. &nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Al cambiar del 'espacio de diseño' al 'espacio de implementación', empiece por duplicar la estructura del modelo de
+    diseño en el modelo de implementación.
+</p>
+<p>
+    Los paquetes de diseño tendrán sus correspondientes subsistemas de implementación, que contendrán uno o varios
+    directorios y archivos (Artefacto: Elemento de implementación) que se necesitan para implementar los elementos de
+    diseño correspondientes. La correlación del modelo de diseño al modelo de implementación puede cambiar, ya que cada
+    subsistema de implementación se asigna a una capa específica en la arquitectura.
+</p>
+<p>
+    Cree un diagrama que represente la estructura del modelo de implementación (consulte Directrices: Diagrama de
+    implementación).
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Ajustar los subsistemas de implementaci&oacute;n </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Adjust Subsystems" name="Adjust Subsystems"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Adaptar la estructura del modelo para que refleje las restricciones del lenguaje de implementación o la
+                organización del equipo.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Decida si se debe modificar la organización de los subsistemas. Para ello, solucione pequeños problemas tácticos
+    relacionados con el entorno de implementación. A continuación, se proporcionan algunos ejemplos de este tipo de
+    problemas tácticos. Tenga en cuenta que si decide cambiar la organización de los subsistemas de implementación, también
+    debe decidir si desea volver atrás y actualizar el modelo de diseño, o si prefiere que el modelo de diseño sea distinto
+    del modelo de implementación.
+</p>
+<ul>
+    <li>
+        <b>Organización del equipo de desarrollo</b>. La estructura del subsistema debe permitir que varios implementadores
+        o equipos de implementadores continúen en paralelo sin demasiado solapamiento ni perturbaciones. Se recomienda que
+        cada subsistema de implementación sea responsabilidad de un único equipo. Esto significa que puede dividir un
+        subsistema en dos (si es grande) y asignar las dos partes a dos implementadores o dos equipos de
+        implementadores,&nbsp; en concreto si los dos implementadores (o equipos) tienen ciclos de compilación/release
+        diferentes).
+    </li>
+    <li>
+        <b>Declaraciones de tipos</b>. Durante la implementación, puede darse cuenta de que un subsistema necesita importar
+        productos de trabajo de otro subsistema, porque un tipo esté declarado en ese subsistema. Normalmente, esto ocurre
+        cuando utiliza lenguajes de programación escritos como, por ejemplo, C++, Java y Ada. En este caso, y en general,
+        se recomienda extraer las declaraciones de tipos en un subsistema aparte.
+    </li>
+</ul>
+<p class="exampleheading">
+    Ejemplo
+</p>
+<p class="example">
+    Supongamos que extrae algunas declaraciones de tipo del <b>Subsistema D</b> en un nuevo subsistema Tipos, para que el
+    <b>Subsistema A</b> sea independiente de los cambios en los productos de trabajo públicos (visibles) en el
+    <b>Subsistema D</b>.
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/ac_stri1.gif" alt="Ilustración de la extracción del subsistema de declaraciones de tipos"     width="567" height="207" />
+</p>
+<p class="picturetext">
+    Las declaraciones de tipos se extraen del Subsistema D
+</p>
+<p>
+    .
+</p>
+<ul>
+    <li>
+        <b>Código heredado y sistemas de componentes existentes.</b> Puede que tenga que incorporar código heredado, una
+        biblioteca de componentes reutilizables o productos asequibles. Si no tienen un diseño modelado, se deben añadir
+        subsistemas de implementación.
+    </li>
+    <li>
+        <b>Ajustar dependencias.</b> Supongamos que un subsistema A y un subsistema B tienen dependencias de importación
+        entre ellos. No obstante, desea que B sea menos dependiente de los cambios en el subsistema A. Extraiga los
+        productos de trabajo de A que importa B y coloque un nuevo subsistema de implementación A1 en una capa inferior.
+    </li>
+</ul>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/ac_stri2.gif" alt="Diagrama de Transferencia de agrupación de artefactos de ejemplo" width="403"     height="106" />
+</p>
+<p class="picturetext">
+    Los productos de trabajo se extraen del subsistema A y se colocan en un nuevo subsistema A1.
+</p>
+<p>
+    Ahora que los subsistemas de implementación ya no tienen una correlación unívoca con paquetes/subsistemas en el modelo
+    de diseño, puede realizar el cambio correspondiente en el modelo de diseño (si ha decidido mantener el modelo de diseño
+    estrechamente alineado con el modelo de implementación) o realizar un seguimiento de la correlación entre los modelos
+    de implementación y diseño (por ejemplo, mediante dependencias de rastreabilidad o realización). Si se debe realizar
+    este tipo de correlación y cómo hacerlo es una decisión de proceso que se debe especificar en el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_project_specific_guidelines_8DC8DA32.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">Producto de trabajo: Directrices específicas del proyecto</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Definir importaciones para cada subsistema de implementaci&oacute;n </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Define Imports for Each Subsystem" name="Define Imports for Each Subsystem"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Definir dependencias entre subsistemas. &nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Para cada subsistema, defina qué otros subsistemas importa. Esto se puede hacer para conjuntos completos de
+    subsistemas, lo que permite que todos los subsistemas de una capa importen todos los subsistemas de una capa inferior.
+    Generalmente, las dependencias del modelo de implementación duplicarán aquellas del modelo de diseño, excepto donde se
+    haya ajustado la estructura del modelo de implementación (consulte <a href="#Adjust Subsystems">Ajustar subsistemas
+    de implementación</a>).
+</p>
+<p>
+    Presente la estructura en capas de los subsistemas en diagramas de componentes.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Decidir c&oacute;mo tratar los programas ejecutables (y otros objetos derivados) </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Decide how to treat executable programs (and other derived objects)" name="Decide how to treat executable programs (and other derived objects)"></a>
+<p>
+    Los ejecutables (y otros objetos derivados) son el resultado de aplicar un proceso de compilación a un subsistema (o
+    varios subsistemas) de implementación o una parte del mismo, por lo que lógicamente pertenecen al subsistema de
+    implementación. No obstante, el arquitecto de software, en colaboración con el gestor de configuración, deberá decidir
+    la estructura de elementos de configuración que se va a aplicar al modelo de implementación.&nbsp;
+</p>
+<p>
+    Para facilitar la selección y la referencia, en concreto para el despliegue, la recomendación por omisión es definir
+    elementos de configuración aparte que contengan los conjuntos de programas ejecutables que se pueden desplegar (qué
+    programas ejecutables se despliegan en qué nodos se describe en el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_deployment_model_57DF1DF5.html" guid="{5981B6BE-2FD1-4984-AA94-2F7428439BA6}">Modelo
+    de despliegue</a>). Por lo tanto, en el caso más simple, para cada subsistema de implementación habrá un elemento de
+    configuración para los programas ejecutables desplegables y un elemento de configuración que contenga el origen, etc.,
+    que se utiliza para producirlos. &nbsp;El subsistema de implementación se puede considerar que está representado por un
+    elemento de configuración compuesto que contiene estos elementos de configuración (y quizás otros como, por ejemplo,
+    activos de prueba).
+</p>
+<p>
+    Desde el punto de vista del modelado, una colección de programas ejecutables producidos por un proceso de compilación
+    se puede representar como un <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_build_BA336272.html" guid="{53728CD9-FA47-4B58-A443-E9F9DC196916}">Producto de trabajo: Compilación</a> (que es un paquete) contenido en el
+    subsistema de implementación asociado (que también es un paquete).&nbsp;&nbsp;
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Decidir c&oacute;mo tratar los activos de prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Decide how to treat test assets" name="Decide how to treat test assets"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Añadir productos de trabajo de prueba al modelo de implementación.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    En general, los productos de trabajo de prueba y los subsistemas de prueba no se tratan de forma muy diferente de otro
+    software desarrollado en Rational Unified Process. No obstante, los productos de trabajo y los subsistemas de prueba
+    normalmente no forman parte del sistema desplegado, y a menudo no se pueden entregar al cliente. Por lo tanto, la
+    recomendación por omisión es alinear los activos de prueba con el destino de prueba (p.ej., elemento de implementación
+    de la prueba de unidad, sistema de implementación de la prueba de integración, sistema de prueba de sistema), pero
+    mantener los activos de prueba en directorios de prueba aparte, por ejemplo, si el depósito del proyecto está
+    organizado como un conjunto o jerarquía de directorios. Los distintos subsistemas de prueba (indicados para pruebas por
+    encima del nivel de prueba de unidad) se deben tratar de la misma forma que otros subsistemas de implementación: como
+    elementos de configuración diferentes.
+</p>
+<p>
+    Para el modelado, una colección de productos de trabajo de prueba se puede representar como un <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_implementation_subsystem_118747E9.html" guid="{0F629848-C19E-49AB-A6C1-C8D6A094898A}">Producto de trabajo: Subsistema de implementación</a> (un paquete). Para
+    la prueba de unidad, este tipo de subsistema de prueba estará contenido normalmente en el subsistema de implementación
+    asociado (probado). El arquitecto de software, en colaboración con el gestor de configuración, debe decidir si los
+    productos de trabajo de prueba de este nivel se deben configurar conjuntamente con los elementos de implementación que
+    prueban, o como elementos de configuración aparte. Para la prueba de sistema e integración, los subsistemas de prueba
+    pueden ser iguales de los subsistemas de implementación que se están probando.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Actualizar la vista de implementaci&oacute;n </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="vista de implementación" text="actualizar" name="XE_implementation_view__updating" id="XE_implementation_view__updating" class="index"></a><a id="Update the Implementation View" name="Update the Implementation View"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Actualizar la vista de implementación del documento de arquitectura de software.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    La vista de implementación se describe en el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">Documento de arquitectura de software</a>. Este apartado contiene
+    diagramas de componentes que muestran las capas y la asignación de subsistemas de implementación a las capas, así como
+    las dependencias de importación entre los subsistemas.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Evaluar el modelo de implementaci&oacute;n </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Evaluate the implementation model" name="Evaluate the implementation model"></a>
+<p>
+    Consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/checklists/implementation_model_DD65F54E.html" guid="2.400665964241535E-305">Lista de comprobación: Modelo de implementación</a>.
+</p>&nbsp; <br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Varias apariciones" abbr="Varias apariciones">Varias apariciones</th><td align="left" class="sectionTableCell" headers="property_Varias apariciones"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Condicionado por sucesos" abbr="Condicionado por sucesos">Condicionado por sucesos</th><td align="left" class="sectionTableCell" headers="property_Condicionado por sucesos"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Continuo" abbr="Continuo">Continuo</th><td align="left" class="sectionTableCell" headers="property_Continuo"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Se puede repetir" abbr="Se puede repetir">Se puede repetir</th><td align="left" class="sectionTableCell" headers="property_Se puede repetir"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../tech.j2ee/guidances/guidelines/structuring_the_implementation_model_for_j2ee_applications_3CE2DECA.html" guid="8.351669390824964E-306">Estructuración de un modelo de implementación para aplicaciones J2EE</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/structure_impl_model_D03711A8.html" guid="{AE16EC14-5366-4CFD-A207-14F352D1B3E3}">Estructuración del modelo de implementación utilizando Rational Rose</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/setup_implementation_model_40C73358.html" guid="{FEEAA9AD-2CEE-41C6-BD6C-BBF14CA205A5}">Establecimiento del modelo de implementación utilizando Rational ClearCase</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/setting_up_impl_model_with_ucm_C9DD9D5A.html" guid="{10964F4E-39B2-4D34-9A75-3B6360B47C2B}">Establecimiento del modelo de implementación con UCM utilizando Rational ClearCase</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/structuring_the_implementation_model_63DD71E7.html" guid="{ED12F411-0BE2-4A9D-AF41-07329966116F}">Estructuración del modelo de implementación utilizando Rational XDE Developer</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/setting_up_for_project_637A2D05.html" guid="{F4DEA91A-7EBD-4853-8517-ACB4ED6FD5AD}">Establecimiento de Rational Rose para un proyecto</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/accessing_clearcase_3570C723.html" guid="{B67E317F-3C7C-4377-9F44-E9B38321C3F1}">Acceso a Rational ClearCase desde Rational Rose</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/toolmentors/setting_up_for_a_project_using_rsa_ext_AD453A64.html" guid="_s7l1AK4LEdqFg48R_ivTjA">Establecimiento de un proyecto mediante Rational Software Architect</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/toolmentors/structuring_the_implementation_model_using_rsa_ext_927CA253.html" guid="_F94NwK4MEdqFg48R_ivTjA">Estructuración del modelo de implementación mediante Rational Software Architect</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/toolmentors/setting_up_for_a_project_using_rsd_A0F94E3F.html" guid="_wIsqMK4LEdqFg48R_ivTjA">Establecimiento de un proyecto mediante Rational Systems Developer</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/toolmentors/structuring_the_implementation_model_using_rsd_42C814E4.html" guid="_JLv38K4MEdqFg48R_ivTjA">Estructuración del modelo de implementación mediante Rational Systems Developer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

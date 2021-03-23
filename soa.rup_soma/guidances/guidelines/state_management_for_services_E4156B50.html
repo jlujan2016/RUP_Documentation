@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Gesti&oacute;n de estado para servicios</title>
+<meta content="Guideline" name="uma.type">
+<meta content="state_management_for_services" name="uma.name">
+<meta content="Gesti&oacute;n de estado para servicios" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "4.2228409903513537E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.2228409903513537E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_d5dewE7OEduvcvbnLvkXhA", "4.2228409903513537E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.2228409903513537E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Gesti&oacute;n de estado para servicios</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se exploran los problemas que rodean al uso de servicios con estado y sin estado en relación con su efecto en el rendimiento y la solidez, y también cuando la interacción requiere un enfoque transaccional. Se considera que la noción de gestión de estado en un entorno de arquitectura orientada a servicios incluye tres categorías principales: estado de transacción, estado de seguridad y estado funcional.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../soa.rup_soma/workproducts/soa_svce_model_svce_spec_37E89A91.html" guid="{20F06B5E-95D5-422C-AB68-7C213D28533A}">Especificación de servicio</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_state_management_for_services__guidelines_for" name="XE_state_management_for_services__guidelines_for" class="index" key="state management for services" text="guidelines for"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">Introducción</a>
+</h3>
+<p>
+    La noción de componentes con estado y sin estado es especialmente importante en el desarrollo de aplicaciones y
+    sistemas distribuidos, aunque sólo recientemente ha tendido a formar parte del vocabulario común. Básicamente, la
+    noción es que si dos componentes o servicios se comunican y hay algún estado gestionado por el componente de servidor
+    durante la conversación con el cliente, es posible que el componente de servidor se cuelgue (o se produzca una anomalía
+    en la red), lo que significaría que el cliente no puede finalizar la conversación y debe volver a empezar. Igualmente,
+    realiza el redireccionamiento de solicitudes de cliente a uno de los componentes a menos que el conjunto de componentes
+    comparta algún almacenamiento común para el estado de la conversación. Se trata de un problema bastante conocido en e
+    desarrollo de aplicaciones web en las que su estado es gestionado minuciosamente para evitarlo siempre que sea posible
+    y lo es por el cliente, por la propia conversación (que pasa el estado en cada mensaje) o en componentes de servidor
+    con estado cuidadosamente diseñados. Por ejemplo, el caso común de interacción web con estado es el carro de la compra.
+    Los usuarios esperan que el carro de la compra continúe aunque abandonen brevemente el sistema pero, ¿cómo se puede
+    llevar esto a cabo con 100.000 usuarios al mismo tiempo?
+</p>
+<p>
+    Esto no quiere decir que los componentes con estado sean inherentemente incorrectos, sólo representan un área posible
+    de rendimiento y anomalía de elasticidad, a menos que se gestionen y desarrollen de forma más cuidadosa con estándares
+    más rigurosos.De hecho, todas las aplicaciones empresariales contienen servicios que por su propia naturaleza gestionan
+    o representan entidades que de forma inherente no tienen estado o contienen servicios a los que debe accederse en
+    determinadas secuencias lógicas. De hecho, la arquitectura J2EE define beans de sesión con estado y sin estado que
+    señalan de forma explícita estos problemas y define determinadas limitaciones en componentes con estado. Esto nos lleva
+    a una clasificación simple de los servicios con estado, las razones por las que no podemos evitarlos en primer lugar.
+    Un servicio puede que tenga que ser con estado por una de las siguientes razones:
+</p>
+<blockquote>
+    <p>
+        <b>El servicio mantiene el estado en nombre del cliente</b>; éste es el caso del ejemplo del carro de la compra. De
+        algún modo, algunos datos deben continuar entre las llamadas entre cliente y servicio, estos datos forman parte de
+        la conversación y, por tanto, sin cuidado, pueden enlazar a un cliente con un determinado recurso de servidor.
+    </p><b>El servicio gestiona un recurso con estado</b>; en este caso el servicio tiende a gestionar un conjunto de
+    recursos o entidades, cada uno de los cuales tiene estado. Por ejemplo, un pedido de cliente tiene estado, un
+    conmutador de red tiene estado, etc. Por tanto, la interfaz de un servicio que gestiona dicho objeto cerrando o
+    aplazando un pedido o reiniciando un conmutador es cambiar el estado de una entidad determinada. 
+    <p>
+        <b>El servicio tiene un protocolo con estado</b>; en este caso, el servicio tiene algunos pedidos lógicos a las
+        operaciones que ofrece. Por ejemplo, tiene operaciones login(), dostuff() y logoff(), de los que podemos deducir
+        medios que no pueden realizar llamadas a la operación dostuff() o logoff() a menos que se llame a la operación
+        login().
+    </p>
+</blockquote>
+<p>
+    Otra forma de estado que se encuentra en muchas arquitecturas de componente pero que no es aplicable en el mundo de los
+    servicios es la noción de estado transaccional. Es posible en un mundo de componentes indicar que un método get() y
+    update() de un componente pueda ser llamado por un cliente dentro del ámbito de una transacción creada y mantenida por
+    el cliente. Se supone que el método update() cambia algún almacenamiento transicional subyacente. Esto casi siempre
+    requiere la intervención de la plataforma de middleware para coordinar las transacciones y garantizar que los métodos
+    que necesitan transacciones sean llamados por un cliente con una transacción abierta. Para los servicios, no se
+    considera oportuno o deseable seguir un modelo en el que las transacciones, en el sentido de confirmación clásica en
+    dos fases, se mantengan abiertas a través de un número de invocaciones de servicio. Ahora, se han desarrollado
+    estándares para transacciones a través de invocaciones de servicio, pero siguen un paradigma (compensación) básicamente
+    distinto y son distintamente soportados por las plataformas de middleware.
+</p>
+<p>
+    La técnica más obvia, indicada con anterioridad, para un desarrollo correcto de los servicios con estado es
+    externalizar el estado del servicio, haciendo así no sólo explícito que el servicio tiene estado sin que este estado se
+    puede identificar como parte de la especificación de servicio. Este asunto se trata en las dos clases de servicio con
+    estado a continuación.
+</p>
+<p>
+    Como la mayoría de los servicios de software serán desarrollados encima de una plataforma de middleware existente como
+    J2EE o Microsoft .NET, existen técnicas de implementación descritas dentro de dichas arquitecturas de plataforma para
+    ayudar en la gestión del estado. Por eso esta directriz se centra en técnicas de diseño de determinadas clases de
+    servicios con estado. También merece la pena observar que en ningún caso se trata de una nueva área de preocupación. En
+    desarrollo de sistemas principales, el desarrollo de transacciones conversacionales y no conversacionales en CICS (IBM
+    Customer Information Control System) con clientes de pantalla verde (realmente el terminal 3270) ha sido conocido y
+    descrito por desarrolladores, diseñadores y arquitectos durante muchos años.
+</p>
+<h3>
+    <a id="Stateful_Conversation" name="Stateful_Conversation">Estado de conversación persistente</a>
+</h3>
+<p>
+    Se trata de un caso en el que el consejo más fácil es evitar la situación en el primer momento. Siempre que sea
+    posible, si un diseño llama a la gestión de estado durante una conversación entre un servicio y sus consumidores, sería
+    mejor intentar decidir si se puede utilizar otro enfoque. En caso contrario, se externaliza este estado pasando todos
+    los datos de estado necesarios entre servicio y cliente, realizando cada mensaje toda la conversación. Este enfoque
+    puede implicar que el tamaño de los mensajes aumente de forma considerable, pero el propio servicio estará ahora
+    totalmente sin estado. Otro enfoque es llevar un identificador de conversación dentro de cada mensaje y persistir todo
+    estado de conversación en un almacén permanente como es el caso de una base de datos. Aunque esto tenga consecuencias
+    importantes en el rendimiento del servidor, se puede contrarrestar todo el rendimiento de red y cliente ahorrado con
+    los mensajes más pequeños.
+</p>
+<p>
+    Uno de los principales objetivos de realizar estos servicios sin estado es poder suministrar un conjunto de servicios
+    idénticos que puedan realizar cualquier solicitud que utilice técnicas de equilibrio de carga para distribuir clientes.
+    Este equilibrio de carga es posible si todo estado está completamente externalizado o permanece en un almacén común.
+</p>
+<h3>
+    <a id="Stateful_Resources" name="Stateful_Resources">Gestión de recursos con estado</a>
+</h3>
+<p>
+    En este caso, observamos la gestión de los propios recursos que tienen estado explícito. De hecho, dicho estado es un
+    aspecto importante del propio recurso. Puede ser que podamos describir el estado del recurso, la solicitud del cliente
+    o el conmutador de red mencionado anteriormente con una máquina de estado, que describa no sólo los estados válidos
+    sino también la manera en la que las operaciones suministradas por los servicios afectan al estado de los recursos
+    subyacentes.
+</p>
+<p>
+    Sea como sea el logro de esta descripción, es importante tener en cuenta que este estado es parte intrínseca del
+    recurso. Sin embargo, puede no expresarse explícitamente en el modelo de información que lo representa. También es
+    importante observar que allí donde gestionemos un conjunto de entidades, debemos poder identificar los recursos
+    individuales sobre los que actuamos tengan o no tengan de nuevo un identificador explícito.
+</p>
+<p>
+    Tenga en cuenta que si un servicio representa el acceso a, o una consulta del estado de una entidad física como un
+    conmutador de red o un elemento de control de proceso, no se podrá contemplar la externalización del estado de la
+    entidad. El estado de una válvula sólo es conocido consultando la válvula. Aunque podamos construir y responder con un
+    mensaje que describa el estado actual de la válvula, ésta no es una situación permanente. El estado de la válvula puede
+    cambiar durante la transmisión o el proceso de este mensaje.
+</p>
+<p>
+    En el área de servicios web, hay un conjunto de estándares emergentes conocidos como Web Services Resource Framework
+    (WSRF) que trata sobre patrones de servicios con estado y enfoques para la codificación del estado, en concreto en el
+    caso de servicios que representan la gestión de recursos con estado. Para obtener más información, consulte el <a href="http://www.ibm.com/developerworks/library/ws-resource/"><i>sitio de IBM WS-ResourceFramework</i></a>.
+</p>
+<h3>
+    <a id="Stateful_Specifications" name="Stateful_Specifications">Especificaciones de servicio con estado</a>
+</h3>
+<p>
+    El ejemplo mencionado anteriormente implica un servicio que tiene alguna secuenciación lógica con las operaciones que
+    suministra. Muchos servicios proporcionarán interfaces de este tipo. En algunos casos, esto está relacionado de nuevo
+    con recursos con estado salvo que en este caso la ordenación de las operaciones se basa en el estado del recurso
+    gestionado. En este caso, la ordenación se basa en la propia conversación. El siguiente ejemplo muestra una
+    especificación de servicio que tiene algún protocolo asociado, primero la especificación estructural y, a continuación,
+    aparece una máquina de estado que describe la especificación de comportamiento.
+</p>
+<p align="center">
+    <img height="121" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_svce_state-01.gif"     width="119" border="0" />
+</p>
+<p>
+    El pedido de compra puede estar en uno de los estados <i>{Abierto, Cancelado, Completado, Cerrado}</i> y cambia el
+    estado en función de las operaciones suministradas en la anterior especificación. También indicamos que en el caso de
+    la autotransacción en el estado Abierto, ejecutamos la operación OrderChanged enviando notificaciones del cambio.
+</p>
+<p align="center">
+    <img height="275" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_svce_state-02.gif"     width="365" border="0" />
+</p>
+<p>
+    En muchos casos en los que los servicios se desarrollan dentro de un único ámbito empresarial y técnico, las
+    especificaciones de comportamiento detalladas pueden no desarrollarse o describirse menos formalmente en texto. Allí
+    donde los servicios se exponen fuera de dicho ámbito, por ejemplo, entre particiones, representan una especificación
+    lógica para interacción entre particiones y debe desarrollarse con mayor detalle. Igualmente, las especificaciones
+    detalladas permiten una reutilización más eficiente por parte de los clientes cuando se espera que los servicios se
+    reutilicen con frecuencia.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

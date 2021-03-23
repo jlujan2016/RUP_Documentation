@@ -1,0 +1,427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Ensamblaje de m&oacute;dulos y aplicaciones J2EE mediante RAD 6.0</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="assemble_j2ee_mod_app" name="uma.name">
+<meta content="Ensamblaje de m&oacute;dulos y aplicaciones J2EE mediante RAD 6.0" name="uma.presentationName">
+<meta content="Tool:rup_rational_application_developer:Rational Application Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Application Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "__hxOUEUCEdqMr9-tA4TBpQ", "{255EDC79-8B64-4C22-94B1-AC38FC04EB37}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "__hxOUEUCEdqMr9-tA4TBpQ", "{255EDC79-8B64-4C22-94B1-AC38FC04EB37}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "__hxOUEUCEdqMr9-tA4TBpQ", "{255EDC79-8B64-4C22-94B1-AC38FC04EB37}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{255EDC79-8B64-4C22-94B1-AC38FC04EB37}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Ensamblaje de m&oacute;dulos y aplicaciones J2EE mediante RAD 6.0</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta guía de la herramienta describe cómo ensamblar módulos y aplicaciones J2EE (ficheros WAR, EJB JAR, JAR de aplicación cliente, RAR y EAR) utilizando el entorno de moldeado RAD. </td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_rational_application_developer_BCA25C88.html" guid="__hxOUEUCEdqMr9-tA4TBpQ">Rational Application Developer</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/integrate_subsystem_E8F878D6.html" guid="{58FF0476-120F-411A-AD8C-16573032BE91}">Integrar los subsistemas</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/integrate_system_9AFF7BFD.html" guid="{3233A207-6271-4492-A8BF-64E1D89D6C5E}">Integrar el sistema</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    El ensamblaje es el proceso que consiste en combinar componentes de una aplicación J2EE en paquetes. como módulos J2EE
+    (consulte <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">Directriz: módulo J2EE</a> ) o como aplicación J2EE (consulte <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_436A58D2.html" guid="1.6057780853529704E-306">Directriz: aplicación J2EE</a> ),&nbsp;que pueden desplegarse en un servidor de
+    aplicaciones. Estos paquetes están formateados como archivos de archivado y tienen que constituir una estructura de
+    directorios y reglas de contenido definidas por el modelo de Ensamblaje y desarrollo de la aplicación J2EE.
+</p>
+<p>
+    RAD 6.0 facilita en gran medida el proceso de ensamblaje reforzando el desarrollo de los componentes de la aplicación
+    en un <em>Proyecto</em> que representa un módulo J2EE o una aplicación J2EE. Al crear un proyecto, la herramienta crea
+    automáticamente una estructura de directorio de archivos dentro de dicho proyecto, que es compatible con el ensamblaje
+    de la aplicación J2EE y el modelo de despliegue. Como los componentes se crean posteriormente a través de los
+    asistentes del producto, se guardan por defecto en la carpeta adecuada del proyecto. Por ejemplo, al crear un nuevo
+    archivo JSP mediante el asistente <em>Nuevo archivo JSP</em> , la herramienta lo almacena de forma predeterminada en la
+    carpeta del proyecto web <em>WebContent</em>,que es la ubicación estándar de los archivos de origen de contenidos web.
+    Además, RAD 6.0 también genera automáticamente todos los productos de trabajo de ensamblaje y desarrollo de J2EE que
+    sean necesarios, como por ejemplo el archivo de Manifiesto y los descriptores de despliegue pertinentes. El ensamblaje
+    de un módulo o aplicación J2EE, sin embargo, consiste simplemente en editar el descriptor de despliegue correspondiente
+    cuando sea necesario y exportar el proyecto a un archivo de archivado. En esta guía de la herramienta se llevan a cabo
+    los pasos siguientes:
+</p>
+<ul>
+    <li>
+        <a href="#step1">Editar el descriptor de despliegue del proyecto</a>
+    </li>
+    <li>
+        <a href="#step2">Validar el proyecto</a>
+    </li>
+    <li>
+        <a href="#step3">Exportar el proyecto a un archivo de archivado</a>
+    </li>
+</ul>
+<h3>
+    <a id="step1" href="#step3">Editar el descriptor de despliegue del proyecto</a>
+</h3>
+<ol>
+    <li>
+        Para editar un descriptor de despliegue de un proyecto de <strong>Aplicación empresarial</strong> (EAR): 
+        <ol type="a">
+            <li>
+                En la vista <em>Explorador de proyectos</em> de la perspectiva J2EE, expanda <strong>Aplicaciones
+                empresariales&gt; <em>nombre_proyecto</em></strong>.
+            </li>
+            <li>
+                Efectúe una doble pulsación en <strong>Descriptor de despliegue: <em>nombre_proyecto</em></strong> para
+                abrir el editor del descriptor de despliegue de la aplicación.
+            </li>
+            <li>
+                Seleccione la pestaña adecuada en la parte inferior de la vista de edición para editar los valores
+                específicos del descriptor de despliegue.
+            </li>
+            <li>
+                Guarde el archivo de descriptor de despliegue mediante la selección de <strong>Archivo &gt;
+                Guardar</strong> en la barra del menú principal.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Para editar un descriptor de despliegue de un proyecto <strong>Web</strong> (WAR): 
+        <ol type="a">
+            <li>
+                En la vista <em>Explorador de proyectos</em> de la perspectiva J2EE, expanda <strong>Módulos web &gt;
+                <em>nombre_proyecto</em></strong>.
+            </li>
+            <li>
+                Efectúe una doble pulsación en <strong>Descriptor de despliegue: <em>nombre_proyecto</em></strong> para
+                abrir el editor del descriptor de despliegue web.
+            </li>
+            <li>
+                Seleccione la pestaña adecuada en la parte inferior de la vista de edición para editar los valores
+                específicos del descriptor de despliegue.
+            </li>
+            <li>
+                Guarde el archivo de descriptor de despliegue mediante la selección de <strong>Archivo &gt;
+                Guardar</strong> en la barra del menú principal.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Para editar un descriptor de despliegue de un proyecto <strong>EJB</strong> (EJB JAR): 
+        <ol type="a">
+            <li>
+                En la vista <em>Explorador de proyectos</em> de la perspectiva J2EE, expanda <strong>Módulos EJB &gt;
+                <em>nombre_proyecto</em></strong>.
+            </li>
+            <li>
+                Efectúe una doble pulsación en <strong>Descriptor de despliegue: <em>nombre_proyecto</em></strong> para
+                abrir el editor del descriptor de despliegue EJB.
+            </li>
+            <li>
+                Seleccione la pestaña adecuada en la parte inferior de la vista de edición para editar los valores
+                específicos del descriptor de despliegue.
+            </li>
+            <li>
+                Guarde el archivo de descriptor de despliegue mediante la selección de <strong>Archivo &gt;
+                Guardar</strong> en la barra del menú principal.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Para editar un descriptor de despliegue de un proyecto <strong>Cliente de aplicación</strong> (JAR de cliente de
+        aplicación): 
+        <ol type="a">
+            <li>
+                En la vista <em>Explorador de proyectos</em> de la perspectiva J2EE, expanda <strong>Módulos de cliente de
+                aplicaciones&gt; <em>nombre_proyecto</em></strong>.
+            </li>
+            <li>
+                Efectúe una doble pulsación en <strong>Descriptor de despliegue: <em>nombre_proyecto</em></strong> para
+                abrir el editor del descriptor de despliegue cliente.
+            </li>
+            <li>
+                Seleccione la pestaña adecuada en la parte inferior de la vista de edición para editar los valores
+                específicos del descriptor de despliegue.
+            </li>
+            <li>
+                Guarde el archivo de descriptor de despliegue mediante la selección de <strong>Archivo &gt;
+                Guardar</strong> en la barra del menú principal.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Para editar un descriptor de despliegue de un proyecto <strong>Conector</strong> (RAR): 
+        <ol type="a">
+            <li>
+                En la vista <em>Explorador de proyectos</em> de la perspectiva J2EE, expanda <strong>Módulos de
+                conector&gt; <em>nombre_proyecto</em></strong>.
+            </li>
+            <li>
+                Efectúe una doble pulsación en <strong>Descriptor de despliegue: <em>nombre_proyecto</em></strong> para
+                abrir el editor XML en el archivo <em>ra.xml</em>.
+            </li>
+            <li>
+                Edite el archivo XML para cambiar los valores específicos del descriptor de despliegue.
+            </li>
+            <li>
+                Guarde el archivo de descriptor de despliegue mediante la selección de <strong>Archivo &gt;
+                Guardar</strong> en la barra del menú principal.
+            </li>
+        </ol>
+    </li>
+</ol>
+<h3>
+    <a id="step2" href="#Top">Validar el proyecto</a>
+</h3>
+<p>
+    Aunque la herramienta está configurada de forma predeterminada para validar automáticamente los recursos cuando los
+    guarda, es una buena idea validar manualmente el proyecto entero antes de exportarlo a un archivo de archivado (Tenga
+    en cuenta que puede alterar temporalmente y cambiar los validadores que se ejecutan contra el proyecto pulsando con el
+    botón derecho en ellos y seleccionando <strong>Propiedades &gt; Validación</strong>).
+</p>
+<ol>
+    <li>
+        En la vista <em>Explorador de proyectos</em> de la perspectiva J2EE, pulse con el botón derecho del ratón sobre
+        <em><strong>nombre_proyecto</strong></em>.
+    </li>
+    <li>
+        Seleccione <strong>Ejecutar validación</strong>.
+    </li>
+    <li>
+        Cuando finalice la validación, compruebe la vista <em>Problemas</em>. Si se genera una lista de errores, tiene que
+        solucionarlos antes de proceder al paso siguiente.
+    </li>
+</ol>
+<h3>
+    <a id="step3" href="#Top">Exportar el proyecto a un archivo de archivado</a>
+</h3>
+<ol>
+    <li>
+        Para exportar un proyecto de aplicación empresarial a un archivo <strong>EAR</strong>: 
+        <ol type="a">
+            <li>
+                En la vista <em>Explorador de proyectos</em> de la perspectiva J2EE, pulse con el botón derecho del ratón
+                sobre <strong><em>nombre_proyecto</em></strong>.
+            </li>
+            <li>
+                Seleccione <strong>Exportar &gt; archivo EAR</strong> .
+            </li>
+            <li>
+                En el asistente de <em>Exportación</em>, especifique el nombre y la ubicación deseados del archivo EAR.
+            </li>
+            <li>
+                De manera opcional, seleccione: 
+                <ul>
+                    <li>
+                        <strong>Exportar archivos de origen</strong>
+                    </li>
+                    <li>
+                        <strong>Sobrescribir archivo existente</strong> si desea exportar a un archivo EAR ya existente y
+                        no quiere que le aparezca un mensaje advirtiéndolo de la sobrescritura
+                    </li>
+                    <li>
+                        <strong>Incluir vías de acceso de generación de proyectos y archivos de metadatos</strong> para
+                        conservar los nombres originales de los proyectos incluidos en el proyecto de aplicación o a los
+                        que haga referencia el mismo y mantener las dependencias entre las vías de acceso de las clases.
+                        Esto le permite importar posteriormente el archivo EAR a otro espacio de trabajo e importar sus
+                        módulos como proyectos binarios.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Pulse <strong>Finalizar</strong>. El asistente exporta los contenidos del proyecto de aplicación al archivo
+                EAR especificado.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Para exportar un proyecto web a un archivo <strong>WAR</strong>: 
+        <ol type="a">
+            <li>
+                En la vista <em>Explorador de proyectos</em> de la perspectiva J2EE, pulse con el botón derecho del ratón
+                sobre <strong><em>nombre_proyecto</em></strong>.
+            </li>
+            <li>
+                Seleccione <strong>Exportar &gt; archivo WAR</strong> .
+            </li>
+            <li>
+                En el asistente de <em>Exportación</em>, especifique el nombre y la ubicación deseados del archivo WAR.
+            </li>
+            <li>
+                De manera opcional, seleccione: 
+                <ul>
+                    <li>
+                        <strong>Exportar archivos de origen</strong>
+                    </li>
+                    <li>
+                        <strong>Sobrescribir archivo existente</strong> si desea exportar a un archivo WAR ya existente y
+                        no quiere que le aparezca un mensaje advirtiéndolo de la sobrescritura
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Pulse <strong>Finalizar</strong>. El asistente exporta los contenidos del proyecto web al archivo WAR
+                especificado.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Para exportar un proyecto EJB a un archivo <strong>EJB JAR</strong>: 
+        <ol type="a">
+            <li>
+                En la vista <em>Explorador de proyectos</em> de la perspectiva J2EE, pulse con el botón derecho del ratón
+                sobre <strong><em>nombre_proyecto</em></strong>.
+            </li>
+            <li>
+                Seleccione <strong>Exportar &gt; archivo EJB JAR</strong>.
+            </li>
+            <li>
+                En el asistente de <em>Exportación</em>, especifique el nombre y la ubicación deseados del archivo JAR.
+            </li>
+            <li>
+                De manera opcional, seleccione: 
+                <ul>
+                    <li>
+                        <strong>Exportar archivos de origen</strong>
+                    </li>
+                    <li>
+                        <strong>Sobrescribir archivo existente</strong> si desea exportar a un archivo JAR ya existente y
+                        no quiere que le aparezca un mensaje advirtiéndolo de la sobrescritura
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Pulse <strong>Finalizar</strong>. El asistente exporta los contenidos del proyecto EJB al archivo JAR
+                especificado.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Para exportar un proyecto de Cliente de aplicación a un archivo <strong>Cliente de aplicación JAR</strong>: 
+        <ol type="a">
+            <li>
+                En la vista <em>Explorador de proyectos</em> de la perspectiva J2EE, pulse con el botón derecho del ratón
+                sobre <strong><em>nombre_proyecto</em></strong>.
+            </li>
+            <li>
+                Seleccione <strong>Exportar &gt; Archivo JAR de cliente de aplicación</strong>.
+            </li>
+            <li>
+                En el asistente de <em>Exportación</em>, especifique el nombre y la ubicación deseados del archivo JAR.
+            </li>
+            <li>
+                De manera opcional, seleccione: 
+                <ul>
+                    <li>
+                        <strong>Exportar archivos de origen</strong>
+                    </li>
+                    <li>
+                        <strong>Sobrescribir archivo existente</strong> si desea exportar a un archivo JAR ya existente y
+                        no quiere que le aparezca un mensaje advirtiéndolo de la sobrescritura
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Pulse <strong>Finalizar</strong>. El asistente exporta los contenidos del proyecto de cliente de aplicación
+                al archivo JAR especificado.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Para exportar un proyecto de conector a un archivo <strong>RAR</strong>: 
+        <ol type="a">
+            <li>
+                En la vista <em>Explorador de proyectos</em> de la perspectiva J2EE, pulse con el botón derecho del ratón
+                sobre <strong><em>nombre_proyecto</em></strong>.
+            </li>
+            <li>
+                Seleccione <strong>Exportar &gt; archivo RAR</strong> .
+            </li>
+            <li>
+                En el asistente de <em>Exportación</em>, especifique el nombre y la ubicación deseados del archivo RAR.
+            </li>
+            <li>
+                De manera opcional, seleccione: 
+                <ul>
+                    <li>
+                        <strong>Exportar archivos de origen</strong>
+                    </li>
+                    <li>
+                        <strong>Sobrescribir archivo existente</strong> si desea exportar a un archivo RAR ya existente y
+                        no quiere que le aparezca un mensaje advirtiéndolo de la sobrescritura
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Pulse <strong>Finalizar</strong>. El asistente exporta los contenidos del proyecto Conector al archivo RAR
+                especificado.
+            </li>
+        </ol>
+    </li>
+</ol></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

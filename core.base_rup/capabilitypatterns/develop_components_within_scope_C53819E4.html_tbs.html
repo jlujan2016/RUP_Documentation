@@ -1,0 +1,1483 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Patr&oacute;n de posibilidad: Desarrollar componentes [dentro del &aacute;mbito]</title>
+<meta content="CapabilityPattern" name="uma.type">
+<meta content="develop_components_within_scope" name="uma.name">
+<meta content="Desarrollar componentes [dentro del &aacute;mbito]" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc=_hdw4QSCcEdq3qtLcbHn6PQ&path=_hdw4QSCcEdq3qtLcbHn6PQ';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  defaultQueryStr, false, true, true);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div autoWrap="true">
+<div id="page-guid" value="_hdw4QSCcEdq3qtLcbHn6PQ"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Patr&oacute;n de posibilidad: Desarrollar componentes [dentro del &aacute;mbito]</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/process.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En este tema se abordan las actividades necesarias para desarrollar componentes dentro del ámbito identificado en el plan de iteración.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign="middle">
+<td class="tab"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td><td class="tab" nowrap><a id="TAB_Description" class="tab" href="./../../core.base_rup/capabilitypatterns/develop_components_within_scope_C53819E4.html_desc.html">Descripci&oacute;n</a></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_i.gif"></td><td class="tab" nowrap><a id="TAB_WBS" class="tab" href="./../../core.base_rup/capabilitypatterns/develop_components_within_scope_C53819E4.html_wbs.html"><span style="white-space:nowrap;">Estructura de desglose de trabajo</span></a></td><td width="1"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_a.gif"></td><td class="activeTab" nowrap><span style="white-space:nowrap;">Asignaci&oacute;n de equipos</span></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-a_i.gif"></td><td class="tab" nowrap><a id="TAB_WPBS" class="tab" href="./../../core.base_rup/capabilitypatterns/develop_components_within_scope_C53819E4.html_wpbs.html"><span style="white-space:nowrap;">Utilizaci&oacute;n del producto de trabajo</span></a></td><td width="21"><img title="" alt="" height="17" width="21" src="./../../images/tab_end-i.gif"></td><td width="50%"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td colspan="4"><img height="2" title="" alt="" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space_middle.gif"></td><td class="activeTab"><img title="" alt="" height="2" width="10" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space.gif"></td><td colspan="3"><img title="" alt="" height="2" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td class="activeTab" colspan="10"><img title="" alt="" height="5" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="sectionHeading">Anomal&iacute;a del equipo</div>
+<div class="sectionContent">
+<div id="treeContent"></div>
+<script language="JavaScript">
+contentPage.processPage.treeTable.data = {
+title: "Anomalía del equipo", summary: "Anomalía del equipo", 
+columns: [
+["presentation_name", "Elemento de desglose"],
+["model_info", "Información del modelo"],
+["teams", "Equipo"],
+["type", "Tipo"],
+["is_planned", "Planeado"],
+["has_multiple_occurrences", "Varias apariciones"],
+["is_optional", "Opcional"]],
+rows: [
+
+{id: "dcd011d8", parentId: "", relPath: ",_VuAUgExCEduGSMz-5zscXg", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_business_process_analyst", title: "Analista de proceso empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_process_analyst_814D00FD.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "8e0aea0", parentId: "dcd011d8", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_supplementary_business_specification", title: "Especificación empresarial suplementaria", url: "./../../soa.rup_soma/capabilitypatterns/rup_supplementary_business_specification_86FF1752.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ddc14e56", parentId: "dcd011d8", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_use_case_model", title: "Modelo de guión de uso empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_use_case_model_8DC8232C.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "cd2c694c", parentId: "dcd011d8", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_goal", title: "Objetivo empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_goal_9866033C.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f37ddd6", parentId: "dcd011d8", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_vision", title: "Visión empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_vision_755A427.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "4e1d5998", parentId: "dcd011d8", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_supplementary_business_specification", title: "Especificación empresarial suplementaria", url: "./../../soa.rup_soma/capabilitypatterns/rup_supplementary_business_specification_86FF1752.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "60e17cc2", parentId: "dcd011d8", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_use_case_model", title: "Modelo de guión de uso empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_use_case_model_8DC8232C.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "8d6709be", parentId: "dcd011d8", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_goal", title: "Objetivo empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_goal_FF31DDB8.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "dde9e800", parentId: "dcd011d8", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "refine_business_use_case", title: "Ajustar un guión de uso empresarial", url: "./../../soa.rup_soma/capabilitypatterns/refine_business_use_case_B8071CF3.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "4e889bfc", parentId: "dcd011d8", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "identify_business_goals", title: "Identificar objetivos empresariales y KPI", url: "./../../soa.rup_soma/capabilitypatterns/identify_business_goals_E1EB001.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e2d14132", parentId: "dcd011d8", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "functional_area_analysis", title: "Análisis de área funcional", url: "./../../soa.rup_soma/capabilitypatterns/functional_area_analysis_DF192E46.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "39a822e", parentId: "dcd011d8", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_rules", title: "Análisis de reglas empresariales", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_rules_7DC18CF9.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "1d4e3754", parentId: "dcd011d8", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_bp", title: "Análisis del proceso empresarial", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_bp_A99F2AD2.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "1942f51e", parentId: "", relPath: ",_TPLFUEn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "sec_security_architect", title: "Arquitecto de seguridad", url: "./../../soa.rup_soma/capabilitypatterns/sec_security_architect_731EB642.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "2def1b32", parentId: "1942f51e", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_software_architecture_document", title: "Documento de arquitectura de software", url: "./../../soa.rup_soma/capabilitypatterns/rup_software_architecture_document_8480F5F9.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "98430a9e", parentId: "1942f51e", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "sec_identify_security_patterns", title: "Identificar patrones de seguridad", url: "./../../soa.rup_soma/capabilitypatterns/sec_identify_security_patterns_9AD3C9BE.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "903bfc7a", parentId: "", relPath: ",_en2qMTbZEdqdbfmtFQj8qA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_software_architect", title: "Arquitecto de software", url: "./../../core.base_rup/capabilitypatterns/rup_software_architect_74B113EC.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "27cb88", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_architectural_proof_of_concept", title: "Arquitectura de prueba de concepto", url: "./../../soa.rup_soma/capabilitypatterns/rup_architectural_proof_of_concept_C9732227.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "2066de46", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_reference_architecture", title: "Arquitectura de referencia", url: "./../../soa.rup_soma/capabilitypatterns/rup_reference_architecture_AF83083D.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e42e05e4", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_software_architecture_document", title: "Documento de arquitectura de software", url: "./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_ED082073.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "776aec74", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_analysis_model", title: "Modelo de análisis", url: "./../../core.base_rup/capabilitypatterns/rup_analysis_model_E26A4063.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c8e1a704", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_deployment_model", title: "Modelo de despliegue", url: "./../../soa.rup_soma/capabilitypatterns/rup_deployment_model_7200384C.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "8db74a1e", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_model", title: "Modelo de diseño", url: "./../../core.base_rup/capabilitypatterns/rup_design_model_21AD327A.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "dfe0e99c", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_implementation_model", title: "Modelo de implementación", url: "./../../core.base_rup/capabilitypatterns/rup_implementation_model_D5DD19E0.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "cecf4530", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "goal_service_model", title: "Modelo de servicio de objetivos", url: "./../../soa.rup_soma/capabilitypatterns/goal_service_model_B2EDAD91.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "d465b202", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_architectural_proof_of_concept", title: "Arquitectura de prueba de concepto", url: "./../../soa.rup_soma/capabilitypatterns/rup_architectural_proof_of_concept_C9732227.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e07ea48a", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_reference_architecture", title: "Arquitectura de referencia", url: "./../../soa.rup_soma/capabilitypatterns/rup_reference_architecture_DF607B12.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "63ef305c", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_model", title: "Modelo de diseño", url: "./../../core.base_rup/capabilitypatterns/rup_design_model_21AD327A.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "823037fc", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_model", title: "Modelo de servicio", url: "./../../core.base_rup/capabilitypatterns/soa_service_model_634A2802.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "92966850", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "goal_service_model", title: "Modelo de servicio de objetivos", url: "./../../soa.rup_soma/capabilitypatterns/goal_service_model_8E34B48B.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "be8f0a38", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_review_record", title: "Registro de revisión", url: "./../../soa.rup_soma/capabilitypatterns/rup_review_record_BFBA24AC.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "2b515dfc", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_legacy", title: "Análisis de activos existentes", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_legacy_26AC3B2D.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "2780e30", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_uc", title: "Análisis de guiones de uso empresariales (SOA)", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_uc_B43D0AE2.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "236b95b2", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_rules", title: "Análisis de reglas empresariales", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_rules_7DC18CF9.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "3c0574b0", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_data", title: "Análisis del modelo de datos", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_data_CF5D6132.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "53c691ec", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_bp", title: "Análisis del proceso empresarial", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_bp_A99F2AD2.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "76c37f38", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_qualification", title: "Aplicar pruebas decisivas de servicio", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_qualification_627E9310.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "608324e0", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_construct_arch_proof", title: "Construir prueba de concepto arquitectónica (SOA)", url: "./../../soa.rup_soma/capabilitypatterns/soa_construct_arch_proof_A8E41D1F.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "767c227e", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "identify_design_elements", title: "Identificar elementos de diseño", url: "./../../core.base_rup/capabilitypatterns/identify_design_elements_D0EF4513.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "73a7f9ec", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "assess_viability_of_proof", title: "Valorar la viabilidad de la arquitectura de prueba de concepto", url: "./../../soa.rup_soma/capabilitypatterns/assess_viability_of_proof_2886FBF.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "7bde0296", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "operation_analysis", title: "Análisis de la operación", url: "./../../core.base_rup/capabilitypatterns/operation_analysis_F9BB2A10.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e0c32768", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_realization", title: "Decisiones de realización de servicio de documentos", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_realization_3787C666.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c3cc1d76", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "operation_design", title: "Diseño de la operación", url: "./../../core.base_rup/capabilitypatterns/operation_design_1C3ED1EE.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "2f805894", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_message_design", title: "Diseño de mensajes", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_message_design_8300B60D.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "52a8e12", parentId: "903bfc7a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_specification", title: "Especificación de servicios", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_specification_907039BC.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "54f8f790", parentId: "", relPath: ",_JafTYE-CEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_business_architect_bom", title: "Arquitecto empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_architect_bom_513F675F.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "50a39bca", parentId: "54f8f790", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_architecture_document", title: "Documento de arquitectura empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_architecture_document_BC3B25A4.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "73cacf9c", parentId: "54f8f790", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_analysis_model", title: "Modelo de análisis empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_analysis_model_CDA2118E.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c3463be4", parentId: "54f8f790", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_architecture_document", title: "Documento de arquitectura empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_architecture_document_BC3B25A4.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "eece21bc", parentId: "54f8f790", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_analysis_model", title: "Modelo de análisis empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_analysis_model_CDA2118E.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "155f070a", parentId: "54f8f790", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "functional_area_analysis", title: "Análisis de área funcional", url: "./../../soa.rup_soma/capabilitypatterns/functional_area_analysis_DF192E46.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c8aa75fc", parentId: "", relPath: ",_AezXQDnfEdqxANP9kNH4WA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_designer", title: "Diseñador", url: "./../../core.base_rup/capabilitypatterns/rup_designer_807FBB41.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "1eba4088", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_analysis_class", title: "Clase de análisis", url: "./../../core.base_rup/capabilitypatterns/rup_analysis_class_7294C118.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "3038b72e", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_class", title: "Clase de comprobabilidad", url: "./../../core.base_rup/capabilitypatterns/rup_test_class_7B9E30F4.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "3e290800", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_class", title: "Clase de diseño", url: "./../../core.base_rup/capabilitypatterns/rup_design_class_7B5C3BC4.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ccb9d796", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_svce_component", title: "Componente de servicio", url: "./../../core.base_rup/capabilitypatterns/soa_svce_component_D5333C4C.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f1981ca2", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_use_case_realization", title: "Ejecución de casos de uso", url: "./../../core.base_rup/capabilitypatterns/rup_use_case_realization_2E556719.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e78d890", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_model", title: "Modelo de servicio", url: "./../../core.base_rup/capabilitypatterns/soa_service_model_634A2802.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "4e8a8ea8", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_operation", title: "Operación", url: "./../../core.base_rup/capabilitypatterns/rup_operation_42B07451.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "639cfd50", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_package", title: "Paquete de diseño", url: "./../../core.base_rup/capabilitypatterns/rup_design_package_863C1104.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ca7923be", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_operation_realization", title: "Realización de una operación", url: "./../../core.base_rup/capabilitypatterns/rup_operation_realization_4D4E5461.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "1679b8a", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_subsystem", title: "Subsistema de diseño", url: "./../../core.base_rup/capabilitypatterns/rup_design_subsystem_4A8BFDF3.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "68dd34b8", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_class", title: "Clase de comprobabilidad", url: "./../../core.base_rup/capabilitypatterns/rup_test_class_7B9E30F4.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "80f3f378", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_svce_component", title: "Componente de servicio", url: "./../../soa.rup_soma/capabilitypatterns/soa_svce_component_447B4C4B.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "dc414ca0", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_use_case_realization", title: "Ejecución de casos de uso", url: "./../../core.base_rup/capabilitypatterns/rup_use_case_realization_2E556719.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "3f51c5aa", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_analysis_model", title: "Modelo de análisis", url: "./../../core.base_rup/capabilitypatterns/rup_analysis_model_E26A4063.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "a5bfecde", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_usecase_model", title: "Modelo de caso de uso", url: "./../../core.base_rup/capabilitypatterns/rup_usecase_model_CA572A41.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "da13c720", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_deployment_model", title: "Modelo de despliegue", url: "./../../core.base_rup/capabilitypatterns/rup_deployment_model_114B37C1.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "97d1218e", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_model", title: "Modelo de diseño", url: "./../../core.base_rup/capabilitypatterns/rup_design_model_7D6F5DFE.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "b9707ffe", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_model", title: "Modelo de servicio", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_model_F19FEE3D.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ae3e623c", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "goal_service_model", title: "Modelo de servicio de objetivos", url: "./../../soa.rup_soma/capabilitypatterns/goal_service_model_5E64805F.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c004de42", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_operation", title: "Operación", url: "./../../core.base_rup/capabilitypatterns/rup_operation_42B07451.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "4269ab6e", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_package", title: "Paquete de diseño", url: "./../../core.base_rup/capabilitypatterns/rup_design_package_863C1104.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "66b8ccea", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_operation_realization", title: "Realización de una operación", url: "./../../core.base_rup/capabilitypatterns/rup_operation_realization_4D4E5461.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "87065582", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "use_case_analysis", title: "Análisis de caso de uso", url: "./../../core.base_rup/capabilitypatterns/use_case_analysis_DAB10D12.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ac531e22", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "operation_analysis", title: "Análisis de la operación", url: "./../../core.base_rup/capabilitypatterns/operation_analysis_F9BB2A10.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "113842f4", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_realization", title: "Decisiones de realización de servicio de documentos", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_realization_3787C666.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "2ce5b68c", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "design_testability_elements", title: "Diseñar los elementos de comprobabilidad", url: "./../../core.base_rup/capabilitypatterns/design_testability_elements_7BCFC43.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "a89092ee", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "use_case_design", title: "Diseño de caso de uso", url: "./../../core.base_rup/capabilitypatterns/use_case_design_7A33E90E.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "41db935a", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "class_design", title: "Diseño de clase", url: "./../../core.base_rup/capabilitypatterns/class_design_50C0E8FA.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "627eda7c", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "operation_design", title: "Diseño de la operación", url: "./../../core.base_rup/capabilitypatterns/operation_design_1C3ED1EE.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ce33159a", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_message_design", title: "Diseño de mensajes", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_message_design_8300B60D.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "98bebe84", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_subsystem_design", title: "Diseño de subsistema (SOA)", url: "./../../soa.rup_soma/capabilitypatterns/soa_subsystem_design_F5793D14.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "5b1a3fc4", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "subsystem_design", title: "Diseño del subsistema", url: "./../../core.base_rup/capabilitypatterns/subsystem_design_D46CB04A.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "8d1e3eb2", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_component_specification", title: "Especificación de componentes (SOA)", url: "./../../soa.rup_soma/capabilitypatterns/soa_component_specification_63B8F64A.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "92fd13ba", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_specification", title: "Especificación de servicios", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_specification_907039BC.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "8e9f0196", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_goal_service_assignment", title: "Identificar y asociar servicios con objetivos", url: "./../../soa.rup_soma/capabilitypatterns/soa_goal_service_assignment_53C6A04F.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "29251e04", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_legacy", title: "Análisis de activos existentes", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_legacy_26AC3B2D.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "49e0477e", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_uc", title: "Análisis de guiones de uso empresariales (SOA)", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_uc_B43D0AE2.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "62b28484", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_rules", title: "Análisis de reglas empresariales", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_rules_7DC18CF9.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "8bb23100", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_data", title: "Análisis del modelo de datos", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_data_CF5D6132.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "aa0f67a4", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_bp", title: "Análisis del proceso empresarial", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_bp_A99F2AD2.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c46c36e2", parentId: "c8aa75fc", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_qualification", title: "Aplicar pruebas decisivas de servicio", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_qualification_627E9310.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "a83f8ce2", parentId: "", relPath: ",_Lla1sC1bEdudYLeyb_y9tw", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_database_designer", title: "Diseñador de base de datos", url: "./../../soa.rup_soma/capabilitypatterns/rup_database_designer_3C256E65.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f86b7f9a", parentId: "a83f8ce2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "database_migration_specification", title: "Especificación de migración de datos", url: "./../../core.base_rup/capabilitypatterns/database_migration_specification_F54C5AAB.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "14326560", parentId: "a83f8ce2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_data_model", title: "Modelo de datos", url: "./../../core.base_rup/capabilitypatterns/rup_data_model_A43D5F34.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c76aa5fa", parentId: "a83f8ce2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "database_migration_specification", title: "Especificación de migración de datos", url: "./../../core.base_rup/capabilitypatterns/database_migration_specification_F54C5AAB.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e1ffd340", parentId: "a83f8ce2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_data_model", title: "Modelo de datos", url: "./../../core.base_rup/capabilitypatterns/rup_data_model_A43D5F34.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "70101814", parentId: "a83f8ce2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "database_design", title: "Diseño de base de datos", url: "./../../core.base_rup/capabilitypatterns/database_design_5998D016.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "78221e0e", parentId: "a83f8ce2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "design_database_migration", title: "Especificar la migración de datos", url: "./../../core.base_rup/capabilitypatterns/design_database_migration_B6C7BB67.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "cbda9c70", parentId: "a83f8ce2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_data", title: "Análisis del modelo de datos", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_data_CF5D6132.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f325702e", parentId: "a83f8ce2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_message_design", title: "Diseño de mensajes", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_message_design_8300B60D.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "17667a28", parentId: "", relPath: ",_UuCQsDnfEdqxANP9kNH4WA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_capsule_designer", title: "Diseñador de cápsulas", url: "./../../core.base_rup/capabilitypatterns/rup_capsule_designer_8473F52B.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "53a4e93c", parentId: "17667a28", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_capsule", title: "Cápsula", url: "./../../core.base_rup/capabilitypatterns/rup_capsule_43C2F219.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "5fbddbc4", parentId: "17667a28", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_capsule", title: "Cápsula", url: "./../../core.base_rup/capabilitypatterns/rup_capsule_43C2F219.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f0d52d86", parentId: "17667a28", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_class", title: "Clase de diseño", url: "./../../core.base_rup/capabilitypatterns/rup_design_class_7B5C3BC4.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "efa0622", parentId: "17667a28", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_protocol", title: "Protocolo", url: "./../../core.base_rup/capabilitypatterns/rup_protocol_17FA0E26.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "7b94060c", parentId: "17667a28", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "capsule_design", title: "Diseño de la cápsula", url: "./../../core.base_rup/capabilitypatterns/capsule_design_772F2393.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c3e5f27a", parentId: "", relPath: ",_CQvlYRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_user_interface_designer", title: "Diseñador de interfaz de usuario", url: "./../../core.base_rup/capabilitypatterns/rup_user_interface_designer_3979A5D2.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c7fd0f38", parentId: "c3e5f27a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_navmap", title: "Mapa de navegación", url: "./../../core.base_rup/capabilitypatterns/rup_navmap_BFB94A31.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ea390014", parentId: "c3e5f27a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_user_interface_prototype", title: "Prototipo de interfaz de usuario", url: "./../../core.base_rup/capabilitypatterns/rup_user_interface_prototype_8B14382A.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "695a90fc", parentId: "c3e5f27a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_navmap", title: "Mapa de navegación", url: "./../../core.base_rup/capabilitypatterns/rup_navmap_BFB94A31.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "90400356", parentId: "c3e5f27a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_user_interface_prototype", title: "Prototipo de interfaz de usuario", url: "./../../core.base_rup/capabilitypatterns/rup_user_interface_prototype_8B14382A.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c702206c", parentId: "c3e5f27a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "design_user_interface", title: "Diseñar la interfaz de usuario", url: "./../../core.base_rup/capabilitypatterns/design_user_interface_AE2FDA9D.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "2d1bba94", parentId: "c3e5f27a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "prototype_user_interface", title: "Prototipo de interfaz de usuario", url: "./../../core.base_rup/capabilitypatterns/prototype_user_interface_4C52E1A7.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ecc4bbf2", parentId: "", relPath: ",_r5N_8EocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_test_designer", title: "Diseñador de pruebas", url: "./../../core.base_rup/capabilitypatterns/rup_test_designer_BDC8D433.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "82e1efea", parentId: "ecc4bbf2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_automation_architecture", title: "Arquitectura de automatización de pruebas", url: "./../../core.base_rup/capabilitypatterns/rup_test_automation_architecture_6C535F47.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ab38824e", parentId: "ecc4bbf2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_design", title: "Diseño de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_design_E07AF9F0.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "abdc22ba", parentId: "ecc4bbf2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_interface_specification", title: "Especificación de interfaz de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_interface_specification_626F908.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "1b1a8b04", parentId: "ecc4bbf2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_strategy", title: "Estrategia de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_strategy_61B57F37.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "88e52ef6", parentId: "ecc4bbf2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_automation_architecture", title: "Arquitectura de automatización de pruebas", url: "./../../core.base_rup/capabilitypatterns/rup_test_automation_architecture_6C535F47.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "a823ddba", parentId: "ecc4bbf2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_design", title: "Diseño de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_design_E07AF9F0.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "de20b1b4", parentId: "ecc4bbf2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_interface_specification", title: "Especificación de interfaz de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_interface_specification_626F908.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f3ce22f2", parentId: "ecc4bbf2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "define_testability_elements", title: "Definir los elementos de comprobabilidad", url: "./../../core.base_rup/capabilitypatterns/define_testability_elements_131FD27E.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ce51374a", parentId: "", relPath: ",_6TIvMk-AEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_business_designer", title: "Diseñador empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_designer_4CFD9475.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "1f131a40", parentId: "ce51374a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_goal_service_assignment", title: "Identificar y asociar servicios con objetivos", url: "./../../soa.rup_soma/capabilitypatterns/soa_goal_service_assignment_53C6A04F.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "1c0e6752", parentId: "", relPath: ",_FEfcIU-FEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_implementer", title: "Implementador", url: "./../../soa.rup_soma/capabilitypatterns/rup_implementer_B27B59F9.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "33b145d8", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_component", title: "Elemento de comprobabilidad", url: "./../../core.base_rup/capabilitypatterns/rup_test_component_CD5A7F50.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "813163d8", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_implementation_element", title: "Elemento de implementación", url: "./../../core.base_rup/capabilitypatterns/rup_implementation_element_F2E45E16.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "a8b4959e", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_developer_test", title: "Prueba de desarrollador", url: "./../../core.base_rup/capabilitypatterns/rup_developer_test_567E438E.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c55cf384", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_stub", title: "Prueba de fragmento para simulación", url: "./../../core.base_rup/capabilitypatterns/rup_stub_8B235595.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c29b2f20", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_implementation_subsystem", title: "Subsistema de implementación", url: "./../../core.base_rup/capabilitypatterns/rup_implementation_subsystem_44B4A00.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "b2e7e3ba", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_component", title: "Elemento de comprobabilidad", url: "./../../core.base_rup/capabilitypatterns/rup_test_component_CD5A7F50.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "6801ba", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_implementation_element", title: "Elemento de implementación", url: "./../../core.base_rup/capabilitypatterns/rup_implementation_element_F2E45E16.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "190a9716", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_developer_test", title: "Prueba de desarrollador", url: "./../../core.base_rup/capabilitypatterns/rup_developer_test_567E438E.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "35b2f4fc", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_stub", title: "Prueba de fragmento para simulación", url: "./../../core.base_rup/capabilitypatterns/rup_stub_8B235595.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "47bdd25c", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_log", title: "Registro de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_log_8423E88.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "68246eca", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_results", title: "Resultados de la prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_results_A6735CFE.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "721850de", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_implementation_subsystem", title: "Subsistema de implementación", url: "./../../core.base_rup/capabilitypatterns/rup_implementation_subsystem_44B4A00.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "eb363fe4", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "analyze_runtime_behavior", title: "Analizar el comportamiento en tiempo de ejecución", url: "./../../core.base_rup/capabilitypatterns/analyze_runtime_behavior_14736AAC.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "285b883c", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "perform_developer_test", title: "Ejecutar pruebas de desarrollador", url: "./../../core.base_rup/capabilitypatterns/perform_developer_test_3400090F.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "d98a630c", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "implement_component", title: "Implementar elementos de diseño", url: "./../../core.base_rup/capabilitypatterns/implement_component_F8F15C22.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "de6b1592", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "implement_developer_test", title: "Implementar la prueba de desarrollador", url: "./../../core.base_rup/capabilitypatterns/implement_developer_test_64BC2739.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "4ba01812", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "implement_testability_elements", title: "Implementar los elementos de comprobabilidad", url: "./../../core.base_rup/capabilitypatterns/implement_testability_elements_910DF0DE.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "bf7ca72e", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_realization", title: "Decisiones de realización de servicio de documentos", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_realization_3787C666.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "dc95c124", parentId: "1c0e6752", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_component_specification", title: "Especificación de componentes (SOA)", url: "./../../soa.rup_soma/capabilitypatterns/soa_component_specification_63B8F64A.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "71d9cc06", parentId: "", relPath: ",_EelhQEofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_integrator", title: "Integrador", url: "./../../core.base_rup/capabilitypatterns/rup_integrator_14BAF125.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "1a4463e", parentId: "71d9cc06", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_integration_build_plan", title: "Plan de compilación de integración", url: "./../../core.base_rup/capabilitypatterns/rup_integration_build_plan_1A9B8472.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "dc1bffea", parentId: "71d9cc06", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_integration_build_plan", title: "Plan de compilación de integración", url: "./../../core.base_rup/capabilitypatterns/rup_integration_build_plan_1A9B8472.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e8792f80", parentId: "71d9cc06", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "plan_subsystem_integration", title: "Planificar la integración del subsistema", url: "./../../core.base_rup/capabilitypatterns/plan_subsystem_integration_105FBE46.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ae223338", parentId: "", relPath: ",_lJib4EocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_technical_reviewer", title: "Revisor técnico", url: "./../../core.base_rup/capabilitypatterns/rup_technical_reviewer_63FBD0DA.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "919cc808", parentId: "ae223338", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_review_record", title: "Registro de revisión", url: "./../../core.base_rup/capabilitypatterns/rup_review_record_A978A277.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "7cf89e6a", parentId: "ae223338", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "review_code", title: "Revisar el código", url: "./../../core.base_rup/capabilitypatterns/review_code_DB94104C.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ed4f4d06", parentId: "ae223338", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "review_the_design", title: "Revisar el diseño", url: "./../../core.base_rup/capabilitypatterns/review_the_design_9294A7AC.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+]};
+				</script>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concepto: Patrones de distribuci&oacute;n</title>
+<meta content="Concept" name="uma.type">
+<meta content="distribution_patterns" name="uma.name">
+<meta content="Patrones de distribuci&oacute;n" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "6.137181182978733E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "6.137181182978733E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "6.137181182978733E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "6.137181182978733E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="6.137181182978733E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concepto: Patrones de distribuci&oacute;n</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Los patrones de distribución resaltan la importancia de los aspectos de distribución de la solución del sistema y el grado en que influyen en otras decisiones arquitectónicas.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Análisis de la arquitectura</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Arquitecto de software</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/describe_distribution_9BA1477C.html" guid="{6A112808-0A90-427A-BAB9-E14F3FBF72B5}">Describir la distribución</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_architecture__distribution_patterns" key="arquitectura" text="patrones de distribución" name="XE_architecture__distribution_patterns" class="index"></a><a id="XE_distribution_patterns__introduction_to" key="patrones de distribución" text="introducción a" name="XE_distribution_patterns__introduction_to" class="index"></a> 
+<h3>
+    <a id="Nodes, Processors and Devices" name="Nodes, Processors and Devices">Nodos, procesadores y dispositivos</a>
+</h3>
+<p>
+    Los procesadores y dispositivos son estereotipos comunes de nodo. La distinción entre ellos es difícil de valorar, ya
+    que ahora hay muchos dispositivos que contienen su propia CPU. No obstante, la distinción entre procesadores y
+    dispositivos reside en el tipo de software que ejecutan. Los procesadores ejecutan programas/software que se
+    escribieron explícitamente para el sistema que se está desarrollando. Los procesadores son dispositivos informáticos
+    generales que tienen capacidad de cálculo, memoria y capacidad de ejecución.
+</p>
+<p>
+    Los dispositivos ejecutan software escrito que controla la funcionalidad del dispositivo. Normalmente, los dispositivos
+    se adjuntan a un procesador que controla el dispositivo. Los dispositivos suelen ejecutar software incorporado y no
+    pueden ejecutar programas generales. Su funcionalidad suele estar controlada por software controlador de dispositivo.
+</p>
+<h3>
+    <a id="Distribution Patterns" name="Distribution Patterns">Patrones de distribución</a>
+</h3>
+<p>
+    Los sistemas disponen de una serie de patrones de distribución típicos, según la funcionalidad del sistema y el tipo de
+    aplicación. En muchos casos, el patrón de distribución se utiliza informalmente para describir la 'arquitectura' del
+    sistema, aunque la arquitectura completa abarca muchas más cosas. Por ejemplo, muchas veces, se incluye en la
+    definición de un sistema que tiene una 'arquitectura de cliente/servidor', aunque se trata simplemente de un aspecto de
+    distribución de la arquitectura. Esto sirve para resaltar la importancia de los aspectos de distribución del sistema y
+    el grado en que influyen en otras decisiones arquitectónicas.
+</p>
+<p>
+    Los patrones de distribución que se describen abajo implican ciertas características del sistema, de rendimiento y del
+    proceso. Cada característica resuelve ciertos problemas, pero también supone un reto único.
+</p>
+<h3>
+    <a id="Client/Server Architectures" name="Client/Server Architectures">Arquitecturas de cliente/servidor</a><a key="arquitectura" text="cliente/servidor" name="XE_architecture__client/server" id="XE_architecture__client/server" class="index"></a><a key="patrones de distribución" text="arquitecturas de cliente/servidor" name="XE_distribution_patterns__client/server_architectures" id="XE_distribution_patterns__client/server_architectures" class="index"></a>
+</h3>
+<p>
+    En las famosas "arquitecturas de cliente/servidor", hay nodos de procesadores de red especializados que se llaman
+    <b>clientes</b> y nodos que se llaman <b>servidores</b>. Los clientes son consumidores de los servicios que proporciona
+    un servidor. A menudo, un cliente atiende a un solo usuario y maneja servicios de presentación del usuario final (GUI);
+    por su lado, el servidor suele proporcionar servicios a varios clientes a la vez, por ejemplo, servicios de impresión,
+    de seguridad o de bases de datos. La "lógica de aplicaciones", o la lógica empresarial, de estos sistemas suele
+    distribuirse entre el cliente y el servidor. La distribución de la lógica empresarial se llama <b>partición de
+    aplicaciones</b>.
+</p>
+<p>
+    En la siguiente figura, el Cliente A muestra un ejemplo de una arquitectura de 2 niveles, donde la mayoría de la lógica
+    de aplicaciones se encuentra en el servidor. El Cliente B muestra una arquitectura típica de 3 niveles, con servicios
+    empresariales implementados en un servidor de objetos empresariales. El Cliente C muestra una aplicación basada en web
+    típica.
+</p>
+<p align="center">
+    <img src="./../../../core.base_rup/guidances/concepts/resources/dpatt01.gif" alt="Diagrama descrito en el contenido." width="546" height="287" />
+</p>
+<p class="picturetext">
+    Variaciones de las arquitecturas de cliente/servidor
+</p>
+<p>
+    En sistemas de cliente/servidor tradicionales, la mayoría de la lógica empresarial se implementa en clientes; sin
+    embargo, es mejor ubicar parte de la funcionalidad en el servidor, por ejemplo las funciones que acceden a menudo a los
+    datos almacenados en el servidor. Al hacer esto, se puede disminuir el tráfico de red, que en la mayoría de los casos
+    es bastante caro (es una orden de magnitud o dos más lentas que la comunicación entre procesos).
+</p>
+<p>
+    Algunas características:
+</p>
+<ul>
+    <li>
+        Un sistema puede constar de varios tipos diferentes de clientes, por ejemplo: 
+        <ul>
+            <li>
+                Estaciones de trabajo del usuario
+            </li>
+            <li>
+                Sistemas de red
+            </li>
+        </ul>
+    </li>
+    <li>
+        Los clientes y los servidores se comunican utilizando varias tecnologías, como por ejemplo tecnologías CORBA/IDL o
+        RPC (llamada a procedimiento remoto).
+    </li>
+    <li>
+        Un sistema puede constar de varios tipos diferentes de servidores, por ejemplo: 
+        <ul>
+            <li>
+                <b>Servidores de base de datos</b>, que manejan máquinas de base de datos como Sybase, Ingres, Oracle,
+                Informix
+            </li>
+            <li>
+                <b>Servidores de impresión</b>, que manejan la lógica del controlador, como las colas para una impresora
+                específica
+            </li>
+            <li>
+                <b>Servidores de comunicación</b> (TCP/IP, ISDN, X.25)
+            </li>
+            <li>
+                <b>Servidores del gestor de ventanas</b> (X)
+            </li>
+            <li>
+                <b>Servidores de archivos</b> (NFS en UNIX)
+            </li>
+        </ul>
+    </li>
+</ul>
+<h4>
+    <a id="The 3-Tier Architecture" name="The 3-Tier Architecture">La 'arquitectura de 3 niveles'</a><a key="arquitectura" text="3 niveles" name="XE_architecture__3-tier" id="XE_architecture__3-tier" class="index"></a><a key="patrones de distribución" text="arquitectura de tres niveles" name="XE_distribution_patterns__3-tier_architecture" id="XE_distribution_patterns__3-tier_architecture" class="index"></a>
+</h4>
+<p>
+    La 'arquitectura de 3 niveles' es un caso especial de 'arquitectura de cliente/servidor' en el que las funciones del
+    sistema se dividen en tres particiones lógicas: servicios de aplicación, servicios empresariales y servicios de datos.
+    Las 'particiones lógicas' pueden correlacionarse con 3 o más nodos físicos.
+</p>
+<p align="center">
+    <img src="./../../../core.base_rup/guidances/concepts/resources/3-tier.gif" alt="Diagrama descrito en el contenido." width="175" height="268" />
+</p>
+<p class="picturetext">
+    Ejemplo de una arquitectura de 3 niveles
+</p>
+<p>
+    La partición lógica en estos tres niveles refleja una observación acerca de cómo suele implementarse la funcionalidad
+    de las aplicaciones de oficina típicas y cómo cambia. Los servicios de la aplicación, que tratan principalmente
+    aspectos de la presentación de la GUI, suelen ejecutarse en una estación de trabajo de escritorio dedicada con un
+    entorno operativo de ventanas gráfico. Los cambios de funcionalidad responden, a menudo, a consideraciones estéticas o
+    de facilidad de uso, básicamente temas relacionados con <b>factores humanos</b>.
+</p>
+<p>
+    Los servicios de datos suelen implementarse utilizando tecnología del servidor de bases de datos, que normalmente se
+    ejecuta en uno o varios nodos de mayor rendimiento y ancho de banda que sirven a cientos o miles de usuarios conectado
+    a una red. Los servicios de datos tienden a cambiar cuando la representación y las relaciones entre la información
+    relacionada cambian.
+</p>
+<p>
+    Los servicios empresariales reflejan el conocimiento codificado de los procesos empresariales. Estos servicios
+    manipulan y sintetizan la información que se obtiene de los servicios de datos y se la proporcionan a los servicios de
+    aplicación. Los servicios empresariales suelen utilizarlos muchos usuarios en común, por lo que normalmente se
+    encuentran también en servidores especializados, aunque pueden residir en los mismos nodos que los servicios de datos.
+</p>
+<p>
+    La partición de la funcionalidad en estas líneas proporciona un patrón relativamente fiable para la escalabilidad: al
+    añadir servidores y reequibilibrar el proceso en los servidores empresariales y de datos, se consigue una grado mayor
+    de escalabilidad.
+</p>
+<h4>
+    <a id="The 'Fat Client Architecture'" name="The 'Fat Client Architecture'">La 'arquitectura del cliente
+    importante'</a><a key="arquitectura" text="cliente importante" name="XE_architecture__fat-client" id="XE_architecture__fat-client" class="index"></a><a key="patrones de distribución" text="arquitectura de cliente importante" name="XE_distribution_patterns__fat-client_architecture" id="XE_distribution_patterns__fat-client_architecture" class="index"></a>
+</h4>
+<p>
+    El cliente es "importante" porque casi todas las aplicaciones se ejecutan en él (excepto en una variación, llamada
+    'arquitectura de 2 niveles', donde los servicios de datos se ubican en un nodo separado). Los servicios de
+    aplicaciones, los servicios empresariales y los servicios de datos residen en la máquina del cliente; por lo general,
+    el servidor de bases de datos se encuentra en otra máquina.
+</p>
+<p align="center">
+    <img src="./../../../core.base_rup/guidances/concepts/resources/2-tier.gif" alt="Diagrama descrito en el contenido." width="166" height="174" />
+</p>
+<p class="picturetext">
+    Arquitectura tradicional de 2 niveles o de "cliente importante"
+</p>
+<p>
+    Los 'clientes importantes' son relativamente sencillos de diseñar y construir, pero más difíciles de distribuir (suelen
+    ser grandes y monolíticos) y mantener. Dado que las máquinas del cliente suelen guardar los datos en antememoria local
+    para mejorar el rendimiento, la coherencia de la antememoria local es un aspecto que se merece una atención especial.
+    Los cambios de objetos compartidos que se encuentran en varias antememorias locales son difíciles de coordinar y caros,
+    puesto que incluyen la difusión de los cambios en la red.
+</p>
+<h4>
+    <a id="Web Application" name="Web Application">La 'arquitectura de servidor importante'</a><a key="arquitectura" text="servidor importante" name="XE_architecture__fat-server" id="XE_architecture__fat-server" class="index"></a><a key="patrones de distribución" text="arquitectura de servidor importante" name="XE_distribution_patterns__fat-server_architecture" id="XE_distribution_patterns__fat-server_architecture" class="index"></a>
+</h4>
+<p>
+    En el otro extremo del espectro del 'cliente importante' se encuentran el 'servidor importante' o el 'cliente
+    anoréxico'. Un ejemplo típico es la aplicación del navegador web que ejecuta un conjunto de páginas HTML, el cliente
+    dispone de una parte muy pequeña de la aplicación. Casi todo el trabajo tiene lugar en uno o varios servidores web y
+    servidores de datos.
+</p>
+<p align="center">
+    <img src="./../../../core.base_rup/guidances/concepts/resources/dpatt04.gif" alt="Diagrama descrito en el contenido." width="166" height="174" />
+</p>
+<p class="picturetext">
+    Aplicación web
+</p>
+<p>
+    Las aplicaciones web son fáciles de distribuir y de cambiar. Su desarrollo y soporte es relativamente económico (puesto
+    que gran parte de la infraestructura de la aplicación la proporcionan el navegador y el servidor web). No obstante, es
+    posible que no proporcionen el grado deseado de control sobre la aplicación y tienden a saturar la red rápidamente si
+    no están bien diseñadas (y, a veces, a pesar de estar bien diseñadas).
+</p>
+<h4>
+    <a id="Distributed Client/Server" name="Distributed Client/Server">Arquitectura de cliente/servidor distribuido</a><a key="arquitectura" text="cliente/servidor distribuido" name="XE_architecture__distributed_client/server" id="XE_architecture__distributed_client/server" class="index"></a><a key="patrones de distribución" text="arquitectura de cliente/servidor distribuida" name="XE_distribution_patterns__distributed_client/server_architecture" id="XE_distribution_patterns__distributed_client/server_architecture" class="index"></a>
+</h4>
+<p>
+    En esta arquitectura, los servicios de datos, empresariales y de la aplicación residen en nodos diferentes,
+    potencialmente con la especialización de servidores en los niveles de servicios empresariales y servicios de datos. Una
+    realización completa de una arquitectura de tres niveles.
+</p>
+<h3>
+    <a id="The Peer-to-Peer Architecture" name="The Peer-to-Peer Architecture">La arquitectura de similar a similar</a><a key="arquitectura" text="de similar a similar" name="XE_architecture__peer-to-peer" id="XE_architecture__peer-to-peer" class="index"></a><a key="patrones de distribución" text="arquitectura de similar a similar" name="XE_distribution_patterns__peer-to-peer_architecture" id="XE_distribution_patterns__peer-to-peer_architecture" class="index"></a>
+</h3>
+<p>
+    En la arquitectura de similar a similar, cualquier proceso o nodo del sistema puede ser cliente <b>y</b> servidor. La
+    distribución de funciones se consigue mediante la agrupación de servicios interrelacionados para minimizar el tráfico
+    de la red al tiempo que se maximiza el rendimiento y la utilización del sistema. Estos sistemas suelen ser complejos;
+    además, hay una mayor necesidad de conocer aspectos como puntos muertos, inanición entre procesos y manejo de errores.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

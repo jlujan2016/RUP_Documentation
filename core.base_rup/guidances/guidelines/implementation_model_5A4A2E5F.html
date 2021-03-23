@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Modelo de implementaci&oacute;n</title>
+<meta content="Guideline" name="uma.type">
+<meta content="implementation_model" name="uma.name">
+<meta content="Modelo de implementaci&oacute;n" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_M6RHkN7IEdm8G6yT7-Wdqw", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "2.012199185622896E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "2.012199185622896E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.012199185622896E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_M6RHkN7IEdm8G6yT7-Wdqw", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "2.012199185622896E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.012199185622896E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Modelo de implementaci&oacute;n</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">El modelo de implementación modela, principalmente, los subsistemas de implementación, que incluyen dependencias y otra información de gestión. En esta directriz se describe su objetivo y estructura.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">Modelo de implementación</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a key="modelo de implementación" text="explicación de" name="XE_implementation_model__explanation_of" id="XE_implementation_model__explanation_of" class="index"></a><a id="Explanation" name="Explanation"></a>Explicación
+</h3>
+<p>
+    En el entorno de programación, una implementación está compuesta por elementos de implementación, que incluyen archivos
+    de código fuente, archivos binarios, y archivos de datos, organizados en directorios. Además de estos elementos de
+    nivel bajo, a menudo aparece la necesidad de crear unidades de nivel más elevado de gestión, los subsistemas de
+    implementación, que agrupan elementos de implementación y otros subsistemas de implementación.
+</p>
+<p>
+    El modelo de implementación modela, principalmente, los subsistemas de implementación, que incluyen dependencias y otra
+    información de gestión. También puede modelar elementos clave de un subsistema de implementación, como archivos
+    desplegables, o estructuras de directorio.
+</p>
+<p class="picturecenter" align="center">
+    <img height="195" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_impm2.gif" width="163" />
+</p>
+<p class="picturetext">
+    La notación en el modelo de implementación. Las flechas muestran posibles propiedades.
+</p>
+<p>
+    Existe, opcionalmente, un paquete que sirve como nodo de nivel más alto (raíz) en el modelo de implementación. Los
+    paquetes, estereotipados como &lt;&lt;subsistemas de implementación&gt;&gt; agrupan los elementos de implementación
+    (archivos y directorios) y otros subsistemas de implementación.
+</p>
+<h5>
+    Ejemplo:
+</h5>
+<p class="example">
+    En un sistema bancario, los subsistemas de implementación se organizan como estructuras planas en el nodo de nivel más
+    alto del modelo de implementación. Otro modo de visualizar los subsistemas en el modelo de implementación es en capas.
+    (Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/import_dependency_in_implementation_20C8C9DC.html" guid="2.390918925290993E-305">Directriz de producto de trabajo: Dependencia de importación</a>).
+</p>
+<p class="picturecenter" align="center">
+    <img height="155" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_impm3.gif" width="477" />
+</p>
+<p class="picturetext">
+    El modelo de implementación para un sistema bancario, que muestra la jerarquía de propiedad.
+</p>
+<p>
+    El modelo de implementación no sólo define la estructura básica de la implementación en términos de jerarquía de
+    subsistemas de implementación, sino que también puede mostrar las dependencias a importar entre los subsistemas de
+    implementación, las dependencias de compilación entre los elementos de implementación, y los diagramas que muestran
+    dependencias entre elementos del modelo de implementación y los elementos del modelo de diseño.
+</p>
+<p>
+    Para obtener más información, consulte:
+</p>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/import_dependency_in_implementation_20C8C9DC.html" guid="2.390918925290993E-305">Directriz: Dependencia de importación en implementación</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/compilation_dependency_in_implementation_BED92496.html" guid="6.725844217842153E-306">Directriz: Dependencia de compilación en implementación</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/manifest_dependency_5790834E.html" guid="7.405934676741527E-306">Directriz: Dependencia de manifiesto</a>
+    </li>
+</ul>
+<h3>
+    <a id="Use" name="Use"></a>Utilización
+</h3>
+<p>
+    El modelo de implementación se centra en la preocupación de la organización física del software en términos de
+    subsistemas de implementación y elementos de implementación. De forma opcional, puede crear un único modelo que
+    solucione la implementación física y el diseño lógico en un único modelo. Esto es común en un enfoque de ingeniería
+    directa e inversa que sincroniza los archivos de código fuente con un modelo de implementación/diseño combinado.
+</p>
+<p>
+    La organización de los subsistemas de implementación puede ser más o menos próxima al modelo de diseño, dependiendo de
+    cómo decida correlacionar entre estos dos modelos. Esta es una decisión de proceso que debe capturarse en las
+    directrices de diseño específicas al proyecto. Cuando la correlación es exacta, es decir, cada subsistema de
+    implementación también es un subsistema de diseño, puede crear diagramas que se centran en un único subsistema de
+    diseño, resumiendo el diseño y su implementación.
+</p>
+<p>
+    Para obtener más información, sobre cómo estructurar el modelo de implementación, y correlacionar entre los modelos de
+    diseño e implementación, consulte los apartados <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/mapping_from_design_to_code_D1454680.html" guid="1.424219730601675E-305">Técnica: Diseño de correlación para código</a>, <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">Tarea: Estructurar el modelo de implementación</a> y <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/implementation_element_ECCAA21E.html" guid="1.0315418523886092E-305">Directriz: Elemento de implementación</a>.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

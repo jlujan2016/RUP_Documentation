@@ -1,0 +1,594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Artefacto: Documento de arquitectura de software</title>
+<meta content="Artifact" name="uma.type">
+<meta content="rup_software_architecture_document" name="uma.name">
+<meta content="Documento de arquitectura de software" name="uma.presentationName">
+<meta content="@Type:@Name:@DisplayName" name="uma.category">
+<meta content="WorkProductType:specification:Especificaci&oacute;n" name="uma.category">
+<meta content="Artifact" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3aJCcN7REdmjRZts2c4ZjQ", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_m8lcIDIyEduePY7oPsXsLA", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Artefacto: Documento de arquitectura de software</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../core.base_rup/workproducts/resources/doc_artf.jpg"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Este producto de trabajo proporciona una visión general arquitectónica completa del sistema, mediante una serie de vistas arquitectónicas diferentes para representar diferentes aspectos del sistema.</td>
+</tr>
+<tr>
+<td>Dominios: <a href="./../../core.base_rup/domains/analysis_and_design_BD3BBB1D.html" guid="_kjFBYN7HEdm8G6yT7-Wdqw">Análisis y diseño</a>
+<br>Clases de producto de trabajo: <a href="./../../core.base_rup/workproducttypes/specification_435F570D.html" guid="_3aJCcN7REdmjRZts2c4ZjQ">Especificación</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="Purpose" name="Purpose"></a> 
+<p>
+    El documento de arquitectura de software proporciona una visión general completa de la arquitectura del sistema de
+    software. Sirve como medio de comunicación entre el <b>arquitecto de software</b> y otros <b>miembros del equipo de
+    proyectos</b> respecto a las decisiones significativas para la arquitectura que se llevan a cabo en el proyecto.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Responsable:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Arquitecto de software</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Modificado por:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/roles/sec_security_architect_277ED003.html" guid="_zseEkDIxEduePY7oPsXsLA">Arquitecto de seguridad</a>
+</li>
+<li>
+<a href="./../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Arquitecto de software</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Tareas</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Entrada a:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/tasks/construct_arch_proof_145E3656.html" guid="{63D0BC8C-1FE9-48F7-9B03-B2394C11DCB5}">Construir arquitectura de prueba de concepto</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_construct_arch_proof_F12BF33D.html" guid="_XHRjoEw5EduGSMz-5zscXg">Construir prueba de concepto arquitect&oacute;nica (SOA)</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_realization_66984C2B.html" guid="_V6uMMCwUEduKcvYAyaKSaA">Decisiones de realizaci&oacute;n de servicio de documentos</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/define_test_approach_51A370C3.html" guid="{87F96887-83EF-4F0F-8F79-E98043406B52}">Definir el enfoque de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/define_test_environment_configurations_605902BA.html" guid="{187268D3-3166-4823-8DD8-5E1112004AC3}">Definir las configuraciones del entorno de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">Describir la arquitectura de tiempo de ejecuci&oacute;n</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/describe_distribution_9BA1477C.html" guid="{6A112808-0A90-427A-BAB9-E14F3FBF72B5}">Describir la distribuci&oacute;n</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_specification_AB6BA763.html" guid="{9EB2B302-79F6-4DF8-AEB7-98E6AC1756DD}">Especificaci&oacute;n de servicio</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/identify_testability_mechanisms_9EE13DB9.html" guid="{28208FC5-9C66-42D1-8E27-11DDE41EB654}">Identificar los mecanismos de comprobabilidad</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/identify_test_motivators_90F5CA76.html" guid="{63DEBA87-184B-4B50-BBDC-D0E2ADAB7C2D}">Identificar motivadores de prueba</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/sec_identify_security_patterns_1953748F.html" guid="_m8lcIDIyEduePY7oPsXsLA">Identificar patrones de seguridad</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/incorporate_design_elements_D3C582B5.html" guid="{5C647173-4E32-4594-96A9-2548B47722FA}">Incorporar elementos de dise&ntilde;o existentes</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/prioritize_use_cases_E6E4D9A0.html" guid="{6E23D919-D149-43C2-9D37-8AF77B667CA8}">Priorizar los guiones de uso</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/review_the_architecture_D27975CC.html" guid="{35BAFA92-EAF9-41E8-8BDE-AB9B61A68E04}">Revisar la arquitectura</a>
+</li>
+</ul>
+<br>
+<ul>
+<li>
+<a href="./../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">An&aacute;lisis de caso de uso</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">An&aacute;lisis de la arquitectura</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/define_test_approach_51A370C3.html" guid="{87F96887-83EF-4F0F-8F79-E98043406B52}">Definir el enfoque de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/develop_iteration_plan_144CF253.html" guid="{50EDC6A8-97B0-46C1-9B1C-7630DE286841}">Desarrollar el plan de iteraci&oacute;n</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/identify_test_targets_693323A6.html" guid="{FFBDC174-FA91-4712-ABE2-7580A5670E8D}">Identificar destinos de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identificar elementos de dise&ntilde;o</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/identify_test_ideas_395DAB3B.html" guid="{6FAD9DF9-DE4E-4BA5-9B9B-482A2366D1B9}">Identificar ideas de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}">Identificar mecanismo de dise&ntilde;o</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/implement_component_AE366827.html" guid="{3293F4F7-EFCD-4476-BFF1-81AC3812B512}">Implementar elementos de dise&ntilde;o</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/obtain_testability_commitment_90A71C20.html" guid="{4052BFA5-036E-4BBE-B344-4BF5D81A4DD6}">Obtener confirmaci&oacute;n de comprobabilidad</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Salida de:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">An&aacute;lisis de la arquitectura</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">Describir la arquitectura de tiempo de ejecuci&oacute;n</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/describe_distribution_9BA1477C.html" guid="{6A112808-0A90-427A-BAB9-E14F3FBF72B5}">Describir la distribuci&oacute;n</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">Estructurar el modelo de implementaci&oacute;n</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}">Identificar mecanismo de dise&ntilde;o</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/sec_identify_security_patterns_1953748F.html" guid="_m8lcIDIyEduePY7oPsXsLA">Identificar patrones de seguridad</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/incorporate_design_elements_D3C582B5.html" guid="{5C647173-4E32-4594-96A9-2548B47722FA}">Incorporar elementos de dise&ntilde;o existentes</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/prioritize_use_cases_E6E4D9A0.html" guid="{6E23D919-D149-43C2-9D37-8AF77B667CA8}">Priorizar los guiones de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Uso del proceso</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">Análisis y diseño</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/define_a_candidate_architecture_A3651DA3.html" guid="{71ADFE9A-34A0-41BD-8A17-BEA3210E2BBD}">Definir una arquitectura candidata</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_DAF8531C.html" guid="_Pu3DAUocEdqrjq4i3fchvA">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">Análisis y diseño</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/perform_architectural_synthesis_B63930B9.html" guid="{C67C8E56-D9B6-499C-8171-C153FB28F1C3}">Realizar la síntesis arquitectónica</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_40590572.html" guid="_COQSIxi2Edq_uI8xTPML6g">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">Análisis y diseño</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/refine_the_architecture_F40FA195.html" guid="{F2160C54-F666-4736-9982-FC7F58F15FAD}">Perfeccionar la arquitectura</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_7A057157.html" guid="_COWYthi2Edq_uI8xTPML6g">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">Análisis y diseño</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/analyze_behavior_59C89065.html" guid="{DAFB461E-9ADB-4849-8285-B7E3E72BDB43}">Analizar el comportamiento</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_ED082073.html" guid="_CQXK5Ri2Edq_uI8xTPML6g">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/implementation_8FF0AAD4.html" guid="{F2AD342D-0F3B-4E19-A351-75ECDCB806F5}">Implementación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/implement_components_AFD1799D.html" guid="{4DC6F53E-1FE1-44EE-812B-003D3BD1ACEA}">Implementar componentes</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_70A46067.html" guid="_FVsIYEofEdqrjq4i3fchvA">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/implementation_8FF0AAD4.html" guid="{F2AD342D-0F3B-4E19-A351-75ECDCB806F5}">Implementación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/structure_the_implementation_model_505A84E.html" guid="{4C4FF747-885B-4569-A462-756C8ADD79AB}">Estructurar el modelo de implementación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_A98EE1BE.html" guid="_AS-cdEofEdqrjq4i3fchvA">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/project_management_FC6669AF.html" guid="{EA0C1D32-E39A-4D96-B956-E178DB776A96}">Gestión de proyectos</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/plan_for_next_iteration_55840038.html" guid="{8040B743-6467-4067-8C0F-E62C3DE99414}">Planear la siguiente iteración</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_D468EC0F.html" guid="_TI1SsUogEdqrjq4i3fchvA">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/project_management_FC6669AF.html" guid="{EA0C1D32-E39A-4D96-B956-E178DB776A96}">Gestión de proyectos</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/Plan Remainder of Initial Iteration_F7FF0FA5.html" guid="_342gUBstEdqXHNTdjKtnvA">Planificar el resto de la iteración inicial</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_9CAE0F63.html" guid="__mSgIUofEdqrjq4i3fchvA">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/requirements_4EE062EE.html" guid="{38A9C609-9A59-4D03-B835-AA84A716E626}">Requisitos</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/manage_the_scope_of_the_system_7E0B34E5.html" guid="{CA9197A9-051E-4845-A7FC-2A8750BD8C02}">Gestionar el ámbito del sistema</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_37F3A599.html" guid="_BCzRoDneEdqxANP9kNH4WA">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">Prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/verify_test_approach_A743008A.html" guid="{7BD514AF-19F9-408F-8279-309BD153C157}">Verificar el enfoque de prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_8A557B7B.html" guid="_CTmsIxi2Edq_uI8xTPML6g">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">Prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/improve_test_assets_1C99FFB9.html" guid="{CD77CBDA-CC13-4593-BB81-41AF3FF7A84C}">Mejorar los activos de prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_3538707C.html" guid="_s10jYEoiEdqrjq4i3fchvA">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">Prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/define_evaluation_mission_611C79D9.html" guid="{10C2C34C-BF5E-4825-A7DC-5E106EFAA4C5}">Definir la misión de evaluación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_8A01A65B.html" guid="_CWRlphi2Edq_uI8xTPML6g">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">Prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/test_and_evaluate_4D17BD6A.html" guid="{93B7D625-C83A-4EFB-9772-B88F2EB02CE2}">Probar y evaluar</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_AF7C6E88.html" guid="_-1-yo0ohEdqrjq4i3fchvA">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/specify_services_45CC7C36.html" guid="_6Jd70DtdEdqPaeZADstHAA">Especificación de servicios</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/capabilitypatterns/soa_specify_services_D308DA60.html" guid="_zL1rsEn2EduC74V7YHXTOQ">Realizar especificación de servicio</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/capabilitypatterns/rup_software_architecture_document_8480F5F9.html" guid="_MZwFo0n3EduC74V7YHXTOQ">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/specify_services_45CC7C36.html" guid="_6Jd70DtdEdqPaeZADstHAA">Especificación de servicios</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/capabilitypatterns/rup_software_architecture_document_3DF74E3D.html" guid="_baZY8SxsEdupJ8eX04kqLQ">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/identify_services_E19D7DB7.html" guid="_HTHEkCv-EduYBoDegGQopA">Identificación de servicio</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/capabilitypatterns/existing_asset_analysis_4B247136.html" guid="_7ZObICxuEdupJ8eX04kqLQ">Análisis de activos existentes</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/capabilitypatterns/rup_software_architecture_document_6762583C.html" guid="_n_g78E-CEdu0EMZ-3o0kDQ">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/realize_services_144C564E.html" guid="_RRv38Sv-EduYBoDegGQopA">Realización de servicios</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/capabilitypatterns/realization_decisions_A107742A.html" guid="_QR1wQE-DEdu0EMZ-3o0kDQ">Decisiones de realización</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/capabilitypatterns/rup_software_architecture_document_E9FE5B22.html" guid="_jSqV0U-DEdu0EMZ-3o0kDQ">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/realize_services_144C564E.html" guid="_RRv38Sv-EduYBoDegGQopA">Realización de servicios</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/capabilitypatterns/rup_software_architecture_document_D9680191.html" guid="_TS_lYy1bEdudYLeyb_y9tw">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/soa_classic_A0ACDC3D.html" guid="_ilyyoSv-EduYBoDegGQopA">Arquitectura y modelado orientado a servicios de RUP</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/identification_A866B1BE.html" guid="_JPlS4En7EduC74V7YHXTOQ">Identificación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/existing_asset_analysis_37A1D260.html" guid="_cTTmwU9yEdu0EMZ-3o0kDQ">Análisis de activos existentes</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/rup_software_architecture_document_3CF1A2BF.html" guid="_sr-eUE9yEdu0EMZ-3o0kDQ">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/soa_classic_A0ACDC3D.html" guid="_ilyyoSv-EduYBoDegGQopA">Arquitectura y modelado orientado a servicios de RUP</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/specification_B2BFB5FC.html" guid="_VCMlUEn7EduC74V7YHXTOQ">Especificación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/perform_service_specification_F39D2B86.html" guid="_jx0KQU9zEdu0EMZ-3o0kDQ">Realizar especificación de servicio</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/model_service_dependencies_571DE22.html" guid="_7yvP1E93Edu0EMZ-3o0kDQ">Dependencias de servicio del modelo</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/rup_software_architecture_document_40DFFC03.html" guid="_7yvP0E93Edu0EMZ-3o0kDQ">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/soa_classic_A0ACDC3D.html" guid="_ilyyoSv-EduYBoDegGQopA">Arquitectura y modelado orientado a servicios de RUP</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/specification_B2BFB5FC.html" guid="_VCMlUEn7EduC74V7YHXTOQ">Especificación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/perform_service_specification_F39D2B86.html" guid="_jx0KQU9zEdu0EMZ-3o0kDQ">Realizar especificación de servicio</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/model_service_composition_flows_ED047664.html" guid="_-iVClU93Edu0EMZ-3o0kDQ">Composición y flujos de servicios del modelo</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/rup_software_architecture_document_DB9D8A7A.html" guid="_-iVClk93Edu0EMZ-3o0kDQ">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/soa_classic_A0ACDC3D.html" guid="_ilyyoSv-EduYBoDegGQopA">Arquitectura y modelado orientado a servicios de RUP</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/specification_B2BFB5FC.html" guid="_VCMlUEn7EduC74V7YHXTOQ">Especificación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/perform_service_specification_F39D2B86.html" guid="_jx0KQU9zEdu0EMZ-3o0kDQ">Realizar especificación de servicio</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/document_service_non_functional_requirements_4C0989EE.html" guid="_APw0xk94Edu0EMZ-3o0kDQ">Requisitos no funcionales de servicio de documentos</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/rup_software_architecture_document_A3FF215B.html" guid="_AP9CA094Edu0EMZ-3o0kDQ">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/soa_classic_A0ACDC3D.html" guid="_ilyyoSv-EduYBoDegGQopA">Arquitectura y modelado orientado a servicios de RUP</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/specification_B2BFB5FC.html" guid="_VCMlUEn7EduC74V7YHXTOQ">Especificación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/perform_service_specification_F39D2B86.html" guid="_jx0KQU9zEdu0EMZ-3o0kDQ">Realizar especificación de servicio</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/document_service_state_management_decisions_8B2750BF.html" guid="_DFMw0094Edu0EMZ-3o0kDQ">Decisiones de gestión de estado de servicio de documentos</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/rup_software_architecture_document_4FB932DE.html" guid="_DFMw1094Edu0EMZ-3o0kDQ">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/soa_classic_A0ACDC3D.html" guid="_ilyyoSv-EduYBoDegGQopA">Arquitectura y modelado orientado a servicios de RUP</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/realization_B26A499B.html" guid="_o0lxwEn7EduC74V7YHXTOQ">Realización</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/realization_decisions_4A3EAB68.html" guid="_abmvMU97Edu0EMZ-3o0kDQ">Decisiones de realización</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/rup_software_architecture_document_1FD84BE4.html" guid="_r6BG0U97Edu0EMZ-3o0kDQ">Documento de arquitectura de software</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Ilustraciones	</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Plantillas</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../extend.formal_resources/guidances/templates/software_architecture_document_CE85F5AC.html" guid="4.2229498175651736E-306">Software Architecture Document</a>
+</li>
+<li>
+<a href="./../../core.informal_resources/guidances/templates/software_architecture_document_informal_146E1F0.html" guid="1.803811802464695E-305">Software Architecture Document (Informal)</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Ejemplos</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../extend.formal_resources/guidances/examples/creg_software_architecture_document_-_elaboration_phase_36AF32DD.html" guid="8.494805729406984E-307">CREG Software Architecture Document - Elaboration Phase</a>
+</li>
+<li>
+<a href="./../../core.informal_resources/guidances/examples/csps_software_architecture_document_-_elaboration_phase_66B745FA.html" guid="1.8186460940456451E-305">CSPS Software Architecture Document - Elaboration Phase</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Personalizaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Opciones de representaci&oacute;n</th><td class="sectionTableCell">Representación UML: Un conjunto de vistas de arquitectura relevantes: guión de uso, lógica, proceso, despliegue,
+implementación, datos. 
+<p>
+    <a id="Tailoring" name="Tailoring"></a>
+</p>
+<p>
+    Debe ajustar la esquematización del <b>Documento de arquitectura de software</b> para que se adecue a la naturaleza del
+    software:
+</p>
+<ul>
+    <li>
+        Algunas vistas arquitectónicas pueden ser irrelevantes: 
+        <ul>
+            <li>
+                La vista de despliegue no es necesaria para sistemas de CPU única.
+            </li>
+            <li>
+                La vista de proceso no es necesaria si el sistema utiliza solo una hebra única de control.
+            </li>
+            <li>
+                La vista de datos no es necesaria a menos que la permanencia de un objeto sea un aspecto significativo del
+                sistema <b>y</b> el mecanismo de permanencia requiera una correlación entre objetos permanentes y no
+                permanentes.
+            </li>
+        </ul>
+    </li>
+    <li>
+        Algunos aspectos específicos del software pueden requerir su propia sección; por ejemplo, aspectos relacionados con
+        la gestión de datos o cuestiones de utilización.
+    </li>
+    <li>
+        Es posible que necesite apéndices adicionales para explicar ciertos aspectos, como los fundamentos de ciertas
+        elecciones críticas, junto con las soluciones que se han eliminado, o para definir acrónimos o abreviaturas, o
+        principios de diseño generales presentes.
+    </li>
+    <li>
+        El orden de las diferentes secciones puede variar, dependiendo de los interesados del sistema y sus enfoques o
+        intereses.
+    </li>
+</ul>
+<p>
+    A continuación se muestran las ventajas e inconvenientes de cada vista de la arquitectura:
+</p>
+<h4>
+    Vista de guión de uso
+</h4>
+<blockquote>
+    <p>
+        <b>Esta vista es obligatoria.</b>
+    </p>
+</blockquote>
+<h4>
+    Vista lógica
+</h4>
+<blockquote>
+    <p>
+        <b>Esta vista es obligatoria.</b>
+    </p>
+</blockquote>
+<h4>
+    Vista de proceso
+</h4>
+<blockquote>
+    <p>
+        <b>Esta vista es opcional.</b> Utilice esta vista sólo si el sistema tiene más de una hebra de control, y las
+        hebras separadas interactúan o son dependientes entre sí.
+    </p>
+</blockquote>
+<h4>
+    Vista de despliegue
+</h4>
+<blockquote>
+    <p>
+        <b>Esta vista es opcional.</b> Utilice esta vista sólo si el sistema está distribuido entre más de un nodo. Incluso
+        en estos casos, utilice sólo la vista de despliegue donde la distribución tenga implicaciones arquitectónicas. Por
+        ejemplo, en los casos en que existe un único servidor y muchos clientes, una vista de despliegue sólo es necesaria
+        para delinear las responsabilidades del servidor y los clientes como una clase de nodos; no es necesario mostrar
+        cada nodo cliente si todos tienen las mismas posibilidades.
+    </p>
+</blockquote>
+<h4>
+    Vista de implementación
+</h4>
+<blockquote>
+    <p>
+        <b>Esta vista es opcional.</b> Utilice esta vista sólo en los casos en que la implementación no esté dirigida
+        estrictamente a partir del diseño, es decir, donde haya una distribución diferente de responsabilidades entre los
+        paquetes correspondientes en los modelos de diseño e implementación. Si los paquetes de los modelos de diseño e
+        implementación son idénticos, esta vista se puede omitir.
+    </p>
+</blockquote>
+<h4>
+    Vista de datos
+</h4>
+<blockquote>
+    <p>
+        <b>Esta vista es opcional.</b> Utilice esta vista sólo si la permanencia es un aspecto significativo del sistema y
+        la traducción del modelo de diseño al modelo de datos no se efectúa automáticamente con el mecanismo de
+        permanencia.
+    </p>
+</blockquote><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Listas de comprobaci&oacute;n</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/checklists/software_architecture_document_D261D8F3.html" guid="7.634303669338443E-306">Documento de arquitectura de software</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Conceptos</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/software_architecture_4269A354.html" guid="3.066252221588648E-305">Arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/logical_view_C135365E.html" guid="6.901347907565747E-305">Vista lógica</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/process_view_E3DD0B09.html" guid="6.45284088262517E-306">Vista de proceso</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/implementation_view_E373E3B6.html" guid="4.693519701160983E-305">Vista de implementación</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/deployment_view_64CB74A6.html" guid="2.8416696002928195E-305">Vista de despliegue</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/use-case_view_11F15731.html" guid="6.820983346069146E-305">Vista de guión de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/software_architecture_document_F4C93435.html" guid="2.9494785550310917E-305">Documento de arquitectura de software</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

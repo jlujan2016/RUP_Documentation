@@ -1,0 +1,926 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Tarea: Dise&ntilde;o de subsistema (SOA)</title>
+<meta content="Task" name="uma.type">
+<meta content="soa_subsystem_design" name="uma.name">
+<meta content="Dise&ntilde;o de subsistema (SOA)" name="uma.presentationName">
+<meta content="Discipline:rup_analysis_design_discipline:An&aacute;lisis y dise&ntilde;o" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="Dise&ntilde;ador">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "{FACE1697-1CB6-4F57-8B39-ED507BE7006F}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_ydt62NnmEdmO6L4XMImrsA", "{FACE1697-1CB6-4F57-8B39-ED507BE7006F}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "{FACE1697-1CB6-4F57-8B39-ED507BE7006F}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_IY0NkAISEdqTna4sZVFRow", "_ydt62NnmEdmO6L4XMImrsA", "{FACE1697-1CB6-4F57-8B39-ED507BE7006F}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "{FACE1697-1CB6-4F57-8B39-ED507BE7006F}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "{FACE1697-1CB6-4F57-8B39-ED507BE7006F}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', true, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="{FACE1697-1CB6-4F57-8B39-ED507BE7006F}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Dise&ntilde;o de subsistema (SOA)</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta tarea amplía el diseño de subsistema RUP tradicional con detalles específicos de una solución de arquitectura orientada a servicios, en concreto allí donde se identificaron sistemas a partir de modelos de análisis empresarial. Una vez hacemos la transición del dominio empresarial al dominio de TI, correlacionamos las áreas funcionales identificadas definidas por el primero a los subsistemas, sus contrapartidas de TI.</td>
+</tr>
+<tr>
+<td>Disciplinas: <a href="./../../core.base_rup/disciplines/rup_analysis_design_discipline_29760231.html" guid="_ydt62NnmEdmO6L4XMImrsA">Análisis y diseño</a>
+<br>Ampl&iacute;a: <a href="./../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}">Diseño del subsistema</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    Para enlazar los modelos empresariales con sus contrapartidas de TI, realizamos lo siguiente:
+</p>
+<ul>
+    <li>
+        Identificar la relación entre áreas funcionales (<a class="elementLinkWithUserText" href="./../../extend.bus_model/guidances/concepts/functional_area_analysis_567CE669.html" guid="_sQzD0EoEEdulkMoCrqQK_Q">Concepto: Análisis de áreas funcionales</a>) del <a class="elementLinkWithUserText" href="./../../extend.bus_model/workproducts/rup_business_analysis_model_9449F63A.html" guid="{CF53445C-3351-46C6-810E-8251830029A7}">Artefacto: Modelo de análisis empresarial</a>&nbsp;con el &nbsp;<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">Artefacto: Diseñar subsistema</a> correspondiente.
+    </li>
+    <li>
+        Definir los comportamientos especificados en las interfaces del subsistema en términos de colaboraciones de
+        elementos de diseño contenidos y subsistemas/interfaces externos.
+    </li>
+    <li>
+        Documentar la estructura interna del subsistema, desde el punto de vista del <a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_svce_component_E259F3CC.html" guid="{447385A0-E565-4C87-A082-402AF21CA088}">Artefacto: Componente de servicio</a> que ejecuta el subsistema.
+    </li>
+    <li>
+        Definir las realizaciones entre las interfaces del subsistema y los componentes y clases que contiene.
+    </li>
+    <li>
+        Determinar las dependencias en otros subsistemas.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Realizador principal:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Dise&ntilde;ador</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Otras actividades adicionales que realiza:
+								</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../extend.bus_model/workproducts/rup_business_analysis_model_9449F63A.html" guid="{CF53445C-3351-46C6-810E-8251830029A7}">Business Analysis Model</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_interface_9816B54F.html" guid="{C6938487-1DAA-4F6A-B3BC-CB99165F0680}">Interfaz</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">Subsistema de dise&ntilde;o</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../modernize.legacy_evol/workproducts/database_migration_specification_5091901D.html" guid="{24309CAC-2A58-4011-B0F0-0A7D2FD58AEA}">Data Migration Specification</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_project_specific_guidelines_8DC8DA32.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">Directrices espec&iacute;ficas del proyecto</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Modelo de dise&ntilde;o</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/workproducts/soa_service_model_623494B9.html" guid="{E24679B7-19F1-483B-A1F1-578839C43888}">Modelo de servicio</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_capsule_FC4A34FD.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">C&aacute;psula</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Clase de dise&ntilde;o</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_interface_9816B54F.html" guid="{C6938487-1DAA-4F6A-B3BC-CB99165F0680}">Interfaz</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Modelo de dise&ntilde;o</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">Subsistema de dise&ntilde;o</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Uso del proceso</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/specify_services_45CC7C36.html" guid="_6Jd70DtdEdqPaeZADstHAA">Especificación de servicios</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/capabilitypatterns/soa_subsystem_analysis_40CEBC0B.html" guid="_WjrjAEn3EduC74V7YHXTOQ">Realizar análisis de subsistema</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/capabilitypatterns/soa_subsystem_design_F5793D14.html" guid="_WhgqgUxBEduGSMz-5zscXg">Diseño de subsistema (SOA)</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/soa_classic_A0ACDC3D.html" guid="_ilyyoSv-EduYBoDegGQopA">Arquitectura y modelado orientado a servicios de RUP</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/specification_B2BFB5FC.html" guid="_VCMlUEn7EduC74V7YHXTOQ">Especificación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/soa_subsystem_analysis_54ABA3CF.html" guid="_mnSJQU94Edu0EMZ-3o0kDQ">Realizar análisis de subsistema</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/model_subsystem_dependencies_B429825C.html" guid="_yBx2oU94Edu0EMZ-3o0kDQ">Dependencias del subsistema de modelo</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/soa_subsystem_design_BD10C1AC.html" guid="_ZhKyIE95Edu0EMZ-3o0kDQ">Dependencias del subsistema de modelo</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/soa_classic_A0ACDC3D.html" guid="_ilyyoSv-EduYBoDegGQopA">Arquitectura y modelado orientado a servicios de RUP</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/specification_B2BFB5FC.html" guid="_VCMlUEn7EduC74V7YHXTOQ">Especificación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/soa_subsystem_analysis_54ABA3CF.html" guid="_mnSJQU94Edu0EMZ-3o0kDQ">Realizar análisis de subsistema</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/identify_service_component_2C4D9AD4.html" guid="_zB0-YU94Edu0EMZ-3o0kDQ">Identificar componente de servicio</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/soa_subsystem_design_64972A94.html" guid="_cafvsE95Edu0EMZ-3o0kDQ">Identificar componente de servicio</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/soa_classic_A0ACDC3D.html" guid="_ilyyoSv-EduYBoDegGQopA">Arquitectura y modelado orientado a servicios de RUP</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/specification_B2BFB5FC.html" guid="_VCMlUEn7EduC74V7YHXTOQ">Especificación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/soa_subsystem_analysis_54ABA3CF.html" guid="_mnSJQU94Edu0EMZ-3o0kDQ">Realizar análisis de subsistema</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/identify_functional_components_F62342EB.html" guid="_zsJGsU94Edu0EMZ-3o0kDQ">Identificar componentes funcionales</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/soa_subsystem_design_A3255BF0.html" guid="_c4ALEE95Edu0EMZ-3o0kDQ">Identificar componentes funcionales</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/soa_classic_A0ACDC3D.html" guid="_ilyyoSv-EduYBoDegGQopA">Arquitectura y modelado orientado a servicios de RUP</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/specification_B2BFB5FC.html" guid="_VCMlUEn7EduC74V7YHXTOQ">Especificación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/soa_subsystem_analysis_54ABA3CF.html" guid="_mnSJQU94Edu0EMZ-3o0kDQ">Realizar análisis de subsistema</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/identify_technical_components_5F9908B.html" guid="_0Zf78U94Edu0EMZ-3o0kDQ">Identificar componentes técnicos</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/soa_subsystem_design_9E8114F4.html" guid="_dPrrQE95Edu0EMZ-3o0kDQ">Identificar componentes técnicos</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    Empezamos con la determinación y la documentación de las dependencias entre subsistemas que corresponden a las áreas
+    funcionales que se han identificado durante la <a class="elementLinkWithUserText" href="./../../extend.bus_model/tasks/functional_area_analysis_FA3C6512.html" guid="_DdZsUEyBEdugTvBtC2ApIg">Tarea: Análisis de
+    áreas funcionales</a>. Normalmente, un área funcional corresponderá a un único subsistema; es decir, la asunción
+    simplificada que se considera precisa en muchos, si no la mayoría, de los casos. Si decidimos correlacionar un área
+    funcional con varios subsistemas, esto también puede ser viable y válido; pero normalmente significa que la
+    descomposición de dominio no fue lo suficientemente profunda y las áreas funcionales lo suficientemente granulares.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableSingleCell">
+<div class="stepHeading">Documentar origen de subsistema</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Durante la <a class="elementLinkWithUserText" href="./../../extend.bus_model/tasks/functional_area_analysis_FA3C6512.html" guid="_DdZsUEyBEdugTvBtC2ApIg">Tarea: Análisis de áreas funcionales</a>&nbsp;identificamos un conjunto de subsistemas
+    que se corresponden con la entrada recibida de una correlación empresarial de componentes (consulte <a class="elementLinkWithUserText" href="./../../extend.bus_model/guidances/concepts/business_component_modeling_527F8FC0.html" guid="_uKecsC7xEdu14aFGpEDchg">Concepto: Modelado empresarial de componentes</a>). Durante la descomposición de
+    procesos, los nodos de actividad de nivel inferior identificados (<a class="elementLinkWithUserText" href="./../../extend.bus_model/guidances/concepts/business_process_decomposition_C9A38841.html" guid="_vHtFUC7CEdu64PK-GeN94Q">Concepto: Descomposición de procesos empresariales</a>) se pueden colocar en los
+    subsistemas como las operaciones o los servicios que el subsistema, como fachada, proporcionará. La funcionalidad de
+    estas operaciones será ejecutada por los componentes funcionales del componente de servicio. Igualmente, puede elegir
+    agrupar esta operaciones&nbsp;en interfaces ofrecidas por el subsistema. Los requisitos no funcionales de
+    operación&nbsp;se utilizarán para extraer los servicios y componentes técnicos necesarios dentro del subsistema.
+</p>
+<p>
+    Es importante que la relación entre estos subsistemas&nbsp;identificados y su origen se mantengan en su sitio. En casos
+    en los que tanto los productos de trabajo de nivel empresarial como de modelo de servicio estén en UML, la información
+    de dependencia podrá fácilmente almacenarse en los modelos; en caso contrario, dicha información debería almacenarse en
+    la <a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/templates/soa_service_model_doc_950782A6.html" guid="_ZYHekE3eEduBbftZUgDxnQ">Plantilla: Modelo de servicio en Word</a> o mantenerse en un producto de trabajo
+    asociado.
+</p>
+<p>
+    <b>Consideraciones sobre ISV</b>: Los servicios se pueden ejecutar a través de subsistemas existentes como aplicaciones
+    personalizadas, paquetes de software y/o proveedores de software independientes. Como se explica en la siguiente
+    sección, en algunos casos, la identificación de nuevos subsistemas puede entrañar la agrupación física de servicios
+    basados en criterios como la afinidad de los datos, el coste, el rendimiento, etc., aunque la identificación de
+    subsistemas se hace normalmente de arriba a abajo durante la actividad Análisis de áreas funcionales. La asignación de
+    los componentes a los niveles de arquitectura, para satisfacer las restricciones arquitectónicas impuestas por
+    requisitos no funcionales,&nbsp;se&nbsp;explica en&nbsp;Realización de servicio.
+</p>
+<h4>
+    Ejemplo
+</h4>
+<p>
+    Los resultados del análisis de áreas funcionales para una agencia de alquiler de ejemplo era la siguiente tabla:<br />
+    <br />
+</p>
+<table cellspacing="2" cellpadding="2" width="100%" border="1">
+    <tbody>
+        <tr>
+            <th scope="col" width="25%">
+                Dominio
+            </th>
+            <th scope="col" width="25%">
+                Área funcional
+            </th>
+            <th scope="col" width="25%">
+                Subsistema
+            </th>
+            <th scope="col" width="25%">
+                Descripción
+            </th>
+        </tr>
+        <tr>
+            <td valign="top">
+                Marketing y gestión de clientes
+            </td>
+            <td valign="top">
+                Servicio al cliente
+            </td>
+            <td valign="top">
+                Servicio al cliente
+            </td>
+            <td valign="top">
+                Proporciona todas las funciones automáticas para el área funcional.
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                Productos
+            </td>
+            <td valign="top">
+                Gestión de promociones
+            </td>
+            <td valign="top">
+                Gestión de promociones
+            </td>
+            <td valign="top">
+                Proporciona todas las funciones automáticas para el área funcional.
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                Logística de flota de alquileres
+            </td>
+            <td valign="top">
+                Gestión de flota
+            </td>
+            <td valign="top">
+                Gestión de flota
+            </td>
+            <td valign="top">
+                Proporciona todas las funciones automáticas para el área funcional.
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                Gestión de alquileres
+            </td>
+            <td valign="top">
+                Alquiler
+            </td>
+            <td valign="top">
+                Alquiler
+            </td>
+            <td valign="top">
+                Proporciona todas las funciones automáticas para el área funcional.
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                Gestión de alquileres
+            </td>
+            <td valign="top">
+                Reservas
+            </td>
+            <td valign="top">
+                Reservas
+            </td>
+            <td valign="top">
+                Proporciona todas las funciones automáticas para el área funcional.
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                Gestión de alquileres
+            </td>
+            <td valign="top">
+                Determinación de precios
+            </td>
+            <td valign="top">
+                Determinación de precios
+            </td>
+            <td valign="top">
+                Proporciona todas las funciones automáticas para el área funcional.
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    El modelo de UML resultante de los subsistemas identificados anteriormente sería el siguiente. Observe que las
+    dependencias de subsistema ya se proporcionan en el modelo mostrado a continuación.
+</p>
+<p align="center">
+    <img height="194" alt="" src="./../../soa.rup_soma/tasks/./resources/subsystem_analysis-1.png" width="501" />
+</p>
+<p>
+    Para cada subsistema los detalles descritos por el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">Artefacto: Diseño de subsistema</a>&nbsp;deberían documentarse, o podrían
+    capturarse en el modelo de servicio de formato de documento (consulte <a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/templates/soa_service_model_doc_950782A6.html" guid="_ZYHekE3eEduBbftZUgDxnQ">Plantilla: Modelo de servicio en Word</a>), de forma similar a lo siguiente.<br />
+    <br />
+</p>
+<table cellspacing="2" cellpadding="2" width="100%" border="1">
+    <tbody>
+        <tr>
+            <td width="25%">
+                <b>Nombre</b>
+            </td>
+            <td width="75%">
+                Reserva
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Descripción</b>
+            </td>
+            <td>
+                El subsistema Reserva se utiliza para crear y gestionar reservas de alquiler de coches.
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <b>Interfaces</b>
+            </td>
+            <td>
+                <ul>
+                    <li>
+                        Reservar vehículo
+                    </li>
+                    <li>
+                        Modificar reserva
+                    </li>
+                    <li>
+                        Obtener información sobre opciones
+                    </li>
+                    <li>
+                        Confirmar contrato de alquiler
+                    </li>
+                    <li>
+                        Localizar reserva
+                    </li>
+                    <li>
+                        Cancelar reserva
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <b>Funciones</b>
+            </td>
+            <td>
+                <ul>
+                    <li>
+                        Reservar vehículo
+                    </li>
+                    <li>
+                        Modificar reserva
+                    </li>
+                    <li>
+                        Obtener información sobre opciones
+                    </li>
+                    <li>
+                        Confirmar contrato de alquiler
+                    </li>
+                    <li>
+                        Localizar reserva
+                    </li>
+                    <li>
+                        Cancelar reserva
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <b>Dependencias</b>
+            </td>
+            <td>
+                Ninguna
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <strong>Requisitos no funcionales</strong>
+            </td>
+            <td>
+                Ninguno
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<br />
+<br /></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Identificar y aplicar patrones de componentes de servicio</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    En la <a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/guidelines/service_component_patterns_A4634107.html" guid="_p_6wsExREdumvs0NuKFubw">Directriz: Patrones de componentes de servicio</a>&nbsp;presentamos no sólo los
+    distintos tipos de componentes que se utilizan normalmente para implementar los subsistemas identificados
+    durante&nbsp;esta tarea&nbsp;sino también un conjunto de patrones que permiten implementaciones escalables y flexibles
+    de estos subsistemas. Los patrones, y por supuesto los patrones adicionales, existen (éste no es un conjunto completo)
+    y se pueden especificar como parte de la arquitectura de un proyecto.
+</p>
+<p>
+    La selección de, o la personalización de, un determinado patrón dependerá de:
+</p>
+<ul>
+    <li>
+        Los requisitos funcionales y no funcionales de la solución y el subsistema específico.
+    </li>
+    <li>
+        Las funciones y calidades de servicio suministradas por cualquier middleware sobre el que se desplieguen los
+        componentes.
+    </li>
+    <li>
+        El equilibrio coste/complejidad y beneficio entre distintos patrones.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Identificar componente de servicio</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Los subsistemas, en y de sí mismos, no son activos de TI y no son desplegables en la infraestructura de TI; ofrecen un
+    puente entre las perspectivas empresariales y las de TI. Cada subsistema es ejecutado por uno o más componentes de
+    servicio en los que un&nbsp;componente de servicio es un activo a escala de empresa (un elemento de software gestionado
+    con disponibilidad, equilibrio de la carga, seguridad, rendimiento y mantenimiento de versiones garantizados). El
+    componente de servicio es a su vez ejecutado por varios componentes técnicos y funcionales en función del siguiente
+    diagrama.
+</p>
+<p align="center">
+    <img height="278" alt="" src="./../../soa.rup_soma/tasks/./resources/soma_components.png" width="254" />
+</p>
+<p>
+    Normalmente, cada servicio asignado a un subsistema producirá un componente de servicio; los componentes funcionales y
+    técnicos pueden compartirse entre componentes de servicio del mismo subsistema.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Identificar componentes funcionales</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Los componentes funcionales proporcionan función empresarial adicional a un componente de servicio; en muchos sentidos,
+    la función suministrada por un componente de servicio depende completamente de sus componentes funcionales y de la
+    lógica empresarial adicional que implementa encima de éstos.
+</p>
+<p>
+    Los componentes funcionales a menudo se encuentran entre gestiones de tipo (componentes que gestionan un determinado
+    elemento de dominio, por ejemplo, "Vehículo", "Cliente", "Planificación", etc.). Debería quedar claro que estos
+    elementos de dominio son muy frecuentemente gráficos detallados de datos en lugar de simples estructuras.
+</p>
+<h4>
+    Ejemplo
+</h4>
+<p>
+    Teniendo en cuenta el ejemplo de Alquiler de coche, el componente de servicio Reserva debería reunir detalles sobre el
+    cliente, la ubicación desde la que desean alquilar y los vehículos disponibles para la clase especificada. También
+    necesitamos poder determinar las tarifas del cliente, de modo que podamos proporcionar el nivel correcto de servicio en
+    caso de problemas como, por ejemplo, vehículos no disponibles. El siguiente diagrama muestra el modelo de componente
+    para Reserva.
+</p>
+<p align="center">
+    <img height="171" alt="" src="./../../soa.rup_soma/tasks/./resources/subsystem_components-f.png" width="575" /><br />
+    <br />
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Identificar componentes t&eacute;cnicos</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Los componentes técnicos o de infraestructura sirven para volver disponibles funciones de plataforma horizontal; es
+    decir, las funciones que proporcionan no son específicas del dominio empresarial pero trascienden los dominios
+    empresariales. Estos servicios técnicos son suministrados frecuentemente por productos de middleware que incluyen
+    sistemas operativos y que son utilizados directamente por el componente de servicio o por los componentes funcionales
+    de los que dependen.
+</p>
+<h4>
+    Ejemplo
+</h4>
+<p>
+    Al completar el modelo de componente Alquiler de coche (consulte el paso sobre componente funcional de arriba)
+    incluimos dos componentes técnicos en el modelo, uno para que la Reserva registre la finalización de una solicitud de
+    reserva y otro para indicar que los componentes Vehículo y Ubicación dependen de los servicios EJB para continuar sus
+    datos empresariales.
+</p>
+<p align="center">
+    <img height="265" alt="" src="./../../soa.rup_soma/tasks/./resources/subsystem_components.png" width="576" />
+</p>
+<p>
+    De forma alternativa, podemos utilizar un formato tabular al expresar los componentes necesarios y su relación con los
+    servicios previamente identificados, tal como se muestra en la siguiente figura.
+</p>
+<p align="center">
+    <img height="381" alt="" src="./../../soa.rup_soma/tasks/./resources/component_allocation.gif" width="600" /><br />
+    <br />
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Distribuir el comportamiento del subsistema en los elementos del subsistema </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="subsistema de diseño" text="distribuir el comportamiento en los elementos del subsistema" name="XE_design_subsystem__distributing_behavior_on_subsystem_elements" id="XE_design_subsystem__distributing_behavior_on_subsystem_elements" class="index"></a><a id="Distribute Subsystem behavior" name="Distribute Subsystem behavior"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%">
+                    <b>Objetivo</b>
+                </td>
+                <td width="95%">
+                    Especificar el comportamiento interno del subsistema.<br />
+                     Identificar nuevas <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">clases de diseño</a> o nuevos <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">subsistemas de diseño</a> que se necesitan para
+                    satisfacer los requisitos de comportamiento del subsistema. &nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+     El comportamiento externo de un subsistema viene definido principalmente por las interfaces que realiza. Cuando un
+    subsistema realiza una interfaz, realiza un compromiso para dar soporte a todas y cada una de las operaciones definidas
+    por la interfaz. Por su parte, la operación la puede realizar otra operación en un elemento de diseño (es decir, una <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Clase de diseño</a> o un <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">Subsistema de diseño</a>) que contiene el subsistema; esta operación
+    puede requerir la colaboración con otros elementos de diseño.
+</div>
+<p>
+    Las colaboraciones de elementos de modelo dentro del subsistema se deben documentar utilizando diagramas de secuencia
+    que muestran cómo se realiza el comportamiento del subsistema. Cada operación en una interfaz realizada por el
+    subsistema debe tener uno o varios diagramas de secuencia que la documenten. Este diagrama es propiedad del subsistema
+    y se utiliza para diseñar el comportamiento <b>interno</b> del subsistema.
+</p>
+<p>
+    Si el comportamiento del subsistema depende mucho del estado y representa una o más hebras de control, las máquinas de
+    estado son normalmente más útiles para describir el comportamiento del subsistema. Las máquinas de estado en este
+    contexto se utilizan conjuntamente con clases activas para representar una descomposición de las hebras de control del
+    sistema (o el subsistema, en este caso), y se describen en diagramas de gráfico de estados. Consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/statechart_diagram_640B5D0B.html" guid="1.4528459404144188E-304">Directriz: Diagrama de gráfico de estados</a>. <font color="#000000">En sistemas en
+    tiempo real, el comportamiento de <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_capsule_FC4A34FD.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">Producto de
+    trabajo: Cápsula</a>s también se describe utilizando máquinas de estado.</font> <font color="#000000">Dentro del
+    subsistema, pueden existir hebras de ejecución independientes, representadas por clases activas.</font>
+</p>
+<p class="reactive">
+    <font color="#000000">En sistemas en tiempo real, se utilizarán <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_capsule_FC4A34FD.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">Producto de
+    trabajo: Cápsula</a>s para encapsular estas hebras.</font>
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    La colaboración de subsistemas para ejecutar un comportamiento necesario del sistema se puede expresar utilizando
+    diagramas de secuencia:
+</p>
+<p align="center">
+    <img height="298" alt="Diagrama descrito en el texto adjunto." src="./../../core.base_rup/tasks/resources/excollab.gif" width="429" />
+</p>
+<p class="picturetext">
+    Este diagrama muestra cómo se utilizan las interfaces de los subsistemas para ejecutar un caso de ejemplo. En concreto,
+    para el subsistema Gestión de redes, se muestran las interfaces específicas (ICoordinator en este caso) y las
+    operaciones a las que debe dar soporte el subsistema. También se puede ver que el subsistema NetworkHandling depende de
+    las interfaces IBHandler y IAHandler.
+</p>
+<p class="example">
+    Si miramos dentro del subsistema, vemos cómo se realiza la interfaz ICoordinator:
+</p>
+<p align="center">
+    <img height="314" alt="Diagrama descrito en el texto adjunto." src="./../../core.base_rup/tasks/resources/incollab.gif" width="504" />
+</p>
+<p class="picturetext">
+    La clase Coordinador actúa como "proxy" para la interfaz ICoordinator, manejando las operaciones de la interfaz y
+    coordinando el comportamiento de la misma.
+</p>
+<p>
+    Este diagrama de secuencia "interno" muestra exactamente qué clases proporcionan la interfaz, qué debe ocurrir
+    internamente para proporcionar la funcionalidad del subsistema y qué clases envían mensajes fuera desde el subsistema.
+    El diagrama aclara el diseño interno y es fundamental para los subsistemas con diseños internos complejos. También
+    permite entender fácilmente el comportamiento del subsistema, para que con suerte se pueda reutilizar en otros
+    contextos.
+</p>
+<p>
+    La creación de estos diagramas de "realización de interfaces" puede ser necesaria para crear nuevas clases y
+    subsistemas que ejecuten el comportamiento deseado. El proceso es parecido al definido en el análisis de guiones de
+    uso, pero en lugar con de guiones de uso se trabaja con operaciones de interfaz. Para cada operación de interfaz,
+    identifique las clases (o en aquellos casos en los que el comportamiento sea complejo, un subsistema contenido) dentro
+    del subsistema actual que son necesarias para ejecutar la operación. Cree nuevas clases/subsistemas allí donde las
+    clases/subsistemas existentes no puedan proporcionar el comportamiento necesario (pero pruebe primero la
+    reutilización).
+</p>
+<p>
+    La creación de nuevos elementos de diseño obliga a la reconsideración del contenido y el límite del subsistema. Evite
+    tener la misma clase en dos subsistemas diferentes. La existencia de una clase de este tipo implica que los límites del
+    subsistema no están bien dibujados. Revisite periódicamente la <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Tarea:
+    Identificar elementos de diseño</a> para volver a equilibrar las responsabilidades del subsistema.
+</p>
+<p>
+    A veces es útil crear dos modelos internos del subsistema independientes: una especificación destinada al cliente del
+    subsistema y una realización destinada a los implementadores. La especificación puede incluir clases y colaboraciones
+    "ideales" para describir el comportamiento del subsistema en términos de clases y colaboraciones ideales. Por otra
+    parte, la realización concuerda más con la implementación y puede evolucionar hasta convertirse en la implementación.
+    &nbsp; Para obtener más información sobre la especificación y la realización del subsistema de diseño, consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/design_subsystem_B26FD609.html#Subsystem Specification and Realization" guid="1.2314266786534317E-305">Directriz del producto de trabajo: Subsistema de diseño, Especificación y realización
+    del subsistema</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Documentar los elementos del subsistema </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Document Subsystem Elements" name="Document Subsystem Elements"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Documentar la estructura interna del subsistema.&nbsp;
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    Para documentar la estructura interna del subsistema, cree uno o varios diagramas de clase donde se muestren los
+    elementos contenidos por el subsistema y las asociaciones entre ellos. Un diagrama de clase será suficiente, pero se
+    pueden utilizar más para reducir la complejidad y aumentar la legibilidad.
+</p>
+<p>
+    A continuación se muestra un diagrama de clase de ejemplo:
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/classdg.gif" alt="Diagrama descrito en el texto adjunto." width="470" height="396" />
+</p>
+<p class="picturetext">
+    Ejemplo de diagrama de clase de un sistema de entrada de pedido.
+</p>
+<p>
+    Modelado como un componente, el contenido interno de un subsistema se puede representar alternativamente dentro del
+    rectángulo de componente en un diagrama de componentes. Esta representación también permite incluir los puntos de
+    interacción de este subsistema en otras partes del sistema, lo que se realiza a través de sus interfaces.
+</p>
+<p>
+    A continuación se muestra un ejemplo de diagrama de componentes, donde aparece el subsistema de pedido, su contenido
+    inicial, así como las interfaces proporcionadas y necesarias.
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/compdg.jpg" alt="Diagrama descrito en el texto adjunto." />
+</p>
+<p class="picturetext">
+    Ejemplo de diagrama de componentes del subsistema de pedido
+</p>
+<p>
+    Como un componente es una <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/structured_class_4BB99B12.html" guid="_yW3E4NnmEdmO6L4XMImrsA">clase
+    estructurada</a>, se puede encapsular firmemente forzando las comunicaciones desde fuera para que pasen a través de los
+    puertos que obedecen a las interfaces declaradas, lo que otorga una precisión adicional en la especificación y la
+    interconexión para dicho componente. Esta representación permite "conectar" instancias de partes diferentes mediante
+    conectores que jueguen un papel específico en la implementación del componente (consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/structured_class_FF8DB16F.html" guid="1.1994826813129747E-304">Concepto: Clase estructurada</a> para obtener información adicional).
+</p>A continuación, se muestra un ejemplo de diagrama de estructura compuesta para el subsistema de pedido utilizando
+interfaces y puertos. 
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/structdg.jpg" alt="Diagrama descrito en el texto adjunto." />
+</p>
+<p class="picturetext">
+    Ejemplo de diagrama de estructura compuesta del subsistema de pedido
+</p><br />
+<br />
+ Asimismo, será necesario un diagrama de gráfico de estados para documentar los posibles estados que puede asumir el
+sistema. Consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/statechart_diagram_640B5D0B.html" guid="1.4528459404144188E-304">Técnica: Diagrama
+de gráfico de estados</a>. 
+<p>
+    La descripción de las clases contenidas en el propio subsistema se realiza en <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Tarea: Diseño de
+    clase</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Describir dependencias de subsistemas </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="subsistema de diseño" text="describir las dependencias del subsistema" name="XE_design_subsystem__describing_subsystem_dependencies" id="XE_design_subsystem__describing_subsystem_dependencies" class="index"></a><a id="Describe Subsystem Dependencies" name="Describe Subsystem Dependencies"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Documentar las interfaces de las que depende el subsistema. &nbsp;
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    Cuando un elemento contenido en un subsistema utiliza el comportamiento de un elemento contenido en otro subsistema, se
+    crea una dependencia entre los subsistemas contenedores. Para aumentar la reutilización y reducir las dependencias de
+    mantenimiento, deseamos expresar esta relación en términos de dependencia de una determinada <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_interface_9816B54F.html" guid="{C6938487-1DAA-4F6A-B3BC-CB99165F0680}">Interfaz</a> del subsistema, no del propio subsistema ni del elemento
+    contenido en el subsistema.
+</p>
+<p>
+    Existen dos motivos para ello:
+</p>
+<ul>
+    <li>
+        Deseamos poder sustituir un elemento de modelo (incluidos los subsistemas) por otro, siempre que ofrezcan el mismo
+        comportamiento. Se especifica el comportamiento necesario en términos de interfaces, para que los requisitos de
+        comportamiento que un elemento de modelo tiene en otro se puedan expresar en términos de interfaces.
+    </li>
+    <li>
+        Deseamos que el diseñador tenga una total libertad para diseñar el comportamiento <b>interno</b> del subsistema,
+        siempre que proporcione el comportamiento externo correcto. Si un elemento de modelo en un subsistema hace
+        referencia a un elemento de modelo en otro subsistema, el diseñador ya no tendrá libertad para eliminar ese
+        elemento de modelo o redistribuir el comportamiento de ese elemento de modelo a otros elementos. Como resultado, el
+        sistema es más frágil.
+    </li>
+</ul>
+<p>
+    Cuando cree dependencias, asegúrese de que no existan dependencias o asociaciones directas entre los elementos de
+    modelo contenidos por el subsistema y los elementos de modelo contenidos por otros subsistemas. Asimismo, asegúrese de
+    que no existan dependencias circulares entre los subsistemas y las interfaces; un subsistema no puede realizar una
+    interfaz y ser dependiente de ella al mismo tiempo.
+</p>
+<p>
+    Las dependencias entre subsistemas, y entre subsistemas y paquetes, se pueden extraer directamente tal como se muestra
+    a continuación. Cuando se muestra de esta forma, la dependencia indica que un subsistema (Gestión de facturas, por
+    ejemplo) depende directamente de otro subsistema (Gestión de planificación de pagos).
+</p>
+<p align="center">
+    <br />
+     <img src="./../../core.base_rup/tasks/resources/layerib1.jpg" border="0" alt="Diagrama descrito en el texto adjunto." />
+</p>
+<p class="picturetext">
+    Ejemplo de capas de subsistema utilizando dependencias directas
+</p>
+<p>
+    Cuando existe la posibilidad de sustitución de un subsistema por otro (donde ambos tienen las mismas interfaces), la
+    dependencia se puede extraer a una <b><a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_interface_9816B54F.html" guid="{C6938487-1DAA-4F6A-B3BC-CB99165F0680}">Interfaz</a></b> realizada por el subsistema, en lugar de al propio
+    subsistema. Esto permite utilizar cualquier otro elemento de modelo (subsistema o clase) que realice la misma interfaz.
+    La utilización de dependencias de interfaz permite diseñar infraestructuras flexibles utilizando elementos de diseño
+    reemplazables.
+</p>
+<p align="center">
+    <br />
+     <img src="./../../core.base_rup/tasks/resources/layerif1.jpg" border="0" alt="Diagrama descrito en el texto adjunto." />
+</p>
+<p class="picturetext">
+    Ejemplo de capas de subsistema utilizando dependencias indirectas
+</p>
+<p class="picturetext">
+    &nbsp;
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Listas de comprobaci&oacute;n</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/checklists/capsule_7BF31788.html" guid="1.2115414799051158E-305">Cápsula</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Conceptos</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../extend.bus_model/guidances/concepts/functional_area_analysis_567CE669.html" guid="_sQzD0EoEEdulkMoCrqQK_Q">Functional Area Analysis</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/statechart_diagram_640B5D0B.html" guid="1.4528459404144188E-304">Diagrama de gráfico de estados</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/capsule_7077C999.html" guid="7.026940817483919E-306">Cápsula</a>
+</li>
+<li>
+<a href="./../../modernize.legacy_evol/guidances/guidelines/designing_data_migration_subsystems_91604F58.html" guid="3.368322488876367E-305">Designing Data Migration Subsystems</a>
+</li>
+<li>
+<a href="./../../tech.j2ee/guidances/guidelines/designing_subsystems_for_j2ee_applications_B6B8EE31.html" guid="7.612097453921368E-307">Diseño de subsistemas para aplicaciones J2EE</a>
+</li>
+<li>
+<a href="./../../tech.j2ee/guidances/guidelines/designing_j2ee_application_clients_4272B482.html" guid="3.078384841899093E-305">Diseño de clientes de aplicación J2EE</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_design_model_1D45D75E.html" guid="{BD1DD906-031C-4D8C-8078-87B6869A8C14}">Gestión del modelo de diseño utilizando Rational Rose</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_subsystems_CE198D48.html" guid="{6943FA40-808B-4E3E-94FE-D7843FA59E91}">Gestión de subsistemas utilizando Rational Rose</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/designing_subsystems_7438223D.html" guid="{9DD25EA9-F3A1-4C38-917A-1C759F37F565}">Diseño de subsistemas utilizando Rational XDE Developer</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/toolmentors/designing_subsystems_using_rsa_ext_DD1E3EB4.html" guid="_W0h0EK4HEdqFg48R_ivTjA">Diseño de subsistemas mediante Rational Software Architect</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/toolmentors/designing_subsystems_using_rsd_71287DD3.html" guid="_Tg78YK4HEdqFg48R_ivTjA">Diseño de subsistemas utilizando Rational Systems Developer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

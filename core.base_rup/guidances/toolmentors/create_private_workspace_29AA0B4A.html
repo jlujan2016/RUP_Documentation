@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Creaci&oacute;n de un espacio de trabajo de desarrollo utilizando Rational ClearCase</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="create_private_workspace" name="uma.name">
+<meta content="Creaci&oacute;n de un espacio de trabajo de desarrollo utilizando Rational ClearCase" name="uma.presentationName">
+<meta content="Tool:rup_clearcase:Rational ClearCase" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational ClearCase" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{46A461EE-F00E-4E39-B5E5-855815F621FF}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{46A461EE-F00E-4E39-B5E5-855815F621FF}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{46A461EE-F00E-4E39-B5E5-855815F621FF}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_hsuoEDIFEdqwaNnSEheSAg", "{99C2684A-E22A-4DF3-9A66-A204F67F868B}", "{46A461EE-F00E-4E39-B5E5-855815F621FF}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_85i-sDIFEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{46A461EE-F00E-4E39-B5E5-855815F621FF}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_XxCC0AIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{46A461EE-F00E-4E39-B5E5-855815F621FF}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{46A461EE-F00E-4E39-B5E5-855815F621FF}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{46A461EE-F00E-4E39-B5E5-855815F621FF}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{46A461EE-F00E-4E39-B5E5-855815F621FF}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Creaci&oacute;n de un espacio de trabajo de desarrollo utilizando Rational ClearCase</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo crear un espacio de trabajo privado utilizando Rational ClearCase para el trabajo individual.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_clearcase_9665C.html" guid="{B2D1373B-A826-4169-A38A-B53B2122DC7C}">Rational ClearCase</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/create_development_workspace_25C973CF.html" guid="{99C2684A-E22A-4DF3-9A66-A204F67F868B}">Crear espacios de trabajo de desarrollo</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    Visión general
+</h3>
+<p>
+    En esta guía de la herramienta se describe cómo crear un espacio de trabajo privado para el trabajo individual. Un
+    "espacio de trabajo privado" está aislado de los espacios de trabajo de los demás miembros del equipo. Proporciona un
+    lugar en el que el desarrollador puede realizar cambios en el sistema sin ver, ni influir en los cambios de los demás
+    desarrolladores.
+</p>
+<p>
+    En un modelo UCM de ClearCase, los espacios de trabajo privados, denominados espacios de trabajo de desarrollo, le
+    permiten trabajar en actividades de UCM, aislado del resto del&nbsp; proyecto. Por lo general, cada miembro del
+    proyecto crea su propia área de trabajo de desarrollo al unirse a un proyecto de UCM. Las áreas de trabajo privadas
+    también se pueden crear en cualquier momento durante el desarrollo del trabajo en un proyecto de UCM.
+</p>
+<p>
+    Los espacios de trabajo de desarrollo de UCM constan de una corriente de datos y una vista asociada. Las corrientes de
+    datos de UCM determinan las versiones de los elementos que aparecen en todas las vistas que configura dicha corriente
+    de datos. Las corrientes de datos también mantienen una lista de actividades y líneas base de UCM. Las vistas
+    proporcionan áreas de trabajo para tareas como, por ejemplo, editar y compilar archivos de origen o formatear
+    documentos, entre otras.
+</p>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Microsoft Windows.
+</p>
+<h3>
+    <a id="ToolSteps" name="ToolSteps">Pasos de la herramienta</a>
+</h3>
+<p>
+    En los pasos siguientes se describe cómo crear un espacio de trabajo de desarrollo al unirse a un proyecto de UCM. Los
+    pasos generales son:
+</p>
+<ol>
+    <li>
+        <a href="#JoinProjectWizard">Iniciar el asistente para Unir proyecto</a>
+    </li>
+    <li>
+        <a href="#SpecifyAndViewStreamInfo">Especificar la información de corriente de datos y vista</a>
+    </li>
+    <li>
+        <a href="#AttachViewToStream">Adjuntar una vista a una corriente de datos</a>
+    </li>
+</ol>
+<p>
+    &nbsp;<img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" />&nbsp;Consulte el tema referente al <i>asistente para Unir proyecto</i> de la ayuda en línea de ClearCase
+    para obtener una visión general del asistente. En el tema de ayuda de cada pantalla puede obtener información detallada
+    sobre cada paso del asistente.
+</p>
+<p>
+    Para obtener más información sobre las corriente de datos y las vistas de UCM, consulte los temas de la ayuda en línea
+    de ClearCase que tratan sobre:
+</p>
+<ul>
+    <li>
+        &nbsp;<i>Acerca de las corrientes de datos</i>&nbsp;
+    </li>
+    <li>
+        &nbsp;<i>Acerca de las vistas</i>
+    </li>
+</ul>
+<h3>
+    1.&nbsp;<a id="JoinProjectWizard" name="JoinProjectWizard">Iniciar el asistente para Unir proyecto</a> <a href="#ToolSteps"><img height="20" alt="Ir a los pasos de la herramienta" src="./../../../core.base_rup/resources/top.gif" width="26"     border="0" /></a>
+</h3>
+<ol>
+    <li>
+        Desde la barra de tareas de Windows, seleccione <b>Inicio</b> &gt; <b>Programas</b> &gt; <b>Software Rational &gt;
+        Rational ClearCase</b> &gt; <b>Explorador de proyectos</b>.
+    </li>
+    <li>
+        En el Explorador de proyectos de ClearCase, pulse la pestaña <b>Cuadro de herramientas</b> <b>&gt; UCM &gt; Unir
+        proyecto</b>. Aparece el asistente para Unir proyecto.
+    </li>
+    <li>
+        Seleccione el proyecto al que desea unirse y pulse <b>Siguiente</b> para ir al paso siguiente del asistente.
+    </li>
+</ol>
+<h3>
+    2.&nbsp;<a id="SpecifyAndViewStreamInfo" name="SpecifyAndViewStreamInfo">Especificar la información de corriente de
+    datos y vista</a> <a href="#ToolSteps"><img height="20" alt="Ir a los pasos de la herramienta"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    Especifique el nombre de una corriente de datos, el nombre de una vista, una ubicación de almacenamiento para la vista
+    y el tipo de vista (instantánea) para el área de trabajo de desarrollo. El asistente para Unir proyecto de ClearCase
+    proporciona información por omisión para estos valores.
+</p>
+<p>
+    <b>Nota</b>: El asistente para Unir proyecto también le solicita información necesaria para crear la vista para el área
+    de trabajo de integración del proyecto.
+</p>
+<p>
+    &nbsp;<img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;Para
+    obtener más información sobre el almacenamiento de vistas, consulte el tema que trata sobre <i>cómo elegir una
+    ubicación para un directorio de vistas de instantánea</i> de la ayuda en línea de ClearCase.
+</p>
+<h3>
+    3.&nbsp;<a id="AttachViewToStream" name="AttachViewToStream">Adjuntar una vista a la corriente de datos</a> <a href="#ToolSteps"><img height="20" alt="Ir a la parte superior de la página" src="./../../../core.base_rup/resources/top.gif" width="26"     border="0" /></a>
+</h3>
+<p>
+    El asistente para Unir vista le solicita que confirme las elecciones que ha realizado, y une la vista de desarrollo y
+    la corriente de datos que ha especificado. Pulse <b>Aceptar</b> para confirmar las selecciones y continuar.
+</p>
+<p>
+    &nbsp;<img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;Para
+    obtener más información sobre la asociación de vistas y corriente de datos, consulte el tema de la ayuda en línea de
+    ClearCase que trata sobre <b>&gt;</b> <i>cómo unir una nueva vista a una corriente de datos existente</i>.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

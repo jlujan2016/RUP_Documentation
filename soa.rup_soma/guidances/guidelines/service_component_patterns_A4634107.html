@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Patrones de componentes de servicio</title>
+<meta content="Guideline" name="uma.type">
+<meta content="service_component_patterns" name="uma.name">
+<meta content="Patrones de componentes de servicio" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_OjBb4Ew_EduGSMz-5zscXg", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_d5dewE7OEduvcvbnLvkXhA", "_p_6wsExREdumvs0NuKFubw"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_p_6wsExREdumvs0NuKFubw"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Patrones de componentes de servicio</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz muestra un conjunto de patrones que se pueden utilizar en el desarrollo de componentes de servicio en la realización de servicios.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../soa.rup_soma/workproducts/soa_svce_component_E259F3CC.html" guid="{447385A0-E565-4C87-A082-402AF21CA088}">Componente de servicio</a>
+</li>
+<li>
+<a href="./../../../soa.rup_soma/tasks/soa_component_specification_6BB8DC55.html" guid="_OjBb4Ew_EduGSMz-5zscXg">Especificación de componentes (SOA)</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Introducción
+</h3>
+<p>
+    En la descomposición de un componente de servicio en sus componentes funcionales y técnicos, hemos delegado la
+    funcionalidad suministrada por el componente de servicio para cumplir con las responsabilidades funcionales&nbsp;del
+    subsistema. Los componentes funcionales suministran la funcionalidad empresarial necesaria, mientras los componentes
+    técnicos proporcionan funcionalidad genérica como autenticación, manejo de errores, auditoría, registro, etc., que son
+    operativos y no están orientados a lo funcional.
+</p>
+<p>
+    Un modelo de servicio es un artefacto del diseño. Como tal, no está relacionado directamente con la implementación de
+    servicios. No obstante, la implementación real de un servicio o de un conjunto de servicios es estrictamente llevada a
+    cabo por la realización de un componente de servicio de una especificación de servicio. La especificación de servicio
+    proporciona el contrato de implementación; la tecnología o las técnicas utilizadas para implementar el servicio son
+    irrelevantes siempre que se cumpla el contrato. En el concepto <a class="elementlinkwithusertext" href="./../../../soa.rup_soma/guidances/concepts/service-oriented_architecture_8328ABAD.html" guid="8.613638237693525E-307"><em>Arquitectura orientada a servicios</em></a>, introdujimos la siguiente imagen
+    mostrando la relación entre los servicios identificados y los componentes y objetos que ofrecen la implementación de
+    estos servicios.
+</p>
+<p align="center">
+    &nbsp;<img height="241" alt="Diagrama descrito en el texto asociado" src="./../../../soa.rup_soma/guidances/concepts/resources/co_soa_soa-01.gif"     width="241" />
+</p>
+<p>
+    De este modo, podemos ver cómo el RUP <i><a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Modelo
+    de diseño</a></i> se puede utilizar para capturar el diseño de las capas de objeto y componente, con artefactos y
+    modelos de implementación que capturan detalles de la capa de objeto y artefactos de despliegue e implementación
+    asociados. Los aspectos importantes de la relación entre el <i><a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_service_model_623494B9.html" guid="{E24679B7-19F1-483B-A1F1-578839C43888}">Modelo de servicio</a></i> y el modelo de diseño de componentes son que
+    el conjunto de especificaciones de servicio representa contratos que deben cumplirse, que las operaciones identificadas
+    en las especificaciones deben implementarse tal cual y que los clientes de servicios utilizan este mismo modelo para
+    comprender la interfaz y el comportamiento de los servicios que esperan utilizar. De esta forma, hay una relación
+    directa y, en general, de uno a uno, entre la especificación de servicio y algún artefacto de implementación que actúa
+    como punto de entrada de implementación inicial para el servicio.
+</p>
+<p>
+    Por ejemplo, tenga en cuenta el siguiente diagrama de un proveedor de servicio, que muestra los detalles de los
+    elementos de modelo utilizados en su definición.
+</p>
+<p align="center">
+    <img height="139" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-02.gif"     width="246" border="0" />
+</p>
+<p>
+    La clave para el uso del componente de servicio es que debería ser directamente rastreable para el modelo de servicio.
+    La forma más fácil de conseguirlo es hacer uso del hecho de que el elemento de especificación de servicio es una
+    interfaz UML que puede ser ejecutada por el componente de servicio y, por lo tanto, garantiza su conformidad con la
+    especificación estructural. De esta forma obtendríamos el siguiente resultado:
+</p>
+<p align="center">
+    <img height="74" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-03.gif"     width="406" border="0" />
+</p>
+<p>
+    Ahora es responsabilidad del implementador de componentes definir un conjunto de componentes y clases que proporcionen
+    el comportamiento del componente resultante.
+</p>
+<h3>
+    Tipos de componentes de servicio
+</h3>
+<h4>
+    Componentes funcionales
+</h4>
+<p>
+    La composición de estos componentes funcionales en un componente de servicio mayor no es meramente estructural; también
+    implica la definición de flujo, esto es, la colaboración de los componentes funcionales para ofrecer funcionalidad que
+    de soporte a los procesos empresariales. Tal como vimos anteriormente, la funcionalidad de estos componentes
+    relacionados con la empresa se activa a través de los servicios (implementados por el objeto de nivel más preciso del
+    componente o de la estructura de sistema existente) definidos.
+</p>
+<p>
+    Resulta importante observar que este paso incluye actividades OOAD tradicionales. Tenemos un ámbito centrado y bien
+    particionado para dirigir el diseño del objeto. En el diseño orientado al objeto tradicional, tendemos a crear gráficas
+    de objeto mucho más dependientes mientras que si un análisis del subsistema sigue la identificación de áreas
+    funcionales dentro de la empresa, tenemos un ámbito definido de forma muy clara en el que centrarnos y hacia el que
+    dirigir nuestras energías de diseño. Esto produce un conjunto de modelos de objetos no estrechamente unidos (diagramas
+    de clase y diagramas de secuencia desencadenados por guiones de uso de sistema).
+</p>
+<h4>
+    Componentes técnicos
+</h4>
+<p class="MsoNormal" style="MARGIN: 6pt 0in">
+    <span style="mso-bidi-font-style: italic">La composición de componentes técnicos en componentes de servicio mayores se
+    produce de la misma forma que en el caso de los componentes funcionales.</span> <span     style="mso-bidi-font-style: italic">Los componentes técnicos como la autenticación, el registro y la creación de
+    informes se pueden utilizar en los procesos empresariales. <span style="mso-spacerun: yes">&nbsp;</span>Estos
+    componentes comunes son necesarios para formar la infraestructura que de soporte a los componentes funcionales. <span     style="mso-spacerun: yes">&nbsp;</span>Una de las variaciones clave de los procesos empresariales es debida a las
+    reglas empresariales tal como se muestra a continuación&nbsp;en la figura "Patrón de componente de empresa".</span>
+    <span style="mso-bidi-font-style: italic">Estas variaciones se capturan normalmente durante el diseño orientado a
+    variaciones.</span>
+</p>
+<h3>
+    Patrones de componentes de servicio
+</h3>
+<p>
+    El haber dicho que el componente de servicio simplemente realiza la especificación de servicio no ofrece al
+    implementador mayor ayuda en ir de una definición de servicio de grano grueso a un conjunto de clases y artefactos de
+    implementación de grano fino necesarias para proporcionar el comportamiento del servicio. En este sentido, resulta
+    común confiar en patrones que proporcionan estructura al componente de servicio resultante, ya sea como infraestructura
+    de inicio o como patrones específicos para solucionar requisitos de política particulares.
+</p>
+<p>
+    Arquitectura de opción de patrón, dirigida por NFR [más]
+</p>
+<p>
+    Tenga en cuenta que los estereotipos adicionales introducidos aquí se describen en <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_svce_component_E259F3CC.html" guid="{447385A0-E565-4C87-A082-402AF21CA088}">Artefacto: Componente de servicio</a>.
+</p>
+<h4>
+    Patrón de componente de servicio básico
+</h4>
+<p>
+    En la definición de la estructura inicial de un servicio, el siguiente patrón se ofrece como punto de inicio para la
+    personalización y realización.
+</p>
+<p align="center">
+    <img height="106" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-04.gif"     width="578" border="0" />
+</p>
+<p>
+    Los elementos del patrón son los siguientes:
+</p>
+<ul>
+    <li>
+        <b>Componente de fachada</b>; la fachada ejecuta la misma interfaz que el propio componente de servicio y
+        proporciona funciones básicas para la validación de mensajes antes de pasar la solicitud a los componentes por
+        operación para la ejecución. En este caso hemos estereotipado el componente como &lt;&lt;fachada&gt;&gt; con fines
+        aclarativos.
+    </li>
+    <li>
+        <b>Componente por operación</b>; una vez obtenida la granularidad de los servicios, resulta útil en la mayoría de
+        los casos tener un componente/clase independiente de cada operación suministrada por el servicio.
+    </li>
+</ul>
+<p>
+    A continuación se muestra la vista de estructura compuesta de este patrón. En este caso, la fachada es delegada por el
+    propio componente de servicio. Como tal, los clientes que invoquen operaciones en el componente de servicio estarán
+    siendo realmente atendidos por el componente de fachada. Tenga en cuenta que es posible utilizar puertos UML 2.0, así
+    como exponer la interfaz y hacer esta delegación explícita mediante conectores.
+</p>
+<p align="center">
+    <img height="119" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-05.gif"     width="274" border="0" />
+</p>
+<h4>
+    Patrón de componente de servicio de operación única
+</h4>
+<p>
+    En algunos casos en los que los servicios se identifican en el modelo de servicio con varias operaciones, es más
+    adecuado implementar las operaciones individualmente como servicios autónomos separándolos de las vistas de servicio
+    físico y de servicio lógico. Dicho patrón tiene ventajas desde el punto de vista de la flexibilidad de provisión, la
+    alta disponibilidad, el mantenimiento de versiones y la evolución pero pierde la noción de interfaz con un servicio
+    como conjunto de operaciones relacionadas.
+</p>
+<p>
+    Los componentes de servicio de modelado, según este patrón, tienen un único &lt;&lt;componente de servicio&gt;&gt; que
+    ejecuta una sola interfaz con una sola operación, todas ellas denominadas según convenciones comunes y mostradas a
+    continuación.
+</p>
+<p align="center">
+    <img height="113" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-12.gif"     width="394" border="0" />
+</p>
+<p>
+    En este caso, tal como hemos mencionado, no hay realización directa de la especificación de servicio original por algún
+    elemento del patrón anterior. Por tanto, parece que merece la pena introducir un elemento en el modelo que pueda
+    proporcionar rastreabilidad a la especificación de servicio. En el ejemplo siguiente, hemos introducido un componente,
+    estereotipado como &lt;&lt;subsistema&gt;&gt; que implementa la especificación de servicio y también posee los
+    elementos descritos anteriormente.
+</p>
+<p align="center">
+    <img height="49" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-11.gif"     width="326" border="0" />
+</p>
+<p>
+    Este patrón tampoco introduce el componente de &lt;&lt;fachada&gt;&gt; porque los clientes de los servicios son
+    responsables de identificar los servicios que utilizan.
+</p>
+<h4>
+    Patrón de operación mediada
+</h4>
+<p>
+    Allí donde existe la posibilidad de que una solicitud del cliente de servicio pueda ser direccionada a uno de los
+    componentes de operación para su ejecución, es posible ampliar el patrón con un mediador que direccione estos mensajes,
+    tal como se muestra a continuación. Tenga en cuenta que estereotipamos el componente/la clase como
+    &lt;&lt;mediador&gt;&gt; con fines aclarativos. El mecanismo exacto utilizado para la mediación no se define. Un
+    conjunto estático de implementaciones podría conocerse antes de tiempo, un registro de algún tipo podría también
+    utilizarse para realizar correlaciones con la implementación particular basada en el cliente, el contenido del mensaje
+    de solicitud, etc. Este patrón no tiene como objetivo su uso con los patrones de operación única mostrados
+    anteriormente.
+</p>
+<p align="center">
+    <img height="144" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-06.gif"     width="390" border="0" />
+</p>
+<p>
+    Esto también afecta a la vista de estructura compuesta del componente de servicio; tal como se muestra a continuación,
+    la conexión del mediador aparece desde la fachada que la utiliza para dirigir las llamadas a los componentes de
+    operación.
+</p>
+<p align="center">
+    <img height="177" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-07.gif"     width="285" border="0" />
+</p>
+<p>
+    Si un registro, externo al propio mediador, se utiliza, no resulta necesario mostrar las dependencias de uso estático
+    del mediador con los componentes de operación o los conectores entre piezas del diagrama de estructura compuesta. Por
+    tanto, ¿cómo podemos modelar una dependencia del mediador con los componentes de operación mediados? En el siguiente
+    diagrama, hemos introducido una interfaz que será implementada por cada componente de operación. Entonces podremos
+    modelar el uso desde el mediador a la interfaz, tal como se muestra a continuación.
+</p>
+<p align="center">
+    <img height="74" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-09.gif"     width="550" border="0" />
+</p>
+<p>
+    También cambiamos la relación en el diagrama de estructura compuesta, incluida una nueva pieza escrita por la interfaz,
+    e indicamos la multiplicidad entre el mediador y los componentes de operación en el conector, tal como se muestra a
+    continuación.
+</p>
+<p align="center">
+    <img height="176" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-10.gif"     width="282" border="0" />
+</p>
+<h4>
+    Componentes de acceso de datos
+</h4>
+<p>
+    Adicionalmente, allí donde las operaciones de servicio comparten requisitos de datos comunes, puede resultar útil
+    resaltar los componentes específicos que ofrecen funciones de gestión de datos a la implementación. Observe que
+    estereotipamos el componente/la clase como &lt;&lt;acceso de datos&gt;&gt; con fines aclarativos.
+</p>
+<p align="center">
+    <img height="106" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-08.gif"     width="534" border="0" />
+</p>
+<h3>
+    El patrón de componente de empresa
+</h3>
+<p>
+    El siguiente patrón de componente de empresa muestra el componente de servicio que actúa como fachada para los
+    componentes funcionales y técnicos subyacentes. Los servicios se exponen en el límite del componente de servicio de la
+    fachada de componente. Las solicitudes para servicios de la fachada se reenvían a un mediador que a continuación
+    direcciona el mensaje al componente funcional o técnico correspondiente.
+</p>
+<p align="center">
+    <img height="347" alt="Diagrama descrito en el texto asociado" src="./../../../soa.rup_soma/guidances/guidelines/./resources/technique_fig57.gif" width="568" />
+</p>
+<p align="center">
+    <font size="-2"><strong>Patrón de componente de empresa</strong></font>
+</p>
+<p>
+    Las dependencias y necesidades de los componentes funcionales con respecto a los componentes técnicos, para el ejemplo
+    de Alquiler de un coche, se describen a continuación.
+</p>
+<p align="center">
+    <img height="388" alt="Diagrama descrito en el texto asociado" src="./../../../soa.rup_soma/guidances/guidelines/./resources/technique_fig58.gif" width="482" />
+</p>
+<p align="center">
+    <font size="-2">Componente de servicio de reserva <strong><em>Alquiler de un coche</em>, que utiliza el patrón de
+    componente de empresa</strong></font>
+</p>
+<p>
+    La colección de modelos de componentes de subsistema se reúne en el modelo de componentes funcionales que muestra la
+    dependencia de los componentes funcionales en los componentes técnicos, y las interrelaciones entre los propios
+    componentes funcionales. Los subprocesos de nivel inferior que están asignados a la fachada del subsistema deben
+    especificarse como servicios que el subsistema proporcionará. Estos subprocesos se soportan e implementan a través de
+    un conjunto de guiones de uso del sistema más detallados, encapsulados dentro de la estructura del subsistema. Los
+    componentes funcionales son dependientes para la realización de los guiones de uso. A su vez, los componentes
+    funcionales dependen de los componentes técnicos y de las utilidades para sus necesidades de infraestructura.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

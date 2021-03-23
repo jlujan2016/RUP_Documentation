@@ -1,0 +1,1840 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Plan de prueba</title>
+<meta content="Guideline" name="uma.type">
+<meta content="test_plan" name="uma.name">
+<meta content="Plan de prueba" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{B95CA9FA-A00E-4C6C-AA16-133297812CC0}", "1.2693760873657001E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3SWfwN7OEdmjRZts2c4ZjQ", "{B95CA9FA-A00E-4C6C-AA16-133297812CC0}", "1.2693760873657001E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.2693760873657001E-304"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{B95CA9FA-A00E-4C6C-AA16-133297812CC0}", "1.2693760873657001E-304"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.2693760873657001E-304"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Plan de prueba</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Un plan de prueba debe cubrir requisitos, riesgos, prioridad, estrategia y criterios de terminación. En esta directriz se describe detalladamente el objetivo de un plan de prueba y su contenido.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_test_plan_53712941.html" guid="{B95CA9FA-A00E-4C6C-AA16-133297812CC0}">Plan de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a id="Overview" name="Overview">Visión general</a>
+</h3>
+<p>
+    El objetivo del plan de prueba es comunicar la intención de las tareas de prueba. Es crítico que este documento se cree
+    tan pronto como sea posible. La generación de este artefacto en una de las primeras iteraciones de la fase de
+    elaboración no sería demasiado pronto. Puede ser deseable desarrollar el plan de prueba iterativamente, añadiendo
+    secciones a medida que la información esté disponible.
+</p>
+<p>
+    Hay que tener cuidado de comunicar claramente el ámbito de la prueba, los requisitos de la prueba, las estrategias de
+    la prueba y los recursos necesarios. Esta información identifica el objetivo y los límites del esfuerzo de prueba, qué
+    se probará, cómo se probará y qué recursos son necesarios para la prueba. Indicar claramente esta información acelerará
+    la revisión, comentarios y aprobación del esfuerzo de prueba.
+</p>
+<p>
+    Al inicio del proyecto, se debería crear un plan de prueba que identifique las pruebas globales previstas para el
+    proyecto, denominado "Plan de prueba maestro". A medida que se planea cada iteración, se crea un "Plan de prueba de
+    iteración" más preciso (o varios planes de prueba, organizados por tipo de prueba), que contiene sólo los datos
+    (requisitos de prueba, estrategias de prueba, recursos, etc.) que pertenecen a la iteración. De forma alternativa, esta
+    información se puede incluir en el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_iteration_plan_623AFF7F.html" guid="{97269E0F-CDF3-448D-A732-DF39D099BDDD}">Plan
+    de iteración</a>, si no complica demasiado la gestión o el uso del plan de iteración.&nbsp;
+</p>
+<p>
+    A continuación se muestran algunas directrices para identificar y comunicar mejor los requisitos de prueba, los riesgos
+    de la prueba, las prioridades y las estrategias de prueba.
+</p>
+<h3>
+    <a id="Identifying Requirements for Test" name="Identifying Requirements for Test">Identificación de requisitos para la
+    prueba</a>
+</h3>
+<p>
+    Los requisitos para la prueba identifican qué se probará. Son el destino específico de una prueba. Existen unas cuantas
+    normas generales a aplicar cuando se deriven requisitos para la prueba:
+</p>
+<ul>
+    <li>
+        El requisito para la prueba debe ser un comportamiento observable y medible. Si el requisito para la prueba no se
+        puede observar ni medir, no se puede valorar para determinar si se ha satisfecho el requisito.
+    </li>
+    <li>
+        No existe una relación de uno a uno entre cada caso de uso o requisito suplementario de un sistema y un requisito
+        de prueba. Los casos de uso a menudo tendrán más de un requisito que se debe probar, mientras que algunos
+        requisitos suplementarios derivarán uno o más requisitos para probar y otros no derivarán ninguno (como los
+        requisitos de marketing o de embalaje).
+    </li>
+</ul>
+<p>
+    Los requisitos de prueba se pueden derivar de cualquier origen, incluyendo casos de uso, modelos de caso de uso,
+    especificaciones suplementarias, requisitos de diseño, clases de negocio, entrevistas con usuarios y el documento de
+    arquitectura de software. Todos estos deben revisarse para recopilar la información que se utiliza para identificar los
+    requisitos para la prueba.
+</p>
+<h4>
+    <a id="Requirements for Functional Tests" name="Requirements for Functional Tests">Requisitos para pruebas
+    funcionales</a>
+</h4>
+<p>
+    Los requisitos funcionales de la prueba, como su nombre indica, se derivan de las descripciones de los comportamientos
+    funcionales del destino de la prueba. Como mínimo, cada caso de uso debe derivar un requisito para la prueba. Una lista
+    más detallada de requisitos para prueba incluiría como mínimo un requisito de prueba para cada flujo de sucesos del
+    caso de uso.
+</p>
+<h4>
+    <a id="Requirements for System Performance Tests" name="Requirements for System Performance Tests">Requisitos para
+    pruebas de rendimiento</a>
+</h4>
+<p>
+    Los requisitos de rendimiento para la prueba se derivan de los comportamientos de rendimiento especificados del destino
+    de la prueba. Habitualmente, el rendimiento se indica como medida de tiempo de respuesta y/o utilización de recursos,
+    tal como se mide debajo de diferentes condiciones, que incluyen
+</p>
+<ul>
+    <li>
+        diferentes cargas de trabajo y/o condiciones de sistema
+    </li>
+    <li>
+        diferentes casos de uso
+    </li>
+    <li>
+        diferentes configuraciones
+    </li>
+</ul>
+<p>
+    Los requisitos de rendimiento se describen en las especificaciones suplementarias. Revise estos materiales, , dedicando
+    una atención especial a las sentencias que incluyen lo siguiente:
+</p>
+<ul>
+    <li>
+        sentencias de tiempo, como tiempo de respuesta o perfiles de tiempo
+    </li>
+    <li>
+        sentencias que indiquen qué número de sucesos o casos de uso ocurren en un periodo de tiempo indicado
+    </li>
+    <li>
+        sentencias que comparan el comportamiento de uno elemento con otro
+    </li>
+    <li>
+        sentencias que comparan el comportamiento de la aplicación en una configuración con el de otra
+    </li>
+    <li>
+        fiabilidad operativa (tiempo medio de anomalía o MTTF) durante un periodo de tiempo
+    </li>
+    <li>
+        configuraciones o restricciones
+    </li>
+</ul>
+<p>
+    Debe derivar como mínimo un requisito para probar para cada sentencia en la especificación que refleja información como
+    la que se lista arriba.
+</p>
+<h4>
+    <a id="Requirements for Reliability Tests" name="Requirements for Reliability Tests">Requisitos de las pruebas de
+    fiabilidad</a>
+</h4>
+<p>
+    Los requisitos de fiabilidad para las pruebas se derivan de varias fuentes, habitualmente descritas en especificaciones
+    suplementarias, directrices de interfaz de usuario, directrices de diseño y directrices de programación.
+</p>
+<p>
+    Revise estos productos de trabajo y dedique una atención especial a las sentencias que incluyen lo siguiente:
+</p>
+<ul>
+    <li>
+        sentencias de fiabilidad o resistencia a anomalías, errores de tiempo de ejecución (como fugas de memoria)
+    </li>
+    <li>
+        sentencias que indican la integridad del código y de la estructura (cumplimiento del lenguaje y la sintaxis)
+    </li>
+    <li>
+        sentencias referentes a la utilización de recursos
+    </li>
+</ul>
+<p>
+    Debe derivar como mínimo un requisito para la prueba a partir de cada sentencia de los productos de trabajo que refleja
+    información como la que se lista arriba.
+</p>
+<p>
+    Unas pruebas satisfactorias requieren que el esfuerzo de prueba equilibre satisfactoriamente los factores como las
+    restricciones de recursos y los riesgos. Para cumplir esto, el esfuerzo de prueba debe tener prioridad para que el caso
+    de uso más importante, significativo o el más arriesgado o los componentes se prueben primero. Para dar prioridad al
+    esfuerzo de prueba, una valoración de riesgo y un perfil operativo se efectúan y se utilizan como base para establecer
+    la prioridad de la prueba.
+</p>
+<p>
+    En las secciones siguientes se describe cómo determinar la prioridad de las pruebas.
+</p>
+<h3>
+    <a id="Assess Risk and Establish Test Priorities" name="Assess Risk and Establish Test Priorities">Valorar el riesgo y
+    establecer las prioridades de prueba</a>
+</h3>
+<p>
+    Identificar los requisitos para las pruebas es sólo una parte de la identificación que se probará. Dar prioridad a lo
+    que se probará y en qué orden también debería realizarse. Este paso se efectúa por diferentes motivos, que incluyen los
+    siguientes:
+</p>
+<ul>
+    <li>
+        asegúrese de que los esfuerzos de prueba se centran en los requisitos más apropiados para la prueba
+    </li>
+    <li>
+        garantizar que los requisitos más críticos, significativos o arriesgados para la prueba se solucionen cuanto antes
+    </li>
+    <li>
+        asegúrese de que se prueban las dependencias como secuencia o datos
+    </li>
+</ul>
+<p>
+    Existen tres pasos para valorar el riesgo y establecer las prioridades de la prueba:
+</p>
+<ul>
+    <li>
+        <a href="#Assess Risk">Valorar el riesgo</a>
+    </li>
+    <li>
+        <a href="#Determine Operational Profile">Determinar el perfil operativo</a>
+    </li>
+    <li>
+        <a href="#Establish Test Priority">Establecer la prioridad de prueba</a>
+    </li>
+</ul>
+<p>
+    A continuación se proporcionan las directrices para cada uno de estos tres pasos:
+</p>
+<h4>
+    <a id="Assess Risk" name="Assess Risk">Valorar el riesgo</a>
+</h4>
+<p>
+    El establecimiento de la prioridad de la prueba empieza con la valoración del riesgo. Los casos de uso o componentes
+    que implican el mayor riesgo debido a errores o que tienen una alta probabilidad de error deben estar entre los
+    primeros casos de uso probados.
+</p>
+<p>
+    Empiece por la identificación y la descripción de los indicadores de magnitud de riesgo que se utilizarán, como por
+    ejemplo:
+</p>
+<ul>
+    <li>
+        H - alto riesgo, no tolerable. Exposición externa grave. La empresa sufrirá grandes pérdidas financieras, de
+        fiabilidad o una pérdida de reputación irrecuperable.
+    </li>
+    <li>
+        M - riesgo medio, tolerable pero no deseable. Exposición externa mínima, la empresa puede sufrir económicamente,
+        pero existe una fiabilidad limitada o pérdida de reputación.
+    </li>
+    <li>
+        L - bajo riesgo, tolerable. Exposición reducida o no externa, la empresa tiene pocas pérdidas o no tiene pérdidas
+        económicas o de fiabilidad. La reputación de la empresa no se ve afectada.
+    </li>
+</ul>
+<p>
+    Después de identificar los indicadores de magnitud de riesgo, lista cada caso de uso o componente en el destino de la
+    prueba. Para cada caso de uso o componente de la lista, identifique un indicador de magnitud de riesgo y justifique (en
+    una sentencia breve) el valor que ha seleccionado.
+</p>
+<p>
+    Existen tres perspectivas que se pueden utilizar para valorar el riesgo:
+</p>
+<ul>
+    <li>
+        <a href="#Effect">Efecto</a> - el impacto o consecuencia de casos de uso especificados (requisitos, etc.) errores
+    </li>
+    <li>
+        <a href="#Cause">Causa</a> - empieza con un resultado indeseable provocado por el error de un caso de uso y examina
+        las causas posibles
+    </li>
+    <li>
+        <a href="#Likelihood">Probabilidad</a> - la probabilidad de error de un caso de uso.
+    </li>
+</ul>
+<p>
+    Seleccione una perspectiva, identifique un indicador de magnitud de riesgo y justifique la selección. No es necesario
+    identificar un indicador para cada perspectiva de riesgo. Sin embargo, se sugiere que, si se ha identificado un
+    indicador bajo, intente evaluar el elemento desde una perspectiva de riesgo diferente para garantizar que el elemento
+    es realmente de bajo riesgo.
+</p>
+<p>
+    A continuación se muestran más detalles de la valoración de riesgo desde estas tres perspectivas.
+</p>
+<h5>
+    <a id="Effect" name="Effect">Efecto</a>
+</h5>
+<p>
+    Para valorar el riesgo por Efecto, identifique una condición, suceso o acción e intente determinar su impacto. Haga una
+    pregunta:
+</p>
+<blockquote>
+    <p>
+        "¿Qué pasaría si ___________?"
+    </p>
+</blockquote>
+<p>
+    Por ejemplo:
+</p>
+<ul>
+    <li>
+        "¿Qué ocurriría si mientras instalo el nuevo software, el sistema se queda sin espacio en disco?"
+    </li>
+    <li>
+        "¿Qué ocurriría si la conexión a Internet se pierde durante una transacción de consulta?"
+    </li>
+    <li>
+        "¿Qué ocurriría si la conexión a Internet se pierde durante una transacción de compra?"
+    </li>
+    <li>
+        "¿Qué ocurriría si el usuario entra un valor inesperado?"<br />
+    </li>
+</ul>
+<p>
+    A continuación se muestra una matriz de justificación de estos elementos:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="20%">
+                    Descripción
+                </th>
+                <th scope="col" align="middle" width="20%">
+                    Factor de mitigación de riesgo
+                </th>
+                <th scope="col" align="middle" width="60%">
+                    Justificación
+                </th>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Espacio en disco insuficiente durante la instalación
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td width="60%">
+                    Instalar el software proporciona al usuario la primera impresión del producto. Cualquier resultado no
+                    deseado, como los que se listan a continuación, degradaría el sistema del usuario, el software
+                    instalado, y comunicaría una impresión negativa al usuario: 
+                    <ul>
+                        <li>
+                            el software está parcialmente instalado (algunos archivos, algunas entradas de registro, que
+                            dejan el software instalado en una condición inestable
+                        </li>
+                        <li>
+                            la instalación se detiene dejando en sistema en estado inestable
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    se ha perdido la conexión a Internet durante la consulta
+                </td>
+                <td align="middle" width="20%">
+                    L
+                </td>
+                <td width="60%">
+                    No hay daños resultantes de la pérdida de la conexión en los datos o la base de datos. Se reconoce que
+                    una conexión perdida puede comunicar una impresión negativa al usuario.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    se ha perdido la conexión a Internet durante la compra
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td width="60%">
+                    Cualquier conexión o transacción perdida que provoquen los resultados que se listan a continuación son
+                    inaceptables, ya que aumentan los costes y reducen los beneficios: 
+                    <ul>
+                        <li>
+                            base de datos dañada
+                        </li>
+                        <li>
+                            orden parcial
+                        </li>
+                        <li>
+                            datos o orden perdido
+                        </li>
+                        <li>
+                            múltiples órdenes (replicados)
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Valor entrado inesperado
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td width="60%">
+                    Cualquier transacción que provoque los resultados que se listan a continuación es inaceptable: 
+                    <ul>
+                        <li>
+                            base de datos dañada
+                        </li>
+                        <li>
+                            datos incorrectos
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h5>
+    <a id="Cause" name="Cause">Causa</a>
+</h5>
+<p>
+    Valorar el riesgo por Causa es lo contrario de valorarlo por Efecto. Empiece indicando un suceso o condición no
+    deseable, e identifique el conjunto de sucesos que habrían permitido que la condición existiera. Pregunte algo parecido
+    a:
+</p>
+<blockquote>
+    <p>
+        "¿Podría suceder que ___________?
+    </p>
+</blockquote>
+<p>
+    Por ejemplo:
+</p>
+<ul>
+    <li>
+        "¿Cómo podrían estar en el sistema sólo algunos archivos y no todas las entradas de registro que se hacen?"
+    </li>
+    <li>
+        "¿Cómo podría no reflejarse adecuadamente una transacción en la base de datos central?
+    </li>
+    <li>
+        "¿Cómo podría la sentencia de ciclo de facturación reflejar sólo algunos registros de la base de datos que cumplen
+        los criterios deseados?"
+    </li>
+</ul>
+<p>
+    A continuación se muestra una matriz de justificación de estos elementos:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="20%">
+                    Descripción
+                </th>
+                <th scope="col" align="middle" width="20%">
+                    Factor de mitigación de riesgo
+                </th>
+                <th scope="col" align="middle" width="60%">
+                    Justificación
+                </th>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Archivos que faltan / de aplicación y entradas de registro
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td width="60%">
+                    Hace que la aplicación (y, potencialmente, el sistema) sea inutilizable. La instalación es la primera
+                    vista de la aplicación por parte de los usuarios. Si la instalación falla, por cualquier motivo, el
+                    usuario ve el software desfavorablemente.<br />
+                     
+                    <p>
+                        Las posibles causas de esta condición incluyen:
+                    </p>
+                    <ul>
+                        <li>
+                            el proceso de instalación no ha instalado todos los archivos ni ha actualizado el registro
+                            correctamente
+                        </li>
+                        <li>
+                            el proceso de instalación se ha detenido por la intervención de un usuario (cancelar o salir)
+                        </li>
+                        <li>
+                            el proceso de instalación se ha detenido por la intervención del software / hardware (espacio
+                            en disco insuficiente, configuración no soportada, etc.)
+                        </li>
+                        <li>
+                            el proceso de instalación se ha detenido por condiciones desconocidas
+                        </li>
+                        <li>
+                            los archivos /entradas de registro del usuario suprimidos
+                        </li>
+                    </ul>
+                    <p>
+                        De estas causas, sólo la última no se puede detectar y gestionar en el proceso de instalación.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    orden parcial
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td width="60%">
+                    Los pedidos parciales no se pueden completar, lo que resulta en la pérdida de ingresos y de clientes. 
+                    <p>
+                        Las posibles causas incluyen:
+                    </p>
+                    <ul>
+                        <li>
+                            Conexión a Internet perdida debido a la acción del usuario (desconectar módem, apagar PC, etc.)
+                        </li>
+                        <li>
+                            conexión a Internet perdida debido a IP
+                        </li>
+                        <li>
+                            conexión a Internet perdida debido a la acción de un empleado (desconectar módem, apagar la
+                            alimentación de los servidores, etc.)
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Datos / base de datos dañados
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td width="60%">
+                    Los datos dañados no se tolerarán por ningún motivo. 
+                    <p>
+                        Las posibles causas incluyen:
+                    </p>
+                    <ul>
+                        <li>
+                            La transacción que escribe en la base de datos no se ha completado / cometido por la
+                            intervención del usuario
+                        </li>
+                        <li>
+                            La transacción que escribe en la base de datos no se ha completado / cometido por la pérdida de
+                            la conexión a Internet
+                        </li>
+                        <li>
+                            El usuario ha entrado datos no válidos en la transacción
+                        </li>
+                        <li>
+                            Métodos / programas de utilidad de acceso a la base de datos
+                        </li>
+                        <li>
+                            La base de datos no se ha rellenado correctamente (cuando se creaban las instancias iniciales)
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Pedidos replicados
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td width="60%">
+                    Los pedidos replicados aumentan los gastos generales consumidos por la empresa y reducen los beneficios
+                    a través de los costes asociados con el envío, gestión y reabastecimiento. 
+                    <p>
+                        Las posibles causas incluyen:
+                    </p>
+                    <ul>
+                        <li>
+                            La transacción que escribe el pedido en la base de datos replicada debido a la intervención del
+                            usuario, el usuario entra dos veces el pedido - sin confirmación de entrada
+                        </li>
+                        <li>
+                            La transacción que escribe el pedido en la base de datos replicada sin la intervención del
+                            usuario, (proceso de recuperación de la conexión a Internet perdida, restauración de la base de
+                            datos)
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Datos inapropiados para un pedido
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td width="60%">
+                    Todos los pedidos que no se pueden completar o que provocan gastos adicionales no son aceptables. 
+                    <p>
+                        Las posibles causas incluyen:
+                    </p>
+                    <ul>
+                        <li>
+                            La transacción del pedido no se ha completado / cometido por la intervención del usuario
+                        </li>
+                        <li>
+                            La transacción del pedido no se ha completado / cometido por la pérdida de la conexión a
+                            Internet
+                        </li>
+                        <li>
+                            El usuario ha entrado datos no válidos
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Número incorrecto de registros reflejado en la sentencia
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td width="60%">
+                    Las decisiones empresariales y las cuentas recibibles dependen de la precisión de estos informes. 
+                    <p>
+                        Las posibles causas incluyen:
+                    </p>
+                    <ul>
+                        <li>
+                            Criterios de búsqueda /selección incorrectos
+                        </li>
+                        <li>
+                            Sentencias SQL incorrectas
+                        </li>
+                        <li>
+                            Datos dañados en la base de datos
+                        </li>
+                        <li>
+                            Datos incorrectos en la base de datos
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h5>
+    <a id="Likelihood" name="Likelihood">Probabilidad</a>
+</h5>
+<p>
+    Valorar el riesgo por Probabilidad es determinar la probabilidad de que un caso de uso (o un componente que implemente
+    un caso de uso) falle. La probabilidad suele basarse en los factores externos como:
+</p>
+<ul>
+    <li>
+        Índices de error
+    </li>
+    <li>
+        Índice de cambio
+    </li>
+    <li>
+        Complejidad
+    </li>
+    <li>
+        Origen / Originador
+    </li>
+</ul>
+<p>
+    Debe tenerse en cuenta que, al utilizar esta perspectiva de riesgo, los indicadores de magnitud de riesgo están
+    relacionados con la probabilidad de un error, no con el efecto o el impacto que tiene en la organización tal como se
+    utilizaba para valorar el riesgo por Efecto y Causa.
+</p>
+<p>
+    Las correlaciones entre estos factores y la probabilidad de un error existen, tal como se identifican a continuación:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="35%">
+                    Factor externo
+                </th>
+                <th scope="col" align="middle" width="65%">
+                    Probabilidad
+                </th>
+            </tr>
+            <tr>
+                <td width="35%">
+                    Tasa de descubrimiento de errores<br />
+                </td>
+                <td width="65%">
+                    La probabilidad de anomalía aumenta a medida que aumentan los índices de descubrimiento de anomalías.
+                    Los defectos tienden a congregarse y, por lo tanto, el índice de descubrimiento de los defectos
+                    (densidad) aumenta en un caso de uso o componente, la probabilidad de encontrar otro defecto también
+                    aumenta. Los índices de descubrimiento y de densidad de los releases anteriores también deben
+                    considerarse al valorar el riesgo utilizando este factor, ya que los índices de descubrimiento elevados
+                    anteriores y las densidades indican una alta probabilidad de anomalías adicionales.
+                </td>
+            </tr>
+            <tr>
+                <td width="35%">
+                    Índice de cambio
+                </td>
+                <td width="65%">
+                    La probabilidad de anomalía aumenta a medida que aumenta el índice de cambio en el caso de uso o en el
+                    componente. Por lo tanto, a medida que aumenta el número de cambios, también aumenta la probabilidad de
+                    que se haya introducido un defecto. Cada vez que se realiza un cambio en el código, existe el riego de
+                    "inyectar" otro defecto.
+                </td>
+            </tr>
+            <tr>
+                <td width="35%">
+                    Complejidad
+                </td>
+                <td width="65%">
+                    La probabilidad de anomalía aumenta a medida que aumenta la complejidad del caso de uso o del
+                    componente.
+                </td>
+            </tr>
+            <tr>
+                <td width="35%">
+                    Origen / Originador
+                </td>
+                <td width="65%">
+                    El conocimiento y experiencia de dónde y quién ha originado el código puede aumentar o reducir la
+                    probabilidad de una anomalía.<br />
+                     La utilización de componentes de terceros habitualmente reduce la probabilidad de anomalía. Sin
+                    embargo, esto sólo es cierto si el componente de terceros se ha certificado (cumple sus requisitos, a
+                    través de pruebas formales o experiencia).<br />
+                     La probabilidad de error suele disminuir con el aumento del conocimiento y las habilidades del
+                    implementador. No obstante, factores tales como la utilización de nuevas herramientas, tecnologías o
+                    actuar en múltiples roles puede aumentar la probabilidad de una anomalía incluso con los mejores
+                    miembros del equipo.
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div><br />
+<br />
+<p>
+    Por ejemplo:
+</p>
+<ul>
+    <li>
+        Instalación del nuevo software
+    </li>
+    <li>
+        "Históricamente hemos encontrado muchos defectos en los componentes que se utilizan para implementar los casos de
+        uso 1, 10 y 12, y nuestros clientes nos han solicitado muchos cambios en los casos de uso 14 y 19".
+    </li>
+</ul>
+<p>
+    A continuación se muestra una matriz de justificación de estos elementos:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="20%">
+                    Descripción
+                </th>
+                <th scope="col" align="middle" width="20%">
+                    Factor de mitigación de riesgo
+                </th>
+                <th scope="col" align="middle" width="60%">
+                    Justificación
+                </th>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Instalación de nuevo software
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td width="60%">
+                    Estamos escribiendo nuestro propio programa de utilidad de instalación. 
+                    <p>
+                        Representa el uso de la aplicación inutilizable. La instalación es la primera vista de la
+                        aplicación por parte de los usuarios. Si la instalación falla, por cualquier motivo, el usuario ve
+                        el software desfavorablemente.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Instalación de nuevo software
+                </td>
+                <td align="middle" width="20%">
+                    L
+                </td>
+                <td width="60%">
+                    Estamos utilizando un programa de utilidad de instalación comercialmente satisfactorio. 
+                    <p>
+                        Mientras que la instalación anómala hace que la aplicación sea inutilizable, el programa de
+                        utilidad de instalación seleccionado es de un proveedor que ha alcanzado el número uno del mercado
+                        con su producto y se comercializa desde hace más de cuatro años. Nuestra evaluación indica que el
+                        producto cumple nuestras necesidades y que los clientes están satisfechos con su producto, el
+                        proveedor y el nivel de servicio y de soporte.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Índices de descubrimiento de anomalías elevado / densidades de defectos en los casos de uso 1, 10, 12.
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td width="60%">
+                    Debido a los elevados índices de descubrimiento de anomalías anteriores y de densidad de defectos, los
+                    casos de uso 1, 10 y 12 se consideran de alto riesgo.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Solicitudes de cambio en los casos de uso 14 y 19.
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td width="60%">
+                    Un elevado número de cambios a estos casos de uso aumenta la probabilidad de inyectar defectos en el
+                    código.
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h3>
+    <a id="Determine Operational Profile" name="Determine Operational Profile">Determinar el perfil operativo</a>
+</h3>
+<p>
+    El paso siguiente en la valoración del riesgo y el establecimiento de la prioridad de prueba es determinar el perfil
+    operativo del destino de la prueba.
+</p>
+<p>
+    Empiece por la identificación y la descripción de los indicadores de magnitud de perfil operativo que se utilizarán,
+    como por ejemplo:
+</p>
+<ul>
+    <li>
+        H - se utiliza con mucha frecuencia, muchas veces por periodo o por muchos actores o casos de uso.
+    </li>
+    <li>
+        M - se utiliza con bastante frecuencia, varias veces por periodo o por varios actores o casos de uso.
+    </li>
+    <li>
+        L - se utiliza con poca frecuencia o por pocos actores o casos de uso.
+    </li>
+</ul>
+<p>
+    El indicador del perfil operativo que seleccione debe basarse en la frecuencia de ejecución de un caso de uso o
+    componente, incluyendo:
+</p>
+<ul>
+    <li>
+        el número de veces que UN actor (o caso de uso) ejecuta el caso de uso (o componente) en un periodo determinado de
+        tiempo
+    </li>
+    <li>
+        el número de ACTORES (o casos de uso) que ejecutan el caso de uso (o componente)
+    </li>
+</ul>
+<p>
+    Habitualmente, cuanto más se utilice un caso de uso o componente, más elevado será el indicador de perfil operativo.
+</p>
+<p>
+    Después de identificar los indicadores de magnitud de perfil operativo, liste cada caso de uso o componente en el
+    destino de la prueba. Determine un indicador de perfil operativo para cada elemento de la lista e indique una
+    justificación para el valor del indicador. La información del documento de análisis de carga de trabajo (Consulte el
+    apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_workload_analysis_model_E86A32FF.html" guid="{008164B1-3AC3-47E8-9F93-EE4C36B58A97}">Producto de trabajo: Documento de análisis de carga de trabajo</a>) se
+    puede utilizar para esta valoración.
+</p>
+<p>
+    Ejemplos:
+</p>
+<ul>
+    <li>
+        Instalación de nuevo software
+    </li>
+    <li>
+        Solicitud de elementos desde el catálogo en línea
+    </li>
+    <li>
+        Clientes que consultan sobre su pedido en línea después de efectuar el pedido
+    </li>
+    <li>
+        Diálogo de selección de elementos
+    </li>
+</ul>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="20%">
+                    Descripción
+                </th>
+                <th scope="col" align="middle" width="20%">
+                    Factor del perfil operativo
+                </th>
+                <th scope="col" align="middle" width="60%">
+                    Justificación
+                </th>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Instalación de nuevo software
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td width="60%">
+                    Efectuado una vez (habitualmente), pero por muchos usuarios. Sin instalación, sin embargo, la
+                    aplicación no es utilizable.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Solicitud de elementos desde el catálogo
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td width="60%">
+                    Este es el caso de uso más habitual ejecutado por los usuarios.
+                </td>
+            </tr>
+            <tr>
+                <td align="left" width="20%">
+                    Clientes que consultan sobre pedidos
+                </td>
+                <td align="middle" width="20%">
+                    L
+                </td>
+                <td align="left" width="60%">
+                    Pocos clientes consultan sobre sus pedidos después de haberlos efectuado
+                </td>
+            </tr>
+            <tr>
+                <td align="left" width="20%">
+                    Diálogo de selección de elementos
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td align="left" width="60%">
+                    Este diálogo los utilizan los clientes para enviar pedidos y los asistentes de inventario para
+                    reabastecer las existencias.
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h3>
+    <a id="Establish Test Priority" name="Establish Test Priority">Establecer la prioridad de prueba</a>
+</h3>
+<p>
+    El último paso en la valoración del riesgo y el establecimiento de la prioridad de prueba es establecer la prioridad de
+    prueba.
+</p>
+<p>
+    Empiece por la identificación y la descripción de los indicadores de magnitud de prioridad de prueba que se utilizarán,
+    como por ejemplo:
+</p>
+<ul>
+    <li>
+        H - se debe probar
+    </li>
+    <li>
+        M - se debe probar, se probará sólo después de que se prueben todos los elementos H
+    </li>
+    <li>
+        L - se puede probar, pero no hasta que todos los elementos H y M se hayan probado
+    </li>
+</ul>
+<p>
+    Después de identificar los indicadores de magnitud de prioridad de prueba que se utilizarán, liste cada caso de uso o
+    componente en el destino de la prueba. Determine un indicador de prioridad de prueba para cada elemento de la lista e
+    indique su justificación. A continuación se muestran algunas directrices para determinar un indicador de prioridad de
+    prueba.
+</p>
+<p>
+    Tenga en cuenta lo siguiente cuando determine los indicadores de prioridad de prueba para cada elemento:
+</p>
+<ul>
+    <li>
+        el valor indicador de magnitud de riesgo que ha identificado anteriormente
+    </li>
+    <li>
+        el valor de magnitud de perfil operativo que ha identificado anteriormente
+    </li>
+    <li>
+        las descripciones de actor (¿los actores tienen experiencia?, ¿se toleran soluciones provisionales?, etc.)
+    </li>
+    <li>
+        obligaciones contractuales (¿será aceptable el destino de la prueba si el caso de uso o componente no se entrega?)
+    </li>
+</ul>
+<p>
+    Las estrategias para establecer una prioridad de prueba incluyen:
+</p>
+<ul>
+    <li>
+        Utilice el valor de factor valorado más alto (riesgo, perfil operativo, etc.) para cada elemento como prioridad
+        global.
+    </li>
+    <li>
+        Identifique un factor valorado (riesgo, perfil operativo, otros) como el más significativo y utilice el valor de
+        este factor como la prioridad.
+    </li>
+    <li>
+        Utilice una combinación de factores valorados para identificar la prioridad.
+    </li>
+    <li>
+        Utilice un esquema de ponderación donde los factores individuales se ponderan, y sus valores y la prioridad
+        calculada basadas en la ponderación.
+    </li>
+</ul>
+<p>
+    Ejemplos:
+</p>
+<ul>
+    <li>
+        Instalación de nuevo software
+    </li>
+    <li>
+        Solicitud de elementos desde el catálogo en línea
+    </li>
+    <li>
+        Clientes que consultan sobre su pedido en línea después de efectuar el pedido
+    </li>
+    <li>
+        Diálogo de selección de elementos
+    </li>
+</ul>
+<h4>
+    La prioridad cuando el valor valorado más elevado se utiliza para determinar la prioridad:
+</h4>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="18%">
+                    Elemento
+                </th>
+                <th scope="col" align="middle" width="16%">
+                    Riesgo
+                </th>
+                <th scope="col" align="middle" width="17%">
+                    Perfil operativo
+                </th>
+                <th scope="col" align="middle" width="16%">
+                    Actor
+                </th>
+                <th scope="col" align="middle" width="16%">
+                    Contrato
+                </th>
+                <th scope="col" align="middle" width="17%">
+                    Prioridad
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" width="18%">
+                    Instalación de nuevo software
+                </td>
+                <td align="middle" width="16%">
+                    H
+                </td>
+                <td align="middle" width="17%">
+                    H
+                </td>
+                <td align="middle" width="16%">
+                    L
+                </td>
+                <td align="middle" width="16%">
+                    H
+                </td>
+                <td align="middle" width="17%">
+                    H
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="18%">
+                    Solicitud de elementos desde el catálogo
+                </td>
+                <td align="middle" width="16%">
+                    H
+                </td>
+                <td align="middle" width="17%">
+                    H
+                </td>
+                <td align="middle" width="16%">
+                    H
+                </td>
+                <td align="middle" width="16%">
+                    H
+                </td>
+                <td align="middle" width="17%">
+                    H
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="18%">
+                    Consultas de los clientes
+                </td>
+                <td align="middle" width="16%">
+                    L
+                </td>
+                <td align="middle" width="17%">
+                    L
+                </td>
+                <td align="middle" width="16%">
+                    L
+                </td>
+                <td align="middle" width="16%">
+                    L
+                </td>
+                <td align="middle" width="17%">
+                    L
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="18%">
+                    Diálogo de selección de elementos
+                </td>
+                <td align="middle" width="16%">
+                    L
+                </td>
+                <td align="middle" width="17%">
+                    H
+                </td>
+                <td align="middle" width="16%">
+                    L
+                </td>
+                <td align="middle" width="16%">
+                    L
+                </td>
+                <td align="middle" width="17%">
+                    H
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h4>
+    La prioridad cuando el valor valorado más elevado para un factor (Riesgo) se utiliza para determinar la prioridad:
+</h4>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th align="middle" width="18%">
+                    Elemento
+                </th>
+                <th align="middle" width="16%">
+                    Riesgo
+                </th>
+                <th align="middle" width="17%">
+                    Perfil operativo
+                </th>
+                <th align="middle" width="16%">
+                    Actor
+                </th>
+                <th align="middle" width="16%">
+                    Contrato
+                </th>
+                <th align="middle" width="17%">
+                    Prioridad
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" width="20%">
+                    Instalación de nuevo software
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td align="middle" width="20%">
+                    L
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="20%">
+                    Solicitud de elementos desde el catálogo
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="20%">
+                    Consultas de los clientes
+                </td>
+                <td align="middle" width="20%">
+                    L
+                </td>
+                <td align="middle" width="20%">
+                    L
+                </td>
+                <td align="middle" width="20%">
+                    L
+                </td>
+                <td align="middle" width="20%">
+                    L
+                </td>
+                <td align="middle" width="20%">
+                    L
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="20%">
+                    Diálogo de selección de elementos
+                </td>
+                <td align="middle" width="20%">
+                    L
+                </td>
+                <td align="middle" width="20%">
+                    H
+                </td>
+                <td align="middle" width="20%">
+                    L
+                </td>
+                <td align="middle" width="20%">
+                    L
+                </td>
+                <td align="middle" width="20%">
+                    L
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h4>
+    Prioridad cuando un valor de ponderación se utiliza para calcular la prioridad:
+</h4>
+<p>
+    (Nota: en la matriz siguiente, H = 5, M = 3 y L = 1. Un valor ponderado total superior a 30 es de elemento de prueba de
+    alta prioridad, valores entre 20 y 30 inclusive, son de prioridad media y valores inferiores a 20 son de baja
+    prioridad).
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th align="middle" width="20%">
+                    Elemento
+                </th>
+                <th align="middle" width="20%">
+                    Riesgo (x 3)
+                </th>
+                <th align="middle" width="20%">
+                    Perfil operativo (x 2)
+                </th>
+                <th align="middle" width="20%">
+                    Actor (x 1)
+                </th>
+                <th align="middle" width="20%">
+                    Contrato (x 3)
+                </th>
+                <th align="middle" width="20%">
+                    Valor ponderado
+                </th>
+                <th align="middle" width="20%">
+                    Prioridad
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" width="20%">
+                    Instalación de nuevo software
+                </td>
+                <td align="middle" width="20%">
+                    5 (15)
+                </td>
+                <td align="middle" width="20%">
+                    5 (10)
+                </td>
+                <td align="middle" width="20%">
+                    1 (1)
+                </td>
+                <td align="middle" width="20%">
+                    5 (15)
+                </td>
+                <td align="middle" width="20%">
+                    41
+                </td>
+                <td align="middle" width="20%">
+                    H (2)
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="20%">
+                    Solicitud de elementos desde el catálogo
+                </td>
+                <td align="middle" width="20%">
+                    5 (15)
+                </td>
+                <td align="middle" width="20%">
+                    5 (10)
+                </td>
+                <td align="middle" width="20%">
+                    5 (5)
+                </td>
+                <td align="middle" width="20%">
+                    5 (15)
+                </td>
+                <td align="middle" width="20%">
+                    45
+                </td>
+                <td align="middle" width="20%">
+                    H (1)
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="20%">
+                    Consultas de los clientes
+                </td>
+                <td align="middle" width="20%">
+                    1 (3)
+                </td>
+                <td align="middle" width="20%">
+                    1 (2)
+                </td>
+                <td align="middle" width="20%">
+                    1 (1)
+                </td>
+                <td align="middle" width="20%">
+                    1 (3)
+                </td>
+                <td align="middle" width="20%">
+                    9
+                </td>
+                <td align="middle" width="20%">
+                    L (4)
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="20%">
+                    Diálogo de selección de elementos
+                </td>
+                <td align="middle" width="20%">
+                    1 (3)
+                </td>
+                <td align="middle" width="20%">
+                    5 (10)
+                </td>
+                <td align="middle" width="20%">
+                    1 (1)
+                </td>
+                <td align="middle" width="20%">
+                    1 (3)
+                </td>
+                <td align="middle" width="20%">
+                    17
+                </td>
+                <td align="middle" width="20%">
+                    L (3)
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h3>
+    <a id="Test Strategy" name="Test Strategy">Estrategia de prueba</a>
+</h3>
+<p>
+    La estrategia de prueba describe el enfoque general y los objetivos de un esfuerzo de prueba específico.
+</p>
+<p>
+    Una buena estrategia de prueba debe contener lo siguiente:
+</p>
+<ul>
+    <li>
+        <a href="#Type of Test and Objective">tipo de prueba que se debe implementar y su objetivo</a>
+    </li>
+    <li>
+        <a href="#Test Stage">estadio en que se implementará la prueba</a>
+    </li>
+    <li>
+        <a href="#Technique">técnica</a>
+    </li>
+    <li>
+        <a href="#Completion Criteria">medidas y criterios que se utilizan para valorar los resultados de prueba y la
+        terminación de la prueba</a>
+    </li>
+    <li>
+        <a href="#Special Considerations">cualquier consideración especial que afecte al esfuerzo de prueba descrito en
+        la estrategia de prueba</a>
+    </li>
+</ul>
+<h4>
+    <a id="Type of Test and Objective" name="Type of Test and Objective">Tipo de prueba y objetivo</a> <a href="#Top"><img     height="20" alt="Ir a la parte superior de la página" src="./../../../core.base_rup/resources/top.gif" width="26"     border="0" /></a>
+</h4>
+<p>
+    Indicar claramente el tipo de prueba que se está implementando y el objetivo de la prueba. Indicando explícitamente
+    esta información se reduce la confusión y se minimizan los malentendidos (especialmente porque algunas pruebas pueden
+    resultar muy similares). El objetivo debe indicar claramente porqué la prueba se está ejecutando.
+</p>
+<p>
+    Ejemplos:
+</p>
+<blockquote>
+    <p>
+        "Prueba funcional. La prueba funcional se centra en la ejecución de los casos de uso siguientes implementados en el
+        destino de la prueba, de la interfaz de usuario."
+    </p>
+</blockquote>
+<blockquote>
+    <p>
+        "Prueba de rendimiento. La prueba de rendimiento para el sistema se centrará en la medida del tiempo de respuesta
+        para los casos de uso 2, 4 y 8 - 10. Para estas pruebas, una carga de trabajo de un actor, ejecutando estos casos
+        de uso sin utilizar ninguna otra carga de trabajo en el sistema de prueba."
+    </p>
+    <p>
+        "Prueba de configuración. Las pruebas de configuración se implementarán para identificar y evaluar el
+        comportamiento del destino de la prueba en tres configuraciones diferentes, comparando las características de
+        rendimiento para la configuración del estándar de comparación.
+    </p>
+</blockquote>
+<h4>
+    <a id="Test Stage" name="Test Stage">Estadio de prueba</a>
+</h4>
+<p>
+    Indique claramente el estadio en que se ejecutará la prueba. A continuación se identifican los estadios en que se
+    ejecutan las pruebas habituales:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th id="col1" scope="col" width="20%">
+                    &nbsp;
+                </th>
+                <th id="col2" scope="col" align="middle" width="80%" colspan="4">
+                    Estadio de prueba
+                </th>
+            </tr>
+            <tr>
+                <td headers="col1" width="20%">
+                    Tipo de pruebas
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    Unidad
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    Integración
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    Sistema
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    Aceptación
+                </td>
+            </tr>
+            <tr>
+                <td headers="col1" width="20%">
+                    Pruebas funcionales 
+                    <p>
+                        (Configuración, Función, Instalación, Seguridad, Volumen)
+                    </p>
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    X
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    X
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    X
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    X
+                </td>
+            </tr>
+            <tr>
+                <td headers="col1" width="20%">
+                    Pruebas de rendimiento 
+                    <p>
+                        (perfiles de rendimiento de componentes individuales)
+                    </p>
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    X
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    X
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    (X) 
+                    <p align="left">
+                        opcional o cuando las pruebas de rendimiento del sistema descubren defectos
+                    </p>
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td headers="col1" width="20%">
+                    Pruebas de rendimiento 
+                    <p>
+                        (Carga, Tensión, Contienda)
+                    </p>
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    &nbsp;
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    &nbsp;
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    X
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    X
+                </td>
+            </tr>
+            <tr>
+                <td headers="col1" width="20%">
+                    Fiabilidad 
+                    <p>
+                        (Integridad, Estructura)
+                    </p>
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    X
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    X
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    (X) 
+                    <p align="left">
+                        opcional o cuando otras pruebas descubren defectos
+                    </p>
+                </td>
+                <td align="middle" headers="col2" width="20%">
+                    &nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h4>
+    <a id="Technique" name="Technique">Técnica</a>
+</h4>
+<p>
+    La técnica debe describir cómo se implementará y se ejecutará la prueba. Incluya qué se probará, las acciones
+    principales a desarrollar durante la ejecución de la prueba, y los métodos utilizados para evaluar los resultados.
+</p>
+<p>
+    Ejemplo:
+</p>
+<blockquote>
+    <p>
+        Prueba funcional:
+    </p>
+</blockquote>
+<blockquote>
+    <ul>
+        <li>
+            Para cada flujo de sucesos del caso de uso, se identificará un conjunto representativo de transacciones, cada
+            una representando las acciones desempeñadas por el actor cuando se ejecuta el caso de uso.
+        </li>
+        <li>
+            Un mínimo de dos casos de prueba se desarrollarán para cada transacción; un caso de prueba para reflejar la
+            condición positiva y una para reflejar la negativa (inaceptable).
+        </li>
+        <li>
+            En la primera iteración, los casos de uso 1 - 4, y 12 se probarán, del modo siguiente: 
+            <ul>
+                <li>
+                    Caso de uso 1: 
+                    <ul>
+                        <li>
+                            El caso de uso 1 empieza con el actor ya registrado en la aplicación y en la ventana principal,
+                            y termina cuando el usuario ha especificado GUARDAR.
+                        </li>
+                        <li>
+                            Cada caso de prueba se implementará y ejecutará mediante Rational Robot.
+                        </li>
+                        <li>
+                            La verificación y valoración de la ejecución de cada caso de prueba se realizará utilizando los
+                            métodos siguientes: 
+                            <ul>
+                                <li>
+                                    Ejecución del script de prueba (¿cada script de prueba se ha ejecutado
+                                    satisfactoriamente y tal como se deseaba?)
+                                </li>
+                                <li>
+                                    La existencia de ventana, o métodos de verificación de datos de objeto (implementados
+                                    en los scripts de prueba) se utilizarán para verificar qué ventanas clave se muestran y
+                                    qué datos especificados se capturan / muestran en el destino de la prueba durante la
+                                    ejecución de la prueba.
+                                </li>
+                                <li>
+                                    La base de datos destino de la prueba (con Microsoft Access) se examinará antes de la
+                                    prueba y después de esta para verificar que los cambios que se han ejecutado durante la
+                                    prueba se reflejan con precisión en los datos.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <p>
+        Prueba de rendimiento:
+    </p>
+    <ul>
+        <li>
+            Para cada caso de uso, un conjunto representativo de transacciones, tal como se identifican en el documento de
+            análisis de carga de trabajo se implementará y se ejecutará utilizando Rational Suite PerformanceStudio (vu
+            scripts) y Rational Robot (scripts GUI).
+        </li>
+        <li>
+            Como mínimo tres cargas de trabajo se reflejarán en los scripts de prueba y las planificaciones de ejecución de
+            prueba incluyendo lo siguiente: 
+            <ul>
+                <li>
+                    Carga de trabajo destacada: 750 usuarios (15 % gestores, 50 % ventas, 35 % marketing)
+                </li>
+                <li>
+                    Carga de trabajo punta: 350 usuarios (10 % gestores, 60 % ventas, 30 % marketing)
+                </li>
+                <li>
+                    Carga de trabajo nominal: 150 usuarios (2 % gestores, 75% ventas, 23 % marketing)
+                </li>
+            </ul>
+        </li>
+        <li>
+            Los scripts de prueba que se utilizan para ejecutar cada transacción incluirán los temporizadores apropiados
+            para capturar los tiempos de respuesta, como tiempo de transacción total (tal como se define en el documento de
+            análisis de carga de trabajo) y la tarea de transacción clave o los tiempos de proceso.
+        </li>
+        <li>
+            Los scripts de prueba ejecutarán las cargas de trabajo durante una hora (a menos que se indique lo contrario en
+            el documento de análisis de carga de trabajo).
+        </li>
+        <li>
+            La verificación y valoración de la ejecución de cada ejecución de prueba (de una carga de trabajo) incluirá: 
+            <ul>
+                <li>
+                    La ejecución de prueba se supervisará mediante histogramas de estado (para verificar que la prueba y
+                    las cargas de trabajo se están ejecutando según se esperaba y deseaba)
+                </li>
+                <li>
+                    Ejecución del script de prueba (¿cada script de prueba se ha ejecutado satisfactoriamente y tal como se
+                    deseaba?)
+                </li>
+                <li>
+                    Captura y evaluación de los tiempos de respuesta identificados utilizando los informes siguientes: 
+                    <ul>
+                        <li>
+                            Percentil de rendimiento
+                        </li>
+                        <li>
+                            Tiempo de respuesta
+                        </li>
+                    </ul><br />
+                    <br />
+                </li>
+            </ul>
+        </li>
+    </ul>
+</blockquote>
+<h4>
+    <a id="Completion Criteria" name="Completion Criteria">Criterios de terminación</a>
+</h4>
+<p>
+    Los criterios de terminación se indican con dos objetivos:
+</p>
+<ul>
+    <li>
+        identificar la calidad aceptable del producto
+    </li>
+    <li>
+        identificar cuando se ha implementado satisfactoriamente el esfuerzo de prueba
+    </li>
+</ul>
+<p>
+    Una sentencia clara de los criterios de terminación debe incluir los elementos siguientes:
+</p>
+<ul>
+    <li>
+        función, comportamiento o condición que se mide
+    </li>
+    <li>
+        método de medición
+    </li>
+    <li>
+        criterios o grado de conformidad con las mediciones
+    </li>
+</ul>
+<p>
+    Ejemplo 1
+</p>
+<ul>
+    <li>
+        Todos los casos de prueba se han ejecutado
+    </li>
+    <li>
+        Todos los defectos identificados se han dirigido a una resolución acordada
+    </li>
+    <li>
+        Todos los casos de prueba planificados se han vuelto a ejecutar y todos los defectos conocidos se han solucionado
+        según lo acordado, y no se han descubierto nuevos defectos
+    </li>
+</ul>
+<p>
+    Ejemplo 2
+</p>
+<ul>
+    <li>
+        Todos los casos de prueba de alta prioridad se han ejecutado.
+    </li>
+    <li>
+        Todos los defectos identificados se han dirigido a una resolución acordada.
+    </li>
+    <li>
+        Todos los defectos de Gravedad 1 ó 2 se han resuelto (estado = corregido o pospuesto).
+    </li>
+    <li>
+        Todos los casos de prueba de alta prioridad se han vuelto a ejecutar y todos los defectos conocidos se han
+        solucionado según lo acordado, y no se han descubierto nuevos defectos.
+    </li>
+</ul>
+<p>
+    Ejemplo 3
+</p>
+<ul>
+    <li>
+        Todos los casos de prueba planificados se han ejecutado.
+    </li>
+    <li>
+        Todos los defectos identificados se han dirigido a una resolución acordada.
+    </li>
+    <li>
+        Todos los defectos de Gravedad 1 ó 2 se han resuelto (estado = verificado o pospuesto).
+    </li>
+    <li>
+        Todos los casos de prueba de alta prioridad se han vuelto a ejecutar y todos los defectos conocidos se han
+        solucionado según lo acordado, y no se han descubierto nuevos defectos.
+    </li>
+</ul>
+<h4>
+    <a id="Special Considerations" name="Special Considerations">Consideraciones especiales</a>
+</h4>
+<p>
+    En esta sección se deben identificar las influencias o dependencias que pueden impactar o influenciar el esfuerzo de
+    prueba descrito en la estrategia de prueba. Las influencias pueden incluir:
+</p>
+<ul>
+    <li>
+        recursos humanos (como disponibilidad o necesidad de que los recursos que no son de prueba den soporte / participen
+        en la prueba)
+    </li>
+    <li>
+        restricciones, (como limitaciones de equipamiento o disponibilidad, o la necesidad / falta de equipamiento
+        especial)
+    </li>
+    <li>
+        requisitos especiales, como la planificación de prueba o el acceso a los sistemas
+    </li>
+</ul>
+<p>
+    Ejemplos:
+</p>
+<ul>
+    <li>
+        Las bases de datos de prueba requerirán el soporte de un diseñador / administrador de bases de datos para crear,
+        actualizar y renovar los datos de prueba.
+    </li>
+    <li>
+        Las pruebas de rendimiento del sistema utilizará los servidores en la red existente (que da soporte al tráfico que
+        no es de prueba). Las pruebas deberán planificarse posteriormente para garantizar que no hay tráfico que no sea de
+        prueba en la red.
+    </li>
+    <li>
+        El destino de la prueba debe sincronizar el sistema heredado (o la sincronización simulada) para que se implemente
+        y se ejecute la prueba funcional completa
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

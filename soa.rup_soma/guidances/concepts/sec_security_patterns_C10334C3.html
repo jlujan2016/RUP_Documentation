@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concepto: Patrones de seguridad</title>
+<meta content="Concept" name="uma.type">
+<meta content="sec_security_patterns" name="uma.name">
+<meta content="Patrones de seguridad" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "_zJPhoDx3EduNwuGvuWPNZA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_m8lcIDIyEduePY7oPsXsLA", "_zJPhoDx3EduNwuGvuWPNZA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_WdljEE7OEduvcvbnLvkXhA", "_zJPhoDx3EduNwuGvuWPNZA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_zJPhoDx3EduNwuGvuWPNZA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concepto: Patrones de seguridad</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../soa.rup_soma/tasks/sec_identify_security_patterns_1953748F.html" guid="_m8lcIDIyEduePY7oPsXsLA">Identificar patrones de seguridad</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Introducción
+</h3>
+<p>
+    La "seguridad" se percibe normalmente como una disciplina compleja y endiablada.&nbsp; "Patrón" es un término del que
+    la mayoría de la gente cree tener un conocimiento intuitivo porque es parte natural de la educación humana reconocer y
+    generalizar sobre patrones percibidos.&nbsp; Para este ejercicio tomaremos las siguientes como definiciones de trabajo:
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <p>
+        <strong>Seguridad</strong> es <em>"la condición de un sistema procedente del establecimiento y mantenimiento de
+        medidas para proteger el sistema".</em>&nbsp; [<a href="./../../../soa.rup_soma/guidances/concepts/./resources/#references">1</a>]
+    </p>
+    <p>
+        <em>"Un <strong>patrón</strong> es la abstracción de una forma concreta que se repite en contextos no arbitrarios
+        específicos".</em> [<a href="./../../../soa.rup_soma/guidances/concepts/./resources/#references">2</a>]
+    </p>
+</blockquote>
+<p>
+    Por tanto, intentar relacionar los dos términos, "seguridad" y "patrones" puede presentar cierta tensión.&nbsp; Ha
+    habido varios intentos de producir patrones de seguridad (consulte el Apéndice A).&nbsp;&nbsp; Este documento ha
+    intentado recopilar y codificar el material reunido durante varios años por diversos profesionales de la seguridad de
+    diversas fidelizaciones del cliente que crearon un "hombre de paja" para patrones de seguridad de IBM. La definición de
+    trabajo para "patrones de seguridad" en el contexto de este documento es:
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <p>
+        <em>Abstracción de las condiciones procedentes del establecimiento y mantenimiento de medidas repetidas usadas para
+        proteger el sistema.</em>
+    </p>
+</blockquote>
+<p>
+    Dentro de la comunidad de desarrollo de software resulta actualmente difícil establecer [<a href="./../../../soa.rup_soma/guidances/concepts/./resources/#references">3</a>] una metodología para el desarrollo de patrones.
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <p>
+        <em>En toda disciplina científica o de ingeniería resulta fundamental un vocabulario común para expresar sus
+        conceptos, y un lenguaje que los relacione. El objetivo de los patrones de la comunidad de software es crear un
+        cuerpo de literatura que ayude a los desarrolladores de software a resolver problemas recurrentes que aparecen en
+        todo desarrollo de software. Los patrones ayudan a crear un lenguaje común para comunicar el conocimiento y la
+        experiencia de dichos problemas, así como sus soluciones. Codificar formalmente estas soluciones y sus relaciones
+        nos permite capturar con éxito el cuerpo de conocimientos que define nuestra comprensión de las arquitecturas
+        buenas que cumplen con las necesidades de sus usuarios. La formación de un lenguaje de patrones comunes para
+        transmitir las estructuras y los mecanismos de nuestras arquitecturas nos permite pensar de modo inteligible sobre
+        ellas. El foco principal no se ocupa tanto de la tecnología como de la creación de una cultura para documentar y
+        dar soporte a arquitectura y diseño de ingeniería de sonido.</em> [<a href="./../../../soa.rup_soma/guidances/concepts/./resources/#references">4</a>]
+    </p>
+</blockquote>
+<p>
+    El punto fundamental de confusión es que los patrones, como la belleza, dependen del cristal con que se miran.&nbsp;De
+    este modo, si reúne a 5 personas especialistas en seguridad, definirán patrones específicos a su área de interés.
+</p>
+<p>
+    Por esta razón, haré un breve inciso para hablar de los "roles" que ayudan a agrupar los patrones según la comunidad de
+    interés.&nbsp;
+</p>
+<h3>
+    ¿Quién es el primero?
+</h3>
+<p>
+    En el mundo del software, hay personas que diseñan cosas, personas que hacen dibujos y escriben documentos, personas
+    que escriben código y personas que juntan todas las piezas y ofrecen sistemas informáticos.
+</p>
+<p>
+    Cada organización probablemente tenga su propia forma de definir las tareas, pero existen roles arquetípicos.
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <p>
+        <em>Un arquetipo es un modelo idealizado de persona, objeto o concepto del que se derivan, copian o emulan
+        instancias similares. En psicología, un arquetipo es un modelo de persona, personalidad o comportamiento.</em> [<a href="./../../../soa.rup_soma/guidances/concepts/./resources/#references">5</a>]
+    </p>
+</blockquote>
+<p>
+    En cualquier organización mediana o grande, las tareas se asignan a distintas personas en función de sus
+    responsabilidades en la organización.&nbsp; Normalmente, los analistas y las aplicaciones empresariales necesitan
+    proteger los activos informativos de la empresa. Controlan la creación de los requisitos de las aplicaciones
+    empresariales para seguridad.
+</p>
+<h5>
+    Arquetipo 1 :&nbsp;Analista empresarial
+</h5>
+<p>
+    En organizaciones que tengan que cumplir con requisitos legales o normativos hay a veces un conjunto específico de
+    tareas de nivel "C" para supervisar y hacer cumplir estas normas.&nbsp; Los comités de altos cargos y los encargados de
+    políticas trabajan normalmente con analistas empresariales para compilar un conjunto de directrices y requisitos
+    corporativos que son los fundamentos de las buenas prácticas empresariales.
+</p>
+<h5>
+    Arquetipo 2: Responsable (privado) de seguridad
+</h5>
+<p>
+    La mayoría de las organizaciones de todo tamaño tienen hoy en día un cortafuegos. Incluso los usuarios individuales en
+    sus hogares establecen cortafuegos para sus redes domésticas. Alguien debe configurar y mantener estos dispositivos.
+    Algunos son simples, otros complejos.
+</p>
+<h5>
+    Arquetipo 3: Responsable de seguridad de redes
+</h5>
+<p>
+    Cuando se&nbsp; trata de entender y seleccionar realmente algún tipo de mecanismo de seguridad para cumplir con los
+    requisitos especificados por la empresa, hay personas que trabajan juntas para implementar seguridad.&nbsp;&nbsp;
+</p>
+<h5>
+    Arquetipo 4:&nbsp; Arquitecto de seguridad
+</h5>
+<p>
+    Desarrollador de seguridad, implementador de seguridad, autor de políticas de seguridad, administrador de políticas de
+    seguridad, administrador de sistemas de seguridad
+</p>
+<h3>
+    Estudio de patrones por rol
+</h3>
+<p>
+    El propósito de este documento y del lote de diapositivas que lo acompañan es proporcionar un "hombre de paja" para
+    identificar e ilustrar patrones de seguridad comunes existentes dentro de la comunidad de analista empresarial/cliente
+    de IBM.&nbsp; La tarea del esfuerzo de los patrones de e-business es&nbsp; la reconciliación del volumen de información
+    en una abstracción que sea lo suficientemente general para que un profesional no relacionado con la seguridad pueda
+    captarla y siga manteniendo suficiente contexto para ofrecer un apuntalamiento concreto en la comunidad de la
+    seguridad.
+</p>
+<p>
+    IBM es un microcosmos de la gigante industria del software en la que representa tanto el desarrollo del producto como
+    el desarrollo del servicio de aplicación, así como productos de middleware para gestión y despliegue de
+    aplicaciones.&nbsp;
+</p>
+<p>
+    Existen varias metodologías para diseñar y desarrollar aplicaciones seguras (por ejemplo, MASS, Open Group, JAAS) pero
+    algunas de ellas están destinadas a los profesionales experimentados de la seguridad que tengan un conocimiento
+    profundo de la tecnología. Por lo tanto, un grupo de patrones serán "patrones arquitectónicos de seguridad". Las
+    arquitecturas detalladas de seguridad son necesarias para desarrollar tecnología para ofrecer soluciones de seguridad
+    y, llegado el caso, los patrones hacen referencia a ellas pero aquí no se trata de documentar todos los patrones
+    arquitectónicos de seguridad.
+</p>
+<h3>
+    ¿Qué es la seguridad?
+</h3>
+<p>
+    La IETF es una organización que ha sido fundamental en el desarrollo de Internet tal como lo conocemos hoy día. La IETF
+    estableció un glosario de seguridad en el 2000 que contiene casi todos los conceptos básicos de seguridad informática.
+    Se realizan mejoras, se introducen o desechan tecnologías y mecanismos pero las definiciones básicas siguen siendo las
+    mismas.
+</p>
+<p>
+    Los componentes más comunes que se utilizan hoy en día para la seguridad incluyen lo siguiente:&nbsp; identificación y
+    autenticación, autorización, garantía, auditoría, protección de mensajes, confidencialidad e integridad.&nbsp; En lugar
+    de sólo proporcionar patrones para cada mecanismo de seguridad individual, este "hombre de paja" ha observado los
+    mecanismos de seguridad individuales para identificar características comunes.&nbsp; Este documento técnico se centra
+    en la identificación de un "patrón de solución de seguridad".&nbsp; Estos elementos comunes proceden de la observación
+    de un conjunto detallado de elementos de patrón para cada mecanismo de seguridad (por ejemplo, autenticación: nombre de
+    usuario, contraseña, Kerberos, PKI) y del posterior compendio de todas aquellas cosas comunes en la autenticación, la
+    autorización, la garantía, etc.
+</p>
+<p>
+    La búsqueda de elementos comunes en todos los patrones de seguridad&nbsp; dio como resultado la identificación de 3
+    elementos de subpatrón que están presentes de alguna forma en todo tipo de solución de seguridad:
+</p>
+<ol>
+    <li>
+        tiene que haber&nbsp;un punto dentro del software en el que se llame al mecanismo de seguridad (por
+        ejemplo,&nbsp;un "punto de control")
+    </li>
+    <li>
+        hay normalmente algún tipo de metainformación que es importante para la ejecución del núm.1 y&nbsp; ésta se
+        denomina "propiedades de acceso y confianza del sistema"
+    </li>
+    <li>
+        existe algún tipo de tarea que se relaciona con la inicialización y el mantenimiento continuo del mecanismo de
+        seguridad y esto se denomina "tareas de gestión/flujo de trabajo de la seguridad".
+    </li>
+</ol>
+<p align="center">
+    <img height="506" alt="Una visión general de los patrones de seguridad"     src="./../../../soa.rup_soma/guidances/concepts/./resources/security_patterns_overview.png" width="440" />
+</p>
+<p>
+    Para mostrar cómo se puede correlacionar cada mecanismo de seguridad individual con estos tres subelementos ofrecemos
+    un ejemplo de "identificación".&nbsp; De nuevo, procedente del glosario de la IETF:
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <p>
+        <em>identificación&nbsp; :&nbsp; (I) Un acto o proceso que presenta un identificador de un sistema para que el
+        sistema pueda reconocer una entidad del sistema y distinguirla de otras entidades. (Consulte:
+        autenticación).</em>&nbsp;
+    </p>
+</blockquote>
+<p>
+    La distinción de una persona de otra al invocar una aplicación es un patrón al que hace frente toda empresa. Las
+    estrategias para solucionar el problema empresarial varían según el número y la diversidad de los elementos implicados
+    en la aplicación y su entorno de despliegue.&nbsp; Algunas empresas dejan la decisión sobre "denominación" a
+    aplicaciones individuales o quizás a un grupo de aplicaciones en una línea de empresa.&nbsp; Algunas empresas están
+    obligadas por el software en sus centros de datos. Algunas han vinculado estrechamente el entorno de despliegue de
+    aplicaciones a un riguroso conjunto de mecanismos.&nbsp;&nbsp;
+</p>
+<p>
+    No obstante, hay un punto en el que un "identificador" es presentado a una aplicación, y esto se considera un patrón de
+    "punto de control de seguridad" con fines identificativos.&nbsp;&nbsp; La cantidad y el tipo de información necesarios
+    también varía significativamente.&nbsp;&nbsp; Un identificador puede ser un nombre de persona real (por ejemplo,&nbsp;
+    Maryann Hondo) o un&nbsp; seudónimo (por ejemplo, mhondo).&nbsp; El identificador puede ser globalmente exclusivo (un
+    UUID) o puede ser exclusivo dentro de un espacio de nombres calificados (por ejemplo, <a href="mailto:mhondo@us.ibm.com">mhondo@us.ibm.com</a>).
+</p>
+<h3>
+    Características de un patrón de seguridad
+</h3>
+<ul>
+    <li>
+        Definición de uno o más puntos de control (identidad, autenticación, autorización, imposición de políticas,
+        auditoría, cumplimiento, protección de mensajes)
+    </li>
+    <li>
+        Definición de propiedades de protección de sistemas (restricciones de configuración; normas de acceso y confianza)
+    </li>
+    <li>
+        Definición de tareas de gestión (suministro, sincronización de registro/depósito, gobernanza, supervisión)
+    </li>
+</ul>
+<h3>
+    <a id="references" name="references">Referencias</a>
+</h3>
+<ol>
+    <li>
+        RFC 2828 Glosario de seguridad en Internet Mayo de 2000
+    </li>
+    <li>
+        <em>Understanding and Using Patterns in Software Development</em>, Dirk Riehle y Heinz Zullighoven.
+    </li>
+    <li>
+        <em>Design Patterns: Elements of Reusable Object-Oriented Software,</em> Erich Gamma, Richard Helm, Ralph Johnson y
+        John Vlissides.
+    </li>
+    <li>
+        <em>Patterns and Software: Essential Concepts and Terminology</em>, Brad Appleton: <a href="http://www.cmcrossroads.com/bradapp/docs/patterns-intro.html#Origins">http://www.cmcrossroads.com/bradapp/docs/patterns-intro.html#Origins</a>
+    </li>
+    <li>
+        Wikipedia: <a href="http://en.wikipedia.org/wiki/Archetype">http://en.wikipedia.org/wiki/Arquetipo</a>
+    </li>
+</ol></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

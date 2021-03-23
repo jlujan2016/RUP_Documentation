@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Estructuraci&oacute;n de la implementaci&oacute;n de la prueba con Rational TestFactory</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="structure_test_implementation" name="uma.name">
+<meta content="Estructuraci&oacute;n de la implementaci&oacute;n de la prueba con Rational TestFactory" name="uma.presentationName">
+<meta content="Tool:rup_test_factory:Rational TestFactory" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational TestFactory" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{AD403709-9F1A-496A-B5F7-F7CF823F8BDD}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{AD403709-9F1A-496A-B5F7-F7CF823F8BDD}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{AD403709-9F1A-496A-B5F7-F7CF823F8BDD}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{AD403709-9F1A-496A-B5F7-F7CF823F8BDD}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Estructuraci&oacute;n de la implementaci&oacute;n de la prueba con Rational TestFactory</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo utilizar Rational TestFactory para empezar a estructurar la implementación de la prueba a fin de permitir la implementación de las pruebas generadas.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_test_factory_3EDA2115.html" guid="{FBA5098E-2CA8-483D-814D-DE3E876426B1}">Rational TestFactory</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_the_test_implementation_AAB73625.html" guid="{ED9DF0C0-744A-443A-AEBA-604382E05A5F}">Estructurar la implementación de la prueba</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_test_35C1B0AA.html" guid="{BC805E79-736B-42D5-BDC1-B95E7D002312}">Implementar la prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    Visión general
+</h3>
+<p>
+    En Rational TestFactory, se empieza a estructurar la implementación de la prueba utilizando la característica de
+    "correlación de aplicaciones".
+</p>
+<p>
+    Un correlación de aplicaciones desarrollada correctamente refleja una representación precisa de la interfaz de usuario
+    en la aplicación que se somete a prueba (AUT). Cada ventana y control de la aplicación que se somete a prueba se
+    representa por medio de un "objeto UI" en la correlación de aplicaciones. Para obtener información sobre el desarrollo
+    de la correlación de aplicaciones, consulte la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/setup_testfactory_C77C34F4.html" guid="{FAC387D8-BA1A-4056-A53B-E1C43571D1DC}">Guía de la herramienta: Establecimiento del entorno de prueba en Rational
+    TestFactory</a>.
+</p>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Windows 98/2000/NT 4.0.
+</p>
+<p>
+    Para utilizar Rational TestFactory para capturar los resultados del modelo de prueba para la prueba automatizada, debe:
+</p>
+<ol>
+    <li>
+        <a href="#ID test locations">Identificar los componentes de la aplicación que desea probar</a>
+    </li>
+    <li>
+        <a href="#Set up interaction objects">Establecer objetos de interacción para reflejar requisitos del script
+        de prueba</a>
+    </li>
+    <li>
+        <a href="#Supply test data">Suministrar datos de prueba para objetos que representan controles de texto</a>
+    </li>
+    <li>
+        <a href="#Restrict object testing">Restringir la prueba a objetos específicos</a>
+    </li>
+</ol>
+<h3>
+    1.&nbsp;&nbsp;<a id="ID test locations" name="ID test locations">Identificar los componentes de la aplicación que desea
+    probar</a>
+</h3>
+<p>
+    Después de desarrollar la correlación de aplicaciones, puede determinar las áreas de la aplicación que se somete a
+    prueba que son adecuadas para la prueba en Rational TestFactory.
+</p>
+<p>
+    Un "piloto" es la herramienta de Rational TestFactory que genera scripts de prueba automáticamente. Las ubicaciones en
+    las que se sitúan los pilotos en la correlación de aplicaciones determinan los controles de la aplicación que se somete
+    a prueba que pueden probar. Un piloto puede probar todos los objetos UI disponibles de la correlación que se encuentran
+    en la ramificación del objeto padre del piloto. Si un objeto UI representa un control de dicha ramificación de la
+    correlación y el objeto está disponible, el piloto lo prueba.
+</p>
+<p>
+    Revise los procedimientos de prueba que ha creado durante la tarea de diseño de pruebas, con el objetivo de
+    identificar:
+</p>
+<ul>
+    <li>
+        Los controles que se deben ejecutar en un orden específico.
+    </li>
+    <li>
+        Los controles para los que se deben proporcionar datos de prueba.
+    </li>
+    <li>
+        Las ventanas o los recuadros de diálogo en los que se muestran los controles.
+    </li>
+</ul>
+<p>
+    Los objetos UI de la correlación de aplicaciones que corresponden a las ventanas, los recuadros de diálogo y los
+    controles identificados son candidatos óptimos para que los prueben pilotos en Rational TestFactory. Puede especificar
+    cómo debe probar TestFactory un control en la aplicación que se somete a prueba estableciendo los valores de propiedad
+    de su objeto UI correspondiente.
+</p>
+<p>
+    <img height="16" alt="icono de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte los temas
+    de la ayuda de Rational TestFactory que tratan sobre:
+</p>
+<p>
+    <i>Pilotos: Qué son y cómo funcionan</i>
+</p>
+<p>
+    <i>Colocación eficaz del piloto</i>
+</p>
+<h3>
+    2.&nbsp;&nbsp;<a id="Set up interaction objects" name="Set up interaction objects">Establecer objetos de interacción
+    para reflejar requisitos del script de prueba</a>
+</h3>
+<p>
+    Un script de prueba en el que todos los controles están situados en la misma ventana es un candidato óptimo para la
+    prueba en Rational TestFactory. Un "objeto de interacción" es la característica de TestFactory que le permite
+    especificar el método de interacción de script de prueba para dichos controles.
+</p>
+<p>
+    Un objeto de interacción es un contenedor al que se pueden añadir uno o más objetos UI como "componentes". Los
+    componentes del objeto de interacción representan los controles que se deben ejecutar para seguir una vía de acceso
+    específica o para llevar a cabo una tarea específica en la aplicación que se somete a prueba. Después de añadir los
+    componentes para la interacción, los puede configurar a fin de satisfacer los requisitos del script de prueba.
+</p>
+<p>
+    Si dispone de más de un script de prueba que prueba controles en la misma ventana, puede especificar los requisitos
+    para cada script en un objeto de interacción separado. La característica Piloto de TestFactory puede probar varios
+    objetos de interacción en la misma ventana durante una única ejecución del conjunto de aplicaciones de prueba o
+    ejecución del piloto.
+</p>
+<p>
+    <img height="16" alt="icono de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte el tema de
+    la ayuda de Rational TestFactory que trata sobre la <i>utilización de objetos de interacción para establecer pruebas
+    específicas</i>.
+</p>
+<h3>
+    3.&nbsp;&nbsp;<a id="Supply test data" name="Supply test data">Suministrar datos de prueba para objetos que representan
+    controles de texto</a>
+</h3>
+<p>
+    La característica Piloto de TestFactory realiza varias pruebas en tantos objetos UI disponibles como sea posible en el
+    área específica de la correlación a la que tiene acceso. Por omisión, un piloto ejecuta los objetos en orden aleatorio
+    y proporciona valores de datos al azar para objetos que requieren una entrada.
+</p>
+<p>
+    Si el script de prueba tiene controles que requieren datos de prueba específicos como entrada, puede utilizar un
+    "estilo de entrada de datos" para facilitar la información de entrada necesaria. Un estilo de entrada de datos es un
+    grupo de propiedades de objetos UI que especifica la entrada de prueba para un objeto UI:
+</p>
+<ul>
+    <li>
+        Un guión de cadena de caracteres necesario que un piloto de TestFactory debe utilizar.
+    </li>
+    <li>
+        Una lista de guiones de cadena de caracteres que actúan como una agrupación de datos en la que un piloto puede
+        escoger aleatoriamente.
+    </li>
+    <li>
+        Un lista de guiones de máscara para la que Rational TestFactory genera valores de cadena de caracteres que un
+        piloto puede escoger aleatoriamente.
+    </li>
+    <li>
+        Opciones que permiten que un piloto genere valores de entero, punto flotante y cadena de caracteres de modo
+        aleatorio.
+    </li>
+</ul>
+<p>
+    Rational TestFactory proporciona un conjunto de estilos de entrada de datos del <i>sistema</i> predefinidos que refleja
+    tipos estándar de entrada. Puede crear otros estilos de entrada de datos <i>personalizados</i> basados en estilos del
+    sistema o en estilos personalizados existentes. También puede alterar temporalmente los valores de un estilo del
+    sistema o de un estilo personalizado para un objeto individual.
+</p>
+<p>
+    <img height="16" alt="icono de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte el tema de
+    Rational TestFactory que trata sobre la <i>utilización de estilos de entrada de datos para objetos de tipo de
+    entrada</i>.
+</p>
+<h3>
+    4.&nbsp;&nbsp;<a id="Restrict object testing" name="Restrict object testing">Restringir la prueba de objetos
+    específicos</a>
+</h3>
+<p>
+    Por omisión, todos los controles de la aplicación que se somete a prueba que se representan por medio de objetos UI en
+    la correlación de aplicaciones se pueden elegir para probar. Si un piloto encuentra un objeto UI cuando sigue una vía
+    de acceso a través de la correlación de aplicaciones, el piloto puede incluir el objeto UI en un script de prueba
+    generado. Sin embargo, es posible que la aplicación que se somete a prueba contenga controles correlacionados que no
+    desea que prueben los pilotos. Algunos ejemplos:
+</p>
+<ul>
+    <li>
+        Un control inestable
+    </li>
+    <li>
+        Un control cuya funcionalidad causa una acción destructiva<br />
+         (por ejemplo, un control que suprime una base de datos)
+    </li>
+    <li>
+        Un control que no desea que se pruebe<br />
+         (por ejemplo, un control de impresión o un control que abre la Ayuda)
+    </li>
+</ul>
+<p>
+    Si la aplicación que se somete a prueba contiene estos controles, debe excluir el objeto UI asociado de la prueba.
+    También puede limitar las acciones de la prueba que lleva a cabo un piloto en un control. Las propiedades del objeto UI
+    asociado a un control reflejan las acciones posibles que puede realizar un usuario en el control.
+</p>
+<p>
+    <img height="16" alt="icono de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte los temas
+    de la ayuda de Rational TestFactory que tratan sobre:
+</p>
+<ul>
+    <li>
+        <i>Exclusión de objetos UI de la prueba</i>
+    </li>
+    <li>
+        <i>Cambio de acciones de prueba de objetos UI</i>
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Despliegue de m&oacute;dulos y aplicaciones J2EE</title>
+<meta content="Guideline" name="uma.type">
+<meta content="deploying_j2ee_modules_and_applications" name="uma.name">
+<meta content="Despliegue de m&oacute;dulos y aplicaciones J2EE" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "5.3908533897796765E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="5.3908533897796765E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Despliegue de m&oacute;dulos y aplicaciones J2EE</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la forma en que desplegar aplicaciones J2EE y módulos J2EE autónomos en un entorno operativo. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/define_test_environment_configurations_605902BA.html" guid="{187268D3-3166-4823-8DD8-5E1112004AC3}">Definir las configuraciones del entorno de prueba</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/support_development_1443EF07.html" guid="{35936CF9-4B04-402A-9482-07E5CFB45D99}">Dar soporte al desarrollo</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/perform_developer_test_512B18D9.html" guid="{55EAEE66-A254-457F-BCC3-D1C21ED88134}">Ejecutar pruebas de desarrollador</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Introducción
+</h3>
+<p>
+    Esta página contiene directrices sobre la forma en que desplegar aplicaciones J2EE y módulos J2EE autónomos en un
+    entorno operativo. El entorno puede ser un entorno de desarrollo, un entorno de pruebas o un sitio de instalación del
+    cliente. Los detalles del despliegue varían en función de la aplicación y el entorno, y normalmente requieren el
+    utilizar herramientas específicas del proveedor. Sin embargo, estas directrices proporcionan una visión general de los
+    pasos requeridos, entre los que se incluye la instalación, la configuración y el lanzamiento de la aplicación.
+</p>
+<h3>
+    Instalación
+</h3>
+<p>
+    Los siguientes pasos se realizan al instalar los archivadores J2EE en el entorno de despliegue.
+</p>
+<ul>
+    <li>
+        Identificación de los archivos a desplegar (una <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_build_BA336272.html" guid="{53728CD9-FA47-4B58-A443-E9F9DC196916}">compilación</a> específica en el repositorio de gestión de
+        configuración).
+    </li>
+    <li>
+        Preconfiguración de todos los recursos necesarios como conexiones de base de datos.
+    </li>
+    <li>
+        Transferencia de archivadores al hardware de destino (que se debería especificar en el modelo de despliegue y/o en
+        las instrucciones de instalación).
+    </li>
+    <li>
+        Si el hardware de destino corresponde a una configuración de pruebas, hay que realizar todas las instrucciones
+        adicionales de instalación requeridas tal como se especifique en la configuración de pruebas.
+    </li>
+</ul>
+<h3>
+    Configuración
+</h3>
+<p>
+    El entorno de software y hardware de destino se verifica para asegurarse de que está correctamente configurado de
+    acuerdo a las instrucciones de instalación, incluida la resolución de todas las dependencias externas, el asegurarse de
+    que los roles de seguridad se han correlacionado en cuentas y grupos de usuario en el entorno de destino y la
+    configuración de otras aplicaciones y recursos que interactúan con la aplicación J2EE, tales como sistemas
+    tradicionales, bases de datos y servicios compartidos y bibliotecas (por ejemplo, JAR de terceros para servicios web y
+    soporte de XML).
+</p>
+<p>
+    Si se desea depurar la aplicación, se debería habilitar la depuración en el servidor de aplicaciones. Normalmente, es
+    necesario reiniciar el servidor de aplicaciones en modalidad de depuración, lo que se describirá en la documentación
+    del servidor de aplicaciones.
+</p>
+<h3>
+    Lanzamiento
+</h3>
+<p>
+    La aplicación se lanza, lo que quiere decir que está disponible para probar y utilizar.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

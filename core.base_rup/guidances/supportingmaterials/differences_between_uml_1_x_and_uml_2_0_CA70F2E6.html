@@ -1,0 +1,452 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Material de soporte: Diferencias entre UML 1.x y UML 2.0</title>
+<meta content="SupportingMaterial" name="uma.type">
+<meta content="differences_between_uml_1_x_and_uml_2_0" name="uma.name">
+<meta content="Diferencias entre UML 1.x y UML 2.0" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:3.2329841703462285E-305", path: ["3.2329841703462285E-305", "1.9677894927771484E-305", "4.792914878943572E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "3.2329841703462285E-305", "1.9677894927771484E-305", "4.792914878943572E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "__yoNMDIcEdqDs_9ORT1Rig", "4.792914878943572E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.792914878943572E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Diferencias entre UML 1.x y UML 2.0</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/supportingmaterial.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta página se describen algunas diferencias entre UML 1.x y UML 2.0 que son relevantes al contexto de RUP.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="UML 2.0" text="novedades" name="XE_UML_2_._0__whats_new" id="XE_UML_2_._0__whats_new" class="index"></a> 
+<h2 align="justify">
+    Temas
+</h2>
+<ul>
+    <li>
+        <a href="#overview">Visión general</a>
+    </li>
+    <li>
+        <a href="#activitydiagram">Diagrama de actividad</a>
+    </li>
+    <li>
+        <a href="#communicationdiagram">Diagrama de comunicación</a>
+    </li>
+    <li>
+        <a href="#component">Componente</a>
+    </li>
+    <li>
+        <a href="#compositestructurediagram">Diagrama de estructura compuesta</a>
+    </li>
+    <li>
+        <a href="#sequencediagram">Diagrama de secuencia</a>
+    </li>
+</ul>
+<h2>
+    <a id="overview" name="overview">Visión general</a>
+</h2>
+<p align="justify">
+    En esta página se describen algunas diferencias entre UML 1.x y UML 2.0 que son relevantes al contexto de RUP. El
+    objetivo no es abarcar todas las especificaciones de infraestructura y superestructura de UML ([<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#UML04" guid="7.755968586980351E-308">UML04</a>]), sino ofrecer una visión general de las funciones relevantes de UML. Para
+    obtener más información, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#RUM05" guid="7.755968586980351E-308">RUM05</a>] y [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#ERI04" guid="7.755968586980351E-308">ERI04</a>].
+</p>
+<p align="justify">
+    "UML 1.x" hace referencia a las versiones UML 1.0 a UML 1.5.
+</p>
+<p align="justify">
+    Los cambios en cuanto a diagramas más significativos en el conjunto de características de UML 2.0 afectan a los
+    diagramas de comportamiento, sobre todo al diagrama de actividad y al conjunto de diagramas de interacción (consulte
+    las secciones <a href="#activitydiagram">Diagrama de actividad</a>, <a href="#sequencediagram">Diagrama de
+    secuencia</a> y <a href="#communicationdiagram">Diagrama de comunicación</a> más abajo).
+</p>
+<p align="justify">
+    El diagrama de estructura compuesta y la clase estructurada son también características nuevas de UML 2.0 (consulte la
+    sección <a href="#compositestructurediagram">Diagrama de estructura compuesta</a> más abajo).
+</p>
+<h2>
+    <a id="activitydiagram" name="activitydiagram">Diagrama de actividad</a>
+</h2>
+<h3>
+    <strong>Introducción</strong>
+</h3>
+<p>
+    En UML 2.0, el modelado de actividades ha sufrido una profunda revisión. Es justo decir que, en caso de uso eventual al
+    menos, el efecto y la apariencia pueden ser muy similares, aunque en función de la formalidad del modelado en UML 1.5
+    (y versiones anteriores), es posible que el resultado de la ejecución y la interpretación estricta de un modelo
+    construido de acuerdo con reglas de UML 1.x no sea el mismo en UML 2.0. Por lo tanto, el modelador debe ser cauto:
+    aunque un modelo de actividad de UML 1.x parezca aceptable para UML 2.0 sin cambio alguno, puede que no se ejecute de
+    la misma manera, particularmente en el caso de modelos más complejos con concurrencia. Consulte [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#UML04" guid="7.755968586980351E-308">UML04</a>] para obtener más información.
+</p>
+<p>
+    De acuerdo con la definición de [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#UML04" guid="7.755968586980351E-308">UML04</a>], una
+    <em>actividad</em> (que se mostrará en un <em>diagrama de actividad</em>) es la especificación del comportamiento como
+    secuencia coordinada de unidades subordinadas cuyos elementos individuales son <em>acciones</em>. De manera informal,
+    puede que nos hayamos referido a los pasos ejecutables individuales de un diagrama de actividad UML 1.x como
+    actividades o estados de la actividad o, correctamente, como estados de la acción: ahora en una actividad UML 2.0,
+    estos pasos se llaman acciones, y éstas no se descomponen en más partes dentro de la actividad. La connotación de
+    estado ha desaparecido en UML 2.0 porque una actividad ya no es una máquina de estado, como lo era en UML 1.x. En UML
+    2.0, las actividades se componen de <em>nodos</em>, de los cuales, las acciones son un tipo; otro tipo (descritos más
+    abajo) son los nodos de <em>control</em> y los nodos de <em>objeto</em>.
+</p>
+<p>
+    <strong>Semántica de flujo</strong>
+</p>
+<p>
+    Las actividades tienen ahora semántica del tipo Petri Net, basada en <em>flujo de señales</em> donde la ejecución de un
+    nodo afecta a la ejecución de otro a través de conexiones dirigidas llamadas flujos. Las señales, que contienen objetos
+    o una posición de control, fluyen entre nodos a través de estas conexiones. Un nodo puede empezar la ejecución cuando
+    se reúnen condiciones especificadas en las señales de entrada, y cuando el nodo completa la ejecución, ofrece señales
+    en sus flujos de salida, de modo que los nodos en sentido descendente pueden iniciar la ejecución. Los flujos que
+    conectan los nodos se perfeccionan y se convierten en flujos de objetos o de datos y control, y como cabría esperar,
+    las señales de control se mueven por los flujos de control, y las señales de datos u objetos pasan a través de los
+    flujos de objetos.
+</p>
+<p>
+    Esto contrasta con UML 1.x, en donde los nodos eran estados (o pseudoestados) con transiciones entre ellos, lo cual
+    limitaba el modelado de los flujos.
+</p>
+<p>
+    <strong>Modelado de concurrencia</strong>
+</p>
+<p>
+    La función de modelado de UML 2.0 permite un paralelismo sin restricciones: mientras que en UML 1.x, toda la máquina de
+    estado (actividad) realizaba un paso de ejecución hasta el final, la función de UML 2.0, en su formato más completo,
+    permite que varias invocaciones de una actividad sean gestionadas por una única ejecución con varias corrientes de
+    datos de señales que se mueven por los nodos y conectores de flujo de la actividad. Es responsabilidad del modelador
+    ser consciente de las condiciones de actualización y las interacciones. Consulte también la sección <strong>Diferencias
+    de semántica</strong> que aparece más abajo para ver otro ejemplo del efecto sobre el modelado de concurrencia de la
+    semántica de flujo de señales.
+</p>
+<h3>
+    <strong>Notación</strong>
+</h3>
+<p>
+    <strong>Nodos de control y acción</strong>
+</p>
+<p>
+    El diagrama mostrado más abajo ilustra muchos de los elementos de UML 2.0, y se presenta con la forma habitual para UML
+    2.0: un marco rectangular y un nombre en un compartimiento en la parte superior izquierda. Compare este diagrama con la
+    versión UML 1.x que se muestra después de este primer diagrama. Son similares en apariencia (difieren en las
+    convenciones de color y orientación, pero éstas no tienen significado semántico), y este modelo tiene el mismo
+    resultado de ejecución en UML 1.x y UML 2.0. Observe que los nodos de control (decisión, fusión, bifurcación, unión,
+    inicial y final) se parecen a sus equivalentes en UML 1.x, y los flujos de control se muestran con una línea con
+    flechas, que en UML 1.x equivale a la flecha de transición.
+</p>
+<p align="center">
+    <img height="404"     alt="Diagrama de actividad que ilustra los diferentes tipos de nodos: inicial, acción, decisión, bifurcación, unión, fusión y final de actividad. También muestra el flujo de control."      src="./../../../core.base_rup/guidances/supportingmaterials/resources/activity20.gif" width="630" />
+</p>
+<p class="picturetext">
+    Ejemplo de diagrama de actividad de UML 2.0
+</p>
+<p align="center">
+    <img height="505" alt="Este diagrama muestra la versión UML 1.x equivalente." src="./../../../core.base_rup/guidances/supportingmaterials/resources/activity1x.gif"     width="474" />
+</p>
+<p class="picturetext">
+    Ejemplo de diagrama de actividad de UML 1.x
+</p>
+<p>
+    UML 2.0 tiene un tipo de nodo de control adicional llamado <em>Final de flujo</em> (que se muestra más abajo en un
+    diagrama de [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#UML04" guid="7.755968586980351E-308">UML04</a>]) que se utiliza como alternativa al nodo Final de la actividad para terminar
+    un flujo. Es necesario porque, en UML 2.0, cuando el control alcanza cualquier instancia del nodo Final de actividad,
+    termina toda la actividad (incluidos todos los flujos). Final de flujo termina el flujo al que está asociado. Esto no
+    era un problema en UML 1.5 debido a la semántica de ejecución hasta el final, pero con el paralelismo sin restricciones
+    de UML 2.0, es posible que desee que no se detengan todos los flujos ni que se destruyan todas las señales.
+</p>
+<p align="center">
+    <img height="123" alt="Este diagrama ilustra el nodo de control de final de flujo." src="./../../../core.base_rup/guidances/supportingmaterials/resources/flowfinal.gif"     width="314" />
+</p>
+<p class="picturetext">
+    Nodo de control de final de flujo
+</p>
+<p>
+    <strong>Nodos de objetos</strong>
+</p>
+<p>
+    El modelado de la actividad en UML 2.0 también admite nodos de objetos. Un nodo de objeto es un nodo de actividad que
+    indica que una instancia de un clasificador determinado, posiblemente en un estado particular, podría estar disponible
+    en un punto determinado de la actividad (por ejemplo, como salida de una acción o como entrada en una acción). Los
+    nodos de objetos actúan como contenedores a los que objetos de un tipo determinado (y posiblemente de un determinado
+    estado) pueden fluir y desde los que pueden fluir. Se ha introducido una nueva notación, llamada <em>pin</em>, para
+    nodos de objeto en UML 2.0. Los pins representan entradas a una acción o salidas de una acción y son como pequeños
+    rectángulos que aparecen junto a los rectángulos de la acción, como se muestra más abajo.
+</p>
+<p align="center">
+    <img height="114"     alt="Este diagrama muestra la notación pin de los nodos de objetos, con un pin de salida conectado a un pin de entrada mediante un flujo de objetos."      src="./../../../core.base_rup/guidances/supportingmaterials/resources/pins.gif" width="262" />
+</p>
+<p class="picturetext" align="center">
+    Notación pin
+</p>
+<p>
+    Las flechas representan flujos de objetos. Son líneas continuas, a diferencia de las líneas de puntos que se usan en
+    las transiciones a los estados de flujos de objetos y desde éstos en UML 1.x. Cuando el pin de salida en una acción
+    tiene el mismo nombre que el pin de entrada en la acción conectada, los pins de salida y entrada pueden fusionarse en
+    un solo pin autónomo. De nuevo su apariencia es similar al flujo de objetos en UML 1.x.
+</p>
+<p align="center">
+    <img height="127" alt="Este diagrama muestra la notación alternativa de pin autónomo."     src="./../../../core.base_rup/guidances/supportingmaterials/resources/standalonepin.gif" width="267" />
+</p>
+<p class="picturetext" align="center">
+    Notación de pin autónomo
+</p>
+<p>
+    <strong>Nodos de actividad estructurada</strong>
+</p>
+<p>
+    Un nodo de actividad estructurada es un nodo de actividad ejecutable que puede ampliarse a nodos de actividades
+    subordinadas. Los nodos subordinados pertenecen a un solo nodo de actividad estructurada, pero puede que estén
+    anidados. Pueden tener flujos de control conectados a ellos y pins adjuntos. Un nodo de actividad estructurada se
+    dibuja en forma de rectángulo de esquinas redondeadas y de puntos que encierra sus nodos y flujos, con la palabra clave
+    &lt;&lt;estructurada&gt;&gt; en la parte superior.
+</p>
+<p>
+    <strong>Particiones de actividades</strong>
+</p>
+<p>
+    Una <em>partición de actividad</em> es una forma de agrupar los nodos y los flujos de una actividad de acuerdo con
+    alguna característica compartida. En UML 1.x, la idea de divisiones (vistas como particiones) se utilizaba en diagramas
+    de actividad para agrupar acciones de acuerdo con algún criterio, por ejemplo en modelado empresarial, según la empresa
+    responsable. En UML 2.0 la función de particiones se amplía a varias dimensiones para diagramas de actividad y
+    proporciona una notación adicional de modo que, por ejemplo, a las acciones individuales se les puede asignar el nombre
+    de la partición a la que pertenecen. El siguiente diagrama muestra un ejemplo de divisiones de varias dimensiones según
+    aparecerían en UML 2.0, en donde las acciones se agrupan de acuerdo con la ubicación y la responsabilidad.
+</p>
+<p align="center">
+    <img height="328"     alt="Ilustración del estilo de UML 2.0 de las particiones de actividades, con divisiones de dos dimensiones."     src="./../../../core.base_rup/guidances/supportingmaterials/resources/partitions.gif" width="627" />
+</p>
+<p class="picturetext">
+    Ejemplo de particiones de actividad con divisiones de dos dimensiones
+</p>
+<p>
+    <strong>Diferencias de semántica</strong>
+</p>
+<p>
+    La semántica de flujo de señales y el paralelismo sin restricciones de los modelos de actividad de UML 2.0 requieren
+    del modelador un especial cuidado a la hora de construir los nuevos modelos o convertir los modelos existentes, a fin
+    de garantizar el resultado de ejecución pretendido. Así en el ejemplo processPassenger anterior, el pasajero que está
+    facturando puede que sea miembro de un programa de pasajeros frecuentes, en cuyo caso, el agente le deberá obsequiar
+    con millas de regalo, como se muestra en el siguiente fragmento de modelo de UML 1.x.
+</p>
+<p align="center">
+    <img height="256"     alt="Este diagrama muestra un fragmento de modelo de UML 1.x con una transición concurrente vigilada."     src="./../../../core.base_rup/guidances/supportingmaterials/resources/concurguard1.gif" width="333" />
+</p>
+<p class="picturetext">
+    Utilización de transiciones concurrentes vigiladas
+</p>
+<p>
+    Colocar la vigilancia en la transición concurrente opcional significa que, en UML 1.x, la transición nunca se inicia, y
+    el comportamiento es como si la transición no se mostrara en el modelo; en esa línea, cuando las otras dos transiciones
+    se completan, la ejecución continúa hasta después de la unión. En UML 2.0, si el pasajero no es un pasajero habitual,
+    no llegará ninguna señal a la unión a través del flujo y el modelo se detiene porque la unión espera señales en todos
+    sus flujos para continuar. El modelo debe construirse como se muestra a continuación, con la condición tratada de la
+    misma manera que el flujo de gestión del equipaje. Está permitido colocar guardias directamente en los flujos
+    concurrentes siempre que esté seguro de que no haya uniones en sentido descendente que dependan de ellos.
+</p>
+<p align="center">
+    <img height="307"     alt="Este diagrama muestra una versión UML 2.0 del diagrama anterior, con nodos de decisión y de fusión en lugar del flujo concurrente vigilado."      src="./../../../core.base_rup/guidances/supportingmaterials/resources/concurguard2.gif" width="333" />
+</p>
+<p class="picturetext">
+    Utilización de nodos de decisión y de fusión en lugar del flujo concurrente vigilado
+</p>
+<h2>
+    <a id="communicationdiagram" name="communicationdiagram">Diagrama de comunicación</a>
+</h2>
+<p>
+    El diagrama de colaboración de UML 1.x se llama ahora en UML 2.0 <em>diagrama de comunicación</em>. No existen
+    diferencias semánticas con las versiones anteriores. El diagrama de comunicación se basa en el diagrama de colaboración
+    anterior y sigue siendo un tipo de diagrama de interacción.
+</p>
+<h3>
+    <strong>Notación</strong>
+</h3>
+<p>
+    Un diagrama de comunicación se centra en la interacción entre las líneas de vida. Se muestra como un gráfico cuyos
+    nodos son rectángulos que representan partes de un clase estructurada o roles de una colaboración. Se utiliza un marco
+    rectangular que rodea al diagrama con un nombre en un compartimiento en la esquina superior derecha, que es un cambio
+    de notación de las versiones UML anteriores.
+</p>
+<ul>
+    <li style="LIST-STYLE-TYPE: none">
+        Los nodos corresponden a las líneas de vida de una interacción.
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        Las líneas entre las partes representan los conectores que forman las vías de comunicación.
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        En los conectores puede que se muestre multiplicidad.
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        Los mensajes entre las partes se muestran mediante flechas con etiquetas cerca de las líneas de los conectores.
+    </li>
+</ul>Un diagrama de comunicación se utiliza para modelar interacciones que representan la implementación de una operación o
+guión de uso. 
+<p>
+    Ejemplo de un diagrama de comunicación:
+</p>
+<p align="center">
+    <img alt="Ejemplo de un diagrama de comunicación de un sistema de pedidos." src="./../../../core.base_rup/guidances/supportingmaterials/resources/communicdiag.jpg" />
+</p>
+<p class="picturetext">
+    Ejemplo de un diagrama de comunicación de un sistema de pedidos.
+</p>
+<h2>
+    <a id="component" name="component">Componente</a>
+</h2>
+<p>
+    En UML 2.0, un componente se anota mediante un símbolo de clase sin los dos rectángulos sobresalientes, como se definía
+    en UML 1.4. En su lugar, se utiliza un estereotipo de &lt;&lt;componente&gt;&gt;. De forma opcional, todavía se puede
+    utilizar un icono de componente similar al icono de UML 1.4 en la esquina superior derecha del símbolo del componente.
+</p>
+<p>
+    En UML 2.0, un componente es una clase estructurada, lo que significa que la colaboración entre los elementos y su
+    estructura interna (sus partes) puede modelarse para describir mejor su comportamiento. Las partes están conectadas a
+    través de conectores. Puede utilizar puertos para aumentar el nivel de encapsulación de un componente a través de las
+    interfaces proporcionadas y necesarias. Consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/component_A2E2B3B1.html" guid="3.524150980437479E-305">Concepto: Componente</a>
+    y <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/structured_class_FF8DB16F.html" guid="1.1994826813129747E-304">Concepto: Clase estructurada</a> para obtener más información.
+</p>
+<p>
+    Las versiones anteriores de UML definían un elemento de modelado especial llamado <em>subsistema</em>, que se modelaba
+    como un paquete con interfaz. Además, los componentes se utilizaban para estructurar el modelo en la arquitectura
+    física. En UML 2.0, los componentes se utilizan en un sentido amplio de la palabra, en todas las partes del modelo. Por
+    lo tanto, ya no es necesario un elemento especial para modelar subsistemas. Los compartimientos independientes de
+    realización del subsistema y especificación del subsistema en UML 1.x se han convertido en estereotipos independientes
+    (&lt;&lt;realización&gt;&gt; y &lt;&lt;especificación&gt;&gt;, respectivamente) aplicados a componentes en UML 2.0.
+    Otro nuevo estereotipo de componente es &lt;&lt;subsistema&gt;&gt;, indicado para modelar componentes a gran escala.
+</p>
+<p>
+    RUP recomienda el uso de componentes para modelar subsistemas (consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/design_subsystem_B26FD609.html" guid="1.2314266786534317E-305">Directriz:
+    Subsistemas de diseño</a> para obtener más información).
+</p>
+<h2>
+    <a id="compositestructurediagram" name="compositestructurediagram">Diagrama de estructura compuesta</a>
+</h2>
+<p>
+    Las arquitecturas pueden tener colaboraciones específicas entre sus elementos, con partes y conectores que no se
+    conocen necesariamente en el momento de su diseño. Un diagrama de clase típico (así como otros diagramas estáticos) no
+    sería suficiente para representar claramente los roles, las responsabilidades, las relaciones y las reglas que se
+    aplican a esos elementos.
+</p>
+<p>
+    Para solucionar estos problemas, UML 2.0 ha añadido el diagrama de estructura compuesta. Representa la estructura
+    interna de una clase estructurada (por ejemplo, un componente o una clase), incluidos los puntos de interacción de la
+    clase estructurada con otras partes del sistema. Muestra la configuración de las partes que realizan conjuntamente el
+    comportamiento de la clase estructurada que contiene.
+</p>
+<p>
+    Los diagramas de estructura compuesta se utilizan para dibujar el contenido interno de las clases estructuradas
+    (consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/structured_class_FF8DB16F.html" guid="1.1994826813129747E-304">Concepto: Clase estructurada</a> para obtener detalles y ejemplos de diagramas de
+    estructura compuesta).
+</p>
+<h2>
+    <a id="sequencediagram" name="sequencediagram">Diagrama de secuencia</a>
+</h2>
+<p>
+    Las nuevas características de los diagramas de secuencia de UML 2.0 son:
+</p>
+<ul>
+    <li style="LIST-STYLE-TYPE: none">
+        Los fragmentos proporcionan una semántica más clara sobre cómo se produce el comportamiento dentro de un diagrama
+        de secuencia. Un fragmento combinado contiene partes de un diagrama de secuencia, en el que pueden modelarse flujos
+        independientes, mostrando cómo las condiciones conducen a vías alternativas de ejecución.<br />
+        <br />
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        Las apariciones de interacciones permiten la descomposición de las interacciones en partes que pueden utilizarse.
+        Es una forma útil de compartir partes de una interacción entre muchas otras interacciones.<br />
+        <br />
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        En UML 1.x, una posible representación de los bucles era utilizar la condición de bucle escrita dentro de una nota.
+        La nota se adjuntaba al mensaje o conjunto de mensajes que se iba a ejecutar mientras la condición de bucle era
+        verdadera (true). En UML 2.0, existe una representación específica para bucles.<br />
+        <br />
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        En UML 2.0, los diagramas de secuencia pueden mostrar cómo se crean y destruyen los objetos.<br />
+        <br />
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        La ejecución de una aparición muestra el foco del control que un objeto ejecuta en un momento del tiempo, al
+        recibir un mensaje.
+    </li>
+</ul>
+<p>
+    Con las nuevas funciones de representación de fragmentos, apariciones de interacciones y bucles, los diagramas de
+    secuencia se pueden utilizar de dos maneras:
+</p>
+<ul>
+    <li style="LIST-STYLE-TYPE: none">
+        En forma de instancia: describe en detalle un caso de ejemplo típico, documentando una posible interacción, sin
+        condiciones, ramificaciones ni bucles. Este formato se utiliza para representar un caso de ejemplo de guión de uso.
+        Casos de ejemplo diferentes del mismo guión de uso se representan en diferentes diagramas de secuencia. Las
+        herramientas de modelado compatibles con la semántica de UML 1.x sólo permiten esta forma de representación.<br />
+        <br />
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        Forma genérica: describe todas las alternativas posibles en un caso de ejemplo, aprovechándose de las nuevas
+        funciones de UML 2.0 como condiciones, ramificaciones y bucles. Este formato se puede utilizar para representar
+        varios casos de ejemplo del mismo guión de uso en un solo diagrama de secuencia, donde tenga sentido.
+    </li>
+</ul>
+<p>
+    La figura siguiente muestra un ejemplo del modelado de diferentes casos de ejemplo en un diagrama de secuencia. El
+    fragmento <strong>alt</strong> muestra dos alternativas posibles de secuencias de mensaje en función de si se ha
+    cumplido o no una condición:
+</p>
+<p align="center">
+    <img alt="Diagrama de secuencia con ramificaciones, bucles y condiciones" src="./../../../core.base_rup/guidances/supportingmaterials/resources/seqdiag.jpg" />
+</p>
+<p class="picturetext">
+    Ejemplo: diagrama de secuencia con ramificaciones, bucles y condiciones
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

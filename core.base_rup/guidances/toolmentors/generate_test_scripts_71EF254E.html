@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Implementaci&oacute;n de scripts de prueba generados utilizando Rational TestFactory</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="generate_test_scripts" name="uma.name">
+<meta content="Implementaci&oacute;n de scripts de prueba generados utilizando Rational TestFactory" name="uma.presentationName">
+<meta content="Tool:rup_test_factory:Rational TestFactory" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational TestFactory" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{19F8AE86-E40A-42F5-8B81-673C306F5C35}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{19F8AE86-E40A-42F5-8B81-673C306F5C35}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{19F8AE86-E40A-42F5-8B81-673C306F5C35}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{19F8AE86-E40A-42F5-8B81-673C306F5C35}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Implementaci&oacute;n de scripts de prueba generados utilizando Rational TestFactory</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo utilizar Rational TestFactory para generar automáticamente scripts de prueba que prueban áreas específicas de la aplicación que se somete a prueba.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_test_factory_3EDA2115.html" guid="{FBA5098E-2CA8-483D-814D-DE3E876426B1}">Rational TestFactory</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_test_35C1B0AA.html" guid="{BC805E79-736B-42D5-BDC1-B95E7D002312}">Implementar la prueba</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_test_suite_94F58DEC.html" guid="{1C759E0D-B364-4095-A7CF-CD9E39301689}">Implementar el conjunto de aplicaciones de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    Visión general
+</h3>
+<p>
+    Un "piloto" es la herramienta de Rational TestFactory que se puede utilizar para generar scripts de prueba. Un piloto
+    genera scripts que prueban la funcionalidad de los controles en la aplicación que se somete a prueba (AUT), que se
+    representan por medio de objetos UI en un área de la correlación de aplicaciones. Para obtener información sobre el
+    desarrollo de la correlación de aplicaciones, consulte la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/setup_testfactory_C77C34F4.html" guid="{FAC387D8-BA1A-4056-A53B-E1C43571D1DC}">Guía de la herramienta: Establecimiento del entorno de prueba en Rational
+    TestFactory</a>.
+</p>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Windows 98/2000/NT 4.0.
+</p>
+<p>
+    Para utilizar Rational TestFactory para generar scripts de prueba automáticamente, debe:
+</p>
+<ol>
+    <li>
+        <a href="#Add Pilot">Añadir un piloto a la correlación de aplicaciones</a>
+    </li>
+    <li>
+        <a href="#Set up run Pilot">Establecer y ejecutar el piloto</a>
+    </li>
+</ol>
+<h3>
+    1. <a id="Add Pilot" name="Add Pilot">Añadir un piloto a la correlación de aplicaciones</a>
+</h3>
+<p>
+    Puede añadir un objeto piloto en cualquier ubicación de la correlación de aplicaciones. Desde allí, el piloto genera
+    scripts de prueba de forma automática, que se centran en el área funcional específica de la AUT correspondiente a la
+    parte de la correlación de aplicaciones.
+</p>
+<p>
+    Para determinar una parte de la aplicación que desea probar, consulte la primera tarea de la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/structure_test_implementation_3CC01B9C.html" guid="{AD403709-9F1A-496A-B5F7-F7CF823F8BDD}">Guía de la herramienta: Captura de resultados del diseño de prueba para
+    la prueba automatizada</a>.
+</p>
+<p>
+    <img height="16" alt="icono de Ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte los temas
+    de la ayuda en línea de Rational TestFactory que tratan sobre:
+</p>
+<ul>
+    <li>
+        <i>Pilotos: Qué son y cómo funcionan</i>
+    </li>
+    <li>
+        <i>Colocación eficaz del piloto</i>
+    </li>
+    <li>
+        <i>Adición de un piloto</i>
+    </li>
+</ul>
+<h3>
+    2. <a id="Set up run Pilot" name="Set up run Pilot">Establecer y ejecutar el piloto</a>
+</h3>
+<p>
+    Cuando establece el piloto, debe indicar los valores y las opciones que controlan el modo en el que se ejecuta el
+    piloto. La información de establecimiento que puede especificar incluye:
+</p>
+<ul>
+    <li>
+        La profundidad a la que debe probar el piloto en la correlación de aplicaciones.
+    </li>
+    <li>
+        Los criterios que utiliza Rational TestFactory para detener la ejecución del piloto.
+    </li>
+    <li>
+        Objetos UI adicionales en la correlación de aplicaciones que desea incluir en la prueba.
+    </li>
+    <li>
+        Objetos UI bajo el control del piloto que desea excluir de la prueba.
+    </li>
+</ul>
+<p>
+    Durante una ejecución del piloto, un piloto compila un "script mejor" optimizado que proporciona amplia cobertura de la
+    prueba y contiene código de script no redundante.
+</p>
+<p>
+    Un piloto también genera un "script UI" que se optimiza para la cobertura de la prueba basada en UI. En compilaciones
+    sucesivas de la AUT, puede ejecutar scripts UI como una simple prueba aleatoria para comprobar los controles de la
+    interfaz de usuario.
+</p>
+<p>
+    Cada vez que ejecuta un piloto, Rational TestFactory añade una nueva carpeta de "ejecución" en el piloto en la
+    correlación de aplicaciones. La carpeta de ejecución contiene los scripts de prueba que genera el piloto. Si el piloto
+    encuentra defectos durante la ejecución, TestFactory coloca los scripts de prueba de defectos en una subcarpeta de
+    "defectos" de la carpeta de ejecución.
+</p>
+<p>
+    <img height="16" alt="icono de Ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte los temas
+    de la ayuda en línea de Rational TestFactory que tratan sobre:
+</p>
+<ul>
+    <li>
+        <i>Vista del piloto</i>
+    </li>
+    <li>
+        <i>Establecimiento de una ejecución del piloto</i>
+    </li>
+    <li>
+        <i>Ejecución de un solo piloto</i>
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

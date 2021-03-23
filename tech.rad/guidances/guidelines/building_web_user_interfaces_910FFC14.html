@@ -1,0 +1,1126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Generaci&oacute;n de interfaces de usuario web </title>
+<meta content="Guideline" name="uma.type">
+<meta content="building_web_user_interfaces" name="uma.name">
+<meta content="Generaci&oacute;n de interfaces de usuario web " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.1236886661583098E-303"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.1236886661583098E-303"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Generaci&oacute;n de interfaces de usuario web </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta pauta describe cómo generar interfaces de usuario utilizando el entorno de modelado RAD6.0. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_component_AE366827.html" guid="{3293F4F7-EFCD-4476-BFF1-81AC3812B512}">Implementar elementos de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="introduction" name="introduction"></a>Introducción
+</h3>
+<p>
+    El entorno de desarrollo web RAD 6.0 proporciona un conjunto global de herramientas para generar rápidamente interfaces
+    de usuario web. Incluye el <em>Diseñador de sitios web</em> y el <em>Diseñador de páginas</em> y varios asistentes para
+    simplificar la creación de páginas web complejas. Este documento ofrece pautas sobre cómo utilizar de manera efectiva
+    estas herramientas para generar interfaces de usuario web, y describe un método de desarrollo, identifica los tipos de
+    página soportados y resalta las características que facilitan la creación de una página web.
+</p>
+<h3>
+    <a id="introduction" name="introduction"></a>Método de desarrollo
+</h3>
+<p>
+    Aunque puede utilizar inmediatamente el <em>Diseñador de páginas</em> para generar páginas web individuales en su
+    interfaz de usuario, RAD 6.0 promociona un método de desarrollo que va de lo general a lo detallado (top-down)
+    utilizando el <em>Diseñador de sitios web</em> como punto de partida. Su editor de <em>Navegación</em> le permite:
+</p>
+<ul>
+    <li>
+        Definir la estructura de navegación de su sitio web: 
+        <p>
+            Empiece por generar un diagrama jerárquico que represente la estructura de su sitio web. Tiene a su disposición
+            un cajón de <em>Sitio</em> en la vista de <em>Paleta</em> que le permite arrastrar y soltar páginas o proyectos
+            nuevos o ya existentes en el diagrama y organizarlos en grupos. El editor le permite añadir páginas fácilmente,
+            suprimirlas y reorganizarlas de manera visual. La creación de un diagrama de navegación permite al
+            <em>Diseñador de sitios web</em> identificar automáticamente y seguir la pista de los enlaces de navegación
+            entre las páginas web, así como generar un mapa del sitio. Posteriormente, al componer una página individual
+            mediante el <em>Diseñador de páginas</em>, puede añadirle elementos de navegación, como una barra o menú de
+            navegación, que puede personalizar para que muestre sólo los enlaces adecuados para la página, basándose en la
+            estructura del sitio (por ejemplo, puede mostrar sólo enlaces a Arriba, Padre, Hermano y Primer hijo).
+        </p>
+    </li>
+    <li>
+        Aplicar una plantilla a las páginas: 
+        <p>
+            Una plantilla de página define los elementos visuales y el diseño común a todas las páginas y le permite
+            aplicar un aspecto coherente a su sitio web. Puede crear una plantilla utilizando un asistente, durante la
+            creación de su proyecto web o de forma independiente con posterioridad. El editor de <em>Navegación</em> le
+            permite aplicar fácilmente un plantilla a las páginas seleccionadas o a todas las páginas del diagrama. Es
+            recomendable incluir sus elementos de navegación en la plantilla y aplicarlos a todas las páginas para obtener
+            controles de navegación coherentes en su sitio web.
+        </p>
+    </li>
+    <li>
+        Seleccionar el tipo de página a utilizar en cada página web: 
+        <p>
+            Efectúe una doble pulsación en una página para ejecutar el asistente <em>Creación de una página</em>. Le
+            permitirá elegir uno de los diferentes tipos de página soportados (consulte el apartado Selección de tipo de
+            página), especifique las propiedades de página iniciales y ábrala en el editor <em>Diseñador de páginas</em>.
+            Ahora ya puede componer y editar el contenido de la página web. Tenga en cuenta que un cajón de <em>Navegación
+            de sitios web</em> está disponible automáticamente en la vista <em>Paleta</em> para permitirle arrastrar y
+            soltar elementos de navegación en la página.
+        </p>
+    </li>
+</ul>
+<h3>
+    <a id="introduction" name="introduction"></a>Selección de tipo de página
+</h3>
+<p>
+    RAD 6.0 da soporte a la construcción de interfaces de usuario web utilizando tecnología HTML, JSP y JSP Faces. Cada una
+    de ellas representa una elección de implementación que cumple los requisitos de los diferentes tipos de aplicaciones
+    web. Las distintas tecnologías también definen un tipo de página que da soporte a distintas características de la
+    interfaz de usuario web. Al construir una interfaz de usuario web es importante, sin embargo, entender las
+    características compatibles con cada página y saber si son adecuadas para el tipo de aplicación web que se está
+    desarrollando. Las secciones siguientes identifican las características de interfaz de usuario web compatibles con los
+    diferentes tipos de página en RAD 6.0 y especifica qué tipo de página se puede utilizar en aplicaciones web estáticas,
+    dinámicas, basadas en Struts o en JavaServer Faces (JSF).
+</p><strong><a id="introduction" name="introduction"></a>Características de interfaz de usuario soportadas</strong> 
+<p>
+    Los tipos de página diferentes ofrecidos por RAD 6.0 para implementar las interfaces de usuario web se pueden agrupar
+    en tres categorías: El tipo de página JSP además distingue entre un archivo JSP simple y una página JSP Struts. Del
+    mismo modo, una página JSP Faces puede crearse en JSP Faces básico o un JSP Faces con almacenamiento en caché de
+    cliente. A continuación se describen los diferentes tipos de página.
+</p>
+<p>
+    <strong>HTML</strong>
+</p>
+<p>
+    Este tipo de página le permite construir una página en HTML básico y también da soporte a otros lenguajes de marcación
+    (consulte la Tabla 1 - Características de los tipos de página). Las características típicas del HTML como por ejemplo
+    el conjunto de marcos, la hoja de estilo en cascada y los scripts en JavaScript también están soportadas. Además, la
+    herramienta permite definir y usar plantillas para páginas con el fin de dar soporte a la creación de un aspecto
+    coherente en todas las páginas web.
+</p>
+<p>
+    <strong>JSP</strong>
+</p>
+<p>
+    El tipo de página JSP está concebido para dar soporte a interfaces de usuario implementadas mediante tecnología JSP
+    (RAD 6.0 da soporte al estándar JSP 2.0). Todas las características de una página HTML básica están disponibles y se
+    complementan con la tecnología de scripts JSP (Java Scriptlet) y acción (Etiqueta personalizada). La herramienta
+    permite la definición de un Fragmento JSP para descomponer en factores las partes comunes de una página en un archivo
+    independiente que se puede incluir como adecuado en otras páginas JSP. También se da soporte al acceso de datos de
+    fondo utilizando la tecnología de objetos de datos de servicio (SDO). Consulte <a class="elementLinkWithUserText" href="./../../../tech.rad/guidances/concepts/web_application_frameworks_1A457BEE.html" guid="1.099460392705072E-303">Concept: Web Application Frameworks</a> para obtener una descripción de los SDO.
+</p>
+<p>
+    <strong>JSP Struts</strong>
+</p>
+<p>
+    Una página JSP Struts amplía un JSP simple incluyendo automáticamente soporte para elementos específicos de Struts
+    (consulte Concepts: Web Application Frameworks para obtener una descripción de los Struts). Está concebido para su uso
+    en el desarrollo de interfaces de usuario web para aplicaciones implementadas mediante la infraestructura de Struts. En
+    concreto, la herramienta incluye automáticamente el acceso a las bibliotecas de código Struts HTML (struts-html.tld) y
+    Bean (struts-bean.tld) y permite la inclusión de campos a partir de un bean ActionForm bean directamente en la página.
+    También le dará la opción de añadir otras bibliotecas de Struts.
+</p>
+<p>
+    <strong>JSP Faces</strong>
+</p>
+<p>
+    El tipo de página JSP Faces es una página JSP diseñada específicamente para interfaces de usuario web implementadas
+    mediante tecnología JSF (consulte <a class="elementLinkWithUserText" href="./../../../tech.rad/guidances/concepts/web_application_frameworks_1A457BEE.html" guid="1.099460392705072E-303">Concept: Web Application Frameworks</a> para obtener una descripción de JSF). Proporciona
+    acceso a la biblioteca de etiquetas del núcleo JSF y componentes de la interfaz de usuario predefinidas (componentes de
+    Faces) que pueden arrastrarse y soltarse en la página. Además, JSP Faces da soporte a la creación de scripts mediante
+    fragmentos de Java, por ejemplo, para especificar el manejo de sucesos de componentes de la interfaz de usuario.
+</p>
+<p>
+    <strong>JSP Faces con almacenamiento en caché del cliente</strong>
+</p>
+<p>
+    Este tipo de página amplía el JSP Faces proporcionando componentes de interfaz de usuario cuyos datos pueden ser
+    almacenados en caché del cliente. En concreto, el almacenamiento en caché del cliente le permite vincular un componente
+    con variables JavaScript como oposición a los datos del servidor. Esto le permite construir páginas web con un mejor
+    rendimiento porque el número de idas y vueltas entre el cliente y el servidor se reduce. Los componentes del cliente
+    Faces proporcionados incluyen:
+</p>
+<ul>
+    <li>
+        Cuadrícula de datos: muestra registros desde un origen de datos relacional o elementos desde una matriz JavaBean en
+        una tabla.
+    </li>
+    <li>
+        Gráfico: presenta datos en un gráfico de barras, una gráfica circular o un gráfico de líneas. El conector
+        Macromedia Flash ha de estar instalado en el navegador para poder utilizar los gráficos.
+    </li>
+    <li>
+        Vista en árbol: muestra datos jerárquicos en una estructura en árbol.
+    </li>
+    <li>
+        Servicio web: permite a la página Faces recuperar datos desde un servicio web existente sin tener que renovar la
+        página.
+    </li>
+</ul>
+<p>
+    La tabla siguiente resume las características soportadas por cada tipo de página y se puede utilizar como guía para
+    determinar el tipo que cumple mejor con los requisitos de la interfaz de usuario de la aplicación web.
+</p>
+<center>
+    <table cellspacing="0" cellpadding="5" width="700" border="1">
+        <tbody>
+            <tr valign="top" bgcolor="#CCCCCC">
+                <th width="100">
+                    Tipo de página
+                </th>
+                <th width="200">
+                    Marcación
+                </th>
+                <th width="50">
+                    Soporte para la hoja de estilo en cascada
+                </th>
+                <th width="50">
+                    Soporte para la plantilla de página
+                </th>
+                <th width="50">
+                    Sintaxis de estilo XML
+                </th>
+                <th width="100">
+                    Soporte para scripts
+                </th>
+                <th width="140">
+                    SDO Data Access (*)
+                </th>
+            </tr>
+            <tr valign="top">
+                <td>
+                    HTML
+                </td>
+                <td>
+                    <p>
+                        HTML 4.01
+                    </p>
+                    <p>
+                        HTML 4.01 Frameset
+                    </p>
+                    <p>
+                        Compact HTML 1.0
+                    </p>
+                    <p>
+                        XHTML 1.0 o 1.1
+                    </p>
+                    <p>
+                        XHTML 1.0 Frameset
+                    </p>
+                    <p>
+                        WML 1.3
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        No
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        No
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        No
+                    </p>
+                    <p>
+                        No
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        No
+                    </p>
+                    <p>
+                        No
+                    </p>
+                </td>
+                <td>
+                    N/D
+                </td>
+                <td>
+                    JavaScript
+                </td>
+                <td>
+                    N/D
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    JSP
+                </td>
+                <td>
+                    <p>
+                        HTML 4.01
+                    </p>
+                    <p>
+                        HTML 4.01 Frameset
+                    </p>
+                    <p>
+                        Compact HTML 1.0
+                    </p>
+                    <p>
+                        XHTML 1.0 o 1.1
+                    </p>
+                    <p>
+                        XHTML 1.0 Frameset
+                    </p>
+                    <p>
+                        WML 1.3
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        No
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        No
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        No
+                    </p>
+                    <p>
+                        No
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        No
+                    </p>
+                    <p>
+                        No
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        No
+                    </p>
+                    <p>
+                        No
+                    </p>
+                    <p>
+                        No
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        JavaScript
+                    </p>
+                    <p>
+                        Scriptlet Java
+                    </p>
+                    <p>
+                        Etiquetas personalizadas
+                    </p>
+                </td>
+                <td>
+                    Sí
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    JSP Struts
+                </td>
+                <td>
+                    <p>
+                        HTML 4.01
+                    </p>
+                    <p>
+                        HTML 4.01 Frameset
+                    </p>
+                    <p>
+                        XHTML 1.0 o 1.1
+                    </p>
+                    <p>
+                        XHTML 1.0 Frameset
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        No
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        No
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        No
+                    </p>
+                    <p>
+                        No
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        JavaScript
+                    </p>
+                    <p>
+                        Scriptlet Java
+                    </p>
+                    <p>
+                        Etiquetas personalizadas
+                    </p>
+                </td>
+                <td>
+                    Sí
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    JSP Faces
+                </td>
+                <td>
+                    <p>
+                        HTML 4.01
+                    </p>
+                    <p>
+                        XHTML 1.0 o 1.1
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        No
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        JavaScript
+                    </p>
+                    <p>
+                        Scriptlet Java
+                    </p>
+                    <p>
+                        Etiquetas personalizadas
+                    </p>
+                    <p>
+                        Fragmento Java
+                    </p>
+                </td>
+                <td>
+                    Sí
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    JSP Faces con almacenamiento en caché del cliente
+                </td>
+                <td>
+                    <p>
+                        HTML 4.01
+                    </p>
+                    <p>
+                        XHTML 1.0 o 1.1
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        Sí
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        No
+                    </p>
+                    <p>
+                        Sí
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        JavaScript
+                    </p>
+                    <p>
+                        Scriptlet Java
+                    </p>
+                    <p>
+                        Etiquetas personalizadas
+                    </p>
+                    <p>
+                        Fragmento Java
+                    </p>
+                    <p>
+                        Macromedia Flash
+                    </p>
+                </td>
+                <td>
+                    Sí (con almacenamiento en caché del cliente)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</center>
+<p>
+    * SDO Data Access requiere WAS v5.1 como destino de despliegue
+</p>
+<p align="center">
+    <strong>Tabla 1 - Características de tipo de página</strong><br />
+</p>
+<h3>
+    <a id="web_application" href="./../../../tech.rad/guidances/concepts/web_application_frameworks_1A457BEE.html" guid="1.099460392705072E-303" name="web_application"></a>Aplicabilidad de aplicaciones web
+</h3>
+<p>
+    <br />
+     El tipo de página a utilizar en la implementación de una interfaz de usuario web está influenciada básicamente por el
+    tipo de aplicación web que se desarrolla. Para las aplicaciones web estáticas, la elección es directa, ya que el tipo
+    de página HTML es la única opción. para las aplicaciones web dinámicas, pueden utilizarse tanto páginas HTML como JSP.
+    Además, si desarrolla una aplicación web dinámica utilizando la infraestructura Struts o JSF, sacará provecho del uso
+    de los tipos de página de la interfaz de usuario específicos para estas tecnologías. Esto le permitirá sacar provecho
+    de el soporte especializado proporcionado por la herramienta y construir fácilmente su interfaz de usuario. La Tabla 2
+    muestra la aplicabilidad de cada tipo de página para las aplicaciones web estáticas, dinámicas, y las que utilizan
+    infraestructuras de Struts y JSF.<br />
+</p>
+<center>
+    <table cellspacing="0" cellpadding="5" width="700" border="1">
+        <tbody>
+            <tr valign="top" bgcolor="#CCCCCC">
+                <th>
+                    Tipo de página
+                </th>
+                <th>
+                    Aplicación web estática
+                </th>
+                <th>
+                    Aplicación web dinámica (No basada en infraestructuras)
+                </th>
+                <th>
+                    Aplicación web de Struts
+                </th>
+                <th>
+                    Aplicación web JSF
+                </th>
+            </tr>
+            <tr valign="top">
+                <td>
+                    HTML
+                </td>
+                <td>
+                    Sí
+                </td>
+                <td>
+                    Sí
+                </td>
+                <td>
+                    Sí
+                </td>
+                <td>
+                    Sí
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    JSP
+                </td>
+                <td>
+                    No
+                </td>
+                <td>
+                    Sí
+                </td>
+                <td>
+                    Sí
+                </td>
+                <td>
+                    Sí
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    JSP Struts
+                </td>
+                <td>
+                    No
+                </td>
+                <td>
+                    No
+                </td>
+                <td>
+                    Sí (recomendado)
+                </td>
+                <td>
+                    No
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    JSP Faces
+                </td>
+                <td>
+                    No
+                </td>
+                <td>
+                    No
+                </td>
+                <td>
+                    Sí (con biblioteca de integración)
+                </td>
+                <td>
+                    Sí (recomendado)
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    JSP Faces con almacenamiento en caché del cliente
+                </td>
+                <td>
+                    No
+                </td>
+                <td>
+                    No
+                </td>
+                <td>
+                    Sí (con biblioteca de integración)
+                </td>
+                <td>
+                    Sí (recomendado)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</center>
+<p align="center">
+    <strong>Tabla 2 - Aplicabilidad de tipos de página</strong>
+</p>
+<h3>
+    <a id="web_application" href="./../../../tech.rad/guidances/concepts/web_application_frameworks_1A457BEE.html" guid="1.099460392705072E-303" name="web_application"></a>Edición de páginas
+</h3>
+<p>
+    El <em>Diseñador de páginas</em> es la herramienta que se utiliza en el entorno RAD 6.0 para editar una página web.
+    Proporciona una vista de editor central que le permite crear una página basándose en WYSIWYG visual o o en código
+    fuente textual. La herramienta funciona junto con otras vistas para dar soporte al desarrollo de diferentes tipos de
+    página web. En concreto, las vistas siguientes facilitan en gran medida la edición de páginas:
+</p>
+<p>
+    <strong>Vista de paleta</strong>
+</p>
+<p>
+    La vista Paleta proporciona un conjunto rico de componentes de la interfaz de usuario listos para ser usados, que se
+    pueden soltar en una página. Los organiza en cajones que agrupan a componentes relacionados según su funcionalidad. Por
+    ejemplo, los elementos de un formulario HTML estándar como botones, campos de texto y recuadros desplegables se agrupan
+    en el cajón <em>Etiquetas de formulario</em>. La lista de cajones que se muestran en la vista Paleta depende del tipo
+    de página a editar. La Tabla 3 lista los cajones predeterminados que se muestran en cada tipo de página soportado.
+    Puede personalizar la Paleta y la mayoría de los cajones al añadir, suprimir, esconder o mostrar cajones y componentes,
+    respectivamente. Para obtener una descripción de cada cajón y su contenido predeterminado, consulte la documentación
+    del producto.
+</p>
+<center>
+    <table cellspacing="0" cellpadding="5" width="700" border="1">
+        <tbody>
+            <tr valign="top" bgcolor="#CCCCCC">
+                <th>
+                    Cajón de la Paleta
+                </th>
+                <th>
+                    HTML
+                </th>
+                <th>
+                    JSP
+                </th>
+                <th>
+                    JSP Struts
+                </th>
+                <th>
+                    JSP Faces
+                </th>
+                <th>
+                    JSP Faces con almacenamiento en caché del cliente
+                </th>
+            </tr>
+            <tr valign="top">
+                <td>
+                    Etiquetas HTML
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    Etiquetas de formulario
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    Plantilla de página
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    Navegación de sitios web
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    Portal
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    Etiquetas JSP
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    Datos
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    Componentes de Faces
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td align="middle">
+                    X
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    Componentes del cliente Faces
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td align="middle">
+                    X
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    Etiquetas HTML Struts
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    Etiquetas de bean Struts
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    Etiquetas lógicas de Struts
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td align="middle">
+                    X
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    Etiquetas anidadas de Struts
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td align="middle">
+                    escondida
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    Etiquetas de mosaico de Struts
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td align="middle">
+                    escondida
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</center>
+<p align="center">
+    <strong>Tabla 3 - Cajones de paleta predeterminados según tipo de página</strong>
+</p>
+<p align="left">
+    <strong>Vista de Edición rápida</strong>
+</p>
+<p align="left">
+    Esta vista le permite añadir rápidamente fragmentos de código JavaScript a su página. Si selecciona un componente de la
+    misma, aparece una lista de sucesos posibles adecuados para la página en el panel izquierdo de la vista de edición
+    rápida. Entonces puede seleccionar un suceso y añadir un script para el mismo de una de las formas siguientes:
+</p>
+<div align="left">
+    <ul>
+        <li>
+            Entre el script directamente en el editor de scripts del panel situado a la derecha.
+        </li>
+        <li>
+            Pulse con el botón derecho del ratón sobre el editor de scripts, seleccione <em>Insertar fragmento</em> y elija
+            un fragmento de la lista proporcionada, basada en contextos.
+        </li>
+    </ul>
+</div>
+<h3 align="left">
+    <a id="web_application" href="./../../../tech.rad/guidances/concepts/web_application_frameworks_1A457BEE.html" guid="1.099460392705072E-303" name="web_application"></a>Recursos
+</h3>
+<p align="left">
+    Para obtener información detallada sobre el <em>Diseñador de sitios web</em> y el <em>Diseñador de páginas</em>,
+    consulte la documentación del producto:
+</p>
+<div align="left">
+    <ol>
+        <li>
+            Inicie Rational Application Developer v6.0.
+        </li>
+        <li>
+            En la barra de menús, seleccione <em>Ayuda &gt; Contenido de la ayuda</em>.
+        </li>
+        <li>
+            Expanda <em>Desarrollo de aplicaciones web</em>.
+        </li>
+        <li>
+            Explore <em>Diseño de sitio web</em> o <em>Diseño de página web</em>.
+        </li>
+    </ol>
+</div></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

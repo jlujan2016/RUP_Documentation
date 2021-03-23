@@ -1,0 +1,511 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Patr&oacute;n de posibilidad: Identificaci&oacute;n de servicio</title>
+<meta content="CapabilityPattern" name="uma.type">
+<meta content="identify_services" name="uma.name">
+<meta content="Identificaci&oacute;n de servicio" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc=_HTHEkCv-EduYBoDegGQopA&path=_HTHEkCv-EduYBoDegGQopA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  defaultQueryStr, false, true, true);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div autoWrap="true">
+<div id="page-guid" value="_HTHEkCv-EduYBoDegGQopA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Patr&oacute;n de posibilidad: Identificaci&oacute;n de servicio</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/process.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Este patrón de posibilidad ofrece técnicas para identificar y calificar servicios candidatos.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign="middle">
+<td class="tab"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td><td class="tab" nowrap><a id="TAB_Description" class="tab" href="./../../soa.rup_soma/capabilitypatterns/identify_services_E19D7DB7.html_desc.html">Descripci&oacute;n</a></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_i.gif"></td><td class="tab" nowrap><a id="TAB_WBS" class="tab" href="./../../soa.rup_soma/capabilitypatterns/identify_services_E19D7DB7.html_wbs.html"><span style="white-space:nowrap;">Estructura de desglose de trabajo</span></a></td><td width="1"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_a.gif"></td><td class="activeTab" nowrap><span style="white-space:nowrap;">Asignaci&oacute;n de equipos</span></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-a_i.gif"></td><td class="tab" nowrap><a id="TAB_WPBS" class="tab" href="./../../soa.rup_soma/capabilitypatterns/identify_services_E19D7DB7.html_wpbs.html"><span style="white-space:nowrap;">Utilizaci&oacute;n del producto de trabajo</span></a></td><td width="21"><img title="" alt="" height="17" width="21" src="./../../images/tab_end-i.gif"></td><td width="50%"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td colspan="4"><img height="2" title="" alt="" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space_middle.gif"></td><td class="activeTab"><img title="" alt="" height="2" width="10" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space.gif"></td><td colspan="3"><img title="" alt="" height="2" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td class="activeTab" colspan="10"><img title="" alt="" height="5" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="sectionHeading">Anomal&iacute;a del equipo</div>
+<div class="sectionContent">
+<div id="treeContent"></div>
+<script language="JavaScript">
+contentPage.processPage.treeTable.data = {
+title: "Anomalía del equipo", summary: "Anomalía del equipo", 
+columns: [
+["presentation_name", "Elemento de desglose"],
+["model_info", "Información del modelo"],
+["teams", "Equipo"],
+["type", "Tipo"],
+["is_planned", "Planeado"],
+["has_multiple_occurrences", "Varias apariciones"],
+["is_optional", "Opcional"]],
+rows: [
+
+{id: "ecc8c2ce", parentId: "", relPath: ",_VuAUgExCEduGSMz-5zscXg", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_business_process_analyst", title: "Analista de proceso empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_process_analyst_814D00FD.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "d63bb394", parentId: "ecc8c2ce", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_supplementary_business_specification", title: "Especificación empresarial suplementaria", url: "./../../soa.rup_soma/capabilitypatterns/rup_supplementary_business_specification_86FF1752.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "13465cbe", parentId: "ecc8c2ce", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_use_case_model", title: "Modelo de guión de uso empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_use_case_model_8DC8232C.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "35c47678", parentId: "ecc8c2ce", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_goal", title: "Objetivo empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_goal_9866033C.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "fe8d2f22", parentId: "ecc8c2ce", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_vision", title: "Visión empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_vision_755A427.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "89179376", parentId: "ecc8c2ce", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_supplementary_business_specification", title: "Especificación empresarial suplementaria", url: "./../../soa.rup_soma/capabilitypatterns/rup_supplementary_business_specification_86FF1752.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "cacbbe1e", parentId: "ecc8c2ce", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_use_case_model", title: "Modelo de guión de uso empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_use_case_model_8DC8232C.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e6eb7d9c", parentId: "ecc8c2ce", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_goal", title: "Objetivo empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_goal_FF31DDB8.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ec1fa8b6", parentId: "ecc8c2ce", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "refine_business_use_case", title: "Ajustar un guión de uso empresarial", url: "./../../soa.rup_soma/capabilitypatterns/refine_business_use_case_B8071CF3.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "38738c60", parentId: "ecc8c2ce", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "identify_business_goals", title: "Identificar objetivos empresariales y KPI", url: "./../../soa.rup_soma/capabilitypatterns/identify_business_goals_E1EB001.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "8fa1bf90", parentId: "ecc8c2ce", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "functional_area_analysis", title: "Análisis de área funcional", url: "./../../soa.rup_soma/capabilitypatterns/functional_area_analysis_DF192E46.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "be4ce15a", parentId: "ecc8c2ce", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_rules", title: "Análisis de reglas empresariales", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_rules_7DC18CF9.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "dcaa17fe", parentId: "ecc8c2ce", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_bp", title: "Análisis del proceso empresarial", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_bp_A99F2AD2.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "9e885582", parentId: "", relPath: ",_PPf-8E-CEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_software_architect", title: "Arquitecto de software", url: "./../../soa.rup_soma/capabilitypatterns/rup_software_architect_F6766F22.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "a90fe65c", parentId: "9e885582", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_architectural_proof_of_concept", title: "Arquitectura de prueba de concepto", url: "./../../soa.rup_soma/capabilitypatterns/rup_architectural_proof_of_concept_C9732227.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "42bb7726", parentId: "9e885582", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_software_architecture_document", title: "Documento de arquitectura de software", url: "./../../soa.rup_soma/capabilitypatterns/rup_software_architecture_document_6762583C.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "56d03eaa", parentId: "9e885582", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_deployment_model", title: "Modelo de despliegue", url: "./../../soa.rup_soma/capabilitypatterns/rup_deployment_model_7200384C.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "33b145d8", parentId: "9e885582", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_model", title: "Modelo de diseño", url: "./../../soa.rup_soma/capabilitypatterns/rup_design_model_60994C62.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f0256cc2", parentId: "9e885582", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "goal_service_model", title: "Modelo de servicio de objetivos", url: "./../../soa.rup_soma/capabilitypatterns/goal_service_model_B2EDAD91.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "56afc2fa", parentId: "9e885582", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_architectural_proof_of_concept", title: "Arquitectura de prueba de concepto", url: "./../../soa.rup_soma/capabilitypatterns/rup_architectural_proof_of_concept_C9732227.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "4a2b7108", parentId: "9e885582", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_model", title: "Modelo de servicio", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_model_8EF216A0.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "4e6ff3f8", parentId: "9e885582", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_legacy", title: "Análisis de activos existentes", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_legacy_26AC3B2D.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "6823a91e", parentId: "9e885582", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_uc", title: "Análisis de guiones de uso empresariales (SOA)", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_uc_B43D0AE2.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "90097f72", parentId: "9e885582", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_rules", title: "Análisis de reglas empresariales", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_rules_7DC18CF9.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "b1ec9696", parentId: "9e885582", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_data", title: "Análisis del modelo de datos", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_data_CF5D6132.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ba9a1a84", parentId: "9e885582", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_bp", title: "Análisis del proceso empresarial", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_bp_A99F2AD2.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "d70a1a62", parentId: "9e885582", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_construct_arch_proof", title: "Construir prueba de concepto arquitectónica (SOA)", url: "./../../soa.rup_soma/capabilitypatterns/soa_construct_arch_proof_A8E41D1F.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "cd103a48", parentId: "", relPath: ",_JafTYE-CEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_business_architect_bom", title: "Arquitecto empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_architect_bom_513F675F.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "5d26c53a", parentId: "cd103a48", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_architecture_document", title: "Documento de arquitectura empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_architecture_document_BC3B25A4.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "7cf6abbe", parentId: "cd103a48", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_analysis_model", title: "Modelo de análisis empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_analysis_model_CDA2118E.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "d80de856", parentId: "cd103a48", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_architecture_document", title: "Documento de arquitectura empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_architecture_document_BC3B25A4.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "fc875058", parentId: "cd103a48", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_analysis_model", title: "Modelo de análisis empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_analysis_model_CDA2118E.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f354cd8a", parentId: "cd103a48", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "functional_area_analysis", title: "Análisis de área funcional", url: "./../../soa.rup_soma/capabilitypatterns/functional_area_analysis_DF192E46.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "5db090a2", parentId: "", relPath: ",_PPf-8U-CEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_designer", title: "Diseñador", url: "./../../soa.rup_soma/capabilitypatterns/rup_designer_1144F32.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "b9e588ba", parentId: "5db090a2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_model", title: "Modelo de servicio", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_model_8EF216A0.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "d5116bea", parentId: "5db090a2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "goal_service_model", title: "Modelo de servicio de objetivos", url: "./../../soa.rup_soma/capabilitypatterns/goal_service_model_5E64805F.html", 
+	predecessors: "", info: "Modifica", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f3ab4d42", parentId: "5db090a2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_goal_service_assignment", title: "Identificar y asociar servicios con objetivos", url: "./../../soa.rup_soma/capabilitypatterns/soa_goal_service_assignment_53C6A04F.html", 
+	predecessors: "", info: "Actúa como propietario", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "65ca02f4", parentId: "5db090a2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_legacy", title: "Análisis de activos existentes", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_legacy_26AC3B2D.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "907e882e", parentId: "5db090a2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_uc", title: "Análisis de guiones de uso empresariales (SOA)", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_uc_B43D0AE2.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "b1720fb0", parentId: "5db090a2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_rules", title: "Análisis de reglas empresariales", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_rules_7DC18CF9.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ca0beeae", parentId: "5db090a2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_data", title: "Análisis del modelo de datos", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_data_CF5D6132.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e8692552", parentId: "5db090a2", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_bp", title: "Análisis del proceso empresarial", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_bp_A99F2AD2.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c666bf7e", parentId: "", relPath: ",_Lla1sC1bEdudYLeyb_y9tw", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_database_designer", title: "Diseñador de base de datos", url: "./../../soa.rup_soma/capabilitypatterns/rup_database_designer_3C256E65.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "d7727e6c", parentId: "c666bf7e", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_identification_data", title: "Análisis del modelo de datos", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_data_CF5D6132.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "161f9c26", parentId: "", relPath: ",_6TIvMk-AEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_business_designer", title: "Diseñador empresarial", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_designer_4CFD9475.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "66e17f1c", parentId: "161f9c26", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_goal_service_assignment", title: "Identificar y asociar servicios con objetivos", url: "./../../soa.rup_soma/capabilitypatterns/soa_goal_service_assignment_53C6A04F.html", 
+	predecessors: "", info: "Actúa como adicional", type: "Tarea", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+]};
+				</script>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

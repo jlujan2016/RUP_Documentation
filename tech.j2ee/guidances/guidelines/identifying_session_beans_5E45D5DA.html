@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Identificaci&oacute;n de beans de sesi&oacute;n</title>
+<meta content="Guideline" name="uma.type">
+<meta content="identifying_session_beans" name="uma.name">
+<meta content="Identificaci&oacute;n de beans de sesi&oacute;n" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "6.241144674389355E-307"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="6.241144674389355E-307"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Identificaci&oacute;n de beans de sesi&oacute;n</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la forma en que identificar y modelar beans de sesión para una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identificar elementos de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h2>
+    Introducción
+</h2>
+<p>
+    Esta directriz se centra en identificar los beans de sesión. En la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/session_bean_B41C78.html" guid="7.831474550884131E-306">Directriz: beans de sesión</a> se proporciona ayuda adicional sobre beans de sesión. En
+    la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305">Directriz: Enterprise JavaBeans (EJB)</a> se proporciona ayuda adicional sobre EJB.
+</p>
+<h2>
+    <a id="Reusable_Components" name="Identifying_Session_Beans"></a>Identificación de beans de sesión
+</h2>
+<p>
+    Las clases de control son a menudo buenas candidatas para beans de sesión, puesto que los beans de sesión se utilizan
+    para proporcionar lógica de control, en particular cuando en esta lógica de control hay conversaciones con un cliente.
+    Un bean de sesión a menudo también se identifica como una fachada para un conjunto de objetos en la capa empresarial
+    (consulte la sección <a href="#Session_Facade_Pattern">Patrón de fachada de sesión</a> más adelante para obtener más
+    información). Además desde J2EE 1.4, los beans de sesión sin estado se pueden utilizar para implementar servicios web.
+</p>
+<p>
+    Si está trabajando con J2EE 1.3, una práctica estándar es manejar todo el acceso de cliente remoto mediante EJB de
+    sesión, que manipulan EJB de entidad en la misma JVM mediante interfaces de componente local.
+</p>
+<h2>
+    Modelado de beans de sesión
+</h2>
+<p>
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_enterprise_javabeans_ejbs_2581AEE5.html" guid="9.931732120190802E-307">Directriz: identificación de Enterprise JavaBeans (EJB)</a> para obtener más información.
+</p>
+<h2>
+    Con estado frente a sin estado
+</h2>
+<p>
+    Hay dos tipos de beans de sesión: con estado y sin estado. Un parte en la identificación de un bean es definir sus
+    responsabilidades, una de las cuales puede ser el mantener el estado del cliente entre llamadas.
+</p>
+<p>
+    Los beans de sesión con estado mantienen información sobre la conversación entre el cliente y el contenedor EJB. Una
+    instancia de bean de sesión con estado sólo existe mientras dura la conversación del cliente. Los beans de sesión con
+    estado habitualmente realizan servicios con estos datos para el cliente. Los servicios que proporciona el bean de
+    sesión con estado podrían coordinar las interacciones con otros objetos empresariales (beans de sesión y beans de
+    entidad). Por ejemplo, un <i>carro de la compra</i> con objetos para comprar se podría implementar con un bean de
+    sesión con estado, puesto que retiene la información mientras el cliente interactúa con la aplicación. Puesto que los
+    beans de sesión con estado se asignan a un cliente específico, consumen más recursos de sistema que un bean de sesión
+    sin estado frente a la ventaja de retener el estado del cliente. El contenedor maneja estos recursos, habitualmente
+    colocando en un estado "pasivo" (escribiendo en disco) los beans de sesión con estado y reactivándolos cuando es
+    necesario.
+</p>
+<p>
+    Los beans de sesión sin estado no retienen la información de estado en relación a la conversación entre el cliente y el
+    contenedor EJB. "Sin estado" realmente significa que no hay estado de conversación del cliente. Por lo tanto, un bean
+    de sesión sin estado puede tener otros tipos de estados, como el de una conexión con una base de datos que cualquier
+    cliente podría utilizar. Los beans de sesión sin estado realizan servicios genéricos que no utilizan los datos de
+    estado del cliente de llamadas de método anteriores, en todo caso, reciben todas las entradas relevantes como
+    parámetros en la llamada de método actual, u obtienen los datos de otros orígenes durante la llamada al método (como
+    desde beans de entidad o accediendo a bases de datos a través de JDBC). Habitualmente los beans de sesión se obtienen
+    en una etapa Ready Pool y se entregan a medida que se necesitan para manejar las solicitudes entrantes. Puesto que
+    todas las instancias son equivalentes, los beans de sesión sin estado no necesitan saber sobre su cliente. Esto permite
+    incrementar el rendimiento y la escalabilidad. Los beans de sesión sin estado son más eficientes, puesto que una
+    instancia se puede compartir entre solicitudes no contiguas, en lugar de "vincularlos" con una sesión concreta de
+    actividad.
+</p>
+<p>
+    En general, se elige el tipo de bean de sesión que mejor se ajuste a la conversación con el cliente. Hay estrategias
+    que permiten hacer que un bean de sesión con estado se comporte como un bean de sesión sin estado, como el que almacena
+    el estado del cliente en el cliente y que lo reenvía en cada invocación, o bien almacenando y recuperando el estado del
+    cliente de una base de datos en cada invocación de método. Estas estrategias, sin embargo, pueden hacer que se reduzcan
+    las posibilidades de escalabilidad debido a sobrecarga de tráfico en la red y acceso a datos.
+</p>
+<p>
+    Si se crea el bean de sesión para implementar un servicio web, hay que utilizar un bean de sesión sin estado tal como
+    se define en la especificación de la API JSR 1.3.
+</p>
+<p>
+    En la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_state_for_j2ee_applications_C145BCA3.html" guid="7.896195949843941E-306">Directriz: diseño de estado para aplicaciones J2EE</a> se cubren distintas estrategias
+    para el diseño de estado del cliente.
+</p>
+<h2>
+    <a id="Reusable_Components" name="Session_Facade_Pattern"></a>Patrón de fachada de sesión
+</h2>
+<p>
+    Con frecuencia, los beans de sesión se utilizan como una fachada que encapsula interacciones entre objetos en la capa
+    empresarial. El bean de sesión sirve para abstraer esta complejidad, proporcionando una interfaz más simple a los
+    clientes. Este patrón se describe en detalle en J2EE Patterns - Session Facade Pattern ([<a class="elementlinkwithusertext" href="./../../../tech.j2ee/guidances/supportingmaterials/java_references_110189E3.html" guid="1.4494927535802764E-304">ALU01</a>]).
+</p>
+<p>
+    Por ejemplo, en general es una buena práctica el quitar la lógica de bean entre entidades y colocarla en beans de
+    sesión para minimizar el acoplamiento entre los beans de entidad. Se puede acceder a los beans de entidad mediante
+    interfaces locales, puesto que la fachada del bean de sesión proporciona acceso a los clientes remotos. Esta
+    aproximación es la más efectiva cuando hay varios beans de entidad estrechamente relacionados.
+</p>
+<h2>
+    Punto final de servicios web
+</h2>
+<p>
+    Como se ha visto con anterioridad, los beans de sesión sin estado se pueden utilizar para implementar servicios web.
+    Este tipo de bean también se denomina un bean de implementación de servicio y debe cumplir los siguientes requisitos:
+</p>
+<ul>
+    <li>
+        Debe tener un constructor público predeterminado.
+    </li>
+    <li>
+        Debe implementar todos los métodos que se declaran en la sección <a class="elementlinkwithusertext" href="./../../../tech.j2ee/guidances/concepts/web_services_for_j2ee_4E401D7.html" guid="1.2274284020937826E-305">Interfaz de punto final de servicio</a> y sus métodos deben ser públicos y no
+        finales ni estáticos.
+    </li>
+    <li>
+        Debe ser sin estado.
+    </li>
+    <li>
+        La clase debe ser pública, y no final ni abstracta.
+    </li>
+</ul>
+<p>
+    Consulte las secciones de las especificaciones <a class="elementlinkwithusertext" href="http://java.sun.com/products/ejb/docs.html" target="_blank">EJB 2.1</a> y <a href="http://www.jcp.org/en/jsr/detail?id=109" target="_blank">JSR 109</a> para obtener más información sobre los beans
+    de sesión y la forma en que implementar los servicios web.<br />
+</p><br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

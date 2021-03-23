@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Identificaci&oacute;n de elementos de dise&ntilde;o mediante Rational Systems Developer</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="identifying_design_elements_using_rsd" name="uma.name">
+<meta content="Identificaci&oacute;n de elementos de dise&ntilde;o mediante Rational Systems Developer" name="uma.presentationName">
+<meta content="Tool:rsa_rational_systems_developer:Rational Systems Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Systems Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "_JU13oK4OEdqFg48R_ivTjA", "_ogso8K4JEdqFg48R_ivTjA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "_JU13oK4OEdqFg48R_ivTjA", "_ogso8K4JEdqFg48R_ivTjA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "_JU13oK4OEdqFg48R_ivTjA", "_ogso8K4JEdqFg48R_ivTjA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_ogso8K4JEdqFg48R_ivTjA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Identificaci&oacute;n de elementos de dise&ntilde;o mediante Rational Systems Developer</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta guía de la herramienta describe cómo identificar elementos de diseño mediante el entorno de modelado RSD.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../tech.rsa/tools/rsa_rational_systems_developer_349857FD.html" guid="_JU13oK4OEdqFg48R_ivTjA">Rational Systems Developer</a>
+<br>Ampl&iacute;a: <a href="./../../../tech.rsa/guidances/toolmentors/identifying_design_elements_using_rsa_6663BD29.html" guid="{7BAF7101-8949-44C3-A3FA-B9CFBBDCFA63}">Identificación de elementos de diseño mediante la plataforma de desarrollo de software Rational</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identificar elementos de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    En la guía de la herramienta se llevan a cabo los pasos siguientes para los guiones de uso que se van a diseñar en la
+    iteración actual:
+</p>
+<ul>
+    <li>
+        <a href="#Identify and Specify Events/Triggers">Identificar sucesos/desencadenantes y señales</a>
+    </li>
+    <li>
+        <a href="#Identify Classes, Active Classes and Subsystems/Components">Identificar clases, clases activas
+        y subsistemas</a>
+    </li>
+    <li>
+        <a href="#Identify Interfaces">Identificar interfaces de subsistema</a> &nbsp;
+    </li>
+    <li>
+        <a href="#Identify Capsule Protocols">Identificar protocolos de cápsula</a> &nbsp;
+    </li>
+</ul>
+<p>
+    <a href="#MoreInfo">Información adicional sobre la herramienta</a>
+</p>
+<p>
+    Los elementos de diseño significativos arquitectónicamente se pueden documentar en una vista lógica separada, que se
+    mantiene mientras se identifican los elementos de diseño. La recomendación general es utilizar paquetes de
+    &lt;&lt;perspectiva&gt;&gt;. Consulte <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a> para obtener más información sobre este
+    tema.
+</p>
+<h3>
+    <a id="Identify and Specify Events/Triggers" name="Identify and Specify Events/Triggers">Identificar sucesos y
+    señales</a>
+</h3>
+<p>
+    Las características de los sucesos, también llamados desencadenantes en UML 2.0, se deben capturar según sea necesario
+    para dirigir la identificación de los elementos de diseño que los manejan. Esta información se puede capturar de modo
+    informal, por ejemplo, en un documento separado, en lugar de como parte de un modelo.
+</p>
+<p>
+    Los sucesos de comunicación asíncrona se pueden modelar como señales para expresar los datos que transmiten, o bien,
+    para expresar relaciones entre señales como, por ejemplo, una relación de generalización. En los subpasos siguientes se
+    describe cómo modelar señales:
+</p>
+<ol>
+    <li>
+        Cree diagramas de clase según sea necesario. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adición de diagramas de clase a elementos de modelo</i>.
+    </li>
+    <li>
+        Añada señales. Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Creación y modificación de diagramas de clase</i> .
+    </li>
+    <li>
+        Añada una descripción breve a cada elemento de diseño. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documentación de elementos de modelo</i>.
+    </li>
+    <li>
+        Añada relaciones de generalización entre señales, si procede. &nbsp;
+    </li>
+</ol>
+<p>
+    Para obtener más información sobre diagramas de clase, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modelado de estructura
+    estática&nbsp;by&nbsp;mediante&nbsp;diagramas de clase</i>.
+</p>
+<h3>
+    <a id="Identify Classes, Active Classes and Subsystems/Components" name="Identify Classes, Active Classes and Subsystems/Components">Identificar clases, clases activas y subsistemas</a>
+</h3>
+<p>
+    Por lo general, los elementos de diseño se crean de tres modos:
+</p>
+<ul>
+    <li>
+        Ampliación de un patrón
+    </li>
+    <li>
+        Modelado
+    </li>
+    <li>
+        Codificación e ingeniería inversa&nbsp;
+    </li>
+</ul>
+<p>
+    Estas propuestas se explican en las secciones siguientes.
+</p>
+<h4>
+    Ampliación de un patrón
+</h4>
+<p>
+    Un&nbsp;patrón es una clase especial de transformación que se optimiza para la elaboración interactiva y por partes,
+    principalmente en un metamodelo individual y dentro del mismo nivel de abstracción, y a menudo dentro del mismo modelo.
+    Para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/analysis_mechanisms_36135B43.html" guid="9.76539014099254E-305">Mecanismos de
+    análisis</a>.
+</p>
+<p>
+    Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Montaje
+    de patrones</i> y <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Aplicación de patrones</i> en la ayuda en línea.
+</p>
+<h4>
+    Modelado
+</h4>
+<p>
+    Esta herramienta da soporte a un enfoque controlado por modelos respecto al desarrollo del software (consulte <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/concepts/mdd_and_mda_8F9B3685.html" guid="4.227832989444728E-303">Desarrollo controlado por modelos y arquitectura controlada por modelo</a> y <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/analysis_mechanisms_36135B43.html" guid="9.76539014099254E-305">Mecanismos de análisis</a>), donde puede construir un conjunto de modelos que finalmente
+    incluirá un modelo de diseño y artefactos de generación de implementaciones como, por ejemplo, el código 3GL,
+    descriptores, etc. Estos se derivan del modelo de diseño mediante transformaciones. En algunos casos, las
+    transformaciones de generación de código utilizarán las clases de análisis como entradas, pero principalmente serán
+    controladas por elementos de diseño. Para obtener más información, consulte: <img height="16"     alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Aplicación de
+    transformaciones.</i>
+</p>
+<p>
+    En un enfoque de desarrollo tradicional, se crean diagramas de clase en el modelo de diseño para capturar elementos de
+    diseño. Si decide mantener las clases de análisis, es posible que desee establecer rastreabilidad mediante dependencias
+    de "rastreo".
+</p>
+<ol>
+    <li>
+        Cree diagramas de clase según sea necesario. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adición de diagramas de clase a elementos de modelo</i>.
+    </li>
+    <li>
+        Añada subsistemas y clases. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Creación y modificación de diagramas de clase</i> .
+    </li>
+    <li>
+        Añada una descripción breve a cada elemento de diseño. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documentación de elementos de modelo</i> .
+    </li>
+    <li>
+        (opcional) Añada rastreabilidad a las clases de análisis mediante dependencias de "rastreo" desde elementos de
+        diseño a las clases de análisis en las que se basan. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Relaciones de abstracción en el modelado UML</i>.
+    </li>
+    <li>
+        Organice los elementos de diseño en subsistemas y paquetes.&nbsp;Consulte la documentación técnica <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a>.
+    </li>
+</ol>
+<p>
+    Para obtener más información sobre diagramas de clase, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modelado de estructura estática con diagramas de clase</i> .
+</p>
+<h4>
+    Codificación e ingeniería inversa
+</h4>
+<p>
+    Nota:&nbsp;algunas&nbsp;capacidades de la herramienta mencionadas en esta sección no se soportan en RSM.
+</p>
+<p>
+    Un enfoque diferente es un enfoque en el que se tiene en cuenta el código en primer lugar. El código es el controlador
+    principal porque ya existe (por ejemplo, en un ciclo de desarrollo en el que no se parte de cero) o el equipo debe
+    tratar algunos riesgos de proyecto específicos codificando un prototipo para validar un concepto complejo. Como parte
+    del soporte del Descubrimiento de arquitectura y de la Recuperación (consulte las directrices <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/guidelines/architectural_discovery,_analysis_and_control_2153BFC.html" guid="2.843707701997842E-305">Análisis, control y descubrimiento de arquitectura</a>), la función de visualización de
+    código de la herramienta puede rellenar automáticamente diagramas de tema como, por ejemplo, la estructura del paquete,
+    las características esenciales de la clase, árboles de herencia y colaboraciones. El objetivo de esta tarea no es sólo
+    comprender el código existente, sino también extraer un modelo de la aplicación, el cual se puede utilizar junto con
+    otros modelos específicos para generar la nueva versión de la aplicación, mediante transformaciones.
+</p>
+<p>
+    Una vez que haya generado o compuesto un diagrama UML de código existente, dispondrá de las opciones siguientes para
+    aprovechar las representaciones de código como parte del modelo de diseño:
+</p>
+<ul>
+    <li>
+        Recopile una representación UML de un elemento de código en el modelo de diseño, como un elemento de modelo
+        semántico verdadero. Esto crea un nuevo elemento UML en el modelo de diseño que no tiene relación con el elemento
+        de código recopilado. Sin embargo, sí contiene propiedades (por ejemplo, atributos y operaciones) que reflejan las
+        propiedades del elemento de código recopilado. Puesto que se trata de un elemento semántico UML verdadero, el nuevo
+        código se puede generar a partir de dicho elemento (es decir, tiene el mismo estado dentro del modelo de diseño que
+        cualquier elemento de diseño definido a través del proceso de modelado desde cero descrito anteriormente.)
+    </li>
+    <li>
+        Coloque una referencia visual para el elemento de código en un diagrama que se encuentre en el modelo de diseño.
+        Esta referencia no tiene significado semántico alguno dentro del modelo de diseño y no se generará código a partir
+        de ésta. Se trata, como su nombre implica, de una simple referencia al elemento de código real. De todos modos, se
+        pueden crear relaciones entre la referencia del código y los elementos de diseño semánticos del modelo de diseño.
+        Dichas relaciones tiene un significado semántico dentro del modelo de diseño y afectan a la generación de código.
+    </li>
+</ul>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modelado de estructura estática con diagramas de clase</i> en
+    la ayuda en línea.
+</p>
+<h3>
+    <a id="Identify Interfaces" name="Identify Interfaces">Identificar interfaces del subsistema</a>
+</h3>
+<p>
+    Los pasos siguientes se aplican a subsistemas de gran granularidad:
+</p>
+<ol>
+    <li>
+        Para cada subsistema, identifique un conjunto de interfaces candidatas. Si ha creado anteriormente clases de
+        análisis y ha realizado ejecuciones de guiones de uso de nivel de análisis, ahora decidirá el modo en que dichas
+        operaciones deben agruparse y exponerse en forma de interfaces de componentes o servicios determinados. Añada
+        interfaces a un diagrama de componente existente o cree nuevos diagramas de componente, según convenga. Consulte
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adición de
+        interfaces a diagramas de modelado</i>.
+    </li>
+    <li>
+        Añada dependencias de interfaz. &nbsp;
+    </li>
+    <li>
+        Correlacione subsistemas con interfaces añadiendo una relación de ejecución del subsistema a la interfaz.
+    </li>
+    <li>
+        Documente la interfaz, incluido el comportamiento necesario. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documentación de elementos de modelo</i> .
+    </li>
+    <li>
+        Añada operaciones a la interfaz. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adición de operaciones a clasificadores en diagramas</i>.
+    </li>
+    <li>
+        Añada una descripción a cada operación. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documentación de elementos de modelo</i> .
+    </li>
+    <li>
+        Añada parámetros a cada operación. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adición de operaciones a clasificadores en diagramas</i>.
+    </li>
+    <li>
+        Organice las interfaces en paquetes. &nbsp;
+    </li>
+</ol>
+<p>
+    En UML 2.0, los subsistemas son componentes grandes y se pueden representar como clases estructuradas con puertos y/o
+    interfaces. Consulte los temas UML 2.0 específicos de la ayuda en línea.&nbsp;
+</p>
+<h3>
+    <a id="Identify Capsule Protocols" name="Identify Capsule Protocols">Identificar protocolos de cápsula</a>
+</h3>
+<p>
+    El modelado de cápsulas y protocolos no se soportan.
+</p>
+<h3>
+    <a id="MoreInfo" name="MoreInfo">Información adicional sobre la herramienta</a>
+</h3>
+<p>
+    Tutoriales:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Aplicar
+        un&nbsp;patrón</i>
+    </li>
+</ul>
+<p>
+    Ejemplos:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Patrones:
+        Modelo UML simple</i>&nbsp;
+    </li>
+</ul><br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

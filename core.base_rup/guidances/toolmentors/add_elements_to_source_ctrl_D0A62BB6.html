@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Adici&oacute;n de elementos al control de origen utilizando Rational ClearCase</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="add_elements_to_source_ctrl" name="uma.name">
+<meta content="Adici&oacute;n de elementos al control de origen utilizando Rational ClearCase" name="uma.presentationName">
+<meta content="Tool:rup_clearcase:Rational ClearCase" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational ClearCase" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{34E8BA17-21F6-45B0-A034-8FD698677912}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{34E8BA17-21F6-45B0-A034-8FD698677912}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{34E8BA17-21F6-45B0-A034-8FD698677912}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_85i-sDIFEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{34E8BA17-21F6-45B0-A034-8FD698677912}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_XxCC0AIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{34E8BA17-21F6-45B0-A034-8FD698677912}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{34E8BA17-21F6-45B0-A034-8FD698677912}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{34E8BA17-21F6-45B0-A034-8FD698677912}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{34E8BA17-21F6-45B0-A034-8FD698677912}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Adici&oacute;n de elementos al control de origen utilizando Rational ClearCase</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo añadir elementos al control de origen utilizando Rational ClearCase.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_clearcase_9665C.html" guid="{B2D1373B-A826-4169-A38A-B53B2122DC7C}">Rational ClearCase</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/deliver_changes_8A8C78F4.html" guid="{B1FB20EA-CDF6-4F7B-BF65-22CFBF38CDC6}">Entregar los cambios</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    En el núcleo de ClearCase se encuentran sus amplias posibilidades para controlar y gestionar versiones de elementos
+    como, por ejemplo, archivos de origen para software y documentación, directorios e informes, entre otros. Antes extraer
+    uno o más elementos, debe aportar la versión inicial de dichos elementos al control de origen.
+</p>
+<h3>
+    <a id="ToolSteps" name="ToolSteps">Pasos de la herramienta</a>
+</h3>
+<p>
+    Para añadir uno o más elementos al control de origen utilizando Rational ClearCase, debe llevar a cabo los pasos
+    siguientes:
+</p>
+<ul>
+    <li>
+        <a href="#StepNumber1">Iniciar el Explorador de ClearCase</a>
+    </li>
+    <li>
+        <a href="#StepNumber2">Navegar a los elementos que se deben transferir al control de origen</a>
+    </li>
+    <li>
+        <a href="#StepNumber3">Seleccionar los elementos</a>
+    </li>
+    <li>
+        <a href="#StepNumber4">Añadir los elementos al control de origen</a>
+    </li>
+    <li>
+        <a href="#StepNumber5">Completar la operación del control de origen</a><br />
+        <br />
+         <a href="#MoreInformation">Más información</a>
+    </li>
+</ul>
+<h3>
+    <a id="StepNumber1" name="StepNumber1">Iniciar el Explorador de ClearCase</a> <a href="#Top"><img height="20"     alt="Ir a la parte superior de la página" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<ol>
+    <li>
+        En el menú <b>Inicio</b>, pulse <b>Programas</b> &gt; <b>Software Rational</b> &gt; <b>Rational ClearCase</b> &gt;
+        <b>Explorador de ClearCase</b>
+    </li>
+    <li>
+        Seleccione la vista que señala a la VOB a la que desea añadir los elementos para el control de origen.
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <br />
+        <br />
+         Si la vista no existe, primero debe crearla. Si la vista existe, pero no ve la VOB, primero debe montar la VOB que
+        va a contener los elementos.
+    </li>
+</ol>
+<h3>
+    <a id="StepNumber2" name="StepNumber2">Navegar a los elementos que se deben transferir al control de origen</a>
+</h3>
+<p>
+    Se recomienda que seleccione los elementos que se encuentran más alejados del árbol del directorio raíz. Para cualquier
+    elemento dado, ClearCase también añade los directorios padre (hasta el directorio raíz de la VOB) que aún no están en
+    el control de origen.
+</p>
+<p>
+    <b>Nota</b>: Antes de añadir un elemento a una VOB, se debe haber extraído el directorio padre correspondiente. Si aún
+    no lo ha hecho, ClearCase lo extrae antes de crear el elemento y lo incorpora después de crear el elemento.
+</p>
+<h3>
+    <a id="StepNumber3" name="StepNumber3">Seleccionar los elementos</a> <a href="#ToolSteps"><img height="20"     alt="Ir a los pasos de la herramienta" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<ol>
+    <li>
+        Puede seleccionar uno o más elementos que se deben transferir al control de origen utilizando los métodos de
+        selección estándar.
+    </li>
+</ol>
+<h3>
+    <a id="StepNumber4" name="StepNumber4">Añadir los elementos al control de origen</a> <a href="#ToolSteps"><img     height="20" alt="Ir a los pasos de la herramienta" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<ol>
+    <li>
+        Pulse el botón derecho del ratón sobre los archivos seleccionados y elija <b>Añadir al control de origen</b> en el
+        menú emergente.
+    </li>
+    <li>
+        Para añadir elementos a un proyecto UCM (Gestión unificada de cambios), en el recuadro de diálogo Añadir al control
+        de origen seleccione o cree una actividad de ClearCase.
+    </li>
+    <li>
+        En el recuadro Comentario, describa los elementos que está añadiendo al control de origen.
+    </li>
+    <li>
+        Para continuar trabajando en los nuevos elementos después de añadirlos al control de origen, seleccione la opción
+        <b>Extraer después de añadir al control de origen</b>. Para dejarlos incorporados, deseleccione la opción.
+    </li>
+    <li>
+        Si trabaja en una VOB replicada (MultiSite) y no utiliza una vista UCM, puede hacer que la réplica actual controle
+        todas las ramificaciones creadas durante la operación de <b>Añadir al control de origen</b> seleccionando la opción
+        <b>Convertir la réplica actual en maestra de todas las ramificaciones recién creadas</b>. Una vez que haya creado
+        el elemento, puede crear nuevas versiones del elemento en cualquiera de las nuevas ramificaciones.
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <br />
+         Si no selecciona esta opción, la maestría de la ramificación principal del elemento se asigna a la réplica que
+        controla el tipo de ramificación principal. Si la réplica maestra no es la réplica actual, no se puede crear
+        ninguna versión nueva en la ramificación. Además, si la especificación de la configuración contiene reglas de
+        creación automática de ramificaciones, la creación de las ramificaciones da error si la réplica actual no controla
+        los tipos de ramificaciones.
+    </li>
+</ol>
+<h3>
+    <a id="StepNumber5" name="StepNumber5">Completar la operación del control de origen</a> <a href="#ToolSteps"><img     height="20" alt="Ir a los pasos de la herramienta" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    Complete la operación tal como se indica a continuación:
+</p>
+<ol>
+    <li>
+        Para añadir sólo un elemento al control de origen, pulse <b>Aceptar</b>.
+    </li>
+    <li>
+        Para añadir varios elementos al control de origen, aplicar el mismo comentario y extraer a todos los elementos,
+        pulse <b>Aplicar a todos</b>.
+    </li>
+    <li>
+        Para cancelar la operación, pulse <b>Cancelar</b>. Los elementos no se transfieren al control de origen y
+        permanecen como archivos de vista privada.
+    </li>
+</ol>
+<h4>
+    <a id="MoreInformation" name="MoreInformation">Más información</a> <a href="#ToolSteps"><img height="20"     alt="Ir a los pasos de la herramienta" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    Para obtener más información sobre cómo añadir elementos al control de origen utilizando Rational ClearCase, consulte
+    los manuales siguientes:
+</p>
+<ul>
+    <li>
+        &nbsp;<img height="15" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" />&nbsp;
+        <i>Managing Software Projects</i>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <ul>
+            <li>
+                Capítulo: Setting Up the Project<br />
+                <br />
+            </li>
+        </ul>
+    </li>
+    <li>
+        &nbsp;<img height="15" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" />&nbsp;
+        <i>Developing Software</i>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <ul>
+            <li>
+                Capítulo: The UCM Workflow
+            </li>
+            <li>
+                Capítulo: Finding and Setting Activities
+            </li>
+            <li>
+                Capítulo: Working on Activities
+            </li>
+            <li>
+                Capítulo: Other Development Tasks
+            </li>
+        </ul>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

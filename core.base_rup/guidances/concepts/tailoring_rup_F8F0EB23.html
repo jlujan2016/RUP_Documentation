@@ -1,0 +1,599 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concepto: Personalizaci&oacute;n de RUP</title>
+<meta content="Concept" name="uma.type">
+<meta content="tailoring_rup" name="uma.name">
+<meta content="Personalizaci&oacute;n de RUP" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:3.2329841703462285E-305", path: ["3.2329841703462285E-305", "1.8262162566452063E-305", "6.991505672198195E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "3.2329841703462285E-305", "1.8262162566452063E-305", "6.991505672198195E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "6.991505672198195E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="6.991505672198195E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concepto: Personalizaci&oacute;n de RUP</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../core.base_rup/guidances/concepts/resources/road_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía se describe el proceso global para la personalización de Rational Unified Process (RUP), su objetivo es proporcionar instrucciones adecuadas y personalizadas para desarrollar software.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/tailor_process_for_project_6CFD05E2.html" guid="{1BA9AAA0-DA89-4C14-B45A-CE28A8A10894}">Personalizar el proceso de desarrollo para el proyecto</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction">Introducción</a>
+</h3>
+<p>
+    La infraestructura de Rational Unified Process (RUP) sirve como guía en un conjunto completo de principios de
+    ingeniería de software. Esta guía es aplicable a proyectos de diferentes tamaños y complejidad, así como a diferentes
+    entornos y dominios de desarrollo. Esto significa que ningún proyecto ni empresa podrá utilizar <b>todo el producto
+    RUP</b>. Probablemente, la aplicación de todo el producto RUP tendría como resultado un entorno de proyecto ineficaz,
+    en el que los equipos tendrían dificultades para centrarse en las tareas importantes y encontrar el conjunto de
+    información adecuado. Por ello, se recomienda que RUP se personalice para proporcionar instrucciones adecuadas y
+    personalizadas para desarrollar software.&nbsp;Esta guía proporciona un resumen de alto nivel del concepto de
+    personalización de RUP.
+</p>
+<p>
+    La personalización del proceso puede realizarse en dos niveles:
+</p>
+<ul>
+    <li>
+        En el <b>nivel organizativo</b>, en el que los ingenieros de proceso modifican, mejoran o configuran un proceso
+        común que se va a utilizar en toda la empresa. La personalización del nivel de empresa tiene en cuenta aspectos
+        como el dominio de la aplicación, las prácticas de reutilización y las tecnologías principales que controla la
+        empresa. Una empresa puede tener más de un proceso global, cada uno adaptado a un tipo diferente de desarrollo. En
+        algunos casos, la configuración clásica predefinida de RUP sirve como proceso para toda la empresa.&nbsp;
+    </li>
+    <li>
+        En el <b>nivel de proyecto</b>, en el que los ingenieros de proceso modifican, mejoran o configuran un proceso
+        común que se va a utilizar en un proyecto específico.&nbsp;Cuando existe un proceso&nbsp;para toda la empresa, la
+        personalización en el nivel de proyecto es donde se perfecciona más el proceso para toda la empresa para un
+        proyecto determinado. En este nivel se tiene en cuenta el tamaño del proyecto, la reutilización de activos de la
+        empresa, el tipo de ciclo vital de desarrollo ("<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/green-field_development_AC1F9EE7.html" guid="_yJ5m8NnmEdmO6L4XMImrsA">desarrollo partiendo de cero</a>" frente a la evolución), etc.
+    </li>
+</ul>
+<p>
+    No importa para qué nivel de la empresa se está personalizando el proceso, el enfoque global para la personalización
+    de&nbsp;RUP es el mismo (aunque las preocupaciones son distintas).&nbsp;El enfoque global para la personalización de un
+    proceso consiste en:
+</p>
+<ol>
+    <li>
+        <strong>Identificar el ámbito del esfuerzo de personalización.</strong>&nbsp;Identifique el contenido del método
+        que debe añadirse o perfeccionarse en RUP.&nbsp;Identifique los activos de método existentes que pueden incluirse.
+        Por ejemplo, las directrices, plantillas o ejemplos&nbsp;específicos del proyecto o de la empresa,
+        etc.&nbsp;Seleccione los procesos, roles, tareas, productos de trabajo, guía, etc. que desee personalizar.&nbsp;Si
+        desea más información sobre el ámbito del esfuerzo de personalización, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/rup_tailoring_3959304E.html" guid="_8rV68EdLEdqul7OS-EQhrQ">Directriz:
+        Personalización de RUP</a>.
+    </li>
+    <li>
+        <strong>Seleccionar el nivel de personalización que debe realizarse</strong>.&nbsp;Se dan distintos niveles en los
+        que RUP se puede personalizar, cada uno de ellos con su "coste" y "beneficio" asociado.&nbsp;Para obtener
+        información sobre los distintos niveles de personalización, consulte la sección <a href="#levels">niveles de
+        personalización</a>.
+    </li>
+    <li>
+        <strong>Personalizar el proceso.</strong> Personalice las partes identificadas de RUP utilizando el nivel de
+        personalización seleccionado.<br />
+         Con independencia del nivel de personalización que elija, la personalización de RUP suele implicar <a id="key_tailoring_steps">tres pasos clave</a> (aunque algunos pasos son opcionales dependiendo del nivel de
+        personalización):
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <ol>
+            <li>
+                <strong><em>Desarrollar</em></strong> <em><strong>los</strong></em> <strong><em>elementos del
+                método.</em></strong>&nbsp;Esto incluye&nbsp;el desarrollo de contenidos nuevos y el perfeccionamiento de
+                los contenidos existentes.
+            </li>
+            <li>
+                <strong><em>Configurar</em></strong>&nbsp;<strong><em>el contenido del método.</em></strong>&nbsp;Esto
+                incluye decidir qué contenido incluir y qué contenido excluir, así como proporcionar las vistas adecuadas
+                de ese contenido (por ejemplo, vistas basadas en roles o en dominios específicos).&nbsp;La configuración
+                del contenido del método consiste en conseguir el tamaño adecuado del proceso para que satisfaga las
+                necesidades de una empresa específica o un proyecto individual.
+            </li>
+            <li>
+                <strong><em>Desarrollar el proceso de configuración</em></strong>.&nbsp;&nbsp;Esto incluye la selección de
+                un tipo de ciclo vital de desarrollo (por ejemplo, de cascada frente a iterativo) y la definición de un
+                proceso que se ajusta para que satisfaga las necesidades exactas de la empresa o del&nbsp;proyecto. El
+                proceso resultante sirve como entrada directa a la planificación del proyecto.&nbsp;&nbsp;&nbsp;&nbsp;
+            </li>
+            <li>
+                <strong><em>Hacer disponible el proceso</em></strong>.&nbsp;Esto incluye publicar la&nbsp;configuración (y
+                su proceso) como un sitio web del proceso, o exportar el proceso a una herramienta de planificación de
+                proyectos.
+            </li>
+        </ol>
+    </li>
+</ol>
+<p>
+    La parte del proyecto que decida personalizar, así como el nivel de personalización que decida llevar a cabo, dependen
+    de ciertos factores. Estos factores se describen en la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/process_discriminants_36B1ADD5.html" guid="2.746702783003723E-305">Directriz:
+    Discriminadores del proceso</a>.&nbsp;También es una buena idea familiarizarse con RUP, tanto por su contenido como por
+    su soporte para personalización. Para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/supportingmaterials/introduction_to_rup_36B63436.html" guid="_uRs44C8CEdqfj_h52-wqcw">Introducción a RUP</a>.
+</p>
+<p>
+    La personalización de un proceso no es más que una parte de la implementación de un proceso para un proyecto.&nbsp;Una
+    vez que el proceso se ha personalizado, el gestor de proyectos crea sus instancias y lo ejecuta para el proyecto
+    concreto. Un proceso para el que se han creado instancias es un proyecto, iteración o plan de actividades que puede
+    llevarse a cabo (incluye las actividades y productos de trabajo para un proyecto). Esta creación de instancias se lleva
+    a cabo como parte de la planificación del proyecto. Si desea más información sobre la planificación de proyectos,
+    consulte la <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/plan_phases_and_iterations_2AB1A5C9.html" guid="{43005DA9-D75E-464D-8AFC-AB9CACD92626}">Tarea: Planificar las fases e iteraciones</a>&nbsp;y la <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/develop_iteration_plan_144CF253.html" guid="{50EDC6A8-97B0-46C1-9B1C-7630DE286841}">Tarea: Desarrollar el plan de iteración</a>.&nbsp;&nbsp;
+</p>
+<p>
+    En el resto de esta guía se describen los <a href="#levels">diferentes niveles de personalización</a> disponibles para
+    RUP, seguidos de la descripción de algunos <a href="#scenarios">casos comunes de ejemplo de personalización</a> que
+    reflejan los distintos niveles de personalización.&nbsp;&nbsp;&nbsp;
+</p>
+<p>
+    Si desea más información sobre la personalización de RUP, consulte lo siguiente:
+</p>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/tailor_process_for_project_6CFD05E2.html" guid="{1BA9AAA0-DA89-4C14-B45A-CE28A8A10894}">Tarea: Personalizar el proceso de desarrollo para el proyecto</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/rup_tailoring_3959304E.html" guid="_8rV68EdLEdqul7OS-EQhrQ">Directriz: Personalización de RUP</a>
+    </li>
+</ul><br />
+<h3>
+    <a id="levels" name="levels">Niveles de personalización</a>
+</h3>
+<p>
+    A continuación se muestran los niveles de personalización que están disponibles actualmente para RUP, listados del más
+    sencillo al más complejo, donde cada nivel incluye el nivel precedente:&nbsp;&nbsp;
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <td>
+                Nivel 1
+            </td>
+            <td width="85%">
+                Describe el proceso personalizado en un documento externo que hace referencia a un proceso subyacente, así
+                como a cualquiera de los activos de método personalizados. 
+                <p>
+                    Este nivel es beneficioso si el proceso que debe personalizar no puede modificarse por alguna razón
+                    (por ejemplo, que esté muy controlado de cara a las auditorías) o si no tiene acceso al <a class="elementLinkWithUserText" href="./../../../core.base_rup/tools/rup_rational_method_composer_84A966EC.html" guid="_hAfB8COzEdq41POk0CQYwA">Rational Method Composer</a>.&nbsp;La personalización a este nivel sólo
+                    afecta a la presentación del sitio web, no a su contenido subyacente.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Nivel 2
+            </td>
+            <td width="85%">
+                Personaliza un sitio web de procesos existente mediante Mi RUP y documentos externos. 
+                <p>
+                    Este nivel se ha concebido para que lo usen las personas en una copia personal del sitio web del
+                    proceso, y no suele ser el enfoque adecuado para la personalización del proceso de una empresa o
+                    proyecto completo.&nbsp;Sin embargo, la personalización puede ser una buena opción intermedia en los
+                    casos en los que desee llevar a cabo pequeñas mejoras en la presentación del sitio web y no tenga
+                    acceso a <a class="elementLinkWithUserText" href="./../../../core.base_rup/tools/rup_rational_method_composer_84A966EC.html" guid="_hAfB8COzEdq41POk0CQYwA">Rational Method Composer</a>.&nbsp;La personalización a este nivel sólo
+                    afecta a la presentación del sitio web, no a su contenido subyacente.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Nivel 3
+            </td>
+            <td width="85%">
+                <p>
+                    Configura un sitio web del proceso a partir de contenidos del método existente utilizando <a class="elementLinkWithUserText" href="./../../../core.base_rup/tools/rup_rational_method_composer_84A966EC.html" guid="_hAfB8COzEdq41POk0CQYwA">Rational Method Composer</a>.
+                </p>
+                <p>
+                    A veces, este nivel recibe el nombre de desarrollo de la <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/configuration_AAF623BC.html" guid="_d698IBUFEdqrUt4zetC1gg">configuración del método</a>.&nbsp;
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Nivel 4
+            </td>
+            <td width="85%">
+                <p>
+                    Añade una <a class="elementLinkWithUserText" href="./../../../core.base_concepts/customcategories/guidance_BE65A47D.html" guid="_xy2SAAIsEdqEutyfYo0quQ">Guía</a>&nbsp;a la infraestructura de método existente utilizando el <a class="elementLinkWithUserText" href="./../../../core.base_rup/tools/rup_rational_method_composer_84A966EC.html" guid="_hAfB8COzEdq41POk0CQYwA">Rational Method Composer</a>.
+                </p>
+                <p>
+                    A veces, este nivel recibe el nombre de desarrollo de <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/method_plugin_B417B6A2.html" guid="_0KeEMBUFEdqrUt4zetC1gg">plug-in de método</a> "fino".&nbsp;Los plug-ins finos sólo añaden <a class="elementLinkWithUserText" href="./../../../core.base_concepts/customcategories/guidance_BE65A47D.html" guid="_xy2SAAIsEdqEutyfYo0quQ">guía</a>&nbsp;(por ejemplo, <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/concept_730F83A0.html" guid="_8wobABUAEdqrUt4zetC1gg">conceptos</a>, <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/guideline_AB6E733A.html" guid="_IAwkEBUEEdqrUt4zetC1gg">directrices</a>, <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/template_1C6123B9.html" guid="_G_UnIBUCEdqrUt4zetC1gg">plantillas</a>, <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/example_F2AB11A0.html" guid="_dCG-UBUBEdqrUt4zetC1gg">ejemplos</a>, <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/tool_mentor_10D3617F.html" guid="1.0762105093945226E-304">guías de herramientas</a>). Los plug-ins finos son&nbsp;un mecanismo que
+                    pueden utilizar las empresas para empaquetar los activos organizativos, como plantillas, directrices,
+                    ejemplos del producto de trabajo y otros activos reutilizables para el consumo en el proyecto
+                    individual. La creación de plug-ins finos tiene un coste muy bajo; como tal, es muy aplicable a
+                    cualquier empresa grande y, normalmente, se puede justificar en el presupuesto de un solo proyecto.
+                    Además, la creación de plug-ins finos no afecta a los <a class="elementLinkWithUserText" href="./../../../core.base_concepts/customcategories/process_concepts_2FEF92F.html" guid="_AtM0gBTQEdqrUt4zetC1gg">procesos</a> (<a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/capability_pattern_ECA78A86.html" guid="1.7072348895114264E-305">patrones de posibilidad</a>&nbsp;y <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/delivery_process_CFEBBC78.html" guid="_EhgqwO8MEdmKSqa_gSYthg">procesos de entrega</a>) que se incluyen en una configuración, por lo
+                    que no hay que añadir/perfeccionar ni roles, ni tareas ni productos de trabajo.&nbsp;
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Nivel 5
+            </td>
+            <td width="85%">
+                <p>
+                    Desarrolla un nuevo&nbsp;<a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/delivery_process_CFEBBC78.html" guid="_EhgqwO8MEdmKSqa_gSYthg">proceso de entrega</a>&nbsp;(lo ideal es que se base en <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/capability_pattern_ECA78A86.html" guid="1.7072348895114264E-305">patrones de posibilidad</a> existentes)&nbsp;utilizando el <a class="elementLinkWithUserText" href="./../../../core.base_rup/tools/rup_rational_method_composer_84A966EC.html" guid="_hAfB8COzEdq41POk0CQYwA">Rational Method Composer</a>.
+                </p>
+                <p>
+                    A veces, este nivel recibe el nombre de desarrollo del <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/delivery_process_CFEBBC78.html" guid="_EhgqwO8MEdmKSqa_gSYthg">proceso de entrega</a>.&nbsp;
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Nivel 6
+            </td>
+            <td width="85%">
+                <p>
+                    Amplia la infraestructura de método existente con nuevo contenido del método (por ejemplo, <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/task_86A4917F.html" guid="7.624729048911575E-305">tareas</a>, <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/work_product_18CEEF8D.html" guid="4.804531471620803E-306">productos de trabajo</a>, <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/role_BBD6A3E6.html" guid="1.1609745730665898E-304">roles</a>) mediante el <a class="elementLinkWithUserText" href="./../../../core.base_rup/tools/rup_rational_method_composer_84A966EC.html" guid="_hAfB8COzEdq41POk0CQYwA">Rational Method Composer</a>.
+                </p>
+                <p>
+                    A veces, este nivel recibe el nombre de desarrollo de plug-in "estructural".&nbsp;Un plug-in
+                    estructural es un plug-in que amplía RUP añadiendo o perfeccionando <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/role_BBD6A3E6.html" guid="1.1609745730665898E-304">roles</a>, <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/task_86A4917F.html" guid="7.624729048911575E-305">tareas</a> o&nbsp;<a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/work_product_18CEEF8D.html" guid="4.804531471620803E-306">productos de trabajo</a>.&nbsp;
+                </p>
+                <p>
+                    La creación de plug-ins estructurales tiende a ser más intensiva con los recursos que la creación de
+                    plug-ins finos porque cuando añade un rol, tarea o producto de trabajo, puede necesitar añadir
+                    elementos de contenido del método adicionales, así como crear o perfeccionar&nbsp;<a class="elementLinkWithUserText" href="./../../../core.base_concepts/customcategories/process_concepts_2FEF92F.html" guid="_AtM0gBTQEdqrUt4zetC1gg">procesos</a> (<a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/capability_pattern_ECA78A86.html" guid="1.7072348895114264E-305">patrones de posibilidad</a>&nbsp;y <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/delivery_process_CFEBBC78.html" guid="_EhgqwO8MEdmKSqa_gSYthg">procesos de entrega</a>) para que incluyan los nuevos elementos de
+                    contenido del método.&nbsp;Por ejemplo, si fuera a añadir un nuevo producto de trabajo, es posible que
+                    deba añadir un nuevo rol para que se responsabilice del producto de trabajo, así como añadir una tarea
+                    para producir el nuevo producto de trabajo.&nbsp;A continuación, deberá añadir la nueva tarea a un
+                    proceso existente (o posiblemente crear un nuevo proceso).
+                </p>
+                <p>
+                    Los plug-ins estructurales suelen&nbsp;desarrollarse en empresas con procesos maduros que se centran en
+                    la utilización de la sinergia de procesos entre proyectos, sobre todo cuando se desarrollan varios
+                    proyectos en el mismo dominio y tecnología, o en entornos de desarrollo similares. Normalmente, para un
+                    solo proyecto no se emprende la tarea de crear un plug-in estructural para RUP, a no ser que el
+                    proyecto sea lo suficientemente grande como para justificar el coste del desarrollo del plug-in en el
+                    presupuesto del proyecto. Un plug-in estructural es parecido a cualquier activo reutilizable en el
+                    sentido de que es aconsejable asumir el coste de hacerlo reutilizable a no ser que se le encuentre una
+                    aplicación potencial fuera del ámbito del proyecto.
+                </p>
+                <p>
+                    En resumen, la creación de nuevos roles, tareas, etc. en un plug-in reutilizable no es trivial, y suele
+                    ser preferible hacer que esa personalización sea mínima al principio, centrándose en añadir guía (nivel
+                    4) y sólo añadiendo elementos que "faltan" en un proceso de entrega (nivel 5), en lugar de intentar
+                    refactorizar, sustituir o renombrar las tareas, roles y productos de trabajo de RUP. Sin embargo,
+                    añadir nuevas tareas o actividades aisladas a un proceso de entrega a varios patrones de posibilidad
+                    nuevos es un riesgo bastante bajo.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<p>
+    Se recomienda la personalización de RUP utilizando el <a class="elementLinkWithUserText" href="./../../../core.base_rup/tools/rup_rational_method_composer_84A966EC.html" guid="_hAfB8COzEdq41POk0CQYwA">Rational Method
+    Composer</a>&nbsp;(RMC).&nbsp;Utilizando RMC, el sitio web del proceso resultante tiene exactamente la misma
+    funcionalidad y el mismo aspecto que el sitio web clásico de RUP.&nbsp;Asimismo, si se utiliza RMC, se pueden crear
+    varias instancias de&nbsp;un&nbsp;<a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/delivery_process_CFEBBC78.html" guid="_EhgqwO8MEdmKSqa_gSYthg">proceso de entrega</a>&nbsp;exportándolo desde RMC y, a continuación,
+    importándolo&nbsp;a una herramienta de gestión de proyectos (como Rational Portfolio Manager) en la que los productos
+    de trabajo se pueden identificar, se pueden asignar recursos&nbsp;a los roles, etc.&nbsp; Si desea más información
+    sobre la exportación de procesos de entrega, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/exporting_processes_rmc_6306CBC0.html" guid="_1O8wwEcdEdqWhJpIxgco7Q">Guía
+    de la herramienta: Exportar procesos a una herramienta utilizando Rational Method Composer</a>.
+</p>
+<p>
+    Es también recomendable invertir un poco de tiempo estudiando los plug-ins existentes antes de comenzar un proyecto de
+    plug-in, para evitar "reinventar la rueda". La publicación <a href="http://www-106.ibm.com/developerworks/rational/library/4686.html">developerWorks:IBM Sponsored RUP Plug-Ins</a>
+    contiene una lista completa de plug-ins disponibles que pueden descargarse e incluirse en la configuración de
+    RUP.<br />
+</p>
+<h3>
+    <a id="scenarios" name="scenarios">Personalización de casos de ejemplo</a>
+</h3>
+<p>
+    En esta sección se describe un conjunto común de casos de ejemplo para la personalización de RUP. Cada uno de estos
+    casos de ejemplo describe cómo llevar a cabo los <a href="#key_tailoring_steps">pasos clave para la personalización</a>
+    utilizando un nivel de personalización distinto.
+</p>
+<p>
+    Los casos de ejemplo son los siguientes:
+</p>
+<ul>
+    <li>
+        <a href="#ext_doc">Personalizar RUP utilizando un documento externo</a> <a href="#tailor_using_my_rup"></a>
+    </li>
+    <li>
+        <a href="#my_rupc">Personalizar RUP utilizando Mi RUP</a>
+    </li>
+    <li>
+        <a href="#configure">Personalizar RUP configurando contenido existente</a>
+    </li>
+    <li>
+        <a href="#add_guidance">Personalizar RUP añadiendo instrucciones a elementos de método existentes</a>
+    </li>
+    <li>
+        <a href="#new_dp">Personalizar RUP definiendo un nuevo proceso de entrega</a>
+    </li>
+    <li>
+        <a href="#new_method_element">Personalizar RUP añadiendo un nuevo elemento de modelo sin instrucciones</a>
+    </li>
+</ul>
+<p>
+    Cada uno de estos casos de ejemplo se trata a continuación.
+</p><br />
+<h4>
+    <a id="ext_doc" name="ext_doc">Personalizar RUP utilizando un documento externo</a>
+</h4>
+<p>
+    Cuando personaliza RUP utilizando un documento externo, los principales pasos de la personalización se llevan a cabo
+    como se indica a continuación:
+</p>
+<ol>
+    <li>
+        Desarrolle los elementos de método (como las plantillas, directrices y ejemplos) utilizando las herramientas que
+        soporten el desarrollo del contenido.
+    </li>
+    <li>
+        Configure el contenido del método.
+    </li>
+    <li>
+        Desarrolle el proceso para la configuración mediante el desarrollo de un documento (o una serie de documentos) que
+        describa qué contenido de RUP debe incluirse en el proceso personalizado, cómo se ajustan los elementos de método
+        desarrollados en el paso anterior y su ubicación en el ciclo vital general del proceso. El documento puede ser un
+        documento de texto, una hoja de cálculo, un sitio web, etc. Desarrolle tantos documentos como sea necesario para
+        disponer de suficientes vistas sobre los distintos aspectos del proceso.
+    </li>
+    <li>
+        Para que el proceso esté disponible, sólo debe hacer que el documento externo y el contenido de referencia estén
+        disponibles para los usuarios finales. Con este caso de ejemplo, no hay nada adicional que publicar y no hay nada
+        que pueda exportarse.
+    </li>
+</ol>
+<p>
+    Por ejemplo, puede crear una serie de páginas HTML que describan el proceso para el que se han de crear instancias.
+    Estas páginas web pueden hacerse accesibles desde el sitio web de la empresa o del proyecto y podrían utilizarse para
+    proporcionar los puntos iniciales de entrada para el sitio web de RUP subyacente (es decir, las páginas HTML enlazan
+    con el sitio web de RUP para obtener los detalles).
+</p><br />
+<h4>
+    <a id="tailoring_using_my_rup" name="tailoring_using_my_rup">Personalizar RUP utilizando Mi RUP</a>
+</h4>
+<p>
+    Cuando personaliza RUP utilizando Mi RUP, los principales pasos de la personalización se llevan a cabo como se indica a
+    continuación:
+</p>
+<ol>
+    <li>
+        Desarrolle los elementos de método utilizando cualquier herramienta que dé soporte al desarrollo de ese contenido
+        (por ejemplo, procesadores de texto, hojas de cálculo, páginas HTML, etc.).
+    </li>
+    <li>
+        Configure&nbsp;el contenido del método añadiendo los elementos de método desarrollados para las vistas de proceso
+        del sitio web de RUP existentes, creando nuevas vistas de proceso o eliminando vistas de proceso
+        existentes.&nbsp;&nbsp;
+    </li>
+    <li>
+        Desarrolle el proceso de configuración mediante el desarrollo de un documento que describe qué es el ciclo vital
+        general del proceso, haciendo referencia al sitio web personalizado, según convenga.&nbsp;
+    </li>
+    <li>
+        Para que el proceso esté disponible, sólo debe hacer que el sitio web personalizado y el contenido de referencia
+        estén disponibles para los usuarios finales.&nbsp;Con este caso de ejemplo, no hay nada adicional que publicar, ya
+        que la personalización se lleva a cabo en el sitio web publicado, y no hay nada que pueda exportarse.&nbsp;
+    </li>
+</ol>
+<p>
+    <strong>Nota</strong>: este caso de ejemplo es muy similar al caso de ejemplo <a href="#ext_doc">Personalizar RUP
+    utilizando un documento externo</a>, pero en este caso de ejemplo, los documentos externos&nbsp;son parte
+    del&nbsp;sitio web publicado.&nbsp;
+</p>
+<p>
+    Si desea más información sobre la personalización de un sitio web de RUP mediante Mi RUP, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/personalizing_rup_6A7A9181.html" guid="{4E7BC415-CA64-4F4E-824B-13E3F081DD20}">Guía de la herramienta: Personalizar el sitio web de RUP mediante la
+    vista de proceso personal o Mi RUP</a>.
+</p><br />
+<h4>
+    <a id="config" name="config">Personalizar RUP configurando contenido existente</a>
+</h4>
+<p>
+    Cuando utilice el <a class="elementLinkWithUserText" href="./../../../core.base_rup/tools/rup_rational_method_composer_84A966EC.html" guid="_hAfB8COzEdq41POk0CQYwA">Rational Method
+    Composer</a>&nbsp;(RMC) para configurar el contenido de método existente, los principales pasos de la personalización
+    se llevan a cabo como se indica a continuación:
+</p>
+<ol>
+    <li>
+        Como está configurando el contenido existente, no es necesario desarrollar elementos de método.
+    </li>
+    <li>
+        Para configurar el contenido del método, cree una <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/configuration_AAF623BC.html" guid="_d698IBUFEdqrUt4zetC1gg">configuración del método</a>&nbsp;que incluya paquetes de contenido relevante de la
+        infraestructura de RUP (y cualquier plug-in de método) y excluya los paquetes de contenido irrelevante&nbsp;y
+        defina vistas de la configuración que den soporte a distintas perspectivas de los interesados.&nbsp;Lo ideal es que
+        utilice una de las configuraciones predefinidas en RMC como punto de partida para la configuración.&nbsp;Para
+        obtener más información sobre la creación de una configuración mediante RMC, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/creating_method_configuration_rmc_86244E8E.html" guid="_KYnL8EJZEdqc6pVfdXQ8AQ">Guía de la herramienta: Crear una configuración del método utilizando Rational
+        Method Composer</a>.
+    </li>
+    <li>
+        Como está configurando el contenido existente, no es necesario desarrollar procesos (puede utilizarse uno de los <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/delivery_process_CFEBBC78.html" guid="_EhgqwO8MEdmKSqa_gSYthg">procesos de entrega</a>&nbsp;).&nbsp;&nbsp;
+    </li>
+    <li>
+        Para hacer disponible el proceso, publique la configuración para producir el sitio web de procesos o exportar el
+        proceso de entrega a una herramienta de planificación de proyectos.&nbsp; Para obtener más información, consulte la
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/publishing_method_configuration_rmc_AE16A603.html" guid="_6KxnAEccEdqWhJpIxgco7Q">Guía de la herramienta: Publicar configuraciones del método utilizando Rational
+        Method Composer</a>&nbsp;y la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/exporting_processes_rmc_6306CBC0.html" guid="_1O8wwEcdEdqWhJpIxgco7Q">Guía de la herramienta: Exportar procesos a una herramienta utilizando Rational
+        Method Composer</a>.
+    </li>
+</ol><br />
+<h4>
+    <a id="add_guidance">Personalizar RUP añadiendo instrucciones a elementos de método existentes</a>
+</h4>
+<p>
+    Cuando utilice el <a class="elementLinkWithUserText" href="./../../../core.base_rup/tools/rup_rational_method_composer_84A966EC.html" guid="_hAfB8COzEdq41POk0CQYwA">Rational Method
+    Composer</a>&nbsp;(RMC) para añadir una&nbsp;<a class="elementLinkWithUserText" href="./../../../core.base_concepts/customcategories/guidance_BE65A47D.html" guid="_xy2SAAIsEdqEutyfYo0quQ">guía</a>&nbsp;a
+    los elementos de método existentes, los principales pasos de personalización se llevan a cabo como se indica a
+    continuación:
+</p>
+<ol>
+    <li>
+        Cree un <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/method_plugin_B417B6A2.html" guid="_0KeEMBUFEdqrUt4zetC1gg">plug-in de método</a>&nbsp;para que contenga la guía.&nbsp;El plug-in de método no
+        sólo contendrá la guía, sino que también contendrá las asociaciones entre la guía y los&nbsp;elementos de
+        método&nbsp;a los que dan soporte.&nbsp;Un plug-in que sólo contiene la guía se denomina plug-in
+        "ligero".&nbsp;Para obtener más información sobre el trabajo con plug-ins,&nbsp;, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/creating_method_plugin_rmc_8EB5EFBA.html" guid="_geA_AEJoEdq3aK0GjVqTbg">Guía de la herramienta: Crear un plug-in de método utilizando Rational Method
+        Composer</a>&nbsp;y <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/developing_method_content_rmc_53FEDE8.html" guid="_4Hw3gEJoEdq3aK0GjVqTbg">Guía de la herramienta: Desarrollar contenido del método utilizando Rational Method
+        Composer</a>.
+    </li>
+    <li>
+        Cree una <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/configuration_AAF623BC.html" guid="_d698IBUFEdqrUt4zetC1gg">configuración del método</a>&nbsp;que contenga el plug-in de método creado en el
+        paso anterior.&nbsp;Lo idea es utilizar una de las configuraciones de RMC predefinidas que contenga los elementos
+        de método necesarios, como punto de partida.&nbsp;Perfeccione las vistas de configuración para que incluyan la
+        nueva guía, según convenga.&nbsp;Para obtener más información sobre el trabajo con configuraciones, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/creating_method_configuration_rmc_86244E8E.html" guid="_KYnL8EJZEdqc6pVfdXQ8AQ">Guía de la herramienta: Crear una configuración del método utilizando Rational
+        Method Composer</a>.
+    </li>
+    <li>
+        Como sólo está añadiendo la guía a los elementos de método existentes, no es necesario desarrollar procesos (puede
+        utilizarse uno de los <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/delivery_process_CFEBBC78.html" guid="_EhgqwO8MEdmKSqa_gSYthg">procesos de entrega</a>&nbsp;).&nbsp;&nbsp;
+    </li>
+    <li>
+        Para hacer disponible el proceso, publique la configuración para producir el sitio web de procesos o exportar el
+        proceso de entrega a una herramienta de planificación de proyectos.&nbsp; Para obtener más información, consulte la
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/publishing_method_configuration_rmc_AE16A603.html" guid="_6KxnAEccEdqWhJpIxgco7Q">Guía de la herramienta: Publicar configuraciones del método utilizando Rational
+        Method Composer</a>&nbsp;y la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/exporting_processes_rmc_6306CBC0.html" guid="_1O8wwEcdEdqWhJpIxgco7Q">Guía de la herramienta: Exportar procesos a una herramienta utilizando Rational
+        Method Composer</a>.
+    </li>
+</ol>
+<h4>
+    <a id="new_dp" name="new_dp">Personalizar RUP definiendo un nuevo proceso de entrega</a>
+</h4>
+<p>
+    Cuando utilice el <a class="elementLinkWithUserText" href="./../../../core.base_rup/tools/rup_rational_method_composer_84A966EC.html" guid="_hAfB8COzEdq41POk0CQYwA">Rational Method
+    Composer</a>&nbsp;(RMC) para definir un nuevo <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/delivery_process_CFEBBC78.html" guid="_EhgqwO8MEdmKSqa_gSYthg">proceso de entrega</a>, los principales pasos de la personalización se llevan a cabo
+    como se indica a continuación:
+</p>
+<ol>
+    <li>
+        Como está creando un nuevo proceso de entrega, debe crear un <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/method_plugin_B417B6A2.html" guid="_0KeEMBUFEdqrUt4zetC1gg">plug-in de método</a>&nbsp;para que contenga el proceso de entrada.&nbsp;Para
+        obtener más información, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/creating_method_plugin_rmc_8EB5EFBA.html" guid="_geA_AEJoEdq3aK0GjVqTbg">Crear un plug-in de método utilizando Rational Method Composer</a>.
+    </li>
+    <li>
+        La configuración del proceso implica la creación de una <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/configuration_AAF623BC.html" guid="_d698IBUFEdqrUt4zetC1gg">configuración del método</a>&nbsp;que incluya el plug-in creado en el paso anterior,
+        además de los demás plug-ins que necesite (por ejemplo,&nbsp;plug-ins que contengan los elementos de método a los
+        que hace referencia el proceso de entrega).&nbsp;Lo ideal es utilizar una configuración predefinida como punto de
+        partida (específicamente, una&nbsp;configuración que contenga un proceso de entrega que se parezca al proceso de
+        entrega que desea definir).&nbsp;Para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/creating_method_configuration_rmc_86244E8E.html" guid="_KYnL8EJZEdqc6pVfdXQ8AQ">Guía de la herramienta: Crear una configuración del método utilizando Rational
+        Method Composer</a>.
+    </li>
+    <li>
+        Para desarrollar el proceso de la configuración, cree un nuevo proceso de entrega, lo ideal es empezar a partir de
+        un proceso de entrega existente o de un <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/capability_pattern_ECA78A86.html" guid="1.7072348895114264E-305">patrón de posibilidad</a> existente.&nbsp; Para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/developing_processes_rmc_525982AF.html" guid="_A1_M4EJeEdqc6pVfdXQ8AQ">Guía de la herramienta: Desarrollar procesos utilizando Rational Method
+        Composer</a>.<br />
+         Mientras se desarrolla el proceso de entrega, si descubre que se necesita contenido del método adicional. siempre
+        puede añadir ese contenido a un plug-in de método que después se podrá incluir en la configuración.&nbsp; Para
+        obtener más información, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/creating_method_plugin_rmc_8EB5EFBA.html" guid="_geA_AEJoEdq3aK0GjVqTbg">Crear un plug-in de método utilizando Rational Method Composer</a>&nbsp;y <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/developing_method_content_rmc_53FEDE8.html" guid="_4Hw3gEJoEdq3aK0GjVqTbg">Guía de la herramienta: Desarrollar contenido del método utilizando Rational Method
+        Composer</a>.
+    </li>
+    <li>
+        Para hacer disponible el proceso, publique la configuración para producir el sitio web de procesos o exportar el
+        proceso de entrega a una herramienta de planificación de proyectos.&nbsp; Para obtener más información, consulte la
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/publishing_method_configuration_rmc_AE16A603.html" guid="_6KxnAEccEdqWhJpIxgco7Q">Guía de la herramienta: Publicar configuraciones del método utilizando Rational
+        Method Composer</a>&nbsp;y la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/exporting_processes_rmc_6306CBC0.html" guid="_1O8wwEcdEdqWhJpIxgco7Q">Guía de la herramienta: Exportar procesos a una herramienta utilizando Rational
+        Method Composer</a>.&nbsp;<br />
+         &nbsp;
+    </li>
+</ol>
+<h4>
+    <a id="new_method_element">Personalizar RUP añadiendo un nuevo elemento de modelo sin instrucciones</a>
+</h4>
+<p>
+    Cuando utilice el <a class="elementLinkWithUserText" href="./../../../core.base_rup/tools/rup_rational_method_composer_84A966EC.html" guid="_hAfB8COzEdq41POk0CQYwA">Rational Method
+    Composer</a>&nbsp;(RMC) para añadir un nuevo elemento de método que no es de guía (<a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/role_BBD6A3E6.html" guid="1.1609745730665898E-304">rol</a>, <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/task_86A4917F.html" guid="7.624729048911575E-305">tarea</a> o <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/work_product_18CEEF8D.html" guid="4.804531471620803E-306">producto de
+    trabajo</a>), los pasos clave para la personalización se llevan a cabo como se indica a continuación:
+</p>
+<ol>
+    <li>
+        Cree un <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/method_plugin_B417B6A2.html" guid="_0KeEMBUFEdqrUt4zetC1gg">plug-in de método</a> para que contenga el nuevo elemento de método y cualquier otro
+        elemento de método adicional.&nbsp;Por ejemplo, si está añadiendo un nuevo producto de trabajo, tal vez necesite
+        añadir un rol que sea responsable del producto de trabajo,&nbsp;una tarea&nbsp;para crear el producto de trabajo,
+        etc.&nbsp; Para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/creating_method_plugin_rmc_8EB5EFBA.html" guid="_geA_AEJoEdq3aK0GjVqTbg">Crear un plug-in de método utilizando Rational Method Composer</a>.
+    </li>
+    <li>
+        Configure el contenido del método mediante la creación de una <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/configuration_AAF623BC.html" guid="_d698IBUFEdqrUt4zetC1gg">configuración del método</a>&nbsp;que incluya el plug-in creado en el paso anterior,
+        además de los demás plug-ins que necesite (por ejemplo, plug-ins que contengan los elementos de método relacionados
+        con el nuevo elemento de método).&nbsp;Para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/creating_method_configuration_rmc_86244E8E.html" guid="_KYnL8EJZEdqc6pVfdXQ8AQ">Guía de la herramienta: Crear una configuración del método utilizando Rational
+        Method Composer</a>.
+    </li>
+    <li>
+        Para desarrollar el proceso de la configuración, cree un nuevo <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/delivery_process_CFEBBC78.html" guid="_EhgqwO8MEdmKSqa_gSYthg">proceso de entrega</a>, lo ideal es empezar a partir de un proceso de entrega
+        existente o de un <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/capability_pattern_ECA78A86.html" guid="1.7072348895114264E-305">patrón de posibilidad</a> existente.&nbsp;Añada el nuevo elemento de método y
+        cualquier elemento de método relacionado con el proceso de entrega.&nbsp; Para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/developing_processes_rmc_525982AF.html" guid="_A1_M4EJeEdqc6pVfdXQ8AQ">Guía de la herramienta: Desarrollar procesos utilizando Rational Method
+        Composer</a>.
+    </li>
+    <li>
+        Para hacer disponible el proceso, publique la configuración para producir el sitio web de procesos o exportar el
+        proceso de entrega a una herramienta de planificación de proyectos.&nbsp; Para obtener más información, consulte la
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/publishing_method_configuration_rmc_AE16A603.html" guid="_6KxnAEccEdqWhJpIxgco7Q">Guía de la herramienta: Publicar configuraciones del método utilizando Rational
+        Method Composer</a>&nbsp;y la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/exporting_processes_rmc_6306CBC0.html" guid="_1O8wwEcdEdqWhJpIxgco7Q">Guía de la herramienta: Exportar procesos a una herramienta utilizando Rational
+        Method Composer</a>.
+    </li>
+</ol><p/><h3>
+    <a id="dev_case">Utilizar un guión de desarrollo</a>
+</h3>
+<p>
+    Tal como se ha discutido anteriormente, una opción para personalizar RUP es proporcionar información personalizada en
+    un documento externo que haga referencia al proceso subyacente.&nbsp; El <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_development_case_F4260B3A.html" guid="{F071C3D3-7054-457F-8A81-EFA6678CCDE1}">Guión de desarrollo</a>&nbsp;es un ejemplo de este documento.&nbsp; Para
+    obtener más información sobre la utilización de un guión de desarrollo en el proceso de personalización, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/develop_development_case_B10E3391.html" guid="{F6999E01-701F-4D48-9E83-A063CB35912B}">Tarea: Desarrollar guión de desarrollo</a>&nbsp;y las instrucciones
+    asociadas.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

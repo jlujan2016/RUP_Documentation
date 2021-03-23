@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Servicio</title>
+<meta content="Guideline" name="uma.type">
+<meta content="service" name="uma.name">
+<meta content="Servicio" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "2.1757522381974088E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.1757522381974088E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_d5dewE7OEduvcvbnLvkXhA", "2.1757522381974088E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.1757522381974088E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Servicio</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz profundiza en la definición de servicio como recurso de software que se puede descubrir con una especificación de servicio externalizado.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../soa.rup_soma/workproducts/soa_svce_model_service_1EE4C96C.html" guid="{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}">Servicio</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_service__guidelines_for" name="XE_service__guidelines_for" class="index" key="service" text="guidelines for"></a>
+
+<h3>
+    <a id="Introduction" name="Introduction">Introducción</a>
+</h3>
+<p>
+    Un servicio es un artefacto clave en una <i><a class="elementLinkWithUserText" href="./../../../soa.rup_soma/guidances/concepts/service-oriented_architecture_8328ABAD.html" guid="8.613638237693525E-307">arquitectura orientada a servicios</a></i> pero, ¿qué es un servicio? A continuación se
+    muestra la entrada del glosario de Rational Unified Process (RUP).
+</p>
+<blockquote>
+    <i>Un servicio es un recurso de software (descubrible) con una especificación de servicio externalizado. Esta
+    especificación de servicio está disponible para búsquedas, enlaces e invocación por parte de un cliente de servicio. El
+    proveedor de servicio realiza la implementación de la especificación de servicio y también ofrece los requisitos de
+    calidad de servicio al cliente de servicio. Los servicios se regirán por políticas declarativas y, por tanto, darán
+    soporte a un estilo de arquitectura reconfigurable dinámicamente.</i>
+</blockquote>
+<p>
+    Y, mientras la siguiente sección describe algunas de las sentencias clave de la entrada anterior, merece la pena
+    contemplar un aspecto adicional de los servicios que realmente los diferencia de los elementos de diseño en tecnologías
+    anteriores; los servicios a un nivel de granularidad que les permite identificarse a partir de un nivel empresarial. A
+    continuación también trataremos la naturaleza de alineación empresarial de los servicios.
+</p>
+<h4>
+    <a id="Discoverable" name="Discoverable">Descubribles</a>
+</h4>
+<p>
+    Los servicios no son parte de una arquitectura de aplicación monolítica. Existen independientemente en el tiempo de
+    ejecución de cualquiera y todos los servicios de una determinada solución. Esto quiere decir que necesitamos un método
+    para el registro y el descubrimiento de servicios basado en criterios como el&nbsp;<a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_svce_model_svce_spec_37E89A91.html" guid="{20F06B5E-95D5-422C-AB68-7C213D28533A}">Artefacto: especificación de servicio</a> que realiza, su <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_svce_model_svce_provider_C00D3410.html" guid="{8427751F-3C14-4CEB-9816-5112BDB91EED}">Artefacto: proveedor de servicios</a>, así como otras clasificaciones
+    empresariales y técnicas. Este proceso de descubrimiento puede tener lugar durante el período de desarrollo para hacer
+    coincidir los servicios ofrecidos con los servicios de soporte o tener lugar durante el tiempo de ejecución para
+    permitir el suministro dinámico de los servicios (invocación mediada). Para ser descubrible, un servicio debe
+    proporcionar un conjunto de metadatos que permita la categorización. Estos metadatos son parte de la especificación
+    externa.
+</p>
+<p>
+    Para obtener más información, consulte los apartados&nbsp;<a class="elementLinkWithUserText" href="./../../../soa.rup_soma/guidances/concepts/service_portfolio_52FD64AC.html" guid="1.851952881072508E-305">Concepto: cartera de clientes</a> y <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/guidances/guidelines/service_mediation_2F2C4C02.html" guid="2.5614739075754752E-306">Directriz: Mediación de servicios</a>.
+</p>
+<h4>
+    Especificados <a id="Externally_Described" name="Externally_Described">externamente</a>
+</h4>
+<p>
+    La especificación externa permite que un servicio publique sus detalles como interfaz, ubicación, políticas,
+    clasificaciones, etc. sin necesidad de que el cliente tenga acceso al propio servicio. Normalmente dicha información se
+    almacena entonces en una ubicación o registro de servicios especializado que de soporte a consultas de los metadatos.
+    Actualmente en el mundo de los servicios web, el estándar aceptado para la descripción de interfaces de servicios es
+    WSDL (<a href="http://www.w3.org/TR/wsdl">Lenguaje de descripción de servicios web)</a>, que procede de World Wide Web
+    Consortium.
+</p>
+<p>
+    El producto de trabajo de especificación de servicio es realmente una combinación de tres componentes: la interfaz, el
+    comportamiento y la especificación de políticas. De esta forma, la realización de estos distintos aspectos requiere
+    algo más que la definición de interfaz suministrada por WSDL.
+</p>
+<p>
+    Para obtener más información acerca de los registros de servicio, consulte el apartado <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/guidances/concepts/service_portfolio_52FD64AC.html" guid="1.851952881072508E-305">Concepto: cartera de servicios</a>.
+</p>
+<h4>
+    <a id="Contract_Based" name="Contract_Based">Basado en contrato</a>
+</h4>
+<p>
+    En la definición anterior del glosario observamos que la especificación de servicio ofrece una vista del proveedor de
+    servicio y del cliente de servicio. Estas vistas se corresponden con dos mitades de un contrato que permiten la
+    separación clara de la especificación de la implementación.
+</p>
+<p>
+    La siguiente tabla describe cómo los distintos aspectos de una especificación de servicio afectan al proveedor y al
+    cliente de la especificación.
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <th valign="top" width="10%">
+                Rol
+            </th>
+            <th valign="top" width="30%">
+                Especificación de interfaz
+            </th>
+            <th valign="top" width="30%">
+                Especificación de comportamiento
+            </th>
+            <th valign="top" width="30%">
+                Especificación de política
+            </th>
+        </tr>
+        <tr>
+            <td valign="top" width="10%">
+                <b>Proveedor</b>
+            </td>
+            <td valign="top" width="30%">
+                Informa sobre el conjunto de operaciones y mensajes al que el servicio debe responder. Todas las
+                operaciones deben responder con los mensajes correctos.
+            </td>
+            <td valign="top" width="30%">
+                Informa del comportamiento que este servicio debe soportar. Si tal especificación de comportamiento es
+                formal y completa, se puede probar una implementación para el cumplimiento de la especificación.
+            </td>
+            <td valign="top" width="30%">
+                Informa sobre un conjunto de restricciones bajo el que puede trabajar la implementación, así como sobre un
+                conjunto de calidades de servicio que deben ejecutarse.
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="10%">
+                <b>Cliente</b>
+            </td>
+            <td valign="top" width="30%">
+                Informa sobre el conjunto de operaciones que se pueden invocar.
+            </td>
+            <td valign="top" width="30%">
+                Informa sobre los requisitos de protocolo que el cliente debe ejecutar (ordenación de operaciones, flujos
+                de datos, etc.). También indica las operaciones que el cliente debe implementar para dar soporte a
+                colaboraciones.
+            </td>
+            <td valign="top" width="30%">
+                Informa sobre restricciones sobre las que el cliente debe ser consciente, caso de los requisitos de
+                seguridad, en comunicaciones con este servicio. También identifica las calidades de servicio que un cliente
+                puede obtener de un determinado proveedor.
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    Dicha especificación de servicio puede verse como una aplicación del diseño por contrato pero es un paso necesario a la
+    hora de obtener servicios descubribles y reconfigurables dinámicamente.
+</p>
+<h4>
+    <a id="Business_Aligned" name="Business_Aligned">Alineación empresarial</a>
+</h4>
+<p>
+    En general, la conexión entre modelos empresariales que representa las operaciones de la empresa y los modelos de
+    diseño para dar soporte a aplicaciones de TI se ha, como mucho, realizado de manera más holgada. En la mayoría de los
+    casos, se han desconectado completamente. Aunque el RUP no proporciona instrucciones sobre la transición de modelos
+    empresariales a modelos de guiones de uso de sistema (consulte la directriz <i>Ir de modelos empresariales a
+    sistemas</i>), la conexión requiere un número de transformaciones a medida que el nivel de granularidad y abstracción
+    cambia de perspectivas empresariales a perspectivas de TI.
+</p>
+<p>
+    En general, está claro que los servicios se pueden clasificar en servicios empresariales o de infraestructura. Consulte
+    el apartado <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/guidances/concepts/service_portfolio_52FD64AC.html" guid="1.851952881072508E-305">Concepto: Cartera de servicios</a>&nbsp;para obtener consideraciones sobre las
+    clasificaciones de servicios.
+</p>
+<p>
+    Un aspecto importante de SOA es que el nivel de granularidad de los servicios descritos en una solución orientada a
+    servicios es tal que las operaciones proporcionadas por los servicios a menudo se identifican en el nivel empresarial.
+    Este aumento en el nivel de granularidad en TI de soporte significa que, en muchos casos, las tareas identificadas en
+    los modelos de proceso empresarial se pueden ejecutar directamente como operaciones en servicios. Por tanto, los
+    usuarios empresariales de las soluciones de TI se convierten cada vez más en parte de los procesos de análisis y
+    diseño. También es interesante observar que esta estrecha conexión con el modelo de proceso empresarial también asocia
+    más directamente los servicios como productos de trabajo de TI, con los <i>objetivos empresariales</i> modelados en la
+    disciplina de modelado empresarial de RUP.
+</p>
+<p>
+    Para obtener más detalles sobre la conexión entre modelos empresariales y de servicio, consulte la <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/capabilitypatterns/existing_asset_analysis_4B247136.html" guid="_7ZObICxuEdupJ8eX04kqLQ">Actividad: análisis de activos existentes</a>.
+</p>
+<h3>
+    <a id="Modeling_Service" name="Modeling_Service">Modelado de un servicio</a>
+</h3>
+<p>
+    En el modelado de servicio, utilice el <i><a class="elementLinkWithUserText" href="./../../../soa.rup_soma/guidances/whitepapers/uml_profile_for_software_services_7ADFB3D2.html" guid="2.972928238097629E-306">Perfil Lenguaje de modelado unificado (UML) para servicios de software</a></i> y las
+    instrucciones que se proporcionan para cada elemento del perfil. En general, los elementos que crean la vista estática
+    de servicios y especificaciones de servicio en un modelo de servicio aparecen en el siguiente diagrama.
+</p>
+<p align="center">
+    <img height="162" alt="El diagrama se describe en el contenido textual."     src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_identification-01.gif" width="512" border="0" />
+</p>
+<ul>
+    <li>
+        El proveedor de servicio "UpdateCustomerAddressLegacyProvider" proporciona un servicio "UpdateCustomerAddress".
+    </li>
+    <li>
+        El servicio "UpdateCustomerAddress" implementa la especificación de servicio "IUpdateCustomerAddress".
+    </li>
+    <li>
+        La especificación de servicio "IUpdateCustomerAddress" tiene una sola operación "execUpdateCustomerAddress".
+    </li>
+    <li>
+        La operación "execUpdateCustomerAddress" toma un solo mensaje de entrada, "UpdateCustomerRequest".
+    </li>
+    <li>
+        La operación "execUpdateCustomerAddress" devuelve un solo mensaje de salida, "UpdateCustomerResponse".
+    </li>
+</ul>
+<p>
+    La vista de composición y estructura del modelo captura la comunicación entre servicios y el particionamiento de la
+    solución. Esto se trata en el <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/guidances/concepts/service_composition_and_choreography_41EDEECB.html" guid="7.723783423994501E-306">Concepto: Coreografía y composición de servicios</a>&nbsp;y en el <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/guidances/concepts/solution_partitioning_352116F8.html" guid="1.6501323286225543E-305">Concepto: Particionamiento de soluciones</a>.
+</p>
+<h5>
+    Métodos alternativos
+</h5>
+<p>
+    Como ocurre a menudo en modelado, existen métodos alternativos para modelar la misma estructura lógica y en algunos
+    casos las técnicas se pueden utilizar para representar detalles técnicos adicionales. Por ejemplo, al modelar la noción
+    de funciones proporcionadas y necesarias para un servicio podemos elegir estereotipar las interfaces que describen
+    estas funciones como especificaciones de servicio y utilizar una clase&nbsp;estereotipada para representar el tipo
+    combinado, o estereotipar la propia clase y no la interfaz. Ambas opciones aparecen en la siguiente figura.
+</p>
+<p align="center">
+    <img height="132" alt="" src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svc_model-01.png" width="600" />
+</p>
+<p>
+    Normalmente deberíamos estereotipar las interfaces si éstas van a ser utilizadas por otros servicios en un contexto
+    diferente, así que la regla es que cualquiera que sea el elemento considerado reutilizable, su descripción debería
+    estereotiparse. Cuando se crea un servicio en un proveedor de servicios (en términos de UML un puerto en una clase o un
+    componente), seleccione la clase ServiceType o MyService como tipo de puerto estereotipado, tal como aparece a
+    continuación.
+</p>
+<p align="center">
+    <img height="190" alt="" src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svc_model-02.png" width="336" />
+</p>
+<p>
+    Tenga en cuenta que la estructura resultante será idéntica para ServiceType o MyService, el puerto indica una interfaz
+    necesaria y una interfaz proporcionada (posiblemente una interfaz de devolución de llamada que el cliente debe
+    proporcionar). Sin embargo, en algunos casos resulta útil separar explícitamente las funciones necesarias y
+    proporcionadas en descripciones de servicio individuales. En este caso necesitamos dos clases que ejecuten las
+    especificaciones de servicio que hemos introducido anteriormente. La siguiente figura muestra estas clases.
+</p>
+<p align="center">
+    <img height="144" alt="" src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svc_model-03.png" width="335" />
+</p>
+<p>
+    Ahora, cuando creamos nuestro proveedor de servicio necesitamos dos puertos estereotipados, tal como se muestra a
+    continuación, uno para representar la llamada y otro para representar las funciones de devolución de llamada.
+</p>
+<p align="center">
+    <img height="190" alt="" src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svc_model-04.png" width="336" />
+</p>
+<p>
+    El hecho de necesitar esta flexibilidad adicional dependerá mucho de la tarea en mano y del nivel de formalidad
+    necesario de incluir en sus modelos. El ejemplo al final es muy claro a la hora de recordarnos que existen nociones
+    independientes de una interfaz de llamada y de devolución de llamada; no obstante, ¿qué ocurre si el mismo proveedor
+    implementa&nbsp;un número de puntos finales de servicio? La proliferación de puertos puede hacer que el resultado final
+    sea difícil de leer y entender.
+</p>
+<p>
+    Para obtener más información sobre el diseño y la implementación de servicios, consulte la <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/tasks/soa_service_realization_66984C2B.html" guid="_V6uMMCwUEduKcvYAyaKSaA">Tarea: Documentar decisiones de realización de servicios</a>.
+</p><br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

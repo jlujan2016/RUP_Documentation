@@ -1,0 +1,945 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concepto: UMA contra el metamodelo RUP 2003</title>
+<meta content="Concept" name="uma.type">
+<meta content="uma_vs_rup" name="uma.name">
+<meta content="UMA contra el metamodelo RUP 2003" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:3.2329841703462285E-305", path: ["3.2329841703462285E-305", "_uDU1oASEEdq61bDkWg1SXw", "_SZDtIEdjEdqBmOmOgjH2IQ"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "3.2329841703462285E-305", "_uDU1oASEEdq61bDkWg1SXw", "_SZDtIEdjEdqBmOmOgjH2IQ"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_SZDtIEdjEdqBmOmOgjH2IQ"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concepto: UMA contra el metamodelo RUP 2003</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Este concepto describe las diferencias clave entre la arquitectura unificada de método y el metamodelo Rational Unified Process / Área de trabajo de proceso de Rational 2003.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Un poco de historia
+</h3>
+<p>
+    La arquitectura unificada de método (UMA) se ha desarrollado con la idea de unificar el esquema de representación y la
+    terminología de todos los enfoques de ingeniería de procesos y métodos de IBM, así como dar soporte a los principales
+    estándares del sector. &nbsp; Por ello, como se muestra en la figura siguiente, UMA se ha desarrollado como un proyecto
+    de colaboración entre los arquitectos de IBM Rational Unified Process (RUP), método IBM Global Services (método GS) e
+    IBM Rational Summit Ascendant. &nbsp;Además de este grupo central de arquitectos, los interesados de muchas otras
+    iniciativas de proceso de desarrollo dentro y fuera de IBM revisaron y contribuyeron a la especificación. &nbsp;La
+    misma especificación se ha enviado a <a href="http://www.omg.org/" target="_blank">OMG</a>&nbsp;como propuesta para el
+    <a href="http://www.omg.org/cgi-bin/doc?ad/2004-11-4" target="_blank">estándar SPEM 2.0</a>.&nbsp;Como el metamodelo
+    RUP 2003 se ha desarrollado basándose en el <a href="http://www.omg.org/technology/documents/formal/spem.htm" target="_blank">estándar SPEM 1.1</a> actual, esta propuesta de borrador de SPEM 2.0 puede entenderse como una
+    evolución significativa pero continua de ese estándar.
+</p>
+<center>
+    <img alt="Imagen que muestra la evolución de la arquitectura unificada de método" src="./../../../core.base_concepts/guidances/concepts/./resources/uma-evo.gif" />
+</center>
+<p>
+    El objetivo principal de esta unificación era dar con un conjunto de términos y estructuras de datos que permitiera
+    expresarse a todos esos métodos y procesos sin&nbsp;perder sus características esenciales. &nbsp;Por ejemplo, UMA debía
+    diseñarse para dar soporte a muchos ciclos vitales distintos: el ciclo vital de desarrollo iterativo de RUP, los ciclos
+    vitales incrementales del método GS y los ciclos vitales iterativos y de cascada de Summit Ascendant. &nbsp;Además, las
+    diferencias de terminología debían resolverse: lo que RUP denominaba actividad se denominaba tarea en el método GS, RUP
+    hablaba de artefactos donde Summit Ascendant definía entregables, etc.
+</p>
+<h3>
+    Cambios en UMA para los usuarios de RUP 2003
+</h3>
+<p>
+    Como resultado de definir una única estructura de datos y, lo que es más importante, todos los interesados debían
+    aceptar una misma terminología para todos estos enfoques, compromisos y cambios. Aunque estos cambios pueden resultar
+    incómodos para el usuario actual de RUP, a la larga, se beneficiarán de una terminología unificada y muy utilizada y de
+    una forma estandarizada de expresar el contenido del método y los procesos con lo que mejorará la comunicación acerca
+    de los procesos y se facilitará la reutilización. &nbsp;En la lista siguiente se ofrece un resumen de los cambios
+    principales del metamodelo RUP 2003. &nbsp;En la tabla siguiente se proporciona un completa comparativa terminológica
+    de todas las fuentes principales de UMA.
+</p>
+<ul>
+    <li>
+        <strong>Actividad se denomina ahora tarea</strong>: para proporcionar un enlace más ajustado con la actuación de
+        proceso y la gestión de proyectos, se ha renombrado las unidades de trabajo asignables más pequeñas como tarea, por
+        ser el término usado más habitualmente.
+    </li>
+    <li>
+        <strong>Detalles de flujo de trabajo se denomina ahora actividad</strong>: los flujos de trabajo se suelen expresar
+        en jerarquías de diagramas de actividad (por ejemplo, diagramas de actividad definidas en UML 2.0). &nbsp;Aunque
+        RUP sólo ha proporcionado un nivel de desglose del flujo de trabajo, UMA se ha diseñado para proporcionar varios
+        niveles de desglose similares. Como el término actividad era más utilizado para expresar los elementos de los
+        diagramas de actividad así como el propio diagrama de actividad, se decidió sustituir el término detalle de flujo
+        de trabajo utilizado en RUP por el de actividad. &nbsp;Nos dimos cuenta de que el cambio en el uso de la palabra
+        actividad podría causar confusión entre los usuarios de RUP existentes. &nbsp;Sin embargo, un objetivo importante
+        del trabajo de UMA era utilizar los términos de la forma en que se utilizaban habitualmente en los estándares y en
+        el sector. &nbsp;
+    </li>
+    <li>
+        <strong>Muchos roles pueden realizar las tareas (anteriormente denominadas actividades RUP)</strong>:&nbsp;en RUP
+        2003, una actividad se ha modelado como operación de un rol. &nbsp;La información de retorno de los clientes, una
+        mirada a otros enfoques de modelado de procesos, así como los cambios introducidos en UML 2.0 indicaron que era una
+        forma excesivamente restrictiva de modelar el comportamiento humano. &nbsp;Este enfoque no permitía expresar que
+        una parte del trabajo se realizó en colaboración entre distintos roles. &nbsp;UMA aborda esta
+        cuestión&nbsp;haciendo&nbsp;de la tarea un elemento de modelo independiente al que pueden asignarse roles de
+        realización como recursos. &nbsp;Por lo tanto, ahora UMA admite que a una tarea se le asignen varios roles.
+        &nbsp;Para la compatibilidad con versiones anteriores, sigue admitiendo que se identifique un rol de realización
+        principal&nbsp;(responsable de la tarea), así como varios realizadores adicionales.
+    </li>
+    <li>
+        <strong>Perfeccionamiento del concepto de artefacto</strong>: RUP sólo utiliza el concepto de artefacto para
+        definir lo que se utiliza y se produce en un proyecto de desarrollo. &nbsp; UMA define una taxonomía ampliada para
+        estos conceptos. &nbsp; Define el concepto general de producto de trabajo, que tiene tres especializaciones
+        diferentes (tipos de producto de trabajo específicos): artefactos (productos de trabajo gestionados), entregables
+        (productos de trabajo empaquetado que se entregan al interesado para su revisión) y resultado (productos de trabajo
+        intangibles, no gestionados).
+    </li>
+    <li>
+        <strong>Distintas categorizaciones de productos de trabajo y reglas</strong>: en RUP, los artefactos y las reglas
+        se categorizan por disciplina. &nbsp; Sin embargo, a veces los artefactos se utilizan en varias disciplinas y una
+        categorización para sólo una disciplina provocó confusión. &nbsp; En UMA se han definido diferentes categoría para
+        las definiciones de trabajo (disciplina para tareas y actividades), productos de trabajo (dominio y tipo de
+        producto de trabajo) y roles (conjuntos de roles).&nbsp;
+    </li>
+    <li>
+        <strong>Componentes del proceso se denomina ahora paquete del método</strong>: el concepto de componentes suele
+        utilizarse en muchos estándares y tecnologías. La mayoría de las aplicaciones del componente los enlazan con la
+        abstracción de la encapsulación que define un componente como una caja negra que puede utilizarse mediante
+        interfaces bien definidas. Los componentes de RUP no cumplían este criterio de caja negra. Asimismo, en el estándar
+        SPEM se definían paquetes además de componentes. Para ser compatible con SPEM y con el uso del término componente
+        en el sector, se ha cambiado su nombre de componente del proceso por el de paquete del método. (Técnicamente, se
+        trata de un 'método' porque contiene elementos de método o elementos de proceso).
+    </li>
+    <li>
+        <strong>Separación de los elementos de contenido del método de los elementos de proceso</strong>: en RUP
+        2003,&nbsp;se creó un nuevo proceso al definir una nueva configuración y documentar manualmente en un guión de
+        desarrollo los cambios de los artefactos en RUP estándar.&nbsp;UMA proporciona conceptos que se suman al concepto
+        de configuración para los procesos de personalización. &nbsp;Le permite modelar específicamente para un proceso qué
+        trabajo definido en el contenido del método desea realizar en cada fase, porque puede añadir, eliminar y
+        reorganizar con facilidad los elementos de la estructura del proceso, pudiendo decidir qué elementos reutiliza del
+        contenido del método. Ofrece estas características mediante una separación más clara del contenido del método (por
+        ejemplo, la tareas definidas para las disciplinas) y la aplicación del contenido del método en los procesos
+        (expresados mediante diagramas de actividad o estructuras de desglose de trabajo), así como el modelado de procesos
+        (por ejemplo, creando diagramas de actividad nuevos o adaptados, o estructuras de desglose de trabajo nuevas o
+        adaptadas). &nbsp;Presenta algunos conceptos nuevos como el descriptor que da soporte a esta separación y alcanza
+        nuevas posibilidades de mantener y reutilizar muchas familias diferentes de procesos y partes de procesos
+        alternativos en la misma configuración.
+    </li>
+</ul>
+<h3>
+    Comparación de términos
+</h3>En la tabla siguiente se muestra cómo se correlaciona la terminología UMA con los términos utilizados por otros
+enfoques de ingeniería de procesos. <br />
+<br />
+<table cellspacing="0" cellpadding="0" width="938" border="1">
+    <colgroup>
+        <col style="WIDTH: 48pt" width="64" />
+        <col style="WIDTH: 176pt" width="235" />
+        <col style="WIDTH: 117pt" width="156" />
+        <col style="WIDTH: 108pt" width="144" />
+        <col style="WIDTH: 139pt" width="185" />
+        <col style="WIDTH: 116pt" width="154" />
+    </colgroup>
+    <tbody>
+        <tr bgcolor="#CCCCCC" height="17">
+            <td width="64" height="17">
+                &nbsp;
+            </td>
+            <td width="235">
+                <b>UMA/RMC</b>
+            </td>
+            <td width="156">
+                <b>RUP 2003</b>
+            </td>
+            <td width="144">
+                <b>SUMMIT</b>
+            </td>
+            <td width="185">
+                <b>IGSM</b>
+            </td>
+            <td width="154">
+                <b>SPEM 1.1</b>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" height="17">
+                Elementos de método básicos
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td height="136" rowspan="8">
+                &nbsp;
+            </td>
+            <td>
+                Rol
+            </td>
+            <td>
+                Rol
+            </td>
+            <td>
+                Rol
+            </td>
+            <td>
+                Rol
+            </td>
+            <td>
+                Rol de proceso
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Producto de trabajo
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Entregable
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Producto de trabajo/Artefacto
+            </td>
+            <td>
+                Artefacto
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Descripción del producto de trabajo
+            </td>
+            <td>
+                Producto de trabajo
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Producto de trabajo/Resultado
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Resultado de la tarea
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Producto de trabajo/Entregable
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Descripción del contenido del entregable
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Tarea
+            </td>
+            <td>
+                Actividad
+            </td>
+            <td>
+                Actividad
+            </td>
+            <td>
+                Tarea
+            </td>
+            <td>
+                Actividad
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Paso
+            </td>
+            <td>
+                Paso
+            </td>
+            <td>
+                Paso
+            </td>
+            <td>
+                Subtarea
+            </td>
+            <td>
+                Paso
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" height="17">
+                Relacionado con el proceso
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td height="102" rowspan="6">
+                &nbsp;
+            </td>
+            <td>
+                Actividad
+            </td>
+            <td>
+                Detalle del flujo de trabajo
+            </td>
+            <td>
+                Tarea
+            </td>
+            <td>
+                Actividad
+            </td>
+            <td>
+                Definición del trabajo
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Iteración
+            </td>
+            <td>
+                Iteración
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Iteración
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Fase
+            </td>
+            <td>
+                Fase
+            </td>
+            <td>
+                Fase
+            </td>
+            <td>
+                Fase
+            </td>
+            <td>
+                Fase
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Patrón de posibilidad
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Patrón de posibilidad
+            </td>
+            <td>
+                (Componente del proceso)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Proceso de entrega
+            </td>
+            <td>
+                Ciclo vital/Configuración
+            </td>
+            <td>
+                Mapa
+            </td>
+            <td>
+                Modelo de compromiso
+            </td>
+            <td>
+                (Proceso)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" height="17">
+                Categorización
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td height="85" rowspan="5">
+                &nbsp;
+            </td>
+            <td>
+                Disciplina
+            </td>
+            <td>
+                Disciplina
+            </td>
+            <td>
+                Módulo
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Disciplina
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Dominio
+            </td>
+            <td>
+                (Conjunto del artefacto)
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Dominio
+            </td>
+            <td>
+                Tipo de producto de trabajo
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Conjunto de roles
+            </td>
+            <td>
+                (Conjunto de roles)
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Herramienta
+            </td>
+            <td>
+                Herramienta
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" height="17">
+                Método de empaquetado
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td height="102" rowspan="6">
+                &nbsp;
+            </td>
+            <td>
+                Plug-in de método
+            </td>
+            <td>
+                Plug-in del modelo de proceso
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Proceso
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Paquete del método
+            </td>
+            <td>
+                Componente de proceso
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Paquete
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Paquete del método/Paquete del contenido&nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Paquete
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Paquete del método/Paquete del proceso
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Paquete
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Paquete del proceso/Componente de proceso
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Componente de proceso
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" height="17">
+                Tipos de guía
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td height="204" rowspan="12">
+                &nbsp;
+            </td>
+            <td>
+                Directriz
+            </td>
+            <td>
+                Directriz
+            </td>
+            <td>
+                Documento de referencia
+            </td>
+            <td>
+                Documento técnico
+            </td>
+            <td>
+                Directriz
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Concepto
+            </td>
+            <td>
+                Concepto
+            </td>
+            <td>
+                Documento de referencia
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Documento técnico
+            </td>
+            <td>
+                Documento técnico
+            </td>
+            <td>
+                Documento de referencia
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Lista de comprobación
+            </td>
+            <td>
+                Lista de comprobación
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Documento técnico (V&V)
+            </td>
+            <td>
+                Lista de comprobación
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Guía de la herramienta
+            </td>
+            <td>
+                Guía de la herramienta
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Guía de la herramienta
+            </td>
+            <td>
+                Guía de la herramienta
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Plantilla
+            </td>
+            <td>
+                Plantillas
+            </td>
+            <td>
+                Plantilla
+            </td>
+            <td>
+                Plantilla
+            </td>
+            <td>
+                Plantilla
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Informe
+            </td>
+            <td>
+                Informe
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Cálculo
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Cálculo
+            </td>
+            <td>
+                Consideraciones sobre el cálculo
+            </td>
+            <td>
+                Cálculo
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ejemplo
+            </td>
+            <td>
+                Ejemplo
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Elemento de referencia/Ejemplo
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Mapa&nbsp;
+            </td>
+            <td>
+                Mapa
+            </td>
+            <td>
+                Descripción del mapa
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Definición de términos
+            </td>
+            <td>
+                (Glosario)
+            </td>
+            <td>
+                (Glosario)
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Práctica
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2005&nbsp;Reservados todos los derechos
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

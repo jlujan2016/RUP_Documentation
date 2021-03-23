@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Estructuraci&oacute;n del modelo de implementaci&oacute;n mediante Rational Systems Developer</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="structuring_the_implementation_model_using_rsd" name="uma.name">
+<meta content="Estructuraci&oacute;n del modelo de implementaci&oacute;n mediante Rational Systems Developer" name="uma.presentationName">
+<meta content="Tool:rsa_rational_systems_developer:Rational Systems Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Systems Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "_JU13oK4OEdqFg48R_ivTjA", "_JLv38K4MEdqFg48R_ivTjA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "_JU13oK4OEdqFg48R_ivTjA", "_JLv38K4MEdqFg48R_ivTjA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "_JU13oK4OEdqFg48R_ivTjA", "_JLv38K4MEdqFg48R_ivTjA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_JLv38K4MEdqFg48R_ivTjA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Estructuraci&oacute;n del modelo de implementaci&oacute;n mediante Rational Systems Developer</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta guía de la herramienta describe cómo estructurar el modelo de implementación mediante el entorno de modelado RSD.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../tech.rsa/tools/rsa_rational_systems_developer_349857FD.html" guid="_JU13oK4OEdqFg48R_ivTjA">Rational Systems Developer</a>
+<br>Ampl&iacute;a: <a href="./../../../tech.rsa/guidances/toolmentors/structuring_the_implementation_model_using_rsa_89476340.html" guid="{0BBB35DD-097A-41D2-8CC9-59AD9AA93E53}">Estructuración del modelo de implementación mediante la plataforma de desarrollo de software Rational</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">Estructurar el modelo de implementación</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    En esta guía de la herramienta, se da por supuesto que se ha definido la estructura de nivel superior del modelo de
+    implementación tal como se describe en las <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a>.&nbsp;Los pasos de esta guía de la
+    herramienta permiten perfeccionar esta estructura inicial.
+</p>
+<p>
+    En esta guía de la herramienta se llevan a cabo los pasos siguientes:
+</p>
+<ul>
+    <li>
+        <a href="#Establish the Implementation Model Structure">Establecer la estructura del modelo de
+        implementación</a>
+    </li>
+    <li>
+        <a href="#Adjust Subsystems">Ajustar subsistemas de implementación</a>
+    </li>
+    <li>
+        <a href="#Define Imports for Each Subsystem">Definir importaciones para cada subsistema de
+        implementación</a>
+    </li>
+    <li>
+        <a href="#Decide how to treat executables (and other derived objects)">Decidir cómo tratar
+        ejecutables (y otros objetos derivados)</a>
+    </li>
+    <li>
+        <a href="#Decide how to treat test assets">Decidir cómo tratar activos de prueba</a>
+    </li>
+    <li>
+        <a href="#Update the Implementation View">Actualizar la vista de implementación</a>
+    </li>
+    <li>
+        <a href="#Evaluate the implementation model">Evaluar el modelo de implementación</a>
+    </li>
+</ul>
+<h3>
+    <a id="Establish the Implementation Model Structure" name="Establish the Implementation Model Structure">Establecer la
+    estructura del modelo de implementación</a>
+</h3>
+<p>
+    El enfoque recomendado es el desarrollo controlado por modelos (MDD) (consulte <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/concepts/mdd_and_mda_8F9B3685.html" guid="4.227832989444728E-303">Desarrollo
+    controlado por modelos y Arquitectura controlada por modelos</a>). Si a este enfoque es seguido por el equipo de
+    desarrollo, el modelo de implementación estará controlado en gran medida por la organización del modelo de diseño. A
+    medida que se identifican los subsistemas de implementación, deben modelarse como paquetes o subsistemas en el modelo
+    de diseño. Generalmente, al identificar los paquetes en el modelo de diseño, debe tenerse en cuenta cómo dichos
+    paquetes se correlacionarán con los proyectos&nbsp;específicos de herramienta. Los subsistemas más amplios suelen
+    correlacionarse con sus propios proyectos, mientras que los paquetes más detalladas suelen correlacionarse con las
+    carpetas de origen de los proyectos. Consulte las secciones de las <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a> donde se tratan las estructuras de
+    proyecto y la organización interna de los modelos de implementación y de diseño.
+</p>
+<p>
+    La <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/implementation_view_E373E3B6.html" guid="4.693519701160983E-305">Vista de implementación</a> puede definirse mediante paquetes de
+    &lt;&lt;perspectiva&gt;&gt;, que contienen diagramas que muestran dependencias entre los subsistemas. En función del
+    tipo de transformación que se aplique al modelo de diseño, las dependencias que defina entre los paquetes/subsistemas
+    podrán llegar a correlacionarse con declaraciones de importación 3GL y declaraciones de dependencia de proyecto en los
+    metadatos del proyecto.
+</p>
+<p>
+    Una vez que se ha generado el código, se pueden crear diagramas UML más detallados, que muestran construcciones de
+    nivel de implementación y sus relaciones, mediante la creación de diagramas de clase directamente en los proyectos. A
+    continuación, dichos diagramas deben rellenarse arrastrando hasta ellos los artefactos de implementación. Consulte los
+    temas de la ayuda en línea relacionados con el editor visual UML para Java.
+</p>
+<p>
+    Si requiere referencias para representar clases, interfaces o paquetes específicos, entre otros, de una biblioteca de
+    código en el modelo de implementación, podrá utilizar las funciones de visualización de código del producto para crear
+    dichas representaciones. Los archivos JAR siguientes contienen archivos que pueden resultarle interesantes a medida que
+    diseñe y desarrolle aplicaciones J2EE:
+</p>
+<ul>
+    <li>
+        j2ee.jar, jsf-api.jar, soap.jar, soap-sec.jar (todos en el directorio lib)
+    </li>
+    <li>
+        core.jar, xml.jar, security.jar (todos en el directorio java\jre\lib)
+    </li>
+</ul>
+<p>
+    Cuando tenga que hacer referencia a un elemento de una de estas bibliotecas en el modelo, lleve a cabo los pasos
+    siguientes:
+</p>
+<ol>
+    <li>
+        Cree un nuevo proyecto Java y añada referencias a las bibliotecas.
+    </li>
+    <li>
+        Abra el diagrama al que desea añadir el elemento visualizado.
+    </li>
+    <li>
+        Cambie a la perspectiva Java.
+    </li>
+    <li>
+        Busque el elemento (paquete, clase, interfaz, etc.) al que desea añadir el modelo.
+    </li>
+    <li>
+        Pulse el botón derecho del ratón sobre el elemento y seleccione Visualizar &gt; Añadir a diagrama actual.
+    </li>
+</ol>
+<p>
+    Si resulta necesario representar los proyectos y paquetes reales en los que espera que el código y los archivos
+    relacionados se encuentren, antes de llevar a cabo la generación del código, puede resultar útil utilizar el modelo de
+    visión general de la implementación. Para obtener más información, consulte los temas relacionados con el modelo
+    Implementación en documento técnico <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a>.
+</p>
+<h3>
+    <a id="Adjust Subsystems" name="Adjust Subsystems">Ajustar subsistemas de implementación</a>
+</h3>
+<p>
+    A continuación, se muestra una secuencia de los pasos que le ayudarán a ajustar los subsistemas de implementación:
+</p>
+<ol>
+    <li>
+        Identificar subsistemas que provocan problemas,&nbsp;por ejemplo, la dependencia cíclica mediante:
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <ul>
+            <li>
+                Diagramas de tema y de exploración
+            </li>
+            <li>
+                Descubrimiento de la arquitectura
+            </li>
+            <li>
+                Revisión de código / Análisis del código&nbsp;estructural
+            </li>
+        </ul>
+    </li>
+    <li>
+        Crear un subsistema nuevo
+    </li>
+    <li>
+        Mover los elementos identificados al nuevo subsistema
+    </li>
+    <li>
+        Dibujar dependencias nuevas&nbsp;
+    </li>
+</ol>
+<h3>
+    <a id="Define Imports for Each Subsystem" name="Define Imports for Each Subsystem">Definir importaciones para cada
+    subsistema de implementación</a>
+</h3>
+<p>
+    En un entorno MDD, las dependencias del modelo de implementación se parecerán bastante a las definidas explícita o
+    implícitamente en el modelo de diseño. Los detalles están determinados por las transformaciones de la generación de
+    código aplicadas al modelo de diseño.
+</p>
+<p>
+    Además del modelo de entrada, existen otros artefactos que son necesarios para llevar a cabo una transformación. Un
+    proceso de transformación requiere una definición de transformación y sus reglas de transformación.
+</p>
+<p>
+    Una regla de transformación proporciona una descripción que el proceso de transformación utiliza para convertir un
+    elemento del modelo de origen en cero o más elementos del modelo de destino. Específicamente, correlaciona elementos de
+    un nivel de abstracción con sus copias más detalladas en un nivel inferior de abstracción.
+</p>
+<p>
+    Si utiliza la transformación manual, deberá asegurarse de que proporciona instrucciones suficientes a sus
+    desarrolladores a medida que transforman el modelo de diseño en código. En esencia, deberá proporcionar una definición
+    de transformación que incluya un conjunto de reglas de transformación. Estas instrucciones adicionales pueden tener el
+    formato siguiente:
+</p>
+<ul>
+    <li>
+        Elementos de perfiles documentados
+    </li>
+    <li>
+        Notas del modelo
+    </li>
+    <li>
+        Información adicional del documento de arquitectura de software
+    </li>
+    <li>
+        Directrices de desarrollo
+    </li>
+</ul>
+<p>
+    Si se utiliza un modelo Visión general de implementación, éste será el lugar donde mostrar las dependencias anticipadas
+    entre proyectos y paquetes, las cuales pueden resultar útiles a la hora de identificar los requisitos de creación del
+    sistema (consulte <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a>).
+</p>
+<h3>
+    <a id="Decide how to treat executables (and other derived objects)" name="Decide how to treat executables (and other derived objects)">Decidir cómo tratar ejecutables (y otros objetos
+    derivados)</a>
+</h3>
+<p>
+    En un entorno MDD, en función del tipo de transformación que se aplique al modelo de diseño, se pueden generar varios
+    tipos de artefactos desplegables. Por ejemplo, a partir de elementos como, por ejemplo, las clases
+    &lt;&lt;control&gt;&gt; y &lt;&lt;entidad&gt;&gt;, se puede generar EJB de sesión y de entidad para un destino J2EE,
+    que incluya el código de las clases de implementación más las interfaces más el contenido de descriptor de despliegue
+    que asigna los EJB a archivos JAR EJB y correlaciona dichos JAR con EAR.
+</p>
+<p>
+    Puede optar por modelar artefactos desplegables en el nivel conceptual, mediante un modelo de despliegue. Si lo hace de
+    este modo, los modelará mediante nodos y artefactos UML. En la actualidad, las&nbsp;transformaciones empaquetadas con
+    la herramienta&nbsp;no optimizan las semántica de dichos diagramas para generar datos de despliegue; en consecuencia,
+    los diagramas serán puramente conceptuales y útiles sólo como documentación.
+</p>
+<p>
+    Opcionalmente, también podría describir los artefactos de implementación reales en dichos diagramas soltándolos en el
+    cuadro y conectándolos (mediante dependencias) a los elementos conceptuales del diagrama.
+</p>
+<h3>
+    <a id="Decide how to treat test assets" name="Decide how to treat test assets">Decidir cómo tratar activos de
+    prueba</a>
+</h3>
+<p>
+    Una consideración clave que influirá en la estructura de los activos de prueba será la decisión que afecte al modo en
+    que se creen los activos de prueba.
+</p>
+<p>
+    Puede optar por utilizar las funciones de prueba del componente automatizado para crear pruebas. Si éste es el caso,
+    entonces se configuran uno o varios proyectos de caso de prueba automáticamente&nbsp;como parte del proceso de
+    creación. Un beneficio clave de la utilización de esta función es que se puede utilizar una generación de código
+    inicial y utilizar los fragmentos del código para controlar la creación de casos de prueba.
+</p>
+<p>
+    Mantenga el depósito del proyecto organizado como un conjunto o jerarquía de directorios. Es recomendable mantener los
+    activos de prueba en directorios de prueba separados que mantengan separados los diferentes tipos de prueba: prueba de
+    unidad, prueba de integración, prueba de sistema, etc.
+</p>
+<h3>
+    <a id="Update the Implementation View" name="Update the Implementation View">Actualizar la vista de implementación</a>
+</h3>
+<p>
+    Si existe una vista Implementación separada, se debe mantener. La recomendación general presentada en el documento
+    técnico <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a> es la de utilizar los paquetes de
+    &lt;&lt;perspectiva&gt;&gt; que contienen diagramas que muestran las dependencias entre los subsistemas.
+</p>
+<h3>
+    <a id="Evaluate the implementation model" name="Evaluate the implementation model">Evaluar el modelo de
+    implementación</a>
+</h3>
+<p>
+    Asegúrese de que las dependencias del subsistema (y otras dependencias) siguen las recomendaciones a medida que el
+    sistema evolucione. Con este fin, utilice el descubrimiento de arquitectura, la revisión del código en general y el
+    análisis de la estructura en particular para verificar que los modelos siguen las recomendaciones.
+</p>
+<p>
+    Tal como se ha mencionado anteriormente, es recomendable tomarse un tiempo para introducir reglas personalizadas que se
+    puedan utilizar para aplicar las dependencias que haya identificado. Durante la parte manual de la revisión, es
+    aconsejable anotar las reglas que todavía no se hayan desarrollado y añadirlas al conjunto de reglas para la iteración
+    siguiente.
+</p>
+<p>
+    Puede resultar útil publicar los modelos en formato html. Así mismo, tenga en cuenta que dichos diagramas pueden
+    copiarse en Microsoft Word y otros programas.
+</p>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Publicación de modelos</i> y el tutorial <img height="16"     alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Publicación de un modelo en un
+    sitio web</i> .
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

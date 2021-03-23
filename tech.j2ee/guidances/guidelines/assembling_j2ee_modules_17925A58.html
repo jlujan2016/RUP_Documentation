@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Ensamblaje de m&oacute;dulos J2EE</title>
+<meta content="Guideline" name="uma.type">
+<meta content="assembling_j2ee_modules" name="uma.name">
+<meta content="Ensamblaje de m&oacute;dulos J2EE" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "3.7932077950837037E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.7932077950837037E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Ensamblaje de m&oacute;dulos J2EE</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la forma en que ensamblar módulos J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/integrate_subsystem_E8F878D6.html" guid="{58FF0476-120F-411A-AD8C-16573032BE91}">Integrar los subsistemas</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Introducción
+</h3>
+<p>
+    El ensamblaje de un <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">módulo
+    J2EE</a> da lugar a los siguientes&nbsp;<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">elementos de implementación</a>:
+</p>
+<ul>
+    <li>
+        Archivador de J2EE (archivos WAR, JAR de EJB y JAR) y sus
+    </li>
+    <li>
+        Descriptores de despliegue (archivos XML) que describen el contenido del archivador y la forma en que los elementos
+        contenidos en el archivador deben funcionar dentro del contenedor de despliegue.
+    </li>
+</ul>
+<p>
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">Directriz de producto de trabajo: módulos J2EE</a> para obtener más información sobre
+    los módulos J2EE.
+</p>
+<h3>
+    <a id="Reusable_Components" name="Defining_the_Archive"></a>Definición de archivador
+</h3>
+<p>
+    En este paso, el proveedor de componentes de la aplicación identifica los componentes que se tienen que empaquetar en
+    el módulo.
+</p>
+<p>
+    Se pueden crear distintos archivadores para distintos propósitos. Por ejemplo, distintos archivadores para las pruebas,
+    la depuración o la entrega a distintas configuraciones de despliegue de "producción". Los archivadores para las pruebas
+    podrían contener clases de prueba y clases compiladas con distintivos de depuración, mientras que los archivadores de
+    producción no contendrían ni clases de pruebas ni serían compiladas con distintivos de depuración. El contexto previsto
+    del archivador que se está ensamblando afecta al espacio de trabajo de ensamblaje que se configura.
+</p>
+<h3>
+    Definición de descriptores de despliegue
+</h3>
+<p>
+    El paso clave en el ensamblaje de un módulo J2EE es la definición del descriptor de despliegue. La mayoría de la
+    información se debería haber recogido en el diseño de cada componente y, por lo tanto, la definición del descriptor de
+    despliegue está en gran medida relacionada en asegurar la coherencia del diseño. Si se está utilizando ingeniería de
+    doble sentido, es posible que también hayan herramientas para dar soporte a la generación del descriptor de despliegue.
+</p>
+<p>
+    Cada archivador contiene un descriptor de despliegue estándar de J2EE y de forma opcional podría tener descriptores
+    específicos del proveedor. Los descriptores estándar, ejb-jar.xml para JAR de EJB y web.xml para WAR tienen secciones
+    que se deben completar para despliegues de prueba o de "no producción", más secciones que el ensamblador de aplicación
+    final preparará para el despliegue de producción.
+</p>
+<p>
+    Cada descriptor contiene información de interés para los proveedores de componentes de la aplicación, así como para los
+    ensambladores de aplicación. Por ejemplo, el archivo ejb-jar.xml contiene tres secciones principales (a efectos de
+    nuestra discusión): <span style="FONT-FAMILY: monospace">&lt;enterprise-beans&gt;...</span><span     style="FONT-FAMILY: monospace">&lt;/enterprise-beans&gt;, &lt;relationships&gt;...&lt;/relationships&gt;</span> y <span     style="FONT-FAMILY: monospace">&lt;assembly-descriptor&gt;...</span><span     style="FONT-FAMILY: monospace">&lt;/assembly-descriptor&gt;</span>. El&nbsp;proveedor de componentes de aplicación
+    define las propiedades del EJB, como campos CMP, en la sección <span     style="FONT-FAMILY: monospace">&lt;enterprise-beans&gt;...</span><span     style="FONT-FAMILY: monospace">&lt;/enterprise-beans&gt;</span>. El proveedor de componentes de aplicación también
+    define relaciones opcionales entre los EJB en la sección <span     style="FONT-FAMILY: monospace">&lt;relationships&gt;...&lt;/relationships&gt;</span>.&nbsp;La sección <span     style="FONT-FAMILY: monospace">&lt;assembly-descriptor&gt;...</span><span     style="FONT-FAMILY: monospace">&lt;/assembly-descriptor&gt;</span>&nbsp;es donde se definen las transacciones, los
+    roles de seguridad, los permisos de método, etc. Normalmente, el ensamblador de aplicación sólo se preocupará de esta
+    sección. El ensamblador puede decidir modificar el contenido de las otras dos secciones, pero esto no es lo más
+    habitual. La situación es parecida con los archivadores WAR. Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_applications_38E5D5D5.html" guid="3.347498143656868E-305">Directriz: ensamblaje de aplicaciones J2EE</a> para obtener más información sobre el
+    ensamblaje de aplicaciones.
+</p>
+<p>
+    Si, durante el diseño, se definen correlaciones entre tablas de la base de datos en el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">modelo de datos</a> y un EJB de entidad de persistencia gestionada por
+    contenedor (CMP), dichas correlaciones se deberían ver reflejadas en las directivas de correlación en los descriptores
+    específicos del proveedor (la correlación de directivas no es parte del descriptor estándar de EJB). Consulte la
+    sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_entity_beans_7CD45D28.html" guid="5.953653009453999E-307">Técnica: diseño de beans de entidad</a> para obtener más información sobre la correlación
+    entre EJB de entidad CMP con tablas de base de datos.
+</p>
+<p>
+    Si hay que empaquetar varios componentes en el mismo archivador (consulte el <a href="#Defining_the_Archive">paso:
+    definición de archivador</a>), el proveedor de componentes de la aplicación debe integrar su información de descriptor
+    de despliegue. Por ejemplo, al combinar EJB en un JAR de EJB, el proveedor de componentes de aplicación debe armonizar
+    la información en los descriptores de despliegue como, por ejemplo, roles de seguridad y referencias cruzadas.
+</p>
+<h3>
+    Validación del archivador
+</h3>
+<p>
+    Es una buena idea el validar el contenido del archivador antes de intentar el despliegue, puesto que puede ocultar
+    errores, especialmente en el servidorde la aplicación, dando lugar a mensajes de error que no existen o confusos. Por
+    ejemplo, ninguno de los componentes empaquetados en el archivador puede utilizar nombres JNDI duplicados.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

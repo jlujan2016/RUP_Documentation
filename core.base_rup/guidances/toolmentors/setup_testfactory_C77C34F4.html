@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Establecimiento del entorno de prueba en Rational TestFactory</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="setup_testfactory" name="uma.name">
+<meta content="Establecimiento del entorno de prueba en Rational TestFactory" name="uma.presentationName">
+<meta content="Tool:rup_test_factory:Rational TestFactory" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational TestFactory" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{FAC387D8-BA1A-4056-A53B-E1C43571D1DC}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{FAC387D8-BA1A-4056-A53B-E1C43571D1DC}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{FAC387D8-BA1A-4056-A53B-E1C43571D1DC}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{FAC387D8-BA1A-4056-A53B-E1C43571D1DC}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Establecimiento del entorno de prueba en Rational TestFactory</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo llevar a cabo los pasos para establecer el entorno de Rational TestFactory a fin de poder implementar scripts de prueba generados para la aplicación que se somete a prueba (AUT).</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_test_factory_3EDA2115.html" guid="{FBA5098E-2CA8-483D-814D-DE3E876426B1}">Rational TestFactory</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/define_testability_elements_B792858D.html" guid="{CDA7EC1B-2D50-46BE-A3BA-C621EAF22D84}">Definir los elementos de comprobabilidad</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_the_test_implementation_AAB73625.html" guid="{ED9DF0C0-744A-443A-AEBA-604382E05A5F}">Estructurar la implementación de la prueba</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_test_35C1B0AA.html" guid="{BC805E79-736B-42D5-BDC1-B95E7D002312}">Implementar la prueba</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/setup_tools_FBA37850.html" guid="{78C58888-2969-4A74-BF76-5F77AFA36F9C}">Configurar las herramientas</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/support_development_1443EF07.html" guid="{35936CF9-4B04-402A-9482-07E5CFB45D99}">Dar soporte al desarrollo</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    Visión general
+</h3>
+<p>
+    Antes de utilizar Rational TestFactory para generar scripts de prueba automáticamente, debe establecer la configuración
+    del entorno de prueba. TestFactory genera scripts de prueba basados en la "correlación de aplicaciones", una lista
+    jerárquica de "objetos UI", que representa las ventanas y los controles de la interfaz de usuario de la aplicación que
+    se somete a prueba (AUT).
+</p>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Windows 98/2000/NT 4.0.
+</p>
+<p>
+    Para establecer el entorno de prueba en Rational TestFactory, debe:
+</p>
+<ol>
+    <li>
+        <a href="#Define AUT">Definir el proyecto para Rational TestFactory e instrumentar la AUT</a>
+    </li>
+    <li>
+        <a href="#Map AUT">Correlacionar la aplicación que se somete a prueba</a>
+    </li>
+    <li>
+        <a href="#Review refine AUT">Revisar y perfeccionar la correlación de aplicaciones</a>
+    </li>
+</ol>
+<h3>
+    1.&nbsp;&nbsp;<a id="Define AUT" name="Define AUT">Definir el proyecto para Rational TestFactory e instrumentar la
+    AUT</a>
+</h3>
+<p>
+    La primera vez que abre un proyecto en Rational TestFactory, debe proporcionar información sobre el proyecto y la
+    aplicación que se somete a prueba (AUT). Las principales áreas funcionales de TestFactory no están disponibles hasta
+    que se especifica la información del proyecto.
+</p>
+<p>
+    Para medir la cobertura de la prueba basada en código de un script de prueba ejecutado, la aplicación que se somete a
+    prueba debe contener puntos de instrumentación, que son contadores que hacen cuadrar las partes del código que ejecuta
+    un script de prueba. Rational TestFactory utiliza la información de los archivos instrumentados para calcular datos de
+    cobertura basados en código tanto para los scripts de prueba que genera TestFactory, como para los scripts de prueba de
+    Robot que se pueden reproducir desde TestFactory.
+</p>
+<p>
+    <img height="16" alt="icono de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp; Consulte los temas de la
+    ayuda de Rational TestFactory que tratan sobre:
+</p>
+<ul>
+    <li>
+        <i>Inicio de TestFactory</i>
+    </li>
+    <li>
+        <i>Especificación de la información para un nuevo proyecto</i>
+    </li>
+    <li>
+        <i>Instrumentación de la aplicación que se somete a prueba</i>
+    </li>
+</ul>
+<h3>
+    2.&nbsp;&nbsp;<a id="Map AUT" name="Map AUT">Correlacionar la aplicación que se somete a prueba</a>
+</h3>
+<p>
+    Una correlación de aplicaciones desarrollada correctamente es el fundamento para generar scripts de prueba en Rational
+    TestFactory. El "correlacionador de aplicaciones", es decir, el proceso que crea la correlación de aplicaciones,
+    explora minuciosamente la interfaz de usuario de la aplicación que se somete a prueba (AUT). Todas las ventanas y los
+    controles se examinan y comparan con clases y subclases conocidas, que están almacenadas en la "biblioteca de interfaz
+    de usuario (UI)". En base al resultado de la comparación, el proceso de correlación crea un objeto UI, que es una
+    instancia de la clase coincidente y la coloca en la correlación de aplicaciones.
+</p>
+<p>
+    Cada una de las clases definidas en la biblioteca UI tiene un conjunto específico de "propiedades de objeto UI"
+    asociado. Cuando crea un objeto UI, el correlacionador de aplicaciones asigna al objeto el conjunto de propiedades
+    asociadas a la clase. Dichas propiedades identifican el control de la aplicación que se somete a prueba que representa
+    el objeto e informan a Rational TestFactory sobre cómo ejercer el control durante la correlación y la prueba.
+</p>
+<p>
+    Si la aplicación que se somete a prueba contiene un recuadro de diálogo de inicio de sesión que requiere entradas
+    especiales como, por ejemplo, una contraseña o ID de usuario, se debe facilitar la información de inicio de sesión
+    específica al correlacionador de aplicaciones.
+</p>
+<p>
+    Una vez que se ha completado la correlación, la información del informe Resumen de la correlación refleja las ventanas
+    y los controles de la aplicación que se somete a prueba que ha correlacionado Rational TestFactory.
+</p>
+<p>
+    <img height="16" alt="icono de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte los temas
+    de la ayuda de Rational TestFactory que tratan sobre:
+</p>
+<ul>
+    <li>
+        <i>Correlacionar la aplicación que se somete a prueba utilizando el asistente para el correlacionador de
+        aplicaciones</i>
+    </li>
+    <li>
+        <i>Correlacionar la aplicación que se somete a prueba utilizando el método abreviado ¡Correlacionar!</i>
+    </li>
+    <li>
+        <i>Correlacionar una aplicación que se somete a prueba que tiene una recuadro de diálogo de inicio de sesión</i>
+    </li>
+</ul>
+<h3>
+    3.&nbsp;&nbsp;<a id="Review refine AUT" name="Review refine AUT">Revisar y perfeccionar la correlación de
+    aplicaciones</a>
+</h3>
+<p>
+    Es posible que la primera versión de la correlación de aplicaciones no refleje de modo preciso todos los controles de
+    la aplicación que se somete a prueba. La correlación de aplicaciones puede estar incompleta o los objetos UI
+    correlacionados pueden requerir una reclasificación.
+</p>
+<p>
+    Una correlación de aplicaciones definida correctamente resulta crítica para generar scripts de prueba de calidad.
+    Rational TestFactory sólo puede probar los controles de la aplicación que se somete a prueba que representan los
+    objetos UI en la correlación de aplicaciones. Revisar y perfeccionar la correlación de aplicaciones antes de iniciar la
+    prueba puede mejorar el ámbito y la calidad de los scripts de prueba generados.
+</p>
+<p>
+    Puede revisar la correlación de aplicaciones comparando las ventanas y los controles que se ven en la aplicación que se
+    somete a prueba con los objetos UI de la correlación de aplicaciones. Si observa controles no correlacionados en la
+    aplicación que se somete a prueba, y desea probar dichos controles, debe determinar y resolver la causa de cada control
+    no correlacionado.
+</p>
+<p>
+    <img height="16" alt="icono de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte los temas
+    de la ayuda de Rational TestFactory que tratan sobre:
+</p>
+<ul>
+    <li>
+        <i>Revisar la correlación de aplicaciones</i>
+    </li>
+    <li>
+        <i>Definir controles no detectados</i>
+    </li>
+    <li>
+        <i>Resolver objetos genéricos</i>
+    </li>
+    <li>
+        <i>Utilizar objetos de interacción para mejorar la correlación de aplicaciones</i>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

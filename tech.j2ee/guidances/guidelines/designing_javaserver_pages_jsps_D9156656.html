@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Dise&ntilde;o de JavaServer Pages (JSP)</title>
+<meta content="Guideline" name="uma.type">
+<meta content="designing_javaserver_pages_jsps" name="uma.name">
+<meta content="Dise&ntilde;o de JavaServer Pages (JSP)" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.2384712199461326E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.2384712199461326E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Dise&ntilde;o de JavaServer Pages (JSP)</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la forma en que diseñar JSP (JavaServer Pages) para una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Diseño de clase</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    Esta directriz se centra en el diseño de JSP. En la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/javaserver_page_jsp_C204C841.html" guid="2.5833499297818664E-306">Directriz de producto de trabajo: JSP</a> encontrará ayuda adicional sobre las JSP como,
+    por ejemplo, para conocer la forma de identificarlas y modelarlas.
+</p>
+<h3>
+    <a id="Session State" name="Session State"></a>Estado de sesión
+</h3>
+<p>
+    Los datos de estado de sesión que gestiona o utilizan las JSP se deberían documentar en el diseño de las JSP. Consulte
+    la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_state_for_j2ee_applications_C145BCA3.html" guid="7.896195949843941E-306">Técnica: diseño del estado para aplicaciones J2EE</a> para obtener más ayuda sobre el
+    estado de sesión.
+</p>
+<h3>
+    <a id="JSP_context" name="JSP_context"></a>Contexto de servlet
+</h3>
+<p>
+    Todas las interacciones con el contexto de servlet se deberían documentar en el diseño de las JSP. El contexto de
+    servlet corresponde a los datos globales para la aplicación, y por lo tanto, se debería gestionar con cuidado. Consulte
+    la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_state_for_j2ee_applications_C145BCA3.html" guid="7.896195949843941E-306">Técnica: diseño del estado para aplicaciones J2EE</a> para obtener más información sobre
+    este mecanismo.
+</p>
+<h3>
+    <a id="Granularity" name="Granularity"></a>Granularidad y responsabilidad
+</h3>
+<p>
+    Se debería minimizar la cantidad de código Java en una JSP, para mejorar la capacidad de mantenimiento y reutilización
+    así como para reducir la complejidad de forma que los diseñadores de presentación puedan tratar con el diseño de las
+    páginas sin tener que hacerlo con el código Java. Para&nbsp;ello, hay que utilizar JavaBeans y bibliotecas de códigos
+    personalizados.
+</p>
+<p>
+    JSP proporciona códigos específicos para invocar JavaBeans. Los códigos personalizados proporcionan una interfaz de
+    códigos con atributos para acceder a los JavaBeans.
+</p>
+<p>
+    La lógica de control común se debería mover a los servlets y la lógica empresarial se debería mover a JavaBeans (o a
+    EJB).
+</p>
+<p>
+    Hay que considerar la utilización de JavaScript para realizar validaciones simples de los datos de entrada en el
+    cliente, para evitar la sobrecarga de red al pasar una solicitud de nuevo al servidor.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

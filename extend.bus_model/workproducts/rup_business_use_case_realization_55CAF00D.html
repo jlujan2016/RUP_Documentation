@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Artefacto: Business Use-Case Realization</title>
+<meta content="Artifact" name="uma.type">
+<meta content="rup_business_use_case_realization" name="uma.name">
+<meta content="Business Use-Case Realization" name="uma.presentationName">
+<meta content="WorkProductType:model_element:Elemento de modelo" name="uma.category">
+<meta content="Artifact" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_kus_YN7DEdmsEI4YDGX2ag", "{75C2C53E-AAB7-48F1-8CF6-ABA55D1C3469}", "{47F095EB-E651-4A34-B75B-BACE38ED90C7}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_8loI0CuREdqL6tsHh4YXGw", "{CF53445C-3351-46C6-810E-8251830029A7}", "{47F095EB-E651-4A34-B75B-BACE38ED90C7}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_8loI0CuREdqL6tsHh4YXGw", "_Yi4dsBpWEdqUwb9RAn2tTA", "{47F095EB-E651-4A34-B75B-BACE38ED90C7}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{47F095EB-E651-4A34-B75B-BACE38ED90C7}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{CF53445C-3351-46C6-810E-8251830029A7}", "{47F095EB-E651-4A34-B75B-BACE38ED90C7}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "_Yi4dsBpWEdqUwb9RAn2tTA", "{47F095EB-E651-4A34-B75B-BACE38ED90C7}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_kus_YN7DEdmsEI4YDGX2ag", "{75C2C53E-AAB7-48F1-8CF6-ABA55D1C3469}", "{47F095EB-E651-4A34-B75B-BACE38ED90C7}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_N13eYAINEdq-_NKqZM1EhA", "_8loI0CuREdqL6tsHh4YXGw", "{CF53445C-3351-46C6-810E-8251830029A7}", "{47F095EB-E651-4A34-B75B-BACE38ED90C7}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_N13eYAINEdq-_NKqZM1EhA", "_8loI0CuREdqL6tsHh4YXGw", "_Yi4dsBpWEdqUwb9RAn2tTA", "{47F095EB-E651-4A34-B75B-BACE38ED90C7}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{75C2C53E-AAB7-48F1-8CF6-ABA55D1C3469}", "{47F095EB-E651-4A34-B75B-BACE38ED90C7}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_mLBhwE7NEduvcvbnLvkXhA", "{47F095EB-E651-4A34-B75B-BACE38ED90C7}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_mLBhwE7NEduvcvbnLvkXhA", "{CF53445C-3351-46C6-810E-8251830029A7}", "{47F095EB-E651-4A34-B75B-BACE38ED90C7}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{47F095EB-E651-4A34-B75B-BACE38ED90C7}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Artefacto: Business Use-Case Realization</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../extend.bus_model/workproducts/resources/bucr.jpg"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">A Business Use-Case Realization describes how business systems, business workers, business entities, and business events collaborate to perform a particular business use case. </td>
+</tr>
+<tr>
+<td>Clases de producto de trabajo: <a href="./../../core.base_rup/workproducttypes/model_element_74CA3914.html" guid="_n7ZcgN7REdmjRZts2c4ZjQ">Elemento de modelo</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="business use-case realization" text="purpose of" name="XE_business_use-case_realization__purpose_of" id="XE_business_use-case_realization__purpose_of" class="index"></a><a id="Purpose" name="Purpose"></a> 
+<p>
+    While a Business Use Case describes what steps must be performed in order to deliver value to a business actor, a
+    Business Use-Case Realization describes how these steps are performed within the organization. Business Use Cases are
+    described from an external perspective, while Business Use-Case Realizations are described from an internal
+    perspective.
+</p>
+<p>
+    Business Use-Case Realizations are used by stakeholders to verify that the project team (or other parties) understand
+    how the business is structured and operates. Stakeholders also use them when identifying and prioritizing improvement
+    to the organization. Business-process analysts and business designers use Business Use-Case Realizations to define the
+    roles, responsibilities, and information required within the organization in order to realize business use cases. The
+    effects of changes to the organization, such as business process automation or business process outsourcing, might be
+    considered when using Business Use-Case Realizations. Systems analysts and software architects use Business-Use Case
+    Realizations to understand how a software system fits into the organization.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Artefacto del contenedor</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../extend.bus_model/workproducts/rup_business_analysis_model_9449F63A.html" guid="{CF53445C-3351-46C6-810E-8251830029A7}">Business Analysis Model</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Responsable:
+								</span>
+<ul>
+<li>
+<a href="./../../extend.bus_model/roles/rup_business_designer_30BD5E18.html" guid="{75C2C53E-AAB7-48F1-8CF6-ABA55D1C3469}">Business Designer</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Modificado por:
+								</span>
+<ul>
+<li>
+<a href="./../../extend.bus_model/roles/rup_business_designer_30BD5E18.html" guid="{75C2C53E-AAB7-48F1-8CF6-ABA55D1C3469}">Business Designer</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Tareas</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Entrada a:
+								</span>
+<ul>
+<li>
+<a href="./../../extend.bus_model/tasks/detail_a_business_entity_11E120FA.html" guid="{06A9A8AA-171C-4A9C-8CD8-A366F32AA77F}">Detail a Business Entity</a>
+</li>
+<li>
+<a href="./../../extend.bus_model/tasks/detail_a_business_worker_B5309727.html" guid="{DCFC0362-DBB6-4858-A9E4-AF907780FD99}">Detail a Business Worker</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Salida de:
+								</span>
+<ul>
+<li>
+<a href="./../../extend.bus_model/tasks/bm_uc_analysis_60F4BCAE.html" guid="_T1XJMBpXEdqUwb9RAn2tTA">Business Use-Case Analysis</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Uso del proceso</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../extend.bus_model/capabilitypatterns/define_business_4DC1594A.html" guid="_yPt68TXDEdq4lJjndbo9Yw">Define Business</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../extend.bus_model/capabilitypatterns/Refine Roles and Responsibilities_43CA10D.html" guid="_fC32IDXEEdq4lJjndbo9Yw">Refine Roles and Responsibilities</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../extend.bus_model/capabilitypatterns/rup_business_use_case_realization_CE3F6BEC.html" guid="_B6IEoDtyEdqadtQIdcFpTw">Business Use-Case Realization</a>
+</li>
+<li>
+<a href="./../../extend.bus_model/capabilitypatterns/develop_domain_model_82AFF35C.html" guid="_BUgv0TXEEdq4lJjndbo9Yw">Develop Domain Model</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../extend.bus_model/capabilitypatterns/rup_business_use_case_realization_406BCD81.html" guid="_P2AbkDtwEdqadtQIdcFpTw">Business Use-Case Realization</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Esquematizaci&oacute;n breve</th><td class="sectionTableCell"><a id="Brief Outline" name="Brief Outline"></a> 
+<p>
+    <a id="XE_business_use_case__specification" name="XE_business_use_case__specification"></a>A template is provided for a
+    Business Use-Case Realization Specification, which contains the textual properties of the Business Use-Case
+    Realization.&nbsp; This document is used with a requirements management tool, such as Rational RequisitePro, for
+    specifying and marking the requirements within the Business Use-Case Realization properties.&nbsp;&nbsp;
+</p>
+<p>
+    The diagrams of the Business Use-Case Realization can be developed in a visual modeling tool, such as Rational
+    Rose.&nbsp;A Business Use-Case Realization report (containing all diagrams and properties) can be generated with
+    Rational SoDA.&nbsp;&nbsp;
+</p>
+<p>
+    For more information, see tool mentors: <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/toolmentors/manage_use_cases_69796AD.html" guid="{F07848AD-3E5B-4061-9E6D-E02FB823763C}">Managing Use Cases with Rational Rose and Rational RequisitePro</a> and
+    <a class="elementLinkWithUserText" href="./../../extend.bus_model/guidances/toolmentors/create_biz_use_case_real_report_7DB6DA0C.html" guid="{2EF982DD-8F38-4E30-9113-F4F0112E2859}">Creating a Business Use-Case Realization Report Using Rational
+    SoDA</a>.&nbsp;&nbsp;
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Ilustraciones	</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Plantillas</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../extend.bus_model/guidances/templates/business_use-case_realization_specification_4D877DAF.html" guid="2.6576205146287937E-306">Business Use-Case Realization Specification</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Informes</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../extend.bus_model/guidances/reports/business_use-case_realization_159BE70A.html" guid="4.1216383810562285E-306">Business Use-Case Realization </a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Personalizaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Opciones de representaci&oacute;n</th><td class="sectionTableCell">UML Representation: Collaboration, stereotyped as &lt;&lt;business use-case realization&gt;&gt; 
+<p>
+    <a id="Tailoring" name="Tailoring"></a>
+</p>
+<p>
+    In many cases, the focus of this work product is the activity diagram, in which you define what responsibilities belong
+    to which business system or business worker, by using swimlanes. This is where you make key decisions about what to
+    automate. Often, the Business Use-Case Realization Specification with the textual properties of the work product can
+    then be excluded, and any derived requirements can go in the <a class="elementLinkWithUserText" href="./../../extend.bus_model/workproducts/rup_supplementary_business_specification_BBC64E05.html" guid="{0DADA95B-7C1D-44BD-9DB5-41AC99767753}">Supplementary Business Specification</a> instead. Activity diagrams can
+    also indicate the sending and receiving of business events between business workers.
+</p>
+<p>
+    If the Business Use Cases themselves will not be modified, but instead the realization of the Business Use Cases will
+    change, the Business Use-Case Realizations can be used to compare current (as-is) process descriptions with target
+    (to-be) process descriptions. For example, imagine that an existing software system is going to be replaced by a
+    standard software product that will be administered by an external partner. In such a case, Business Use-Case
+    Realizations can be used to assess the impact of this change on the organization.
+</p>
+<p>
+    Because Business Use-Case Realizations are generally more detailed and specific than Business Use Cases, they can also
+    be used to illustrate differences between different contexts of a more abstract Business Use Case. For example,
+    consider the case in which customers must be serviced using different communication channels (Internet, call center,
+    mail, or electronic messaging, for example). The steps performed during a business use-case Request Quotation or Accept
+    Proposal will remain unchanged, but the ways in which this business use case is performed will differ&nbsp;for
+    each&nbsp;channel. Business Use-Case Realizations can be used to illustrate channel-specific realization of the
+    business use case.
+</p>
+<p>
+    Recall that Business Use Cases are triggered either by Business Actors or by internal Business Events, through the
+    invocation of one or more services provided by the business - invocation that occurs&nbsp;externally in the case of the
+    Business Actor, and internally in the case of the Business Event. A service comprises one or more business operations
+    (see <a class="elementLinkWithUserText" href="./../../extend.bus_model/workproducts/rup_bm_operation_14E87A5B.html" guid="_Wg_T4BpVEdqUwb9RAn2tTA">Work Product: Operation (BM)</a>), so that a Business Use-Case Realization is the
+    overlay of all required business operation realizations (see <a class="elementLinkWithUserText" href="./../../extend.bus_model/workproducts/rup_bm_operation_realization_3EFF786F.html" guid="_acjxkBpVEdqUwb9RAn2tTA">Work
+    Product: Operation Realization (BM)</a>). This can be modeled as a large collaboration (the Business Use-Case
+    Realization) which is built from smaller ones (the business operation realizations). Note though that the Business
+    Use-Case Realization does not 'own' the business operation realizations - they may, and very likely will, show up in
+    other Business Use-Case Realizations.
+</p>
+<p>
+    Note that there is no reason why you should not model some services provided by the business as private - they
+    represent actions the business may ask of itself (when servicing a Business Event, for example) - but which are not
+    available to a Business Actor.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Listas de comprobaci&oacute;n</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../extend.bus_model/guidances/checklists/business_use-case_realization_74888575.html" guid="1.3303501071086346E-305">Business Use-Case Realization</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../extend.bus_model/guidances/guidelines/business_use-case_realization_65988530.html" guid="1.0660567082472948E-304">Business Use-Case Realization</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.empulsys.com/rupbm" target="_blank"><img height="24"                 alt="Empulsys: gestión e ingeniería de software" src="./../../core.base_rup/guidances/supportingmaterials/resources/empulsys.jpg" width="100" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Contenido desarrollado o parcialmente desarrollado por <a href="http://www.empulsys.com/rupbm" target="_blank">Empulsys Holding BV</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

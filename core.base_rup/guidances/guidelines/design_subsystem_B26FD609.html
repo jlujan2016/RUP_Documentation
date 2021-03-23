@@ -1,0 +1,606 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Subsistema de dise&ntilde;o</title>
+<meta content="Guideline" name="uma.type">
+<meta content="design_subsystem" name="uma.name">
+<meta content="Subsistema de dise&ntilde;o" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "1.2314266786534317E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "1.2314266786534317E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{447385A0-E565-4C87-A082-402AF21CA088}", "1.2314266786534317E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}", "1.2314266786534317E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.2314266786534317E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "1.2314266786534317E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "1.2314266786534317E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "1.2314266786534317E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "{447385A0-E565-4C87-A082-402AF21CA088}", "1.2314266786534317E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.2314266786534317E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Subsistema de dise&ntilde;o</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Un subsistema de diseño implementa el concepto del componente de software. En esta directriz se explica cómo identificar y especificar los subsistemas de diseño.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">Subsistema de diseño</a>
+</li>
+<li>
+<a href="./../../../soa.rup_soma/workproducts/soa_svce_component_E259F3CC.html" guid="{447385A0-E565-4C87-A082-402AF21CA088}">Componente de servicio</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Diseñador</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_capsule_designer_F3E66EDF.html" guid="{86253FE7-0036-4D14-8BD7-C18CE86A5E14}">Diseñador de cápsulas</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="capas" text="directrices de capas para subsistemas de diseño" name="XE_layering__layering_guidelines_for_design_subsystems" id="XE_layering__layering_guidelines_for_design_subsystems" class="index"></a><a key="subsistema de diseño" text="directrices para" name="XE_design_subsystem__guidelines_for" id="XE_design_subsystem__guidelines_for" class="index"></a> 
+<h3>
+    <a key="subsistema de diseño" text="partición de patrones" name="XE_design_subsystem__partitioning_patterns" id="XE_design_subsystem__partitioning_patterns" class="index"></a><a id="Subsystem Usage" name="Subsystem Usage">Utilización de subsistemas</a>
+</h3>
+<p>
+    <a key="capas" text="partición de patrones" name="XE_layering__partitioning_patterns" id="XE_layering__partitioning_patterns" class="index"></a>Los subsistemas se pueden utilizar en una serie de modos
+    complementarios, para partir el sistema en unidades que
+</p>
+<ul>
+    <li>
+        se pueden ordenar, configurar o entregar independientemente,
+    </li>
+    <li>
+        se puede desarrollar independientemente, siempre que las interfaces no se cambien
+    </li>
+    <li>
+        se pueden desplegar independientemente a través de un conjunto de nodos computacionales distribuidos
+    </li>
+    <li>
+        se pueden cambiar independientemente sin romper otros componentes de los sistemas
+    </li>
+</ul>
+<p>
+    Por lo tanto, los subsistemas son ideales para modelar componentes - unidades de ensamblaje reemplazables en el
+    desarrollo basado en componentes - mayores que una única clase de diseño.
+</p>
+<p>
+    Además, los subsistemas pueden
+</p>
+<ul>
+    <li>
+        partir el sistema en unidades que pueden proporcionar una seguridad restringida en los recursos clave
+    </li>
+    <li>
+        representar los productos existentes o los sistemas externos en el diseño.
+    </li>
+</ul>
+<h3>
+    <a key="subsistema de diseño" text="identificar subsistemas" name="XE_design_subsystem__identifying_subsystems" id="XE_design_subsystem__identifying_subsystems" class="index"></a><a id="Identifying Subsystems" name="Identifying Subsystems">Identificación de subsistemas</a>
+</h3>
+<p>
+    Una clase de análisis compleja se correlaciona con un subsistema de diseño si parece que personifica el comportamiento
+    que no puede ser responsabilidad de una única clase de diseño que actúe sola. Una clase de diseño compleja también se
+    puede convertir en un subsistema, si es probable que se implemente como un conjunto de clases de colaboración.
+</p>
+<p>
+    Los subsistemas también son medios adecuados para identificar las partes del sistema que debe desarrollar de modo
+    independiente un equipo separado. Si los elementos de diseño de colaboración se pueden contener completamente en un
+    paquete junto con sus colaboraciones, un subsistema puede proporcionar un formato de encapsulación más eficaz que el
+    que ofrece un simple paquete. El contenido y las colaboraciones de un subsistema se aíslan por completo detrás de una o
+    más interfaces, de modo que el cliente del subsistema sólo depende de la interfaz. Así, el diseñador del subsistema
+    está aislado por completo de las dependencias externas; el diseñador (o el equipo de diseño) debe especificar el modo
+    en el que se ha realizado la interfaz, pero puede cambiar libremente el diseño del subsistema interno sin que afecte a
+    las dependencias externas. En sistemas grandes con equipos de gran independencia, este nivel de desacoplamiento
+    combinado con la imposición de la arquitectura que ofrecen las interfaces formales constituye un argumento convincente
+    para la elección de subsistemas mejor que paquetes simples.
+</p>
+<p>
+    El subsistema de diseño se utiliza para encapsular las colaboraciones de modo que los clientes del subsistema puedan
+    ignorar por completo el diseño interno del subsistema, incluso cuando utilicen los servicios que ofrece el subsistema.
+    Si las clases/subsistemas participantes en una colaboración sólo interactúan entre sí para producir un conjunto de
+    resultados bien definido, la colaboración y sus elementos de diseño de colaboración se deben encapsular dentro de un
+    subsistema.
+</p>
+<p>
+    Esta regla también se puede aplicar a subconjunto de colaboraciones. En cualquier lugar se puede encapsular y
+    simplificar todo o parte de una colaboración. Al hacerlo, se simplifica la comprensión del diseño.
+</p>
+<h4>
+    Sugerencias
+</h4>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th id="row0" scope="col" width="35%">
+                    <blockquote>
+                        <p class="tableheading" align="center">
+                            Sugerencia
+                        </p>
+                    </blockquote>
+                </th>
+                <td scope="col" headers="row0" width="65%">
+                    <p class="tableheading" align="center">
+                        Detalles
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th id="row1" width="35%">
+                    Condiciones de opcional
+                </th>
+                <td headers="row1" width="60%">
+                    Si una colaboración (o subcolaboración) concreta representa comportamiento opcional, inclúyala en un
+                    subsistema. Las características que se pueden eliminar, actualizar o reemplazar con alternativas se
+                    deben considerar como independientes.
+                </td>
+            </tr>
+            <tr>
+                <th id="row2" width="35%" rowspan="2">
+                    Condiciones de la interfaz de usuario del sistema
+                </th>
+                <td headers="row2" width="60%">
+                    Si la interfaz de usuario es relativamente independiente de las clases de entidad del sistema (es
+                    decir, ambas se pueden y se cambian de modo independiente), cree subsistemas que se integren de modo
+                    horizontal: agrupe las clases de límite de interfaz de usuario relacionadas juntas en un subsistema, y
+                    agrupe las clases de entidad relacionadas juntas en otro subsistema.
+                </td>
+            </tr>
+            <tr>
+                <td headers="row2" width="65%">
+                    Si la interfaz de usuario y las clases de entidad que muestra están estrechamente acopladas (es decir,
+                    un cambio en una de ellas desencadena un cambio en la otra), cree subsistemas que se integren de modo
+                    vertical: incluya las clases de entidad y de límite relacionadas en un subsistema común.
+                </td>
+            </tr>
+            <tr>
+                <th id="row3" width="35%" rowspan="2">
+                    Condiciones de los actores
+                </th>
+                <td headers="row3" width="65%">
+                    Separe la funcionalidad que utilizan dos actores diferentes, puesto que cada actor puede cambiar
+                    independientemente sus requisitos en el sistema.
+                </td>
+            </tr>
+            <tr>
+                <td headers="row3" width="65%">
+                    Cree subsistemas para incluir el acceso a un dispositivo o sistema externo.
+                </td>
+            </tr>
+            <tr>
+                <th id="row5" width="35%">
+                    Condiciones del acoplamiento y la cohesión entre elementos de diseño
+                </th>
+                <td headers="row5" width="65%">
+                    Las clases/subsistemas altamente acoplados o unidos colaboran para facilitar algún conjunto de
+                    servicios. Organice los elementos altamente acoplados en subsistemas y separe los elementos a lo largo
+                    de líneas de acoplamiento débil. En algunos casos, el acoplamiento débil se puede eliminar por completo
+                    dividiendo las clases en clases más pequeñas con responsabilidades más cohesivas, o bien, repartiendo
+                    subsistemas del modo adecuado.
+                </td>
+            </tr>
+            <tr>
+                <th id="row6" width="35%">
+                    Condición de sustitución
+                </th>
+                <td headers="row6" width="65%">
+                    Si se han especificado varios niveles de servicio para una posibilidad determinada (por ejemplo: alta,
+                    media y baja disponibilidad), represente cada nivel de servicio como un subsistema separado. Cada uno
+                    de ellos realizará el mismo conjunto de interfaces. De este modo, los subsistemas se pueden sustituir
+                    entre sí.
+                </td>
+            </tr>
+            <tr>
+                <th id="row7" width="35%">
+                    Condición de distribución
+                </th>
+                <td headers="row7" width="65%">
+                    <span                     style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">Aunque
+                    puede haber varias instancias de un subsistema concreto y ejecutarse cada una de ellas en nodos
+                    diferentes, en muchas arquitecturas una única instancia de un componente no se puede dividir entre
+                    nodos. En los casos en los que el comportamiento del subsistema se debe dividir entre nodos, se
+                    recomienda descomponer el subsistema en subsistemas más pequeños (representando cada uno de ellos un
+                    solo componente) con funcionalidad más restringida. <span                     style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE; mso-spacerun: yes">&nbsp;</span>
+                    Determine la funcionalidad que debe residir en cada nodo y cree un nuevo subsistema para que sea el
+                    "poseedor" de dicha funcionalidad, y distribuya las responsabilidades y los elementos relacionados del
+                    subsistema original del modo adecuado. <span                     style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE; mso-spacerun: yes">&nbsp;</span>
+                    Los nuevos subsistemas son internos del subsistema original.</span>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Una vez que haya organizado el diseño en subsistemas, actualice las realizaciones de los guiones de uso según proceda.
+</p>
+<h3>
+    <a id="Modeling Subsystems" name="Modeling Subsystems">Modelado de subsistemas</a>
+</h3>
+<p>
+    Los subsistemas de diseño se modelan utilizando componentes UML. Dicha construcción ofrece las posibilidades de
+    modelado siguientes:
+</p>
+<ul>
+    <li>
+        puede agrupar clases para definir una parte de granularidad más grande de un sistema
+    </li>
+    <li>
+        puede separar las interfaces visibles de la implementación interna
+    </li>
+    <li>
+        puede tener instancias que se ejecuten en el tiempo de ejecución
+    </li>
+</ul>
+<p>
+    Otras consideraciones son:
+</p>
+<ul>
+    <li>
+        Se debe haber dado un nombre y una descripción corta a cada subsistema de diseño.
+    </li>
+    <li>
+        Las responsabilidades de la clase de análisis original se deben transferir al subsistema recién creado, utilizando
+        la descripción del subsistema para documentar las responsabilidades.
+    </li>
+</ul>
+<p>
+    Nota: UML 2.0 también define un estereotipo para el componente denominado &lt;&lt;subsystem&gt;&gt;, que indica que
+    también se puede utilizar, por ejemplo, para representar estructuras a gran escala. Un subsistema de diseño RUP puede
+    ser o no una estructura a gran escala; ambos son subsistemas de diseño desde la la perspectiva RUP. Es una cuestión que
+    debe decidir el arquitecto de software (por ejemplo, si se deben elegir la etiqueta de &lt;&lt;subsystem&gt;&gt; para
+    los componentes que están compuestos de componentes).
+</p>
+<h3>
+    <a id="Subsystems That Represent Existing Products" name="Subsystems That Represent Existing Products">Subsistemas que
+    representan productos existentes</a> <a href="#Top"><img height="20" alt="Ir a la parte superior de la página"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    Cuando un producto existente exporta interfaces, es decir, operaciones (y, quizá <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/reception_E5EE6A47.html" guid="_yS_Rg9nmEdmO6L4XMImrsA"><b>recepciones</b></a>), pero de lo contrario mantiene ocultos todos los detalles de la
+    implementación, se puede modelar como un subsistema en la vista lógica. &nbsp; Los ejemplos de productos que el sistema
+    utiliza que puede representar con un subsistema incluyen:
+</p>
+<ul>
+    <li>
+        Software de comunicación (middleware).
+    </li>
+    <li>
+        Soporte de acceso a base de datos (soporte de correlación RDBMS).
+    </li>
+    <li>
+        Productos específicos de la aplicación.
+    </li>
+</ul>
+<p>
+    Algunos productos existentes como, por ejemplo, recopilaciones de tipos y estructuras de datos (por ejemplo, pilas,
+    listas o colas) se pueden representar mejor como paquetes, puesto que revelan algo más que el comportamiento. Lo
+    importante y útil es el contenido concreto del paquete no el paquete en sí mismo que es, simplemente, un contenedor.
+    &nbsp;
+</p>
+<p>
+    Programas de utilidad comunes como, por ejemplo, bibliotecas de matemáticas, se puede representar como subsistemas si,
+    simplemente, exportan interfaces, pero depende del criterio del diseñador sobre la naturaleza de la cosa modelada
+    considerar si es necesario o tiene sentido. &nbsp; Los subsistemas son construcciones orientadas a objetos (puesto que
+    son componentes modelados): un subsistema puede tener instancias (si el diseñador así lo indica). UML proporciona otro
+    modo para modelar grupos de procedimientos y variables globales en el <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/utility_5BFC0972.html" guid="_ybVVMNnmEdmO6L4XMImrsA">programa de
+    utilidad</a>, que es un estereotipo de clase - el programa de utilidad no tiene instancias. &nbsp;
+</p>
+<p>
+    Al definir el subsistema para representar el producto, también se deben definir una o más interfaces para representar
+    las interfaces del producto.
+</p>
+<h3>
+    <a id="Subsystem Dependency Restrictions" name="Subsystem Dependency Restrictions">Restricciones de dependencia de
+    subsistemas</a> <a href="#Top"><img height="20" alt="Ir a la parte superior de la página"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    Los subsistemas de diseño (modelados como componentes UML) se diferencian de los paquetes por la semántica: un
+    subsistema proporciona comportamiento a través de una o más interfaces que realiza. Los paquetes no pueden proporcionar
+    ningún comportamiento; simplemente, son contenedores de cosas que proporcionan comportamiento.
+</p>
+<p>
+    El motivo para utilizar un subsistema en lugar de un paquete es que los subsistemas encapsulan el contenido, y
+    proporcionan comportamiento sólo a través de sus interfaces. La ventaja de ello es que, a diferencia de los paquetes,
+    el contenido y los comportamientos internos del subsistema se pueden cambiar con total libertad mientras las interfaces
+    del subsistema permanezcan constantes. Los subsistemas también proporcionan un elemento de "diseño reemplazable": dos
+    componentes cualquiera de &lt;&lt;realization&gt;&gt; que realicen las mismas interfaces (o componente de
+    &lt;&lt;specification&gt;&gt;) se pueden intercambiar.
+</p>
+<p>
+    Con el objeto de garantizar que los subsistemas son elementos reemplazables en el modelo, se deben imponer dos reglas:
+</p>
+<ul>
+    <li>
+        Un subsistema debe minimizar la exposición de su contenido. Lo más adecuado es que ninguno de los elementos que
+        contiene el subsistema tenga visibilidad 'public', de modo que ningún elemento de fuera del subsistema dependa de
+        la existencia de un elemento particular que se encuentre dentro del subsistema. A continuación se indican algunas
+        excepciones: 
+        <ul>
+            <li>
+                En algunas tecnologías, los elementos externos de un subsistema no se pueden modelar como una interfaz UML.
+                Por ejemplo, una interfaz Java se modela como una clase estereotipada.
+            </li>
+            <li>
+                Es posible que el diseño del subsistema requiera que se expongan clases en lugar de interfaces UML. Por
+                ejemplo, se puede utilizar una clase "delegado" o "acceso" para ocultar una colaboración compleja de otras
+                clases. Mientras que en su lugar se podría utilizar un paquete corriente, se puede usar un subsistema con
+                el objeto de enfatizar el intento de encapsular comportamiento y ocultar detalles internos.
+            </li>
+        </ul>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <br />
+         Cuando los elementos externos de un subsistema no son interfaces UML, con frecuencia resulta útil disponer de un
+        diagrama (denominado, por ejemplo "Vista externa") que muestre los elementos visibles del subsistema.
+    </li>
+    <li>
+        Un subsistema debe definir sus dependencias en interfaces de subsistema (y elementos del subsistema visibles
+        públicamente en los casos excepcionales descritos más arriba). Además, varios subsistemas pueden compartir un
+        conjunto de interfaces o definiciones de clase en común, en cuyo caso dichos subsistemas "importan" el contenido de
+        los paquetes que contienen elementos comunes. Es más común con paquetes en las capas inferiores de la arquitectura,
+        a fin de garantizar que las definiciones de clases comunes que deben pasar entre subsistemas se definan de modo
+        coherente.
+    </li>
+</ul>
+<p>
+    Más abajo se muestra un ejemplo de las dependencias del subsistema y el paquete:
+</p>
+<p align="center">
+    <img alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_dsub2.jpg" />
+</p>
+<p class="picturetext">
+    Dependencias del subsistema y el paquete en el modelo de diseño
+</p>
+<h3>
+    <a id="Subsystem Specification and Realization" name="Subsystem Specification and Realization">Especificación y
+    realización del subsistema</a><a href="#Top"><img height="20" alt="Ir a la parte superior de la página"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<h4>
+    <a id="Definition" name="Definition">Definición</a><a href="#Top"><img height="20"     alt="Ir a la parte superior de la página" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    El UML ([<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#UML04" guid="7.755968586980351E-308">UML04</a>]) especifica que:
+</p>
+<blockquote>
+    <p>
+        Existen varios estereotipos estándar UML que se aplican al componente, por ejemplo, &lt;&lt;specification&gt;&gt; y
+        &lt;&lt;realization&gt;&gt;, para modelar componentes con definiciones de especificación y realización diferentes,
+        donde una especificación puede tener varias realizaciones.
+    </p>
+    <p>
+        Un componente estereotipado por &lt;&lt;specification&gt;&gt; especifica un dominio de objetos sin definir la
+        implementación física de dichos objetos. Sólo tiene interfaces proporcionadas y obligatorias y no está destinado a
+        tener ningún subcomponente ni clase de realización como parte de su definición.
+    </p>
+    <p>
+        Un componente estereotipado por &lt;&lt;realization&gt;&gt; especifica un dominio de objetos, lo que también define
+        la implementación física de dichos objetos. Por ejemplo, un componente estereotipado por
+        &lt;&lt;realization&gt;&gt; sólo tiene subcomponentes y clases de realización que implementan el comportamiento que
+        especifica un componente &lt;&lt;specification&gt;&gt; separado.
+    </p>
+</blockquote>
+<p>
+    Básicamente, la separación de especificación y realización permite dos descripciones separadas del subsistema. La
+    especificación sirve como un contrato que define todo lo que el cliente necesita para saber cómo utilizar el
+    subsistema. La realización es el diseño interno detallado cuya finalidad es guiar al implementador. Si desea ofrecer
+    soporte para varias realizaciones, cree subsistemas de "realización" separados y arrastre una realización de cada
+    subsistema de realización al subsistema de especificación.
+</p>
+<h4>
+    <a id="When and how to use" name="When and how to use">Cuándo y cómo utilizar</a>
+</h4>
+<p>
+    Si el comportamiento y el estado interno del subsistema es relativamente sencillo, es posible que sólo deba especificar
+    las interfaces expuestas, diagramas de estado para describir el comportamiento y texto descriptivo del subsistema.
+</p>
+<p>
+    Para comportamientos y estados internos más complejos, se pueden utilizar clases de análisis para especificar el
+    subsistema con un alto nivel de abstracción. Para grandes sistemas de sistemas, la especificación de un subsistema
+    también puede incluir guiones de uso. Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/developing_large-scale_systems_with_the_rational_unified_process_7AA2AF65.html" guid="1.768223108034868E-305">Desarrollo de sistemas a gran escala con Rational Unified Process</a>.
+</p>
+<p>
+    Proporcionar una especificación detallada separada de la realización suele ser de gran utilidad en las situaciones
+    siguientes:
+</p>
+<ul>
+    <li>
+        el comportamiento o el estado interno de la realización del subsistema son complejas, y la especificación se debe
+        expresar del modo más sencillo posible a fin de que los clientes la utilicen de modo eficaz.
+    </li>
+    <li>
+        el subsistema es un "componente de ensamblaje" reutilizable, destinado al ensamblaje en varios sistemas (consulte
+        el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/component_A2E2B3B1.html" guid="3.524150980437479E-305">Concepto: Componente</a>);
+    </li>
+    <li>
+        se espera que una organización separada desarrolle las cualidades esenciales del subsistema;
+    </li>
+    <li>
+        se deben crear varias implementaciones del subsistema;
+    </li>
+    <li>
+        se espera que el subsistema se reemplace con otra versión que tenga cambios internos significativos, pero sin
+        cambios en el comportamiento visible externamente.
+    </li>
+</ul>
+<p>
+    No obstante, el mantenimiento de una especificación separada requiere cierto esfuerzo, puesto que se debe garantizar
+    que la realización del subsistema satisface la especificación. Los criterios con respecto a cuándo y si se deben crear
+    colaboraciones y clases de realización y especificación separadas se deben definir en el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_project_specific_guidelines_8DC8DA32.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">Producto de trabajo: Directrices específicas del proyecto</a>.
+</p>
+<h4>
+    <a id="Dependencies" name="Dependencies">Dependencias</a>
+</h4>
+<p>
+    Un especificación debe definir sus dependencias. Se trata de interfaces y elementos visibles desde otros paquetes y
+    subsistemas que deben estar disponibles en todas las realizaciones compatibles del subsistema.
+</p>
+<p>
+    Una realización puede tener dependencias adicionales, que especifica el diseñador o implementador. Por ejemplo, es
+    posible que exista la oportunidad de utilizar un componente de programa de utilidad para simplificar la implementación,
+    pero la utilización de dicho componente de programa de utilidad es un detalle que no se debe exponer a los clientes.
+    Estas dependencias adicionales se deben capturar en un diagrama separado como parte de la realización.
+</p>
+<h4>
+    <a id="Relationship to Implementation" name="Relationship to Implementation">Relación con la implementación</a>
+</h4>
+<p>
+    Una especificación totalmente detallada define todo lo que necesita un cliente para utilizar el subsistema, lo que
+    significa perfeccionar las interfaces expuestas y todos los elementos visibles públicamente, de modo que se encuentren
+    en proporción de uno a uno con código. Las clases de análisis con las que se especifica el comportamiento del
+    subsistema deben permanecer como abstracciones de alto nivel, puesto que están pensadas para ser independientes de
+    todas las realizaciones de subsistemas.
+</p>
+<p>
+    Los elementos de la realización de un subsistema se deben alinear estrechamente con el código.
+</p>
+<p>
+    Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/mapping_from_design_to_code_D1454680.html" guid="1.424219730601675E-305">Técnica: Correlación de diseño a código</a> para obtener información detallado sobre este
+    tema.
+</p>
+<h3>
+    <a id="UML_1x_Representation" name="UML_1x_Representation">Representación de UML 1.x</a>
+</h3>
+<h4>
+    Modelado
+</h4>
+<p>
+    Los subsistemas de diseño se pueden modelar como componentes UML 2.0 o como subsistemas UML 1.5. Estas construcciones
+    proporcionan posibilidades de modelado casi equivalentes como, por ejemplo, la modularidad, la encapsulación e
+    instancias que se pueden ejecutar en tiempo de ejecución.
+</p>
+<p>
+    Algunas consideraciones adicionales sobre estas opciones de modelado son las siguientes:
+</p>
+<ul>
+    <li>
+        Los subsistemas UML 1.5 incluyen de forma explícita la noción de "especificación" y "realización" (definidas más
+        arriba, en la sección titulada <a href="#Subsystem Specification and Realization">Especificación y
+        realización del subsistema</a>). Los componentes UML 2.0 dan soporte a la noción de especificación (en forma de uno
+        o más interfaces proporcionadas y necesarias) y realización (implementación interna que consta de una o más clases
+        y subcomponentes que realizan el comportamiento).
+    </li>
+    <li>
+        Los subsistemas UML 1.5 también pueden ser paquetes. Los componentes UML 2.0 tienen posibilidades de empaquetado,
+        lo que significa que pueden poseer e importar un conjunto de elementos de modelo potencialmente grande.
+    </li>
+</ul>
+<p>
+    No obstante, estas notaciones se pueden utilizar de modo intercambiable. La decisión de representar Subsistemas de
+    diseño como subsistemas UML 1.5 o componentes UML 2.0 se debe documentar en el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_project_specific_guidelines_8DC8DA32.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">Directrices específicas del proyecto</a> adaptadas al proyecto.
+</p>
+<p>
+    Si la herramienta de modelado visual admite paquetes UML 1.5, pero no subsistemas UML 1.5, se puede utilizar un paquete
+    estereotipado como &lt;&lt;subsystem&gt;&gt; a fin de denotar un subsistema.
+</p>
+<h4>
+    Restricciones de dependencia de subsistemas
+</h4>
+<p>
+    Las mismas discusiones y restricciones de dependencia mencionadas en la sección titulada <a href="#Subsystem Dependency Restrictions">Restricciones de dependencia de subsistemas</a> también se aplican a los
+    subsistemas de diseño que se modelan como subsistemas UML 1.5.
+</p>
+<p>
+    Más abajo se muestra un ejemplo de las dependencias del subsistema y el paquete en UML 1.5:
+</p><br />
+<br />
+<p align="center">
+    <img height="240" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_dsub1.gif" width="370" />
+</p>
+<p class="picturetext">
+    Dependencias del subsistema y el paquete en el modelo de diseño<br />
+    <br />
+</p>
+<h4>
+    Realización y especificación del subsistema:
+</h4>UML 1.5 especifica que: 
+<blockquote>
+    <p>
+        El contenido de un subsistema se divide en dos subconjuntos: 1) elementos de especificación y 2) elementos de
+        realización. Los elementos de especificación, junto con las operaciones y las recepciones del subsistema, se
+        utilizan para proporcionar una especificación abstracta del comportamiento que ofrecen los elementos de
+        realización. La recopilación de elementos de realización modela el interior de la unidad de comportamiento del
+        sistema físico.
+    </p>
+</blockquote>
+<p>
+    Básicamente, la separación de especificación y realización permite dos descripciones separadas del subsistema. La
+    especificación sirve como un contrato que define todo lo que el cliente necesita para saber cómo utilizar el
+    subsistema. La realización es el diseño interno detallado cuya finalidad es guiar al implementador.
+</p>
+<p>
+    Una opción para modelar realizaciones y especificaciones, si el entorno de modelado no ofrece soporte para ello
+    directamente, consiste en colocar dos paquetes, especificación y realización, en cada subsistema.
+</p>
+<p>
+    Una motivación para las especificaciones es ofrecer soporte para varias realizaciones. No se ofrece soporte directo
+    para ello en el UML 1.x. Si desea proporcionar soporte para varias realizaciones utilizando subsistemas UML 1.5, cree
+    subsistemas de "realización" separados y arrastre una realización de cada subsistema de realización al subsistema de
+    especificación.
+</p>
+<p>
+    Básicamente, las mismas consideraciones para especificación y realización que se aplican para UML 2.0, también se
+    aplican aquí (consulte <a href="#When and How to Use">Cuándo y cómo utilizar</a>, <a href="#Dependencies">Dependencias</a>, y <a href="#Relationship to Implementation">Relación a implementación</a>
+    para obtener una explicación).
+</p>
+<h4>
+    Información adicional
+</h4>
+<p>
+    Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/supportingmaterials/differences_between_uml_1_x_and_uml_2_0_CA70F2E6.html" guid="4.792914878943572E-306">Diferencias entre UML 1.x y UML 2.0</a> para obtener más información.<br />
+    <br />
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

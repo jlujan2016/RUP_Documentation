@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Despliegue de aplicaciones y m&oacute;dulos J2EE mediante Rational XDE Developer - Java Platform Edition</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="deploying_j2ee_mods_and_apps" name="uma.name">
+<meta content="Despliegue de aplicaciones y m&oacute;dulos J2EE mediante Rational XDE Developer - Java Platform Edition" name="uma.presentationName">
+<meta content="Tool:rup_xde:Rational XDE Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational XDE Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{709B15F1-BB9D-4379-920E-5A6E7DB36536}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{709B15F1-BB9D-4379-920E-5A6E7DB36536}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{709B15F1-BB9D-4379-920E-5A6E7DB36536}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{709B15F1-BB9D-4379-920E-5A6E7DB36536}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{709B15F1-BB9D-4379-920E-5A6E7DB36536}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Despliegue de aplicaciones y m&oacute;dulos J2EE mediante Rational XDE Developer - Java Platform Edition</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz de herramientas se describe la forma en que Rational XDE da soporte al despliegue de aplicaciones J2EE y módulos J2EE autónomos. </td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_xde_D81FFA70.html" guid="{303A82D2-E3AB-4501-8563-0D4D43782AF9}">Rational XDE Developer</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Objetivo
+</h3>
+<p>
+    En esta directriz de herramientas se describe la forma en que Rational XDE da soporte al despliegue de &nbsp;<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">módulos J2EE</a> autónomos y <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_436A58D2.html" guid="1.6057780853529704E-306">aplicaciones J2EE</a>. Los detalles del despliegue varían en función de la aplicación y
+    el entorno, y normalmente requieren el utilizar herramientas específicas del proveedor. Sin embargo, en esta guía de
+    herramientas se describe la forma en que Rational XDE da soporte a la instalación, configuración y lanzamiento de
+    aplicaciones. Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/deploying_j2ee_modules_and_applications_62A4A967.html" guid="5.3908533897796765E-306">Directriz: despliegue de módulos y aplicaciones J2EE</a> para obtener más información.
+</p>
+<h4>
+    Visión general
+</h4>
+<p>
+    XDE proporciona la automatización necesaria para configurar aplicaciones y módulos J2EE que han de desplegarse en un
+    entorno específico.
+</p>
+<p>
+    En esta directriz de herramientas se presupone que los archivadores y los modelos de despliegue de XDE que contienen ya
+    se han creado y que también se ha tomado la decisión sobre qué archivadores se han desplegar y en qué nodos. Consulte
+    la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/toolmentors/assembling_j2ee_mods_and_apps_729DC5B.html" guid="{3B38F989-686C-4AC9-91EE-981F90D75F0D}">Guía de herramientas: ensamblaje de módulos y aplicaciones mediante
+    Rational XDE Developer - Java Platform Edition</a> para obtener más información.
+</p>
+<p>
+    En esta guía de herramientas se llevan a cabo los pasos siguientes:
+</p>
+<ul>
+    <li>
+        <a href="#Deploying_the_J2EE_Application">Despliegue de la aplicación J2EE.</a>
+    </li>
+    <li>
+        <a href="#Configuring_the_J2EE_Application">Configuración de la aplicación J2EE.</a>
+    </li>
+    <li>
+        <a href="#Launching_the_J2EE_Application">Lanzamiento de la aplicación J2EE.</a>
+    </li>
+</ul>
+<p>
+    Los enlaces a los temas de la ayuda en línea de Rational XDE&trade; están marcados con <img height="16"     alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />.
+</p>
+<h3>
+    Despliegue de la aplicación J2EE
+</h3>
+<p style="COLOR: rgb(0,0,0)">
+    Parte de la configuración de preinstalación (como ajustes en los descriptores de despliegue) se puede realizar en los
+    modelos de despliegue de XDE (ya sea creando nuevos modelos, de forma que los originales no cambien, o bien editando el
+    original). Para obtener más información sobre la forma en que utilizar los modelos de despliegue XDE para perfilar las
+    propiedades de los descriptores de despliegue, consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/toolmentors/assembling_j2ee_mods_and_apps_729DC5B.html" guid="{3B38F989-686C-4AC9-91EE-981F90D75F0D}">Guía de herramientas: ensamblaje de módulos y aplicaciones mediante
+    Rational XDE Developer - Java Platform Edition</a>.
+</p>
+<p>
+    Una vez que los modelos de despliegue estén configurados, se podrá desplegar la aplicación desde el modelo de
+    despliegue EAR. Existe la opción de desplegar un EAR específico, o desplegar todos los EAR correlacionados con un nodo
+    específico. Consulte <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Despliegue
+    de aplicaciones Java</i> para obtener más información 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j","j_o_deploying_java_apps.htm");-->.
+</p>
+<p>
+    Un descriptor de despliegue o un archivador se puede exportar desde cualquier modelo de despliegue. La exportación de
+    un descriptor de despliegue es útil para comprender la forma en que se correlaciona el modelo con el descriptor y
+    también a efectos de depuración. La exportación de un archivador permite desplegar archivadores autónomos, así como la
+    utilización de herramientas de despliegue para servidores de aplicaciones que no sean los que XDE da soporte. Consulte
+    la sección <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Despliegue de
+    aplicaciones Java</i> para obtener más información 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_c_java_app_deploy.htm");-->. Consulte también la sección
+    <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creación de descriptores de
+    despliegue de EJB</i> para obtener más información 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_t_create_gen_depl_descr.htm");-->.
+</p>
+<h3>
+    Configuración de la aplicación J2EE
+</h3>
+<p style="COLOR: rgb(0,0,0)">
+    Es posible que sea necesario realizar alguna tarea configuración adicional a la aplicación de servidor para que ésta se
+    ejecute de forma correcta. Así podría ser necesario realizar una correlación de bases de datos, configurar el acceso a
+    bibliotecas comunes que no son parte del EAR, etc. Utilice la consola de administración del servidor para realizar los
+    cambios necesarios.
+</p>
+<h3>
+    Lanzamiento de una aplicación J2EE
+</h3>
+<p>
+    Una vez se ha desplegado la aplicación, hay que seguir las instrucciones del proveedor del servidor para iniciar la
+    aplicación. En muchos casos, servidores que se estén ejecutando en una configuración de pruebas o depuración detectarán
+    de forma automática la instalación de una nueva aplicación y la dejarán disponible para realizar pruebas.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

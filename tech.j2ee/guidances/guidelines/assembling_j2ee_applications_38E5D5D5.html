@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Ensamblaje de aplicaciones J2EE</title>
+<meta content="Guideline" name="uma.type">
+<meta content="assembling_j2ee_applications" name="uma.name">
+<meta content="Ensamblaje de aplicaciones J2EE" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "3.347498143656868E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.347498143656868E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Ensamblaje de aplicaciones J2EE</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la forma en que ensamblar módulos J2EE en una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/integrate_system_9AFF7BFD.html" guid="{3233A207-6271-4492-A8BF-64E1D89D6C5E}">Integrar el sistema</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Introducción
+</h3>
+<p>
+    Los ensambladores de aplicaciones J2EE ensamblan &nbsp;<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">módulos J2EE</a> en una <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_436A58D2.html" guid="1.6057780853529704E-306">aplicación J2EE</a>. Los ensambladores de aplicaciones pueden elegir módulos disponibles
+    comercialmente y utilizarlos en sus aplicaciones simplemente modificando los descriptores de despliegue o
+    proporcionando descriptores alternativos.
+</p>
+<p>
+    Algunos servidores de aplicaciones requieren una "envoltura" EAR alrededor de los archivadores JAR de EJB, WAR y otros
+    JAR para despliegue, lo que significa que el proveedor de componentes de aplicación J2EE también debe también ensamblar
+    un EAR para pruebas.
+</p>
+<p>
+    En la sección J2EE.8.3 de ensamblaje de aplicaciones de la especificación J2EE se proporcionan pasos detallados para
+    ensamblar una aplicación J2EE. A continuación se presenta un extracto resumido de esta ayuda.
+</p>
+<h3>
+    <a id="Topic 1" name="Topic 1"></a>Ensamblaje de una aplicación J2EE
+</h3>
+<p>
+    El ensamblaje de una aplicación J2EE supone el realizar los siguientes pasos:
+</p>
+<ol>
+    <li>
+        Seleccionar los módulos J2EE que la aplicación utilizará.
+    </li>
+    <li>
+        Crear una estructura de directorios de la aplicación.
+    </li>
+    <li>
+        Reconciliar los descriptores de despliegue de módulos J2EE. 
+        <ul>
+            <li>
+                Editar los descriptores de despliegue de módulo J2EE para enlazar internamente las dependencias satisfechas
+                y eliminar los nombres de roles de seguridad redundantes.
+            </li>
+            <li>
+                Definir transacciones, roles de seguridad, permisos de método, etc.
+            </li>
+            <li>
+                De forma opcional, utilizar el elemento atl-dd para especificar un descriptor de despliegue alternativo a
+                la vez que se conserva el descriptor de despliegue original.
+            </li>
+            <li>
+                Asignar una raíz de contexto para cada módulo web incluido en la aplicación J2EE.
+            </li>
+            <li>
+                Asegurarse de que las dependencias de componentes están correctamente descritas.
+            </li>
+            <li>
+                Asegurarse de que únicamente hay una versión de cada clase en la aplicación.
+            </li>
+        </ul>
+    </li>
+    <li>
+        Crear un descriptor de despliegue XML denominado "application.xml" para la aplicación.
+    </li>
+    <li>
+        Empaquetar la aplicación.<br />
+         a) Colocar los módulos J2EE en los directorios apropiados. Colocar el descriptor de despliegue en
+        META-INF/application.xml.<br />
+         b) Empaquetarlo en un archivo ".EAR".
+    </li>
+</ol>
+<h3>
+    <a id="Topic 2" name="Topic 2"></a>Adición/eliminación de módulos
+</h3>
+<p>
+    Existe la posibilidad de añadir módulos a una aplicación antes del despliegue. Para ello, siga los pasos que se indican
+    a continuación:
+</p>
+<ol>
+    <li>
+        Decida una ubicación en el paquete de aplicación para el nuevo módulo. Si es necesario, cree nuevos directorios en
+        la jerarquía de paquetes de la aplicación.
+    </li>
+    <li>
+        Copie los nuevos módulos en la ubicación deseada en el paquete de aplicación.<br />
+    </li>
+    <li>
+        Edite los descriptores de despliegue de los módulos J2EE para enlazar las dependencias que los módulos J2EE
+        incluidos en la aplicación satisfacen internamente.
+    </li>
+    <li>
+        Edite el descriptor de despliegue de la aplicación J2EE tal como sea necesario.
+    </li>
+</ol>
+<p>
+    De forma parecida se puede eliminar un módulo eliminándolo de la jerarquía del paquete de aplicación y editando los
+    descriptores de despliegue para eliminar las incoherencias.
+</p>
+<h3>
+    Validación de la aplicación
+</h3>
+<p>
+    Es una buena idea el validar el contenido del archivador antes de intentar el despliegue, puesto que puede ocultar
+    errores, especialmente en el servidorde la aplicación, dando lugar a mensajes de error que no existen o confusos. Por
+    ejemplo, confirmando que al menos hay definido un módulo en el EAR.
+</p>
+<p>
+    Los archivos EAR también se pueden validar con una herramienta de verificación que se proporciona con el SDK de J2EE.
+    Esta herramienta asegura la coherencia interna del EAR y comprueba que esté bien formado. Por ejemplo, se asegura de
+    que los archivadores de aplicación y módulos son coherentes con las especificaciones estándar (J2EE, servlet y EJB).
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

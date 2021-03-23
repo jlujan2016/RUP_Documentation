@@ -1,0 +1,669 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de tareas: An&aacute;lisis de la arquitectura</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="architectural_analysis" name="uma.name">
+<meta content="An&aacute;lisis de la arquitectura" name="uma.presentationName">
+<meta content="_Puw8YEocEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="Arquitecto de software">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={002674F9-6511-4D15-8623-B761D8C48986}&path={002674F9-6511-4D15-8623-B761D8C48986},{71ADFE9A-34A0-41BD-8A17-BEA3210E2BBD},_Puw8YEocEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_S06skCFtEdqrX8YVzvtlIg", "_Puw8YEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_S06skCFtEdqrX8YVzvtlIg", "_Puw8YEocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_S06skCFtEdqrX8YVzvtlIg", "_Puw8YEocEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_Puw8YEocEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: An&aacute;lisis de la arquitectura</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta tarea se centra en la definición de una arquitectura candidata y en la restricción de las técnicas de arquitectura que se van a utilizar en el sistema.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<ul>
+    <li>
+        Definir una arquitectura candidata para el sistema basada en la experiencia obtenida de sistemas similares o
+        dominios de problemas parecidos.
+    </li>
+    <li>
+        Definir los patrones de arquitectura, los mecanismos clave y los convenios de modelado del sistema.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Principal:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_architect_23739CE6.html" guid="_COQSEhi2Edq_uI8xTPML6g">Arquitecto de software</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Adicional:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">Asistencia:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_glossary_EECE8ADF.html" guid="_COQSFBi2Edq_uI8xTPML6g">Glosario</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_risk_list_D05A730C.html" guid="_Pu3DAEocEdqrjq4i3fchvA">Lista de riesgos</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_vision_2E117CF6.html" guid="_COQSExi2Edq_uI8xTPML6g">Visi&oacute;n</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_architectural_proof_of_concept_326B3CF7.html" guid="_Pu3DA0ocEdqrjq4i3fchvA">Arquitectura de prueba de concepto</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_reference_architecture_C9916732.html" guid="_Pu3DAkocEdqrjq4i3fchvA">Arquitectura de referencia</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_project_specific_guidelines_B7354134.html" guid="_COQSGxi2Edq_uI8xTPML6g">Directrices espec&iacute;ficas del proyecto</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_DAF8531C.html" guid="_Pu3DAUocEdqrjq4i3fchvA">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_supplementary_specification_77F24F1D.html" guid="_COQSHBi2Edq_uI8xTPML6g">Especificaciones suplementarias</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_usecase_model_AC976124.html" guid="_COQSGhi2Edq_uI8xTPML6g">Modelo de caso de uso</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_94EC552B.html" guid="_Pu3DBEocEdqrjq4i3fchvA">Modelo de dise&ntilde;o</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_DAF8531C.html" guid="_Pu3DAUocEdqrjq4i3fchvA">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_analysis_model_80E55756.html" guid="_FmBbMEaBEdqUkdzVfCuHXg">Modelo de an&aacute;lisis</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_deployment_model_9F8A353B.html" guid="_Pu3DBUocEdqrjq4i3fchvA">Modelo de despliegue</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_94EC552B.html" guid="_Pu3DBEocEdqrjq4i3fchvA">Modelo de dise&ntilde;o</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    <a key="convenios de modelado" text="definir" name="XE_modeling_conventions__defining" id="XE_modeling_conventions__defining" class="index"></a>El análisis de la arquitectura se centra en la definición de
+    una arquitectura candidata y en la restricción de las técnicas de arquitectura que se van a utilizar en el sistema. Se
+    basa en la recopilación de experiencias obtenidas en sistemas o dominios de problemas similares para restringir y
+    centrar la arquitectura de forma que no se malgaste esfuerzo en el redescubrimiento de arquitecturas. En los sistemas
+    en los que ya hay una arquitectura bien definida, el análisis de la arquitectura se puede omitir. El análisis de
+    arquitecturas resulta beneficioso principalmente cuando se desarrollan sistemas nuevos sin precedentes.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> Desarrollar una visi&oacute;n general de la arquitectura </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Develop Architecture Overview" name="Develop Architecture Overview"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>&nbsp;
+            </td>
+            <td>
+                Facilitar la visualización del sistema mediante la exploración y la evaluación de opciones de arquitectura
+                de alto nivel.&nbsp;<br />
+                 Transmitir una primera idea de la estructura de alto nivel del sistema al patrocinador, los equipos de
+                desarrollo y otros interesados.
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    La visión general de la arquitectura se crea al principio del ciclo vital del proyecto, probablemente durante la fase
+    inicial. Refleja las primeras decisiones y suposiciones de trabajo sobre la implementación de la visión, así como las
+    decisiones sobre la arquitectura física y lógica, y los requisitos no funcionales del sistema. El encargado de
+    producirla es el arquitecto de software, a menudo en colaboración con el patrocinador del proyecto, y tiene la forma de
+    un gráfico de iconos o un guión gráfico informal, con muchas imágenes. Conceptualmente, ilustra la naturaleza de la
+    solución propuesta, a la vez que transmite las ideas gobernantes e incluye los principales bloques de construcción. El
+    nivel de formalidad de la visión general de la arquitectura depende del proyecto. Por ejemplo, en un proyecto grande y
+    esencial, será necesario capturar la visión general de la arquitectura en las secciones correspondientes del documento
+    de arquitectura de software, para que se pueda revisar formalmente.
+</p>
+<p>
+    En este punto, la visión general de la arquitectura es un primer paso provisional. No base ningún compromiso en el
+    diagrama de visión general de la arquitectura hasta que un prototipo de arquitectura ejecutable haya validado la
+    arquitectura, incluidos los problemas de diseño, implementación y despliegue.
+</p>
+<p>
+    También puede basar la arquitectura en una arquitectura de referencia, otros <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/software_architecture_4269A354.html#Architectural Patterns" guid="3.066252221588648E-305">patrones de arquitectura</a> u otros activos de arquitectura.
+</p>
+<p>
+    Considere si desea perfeccionar y mantener el diagrama de visión general de la arquitectura, para que sirva como
+    vehículo de comunicación.
+</p>
+<p>
+    Muchos sistemas están restringidos a desarrollarse y desplegarse en un entorno existente de hardware y software; para
+    estos sistemas, el arquitecto de software recopilará información sobre el entorno actual.
+</p>
+<p>
+    Por ejemplo, en el desarrollo de un sistema de e-business, la siguiente información es pertinente:
+</p>
+<ul>
+    <li>
+        el diseño físico y lógico de la red existente
+    </li>
+    <li>
+        las bases de datos existentes y el diseño de las bases de datos
+    </li>
+    <li>
+        el entorno web existente (servidores, cortafuegos, etc.)
+    </li>
+    <li>
+        el entorno de servidores existente (configuración, versiones de software, actualizaciones previstas)
+    </li>
+    <li>
+        estándares existentes (red, denominación, protocolos, etc.)
+    </li>
+</ul>
+<p>
+    Esta información se puede capturar textualmente o en un <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_deployment_model_57DF1DF5.html" guid="{5981B6BE-2FD1-4984-AA94-2F7428439BA6}">Modelo
+    de despliegue</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Inspeccionar los activos disponibles </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Survey Available Assets" name="Survey Available Assets"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>Objetivo</b>&nbsp;
+            </td>
+            <td colspan="2" width="95%">
+                Identificar los activos que pueden ser relevantes para el proyecto.<br />
+                 Analizar la adecuación entre los activos y los requisitos del proyecto.<br />
+                 Decidir si las áreas del sistema se deben basar en los activos.<br />
+                 Localizar y enumerar los activos que sean reutilizables en el proyecto.<br />
+                 Ejecutar una evaluación preliminar para garantizar que el soporte necesario esté disponible.
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Debe entender los requisitos del entorno para el que se consideran los activos, así como el ámbito del sistema y la
+    funcionalidad general necesaria. Busque en la literatura industrial y en las bases de activos de organizaciones para
+    identificar activos o proyectos similares. Existen varios tipos de activos que debe tener en cuenta, por ejemplo, los
+    modelos industriales, las infraestructuras, las clases y la experiencia, entre otros. Deberá valorar si los activos
+    disponibles contribuyen a la solución de los retos clave del proyecto actual y si son compatibles con las restricciones
+    del proyecto.
+</p>
+<p>
+    Puede analizar el grado de adecuación entre los activos y los requisitos del cliente, y considerar si alguno de los
+    requisitos son negociables (para permitir el uso del activo).
+</p>
+<p>
+    Asegúrese de valorar si el activo se puede modificar o ampliar para satisfacer los requisitos, y determine qué
+    intercambio supone, en términos de coste, riesgo y funcionalidad, la adopción del activo.
+</p>
+<p>
+    Por último, deberá decidir básicamente si desea utilizar uno o varios de los activos y documentar el fundamento de esa
+    decisión.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Definir la organizaci&oacute;n de alto nivel de los subsistemas </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="XE_design_subsystem__defining_high-level_organization_of" key="subsistema de diseño" text="definir la organización de alto nivel de" name="XE_design_subsystem__defining_high-level_organization_of" class="index"></a><a id="Define the High-Level Organization of Subsystems" name="Define the High-Level Organization of Subsystems"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td colspan="2">
+                Crear una estructura inicial para el modelo de diseño.
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Cuando el objetivo es realizar la síntesis de arquitectura durante la fase inicial, este paso se excluye de esta tarea.
+</p>
+<p>
+    Normalmente, el modelo de diseño se organiza en capas, un <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/software_architecture_4269A354.html#Architectural Patterns" guid="3.066252221588648E-305">patrón de arquitectura</a> común para moderar los sistemas de gran tamaño. El número de
+    capas no es fijo, sino que varía de situación en situación.
+</p>
+<p>
+    Durante el análisis de la arquitectura, normalmente se centra en las dos capas de alto nivel, esto es, la capa de
+    <b>aplicación</b> y la capa <b>específica de negocios</b>. Éste es el significado de la <i>organización de alto nivel
+    de los subsistemas</i>. Las otras capas de nivel inferior se describen en <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/incorporate_design_elements_D3C582B5.html" guid="{5C647173-4E32-4594-96A9-2548B47722FA}">Tarea:
+    Incorporar elementos de diseño existentes</a>. Si utiliza patrones de arquitectura específicos, los subsistemas se
+    definen alrededor de la plantilla de arquitectura de ese patrón.
+</p>
+<p>
+    Para obtener más información sobre las capas, consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/layering_FCCD1BDA.html" guid="4.458864982057142E-306">Directriz de producto de
+    trabajo: Creación de capas</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar abstracciones clave </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="conceptos clave" text="identificar" name="XE_key_concepts__identifying" id="XE_key_concepts__identifying" class="index"></a><a id="Identify Key Concepts" name="Identify Key Concepts"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td>
+                Preparar el análisis mediante la identificación de las abstracciones clave (representación de los conceptos
+                identificados durante las tareas de modelado empresarial, cuando sea aplicable, y las tareas de requisitos)
+                que el sistema debe manejar.
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Cuando el objetivo es realizar la síntesis de arquitectura, este paso se ejecuta según sea necesario para guiar al
+    arquitecto de software en la selección de activos para la construcción del <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_architectural_proof_of_concept_9AF95095.html" guid="{198EA2A5-4FBA-45D5-85BA-53B108728534}">Producto de trabajo: Arquitectura de prueba de concepto</a> y para dar
+    soporte a los casos de ejemplo de uso representativos.
+</p>
+<p>
+    Las tareas de requisitos y, cuando sea aplicable, las tareas de modelado empresarial, normalmente ponen al descubierto
+    los conceptos clave que el sistema debe poder manejar; estos conceptos se manifiestan como abstracciones de diseño
+    clave. Gracias al trabajo realizado, no es necesario repetir de nuevo el trabajo de identificación durante la <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">Tarea: Análisis de caso de uso</a> .
+</p>
+<p>
+    Puede aprovechar los conocimientos existentes en la identificación de las clases de análisis de entidades preliminares
+    para representar estas abstracciones clave, basándose en el conocimiento general del sistema como, por ejemplo, los
+    requisitos, el <b>glosario</b> y, en concreto, el <b>modelo de dominio</b> o el <b>modelo de análisis empresarial</b>,
+    si dispone de uno.
+</p>
+<p>
+    Cuando se definen las abstracciones clave, también se definen las relaciones que existen entre las clases de entidad.
+    Presente las abstracciones clave en uno o varios diagramas de clases y cree una breve descripción para cada
+    una.&nbsp;Dependiendo del dominio y la novedad del sistema, los <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/analysis_pattern_86D515F0.html" guid="_x613Q9nmEdmO6L4XMImrsA"><b>patrones
+    de análisis</b></a> que capturan muchas de las abstracciones clave necesarias para modelar el sistema puede que existan
+    previamente. El uso de dichos patrones (que se han debido utilizar de forma satisfactoria en el dominio) facilitará
+    considerablemente el trabajo intelectual que supone identificar los conceptos importantes que se deben representar. En
+    [<a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html#FOW97a" guid="7.755968586980351E-308">FOW97a</a>], se presentan algunos patrones de análisis que son inmediatamente útiles para
+    modelar sistemas empresariales, pero que se pueden aplicar en otros contextos. Otro ejemplo es el Grupo de gestión de
+    objetos (OMG), que también intenta definir interfaces y protocolos para muchos dominios a través del trabajo de su
+    Comité tecnológico de dominios y las fuerzas de trabajo asociadas. Inevitablemente, este trabajo permite identificar
+    abstracciones importantes en el dominio.
+</p>
+<p>
+    Las clases de análisis identificadas en este punto probablemente cambiarán y evolucionarán durante el curso del
+    proyecto. El objetivo de este paso no es identificar un conjunto de clases que sobrevivan todo el diseño, sino
+    identificar los conceptos clave que el sistema debe manejar. No invierta demasiado tiempo describiendo en detalle las
+    clases de entidad en esta fase inicial, ya que existe el riesgo de identificar clases y relaciones que no se necesiten
+    luego en los casos de uso . Recuerde que encontrará más clases de entidad y relaciones cuando observe los casos de uso
+    .
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar iteraciones estereotipadas </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Identify Stereotypical Interactions" name="Identify Stereotypical Interactions"></a>
+<p>
+    Este paso sólo se incluye cuando se lleva a cabo esta tarea durante la fase inicial.
+</p>
+<p>
+    El objetivo de este paso es identificar las interacciones entre abstracciones de clave del sistema que caracterizan o
+    son representativas de tipos de actividad significativos del sistema. Dichas interacciones se capturan como ejecuciones
+    de casos de uso .
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Desarrollar una visi&oacute;n general del desarrollo </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Develop Deployment Overview" name="Develop Deployment Overview"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <p align="left">
+                    <b>Objetivo</b>
+                </p>
+            </td>
+            <td>
+                Proporcionar una base para valorar la viabilidad de la implementación del sistema.<br />
+                 Conocer mejor la distribución geográfica y la complejidad operativa del sistema.<br />
+                 Proporcionar una base para los primeros cálculos de esfuerzos y costes.
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Desarrolle una visión general de alto nivel de cómo está desplegado el software. Por ejemplo, determine si será
+    necesario acceder al sistema de forma remota, o si el sistema tiene requisitos que sugieren la distribución entre
+    varios nodos. Algunas de las fuentes de información a considerar son:
+</p>
+<ul>
+    <li>
+        los usuarios (en las ubicaciones), definidos en Perfiles de usuario (en la Visión) y casos de uso (en el Modelo de
+        caso de uso )
+    </li>
+    <li>
+        la organización de los datos empresariales (en el Modelo de análisis empresarial y el Modelo de diseño, cuando
+        estén disponibles)
+    </li>
+    <li>
+        los requisitos de nivel de servicio (en las Especificaciones suplementarias)
+    </li>
+    <li>
+        las restricciones (en las Especificaciones suplementarias, por ejemplo, los requisitos de la interfaz con sistemas
+        de herencia)
+    </li>
+</ul>
+<p>
+    Si se necesita un sistema distribuido no trivial, se puede utilizar un modelo de despliegue para capturar la relación
+    entre los nodos. Este debe incluir la asignación provisional de componentes y datos a los nodos, e indicar cómo acceden
+    los usuarios a los componentes que acceden a los datos. La especificación detallada de los nodos y las conexiones se
+    retrasa, excepto si son importantes para calcular o valorar la viabilidad. Se pueden utilizar los activos existentes,
+    si están disponibles los activos adecuados. Aunque este es el primer modelo de despliegue producido en el proyecto, y
+    se produce rápidamente y a un alto nivel, puede identificar productos de hardware y software reales si son conocidos, o
+    si es importante tomar las decisiones de selección en este momento.
+</p>
+<p>
+    Compruebe que el modelo de despliegue dé soporte a los usuarios (especialmente, a los usuarios en ubicaciones remotas
+    si es necesario) mediante la ejecución casos de uso típicos, teniendo en cuenta las restricciones y los requisitos no
+    funcionales. Compruebe que los nodos y las conexiones sean adecuados para dar soporte a las interacciones entre los
+    componentes de distintos nodos, y entre los componentes y sus datos almacenados.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar mecanismos de an&aacute;lisis </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="mecanismos de análisis" text="identificar" name="XE_analysis_mechanisms__identifying" id="XE_analysis_mechanisms__identifying" class="index"></a><a id="Identify Analysis Mechanisms" name="Identify Analysis Mechanisms"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td>
+                Definir los mecanismos de análisis y los servicios que utilizan los diseñadores para dar "vida" a los
+                objetos.
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Cuando el objetivo es realizar la síntesis de arquitectura durante la fase inicial, este paso se excluye de esta tarea.
+</p>
+<p>
+    Los mecanismos de análisis se pueden identificar de forma descendente (conocimiento a priori) o ascendente
+    (descubiertos sobre la marcha). En la modalidad descendente, la experiencia guía al arquitecto de software para saber
+    que existen determinados problemas en el dominio y necesitarán un determinado tipo de soluciones. Algunos ejemplos de
+    problemas comunes de arquitectura que se pueden expresar como mecanismos durante el análisis son: persistencia, gestión
+    de transacciones, gestión de anomalías, mensajería y motores de inferencia. El aspecto común a todos ellos es que cada
+    uno constituye una posibilidad general de una amplia clase de sistemas, y cada uno proporciona una funcionalidad que
+    interactúa o da soporte a la funcionalidad de aplicaciones básica. Los mecanismos de análisis dan soporte a las
+    posibilidades de soporte necesarias en los requisitos funcionales básicos del sistema, independientemente de la
+    plataforma en la que estén desplegados o del lenguaje de implementación. Los mecanismos de análisis también se pueden
+    diseñar e implementar de varias formas; generalmente, habrá más de un mecanismo de diseño correspondiente a cada
+    mecanismo de análisis, y quizás más de una forma de implementar cada mecanismo de diseño.
+</p>
+<p>
+    El enfoque ascendente es donde nacen en última instancia los mecanismos de análisis; se crean a medida que el
+    arquitecto de software percibe, quizás vagamente al principio, un tema común que emerge de un conjunto de soluciones a
+    varios problemas. Existe la necesidad de proporcionar una forma de que los elementos de hebras diferentes sincronicen
+    sus relojes, y la necesidad de una forma común de asignar los recursos. Los mecanismos de análisis, que simplifican el
+    lenguaje del análisis, surgen de estos patrones.
+</p>
+<p>
+    La identificación de un mecanismo de análisis significa identificar que existe un subproblema común, quizás implícito
+    (en tanto que implicado por los requisitos del sistema) y darle un nombre. Inicialmente, el nombre puede ser lo único
+    que exista; por ejemplo,&nbsp;el arquitecto de software reconoce que el sistema necesitará un mecanismo de
+    persistencia.&nbsp;En última instancia, este mecanismo se implementará mediante la colaboración de una <i>sociedad de
+    clases</i> (consulte [<a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html#BOO98" guid="7.755968586980351E-308">BOO98</a>]), algunas
+    de las cuales no proporcionan directamente funciones de la aplicación, sólo existen para dar soporte. Muy a menudo,
+    estas clases de soporte se ubican en las capas inferiores o del medio de una arquitectura en capas; de esta manera,
+    proporcionan un servicio de soporte común a todas las clases del nivel de aplicación.
+</p>
+<p>
+    Si el subproblema identificado es bastante común, es posible que exista un <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/pattern_E76690AA.html" guid="_yPtUDNnmEdmO6L4XMImrsA">patrón</a> desde el
+    que se puedan crear instancias del mecanismo, mediante la vinculación de clases existentes y la implementación de
+    clases nuevas, según requiera el patrón. Un mecanismo de análisis producido de esta esta manera será abstracto y
+    requerirá un mayor perfeccionamiento mediante el diseño y la implementación.
+</p>
+<p>
+    Para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/analysis_mechanisms_36135B43.html" guid="9.76539014099254E-305">Concepto:
+    Mecanismos de análisis</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Revisar los resultados </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Review the Results" name="Review the Results"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Garantizar que los resultados del análisis de la arquitectura sean completos y coherentes.
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Cuando concluya el análisis de la arquitectura, revise los mecanismos de arquitectura, los subsistemas, los paquetes y
+    las clases que se han identificado para garantizar que sean completos y coherentes. Como los resultados del análisis de
+    la arquitectura son preliminares y relativamente informales, las revisiones también tienen que ser informales. Se
+    pueden utilizar casos de ejemplo o casos de uso para validar las selecciones de arquitectura realizadas a distintos
+    niveles; desde la perspectiva empresarial hasta las interacciones específicas que se producen.
+</p>
+<p>
+    Consulte el apartado <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/checklists/software_architecture_document_D261D8F3.html#Architectural Analysis Considerations" guid="7.634303669338443E-306">Lista de comprobación: Documento de arquitectura de software - Consideraciones sobre el
+    análisis de la arquitectura</a> para obtener más información sobre la evaluación de los resultados de esta tarea.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Varias apariciones" abbr="Varias apariciones">Varias apariciones</th><td align="left" class="sectionTableCell" headers="property_Varias apariciones"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Condicionado por sucesos" abbr="Condicionado por sucesos">Condicionado por sucesos</th><td align="left" class="sectionTableCell" headers="property_Condicionado por sucesos"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Continuo" abbr="Continuo">Continuo</th><td align="left" class="sectionTableCell" headers="property_Continuo"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Se puede repetir" abbr="Se puede repetir">Se puede repetir</th><td align="left" class="sectionTableCell" headers="property_Se puede repetir"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Conceptos</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/distribution_patterns_5A01CAF5.html" guid="6.137181182978733E-305">Patrones de distribución</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/analysis_mechanisms_36135B43.html" guid="9.76539014099254E-305">Mecanismos de análisis</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/concurrency_EE2E011A.html" guid="3.5787175388799096E-305">Concurrencia</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/layering_59FD1CD4.html" guid="3.801315327549898E-305">Capas</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/concepts/mdd_and_mda_8F9B3685.html" guid="4.227832989444728E-303">Desarrollo controlado por modelos (MDD) y arquitectura controlada por modelos (MDA)</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../tech.j2ee/guidances/guidelines/architectural_analysis_for_j2ee_applications_7F202AD8.html" guid="4.041153751920514E-305">Análisis de arquitectura para aplicaciones J2EE </a>
+</li>
+<li>
+<a href="./../../tech.j2ee/guidances/guidelines/designing_state_for_j2ee_applications_C145BCA3.html" guid="7.896195949843941E-306">Diseño del estado para aplicaciones J2EE</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/guidelines/architectural_discovery,_analysis_and_control_2153BFC.html" guid="2.843707701997842E-305">Descubrimiento, análisis y control de arquitectura</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/create_use_case_model_survey_3B750D9E.html" guid="{90C8A4CE-2C86-44D2-929F-8C1AB1AB1363}">Creación de una inspección del modelo de guión de uso utilizando Rational SoDA</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/performing_architectural_analysis_65CE30FC.html" guid="{08B5477D-97F9-4EEB-AA59-A109128B5CA1}">Realización del análisis de la arquitectura utilizando Rational XDE Developer</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/capture_results_use_case_analysis_7C8B82CF.html" guid="{F33662D0-DB04-4B24-AFC4-EFEFCDD20D42}">Captura de los resultados del análisis de guión de uso utilizando Rational Rose</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/create_use_case_realization_1212EF9.html" guid="{AAB8D0D6-C666-4F4D-9D26-2AF026558A4C}">Creación de ejecuciones de guiones de uso utilizando Rational Rose</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/publishing_webbased_models_7604E738.html" guid="{C5291A9E-2269-41F8-AFCD-813E18A031D4}">Publicación de modelos de Rational Rose basados en web utilizando el publicador de web</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/toolmentors/performing_architectural_analysis_using_rsa_ext_17E467AF.html" guid="_CvKrgK4LEdqFg48R_ivTjA">Realización del análisis de la arquitectura mediante Rational Software Architect</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/toolmentors/performing_architectural_analysis_using_rsd_70E5186E.html" guid="_8hDjcK4KEdqFg48R_ivTjA">Realización del análisis de la arquitectura mediante Rational Systems Developer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

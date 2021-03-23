@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Implementaci&oacute;n de pruebas de desarrollador utilizando Rational Test RealTime</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="implement_developer_tests" name="uma.name">
+<meta content="Implementaci&oacute;n de pruebas de desarrollador utilizando Rational Test RealTime" name="uma.presentationName">
+<meta content="Tool:rup_test_realtime:Rational Test RealTime" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Test RealTime" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}", "{FD49B4B3-FA09-4475-A99A-DA8EBBEA220E}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}", "{FD49B4B3-FA09-4475-A99A-DA8EBBEA220E}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}", "{FD49B4B3-FA09-4475-A99A-DA8EBBEA220E}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{FD49B4B3-FA09-4475-A99A-DA8EBBEA220E}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Implementaci&oacute;n de pruebas de desarrollador utilizando Rational Test RealTime</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo implementar pruebas utilizando RationalTest RealTime.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_test_realtime_861C5353.html" guid="{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}">Rational Test RealTime</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_developer_test_66FE6BEE.html" guid="{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}">Implementar la prueba de desarrollador</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_test_35C1B0AA.html" guid="{BC805E79-736B-42D5-BDC1-B95E7D002312}">Implementar la prueba</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_test_suite_94F58DEC.html" guid="{1C759E0D-B364-4095-A7CF-CD9E39301689}">Implementar el conjunto de aplicaciones de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    Visión general
+</h3>
+<p>
+    Test RealTime integra tres herramientas de prueba:
+</p>
+<ul>
+    <li>
+        La prueba de unidad automatiza la prueba de componentes de software C y Ada.
+    </li>
+    <li>
+        La prueba de objetos es una propuesta orientada a objetos para probar el comportamiento de código C++.
+    </li>
+    <li>
+        La prueba del sistema es un entorno eficaz para probar aplicaciones basadas en mensajes.
+    </li>
+</ul>
+<p>
+    La elección de la herramienta de prueba que se debe utilizar con la aplicación depende del entorno de desarrollo y la
+    naturaleza de la aplicación. Para cada herramienta de prueba, debe desarrollar un script de prueba dedicado.
+</p>
+<p>
+    Antes de escribir las pruebas reales para la aplicación, Test RealTime necesita que cree el proyecto de prueba y enlace
+    el proyecto a la aplicación que se somete a prueba.
+</p>
+<h4>
+    Pasos de la herramienta
+</h4>
+<p>
+    Para crear un script de prueba en Test RealTime, debe llevar a cabo las acciones siguientes:
+</p>
+<ol>
+    <li>
+        <a href="#ComponentTestingWizard">Ejecutar el asistente para la prueba de componentes</a>
+    </li>
+    <li>
+        <a href="#SetupTestData">Entrar datos de prueba y resultados esperados</a>
+    </li>
+    <li>
+        <a href="#ModifyStubBehavior">Modificar el comportamiento de los fragmentos</a>
+    </li>
+</ol>
+<h3>
+    1. <a id="ComponentTestingWizard" name="ComponentTestingWizard">Ejecutar el asistente para la prueba de componentes</a>
+</h3>
+<p>
+    Test RealTime proporciona un asistente para la prueba de componentes que, cuando se ejecuta, analiza código fuente
+    especificado y genera aprovechamiento de prueba totalmente ejecutable. El objetivo de todo ello es que el desarrollador
+    garantice que el código destino se ha probado tal como se esperaba, se defina comportamiento de fragmentos (consulte el
+    segundo paso) y se entren datos de prueba y resultados esperados (consulte el tercer paso).
+</p>
+<p>
+    NOTA: No es obligatorio utilizar el asistente para la prueba de componentes. Todos los archivos y el código necesario
+    para dar soporte a una prueba se pueden generar manualmente. Sin embargo, el asistente puede evitar un esfuerzo
+    considerable. De cualquier modo, la ejecución y el informe de la prueba se han automatizado.
+</p>
+<p>
+    Puede acceder al asistente para la prueba de componentes de dos modos, y en cualquier método se da por supuesto que ha
+    se ha abierto un proyecto de Test RealTime.
+</p>
+<ul>
+    <li>
+        Seleccione el enlace Actividades, que se encuentra en la parte derecha de la página Inicio de Test RealTime. La
+        selección de este enlace proporciona una lista de las tres principales actividades que puede elegir el
+        desarrollador. Para realizar la prueba de componentes, el desarrollador debe seleccionar el enlace Prueba de
+        componentes.<br />
+        <br />
+    </li>
+    <li>
+        Pulse el botón derecho del ratón sobre cualquier archivo de origen/clase/método/función/procedimiento de la ventana
+        Proyectos, situada en la parte derecha de Test RealTime. Al seleccionar la opción Probar... del menú emergente se
+        abre el asistente para la prueba de componentes.<br />
+    </li>
+</ul>
+<p>
+    La diferencia básica entre ambos métodos de inicialización del asistente para la prueba de componentes es que la
+    primera opción requiere que el usuario seleccione los archivos de origen que contienen las
+    funciones/métodos/procedimientos que se van a probar, y en la segunda opción ya se sabe el archivo de origen que se va
+    a utilizar, por lo que se saltan los pasos iniciales del asistente para la prueba de componentes.
+</p>
+<p>
+    En cualquier caso, se solicita al desarrollador que seleccione una Modalidad de prueba, Típica o Experta. La diferencia
+    está en el comportamiento de los fragmentos deseado. Como recordatorio, un fragmento es "un componente que contiene
+    funcionalidad para objetivos de prueba", es decir, un componente designado para actuar de un modo predefinido con el
+    objeto de facilitar la prueba de algún otro componente del sistema. En la modalidad típica, Test RealTime genera,
+    automáticamente, una plantilla de fragmento para cualquier función/método/procedimiento al que se haya hecho referencia
+    explícita en los archivos de origen seleccionados. La modalidad experta le permite seleccionar, además, componentes a
+    los que no se ha hecho referencia explícita en los archivos de origen elegidos. De cualquier modo, más adelante se
+    define la funcionalidad real de los fragmentos. Consulte más abajo el segundo paso de la herramienta.
+</p>
+<p>
+    Después de ejecutar el asistente hasta su conclusión, Test RealTime crea un nodo en el proyecto activo. Dicho nodo
+    contiene una referencia a los archivos de origen seleccionados, así como a los archivos que se necesitan para la
+    creación del aprovechamiento de prueba. Estos archivos adicionales se deben modificar para:
+</p>
+<ul>
+    <li>
+        definir el comportamiento de los fragmentos
+    </li>
+    <li>
+        especificar la fecha para dirigir las funciones/métodos/procedimientos que se someten a prueba
+    </li>
+    <li>
+        especificar los resultados esperados para cada conjunto de datos de entrada
+    </li>
+</ul>
+<p>
+    Para C, C++ y Ada, el software Rational compila el aprovechamiento de prueba, los fragmentos de prueba y los lenguajes
+    de script de prueba para adaptar las complejidades específicas de dichos lenguajes. Para Java, Test RealTime utiliza
+    Java como lenguaje del script de prueba y basa las infraestructuras de fragmentos de prueba y aprovechamiento de prueba
+    en la infraestructura JUnit (http://www.junit.org).
+</p>
+<p>
+    <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> Para
+    obtener información detallada, consulte en la publicación <i>Rational Test RealTime User Guide</i>, el capítulo que
+    trata sobre la interfaz gráfica de usuario-&gt;asistentes para la actividad-&gt;Asistente para la prueba de
+    componentes.
+</p>
+<h3>
+    2. <a id="SetupTestData" name="SetupTestData">Entrar datos de prueba y resultados esperados</a>
+</h3>
+<p>
+    Los scripts de prueba que genera el asistente para la prueba de componentes se pueden ejecutar inmediatamente. Sin
+    embargo, hasta que el desarrollador especifica los datos reales con los que dirigir el componente que se somete a
+    prueba, así como los valores de salida esperados, la prueba no resulta ni útil ni informativa.
+</p>
+<p>
+    Cada lenguaje para el que Test RealTime ofrece soporte facilita la creación de pruebas de un modo diferente; se han
+    optimizado todas las propuesta para las características exclusivas de cada lenguaje. Además, C++ es exclusivo, puesto
+    que se pueden generar y ejecutar pruebas estándar, sino también se pueden realizar comprobaciones de contrato
+    opcionales. Las comprobaciones de contrato actúan como aserciones, es decir, se utilizan para verificar elementos como,
+    por ejemplo, condiciones previas y condiciones posteriores e invariables.
+</p>
+<p>
+    <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> Para
+    obtener información detallada relacionada con C y Ada, consulte el capítulo de la publicación <i>Rational Test RealTime
+    User Guide</i> que trata sobre:
+</p>
+<ul>
+    <li>
+        Prueba automatizada-&gt;Prueba de componentes para C y Ada-&gt;Script de prueba C y Ada-&gt;Visión
+        general-&gt;Estructura del script de prueba
+    </li>
+    <li>
+        Prueba automatizada-&gt;Prueba de componentes para C y Ada-&gt;Script de prueba C y Ada-&gt;Ada<br />
+         
+        <p>
+            <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> y
+            consulte los capítulos de la publicación <i>Rational Test RealTime Reference Guide</i> que tratan sobre:
+        </p>
+    </li>
+    <li>
+        Lenguajes de script de prueba de componentes-&gt;Lenguaje de script de prueba C-&gt;Palabras clave del lenguaje de
+        script de prueba C-&gt;ELEMENT...END ELEMENT
+    </li>
+    <li>
+        Lenguajes de script de prueba de componentes-&gt;Lenguaje de script de prueba C-&gt;Palabras clave del lenguaje de
+        script de prueba C-&gt;ENVIRONMENT...END ENVIRONMENT
+    </li>
+    <li>
+        Lenguajes de script de prueba de componentes-&gt;Lenguaje de script de prueba Ada-&gt;Palabras clave del lenguaje
+        de script de prueba Ada-&gt;ELEMENT...END ELEMENT
+    </li>
+    <li>
+        Lenguajes de script de prueba de componentes-&gt;Lenguaje de script de prueba Ada-&gt;Palabras clave del lenguaje
+        de script de prueba Ada-&gt;ENVIRONMENT...END ENVIRONMENT
+    </li>
+</ul>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> Para obtener
+    información detallada relacionada con C++, consulte los capítulos de la publicación <i>Rational Test RealTime User
+    Guide</i> que tratan sobre:
+</p>
+<ul>
+    <li>
+        Prueba automatizada-&gt;Prueba de componentes para C++-&gt;Visión general de la prueba de componentes de C++<br />
+         
+        <p>
+            <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> y
+            consulte los capítulos de la publicación <i>Rational Test RealTime Reference Guide</i> que tratan sobre:
+        </p>
+    </li>
+    <li>
+        Lenguajes de script de prueba de componentes-&gt;Lenguaje de script de prueba C++ -&gt;Scripts de controlador de
+        prueba C++
+    </li>
+</ul>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> Para obtener
+    información detallada relacionada con Java, consulte los capítulos de la publicación <i>Rational Test RealTime User
+    Guide</i> que tratan sobre:
+</p>
+<ul>
+    <li>
+        Prueba automatizada-&gt;Prueba de componentes para Java-&gt;Visión general de la prueba de Java-&gt;Acerca de
+        JUnit<br />
+         
+        <p>
+            <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> y
+            consulte los capítulos de la publicación <i>Rational Test RealTime Reference Guide</i> que tratan sobre:
+        </p>
+    </li>
+    <li>
+        Lenguajes de script de prueba de componentes-&gt;Primitivos de prueba Java
+    </li>
+</ul>
+<h3>
+    3. <a id="ModifyStubBehavior" name="ModifyStubBehavior">Modificar el comportamiento de los fragmentos</a>
+</h3>
+<p>
+    Los componentes se han diseñado para actuar de un modo determinado. Independiente de su nivel de granularidad, los
+    componentes deben responder a un conjunto de entradas dado con un conjunto de salidas predefinible determinado.
+    "Predefinible" significa que se pueden especificar los resultados, explícita o algorítmicamente, antes de la ejecución
+    de la prueba.
+</p>
+<p>
+    Muy a menudo, los componentes requieren la asistencia de otros componentes del sistema a fin de llevar a cabo su
+    funcionalidad. Los otros componentes pueden ser tan simples como una función adicional o tan vastos como un subsistema
+    completo ubicado en otra parte del sistema. De cualquier modo, es bastante común que un desarrollador descubra que sus
+    esfuerzos en la prueba de componentes se ven entorpecidos por el hecho de que los componentes de los que depende el
+    código aún no existen o, como mínimo, su funcionamiento aún no es fiable. La acción de fragmentar compensa esta
+    dificultad. (De hecho, la fragmentación se puede utilizar para garantizar el funcionamiento correcto eliminando toda
+    dependencia con respecto al código de terceros).
+</p>
+<p>
+    Es responsabilidad del desarrollador simular correctamente los componentes de los que depende el componente que se
+    somete a prueba. La simulación correcta significa que la funcionalidad fragmentada debe ser lo bastante precisa como
+    para garantizar que el componente en sí mismo puede rastrear el éxito o la anomalía del componente que se somete a
+    prueba, en lugar de que los fragmentos produzcan información incorrecta.
+</p>
+<p>
+    Rational Test RealTime facilita la creación de fragmentos a través de los lenguajes de script de prueba soportados. En
+    especial, para obtener información sobre la creación de los fragmentos de prueba:
+</p>
+<p>
+    <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> Para
+    obtener información detallada relacionada con C y Ada, consulte el capítulo de la publicación <i>Rational Test RealTime
+    User Guide</i> que trata sobre:
+</p>
+<ul>
+    <li>
+        Prueba automatizada-&gt;Prueba de componentes para C y Ada-&gt;Script de prueba C y Ada-&gt;Simulaciones-&gt;Visión
+        general de la simulación de fragmentos<br />
+         
+        <p>
+            <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> y
+            consulte los capítulos de la publicación <i>Rational Test RealTime Reference Guide</i> que tratan sobre:
+        </p>
+    </li>
+    <li>
+        Lenguajes de script de prueba de componentes-&gt;Lenguaje de script de prueba C-&gt;Palabras clave del lenguaje de
+        script de prueba C-&gt;STUB
+    </li>
+    <li>
+        Lenguajes de script de prueba de componentes-&gt;Lenguaje de script de prueba Ada-&gt;Palabras clave del lenguaje
+        de script de prueba Ada-&gt;STUB
+    </li>
+</ul>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> Para obtener
+    información detallada relacionada con C++, consulte los capítulos de la publicación <i>Rational Test RealTime User
+    Guide</i> que tratan sobre:
+</p>
+<ul>
+    <li>
+        Prueba automatizada-&gt;Prueba de componentes para C++-&gt;Visión general de la prueba de C++-&gt;Script de
+        controlador de prueba C++<br />
+         
+        <p>
+            <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> y
+            consulte los capítulos de la publicación <i>Rational Test RealTime Reference Guide</i> que tratan sobre:
+        </p>
+    </li>
+    <li>
+        Lenguajes de script de prueba de componentes-&gt;Lenguaje de script de prueba C++-&gt;Palabras clave del lenguaje
+        de script de prueba C++-&gt;STUB
+    </li>
+</ul>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> Para obtener
+    información detallada relacionada con Java, consulte los capítulos de la publicación <i>Rational Test RealTime User
+    Guide</i> que tratan sobre:
+</p>
+<ul>
+    <li>
+        Prueba automatizada-&gt;Prueba de componentes para Java-&gt;Visión general de la prueba de Java-&gt;Aprovechamiento
+        de fragmentos de Java<br />
+    </li>
+</ul>
+<h3>
+    Para obtener más información
+</h3>
+<p>
+    Para obtener información detallada sobre cómo ejecutar la campaña de prueba, consulte la Guía de la herramienta
+    titulada <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/execute_developer_tests_A3E7DD57.html" guid="{CA0B65DC-D96A-4CCB-A7A5-8FCE9F24B617}">Ejecución de pruebas utilizando Rational Test RealTime</a>.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

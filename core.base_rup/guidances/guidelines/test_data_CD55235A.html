@@ -1,0 +1,828 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Datos de prueba</title>
+<meta content="Guideline" name="uma.type">
+<meta content="test_data" name="uma.name">
+<meta content="Datos de prueba" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{5FFF9828-AB23-4C09-8293-42A90E90378B}", "1.0508352805829607E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_OKm3oN7UEdmjRZts2c4ZjQ", "{5FFF9828-AB23-4C09-8293-42A90E90378B}", "1.0508352805829607E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.0508352805829607E-304"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{5FFF9828-AB23-4C09-8293-42A90E90378B}", "1.0508352805829607E-304"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.0508352805829607E-304"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Datos de prueba</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se muestra una introducción al diseño de conjuntos de datos de prueba.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_test_data_AD333F7A.html" guid="{5FFF9828-AB23-4C09-8293-42A90E90378B}">Datos de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="datos de prueba" text="directrices del artefacto" name="XE_test_data__artifact_guidelines" id="XE_test_data__artifact_guidelines" class="index"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">Explicación</a>
+</h3>
+<p>
+    En la tarea de diseño de prueba, se han identificado y descrito dos artefactos importantes: Scripts de prueba y Casos
+    de prueba. Si datos de prueba, estos dos artefactos no se pueden implementar ni ejecutar. Son, tan solo, descripciones
+    de condiciones, casos de ejemplo y vías de acceso sin valores concretos que los identifiquen sucintamente. Los datos de
+    prueba, aunque no son un artefacto en sí mismos, afectan de modo importante en el éxito (o anomalía) de la prueba. La
+    prueba no se puede implementar ni ejecutar si datos de prueba, puesto que se necesitan datos de prueba para lo
+    siguiente:
+</p>
+<ul>
+    <li>
+        entrada para crear una condición
+    </li>
+    <li>
+        salida para evaluar un requisito
+    </li>
+    <li>
+        soporte (una condición previa a la prueba)
+    </li>
+</ul>
+<p>
+    Por este motivo, la identificación de valores es un esfuerzo importante que se lleva a cabo cuando se identifican los
+    casos de prueba (consulte los apartados <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_case_8AFEC963.html" guid="{D525758B-EBA2-4F59-9BA6-226820C27ADD}">Producto
+    de trabajo: Caso de prueba</a> y <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_case_81FD1D9F.html" guid="1.3981505661923931E-304">Directriz: Caso de
+    prueba</a>).
+</p>
+<p>
+    Al identificar los datos de prueba reales, hay cuatro atributos de los datos de prueba que se deben tratar:
+</p>
+<ul>
+    <li>
+        <a href="#Depth">profundidad</a> - volumen o cantidad de datos en los datos de prueba
+    </li>
+    <li>
+        <a href="#Breadth">extensión</a> - grado de variación de los datos de prueba
+    </li>
+    <li>
+        <a href="#Scope">ámbito</a> - aplicabilidad de los datos de prueba al objetivo de la prueba
+    </li>
+    <li>
+        <a href="#Architecture">arquitectura</a> - estructura física de los datos de prueba
+    </li>
+</ul>
+<p>
+    En los apartados siguientes se trata con más detalle cada una de estas características:
+</p>
+<h3>
+    <a id="Depth" name="Depth">Profundidad</a>
+</h3>
+<p>
+    Profundidad es el volumen o la cantidad de datos que se utiliza para la prueba. La profundidad es una consideración
+    importante, puesto que la escasez de datos puede no reflejar condiciones de la vida real, mientras que el exceso de
+    datos es difícil de gestionar y mantener. Lo ideal es que la prueba se inicie con un pequeño conjunto de datos que
+    ofrezca soporte para los casos de prueba críticos (por lo general, los casos de prueba positivos). A medida que se vaya
+    ganando seguridad durante la prueba, se deben aumentar los datos de prueba hasta que la profundidad de datos sea
+    representativa del entorno desplegado (o que sea adecuada y viable).
+</p>
+<h3>
+    <a id="Breadth" name="Breadth">Extensión</a>
+</h3>
+<p>
+    La extensión hace referencia al grado de variación de los valores de los datos de prueba. Se puede aumentar la
+    profundidad de los datos de prueba, simplemente creando más registros. Mientras que, por lo general, es una solución
+    adecuada, no trata las variaciones verdaderas de los datos que se espera encontrar en los datos reales. Si estas
+    variaciones en los datos de prueba, es posible que no se puedan identificar defectos (después de todo, no todas las
+    retiradas de los cajeros automáticos son de un importe de 50,00 dólares). Por ello, los valores de datos deben reflejar
+    los valores de datos que se encuentran en el entorno desplegado como, por ejemplo, 10,00 ó 120,00 dólares. Además, los
+    datos de prueba deben reflejar información del mundo real, por ejemplo:
+</p>
+<ul>
+    <li>
+        Nombres que incluyan títulos, valores numéricos, puntuación y sufijos: 
+        <ul>
+            <li>
+                Dr. James Bandlin, Ms. Susan Smith y Rev. Joseph P. Mayers
+            </li>
+            <li>
+                James Johnson III, Steven Wilshire 3rd y Charles James Ellsworth, Esq.
+            </li>
+            <li>
+                Ellen Jones-Smythe, Brian P. Tellstor
+            </li>
+        </ul>
+    </li>
+    <li>
+        Direcciones con varias líneas de dirección, por ejemplo: 
+        <ul>
+            <li>
+                6500 Broadway Street<br />
+                 Suite 175
+            </li>
+            <li>
+                1550 Broadway<br />
+                 Piso 17<br />
+                 Mailstop 75A
+            </li>
+        </ul>
+    </li>
+    <li>
+        Códigos de ciudad (y país) y números de teléfono que sean reales y mantengan correspondencia: 
+        <ul>
+            <li>
+                Lexington, MA, EE.UU. + 01 781 676 2400
+            </li>
+            <li>
+                Kista, Suecia +46 8 56 62 82 00
+            </li>
+            <li>
+                París, Francia <font size="3">+33 1 30 12 09 50</font>
+            </li>
+        </ul>
+    </li>
+</ul>
+<p>
+    Los valores de datos de prueba pueden ser una representación física o una representación estadística de los datos
+    reales para obtener la extensión suficiente. Se sugieren y valoran ambos métodos.
+</p>
+<p>
+    Para crear datos de prueba basados en una representación física de los datos desplegados, identifique los valores (o
+    rangos) permitidos para cada elemento de datos de la base de datos desplegada y asegúrese de que, para cada elemento de
+    datos haya, como mínimo, un registro en los datos de prueba que contenga cada valor permitido.
+</p>
+<p>
+    Por ejemplo:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th id="col1" width="19%" rowspan="2">
+                    &nbsp;
+                </th>
+                <th id="col2" scope="col" align="middle" width="29%">
+                    Número de cuenta (rango)
+                </th>
+                <th id="col3" scope="col" align="middle" width="16%">
+                    Número secreto<br />
+                     (entero)
+                </th>
+                <th id="col4" scope="col" align="middle" width="21%">
+                    Saldo de cuenta<br />
+                     (decimal)
+                </th>
+                <th id="col5" scope="col" align="middle" width="16%">
+                    Tipo de cuenta<br />
+                     (cadena de caracteres)
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" headers="col2" width="29%">
+                    (S) 0812 0000 0000 a<br />
+                     0812 9999 9999 
+                    <p>
+                        &copy; 0829 0000 0000 a<br />
+                         0829 9999 9999
+                    </p>
+                    <p>
+                        (X) 0799 0000 0000 a<br />
+                         0799 9999 9999
+                    </p>
+                </td>
+                <td align="middle" headers="col3" width="16%">
+                    0000 - 9999
+                </td>
+                <td align="middle" headers="col4" width="21%">
+                    -999.999,99 a 999.999,99
+                </td>
+                <td align="middle" headers="col5" width="16%">
+                    S, C, X
+                </td>
+            </tr>
+            <tr>
+                <td headers="col1" width="19%">
+                    registro 1
+                </td>
+                <td align="right" headers="col2" width="29%">
+                    0812 0837 0293
+                </td>
+                <td align="right" headers="col3" width="16%">
+                    8493
+                </td>
+                <td align="right" headers="col4" width="21%">
+                    -3.123,84
+                </td>
+                <td align="right" headers="col5" width="16%">
+                    S
+                </td>
+            </tr>
+            <tr>
+                <td headers="col1" width="19%">
+                    registro 2
+                </td>
+                <td align="right" headers="col2" width="29%">
+                    0812 6493 8355
+                </td>
+                <td align="right" headers="col3" width="16%">
+                    3558
+                </td>
+                <td align="right" headers="col4" width="21%">
+                    8.438,53
+                </td>
+                <td align="right" headers="col5" width="16%">
+                    S
+                </td>
+            </tr>
+            <tr>
+                <td headers="col1" width="19%">
+                    registro 3
+                </td>
+                <td align="right" headers="col2" width="29%">
+                    0829 7483 0462
+                </td>
+                <td align="right" headers="col3" width="16%">
+                    0352
+                </td>
+                <td align="right" headers="col4" width="21%">
+                    673,00
+                </td>
+                <td align="right" headers="col5" width="16%">
+                    C
+                </td>
+            </tr>
+            <tr>
+                <td headers="col1" width="19%">
+                    registro 4
+                </td>
+                <td align="right" headers="col2" width="29%">
+                    0799 4896 1893
+                </td>
+                <td align="right" headers="col3" width="16%">
+                    4896
+                </td>
+                <td align="right" headers="col4" width="21%">
+                    493.498,49
+                </td>
+                <td align="right" headers="col5" width="16%">
+                    X
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    La matriz anterior contiene el número mínimo de registros que representan físicamente los valores de datos aceptables.
+    Para el número de cuenta, hay un registro para cada uno de los tres rangos, todos los números de PIN se encuentran
+    dentro del rango especificado, hay varios saldos de cuenta diferentes, incluido uno que es negativo, y hay registros
+    para cada uno de los diferentes tipos de cuenta. La matriz anterior son los datos mínimos, y la recomendación sería
+    disponer de valores de datos tanto en los límites de cada rango como dentro del rango (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_case_81FD1D9F.html" guid="1.3981505661923931E-304">Directriz: Caso de prueba</a>).
+</p>
+<p>
+    La ventaja de la representación física es que los datos de prueba tienen un tamaño limitado y gestionable, centrado y
+    dirigido a los valores aceptables. Sin embargo, la desventaja es que los datos del mundo real no son totalmente
+    aleatorios. Los datos reales tienden a tener perfiles estadísticos que puede afectar al rendimiento, lo que no se tiene
+    en cuenta al utilizar la representación física.
+</p>
+<p>
+    La representación de los datos de prueba estadísticos son los datos de prueba que reflejan una creación de ejemplos
+    estadísticos (de los mismos porcentajes) de los datos de producción. Por ejemplo, utilizando los mismos elementos de
+    datos que más arriba, si se analiza la base de datos de producción y se descubre lo siguiente:
+</p>
+<ul>
+    <li>
+        Número total de registros: 294.031
+    </li>
+    <li>
+        Número total de tipo de cuenta S: 141.135 (48 % del total)
+    </li>
+    <li>
+        Número total de tipo de cuenta C: 144.075 (49 %)
+    </li>
+    <li>
+        Número total de tipo de cuenta X: 8.821 (3 %)
+    </li>
+    <li>
+        Los números de cuenta y los números de PIN están distribuidos equitativamente
+    </li>
+</ul>
+<p>
+    los datos de prueba, basados en la creación de ejemplos estadísticos incluiría 294 registros (si se compara con los
+    cuatro que se han indicado más arriba):
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th id="col1" scope="col" width="20%" rowspan="2">
+                    &nbsp;
+                </th>
+                <th id="col2" scope="col" align="middle" width="40%" colspan="2">
+                    Datos de prueba (al .1 por ciento de producción)
+                </th>
+            </tr>
+            <tr>
+                <td align="right" headers="col2" width="20%">
+                    Número de registros
+                </td>
+                <td align="right" headers="col2" width="20%">
+                    Porcentaje
+                </td>
+            </tr>
+            <tr>
+                <td headers="col1" width="20%">
+                    Número total de registros
+                </td>
+                <td align="right" headers="col2" width="20%">
+                    294
+                </td>
+                <td align="right" headers="col2" width="20%">
+                    100
+                </td>
+            </tr>
+            <tr>
+                <td headers="col1" width="20%">
+                    Números de cuenta<br />
+                     (S) 0812 0000 0000 a<br />
+                     0812 9999 9999
+                </td>
+                <td align="right" headers="col2" width="20%">
+                    141
+                </td>
+                <td align="right" headers="col2" width="20%">
+                    48
+                </td>
+            </tr>
+            <tr>
+                <td headers="col1" width="20%">
+                    Números de cuenta<br />
+                     &copy; 0829 0000 0000 a<br />
+                     0829 9999 9999
+                </td>
+                <td align="right" headers="col2" width="20%">
+                    144
+                </td>
+                <td align="right" headers="col2" width="20%">
+                    49
+                </td>
+            </tr>
+            <tr>
+                <td headers="col1" width="20%">
+                    Números de cuenta<br />
+                     (X) 0799 0000 0000 a<br />
+                     0799 9999 9999
+                </td>
+                <td align="right" headers="col2" width="20%">
+                    9
+                </td>
+                <td align="right" headers="col2" width="20%">
+                    3
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    La matriz anterior sólo trata los tipos de cuenta. Al desarrollar los datos de prueba más correctos basados en la
+    representación estadística, se deberían incluir los elementos de datos significativos. En el ejemplo anterior,
+    incluiría reflejar los saldos de cuenta reales.
+</p>
+<p>
+    Una desventaja de la representación estadística es que no refleja el rango completo de valores aceptables.
+</p>
+<p>
+    Por lo general, se utilizan ambos métodos de identificación de datos de prueba para garantizar que los datos de prueba
+    tratan todos los valores y problemas de población / rendimiento.
+</p>
+<p>
+    La extensión de los datos de prueba es adecuada para los datos de prueba que se utilizan como entrada, así como para
+    los datos de prueba que se utilizan para dar soporte a la prueba (en datos preexistentes).
+</p>
+<h3>
+    <a id="Scope" name="Scope">Ámbito</a>
+</h3>
+<p>
+    El ámbito es la aplicabilidad de los datos de prueba al objetivo de la prueba, y está relacionado con la profundidad y
+    la extensión. Tener una gran cantidad de datos no significa que sean los datos correctos. Como en el caso de la
+    extensión de los datos de prueba, se debe garantizar que los datos de prueba sean adecuados, es decir, que haya datos
+    de prueba para dar soporte al objetivo de prueba específico.
+</p>
+<p>
+    Por ejemplo, en la matriz anterior, los cuatro primeros registros de datos de prueba tratan los valores aceptables para
+    cada elemento de datos. Sin embargo, no hay registros para evaluar los saldos negativos para los tipos de cuenta C y X,
+    por ello, aunque los datos de prueba incluyan de modo correcto saldos negativos (extensión válida), los datos que se
+    sitúan por debajo resultan insuficientes en este ámbito para dar soporte a cualquier prueba que utilice saldos de
+    cuenta negativos para cada tipo de cuenta. Para tratar esta omisión, se necesita ampliar los datos a fin de incluir
+    otros registros, incluidos saldos negativos, para cada uno de los distintos tipos de cuenta.
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th id="col1" width="20%" rowspan="2">
+                </th>
+                <th id="col2" scope="col" align="middle" width="27%">
+                    Número de cuenta (rango)
+                </th>
+                <th id="col3" scope="col" align="middle" width="18%">
+                    Número secreto<br />
+                     (entero)
+                </th>
+                <th id="col4" scope="col" align="middle" width="22%">
+                    Saldo de cuenta<br />
+                     (decimal)
+                </th>
+                <th id="col5" scope="col" align="middle" width="15%">
+                    Tipo de cuenta<br />
+                     (cadena de caracteres)
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" headers="col2" width="27%">
+                    (S) 0812 0000 0000 a<br />
+                     0812 9999 9999 
+                    <p>
+                        &copy; 0829 0000 0000 a<br />
+                         0829 9999 9999
+                    </p>
+                    <p>
+                        (X) 0799 0000 0000 a<br />
+                         0799 9999 9999
+                    </p>
+                </td>
+                <td align="middle" headers="col3" width="18%">
+                    0000 - 9999
+                </td>
+                <td align="middle" headers="col4" width="22%">
+                    -999.999,99 a 999.999,99
+                </td>
+                <td align="middle" headers="col5" width="15%">
+                    S, C, X
+                </td>
+            </tr>
+            <tr>
+                <th id="row3" scope="row" headers="col1" width="20%">
+                    registro 1
+                </th>
+                <td align="right" headers="row3 col2" width="27%">
+                    0812 0837 0293
+                </td>
+                <td align="right" headers="row3 col3" width="18%">
+                    8493
+                </td>
+                <td align="right" headers="row3 col4" width="22%">
+                    -3.123,84
+                </td>
+                <td align="right" headers="row3 col5" width="15%">
+                    S
+                </td>
+            </tr>
+            <tr>
+                <th id="row4" scope="row" headers="col1" width="20%">
+                    registro 2
+                </th>
+                <td align="right" headers="row4 col2" width="27%">
+                    0812 6493 8355
+                </td>
+                <td align="right" headers="row4 col3" width="18%">
+                    3558
+                </td>
+                <td align="right" headers="row4 col4" width="22%">
+                    8.438,53
+                </td>
+                <td align="right" headers="row4 col5" width="15%">
+                    S
+                </td>
+            </tr>
+            <tr>
+                <th id="row5" scope="row" headers="col1" width="20%">
+                    registro 3
+                </th>
+                <td align="right" headers="row5 col2" width="27%">
+                    0829 7483 0462
+                </td>
+                <td align="right" headers="row5 col3" width="18%">
+                    0352
+                </td>
+                <td align="right" headers="row5 col4" width="22%">
+                    673,00
+                </td>
+                <td align="right" headers="row5 col5" width="15%">
+                    C
+                </td>
+            </tr>
+            <tr>
+                <th id="row6" scope="row" headers="col1" width="20%">
+                    registro 4
+                </th>
+                <td align="right" headers="row6 col2" width="27%">
+                    0799 4896 1893
+                </td>
+                <td align="right" headers="row6 col3" width="18%">
+                    4896
+                </td>
+                <td align="right" headers="row6 col4" width="22%">
+                    493.498,49
+                </td>
+                <td align="right" headers="row6 col5" width="15%">
+                    X
+                </td>
+            </tr>
+            <tr>
+                <th id="row7" scope="row" headers="col1" width="20%">
+                    Nuevo registro 1
+                </th>
+                <td align="right" headers="row7 col2" width="27%">
+                    0829 3491 4927
+                </td>
+                <td align="right" headers="row7 col3" width="18%">
+                    0352
+                </td>
+                <td align="right" headers="row7 col4" width="22%">
+                    -995.498,34
+                </td>
+                <td align="right" headers="row7 col5" width="15%">
+                    C
+                </td>
+            </tr>
+            <tr>
+                <th id="row8" scope="row" headers="col1" width="20%">
+                    Nuevo registro 2
+                </th>
+                <td align="right" headers="row8 col2" width="27%">
+                    0799 6578 9436
+                </td>
+                <td align="right" headers="row8 col3" width="18%">
+                    4896
+                </td>
+                <td align="right" headers="row8 col4" width="22%">
+                    -64.913,87
+                </td>
+                <td align="right" headers="row8 col5" width="15%">
+                    X
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    El ámbito de los datos de prueba es adecuado para los datos de prueba que se utilizan como entrada, así como para los
+    datos de prueba que se utilizan para dar soporte a la prueba (en datos preexistentes).
+</p>
+<h3>
+    <a id="Architecture" name="Architecture">Arquitectura</a>
+</h3>
+<p>
+    La estructura física de los datos de prueba sólo es adecuada para cualquier dato preexistente que utilice el destino de
+    la prueba para dar soporte a la prueba, por ejemplo, una tabla de reglas o una base de datos de la aplicación.
+</p>
+<p>
+    La prueba no se ejecuta una vez y se finaliza. La prueba se repite en y entre iteraciones. Con el objeto de ejecutar la
+    prueba de modo coherente, seguro y eficaz, los datos de prueba se deben devolver a su estado inicial anterior a la
+    ejecución de la prueba. Esto se aplica, en especial, cuando se va a automatizar la prueba.
+</p>
+<p>
+    Por este motivo, y para garantizar la integridad, la seguridad y la eficacia de la prueba, resulta de extrema
+    importancia que los datos de prueba estén libres de todas las influencias externas y que se conozca su estado al
+    principio, durante y al final de la ejecución de la prueba. Para lograr este objetivo de la prueba, se deben tratar dos
+    problemas:
+</p>
+<ul>
+    <li>
+        <a href="#Instability / Segregation">inestabilidad / segregación</a> - aislamiento de influencias externas de
+        los datos de prueba
+    </li>
+    <li>
+        <a href="#Initial State">estado inicial</a> - conocimiento del estado inicial específico de los datos, y
+        posibilidad de volver a dicho estado
+    </li>
+</ul>
+<p>
+    Cada uno de estos problemas afecta al modo en que se gestiona la base de datos de prueba, se diseña el modelo de prueba
+    y se interactúa con otros roles.
+</p>
+<h4>
+    <a id="Instability / Segregation" name="Instability / Segregation">Inestabilidad / Segregación</a>
+</h4>
+<p>
+    Los datos de prueba pueden convertirse en inestables por los motivos siguientes:
+</p>
+<ul>
+    <li>
+        influencias externas no relacionadas con la prueba modifican los datos
+    </li>
+    <li>
+        los verificadores desconocen los datos que utilizan los demás verificadores
+    </li>
+</ul>
+<p>
+    Para mantener la seguridad y la integridad de la prueba, los datos de prueba se deben controlar y aislar correctamente
+    de dichas influencias. Las estrategias para asegurar que se han aislado los datos de prueba incluyen:
+</p>
+<ul>
+    <li>
+        entornos de prueba separados - los verificadores tienen su propio entorno de prueba, separado físicamente de los
+        demás. Los verificadores no comparten nada, es decir, tienen sus propios datos y destino de la prueba. Se puede
+        conseguir, por ejemplo, si cada verificador tiene su propio PC.<br />
+    </li>
+    <li>
+        instancias de base de datos de prueba separados - los verificadores tienen su propia instancia de datos, aislados
+        de todas las demás influencias. Se comparte el entorno físico, quizá incluso el destino de la prueba, pero si cada
+        verificador tiene su propia instancia de datos, se reduce mucho el riesgo de contaminación de los datos de
+        prueba.<br />
+    </li>
+    <li>
+        partición de base de datos / datos de prueba - todos los verificadores comparten la base de datos y están bien
+        informados sobre los datos que utilizan los demás (y evitan utilizar los datos de otros verificadores). Por
+        ejemplo, un verificador utiliza los registros 0 a 99 y otro verificador utiliza los registros 100 a 199, o bien,
+        alguno utiliza clientes cuyos apellidos empiecen por las letras de la Aa a la Kz, mientras que otro verificador
+        utiliza pacientes cuyos nombres empiecen por las letras de la La a la Zz.
+    </li>
+</ul>
+<h4>
+    <a id="Initial State" name="Initial State">Estado inicial</a>
+</h4>
+<p>
+    El otro problema de la arquitectura de datos de prueba que se debe tratar es el del estado inicial de los datos de
+    prueba al iniciar la ejecución de la prueba. En especial, esto se aplica cuando se utiliza la automatización de
+    pruebas. Del mismo modo que el destino de la prueba debe iniciar la ejecución de la prueba en un estado conocido y
+    deseado, lo mismo se aplica a los datos de prueba. Esto contribuye a la condición de repetición y seguridad de que cada
+    ejecución de la prueba sea igual que la anterior.
+</p>
+<p>
+    Para tratar este problema se suelen utilizar cuatro estrategias:
+</p>
+<ul>
+    <li>
+        renovación de los datos
+    </li>
+    <li>
+        reinicialización de los datos
+    </li>
+    <li>
+        restablecimiento de los datos
+    </li>
+    <li>
+        rehacer datos
+    </li>
+</ul>
+<p>
+    Más abajo se describe con detalle cada una de ellas.
+</p>
+<p>
+    El método que se utiliza depende de varios factores, incluidas las características físicas de la base de datos, la
+    competencia técnica de los verificadores, la disponibilidad de roles externos (no de prueba) y el destino de la prueba.
+</p>
+<h5>
+    <a id="Data Refresh" name="Data Refresh">Renovación de los datos</a>
+</h5>
+<p>
+    El método más recomendable para volver los datos de prueba a su estado inicial es la Renovación de datos. Este método
+    implica la creación y el almacenamiento de una copia de la base de datos en su estado inicial. Al terminar la ejecución
+    de la prueba (o antes de la ejecución de la prueba), la copia archivada de la base de datos de prueba se copia en el
+    entorno de prueba para su utilización. De este modo se asegura que el estado inicial de los datos de prueba es el mismo
+    al principio de cada ejecución de la prueba.
+</p>
+<p>
+    Una ventaja de este método es que los datos se pueden archivar en varios estados iniciales diferentes. Por ejemplo, los
+    datos de prueba se pueden archivar en el estado del final del día, el estado del final de la semana o el estado del
+    final del mes, entre otros. De este modo, el verificador dispone de un método que le permite renovar rápidamente a un
+    estado determinado con el objeto de dar soporte a una prueba, por ejemplo, al probar los casos de uso de final de mes.
+</p>
+<h5>
+    <a id="Data Re-initialize" name="Data Re-initialize">Reinicialización de los datos</a>
+</h5>
+<p>
+    Si los datos no se pueden renovar, el método siguiente más adecuado consiste en restaurar los datos a su estado inicial
+    a través de algún medio programático. La reinicialización de los datos se basa en herramientas y casos de uso
+    especiales para devolver los datos de prueba a sus valores iniciales.
+</p>
+<p>
+    Debe tener cuidado y asegurarse de que todos los datos, las relaciones y los valores clave se devuelven a su valor
+    inicial adecuado a fin de garantizar que no haya errores en los datos.
+</p>
+<p>
+    Una de las ventajas de este método es que puede ofrecer soporte para la prueba de valores no válidos en la base de
+    datos. En condiciones normales, se debe bloquear la entrada de los valores de datos no válidos en los datos (por
+    ejemplo, por medio de una regla de validación en el cliente). Sin embargo, otro actor puede afectar a los datos (por
+    ejemplo, una actualización electrónica de otro sistema). La prueba debe verificar que se identifiquen y manejen
+    correctamente los datos no válidos, con independencia de cómo se lleve a cabo.
+</p>
+<h5>
+    <a id="Data Reset" name="Data Reset">Restablecimiento de los datos</a>
+</h5>
+<p>
+    Un método sencillo para volver los datos a su estado inicial es "revertir los cambios" realizados en los datos durante
+    la prueba. Este método se basa en la utilización del destino de la prueba para entrar entradas de reversión, es decir,
+    añadir registros / valores que se han suprimido, deshacer las modificaciones de los registros /valores modificados y
+    suprimir los datos que se han añadido.
+</p>
+<p>
+    No obstante, este método tiene riesgos asociados, entre los que se incluyen:
+</p>
+<ul>
+    <li>
+        se deben revertir todas las acciones, no sólo algunas
+    </li>
+    <li>
+        se basa en casos de uso en el destino de la prueba (que se deben probar para verificar si funciona correctamente
+        antes de utilizarlos para el restablecimiento de los datos).
+    </li>
+    <li>
+        las claves de base de datos, los índices y los puntos no se deben o no se pueden restablecer
+    </li>
+</ul>
+<p>
+    Si éste es el único método disponible en el entorno de verificación, evite utilizar claves de base de datos, índices y
+    punteros como destinos principales de la verificación. Es decir, por ejemplo, utilice el campo Nombre del paciente para
+    determinar si el paciente se ha añadido a la base de datos, en lugar de utilizar un número de ID de paciente generado
+    por el sistema.
+</p>
+<h5>
+    <a id="Data Roll Forward" name="Data Roll Forward">Rehacer datos</a>
+</h5>
+<p>
+    Rehacer datos es el método menos adecuado para tratar el estado inicial de los datos de prueba. De hecho, no se aplica
+    realmente al problema. En vez de ello, al terminar la ejecución de la prueba el estado de los datos se convierte en el
+    nuevo estado inicial de los datos de prueba. Por lo general, requiere modificar los datos de prueba utilizados para la
+    entrada, y los casos de prueba y los datos de prueba utilizados para la evaluación de los resultados.
+</p>
+<p>
+    Hay algunas instancias en las que es necesario, por ejemplo, al final del mes. Si no existe archivador de los datos
+    antes del final del mes, se deben ejecutar los datos de prueba y los scripts de prueba de cada día y semana con el
+    objeto de "rehacer" los datos para el estado que se necesita para la prueba del proceso de fin de mes.
+</p>
+<p>
+    Entre los riesgos asociados a este método se incluyen:
+</p>
+<ul>
+    <li>
+        las claves de base de datos, los índices y los puntos no se pueden restablecer (y no se pueden utilizar para la
+        verificación)
+    </li>
+    <li>
+        los datos cambian constantemente
+    </li>
+    <li>
+        requiere esfuerzo adicional para certificar la verificación de los resultados
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

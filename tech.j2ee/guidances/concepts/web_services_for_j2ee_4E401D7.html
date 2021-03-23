@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concepto: Servicios web para J2EE</title>
+<meta content="Concept" name="uma.type">
+<meta content="web_services_for_j2ee" name="uma.name">
+<meta content="Servicios web para J2EE" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "1.2274284020937826E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "1.2274284020937826E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "1.2274284020937826E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "1.2274284020937826E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.2274284020937826E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concepto: Servicios web para J2EE</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se proporciona una visión general de los servicios web de J2EE.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Arquitecto de software</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Qué es un servicio web de J2EE
+</h3>
+<p>
+    Un servicio web se organiza alrededor de una arquitectura con tres elementos principales: el registro de servicios, el
+    proveedor de servicios y el solicitante de servicios. En la figura 1 se proporciona una visión general de las
+    relaciones entre estos distintos elementos.
+</p>
+<p align="center">
+    <img height="339" alt="Arquitectura de servicios web" src="./../../../tech.j2ee/guidances/concepts/resources/service_arch.gif" width="487" /><br />
+     Figura 1: arquitectura de servicios web
+</p>
+<p>
+    El proveedor de servicios comienza definiendo la interfaz de servicio mediante un documento de descripción de servicio
+    WSDL (Web Services Description Language). Esta definición abstracta se asocia con enlaces de codificación y transporte,
+    así como a una dirección en una descripción de servicio concreta para definir una instancia de servicio concreta que
+    también se denomina <i>punto final de servicio</i> o <i>puerto</i>. Esta descripción concreta se puede publicar en un
+    registro de servicios como UDDI (Universal Description, Discovery and Integration) al que podrá acceder cualquier
+    solicitante de servicios. Un solicitante de servicios lo utilizará para seleccionar y utilizar una implementación de
+    servicio concreta para el servicio web.
+</p>
+<p>
+    Un servicio web de J2EE está formado por un conjunto de estos puertos funcionando dentro de un contenedor. El
+    contenedor actúa como intermediario para acceder al servicio y proporciona el entorno de ejecución.
+</p>
+<p>
+    Un cliente de un servicio web puede ser otro servicio web, cualquier componente J2EE o una aplicación Java arbitraria.
+    Incluso aplicaciones que no son web ni Java pueden utilizar servicios web.
+</p>
+<h3>
+    Vista de cliente del servicio web
+</h3>
+<p>
+    El proveedor de puertos (proveedor de servicios) y el contenedor proporcionan la vista de cliente del servicio web. Tal
+    como se muestra más abajo en la figura 2 (en gris), la vista de cliente comprende una interfaz de servicio y una
+    interfaz de punto final de servicio.
+</p>
+<p align="center">
+    <img height="217" alt="Vista de cliente del servicio web" src="./../../../tech.j2ee/guidances/concepts/resources/client_view.gif" width="487" /><br />
+     Figura 2: vista de cliente del servicio web
+</p>
+<p align="left">
+    Para acceder a un puerto de un servicio web, el cliente comienza por ubicar la interfaz del servicio mediante las API
+    de JNDI. Mediante la interfaz de servicio, el cliente descubrirá los métodos que hay que utilizar para acceder a un
+    puerto y a la implementación del servicio web mediante la utilización de la interfaz de punto final de servicio. En la
+    vista de cliente, un puerto se considera como un objeto sin estado.
+</p>
+<p align="left">
+    La especificación JAX-RPC definen el servicio y las interfaces de punto final de servicio, sin embargo, es el documento
+    de descripción de servicio WSDL que proporciona el proveedor de servicios web el que define el comportamiento de la
+    interfaz de servicio.
+</p>
+<h3>
+    Vista de servidor del servicio web
+</h3>
+<p>
+    La vista de servidor del servicio web trata con la implementación de la lógica empresarial del servicio. Tal como se
+    define en J2EE 1.4, un punto final de servicio web se puede implementar mediante una de las siguientes aproximaciones:
+</p>
+<ul>
+    <li>
+        Utilizando un bean de sesión sin estado tal como se indica en las especificaciones <a href="http://www.jcp.org/en/jsr/detail?id=109" target="_blank">JSR 109</a> y <a href="http://java.sun.com/products/ejb/docs.html" target="_blank">EJB 2.1</a>.
+    </li>
+    <li>
+        Utilizando un servlet tal como se especifica en <a href="http://java.sun.com/webservices/jaxrpc/index.jsp" target="_blank">JAX-RPC</a>.
+    </li>
+</ul>
+<p>
+    Consulte la sección <b><a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_session_beans_5E45D5DA.html" guid="6.241144674389355E-307">Directriz: identificación de beans de sesión</a></b> para un punto final basado en un
+    bean de sesión y la sección <b><a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_servlets_951FE427.html" guid="6.749276633239724E-306">Directriz: identificación de servlets</a></b> para un punto final basado en un servlet.
+</p>
+<h3>
+    Referencia
+</h3>
+<p>
+    La referencia principal para esta página es la &nbsp;<a href="http://www.jcp.org/en/jsr/detail?id=109" target="_blank">especificación de servicios web para J2EE (JSR 109)</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concepto: Desarrollo de soluciones de componente</title>
+<meta content="Concept" name="uma.type">
+<meta content="developing_component_solutions" name="uma.name">
+<meta content="Desarrollo de soluciones de componente" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:3.2329841703462285E-305", path: ["3.2329841703462285E-305", "1.8262162566452063E-305", "1.8809435842664573E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "3.2329841703462285E-305", "1.8262162566452063E-305", "1.8809435842664573E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "1.8809435842664573E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.8809435842664573E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concepto: Desarrollo de soluciones de componente</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../core.base_rup/guidances/concepts/resources/road_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">El desarrollo basado en componentes es una variación del desarrollo general de aplicaciones. En esta directriz, se utiliza el término &quot;componente&quot; para hacer referencia a componentes desplegables y desarrollados independientemente.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h6>
+    <b><font size="2">Actividades a lo largo del ciclo vital:</font></b>
+</h6>
+<ol>
+    <li>
+        <a href="#Introduction">Introducción</a>
+    </li>
+    <li>
+        <a href="#Inception Phase Activities">Actividades de la fase inicial</a>
+    </li>
+    <li>
+        <a href="#Elaboration Phase Activities">Actividades de la fase de elaboración</a>
+    </li>
+    <li>
+        <a href="#Construction Phase Activities">Actividades de la fase de construcción</a>
+    </li>
+    <li>
+        <a href="#Transition Phase Activities">Actividades de la fase de transición</a>
+    </li>
+</ol>
+<table>
+    <tbody>
+        <tr>
+            <td width="284" height="102">
+                <h6>
+                    <b><font size="2">Temas adicionales:</font></b>
+                </h6>
+                <ul>
+                    <li>
+                        <b>Conceptos</b> 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/distribution_patterns_5A01CAF5.html" guid="6.137181182978733E-305">Patrones de distribución</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Directrices</b> 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/concurrency_3E796647.html" guid="1.5676516174458592E-304">concurrencia</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/data_model_80FB2539.html" guid="3.4196799396281445E-306">modelado de datos</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/analysis_class_7E97273E.html" guid="2.2738948033145062E-306">partición de funcionalidades utilizando las clases de
+                                análisis</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/interface_18EF69A6.html" guid="3.6682388132488183E-305">interfaces</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/layering_FCCD1BDA.html" guid="4.458864982057142E-306">creación de capas</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/software_architecture_document_F4C93435.html" guid="2.9494785550310917E-305">arquitectura de software</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/unit_test_9A3F053.html" guid="9.315724622037552E-305">componentes de prueba de unidad</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/design_subsystem_B26FD609.html" guid="1.2314266786534317E-305">utilización de subsistemas de diseño para representar
+                                componentes</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <b>Documentación</b> 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/developing_large-scale_systems_with_the_rational_unified_process_7AA2AF65.html" guid="1.768223108034868E-305">desarrollo de sistemas basados en componentes a gran
+                                escala</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<h1>
+    <font size="+0"><b><small><a id="Introduction" name="Introduction">Introducción</a></small></b></font>
+</h1>
+<p class="node">
+    El desarrollo basado en componentes es una variación del desarrollo general de aplicaciones en el que:
+</p>
+<blockquote>
+    <ul>
+        <li>
+            La aplicación se <b>ensambla a partir de componentes ejecutables discretos</b> que se <b>desarrollan y
+            despliegan de forma relativamente independiente</b>, potencialmente por equipos diferentes.
+        </li>
+        <li>
+            La aplicación se puede <b>actualizar en incrementos más pequeños</b> mediante la actualización de únicamente
+            los componentes que componen la aplicación.
+        </li>
+        <li>
+            Los componentes se pueden compartir entre aplicaciones mediante la creación de oportunidades de
+            <b>reutilización</b>, y también mediante la creación de <b>dependencias entre proyectos</b>.
+        </li>
+        <li>
+            Aunque no está estrictamente relacionado con el hecho de estar basado en componentes, las aplicaciones basadas
+            en componentes suelen ser <b>distribuidas</b>.
+        </li>
+    </ul>
+</blockquote>
+<p class="node">
+    En esta página, se utiliza el término "componente" para hacer referencia a componentes desplegables y desarrollados
+    independientemente. En el resto de RUP, sin embargo, se utiliza en un sentido más general que se describe en <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/component_A2E2B3B1.html" guid="3.524150980437479E-305">Concepto: Componente</a> y se califica como necesario.
+</p>
+<p class="node">
+    La adaptación de Rational Unified Process (RUP) para manejar los retos del desarrollo basado en componentes se trata
+    más abajo.
+</p>
+<h1>
+    <b><small><a id="Inception Phase Activities" name="Inception Phase Activities"><font size="+0">Actividades de la fase
+    inicial</font></a></small></b>
+</h1>
+<p class="node">
+    Se aplica el flujo de trabajo básico para la <a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/inception_D506BCB4.html" guid="_vyZOwCVuEdqSZ9OimJ-AzA">fase inicial</a>, con las
+    siguientes ampliaciones o variaciones:
+</p>
+<h4>
+    <b>Gestión de proyectos</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/conceive_new_project_E9B31C9F.html" guid="{76FD7B68-FC91-488D-BBF1-6FE58DBACB87}">Actividad: Concebir un proyecto nuevo</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            El foco de la <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/develop_business_case_F985B634.html" guid="{F7A5D34A-A8B1-466D-BE41-FFCD41B4430D}">Tarea: Desarrollar caso de negocio</a> se ajusta para que tenga
+            en cuenta que la utilización de componentes cambia la estructura de costes del desarrollo. Específicamente, el
+            coste de desarrollar componentes disminuye, pero se necesita más esfuerzo para identificar componentes y
+            comprobar que los componentes seleccionados satisfacen los requisitos.
+        </p>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/evaluate_project_scope_and_risk_C777352.html" guid="{BADBA2C5-144D-482B-9B63-C95DA4DBD3E5}">Actividad: Evaluar el riesgo y el ámbito del proyecto</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            Al tomar el enfoque de un componente, cambia la naturaleza de determinados riesgos y se introducen riesgos
+            nuevos. Específicamente:
+        </p>
+        <ul>
+            <li>
+                los componentes de origen externo aumentan el riesgo porque introducen elementos críticos que no están bajo
+                el control directo del equipo del proyecto
+            </li>
+            <li>
+                los componentes de origen externo pueden reducir el tiempo de desarrollo y, de este modo, reducir el riesgo
+                de recursos
+            </li>
+            <li>
+                los componentes de origen externo pueden distorsionar la arquitectura del sistema si imponen restricciones
+                arquitectónicas propias
+            </li>
+        </ul>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/plan_the_project_DD2EE35.html" guid="{823EF41B-2BD1-464B-84DB-C7BD432636E2}">Actividad: Planificar el proyecto</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            En la <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/plan_phases_and_iterations_2AB1A5C9.html" guid="{43005DA9-D75E-464D-8AFC-AB9CACD92626}">Tarea: Planear fases e iteraciones</a>, el plan de la fase de
+            construcción tiene el potencial para mostrar la división del proyecto en dos seguimientos diferentes pero
+            paralelos: uno que desarrolla componentes específicos del dominio y específicos de la aplicación (organizado en
+            las capas superiores de la arquitectura; consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/layering_59FD1CD4.html" guid="3.801315327549898E-305">Concepto:
+            Creación de capas</a>) y otro que desarrolla los componentes que no son específicos del dominio ni de la
+            aplicación y que se organizan en las capas inferiores. En algunos casos, los equipos de desarrollo gestionados
+            independientemente desarrollarán componentes reutilizables. La decisión de introducir seguimientos paralelos es
+            un aspecto de personal y recursos conducido por un deseo de gestionar componentes reutilizables como activos
+            independientes de las aplicaciones en que se despliegan.
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>Requisitos</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/refine_the_system_definition_E67B8011.html" guid="{0FEE5795-6090-4D82-9BDB-925E5F0D9985}">Actividad: Perfeccionar la definición del sistema</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            Cuando se perfeccionan los requisitos del sistema, deben capturarse las restricciones que impone la
+            infraestructura del componente seleccionado. Las infraestructuras de componentes aumentan la productividad de
+            desarrollo, en parte restringiendo los grados de libertad que se ofrecen al arquitecto y el diseñador de
+            software. La <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/detail_software_requirements_A7F0A215.html" guid="{A1FA1E95-8028-42EB-9B92-0DA77380F3E1}">Tarea: Detallar los requisitos de software</a> debe centrarse en
+            documentar estas restricciones.
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>Prueba</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/define_evaluation_mission_611C79D9.html" guid="{10C2C34C-BF5E-4825-A7DC-5E106EFAA4C5}">Actividad: Definir la misión de evaluación</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            Debería crearse un plan de prueba que identifique las pruebas globales previstas para el proyecto, denominado
+            "Plan de prueba maestro".
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>Entorno</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/prepare_environment_for_project_5F602A4.html" guid="{37A50EF5-CC73-4E38-B851-997879548110}">Actividad: Preparar el entorno para el proyecto</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            Cuando recopile y prepare directrices para el proyecto, consulte la <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/prepare_project_specific_guidelines_A9AD00DB.html" guid="{1E706674-C1E7-4F8D-BF06-35FFE49C5E42}">Tarea: Preparar directrices para el proyecto</a> para obtener
+            detalles,&nbsp;tenga en cuenta la infraestructura de componentes específica y las restricciones que impone. Las
+            directrices deben incluir cómo diseñar y codificar utilizando la infraestructura. También deberían proporcionar
+            instrucciones de prueba sobre cómo comprobar la conformidad con la infraestructura de componentes y las
+            interfaces definidas entre componentes.
+        </p>
+    </li>
+</ul>
+<h1>
+    <b><small><a id="Elaboration Phase Activities" name="Elaboration Phase Activities"><font size="+0">Actividades de la
+    fase de elaboración</font></a></small></b>
+</h1>
+<p class="node">
+    Se aplica el flujo de trabajo básico para la <a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/elaboration_6A203A50.html" guid="_-kFhcCVuEdqSZ9OimJ-AzA">fase de
+    elaboración</a>, con las siguientes ampliaciones o variaciones:
+</p>
+<h4>
+    <b>Requisitos</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/refine_the_system_definition_E67B8011.html" guid="{0FEE5795-6090-4D82-9BDB-925E5F0D9985}">Actividad: Perfeccionar la definición del sistema</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            La <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/detail_software_requirements_A7F0A215.html" guid="{A1FA1E95-8028-42EB-9B92-0DA77380F3E1}">Tarea: Detallar los requisitos de software</a> también se centra
+            en las restricciones y los requisitos técnicos y no funcionales que imponen los componentes construidos o
+            adquiridos. Los requisitos no funcionales específicos que se deben considerar son el tamaño, el rendimiento, la
+            impresión en la memoria o el disco, los aspectos de la licencia de tiempo de ejecución y otras restricciones
+            similares que influirán en la construcción o la selección del componente.
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>Análisis y diseño</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/define_a_candidate_architecture_A3651DA3.html" guid="{71ADFE9A-34A0-41BD-8A17-BEA3210E2BBD}">Actividad: Definir una arquitectura candidata</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            La <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Tarea: Análisis de la arquitectura</a> utilice la infraestructura
+            de componentes y los requisitos técnicos y no funcionales para definir una arquitectura inicial, incluido un
+            esquema de creación de capas inicial y un conjunto por omisión de componentes y servicios (representados como
+            mecanismos de análisis y diseño). La <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">Tarea: Análisis de caso de uso</a> se centra en identificar
+            componentes significativos arquitectónicamente de casos de uso significativos arquitectónicamente.
+        </p>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/refine_the_architecture_F40FA195.html" guid="{F2160C54-F666-4736-9982-FC7F58F15FAD}">Actividad: Perfeccionar la arquitectura</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            La <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">Tarea: Estructurar el modelo de implementación</a> establece un
+            modelo de implementación compatible con la infraestructura de componentes y la estructura y las
+            responsabilidades del equipo o los equipos de desarrollo.
+        </p>
+        <p class="node">
+            La <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}">Tarea: Identificar los mecanismos de diseño</a> perfecciona los
+            mecanismos de diseño iniciales para que tengan en cuenta componentes y servicios específicos de la
+            infraestructura.
+        </p>
+        <p class="node">
+            La <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Tarea: Identificar elementos de diseño</a> identificará los
+            principales componentes significativos arquitectónicamente del sistema. Las responsabilidades potencialmente
+            reutilizables deberían agruparse para mejorar la capacidad de reutilización; las funciones específicas de la
+            aplicación deben separarse de las funciones específicas del dominio e independientes del dominio y la
+            aplicación. Para el diseño, los componentes se pueden representar como el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">Producto de trabajo: Subsistemas de diseño</a>. Debería
+            identificarse el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_interface_9816B54F.html" guid="{C6938487-1DAA-4F6A-B3BC-CB99165F0680}">Producto de trabajo: Interfaces</a> para estos
+            componentes/subsistemas.
+        </p>
+        <p class="node">
+            La <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/incorporate_design_elements_D3C582B5.html" guid="{5C647173-4E32-4594-96A9-2548B47722FA}">Tarea: Incorporar elementos de diseño existentes</a> garantiza
+            que los componentes identificados son coherentes y compatibles con los componentes existentes identificados en
+            iteraciones anteriores, en la infraestructura o en orígenes externos.
+        </p>
+        <p class="node">
+            La <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">Tarea: Describir la arquitectura del tiempo de ejecución</a>
+            describe el proceso básico y la arquitectura de hebras de la infraestructura de componentes, mientras que la <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/describe_distribution_9BA1477C.html" guid="{6A112808-0A90-427A-BAB9-E14F3FBF72B5}">Tarea: Describir la distribución</a> describe el entorno
+            informático distribuido en el que se ejecutará la aplicación de componentes.
+        </p>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/design_components_13B33BFC.html" guid="{9C683674-97C1-4AEE-8DB0-9514AEFF698E}">Actividad: Diseñar componentes</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            La <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}">Tarea: Diseño del subsistema</a> perfecciona aún más el diseño de
+            los componentes, identificando las clases del componente que proporcionan el comportamiento real del
+            componente. Al principio de la fase de elaboración, es probable que haya una sola clase, un tipo de 'proxy de
+            componente/subsistema' que actúa como un fragmento para simular el comportamiento del componente para crear
+            prototipos arquitectónicos. Más adelante, el comportamiento de esta clase se distribuye en una colaboración de
+            clases contenidas en el subsistema. Estas clases contenidas se perfeccionan en la <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Tarea: Diseño de clase</a>.
+        </p>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/design_the_database_2BE59DB0.html" guid="{FB3EB753-A979-4849-B57B-97F39271F82B}">Actividad: Diseñar la base de datos</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            El aspecto más importante de la elaboración es garantizar que la estrategia de permanencia es escalable y que
+            el mecanismo de permanencia y el diseño de bases de datos soportarán los requisitos de rendimiento del sistema.
+            Las clases permanentes se identifican y se correlacionan con el mecanismo de permanencia. Los casos de uso de
+            datos intensivos se analizan para garantizar que los mecanismos serán escalables. Junto con las actividades de
+            prueba, se valora y se valida el mecanismo de permanencia y el diseño de bases de datos.
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>Implementación</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/implement_components_AFD1799D.html" guid="{4DC6F53E-1FE1-44EE-812B-003D3BD1ACEA}">Actividad: Implementar componentes</a> 
+        <p class="node">
+            La <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/implement_component_AE366827.html" guid="{3293F4F7-EFCD-4476-BFF1-81AC3812B512}">Tarea: Implementar los elementos de diseño</a> debe cumplir las
+            restricciones impuestas por la infraestructura de componentes, como se describe en las directrices de
+            programación, que se proporcionan como parte del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_project_specific_guidelines_8DC8DA32.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">Producto de trabajo: Directrices específicas del proyecto</a>. En
+            la fase de elaboración, la mayoría de los componentes contienen una gran cantidad de código de 'fragmento para
+            simulación', ya que la implementación se centra en validar la arquitectura, y no producen código de calidad de
+            producción.
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>Prueba</b>
+</h4>
+<ul>
+    <li>
+        Actividades: <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/define_evaluation_mission_611C79D9.html" guid="{10C2C34C-BF5E-4825-A7DC-5E106EFAA4C5}">Definir la misión de evaluación</a>, <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/verify_test_approach_A743008A.html" guid="{7BD514AF-19F9-408F-8279-309BD153C157}">Verificar el enfoque de prueba</a>, <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/test_and_evaluate_4D17BD6A.html" guid="{93B7D625-C83A-4EFB-9772-B88F2EB02CE2}">Probar y evaluar</a>, <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/achieve_acceptable_mission_18DE9944.html" guid="{5DA9C9E9-1538-4433-8B57-B28667D67514}">Conseguir una misión aceptable</a>, <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/improve_test_assets_1C99FFB9.html" guid="{CD77CBDA-CC13-4593-BB81-41AF3FF7A84C}">Aumentar los activos de prueba</a> 
+        <p class="node">
+            Las actividades de prueba de la fase elaboración se centran en validar la arquitectura. Para un sistema basado
+            en componentes, se centran en:
+        </p>
+        <ul>
+            <li>
+                ejercitar las interfaces entre componentes para garantizar que los límites del componente son adecuados
+            </li>
+            <li>
+                una atención mayor en la prueba de rendimiento, especialmente en las pruebas de escala de rendimiento, para
+                garantizar que se pueden sostener los volúmenes de transacción anticipados
+            </li>
+        </ul><br />
+         
+        <p class="node">
+            También es necesario valorar las suposiciones inherentes de la infraestructura de componentes. Estas
+            suposiciones suelen ser la escalabilidad y el rendimiento de los mecanismos de gestión de la transacción y la
+            permanencia, donde el diseñador de mecanismos efectúa suposiciones ocultas que a menudo socavan eficazmente la
+            arquitectura de la aplicación si no conoce la suposición.
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>Gestión de proyectos</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/plan_for_next_iteration_55840038.html" guid="{8040B743-6467-4067-8C0F-E62C3DE99414}">Actividad: Planear la siguiente iteración</a> 
+        <p class="node">
+            Si se utilizan los subsistemas de implementación como 'unidades lógicas de responsabilidad', el trabajo de
+            construcción se puede particionar en dos o más "seguimientos" paralelos: uno que se centra en las funciones
+            específicas de la aplicación y uno o varios que se centran en componentes genéricos reutilizables. Por
+            supuesto, esto depende de si se tienen los recursos humanos suficientes para esfuerzos de desarrollo paralelo.
+            La capacidad de dividir los equipos de desarrollo y trabajar en paralelo depende totalmente de la estabilidad
+            de la arquitectura y, más específicamente, de la calidad y la estabilidad de las interfaces entre los
+            componentes. Esta división será posible si se realiza un esfuerzo enorme en la fase de elaboración.
+        </p>
+    </li>
+</ul>
+<h1>
+    <b><small><a id="Construction Phase Activities" name="Construction Phase Activities"><font size="+0">Actividades de la
+    fase de construcción</font></a></small></b>
+</h1>
+<p class="node">
+    Se aplica el flujo de trabajo básico para la <a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/construction_102AF1EA.html" guid="_SkuIwCVwEdqSZ9OimJ-AzA">fase de
+    construcción</a>, con las siguientes ampliaciones o variaciones:
+</p>
+<h4>
+    <b>Gestión de proyectos</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/plan_for_next_iteration_55840038.html" guid="{8040B743-6467-4067-8C0F-E62C3DE99414}">Actividad: Planear la siguiente iteración</a> 
+        <p class="node">
+            Anteriormente se describió la planificación de la primera iteración de construcción, igual que sucede hacia el
+            final de la elaboración. Igual que la planificación de la iteración, la capacidad de dividir los equipos de
+            desarrollo y trabajar en paralelo sigue dependiendo de la estabilidad de la arquitectura y la calidad y la
+            estabilidad de las interfaces entre los componentes.
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>Análisis y diseño</b>
+</h4>
+<ul>
+    <li>
+        La <b><a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/refine_the_architecture_F40FA195.html" guid="{F2160C54-F666-4736-9982-FC7F58F15FAD}">Actividad: Perfeccionar la arquitectura</a> y la <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/design_components_13B33BFC.html" guid="{9C683674-97C1-4AEE-8DB0-9514AEFF698E}">Actividad: Diseñar componentes</a></b> 
+        <p class="node">
+            El aspecto principal de la construcción es el análisis del recordatorio de los casos de uso y la identificación
+            de las colaboraciones de componentes y los componentes adecuados que realizan los casos de uso . La
+            arquitectura existente se amplía y se completa y los "comportamientos internos" del componente se diseñan y se
+            implementan completamente.
+        </p>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/design_the_database_2BE59DB0.html" guid="{FB3EB753-A979-4849-B57B-97F39271F82B}">Actividad: Diseñar la base de datos</a> 
+        <p class="node">
+            El aspecto principal de la construcción es terminar el diseño de la base de datos y asegurarse de que todas las
+            clases permanentes son soportadas tanto por la base de datos como por el mecanismo de permanencia. Este trabajo
+            se realiza en paralelo y de forma repetitiva con el trabajo que se realiza en la <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/refine_the_architecture_F40FA195.html" guid="{F2160C54-F666-4736-9982-FC7F58F15FAD}">Actividad: Perfeccionar la arquitectura</a> y la <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/design_components_13B33BFC.html" guid="{9C683674-97C1-4AEE-8DB0-9514AEFF698E}">Actividad: Diseñar componentes</a>. La organización ideal
+            consiste en contar con equipos de componentes integrados, y con coordinación entre equipos de los asuntos de
+            permanencia para garantizar un buen diseño de base de datos.
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>Implementación</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/implement_components_AFD1799D.html" guid="{4DC6F53E-1FE1-44EE-812B-003D3BD1ACEA}">Actividad: Implementar los elementos de diseño</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            El trabajo aquí es similar al de elaboración, aunque los demás detalles se completan en incrementos, a medida
+            que avanza la fase.
+        </p>
+    </li>
+    <li>
+        La <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/integrate_each_subsystem_B9835A47.html" guid="{26723872-54F2-48C0-8384-0F595BD86EAD}">Actividad: Integrar los subsistemas</a> y la <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/integrate_the_system_255F6819.html" guid="{1EBA0F67-240A-4402-B830-4DB0FDFEEB9D}">Actividad: Integrar el sistema</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            El sistema se construye progresivamente a medida que la fase continúa.
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>Prueba</b>
+</h4>
+<ul>
+    <li>
+        Actividades: <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/define_evaluation_mission_611C79D9.html" guid="{10C2C34C-BF5E-4825-A7DC-5E106EFAA4C5}">Definir la misión de evaluación</a>, <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/verify_test_approach_A743008A.html" guid="{7BD514AF-19F9-408F-8279-309BD153C157}">Verificar el enfoque de prueba</a>, <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/validate_build_stability_72BD9103.html" guid="{0AE0042B-034C-4296-9FA0-D9DCC61FC7B4}">Validar la estabilidad de la compilación</a>, <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/test_and_evaluate_4D17BD6A.html" guid="{93B7D625-C83A-4EFB-9772-B88F2EB02CE2}">Probar y evaluar</a>, <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/achieve_acceptable_mission_18DE9944.html" guid="{5DA9C9E9-1538-4433-8B57-B28667D67514}">Conseguir una misión aceptable</a>, <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/improve_test_assets_1C99FFB9.html" guid="{CD77CBDA-CC13-4593-BB81-41AF3FF7A84C}">Aumentar los activos de prueba</a>.
+    </li>
+</ul>
+<div style="MARGIN-LEFT: 2em">
+    <p class="node">
+        Las pruebas de rendimiento siguen siendo importantes, aunque cada vez se presta más atención a las pruebas
+        funcionales. Deben tenerse en cuenta la completitud de la funcionalidad, las pruebas de revisión de la
+        funcionalidad existente y la satisfacción de las expectativas de rendimiento.
+    </p>
+</div>
+<h1>
+    <b><small><a id="Transition Phase Activities" name="Transition Phase Activities"><font size="+0">Actividades de la fase
+    de transición</font></a></small></b>
+</h1>
+<ul>
+    <li>
+        El <b>release del producto</b> en el entorno web suele ser incremental y continuo, y se centra menos en la
+        distribución tradicional de medios de soporte. La planificación del release debe ajustarse en consecuencia.
+    </li>
+    <li>
+        El <b>soporte de producción</b> es cada vez más importante en la fase.
+    </li>
+    <li>
+        Se realizan <b>actividades de conversión de datos</b>.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

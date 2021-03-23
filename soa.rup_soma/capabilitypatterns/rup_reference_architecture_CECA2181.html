@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de productos de trabajo: Arquitectura de referencia</title>
+<meta content="WorkProductDescriptor" name="uma.type">
+<meta content="rup_reference_architecture" name="uma.name">
+<meta content="Arquitectura de referencia" name="uma.presentationName">
+<meta content="WorkProductDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc=_RRv38Sv-EduYBoDegGQopA&path=_RRv38Sv-EduYBoDegGQopA,_TS_lYi1bEdudYLeyb_y9tw';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, false, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_TS_lYi1bEdudYLeyb_y9tw"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Producto de trabajo: Arquitectura de referencia</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/workdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Este producto de trabajo es fundamentalmente un patrón (o conjunto de patrones) de arquitectura predefinido, para el que se han de crear instancias posiblemente de forma parcial o completa, diseñado o probado para su uso en determinados contextos técnicos o empresariales, junto con artefactos de soporte que permiten su uso.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="Purpose" name="Purpose"></a> 
+<p>
+    Los productos de trabajo de la arquitectura de referencia son parte de una base de activos reutilizable de una
+    organización. Su objetivo es conformar un punto de partida para el desarrollo de una arquitectura. Pueden ir desde <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/architectural_pattern_E2E8EB79.html" guid="_x7JZRtnmEdmO6L4XMImrsA">patrones de arquitectura</a> ya preparados, <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/architectural_mechanism_8730DF1F.html" guid="_x7JZQ9nmEdmO6L4XMImrsA">mecanismos de arquitectura</a> e <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/framework_96F80772.html" guid="_yJmE89nmEdmO6L4XMImrsA">infraestructuras</a> a sistemas completos, con características conocidas, probadas en la
+    práctica. Pueden aplicarse de forma general, o para una clase de sistemas que abarcan dominios, o tener un foco más
+    estrecho específico de dominio.
+</p>
+<p>
+    El uso de arquitecturas de referencia probadas es una forma eficaz de tratar numerosos requisitos no funcionales, sobre
+    todo, requisitos de calidad, mediante la selección de arquitecturas de referencia existentes, que la práctica ha
+    demostrado que cumplen dichos requisitos. Puede que las arquitecturas de referencia existan o se utilicen en niveles
+    diferentes de abstracción y desde distintos puntos de vista. Éstos se corresponden con las vistas 4+1 (consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/software_architecture_4269A354.html#A Typical Set of Architectural Views" guid="3.066252221588648E-305">"Un conjunto típico de vistas de la arquitectura"</a>). De este modo, el arquitecto de
+    software puede seleccionar lo que mejor se ajusta (sólo diseño de arquitectura, o diseño e implementación) a los
+    diferentes grados de terminación.&nbsp;
+</p>
+<p>
+    Con frecuencia, una arquitectura de referencia se define de modo que no incluya las instancias de los componentes que
+    se utilizarán para construir el sistema (de hacerse, se convierte en una <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/product-line_architecture_ED8F6B10.html" guid="_yRDX3NnmEdmO6L4XMImrsA">arquitectura de línea de productos</a>), pero esta distinción no es muy importante. En
+    Rational Unified Process (RUP), se permite que la noción de arquitectura de referencia incluya referencias a
+    componentes reutilizables existentes (es decir, implementaciones).
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Responsable:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_software_architect_E0310D6B.html" guid="_TS_lYS1bEdudYLeyb_y9tw">Arquitecto de software</a>
+</li>
+</ul>
+</td><td colspan="2" class="sectionTableCell"><span class="sectionTableCellHeading">Modificado por:
+								</span></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Esquematizaci&oacute;n breve</th><td class="sectionTableCell"><a id="BriefOutline" name="BriefOutline"></a> 
+<h4>
+    Organización de activos
+</h4>
+<p>
+    La organización propietaria de los activos de arquitectura de referencia necesitará decidir cómo se clasificarán y
+    organizarán los activos para facilitar la recuperación mediante el arquitecto del software, mediante criterios de
+    selección coincidentes para el nuevo sistema. Aunque la creación y el almacenamiento de las arquitecturas de referencia
+    se encuentran actualmente fuera del ámbito de RUP, una recomendación es la organización de las arquitecturas alrededor
+    de la idea de <a class="elementLinkWithUserText" href="./../../core.base_concepts/guidances/termdefinitions/domain_D8238B93.html" guid="_yHEVYdnmEdmO6L4XMImrsA">dominios</a>, donde un dominio es un área temática que define conocimientos y conceptos
+    de algún aspecto de un sistema, o de una familia de sistemas. Aquí se permite el uso del término 'dominio' en niveles
+    por debajo del de aplicación. Este uso difiere ligeramente de algunas definiciones, por ejemplo, la presentada en [<a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html#HOF99" guid="7.755968586980351E-308">HOF99</a>], pero se alinea bien con la presentada en [<a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html#LMFS96" guid="7.755968586980351E-308">LMFS96</a>]:
+</p>
+<p>
+    <i>"<b>Dominio de línea de productos</b>: grupo vinculado de funciones (presentes o futuras) definidas para facilitar
+    la comunicación, el análisis y la ingeniería con el fin de identificar, diseñar y gestionar las similitudes en una
+    línea de productos. Tales dominios podrían incluir grupos de sistemas de usuarios finales relacionados estrechamente,
+    funciones de uso común en varios sistemas, o agrupaciones de servicios subyacentes de amplia aplicación."</i>
+</p>
+<p>
+    Esta definición incluye la noción de que las cosas que se utilizan para componer los sistemas podrían pertenecer a un
+    dominio digno de estudio por propio derecho. La siguiente figura, extraída de [<a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html#LMFS96" guid="7.755968586980351E-308">LMFS96</a>], ilustra
+    este principio.
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/workproducts/resources/domains.gif" alt="Dominios horizontales y verticales del ejército de los EE.UU." width="381"     height="191" border="0" />
+</p>
+<p align="center">
+    <b>Dominios horizontales y verticales del ejército de los EE.UU.</b>
+</p>
+<p align="left">
+    Esta figura muestra las principales familias del sistema, Information Systems (Sistemas de información), Command &
+    Control (Mando y control) y Weapon Systems (Sistemas de armamento), cada uno con dominios verticales completos, y
+    dominios horizontales que se extienden por los dominios verticales y por las familias del sistema. Por lo tanto, los
+    conceptos de planificación en tiempo real son aplicables al dominio táctico de Command & Control y a todos los
+    dominios verticales de Weapon Systems. Posiblemente, lo mejor sea resolver problemas de planificación en tiempo real
+    una vez para todos estos dominios, y tratar los conocimiento y activos desarrollados de esta manera como un dominio
+    independiente, que tendrá entonces una asociación, por ejemplo, con Electronic Warfare (Guerra electrónica), pero no
+    con los sistemas de información del personal.
+</p>
+<h4 align="left">
+    Contenido
+</h4>
+<p align="left">
+    La arquitectura de referencia tiene el mismo formato que el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">Producto de trabajo: Documento de arquitectura de software</a> y los
+    modelos asociados, <i>sin referencias específicas del proyecto, o con referencias y características genéricas del
+    proyecto,</i> de modo que la arquitectura de referencia pueda clasificarse adecuadamente en la base de activos. Los
+    modelos típicos asociados con el Documento de arquitectura de software (SAD) son un modelo de guión de uso, un modelo
+    de diseño, un modelo de implementación y un modelo de despliegue.
+</p>
+<p align="left">
+    El acceso al documento SAD y modelos asociados ofrece diversos puntos de entrada para el arquitecto de software, que
+    puede elegir usar sólo las partes lógicas o conceptuales de la arquitectura (si la política de reutilización de la
+    organización lo permite). En el otro extremo, el arquitecto de software puede tomar subsistemas de trabajo completos y
+    un modelo de despliegue en el nivel físico (es decir, anteproyectos de redes y hardware completos) de la base de
+    activos.
+</p>
+<p align="left">
+    Para que los activos de arquitectura se puedan utilizar se necesitan otros productos de trabajo de soporte.&nbsp;
+</p>
+<ol>
+    <li>
+        <p align="left">
+            El modelo de guión de uso describe el comportamiento de la arquitectura pero el arquitecto de software deberá
+            conocer sus cualidades no funcionales. Estos dos, los requisitos no funcionales y el modelo de guión de uso,
+            puede que se hayan capturado previamente en una especificación de requisitos de software. A partir de esta
+            especificación, el arquitecto de software podrá determinar si la arquitectura de referencia cumple los
+            requisitos actuales.
+        </p>
+    </li>
+    <li>
+        <p align="left">
+            El uso, y más concretamente, la modificación de la arquitectura necesitarán la misma guía que el desarrollo
+            original. Por ejemplo, el arquitecto de software deberá conocer qué reglas se aplicaron en la formación de la
+            arquitectura de referencia, y la dificultad que entraña modificar las interfaces. El acceso a las directrices
+            de diseño asociadas con la arquitectura de referencia puede ayudar a responder estas preguntas.
+        </p>
+    </li>
+    <li>
+        <p align="left">
+            (Opcional) La revisión de los planes de prueba relevantes también puede ser útil. Estos planes de prueba
+            informarán al arquitecto de las estrategias de prueba y evaluación utilizadas previamente para probar
+            arquitecturas similares, y de esta manera proporcionarán información útil acerca de las debilidades potenciales
+            de la arquitectura.
+        </p>
+    </li>
+    <li>
+        <p align="left">
+            (Opcional) La revisión de las arquitecturas de automatización de pruebas y las especificaciones de interfaz de
+            prueba relevantes puede ser útil. Estos productos de trabajo informan al arquitecto de que pueden realizarse
+            algunas solicitudes respecto de la arquitectura que facilitarán la realización de pruebas.
+        </p>
+    </li>
+</ol></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Descripci&oacute;n principal</th><td class="sectionTableCell"><h4>
+    Organización de activos
+</h4>
+<p>
+    La organización propietaria de los activos de arquitectura de referencia necesitará decidir cómo se clasificarán y
+    organizarán los activos para facilitar la recuperación mediante el arquitecto del software, mediante criterios de
+    selección coincidentes para el nuevo sistema. Aunque la creación y el almacenamiento de las arquitecturas de referencia
+    se encuentra actualmente fuera del ámbito de RUP, se recomienda organizar las arquitecturas alrededor de la idea de <a class="elementLinkWithUserText" href="./../../core.base_concepts/guidances/termdefinitions/domain_D8238B93.html" guid="_yHEVYdnmEdmO6L4XMImrsA">Definición de términos: Dominio</a>, donde un dominio es un área temática que define
+    conocimientos y conceptos de algún aspecto de un sistema, o de una familia de sistemas. Aquí se permite el uso del
+    término 'dominio' en niveles por debajo del de aplicación. Este uso difiere ligeramente de algunas definiciones, por
+    ejemplo la presentada en [<a href="#HOF99">HOF99</a>], pero se alinea bien con la presentada en [<a href="#LMFS96">LMFS96</a>]:
+</p>
+<p>
+    <i>"<b>Dominio de línea de productos</b>: grupo vinculado de funciones (presentes o futuras) definidas para facilitar
+    la comunicación, el análisis y la ingeniería con el fin de identificar, diseñar y gestionar las similitudes en una
+    línea de productos. Tales dominios podrían incluir grupos de sistemas de usuarios finales relacionados estrechamente,
+    funciones de uso común en varios sistemas, o agrupaciones de servicios subyacentes de amplia aplicación."</i>
+</p>
+<p>
+    Esta definición incluye la noción de que las cosas que se utilizan para componer los sistemas podrían pertenecer a un
+    dominio digno de estudio por propio derecho. La siguiente figura, extraída de [<a href="#LMFS96">LMFS96</a>], ilustra
+    este principio.
+</p>
+<p align="center">
+    <img height="191" alt="Dominios horizontales y verticales del ejército de los EE.UU." src="./../../core.base_rup/workproducts/resources/domains.gif"     width="381" border="0" />
+</p>
+<p align="center">
+    <b>Dominios horizontales y verticales del ejército de los EE.UU.</b>
+</p>
+<p align="left">
+    Esta figura muestra las principales familias del sistema, Information Systems (Sistemas de información), Command &
+    Control (Mando y control) y Weapon Systems (Sistemas de armamento), cada uno con dominios verticales completos, y
+    dominios horizontales que se extienden por los dominios verticales y por las familias del sistema. Por lo tanto, los
+    conceptos de planificación en tiempo real son aplicables al dominio táctico de Command & Control y a todos los
+    dominios verticales de Weapon Systems. Posiblemente, lo mejor sea resolver problemas de planificación en tiempo real
+    una vez para todos estos dominios, y tratar los conocimiento y activos desarrollados de esta manera como un dominio
+    independiente, que tendrá entonces una asociación, por ejemplo, con Electronic Warfare (Guerra electrónica), pero no
+    con los sistemas de información del personal.
+</p>
+<h4 align="left">
+    Contenido
+</h4>
+<p align="left">
+    La arquitectura de referencia tiene el mismo formato que el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">Producto de trabajo: Documento de arquitectura de software</a> y los
+    modelos asociados, <i>sin referencias específicas del proyecto, o con referencias y características genéricas del
+    proyecto,</i> de modo que la arquitectura de referencia pueda clasificarse adecuadamente en la base de activos. Los
+    modelos típicos asociados con el Documento de arquitectura de software (SAD) son un modelo de guión de uso, un modelo
+    de diseño, un modelo de implementación y un modelo de despliegue.
+</p>
+<p align="left">
+    El acceso al documento SAD y modelos asociados ofrece diversos puntos de entrada para el arquitecto de software, que
+    puede elegir usar sólo las partes lógicas o conceptuales de la arquitectura (si la política de reutilización de la
+    organización lo permite). En el otro extremo, el arquitecto de software puede tomar subsistemas de trabajo completos y
+    un modelo de despliegue en el nivel físico (es decir, anteproyectos de redes y hardware completos) de la base de
+    activos.
+</p>
+<p align="left">
+    Para que los activos de arquitectura se puedan utilizar se necesitan otros artefactos de soporte.&nbsp;
+</p>
+<ol>
+    <li>
+        <p align="left">
+            El modelo de guión de uso describe el comportamiento de la arquitectura pero el arquitecto de software deberá
+            conocer sus cualidades no funcionales. Estos dos, los requisitos no funcionales y el modelo de guión de uso,
+            puede que se hayan capturado previamente en una especificación de requisitos de software. A partir de esta
+            especificación, el arquitecto de software podrá determinar si la arquitectura de referencia cumple los
+            requisitos actuales.
+        </p>
+    </li>
+    <li>
+        <p align="left">
+            El uso, y más concretamente, la modificación de la arquitectura necesitarán la misma guía que el desarrollo
+            original. Por ejemplo, el arquitecto de software deberá conocer qué reglas se aplicaron en la formación de la
+            arquitectura de referencia, y la dificultad que entraña modificar las interfaces. El acceso a las directrices
+            de diseño asociadas con la arquitectura de referencia puede ayudar a responder estas preguntas.
+        </p>
+    </li>
+    <li>
+        <p align="left">
+            (Opcional) La revisión de los planes de prueba relevantes también puede ser útil. Estos planes de prueba
+            informarán al arquitecto de las estrategias de prueba y evaluación utilizadas previamente para probar
+            arquitecturas similares, y de esta manera proporcionarán información útil acerca de las debilidades potenciales
+            de la arquitectura.
+        </p>
+    </li>
+    <li>
+        <p align="left">
+            (Opcional) La revisión de las arquitecturas de automatización de pruebas y las especificaciones de interfaz de
+            prueba relevantes puede ser útil. Estos artefactos informan al arquitecto de que pueden realizarse algunas
+            solicitudes respecto de la arquitectura que facilitarán la realización de pruebas.
+        </p>
+    </li>
+</ol></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="Yes" alt="Yes" height="15" width="20" src="./../../images/true.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Personalizaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Opciones de representaci&oacute;n</th><td class="sectionTableCell">Representación UML: Número de vistas de arquitectura relevantes: guión de uso, lógica, proceso, despliegue, implementación,
+datos. 
+<p>
+    <a id="Tailoring" name="Tailoring"></a>
+</p>
+<p>
+    A no ser que el sistema no tenga precedentes, las arquitecturas de referencia deben examinarse para ver si pueden
+    aplicarse (al dominio y tipo de desarrollo) si existen y son accesibles para la empresa de desarrollo. La
+    <i>creación</i> de arquitecturas de referencia es un tema que debe tratarse a nivel empresarial. Es posible recortar
+    los contenidos de la lista anterior y seguir obteniendo ventajas de la utilización de la arquitectura. Por ejemplo, es
+    posible omitir el modelo de prueba, aunque tengan que volver a escribirse las pruebas si se modifica la arquitectura.
+    Como mínimo, uno puede esperar un modelo de diseño y alguna descripción del comportamiento asociado (quizá el modelo de
+    guión de uso). Si no cuenta con eso, es difícil decir del activo que es una arquitectura de referencia. En todo caso,
+    podría ser un patrón válido.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

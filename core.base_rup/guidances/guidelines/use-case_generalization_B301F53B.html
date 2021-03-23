@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Generalizaci&oacute;n de gui&oacute;n de uso</title>
+<meta content="Guideline" name="uma.type">
+<meta content="use-case_generalization" name="uma.name">
+<meta content="Generalizaci&oacute;n de gui&oacute;n de uso" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_KVkLoN7HEdm8G6yT7-Wdqw", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "3.7061366529594173E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "3.7061366529594173E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "3.7061366529594173E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_N13eYAINEdq-_NKqZM1EhA", "_KVkLoN7HEdm8G6yT7-Wdqw", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "3.7061366529594173E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.7061366529594173E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Generalizaci&oacute;n de gui&oacute;n de uso</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">La generalización se utiliza cuando se encuentran dos o más guiones de uso que tienen puntos comunes en el comportamiento, la estructura y el objetivo. Esta directriz demuestra cómo utilizar esta relación.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_use_case_model_93D8F44.html" guid="{F7D9D038-B184-43CC-9353-15BA154F87B5}">Estructurar el modelo de guión de uso</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">Modelo de caso de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">Explicación</a>
+</h3>
+<p>
+    Un guión de uso padre se puede especializar en uno o más guiones de uso hijos que representen formatos del padre más
+    específicos. Ni el padre ni el hijo tienen que ser, necesariamente, abstractos, aunque en la mayoría de casos el padre
+    es abstracto. Un hijo hereda toda la estructura, el comportamiento y las relaciones del padre. Todos los hijos del
+    mismo padre son especializaciones del padre. Se trata de una generalización que se puede aplicar a los guiones de uso
+    (para obtener más información sobre el concepto de generalización tal como se aplica a las clases, consulte el apartado
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/generalization_94751549.html" guid="1.839540980397304E-305">Directriz: Generalización</a>).
+</p>
+<p>
+    La generalización se utiliza cuando se encuentran dos o más guiones de uso que tienen puntos comunes en el
+    comportamiento, la estructura y el objetivo. Cuando sucede, puede describir las partes compartidas en un nuevo guión de
+    uso, con frecuencia abstracto que, a continuación, se especializa por medio de guiones de uso hijos.
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p align="center">
+    <img height="301" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/ucgen1.gif" width="259" />
+</p>
+<p class="picturetext">
+    Los guiones de uso Pedido por teléfono y Pedido por Internet son especializaciones del guión de uso abstracto Hacer
+    pedido.
+</p>
+<p class="example">
+    En un sistema de Gestión de pedidos, los guiones de uso Pedido por teléfono y Pedido por Internet comparten mucho en
+    cuanto a estructura y comportamiento. Un guión de uso general Hacer pedido se define en que se ha definido la
+    estructura y el comportamiento común. El guión de uso abstracto Hacer pedido no tiene que completarse por sí mismo,
+    pero proporciona una infraestructura de comportamiento general que pueden completar los guiones de uso hijos.
+</p>
+<p>
+    El guión de uso padre no siempre es abstracto.
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    Considere el sistema Gestión de pedidos del ejemplo anterior. Se puede añadir un actor Encargado del registro de
+    pedidos, que pueda entrar pedidos en el sistema en nombre de un cliente. Este actor inicia el guión de uso Hacer pedido
+    general, que ahora debe tener un flujo de sucesos completo descrito. El guión de uso hijo puede añadir comportamiento a
+    la estructura que proporciona el guión de uso padre, y también puede modificar comportamiento del padre.
+</p>
+<p align="center">
+    <img height="306" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/ucgen2.gif" width="325" />
+</p>
+<p class="picturetext">
+    El actor Encargado del registro de pedidos puede crear instancias el guión de uso general Hacer pedido. Hacer pedido
+    también se puede especializar por medio de los guiones de uso Pedido por teléfono o Pedido por Internet.
+</p>
+<p>
+    El guión de uso hijo depende de la estructura (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use_case_CC89870D.html" guid="4.1983217662266927E-305">Directriz: Guión de
+    uso</a>, donde se trata la estructura del flujo de sucesos) del guión de uso padre. El guión de uso hijo puede añadir
+    comportamiento adicional al padre por medio de la inserción de segmentos de comportamiento en el comportamiento
+    heredado, o bien, declarando relaciones de inclusión y ampliación en el guión de uso hijo. El hijo puede modificar
+    segmentos de comportamiento heredados del padre , aunque se debe hacer con cuidado con el objeto de mantener la
+    intención del padre. El hijo mantiene la estructura del guión de uso padre, lo que significa que todos los segmentos de
+    comportamiento, descritos en pasos o subflujos del flujo de sucesos del padre, debe seguir existiendo, pero el hijo
+    puede modificar contenido de dichos segmentos de comportamiento.
+</p>
+<p>
+    Si el padre es un guión de uso abstracto, puede tener segmentos de comportamiento incompletos. El hijo debe
+    completarlos y convertirlos en significativos para el actor.
+</p>
+<p>
+    Un guión de uso padre no necesita tener una relación a otro actor si es un guión de uso abstracto.
+</p>
+<p>
+    Si dos guiones de uso hijos se especializan el mismo padre (o base), las especializaciones son independientes entre sí,
+    por lo que se pueden ejecutar en instancia de guión de uso separadas. Se diferencia de las relaciones de ampliación e
+    inclusión, donde implícita o explícitamente varias adiciones modifican una instancia de guión de uso ejecutando el
+    mismo guión de uso de base.
+</p>
+<p>
+    Tanto la inclusión como la generalización de guiones de uso se pueden utilizar para reutilizar comportamiento entre
+    guiones de uso en el modelo. La diferencia es que con la generalización de guiones de uso, la ejecución de los hijos
+    depende de la estructura y el comportamiento del padre (la parte reutilizada), mientras que en una relación de
+    inclusión, la ejecución del guión de uso de base sólo depende del resultado de la función que lleva a cabo el guión de
+    uso de inclusión (la parte reutilizada). Otra diferencia es que en una generalización, los hijos comparten similitudes
+    en cuanto al objetivo y la estructura, mientras que en la relación de inclusión, los guiones de uso de base que
+    reutilizan la misma inclusión pueden tener objetivos totalmente diferentes, pero necesitan que se lleve a cabo la misma
+    función.
+</p>
+<h3>
+    <a id="Executing the Use-Case-Generalization" name="Executing the Use-Case-Generalization">Ejecución de la
+    generalización de guiones de uso</a>
+</h3>
+<p>
+    Una instancia de guión de uso que ejecute un guión de uso hijo sigue el flujo de sucesos descritos para el guión de uso
+    padre, insertando comportamiento adicional y modificando comportamiento según se ha definido en el flujo de sucesos del
+    guión de uso hijo.
+</p>
+<p align="center">
+    <img height="240" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/ucgen3.gif" width="273" />
+</p>
+<p class="picturetext">
+    La instancia de guión de uso sigue al guión de uso padre, con comportamiento insertado o modificado según se ha
+    descrito en el guión de uso hijo.
+</p>
+<h3>
+    <a id="Describing the Use-Case Generalization" name="Describing the Use-Case Generalization">Descripción de la
+    generación de guiones de uso</a>
+</h3>
+<p>
+    Por lo general, no se describe la relación de generalización en sí misma. En vez de ello, en el flujo de sucesos del
+    guión de uso hijo se especifica cómo se deben insertar los nuevos pasos en el comportamiento heredado, y cómo se debe
+    modificar el comportamiento heredado.
+</p>
+<p>
+    Si el hijo especializa más de un padre (herencia múltiple), en la especificación del hijo debe establecer,
+    explícitamente, cómo se deben intercalar las secuencias de comportamiento de los padres en el hijo.
+</p>
+<h3>
+    <a id="Example of Use" name="Example of Use">Ejemplo de uso</a>
+</h3>
+<p>
+    Considere los esquemas paso a paso siguientes de los guiones de uso para un sistema telefónico simple:
+</p>
+<h4>
+    Hacer llamada local
+</h4>
+<ol>
+    <li>
+        <font color="#008080">El llamador levanta el receptor.</font>
+    </li>
+    <li>
+        <font color="#008080">El sistema presenta tono de marcado.</font>
+    </li>
+    <li>
+        <font color="#008080">El llamador marca un dígito.</font>
+    </li>
+    <li>
+        <font color="#008080">El sistema desactiva el tono de marcado.</font>
+    </li>
+    <li>
+        <font color="#008080">El llamador marca el resto del número.</font>
+    </li>
+    <li>
+        <font color="#008080">El sistema analiza el número.</font>
+    </li>
+    <li>
+        El sistema busca la parte correspondiente.
+    </li>
+    <li>
+        El sistema conecta las partes.
+    </li>
+    <li>
+        <font color="#008080">Las partes se desconectan.</font>
+    </li>
+</ol>
+<h4>
+    <b>Hacer llamada internacional</b>
+</h4>
+<ol>
+    <li>
+        <font color="#008080">El llamador levanta el receptor.</font>
+    </li>
+    <li>
+        <font color="#008080">El sistema presenta tono de marcado.</font>
+    </li>
+    <li>
+        <font color="#008080">El llamador marca un dígito.</font>
+    </li>
+    <li>
+        <font color="#008080">El sistema desactiva el tono de marcado.</font>
+    </li>
+    <li>
+        <font color="#008080">El llamador marca el resto del número.</font>
+    </li>
+    <li>
+        <font color="#008080">El sistema analiza el número.</font>
+    </li>
+    <li>
+        El sistema envía el número al otro sistema.
+    </li>
+    <li>
+        El sistema conecta las líneas.
+    </li>
+    <li>
+        <font color="#008080">Las partes se desconectan.</font>
+    </li>
+</ol>
+<p>
+    El texto en <font color="#008080">azul</font> es muy similar en ambos guiones de uso. Si los dos guiones de uso son tan
+    parecidos, se debe considerar la posibilidad de fusionarlos en uno, en el que subflujos alternativos muestren las
+    diferencias entre las llamadas locales e internacionales.
+</p>
+<p>
+    Sin embargo, si la diferencia entre ellos tiene cierta trascendencia, y muestra claramente en el modelo de guión de uso
+    la relación entre la llamada local e internacional, se puede extraer comportamiento común en un guión de uso nuevo y
+    más general, denominado Hacer llamada.
+</p>
+<p>
+    En un diagrama de guión de uso, la relación de generalización creada se podría mostrar del modo siguiente:
+</p>
+<p class="picturecenter" align="center">
+    <img height="155" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/ucgen4.gif" width="260" />
+</p>
+<p class="picturetext">
+    Los guiones de uso Hacer llamada local y Hacer llamada internacional heredan del guión de uso abstracto Hacer llamada.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

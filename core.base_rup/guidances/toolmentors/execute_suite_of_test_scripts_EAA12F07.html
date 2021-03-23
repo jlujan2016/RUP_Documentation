@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Ejecuci&oacute;n de un conjunto de aplicaciones de prueba utilizando Rational TestFactory</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="execute_suite_of_test_scripts" name="uma.name">
+<meta content="Ejecuci&oacute;n de un conjunto de aplicaciones de prueba utilizando Rational TestFactory" name="uma.presentationName">
+<meta content="Tool:rup_test_factory:Rational TestFactory" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational TestFactory" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{ED7B74BA-112A-4A6A-9E2A-9B8958AF7293}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{ED7B74BA-112A-4A6A-9E2A-9B8958AF7293}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{ED7B74BA-112A-4A6A-9E2A-9B8958AF7293}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{ED7B74BA-112A-4A6A-9E2A-9B8958AF7293}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Ejecuci&oacute;n de un conjunto de aplicaciones de prueba utilizando Rational TestFactory</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo utilizar Rational TestFactory para crear y ejecutar un conjunto de aplicaciones de prueba.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_test_factory_3EDA2115.html" guid="{FBA5098E-2CA8-483D-814D-DE3E876426B1}">Rational TestFactory</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_test_suite_94F58DEC.html" guid="{1C759E0D-B364-4095-A7CF-CD9E39301689}">Implementar el conjunto de aplicaciones de prueba</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/execute_test_suite_492795DE.html" guid="{6B420194-5EB7-4A12-A061-09FAA5DC18DE}">Ejecutar el conjunto de aplicaciones de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    Visión general
+</h3>
+<p>
+    Un "conjunto de aplicaciones de prueba" es el elemento de Rational TestFactory que le permite organizar y ejecutar un
+    conjunto de aplicaciones de scripts de prueba. Gracias a este elemento de TestFactory, puede organizar scripts de
+    prueba, ejecutarlos en un proceso por lotes como un conjunto de aplicaciones y. a continuación, analizar la cobertura
+    de la prueba basada en código.
+</p>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Windows 98/2000/NT 4.0.
+</p>
+<p>
+    Para utilizar Rational TestFactory para ejecutar un conjunto de aplicaciones de scripts de prueba debe:
+</p>
+<ol>
+    <li>
+        <a href="#Create Test Suite">Crear un conjunto de aplicaciones de scripts de prueba</a>
+    </li>
+    <li>
+        <a href="#Execute Test Suite">Ejecutar el conjunto de aplicaciones de prueba</a>
+    </li>
+</ol>
+<h3>
+    1.&nbsp;&nbsp;<a id="Create Test Suite" name="Create Test Suite">Crear un conjunto de aplicaciones de scripts de
+    prueba</a>
+</h3>
+<p>
+    Un objeto de conjunto de aplicaciones de prueba es un contenedor al que se añaden los scripts de prueba que se desea
+    ejecutar como un proceso por lotes. El conjunto de aplicaciones de prueba puede incluir scripts de prueba registrados
+    en Rational Robot, así como scripts de prueba generados en Rational TestFactory.
+</p>
+<ul>
+    <li>
+        Para crear scripts de prueba en Robot, consulte la Guía de la herramientas: Implementación de scripts de prueba
+        utilizando Rational Robot.
+    </li>
+    <li>
+        Para generar scripts de prueba en TestFactory, consulte la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/generate_test_scripts_71EF254E.html" guid="{19F8AE86-E40A-42F5-8B81-673C306F5C35}">Guía de la herramienta: Implementación de los scripts de prueba que
+        se han generado utilizando Rational TestFactory</a>.
+    </li>
+</ul>
+<p>
+    Los conjuntos de aplicaciones de prueba se utilizan para organizar y ejecutar grupos de los mejores scripts, los
+    scripts de defectos y los scripts generados con respecto a una compilación específica de la aplicación que se somete a
+    prueba (AUT). Los scripts de prueba que se incluyen en el conjunto de aplicaciones de prueba permanecen enlazados al
+    objeto del conjunto de aplicaciones de prueba. Puede ejecutar el conjunto de aplicaciones de prueba como un conjunto de
+    aplicaciones de prueba de regresión en futuras compilaciones de la aplicación que se somete a prueba.
+</p>
+<p>
+    Rational TestFactory ofrece dos métodos para crear un conjunto de aplicaciones de prueba:
+</p>
+<ul>
+    <li>
+        Dejar que TestFactory cree el conjunto de aplicaciones de prueba automáticamente con scripts de prueba
+        seleccionados.
+    </li>
+    <li>
+        Añadir manualmente un objeto de conjunto de aplicaciones de prueba a la correlación de aplicaciones y, a
+        continuación, rellenar el conjunto de aplicaciones de prueba con scripts de prueba.
+    </li>
+</ul>
+<p>
+    Si desea analizar la cobertura de la prueba basada en código para los scripts de prueba del conjunto de aplicaciones de
+    prueba, debe instrumentar el AUT antes de ejecutar el conjunto de aplicaciones de prueba. Rational TestFactory sólo
+    calcula la cobertura de la prueba basada en código para los scripts de prueba si se ha instrumentado la aplicación.
+</p>
+<p>
+    <img height="16" alt="icono de Ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp; Consulte los temas de la
+    ayuda en línea de Rational TestFactory que tratan sobre:
+</p>
+<ul>
+    <li>
+        <i>Conjuntos de aplicaciones de prueba: Qué son y cómo funcionan</i>
+    </li>
+    <li>
+        <i>Cómo trabajar con conjuntos de aplicaciones de prueba</i>
+    </li>
+    <li>
+        <i>Visualización de la cobertura de código para un script de Robot</i>
+    </li>
+    <li>
+        <i>Instrumentación de la aplicación que se somete a prueba</i>
+    </li>
+</ul>
+<h3>
+    2.&nbsp;&nbsp;<a id="Execute Test Suite" name="Execute Test Suite">Ejecutar el conjunto de aplicaciones de prueba</a>
+</h3>
+<p>
+    Cuando ejecuta un conjunto de aplicaciones de prueba, Rational TestFactory ejecuta cada script de prueba en el orden en
+    el que aparece en la lista del conjunto de aplicaciones de prueba. Si el orden de los scripts de prueba es importante,
+    puede reordenarlos antes de ejecutar el conjunto de aplicaciones de prueba.
+</p>
+<p>
+    <img height="16" alt="icono de Ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;Consulte el tema de la
+    ayuda en línea de Rational TestFactory que trata sobre la <i>ejecución manual de un conjunto de aplicaciones de
+    prueba</i>.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

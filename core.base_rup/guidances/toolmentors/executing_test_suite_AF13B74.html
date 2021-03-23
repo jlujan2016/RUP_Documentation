@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Ejecuci&oacute;n de un conjunto de aplicaciones de prueba utilizando Rational TestManager</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="executing_test_suite" name="uma.name">
+<meta content="Ejecuci&oacute;n de un conjunto de aplicaciones de prueba utilizando Rational TestManager" name="uma.presentationName">
+<meta content="Tool:rup_test_manager_tool:Rational TestManager" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational TestManager" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{4F5BE3FD-35F5-40E8-828B-EFE6013FCF00}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{4F5BE3FD-35F5-40E8-828B-EFE6013FCF00}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{4F5BE3FD-35F5-40E8-828B-EFE6013FCF00}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{4F5BE3FD-35F5-40E8-828B-EFE6013FCF00}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Ejecuci&oacute;n de un conjunto de aplicaciones de prueba utilizando Rational TestManager</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo utilizar Rational TestManager para ejecutar un conjunto de aplicaciones de prueba.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_test_manager_tool_2C79A4DC.html" guid="{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}">Rational TestManager</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/execute_test_suite_492795DE.html" guid="{6B420194-5EB7-4A12-A061-09FAA5DC18DE}">Ejecutar el conjunto de aplicaciones de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    Como parte de la posibilidad de gestionar el esfuerzo de la prueba, TestManager le permite coordinar scripts de prueba
+    de todos los tipos, es decir, GUI, prueba manual, usuario virtual, línea de mandatos, Virtual Basic y Java, en un paso
+    ejecutado por el usuario. Este paso, denominado conjunto de aplicaciones, le permite distribuir, ejecutar y evaluar
+    familias de scripts de prueba a través del equipo de prueba como un todo cohesivo, en lugar de en fragmentos.
+</p>
+<p>
+    Cuando ejecuta un conjunto de aplicaciones, proporciona información específica de tiempo de ejecución. Cada verificador
+    virtual que ejecuta los elementos del conjunto de aplicaciones asignado se ejecuta con estas directrices. Los
+    resultados de la ejecución del conjunto de aplicaciones se almacenan en registros. Después de ejecutar el conjunto de
+    aplicaciones, puede generar informes para analizar los datos almacenados en los registros y visualizar resultados de la
+    ejecución en formato de gráficos.
+</p>
+<p>
+    Para obtener información sobre cómo crear un conjunto de aplicaciones de prueba, consulte la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/implementing_test_suite_AE114A0D.html" guid="{803E510B-B96F-481B-92A9-EEF6CF6AAA24}">Guía de la herramienta: Diseño de un conjunto de aplicaciones de prueba
+    automatizado utilizando Rational TestManager</a>.
+</p>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Microsoft Windows 98/2000/NT 4.0.
+</p>
+<h4>
+    Pasos de la herramienta
+</h4>
+<p>
+    Para ejecutar un conjunto de aplicaciones de prueba utilizando TestManager, debe llevar a cabo los pasos que se indican
+    a continuación:
+</p>
+<ol>
+    <li>
+        <a href="#Specify a suite">Especificar un conjunto de aplicaciones</a>
+    </li>
+    <li>
+        <a href="#Define your user load">Definir la carga de usuarios</a>
+    </li>
+    <li>
+        <a href="#Specify a log file">Especificar un archivo de registro</a>
+    </li>
+    <li>
+        <a href="#Enable or disable resource monitoring">Habilitar o inhabilitar la supervisión de recursos</a>
+    </li>
+    <li>
+        <a href="#Choose whether to ignore configurations">Elegir si se deben ignorar configuraciones</a>
+    </li>
+    <li>
+        <a href="#Specify run-time reporting options">Especificar opciones de informe de tiempo de ejecución</a>
+    </li>
+</ol>
+<h3>
+    1.&nbsp;&nbsp;<a id="Specify a suite" name="Specify a suite">Especificar un conjunto de aplicaciones</a>
+</h3>
+<ul>
+    <li>
+        Para especificar un conjunto de aplicaciones, en el menú <b>Archivo</b>, pulse <b>Ejecutar conjunto de
+        aplicaciones</b>. Se muestra el diálogo Ejecutar conjunto de aplicaciones.
+    </li>
+    <li>
+        Para cambiar el conjunto de aplicaciones, pulse <b>Cambiar...</b> en <b>Información del conjunto de
+        aplicaciones</b>.
+    </li>
+</ul>
+<h3>
+    2.&nbsp;&nbsp;<a id="Define your user load" name="Define your user load">Definir la carga de usuarios</a>
+</h3>
+<ul>
+    <li>
+        Si el conjunto de aplicaciones que ha elegido ejecutar tiene definido un grupo de sistemas fijo y no existen campos
+        visibles en <b>Nombre</b>, vaya al paso 3, <a href="#Specify a log file">Especificar un archivo de
+        registro</a>.
+    </li>
+    <li>
+        Si no es así, entre el número de verificadores virtuales que desea ejecutar en el recuadro <b>Número de
+        usuarios</b>.
+    </li>
+    <li>
+        Si el conjunto de aplicaciones incluye tanto grupos fijos como escalables, primero se asignan los grupos fijos. El
+        número de verificadores virtuales disponibles depende del tipo de licencia de la que disponga. Si la licencia no
+        admite el número de verificadores virtuales que especifica, se muestra un mensaje de error.
+    </li>
+</ul>
+<p>
+    <b>Nota</b>: Cuando define grupos de sistemas, si selecciona el recuadro de selección <b>Solicitar sistemas antes de
+    ejecutar el conjunto de aplicaciones</b>, se muestra la lista Sistemas junto con los botones <b>Editar sistemas</b>,
+    <b>Editar listas de sistemas</b> y <b>Propiedades</b>.
+</p>
+<h3>
+    3.&nbsp;&nbsp;<a id="Specify a log file" name="Specify a log file">Especificar un archivo de registro</a>
+</h3>
+<p>
+    El número de build actual se muestra en el recuadro <b>Build</b>. El nombre de la carpeta de registro se basa en el
+    conjunto de aplicaciones, y el nombre del registro se basa en el número de verificadores virtuales y el número de veces
+    que se ha ejecutado el conjunto de aplicaciones.
+</p>
+<p>
+    Para cambiar la carpeta de registro o el nombre de registro, pulse <b>Cambiar...</b> en <b>Información de registro</b>.
+</p>
+<h3>
+    4.&nbsp;&nbsp;<a id="Enable or disable resource monitoring" name="Enable or disable resource monitoring">Habilitar o
+    inhabilitar la supervisión de recursos</a>
+</h3>
+<p>
+    Si prevé supervisar recursos, pulse el recuadro de selección <b>Supervisar recursos</b>. Modifique el intervalo del
+    recuadro <b>Frecuencia de actualización</b> para cambiar la frecuencia de actualización de las vistas. Cuanto menor es
+    el intervalo, más rápida es la actualización.
+</p>
+<p>
+    La supervisión observa el uso de recursos del sistema cuando se reproduce el conjunto de aplicaciones y, a
+    continuación, se muestran gráficos sobre los datos de uso con respecto a los tiempos de respuesta de los verificadores
+    virtuales correspondientes al analizar los resultados.
+</p>
+<h3>
+    5.&nbsp;&nbsp;<a id="Choose whether to ignore configurations" name="Choose whether to ignore configurations">Elegir si
+    se deben ignorar configuraciones</a>
+</h3>
+<p>
+    Pulse el recuadro de selección <b>Ignorar configuraciones para guiones de prueba</b> para que TestManager ignore las
+    configuraciones para guiones de prueba y ejecute los guiones de prueba en cualquier sistema disponible.
+</p>
+<p>
+    TestManager tiene tres modos de ejecutar conjuntos de aplicaciones con esta opción seleccionada:
+</p>
+<ul>
+    <li>
+        Si un conjunto de aplicaciones contiene un guión de prueba con guiones de prueba configurados y el guión de uso
+        padre tiene una implementación, por ejemplo, un script o conjunto de aplicaciones de prueba, TestManager ejecuta el
+        guión de prueba padre en todos los sistemas disponibles, pero no ejecuta ninguno de los guiones de prueba
+        configurados.
+    </li>
+    <li>
+        Si un conjunto de aplicaciones contiene un guión de prueba con guiones de prueba configurados y el guión de prueba
+        padre no tiene ninguna implementación, TestManager no ejecuta el guión de uso padre ni ninguno de los guiones de
+        uso configurados.
+    </li>
+    <li>
+        Si un único guión de prueba configurado tiene una implementación, TestManager ejecuta el guión de prueba en el
+        sistema especificado.
+    </li>
+</ul>
+<h3>
+    6.&nbsp;&nbsp;<a id="Specify run-time reporting options" name="Specify run-time reporting options">Especificar opciones
+    de informe de tiempo de ejecución</a>
+</h3>
+<ul>
+    <li>
+        Para cambiar el modo en el que TestManager informa sobre el estado de la ejecución del conjunto de aplicaciones,
+        pulse <b>Opciones...</b>. Puede establecer los tipos de opciones siguientes: 
+        <ul>
+            <li>
+                La pestaña <b>Supervisar</b> controla el modo en el que TestManager muestra la información durante la
+                ejecución del conjunto de aplicaciones.
+            </li>
+            <li>
+                La pestaña <b>Informes</b> especifica los informes que genera TestManager una vez que ha finalizado la
+                ejecución del conjunto de aplicaciones. Esta opción sólo se aplica a la prueba de rendimiento.
+            </li>
+            <li>
+                La pestaña <b>Ejecutar</b> controla el registro de la ejecución del conjunto de aplicaciones para su
+                posterior evaluación.
+            </li>
+            <li>
+                La pestaña <b>Compilación VU</b> especifica las definiciones por omisión para la compilación VU condicional
+                y la inclusión de bibliotecas C externas en el conjunto de aplicaciones.
+            </li>
+        </ul>
+    </li>
+</ul>
+<blockquote>
+    <p>
+        <img height="16" alt="icono de Ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Para obtener más
+        información, consulte el tema de la ayuda en línea de Rational TestManager que trata sobre el <i>recuadro de
+        diálogo Opciones</i>.
+    </p>
+</blockquote>
+<ul>
+    <li>
+        Una vez que haya configurado la ejecución, pulse <b>Aceptar</b> para ejecutar la prueba. TestManager comprueba el
+        conjunto de aplicaciones y compila los scripts de prueba no compilados u obsoletos. Para detener la ejecución del
+        conjunto de aplicaciones mientras TestManager lo comprueba, pulse <b>Cancelar</b>.
+    </li>
+    <li>
+        Cuando TestManager termina de comprobar el conjunto de aplicaciones y de compilar los scripts de prueba necesarios,
+        minimiza la ventana Preparando para la ejecución. En este punto, no puede cancelar ni cerrar esta ventana. Para
+        parar la ejecución, pulse <b>Detener</b> en el menú <b>Supervisar</b>.
+    </li>
+    <li>
+        Después de ejecutar las pruebas, puede evaluar los resultados de éstas.
+    </li>
+</ul>
+<p>
+    <img height="16" alt="icono de Ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Para obtener más
+    información, consulte el tema de la ayuda en línea de TestManager que trata sobre la <i>ejecución de pruebas</i>.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

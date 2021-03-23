@@ -1,0 +1,833 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Actividad: Verificar el enfoque de prueba</title>
+<meta content="Activity" name="uma.type">
+<meta content="verify_test_approach" name="uma.name">
+<meta content="Verificar el enfoque de prueba" name="uma.presentationName">
+<meta name="element_type" content="workflow_detail">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc=_b3LNYUdjEdqVZeSWHJlGyA&path=_b3LNYUdjEdqVZeSWHJlGyA,_ZqWJ0EetEdq_lfJYt-Zj8A';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_C6jF0EdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_dTvnIEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_zvv6IEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_C6jF0EdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_dTvnIEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_zvv6IEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_C6jF0EdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_dTvnIEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_zvv6IEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  defaultQueryStr, false, true, true);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div autoWrap="true">
+<div id="page-guid" value="_ZqWJ0EetEdq_lfJYt-Zj8A"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Actividad: Verificar el enfoque de prueba</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/process.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta actividad demuestra que las diversas técnicas esbozadas en el enfoque de prueba facilitará el esfuerzo de prueba planificado. La idea es verificar mediante demostración que el enfoque va a funcionará, producirá resultados precisos y será adecuado para los recursos disponibles. </td>
+</tr>
+<tr>
+<td valign="top">Ampl&iacute;a: <a href="./../../core.base_rup/capabilitypatterns/verify_test_approach_A743008A.html" guid="{7BD514AF-19F9-408F-8279-309BD153C157}">Verificar el enfoque de prueba</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign="middle">
+<td class="tab" width="10"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td><td class="tab" nowrap><a id="TAB_Description" class="tab" href="./../../core.base_rup/capabilitypatterns/verify_test_approach_E58263F5.html_desc.html">Descripci&oacute;n</a></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_a.gif"></td><td class="activeTab" nowrap><span style="white-space:nowrap;">Estructura de desglose de trabajo</span></td><td width="1"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-a_i.gif"></td><td class="tab" nowrap><a id="TAB_TBS" class="tab" href="./../../core.base_rup/capabilitypatterns/verify_test_approach_E58263F5.html_tbs.html"><span style="white-space:nowrap;">Asignaci&oacute;n de equipos</span></a></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_i.gif"></td><td class="tab" nowrap><a id="TAB_WPBS" class="tab" href="./../../core.base_rup/capabilitypatterns/verify_test_approach_E58263F5.html_wpbs.html"><span style="white-space:nowrap;">Utilizaci&oacute;n del producto de trabajo</span></a></td><td width="21"><img title="" alt="" height="17" width="21" src="./../../images/tab_end-i.gif"></td><td width="50%"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td colspan="2"><img title="" alt="" height="2" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space_middle.gif"></td><td class="activeTab"><img title="" alt="" height="2" width="10" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space.gif"></td><td colspan="5"><img title="" alt="" height="2" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td class="activeTab" colspan="10"><img title="" alt="" height="5" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="sectionHeading">Flujo de trabajo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td align="left" colspan="2" class="sectionTableSingleCell">
+<p></p>
+<img diagramType="ActivityDetail" border="0" id="diagram_ActivityDetail" src="./../../core.base_rup/capabilitypatterns/resources/verify_test_approach_E58263F5_ActivityDetail.jpeg" alt="Diagrama de detalle de la actividad: Verificar el enfoque de prueba" title="Diagrama de detalle de la actividad: Verificar el enfoque de prueba" usemap="#ActivityDetail_verify_test_approach"><map name="ActivityDetail_verify_test_approach">
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_designer_911E8755.html" relpath=",_CTmsIRi2Edq_uI8xTPML6g" alt="Dise&ntilde;ador de pruebas" title="Dise&ntilde;ador de pruebas" coords="40, 184, 153, 224" shape="rect" guid="_CTmsIRi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/define_test_environment_configurations_5A384EF0.html" relpath=",_lqVpkEohEdqrjq4i3fchvA" alt="Definir las configuraciones del entorno de prueba" title="Definir las configuraciones del entorno de prueba" coords="173, 172, 312, 237" shape="rect" guid="_lqVpkEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/identify_testability_mechanisms_8444D9BA.html" relpath=",_oBDCTEohEdqrjq4i3fchvA" alt="Identificar los mecanismos de comprobabilidad" title="Identificar los mecanismos de comprobabilidad" coords="332, 172, 432, 237" shape="rect" guid="_oBDCTEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/define_testability_elements_27C1B960.html" relpath=",_meY8sEohEdqrjq4i3fchvA" alt="Definir los elementos de comprobabilidad" title="Definir los elementos de comprobabilidad" coords="452, 179, 561, 230" shape="rect" guid="_meY8sEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_designer_911E8755.html" relpath=",_CTmsIRi2Edq_uI8xTPML6g" alt="Dise&ntilde;ador de pruebas" title="Dise&ntilde;ador de pruebas" coords="30, 162, 611, 247" shape="rect" guid="_CTmsIRi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_strategy_7FB79B6B.html" relpath=",_CTmsIhi2Edq_uI8xTPML6g" alt="Estrategia de prueba" title="Estrategia de prueba" coords="215, 11, 269, 62" shape="rect" guid="_CTmsIhi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_8A557B7B.html" relpath=",_CTmsIxi2Edq_uI8xTPML6g" alt="Documento de arquitectura de software" title="Documento de arquitectura de software" coords="202, 67, 282, 132" shape="rect" guid="_CTmsIxi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/define_test_environment_configurations_5A384EF0.html" relpath=",_lqVpkEohEdqrjq4i3fchvA" alt="Definir las configuraciones del entorno de prueba" title="Definir las configuraciones del entorno de prueba" coords="187, 1, 297, 142" shape="rect" guid="_lqVpkEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_environment_configuration_4B128964.html" relpath=",_CTmsJBi2Edq_uI8xTPML6g" alt="Configuraci&oacute;n de entorno de prueba" title="Configuraci&oacute;n de entorno de prueba" coords="205, 277, 279, 342" shape="rect" guid="_CTmsJBi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/define_test_environment_configurations_5A384EF0.html" relpath=",_lqVpkEohEdqrjq4i3fchvA" alt="Definir las configuraciones del entorno de prueba" title="Definir las configuraciones del entorno de prueba" coords="190, 267, 294, 352" shape="rect" guid="_lqVpkEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_8A557B7B.html" relpath=",_CTmsIxi2Edq_uI8xTPML6g" alt="Documento de arquitectura de software" title="Documento de arquitectura de software" coords="342, 11, 422, 76" shape="rect" guid="_CTmsIxi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_strategy_7FB79B6B.html" relpath=",_CTmsIhi2Edq_uI8xTPML6g" alt="Estrategia de prueba" title="Estrategia de prueba" coords="355, 81, 409, 132" shape="rect" guid="_CTmsIhi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/identify_testability_mechanisms_8444D9BA.html" relpath=",_oBDCTEohEdqrjq4i3fchvA" alt="Identificar los mecanismos de comprobabilidad" title="Identificar los mecanismos de comprobabilidad" coords="327, 1, 437, 142" shape="rect" guid="_oBDCTEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_automation_architecture_55B06974.html" relpath=",_CTmsJRi2Edq_uI8xTPML6g" alt="Arquitectura de automatizaci&oacute;n de pruebas" title="Arquitectura de automatizaci&oacute;n de pruebas" coords="335, 277, 430, 342" shape="rect" guid="_CTmsJRi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_interface_specification_D4364DA2.html" relpath=",_CTmsLBi2Edq_uI8xTPML6g" alt="Especificaci&oacute;n de interfaz de prueba" title="Especificaci&oacute;n de interfaz de prueba" coords="344, 347, 421, 412" shape="rect" guid="_CTmsLBi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/identify_testability_mechanisms_8444D9BA.html" relpath=",_oBDCTEohEdqrjq4i3fchvA" alt="Identificar los mecanismos de comprobabilidad" title="Identificar los mecanismos de comprobabilidad" coords="320, 267, 445, 422" shape="rect" guid="_oBDCTEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_strategy_7FB79B6B.html" relpath=",_CTmsIhi2Edq_uI8xTPML6g" alt="Estrategia de prueba" title="Estrategia de prueba" coords="479, 25, 533, 76" shape="rect" guid="_CTmsIhi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_design_model_812064DA.html" relpath=",_melJ8EohEdqrjq4i3fchvA" alt="Modelo de dise&ntilde;o" title="Modelo de dise&ntilde;o" coords="481, 81, 531, 132" shape="rect" guid="_melJ8EohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/define_testability_elements_27C1B960.html" relpath=",_meY8sEohEdqrjq4i3fchvA" alt="Definir los elementos de comprobabilidad" title="Definir los elementos de comprobabilidad" coords="464, 15, 548, 142" shape="rect" guid="_meY8sEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_automation_architecture_55B06974.html" relpath=",_CTmsJRi2Edq_uI8xTPML6g" alt="Arquitectura de automatizaci&oacute;n de pruebas" title="Arquitectura de automatizaci&oacute;n de pruebas" coords="459, 277, 554, 342" shape="rect" guid="_CTmsJRi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_interface_specification_D4364DA2.html" relpath=",_CTmsLBi2Edq_uI8xTPML6g" alt="Especificaci&oacute;n de interfaz de prueba" title="Especificaci&oacute;n de interfaz de prueba" coords="468, 347, 545, 412" shape="rect" guid="_CTmsLBi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_design_A3660FD1.html" relpath=",_CTmsMRi2Edq_uI8xTPML6g" alt="Dise&ntilde;o de prueba" title="Dise&ntilde;o de prueba" coords="480, 417, 532, 468" shape="rect" guid="_CTmsMRi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/define_testability_elements_27C1B960.html" relpath=",_meY8sEohEdqrjq4i3fchvA" alt="Definir los elementos de comprobabilidad" title="Definir los elementos de comprobabilidad" coords="444, 267, 569, 478" shape="rect" guid="_meY8sEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_analyst_F836F4E6.html" relpath=",_pZATsEohEdqrjq4i3fchvA" alt="Analista de pruebas" title="Analista de pruebas" coords="40, 751, 142, 791" shape="rect" guid="_pZATsEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/define_test_details_CF19AA59.html" relpath=",_pY0GcEohEdqrjq4i3fchvA" alt="Definir detalles de prueba" title="Definir detalles de prueba" coords="162, 746, 240, 797" shape="rect" guid="_pY0GcEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_analyst_F836F4E6.html" relpath=",_pZATsEohEdqrjq4i3fchvA" alt="Analista de pruebas" title="Analista de pruebas" coords="30, 736, 270, 807" shape="rect" guid="_pZATsEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_strategy_7FB79B6B.html" relpath=",_CTmsIhi2Edq_uI8xTPML6g" alt="Estrategia de prueba" title="Estrategia de prueba" coords="174, 529, 228, 580" shape="rect" guid="_CTmsIhi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_ideas_list_847A8DF9.html" relpath=",_CT5AAhi2Edq_uI8xTPML6g" alt="Lista de ideas de prueba" title="Lista de ideas de prueba" coords="175, 585, 227, 650" shape="rect" guid="_CT5AAhi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_data_FA46B83.html" relpath=",_CTmsKBi2Edq_uI8xTPML6g" alt="Datos de prueba" title="Datos de prueba" coords="175, 655, 227, 706" shape="rect" guid="_CTmsKBi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/define_test_details_CF19AA59.html" relpath=",_pY0GcEohEdqrjq4i3fchvA" alt="Definir detalles de prueba" title="Definir detalles de prueba" coords="159, 519, 243, 716" shape="rect" guid="_pY0GcEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_case_DED42DB2.html" relpath=",_CTmsLRi2Edq_uI8xTPML6g" alt="Caso de prueba" title="Caso de prueba" coords="175, 837, 227, 888" shape="rect" guid="_CTmsLRi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_data_FA46B83.html" relpath=",_CTmsKBi2Edq_uI8xTPML6g" alt="Datos de prueba" title="Datos de prueba" coords="175, 893, 227, 944" shape="rect" guid="_CTmsKBi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_script_53AA5028.html" relpath=",_CT5ABxi2Edq_uI8xTPML6g" alt="Script de prueba" title="Script de prueba" coords="175, 949, 227, 1000" shape="rect" guid="_CT5ABxi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_workload_analysis_model_4EE75D9A.html" relpath=",_CTmsJxi2Edq_uI8xTPML6g" alt="Modelo de an&aacute;lisis de carga de trabajo" title="Modelo de an&aacute;lisis de carga de trabajo" coords="173, 1005, 230, 1084" shape="rect" guid="_CTmsJxi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/define_test_details_CF19AA59.html" relpath=",_pY0GcEohEdqrjq4i3fchvA" alt="Definir detalles de prueba" title="Definir detalles de prueba" coords="158, 827, 245, 1094" shape="rect" guid="_pY0GcEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_tester_1F053E21.html" relpath=",_CT5ACRi2Edq_uI8xTPML6g" alt="Verificador" title="Verificador" coords="40, 1374, 97, 1414" shape="rect" guid="_CT5ACRi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/implement_test_B8187D13.html" relpath=",_qS-oskohEdqrjq4i3fchvA" alt="Implementar la prueba" title="Implementar la prueba" coords="117, 1369, 192, 1420" shape="rect" guid="_qS-oskohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/implement_test_suite_4D41C58F.html" relpath=",_q4_fwEohEdqrjq4i3fchvA" alt="Implementar el conjunto de aplicaciones de prueba" title="Implementar el conjunto de aplicaciones de prueba" coords="212, 1362, 341, 1427" shape="rect" guid="_q4_fwEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_tester_1F053E21.html" relpath=",_CT5ACRi2Edq_uI8xTPML6g" alt="Verificador" title="Verificador" coords="30, 1352, 381, 1437" shape="rect" guid="_CT5ACRi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_data_FA46B83.html" relpath=",_CTmsKBi2Edq_uI8xTPML6g" alt="Datos de prueba" title="Datos de prueba" coords="128, 1145, 180, 1196" shape="rect" guid="_CTmsKBi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_ideas_list_847A8DF9.html" relpath=",_CT5AAhi2Edq_uI8xTPML6g" alt="Lista de ideas de prueba" title="Lista de ideas de prueba" coords="128, 1201, 180, 1266" shape="rect" guid="_CT5AAhi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_strategy_7FB79B6B.html" relpath=",_CTmsIhi2Edq_uI8xTPML6g" alt="Estrategia de prueba" title="Estrategia de prueba" coords="127, 1271, 181, 1322" shape="rect" guid="_CTmsIhi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/implement_test_B8187D13.html" relpath=",_qS-oskohEdqrjq4i3fchvA" alt="Implementar la prueba" title="Implementar la prueba" coords="112, 1135, 196, 1332" shape="rect" guid="_qS-oskohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_script_53AA5028.html" relpath=",_CT5ABxi2Edq_uI8xTPML6g" alt="Script de prueba" title="Script de prueba" coords="128, 1467, 180, 1518" shape="rect" guid="_CT5ABxi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/implement_test_B8187D13.html" relpath=",_qS-oskohEdqrjq4i3fchvA" alt="Implementar la prueba" title="Implementar la prueba" coords="113, 1457, 195, 1528" shape="rect" guid="_qS-oskohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_strategy_7FB79B6B.html" relpath=",_CTmsIhi2Edq_uI8xTPML6g" alt="Estrategia de prueba" title="Estrategia de prueba" coords="249, 1226, 303, 1277" shape="rect" guid="_CTmsIhi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_build_E3972040.html" relpath=",_CT5ADRi2Edq_uI8xTPML6g" alt="Compilaci&oacute;n" title="Compilaci&oacute;n" coords="246, 1282, 306, 1322" shape="rect" guid="_CT5ADRi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/implement_test_suite_4D41C58F.html" relpath=",_q4_fwEohEdqrjq4i3fchvA" alt="Implementar el conjunto de aplicaciones de prueba" title="Implementar el conjunto de aplicaciones de prueba" coords="231, 1216, 321, 1332" shape="rect" guid="_q4_fwEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_suite_F1637807.html" relpath=",_q5LtAEohEdqrjq4i3fchvA" alt="Conjunto de aplicaciones de prueba" title="Conjunto de aplicaciones de prueba" coords="235, 1467, 317, 1532" shape="rect" guid="_q5LtAEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/implement_test_suite_4D41C58F.html" relpath=",_q4_fwEohEdqrjq4i3fchvA" alt="Implementar el conjunto de aplicaciones de prueba" title="Implementar el conjunto de aplicaciones de prueba" coords="220, 1457, 332, 1542" shape="rect" guid="_q4_fwEohEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_manager_49D65242.html" relpath=",_mNQLsEsZEdqlNo9QEt4izQ" alt="Gestor de pruebas" title="Gestor de pruebas" coords="40, 1689, 136, 1729" shape="rect" guid="_mNQLsEsZEdqlNo9QEt4izQ"></area>
+<area href="./../../core.base_rup/capabilitypatterns/obtain_testability_commitment_EA2FA33C.html" relpath=",_mMldUEsZEdqlNo9QEt4izQ" alt="Obtener confirmaci&oacute;n de comprobabilidad" title="Obtener confirmaci&oacute;n de comprobabilidad" coords="156, 1684, 269, 1735" shape="rect" guid="_mMldUEsZEdqlNo9QEt4izQ"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_manager_49D65242.html" relpath=",_mNQLsEsZEdqlNo9QEt4izQ" alt="Gestor de pruebas" title="Gestor de pruebas" coords="30, 1674, 299, 1745" shape="rect" guid="_mNQLsEsZEdqlNo9QEt4izQ"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_strategy_7FB79B6B.html" relpath=",_CTmsIhi2Edq_uI8xTPML6g" alt="Estrategia de prueba" title="Estrategia de prueba" coords="185, 1593, 239, 1644" shape="rect" guid="_CTmsIhi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/obtain_testability_commitment_EA2FA33C.html" relpath=",_mMldUEsZEdqlNo9QEt4izQ" alt="Obtener confirmaci&oacute;n de comprobabilidad" title="Obtener confirmaci&oacute;n de comprobabilidad" coords="170, 1583, 254, 1654" shape="rect" guid="_mMldUEsZEdqlNo9QEt4izQ"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_test_plan_1A424B93.html" relpath=",_CTmsKRi2Edq_uI8xTPML6g" alt="Plan de prueba" title="Plan de prueba" coords="186, 1775, 238, 1826" shape="rect" guid="_CTmsKRi2Edq_uI8xTPML6g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/obtain_testability_commitment_EA2FA33C.html" relpath=",_mMldUEsZEdqlNo9QEt4izQ" alt="Obtener confirmaci&oacute;n de comprobabilidad" title="Obtener confirmaci&oacute;n de comprobabilidad" coords="171, 1765, 253, 1836" shape="rect" guid="_mMldUEsZEdqlNo9QEt4izQ"></area>
+</map>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Anomal&iacute;a del trabajo</div>
+<div class="sectionContent">
+<div id="treeContent"></div>
+<script language="JavaScript">
+contentPage.processPage.treeTable.data = {
+title: "Anomalía del trabajo", summary: "Anomalía del trabajo", 
+columns: [
+["presentation_name", "Elemento de desglose"],
+["steps", "Pasos"],
+["id", "Índice"],
+["predecessors", "Predecesores"],
+["model_info", "Información del modelo"],
+["type", "Tipo"],
+["is_planned", "Planeado"],
+["is_repeatable", "Se puede repetir"],
+["has_multiple_occurrences", "Varias apariciones"],
+["is_ongoing", "Continuo"],
+["is_event_driven", "Condicionado por sucesos"],
+["is_optional", "Opcional"],
+["teams", "Equipo"]],
+rows: [
+{id: "40bf58de", parentId: "", relPath: ",_lqVpkEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "2", prefix: "", name: "define_test_environment_configurations", title: "Definir las configuraciones del entorno de prueba", url: "./../../core.base_rup/capabilitypatterns/define_test_environment_configurations_5A384EF0.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+
+{id: "2d37e998", parentId: "40bf58de", relPath: ",_lqVpkEohEdqrjq4i3fchvA,_CTmsIRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_designer", title: "Diseñador de pruebas", url: "./../../core.base_rup/capabilitypatterns/rup_test_designer_911E8755.html", 
+	predecessors: "", info: "Realizador principal", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "db513d22", parentId: "40bf58de", relPath: ",_lqVpkEohEdqrjq4i3fchvA,_CTmsIxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_software_architecture_document", title: "Documento de arquitectura de software", url: "./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_8A557B7B.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "963d2bd4", parentId: "40bf58de", relPath: ",_lqVpkEohEdqrjq4i3fchvA,_CTmsIhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_strategy", title: "Estrategia de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_strategy_7FB79B6B.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "49b6684c", parentId: "40bf58de", relPath: ",_lqVpkEohEdqrjq4i3fchvA,_CTmsJRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_automation_architecture", title: "Arquitectura de automatización de pruebas", url: "./../../core.base_rup/capabilitypatterns/rup_test_automation_architecture_55B06974.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "e6ac9170", parentId: "40bf58de", relPath: ",_lqVpkEohEdqrjq4i3fchvA,_CTmsJBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_environment_configuration", title: "Configuración de entorno de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_environment_configuration_4B128964.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "75ecdd6a", parentId: "40bf58de", relPath: ",_lqVpkEohEdqrjq4i3fchvA,_CTmsKBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_data", title: "Datos de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_data_FA46B83.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "da13c720", parentId: "40bf58de", relPath: ",_lqVpkEohEdqrjq4i3fchvA,_CTmsJxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_workload_analysis_model", title: "Modelo de análisis de carga de trabajo", url: "./../../core.base_rup/capabilitypatterns/rup_workload_analysis_model_4EE75D9A.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "bb79e5c8", parentId: "40bf58de", relPath: ",_lqVpkEohEdqrjq4i3fchvA,_CTmsJhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_deployment_model", title: "Modelo de despliegue", url: "./../../core.base_rup/capabilitypatterns/rup_deployment_model_44497D8A.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "b78fd0e4", parentId: "40bf58de", relPath: ",_lqVpkEohEdqrjq4i3fchvA,_CTmsKRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_plan", title: "Plan de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_plan_1A424B93.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "2387c4b6", parentId: "40bf58de", relPath: ",_lqVpkEohEdqrjq4i3fchvA,_CTmsJBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_environment_configuration", title: "Configuración de entorno de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_environment_configuration_4B128964.html", 
+	predecessors: "", info: "Salida", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "c2169794", parentId: "", relPath: ",_oBDCTEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "3", prefix: "", name: "identify_testability_mechanisms", title: "Identificar los mecanismos de comprobabilidad", url: "./../../core.base_rup/capabilitypatterns/identify_testability_mechanisms_8444D9BA.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+
+{id: "989d1156", parentId: "c2169794", relPath: ",_oBDCTEohEdqrjq4i3fchvA,_CTmsIRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_designer", title: "Diseñador de pruebas", url: "./../../core.base_rup/capabilitypatterns/rup_test_designer_911E8755.html", 
+	predecessors: "", info: "Realizador principal", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "76c74c08", parentId: "c2169794", relPath: ",_oBDCTEohEdqrjq4i3fchvA,_CTmsIxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_software_architecture_document", title: "Documento de arquitectura de software", url: "./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_8A557B7B.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "fe54d11a", parentId: "c2169794", relPath: ",_oBDCTEohEdqrjq4i3fchvA,_CTmsIhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_strategy", title: "Estrategia de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_strategy_7FB79B6B.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "b1b1de8e", parentId: "c2169794", relPath: ",_oBDCTEohEdqrjq4i3fchvA,_CTmsJRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_automation_architecture", title: "Arquitectura de automatización de pruebas", url: "./../../core.base_rup/capabilitypatterns/rup_test_automation_architecture_55B06974.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "8c4ee072", parentId: "c2169794", relPath: ",_oBDCTEohEdqrjq4i3fchvA,_CTy5Yhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_specific_guidelines", title: "Directrices específicas del proyecto", url: "./../../core.base_rup/capabilitypatterns/rup_project_specific_guidelines_D5281D11.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "10ede394", parentId: "c2169794", relPath: ",_oBDCTEohEdqrjq4i3fchvA,_CTmsLBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_interface_specification", title: "Especificación de interfaz de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_interface_specification_D4364DA2.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "f254023c", parentId: "c2169794", relPath: ",_oBDCTEohEdqrjq4i3fchvA,_CTmsJhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_deployment_model", title: "Modelo de despliegue", url: "./../../core.base_rup/capabilitypatterns/rup_deployment_model_44497D8A.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "9056fe7e", parentId: "c2169794", relPath: ",_oBDCTEohEdqrjq4i3fchvA,_oBPPgEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_user_interface_prototype", title: "Prototipo de interfaz de usuario", url: "./../../core.base_rup/capabilitypatterns/rup_user_interface_prototype_6855A548.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "69bd7fd8", parentId: "c2169794", relPath: ",_oBDCTEohEdqrjq4i3fchvA,_CTmsJRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_automation_architecture", title: "Arquitectura de automatización de pruebas", url: "./../../core.base_rup/capabilitypatterns/rup_test_automation_architecture_55B06974.html", 
+	predecessors: "", info: "Salida", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "18a969d6", parentId: "c2169794", relPath: ",_oBDCTEohEdqrjq4i3fchvA,_CTmsLBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_interface_specification", title: "Especificación de interfaz de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_interface_specification_D4364DA2.html", 
+	predecessors: "", info: "Salida", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "adaf9d04", parentId: "", relPath: ",_meY8sEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "4", prefix: "", name: "define_testability_elements", title: "Definir los elementos de comprobabilidad", url: "./../../core.base_rup/capabilitypatterns/define_testability_elements_27C1B960.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+
+{id: "43c41620", parentId: "adaf9d04", relPath: ",_meY8sEohEdqrjq4i3fchvA,_CTmsIRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_designer", title: "Diseñador de pruebas", url: "./../../core.base_rup/capabilitypatterns/rup_test_designer_911E8755.html", 
+	predecessors: "", info: "Realizador principal", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "5e3f6e62", parentId: "adaf9d04", relPath: ",_meY8sEohEdqrjq4i3fchvA,_CTmsIhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_strategy", title: "Estrategia de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_strategy_7FB79B6B.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "b1690f04", parentId: "adaf9d04", relPath: ",_meY8sEohEdqrjq4i3fchvA,_melJ8EohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_model", title: "Modelo de diseño", url: "./../../core.base_rup/capabilitypatterns/rup_design_model_812064DA.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "611a421e", parentId: "adaf9d04", relPath: ",_meY8sEohEdqrjq4i3fchvA,_CTmsJRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_automation_architecture", title: "Arquitectura de automatización de pruebas", url: "./../../core.base_rup/capabilitypatterns/rup_test_automation_architecture_55B06974.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "35b2f4fc", parentId: "adaf9d04", relPath: ",_meY8sEohEdqrjq4i3fchvA,_CTmsLRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_case", title: "Caso de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_case_DED42DB2.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "8e852c92", parentId: "adaf9d04", relPath: ",_meY8sEohEdqrjq4i3fchvA,_CTmsKBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_data", title: "Datos de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_data_FA46B83.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "83e3e3ba", parentId: "adaf9d04", relPath: ",_meY8sEohEdqrjq4i3fchvA,_CTmsLhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_use_case_realization", title: "Ejecución de casos de uso", url: "./../../core.base_rup/capabilitypatterns/rup_use_case_realization_CD6D41C8.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "e68ce62", parentId: "adaf9d04", relPath: ",_meY8sEohEdqrjq4i3fchvA,_CTmsLBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_interface_specification", title: "Especificación de interfaz de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_interface_specification_D4364DA2.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "cbdcf670", parentId: "adaf9d04", relPath: ",_meY8sEohEdqrjq4i3fchvA,_CTmsMBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_interface", title: "Interfaz", url: "./../../core.base_rup/capabilitypatterns/rup_interface_98C82FC1.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "7c959b84", parentId: "adaf9d04", relPath: ",_meY8sEohEdqrjq4i3fchvA,_CTmsJxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_workload_analysis_model", title: "Modelo de análisis de carga de trabajo", url: "./../../core.base_rup/capabilitypatterns/rup_workload_analysis_model_4EE75D9A.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "283c350e", parentId: "adaf9d04", relPath: ",_meY8sEohEdqrjq4i3fchvA,_CTmsJhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_deployment_model", title: "Modelo de despliegue", url: "./../../core.base_rup/capabilitypatterns/rup_deployment_model_44497D8A.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "f76731ca", parentId: "adaf9d04", relPath: ",_meY8sEohEdqrjq4i3fchvA,_CTmsLxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_implementation_model", title: "Modelo de implementación", url: "./../../core.base_rup/capabilitypatterns/rup_implementation_model_D80B21D8.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "abde1566", parentId: "adaf9d04", relPath: ",_meY8sEohEdqrjq4i3fchvA,_CTmsJRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_automation_architecture", title: "Arquitectura de automatización de pruebas", url: "./../../core.base_rup/capabilitypatterns/rup_test_automation_architecture_55B06974.html", 
+	predecessors: "", info: "Salida", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "802a5932", parentId: "adaf9d04", relPath: ",_meY8sEohEdqrjq4i3fchvA,_CTmsMRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_design", title: "Diseño de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_design_A3660FD1.html", 
+	predecessors: "", info: "Salida", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "23a06cba", parentId: "adaf9d04", relPath: ",_meY8sEohEdqrjq4i3fchvA,_CTmsLBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_interface_specification", title: "Especificación de interfaz de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_interface_specification_D4364DA2.html", 
+	predecessors: "", info: "Salida", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "44fc6af8", parentId: "", relPath: ",_pY0GcEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "5", prefix: "", name: "define_test_details", title: "Definir detalles de prueba", url: "./../../core.base_rup/capabilitypatterns/define_test_details_CF19AA59.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true]},
+
+{id: "16ffe746", parentId: "44fc6af8", relPath: ",_pY0GcEohEdqrjq4i3fchvA,_pZATsEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_analyst", title: "Analista de pruebas", url: "./../../core.base_rup/capabilitypatterns/rup_test_analyst_F836F4E6.html", 
+	predecessors: "", info: "Realizador principal", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "2e54340", parentId: "44fc6af8", relPath: ",_pY0GcEohEdqrjq4i3fchvA,_CTmsKBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_data", title: "Datos de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_data_FA46B83.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "91f20238", parentId: "44fc6af8", relPath: ",_pY0GcEohEdqrjq4i3fchvA,_CTmsIhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_strategy", title: "Estrategia de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_strategy_7FB79B6B.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "431b635c", parentId: "44fc6af8", relPath: ",_pY0GcEohEdqrjq4i3fchvA,_CT5AAhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_ideas_list", title: "Lista de ideas de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_ideas_list_847A8DF9.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "3b63e3f6", parentId: "44fc6af8", relPath: ",_pY0GcEohEdqrjq4i3fchvA,_CTmsLRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_case", title: "Caso de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_case_DED42DB2.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "95a1c1ea", parentId: "44fc6af8", relPath: ",_pY0GcEohEdqrjq4i3fchvA,_CT5AAxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_usecase", title: "Caso de uso", url: "./../../core.base_rup/capabilitypatterns/rup_usecase_8F186E09.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "62cfe088", parentId: "44fc6af8", relPath: ",_pY0GcEohEdqrjq4i3fchvA,_CTmsKBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_data", title: "Datos de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_data_FA46B83.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "fd175b18", parentId: "44fc6af8", relPath: ",_pY0GcEohEdqrjq4i3fchvA,_CTmsLhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_use_case_realization", title: "Ejecución de casos de uso", url: "./../../core.base_rup/capabilitypatterns/rup_use_case_realization_CD6D41C8.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "b0acc694", parentId: "44fc6af8", relPath: ",_pY0GcEohEdqrjq4i3fchvA,_CTmsLBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_interface_specification", title: "Especificación de interfaz de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_interface_specification_D4364DA2.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "14cefc4a", parentId: "44fc6af8", relPath: ",_pY0GcEohEdqrjq4i3fchvA,_pZMg8EohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_supplementary_specification", title: "Especificaciones suplementarias", url: "./../../core.base_rup/capabilitypatterns/rup_supplementary_specification_C9D32588.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "8d2757e6", parentId: "44fc6af8", relPath: ",_pY0GcEohEdqrjq4i3fchvA,_pZMg8UohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_storyboard", title: "Guión gráfico", url: "./../../core.base_rup/capabilitypatterns/rup_storyboard_D4710598.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "2c4e9dcc", parentId: "44fc6af8", relPath: ",_pY0GcEohEdqrjq4i3fchvA,_pZMg8kohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_change_request", title: "Solicitud de cambio", url: "./../../core.base_rup/capabilitypatterns/rup_change_request_C30A19AE.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "c5ecfe44", parentId: "44fc6af8", relPath: ",_pY0GcEohEdqrjq4i3fchvA,_CTmsLRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_case", title: "Caso de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_case_DED42DB2.html", 
+	predecessors: "", info: "Salida", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "9540b1b0", parentId: "44fc6af8", relPath: ",_pY0GcEohEdqrjq4i3fchvA,_CTmsKBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_data", title: "Datos de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_data_FA46B83.html", 
+	predecessors: "", info: "Salida", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "4027e79c", parentId: "44fc6af8", relPath: ",_pY0GcEohEdqrjq4i3fchvA,_CTmsJxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_workload_analysis_model", title: "Modelo de análisis de carga de trabajo", url: "./../../core.base_rup/capabilitypatterns/rup_workload_analysis_model_4EE75D9A.html", 
+	predecessors: "", info: "Salida", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "9da744b6", parentId: "44fc6af8", relPath: ",_pY0GcEohEdqrjq4i3fchvA,_CT5ABxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_script", title: "Script de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_script_53AA5028.html", 
+	predecessors: "", info: "Salida", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "9ed658e8", parentId: "", relPath: ",_qS-oskohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "6", prefix: "", name: "implement_test", title: "Implementar la prueba", url: "./../../core.base_rup/capabilitypatterns/implement_test_B8187D13.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+
+{id: "e1ffd340", parentId: "9ed658e8", relPath: ",_qS-oskohEdqrjq4i3fchvA,_CT5ACRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_tester", title: "Verificador", url: "./../../core.base_rup/capabilitypatterns/rup_tester_1F053E21.html", 
+	predecessors: "", info: "Realizador principal", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "ca26f0b2", parentId: "9ed658e8", relPath: ",_qS-oskohEdqrjq4i3fchvA,_CTmsKBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_data", title: "Datos de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_data_FA46B83.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "57ef92fc", parentId: "9ed658e8", relPath: ",_qS-oskohEdqrjq4i3fchvA,_CTmsIhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_strategy", title: "Estrategia de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_strategy_7FB79B6B.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "f9949ec2", parentId: "9ed658e8", relPath: ",_qS-oskohEdqrjq4i3fchvA,_CT5AAhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_ideas_list", title: "Lista de ideas de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_ideas_list_847A8DF9.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "e981ce7a", parentId: "9ed658e8", relPath: ",_qS-oskohEdqrjq4i3fchvA,_CTmsJRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_automation_architecture", title: "Arquitectura de automatización de pruebas", url: "./../../core.base_rup/capabilitypatterns/rup_test_automation_architecture_55B06974.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "e6f81dd0", parentId: "9ed658e8", relPath: ",_qS-oskohEdqrjq4i3fchvA,_CTmsLRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_case", title: "Caso de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_case_DED42DB2.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "769efcac", parentId: "9ed658e8", relPath: ",_qS-oskohEdqrjq4i3fchvA,_CT5ADBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_class", title: "Clase de comprobabilidad", url: "./../../core.base_rup/capabilitypatterns/rup_test_class_D8F94030.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "d4c9cdde", parentId: "9ed658e8", relPath: ",_qS-oskohEdqrjq4i3fchvA,_CT5ADRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_build", title: "Compilación", url: "./../../core.base_rup/capabilitypatterns/rup_build_E3972040.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "85fcf0dc", parentId: "9ed658e8", relPath: ",_qS-oskohEdqrjq4i3fchvA,_CTmsJBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_environment_configuration", title: "Configuración de entorno de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_environment_configuration_4B128964.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "adc7c52c", parentId: "9ed658e8", relPath: ",_qS-oskohEdqrjq4i3fchvA,_CTy5Yhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_specific_guidelines", title: "Directrices específicas del proyecto", url: "./../../core.base_rup/capabilitypatterns/rup_project_specific_guidelines_D5281D11.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "25ff4242", parentId: "9ed658e8", relPath: ",_qS-oskohEdqrjq4i3fchvA,_9scCsERnEdy-ZPxrRfshCQ", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_tools", title: "Herramientas", url: "./../../core.base_rup/capabilitypatterns/rup_tools_588D43E1.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "5e851e40", parentId: "9ed658e8", relPath: ",_qS-oskohEdqrjq4i3fchvA,_CT5ACxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_development_infrastructure", title: "Infraestructura de desarrollo", url: "./../../core.base_rup/capabilitypatterns/rup_development_infrastructure_183C3247.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "b1a5b9b8", parentId: "9ed658e8", relPath: ",_qS-oskohEdqrjq4i3fchvA,_CTmsJxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_workload_analysis_model", title: "Modelo de análisis de carga de trabajo", url: "./../../core.base_rup/capabilitypatterns/rup_workload_analysis_model_4EE75D9A.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "e68ce62", parentId: "9ed658e8", relPath: ",_qS-oskohEdqrjq4i3fchvA,_CT5ABxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_script", title: "Script de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_script_53AA5028.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "9541deb0", parentId: "9ed658e8", relPath: ",_qS-oskohEdqrjq4i3fchvA,_CT5ABxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_script", title: "Script de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_script_53AA5028.html", 
+	predecessors: "", info: "Salida", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "7cc4f8e0", parentId: "", relPath: ",_q4_fwEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "7", prefix: "", name: "implement_test_suite", title: "Implementar el conjunto de aplicaciones de prueba", url: "./../../core.base_rup/capabilitypatterns/implement_test_suite_4D41C58F.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true]},
+
+{id: "767e7c7e", parentId: "7cc4f8e0", relPath: ",_q4_fwEohEdqrjq4i3fchvA,_CT5ACRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_tester", title: "Verificador", url: "./../../core.base_rup/capabilitypatterns/rup_tester_1F053E21.html", 
+	predecessors: "", info: "Realizador principal", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "47a337ac", parentId: "7cc4f8e0", relPath: ",_q4_fwEohEdqrjq4i3fchvA,_CT5ADRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_build", title: "Compilación", url: "./../../core.base_rup/capabilitypatterns/rup_build_E3972040.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "fc8f2404", parentId: "7cc4f8e0", relPath: ",_q4_fwEohEdqrjq4i3fchvA,_CTmsIhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_strategy", title: "Estrategia de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_strategy_7FB79B6B.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "e6eb7d9c", parentId: "7cc4f8e0", relPath: ",_q4_fwEohEdqrjq4i3fchvA,_CTmsJRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_automation_architecture", title: "Arquitectura de automatización de pruebas", url: "./../../core.base_rup/capabilitypatterns/rup_test_automation_architecture_55B06974.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "f23b773e", parentId: "7cc4f8e0", relPath: ",_q4_fwEohEdqrjq4i3fchvA,_CTmsJBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_environment_configuration", title: "Configuración de entorno de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_environment_configuration_4B128964.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "7d4f8576", parentId: "7cc4f8e0", relPath: ",_q4_fwEohEdqrjq4i3fchvA,_q5LtAEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_suite", title: "Conjunto de aplicaciones de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_suite_F1637807.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "dec3ef4a", parentId: "7cc4f8e0", relPath: ",_q4_fwEohEdqrjq4i3fchvA,_CTmsKBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_data", title: "Datos de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_data_FA46B83.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "c993c1c8", parentId: "7cc4f8e0", relPath: ",_q4_fwEohEdqrjq4i3fchvA,_CTy5Yhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_specific_guidelines", title: "Directrices específicas del proyecto", url: "./../../core.base_rup/capabilitypatterns/rup_project_specific_guidelines_D5281D11.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "6538cb34", parentId: "7cc4f8e0", relPath: ",_q4_fwEohEdqrjq4i3fchvA,_9scCsERnEdy-ZPxrRfshCQ", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_tools", title: "Herramientas", url: "./../../core.base_rup/capabilitypatterns/rup_tools_588D43E1.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "6bd0b078", parentId: "7cc4f8e0", relPath: ",_q4_fwEohEdqrjq4i3fchvA,_CT5ACxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_development_infrastructure", title: "Infraestructura de desarrollo", url: "./../../core.base_rup/capabilitypatterns/rup_development_infrastructure_183C3247.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "c572775e", parentId: "7cc4f8e0", relPath: ",_q4_fwEohEdqrjq4i3fchvA,_CTmsLxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_implementation_model", title: "Modelo de implementación", url: "./../../core.base_rup/capabilitypatterns/rup_implementation_model_D80B21D8.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "6da2e0bc", parentId: "7cc4f8e0", relPath: ",_q4_fwEohEdqrjq4i3fchvA,_CT5ABxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_script", title: "Script de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_script_53AA5028.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "1e5fd27c", parentId: "7cc4f8e0", relPath: ",_q4_fwEohEdqrjq4i3fchvA,_q5LtAEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_suite", title: "Conjunto de aplicaciones de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_suite_F1637807.html", 
+	predecessors: "", info: "Salida", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "c53f9780", parentId: "", relPath: ",_mMldUEsZEdqlNo9QEt4izQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "8", prefix: "", name: "obtain_testability_commitment", title: "Obtener confirmación de comprobabilidad", url: "./../../core.base_rup/capabilitypatterns/obtain_testability_commitment_EA2FA33C.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+
+{id: "26738552", parentId: "c53f9780", relPath: ",_mMldUEsZEdqlNo9QEt4izQ,_mNQLsEsZEdqlNo9QEt4izQ", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_manager", title: "Gestor de pruebas", url: "./../../core.base_rup/capabilitypatterns/rup_test_manager_49D65242.html", 
+	predecessors: "", info: "Realizador principal", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "b9c959b6", parentId: "c53f9780", relPath: ",_mMldUEsZEdqlNo9QEt4izQ,_CTmsIhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_strategy", title: "Estrategia de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_strategy_7FB79B6B.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "5a4677d2", parentId: "c53f9780", relPath: ",_mMldUEsZEdqlNo9QEt4izQ,_CTmsJRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_automation_architecture", title: "Arquitectura de automatización de pruebas", url: "./../../core.base_rup/capabilitypatterns/rup_test_automation_architecture_55B06974.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "bcc05c76", parentId: "c53f9780", relPath: ",_mMldUEsZEdqlNo9QEt4izQ,_CTmsIxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_software_architecture_document", title: "Documento de arquitectura de software", url: "./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_8A557B7B.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "5f9b6d68", parentId: "c53f9780", relPath: ",_mMldUEsZEdqlNo9QEt4izQ,_CTmsLBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_interface_specification", title: "Especificación de interfaz de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_interface_specification_D4364DA2.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "ea04290c", parentId: "c53f9780", relPath: ",_mMldUEsZEdqlNo9QEt4izQ,_mNomMUsZEdqlNo9QEt4izQ", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_issues_list", title: "Lista de problemas", url: "./../../core.base_rup/capabilitypatterns/rup_issues_list_CEBA5ABB.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "d7727e6c", parentId: "c53f9780", relPath: ",_mMldUEsZEdqlNo9QEt4izQ,_mNomMEsZEdqlNo9QEt4izQ", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_plan", title: "Plan de desarrollo de software", url: "./../../core.base_rup/capabilitypatterns/rup_project_plan_C41C7AAB.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "749272b8", parentId: "c53f9780", relPath: ",_mMldUEsZEdqlNo9QEt4izQ,_CTmsKRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_plan", title: "Plan de prueba", url: "./../../core.base_rup/capabilitypatterns/rup_test_plan_1A424B93.html", 
+	predecessors: "", info: "Salida", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+]};
+				</script>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

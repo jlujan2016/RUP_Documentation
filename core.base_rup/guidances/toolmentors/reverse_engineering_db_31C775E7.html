@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Ingenier&iacute;a inversa de bases de datos utilizando Rational XDE Developer</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="reverse_engineering_db" name="uma.name">
+<meta content="Ingenier&iacute;a inversa de bases de datos utilizando Rational XDE Developer" name="uma.presentationName">
+<meta content="Tool:rup_xde:Rational XDE Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational XDE Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{8F40AECA-8AAA-4409-81F0-BFB7B6BECDBC}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{8F40AECA-8AAA-4409-81F0-BFB7B6BECDBC}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{8F40AECA-8AAA-4409-81F0-BFB7B6BECDBC}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{8F40AECA-8AAA-4409-81F0-BFB7B6BECDBC}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{8F40AECA-8AAA-4409-81F0-BFB7B6BECDBC}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Ingenier&iacute;a inversa de bases de datos utilizando Rational XDE Developer</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe el uso de la ingeniería inversa en la herramienta de software Rational XDE Developer para generar un modelo de datos a partir de un archivo de script DDL o esquema de base de datos existente.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_xde_D81FFA70.html" guid="{303A82D2-E3AB-4501-8563-0D4D43782AF9}">Rational XDE Developer</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/database_design_8552DD3.html" guid="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}">Diseño de base de datos</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="XDE Developer - Java Platform" text="bases de datos de ingeniería inversa" name="XE_XDE_Developer-Java_Platform__Reverse_Engineering_Databases" id="XE_XDE_Developer-Java_Platform__Reverse_Engineering_Databases" class="index"></a> 
+<h3>
+    Visión general
+</h3>
+<p>
+    En esta guía de la herramienta se describe el uso de la ingeniería inversa en la herramienta de software Rational XDE &trade;
+    para generar un modelo de datos a partir de un archivo de script DDL o esquema de base de datos existente.
+</p>
+<p>
+    En esta guía de la herramienta se llevan a cabo los pasos siguientes:
+</p>
+<ul>
+    <li>
+        <a href="#Reverse Engineering a Database">Ingeniería inversa de una base de datos</a>
+    </li>
+    <li>
+        <a href="#Transform">Transformar tablas en clases</a> &lt;opcional&gt;
+    </li>
+    <li>
+        <a href="#Manage Changes to Model and Database">Gestionar cambios en el modelo y la base de datos</a>
+    </li>
+</ul>
+<h3>
+    <a id="Reverse Engineering a Database" name="Reverse Engineering a Database">Ingeniería inversa de una base de
+    datos</a>
+</h3>
+<p>
+    En Rational XDE, puede compilar un modelo del diseño de la base de datos física a través de la ingeniería inversa de la
+    base de datos o un archivo DDL (lenguaje de definición de datos). Referencia: <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Compilación de modelos de datos por medio de ingeniería inversa</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_gen_dm_re"); -->.
+</p>
+<p>
+    Para iniciar el proceso de ingeniería inversa debe utilizar el <b>Asistente para ingeniería inversa</b> de modelado de
+    datos de Rational XDE.&nbsp;(Consulte el apartado <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Ingeniería inversa de DDL o bases de datos</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_re_ddl_db"); -->.) El asistente para
+    ingeniería inversa lee el DDL o el esquema de base de datos y crea:
+</p>
+<ul>
+    <li>
+        Un paquete que contiene las tablas, las columnas, las restricciones, las relaciones, los procedimientos almacenados
+        y las vistas. Consulte el apartado <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Diseño de modelos de datos</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_bld_dm"); -->.
+    </li>
+    <li>
+        Un paquete que contiene los dominios. Consulte el apartado <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Dominios</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_dom"); -->.
+    </li>
+    <li>
+        Una base de datos que contiene una relación de reconocimiento para cada tabla. Consulte el apartado <img         alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Relaciones de reconocimiento en el
+        modelado de datos</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_realization_dm"); -->.
+    </li>
+</ul>
+<p>
+    Para revertir la ingeniería de una base de datos, Rational XDE debe poder establecer una conexión a la base de
+    datos.&nbsp;(Consulte el apartado <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Conexión a sistemas de gestión de base de datos</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_connect_dbms"); -->.)&nbsp;Tenga en
+    cuenta que los resultados de la operación de ingeniería inversa pueden variar con cada DBMS.
+</p>
+<p>
+    Para obtener información detallada sobre la ingeniería inversa de bases de datos para un DBMS específico, consulte los
+    temas siguientes:
+</p>
+<ul>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Ingeniería inversa de bases de
+        datos Oracle</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_re_oracle_db"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Ingeniería inversa de bases de
+        datos SQL Server</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_re_sqlsrv_db"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Ingeniería inversa de bases de
+        datos Sybase</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_re_sybase_db"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Ingeniería inversa de bases de
+        datos DB2</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_re_db2_db"); -->
+    </li>
+</ul>
+<p>
+    Para obtener más información sobre el establecimiento de conexiones de base de datos para un DBMS específico, consulte
+    los temas de la ayuda en línea de Rational XDE que tratan sobre:
+</p>
+<ul>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Conexiones de base de datos
+        Oracle</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_oracle_db_connect"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Conexiones de base de datos SQL
+        Server</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_sqlsrv_db_connect"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Conexiones de base de datos
+        Sybase</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_sybase_db_connect"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Conexiones de base de datos
+        DB2</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_db2_db_connect"); -->
+    </li>
+</ul>
+<h3>
+    <a id="Transform" name="Transform">Transformar tablas en clases&lt;opcional&gt;</a>
+</h3>
+<p>
+    Una vez que se ha revertido la ingeniería de una base de datos para crear un modelo del diseño de la base de datos
+    física, si lo desea, puede decidir transformar las tablas den clases para que formen parte del diseño de la base de
+    datos física en el modelo de diseño, o bien, en un modelo de datos lógico separado. (Consulte el apartado <img     alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Modelo de datos lógico</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_logical_dm"); -->.) Puede transformar
+    una tabla o todas las tablas contenidas en un paquete o que ha realizado una base de datos. (Consulte el apartado <img     alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Transformación de tablas en clases</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_transf_tbl_clss"); -->.) El paquete
+    debe contener todos los participantes de una relación para transformar dicha relación en el modelo de datos lógico.
+</p>
+<p>
+    Para obtener información detallada sobre el diseño y el modelado de una base de datos, consulte la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/database_design_51B0B5D9.html" guid="{A7B13419-14D8-4C55-B98C-497B2E17CC73}">Guía de la herramienta: Diseño y modelado de bases de datos en Rational
+    XDE</a>.
+</p>
+<p>
+    Para obtener más información sobre el proceso de transformación de tablas en clases, consulte los temas de la ayuda en
+    línea de Rational XDE que tratan sobre:
+</p>
+<ul type="square">
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Transformación de tabla en
+        clase</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_tbl_clss_transf"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Correlación de la transformación
+        de tabla en clase</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_r_tbl_transf_map"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Transformación de tablas en
+        clases</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_transf_tbl_clss_ejb"); -->
+    </li>
+</ul>
+<h3>
+    <a id="Manage Changes to Model and Database" name="Manage Changes to Model and Database">Gestionar cambios en el modelo
+    y la base de datos</a>
+</h3>
+<p>
+    Después de crear un modelo de datos a través del proceso de ingeniería inversa, se deben controlar y gestionar las
+    actualizaciones del modelo de datos y la base de datos.&nbsp;Rational XDE proporciona una característica de Comparar y
+    sincronizar para ayudar al diseñador de la base de datos a gestionar los cambios. (Consulte el apartado <img     alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Comparación y sincronización en el modelado
+    de datos</i><!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_gen_dm_cmpsync"); -->, <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/managing_db_ACA9AB6E.html" guid="{3B09E5BE-4AC8-4206-B9D8-4F85D36B9C75}">Guía de la herramienta: Gestión de bases de datos en Rational XDE</a>).
+    Se recomienda utilizar la característica de Comparar y sincronizar más que la ingeniería inversa periódica, puesto que
+    utilizar el proceso de ingeniería inversa varias veces en el mismo modelo puede causar relaciones y tablas duplicadas
+    en el modelo de datos.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.appliedis.com" target="_blank"><img alt="Icono de Applied Information Sciences"                 src="./../../../core.base_rup/guidances/supportingmaterials/resources/appliedis.gif" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Contenido desarrollado o parcialmente desarrollado por <a href="http://www.appliedis.com" target="_blank">Applied Information Sciences</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

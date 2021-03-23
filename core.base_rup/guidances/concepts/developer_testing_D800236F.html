@@ -1,0 +1,706 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concepto: Pruebas del desarrollador</title>
+<meta content="Concept" name="uma.type">
+<meta content="developer_testing" name="uma.name">
+<meta content="Pruebas del desarrollador" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "7.256588791264849E-307"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "7.256588791264849E-307"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "7.256588791264849E-307"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "7.256588791264849E-307"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="7.256588791264849E-307"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concepto: Pruebas del desarrollador</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se ofrece consejo sobre cómo superar los primeros obstáculos de la creación de pruebas de desarrollo y de un conjunto de aplicaciones de prueba que se puede mantener durante el proyecto. También se ofrecen sugerencias para crear pruebas de desarrollo mejores.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/roles/rup_implementer_D145E819.html" guid="{75501BAA-0CCE-4852-A7B2-B10CA71C002A}">Implementador</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_test__developer_testing__concept_of" name="XE_test__developer_testing__concept_of" class="index" key="test" text="concept of"></a><a key="diseño" text="concepto de" name="XE_design__developer_testing__concept_of" id="XE_design__developer_testing__concept_of" class="index"></a> 
+<h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    La frase "Pruebas del desarrollador" se utiliza para categorizar las tareas de prueba que realizan más correctamente
+    los desarrolladores de software. También incluye los productos de trabajo que crean estas tareas. La prueba de
+    desarrollador abarca el trabajo tradicionalmente pensado bajo las categorías siguientes: Pruebas de unidad, parte de
+    las Pruebas de integración y algunos aspectos las denominadas Pruebas del sistema. La prueba de desarrollador suele
+    asociarse con tareas de la disciplina de implementación, pero también está relacionada con tareas de la disciplina de
+    análisis y diseño.
+</p>
+<p>
+    Al pensar en la prueba de desarrollo de esta manera "integral", se ayuda a mitigar algunos de los riesgos asociados con
+    el enfoque más "atomista" que se suele adoptar. En el enfoque tradicional de las pruebas de desarrollo, el esfuerzo se
+    centra, inicialmente, en la evaluación de que todas las unidades funcionan independientemente. Al final del ciclo vital
+    de desarrollo, cuando el trabajo de desarrollo está a punto de terminarse, las unidades integradas se ensamblan en un
+    sistema o subsistema de trabajo y se prueban en esta configuración por primera vez.
+</p>
+<p>
+    Esta propuesta tiene una serie de errores. En primer lugar, al fomentar un enfoque en fases de la prueba de las
+    unidades integradas y subsistemas posteriores, los errores identificados durante estas pruebas suelen encontrarse
+    demasiado tarde. Este descubrimiento tardío tiene como resultado la decisión de no emprender acciones correctivas o
+    requiere un trabajo mayor de corrección. Esta revisión es cara y reduce el progreso en otras áreas. Esto aumenta el
+    riesgo de que se desbarate o abandone el proyecto.
+</p>
+<p>
+    En segundo lugar, al crear límites rígidos entre las pruebas de unidad, de integración y del sistema, aumenta la
+    probabilidad de que nadie descubra los errores que sobrepasan los límites. El riesgo se agrava cuando la
+    responsabilidad de estos tipos de pruebas se asigna a equipos separados.
+</p>
+<p>
+    El estilo de prueba de desarrollador que recomienda RUP anima al desarrollador a que se centre en las pruebas más
+    valiosas y apropiadas para ejecutarlas en un momento dado. Incluso en el ámbito de una sola iteración, suele ser más
+    eficaz que el desarrollador busque y corrija todos los defectos que pueda del código, sin una carga adicional en el
+    intercambio a un grupo de prueba separado. El resultado deseado es que se descubran pronto la mayoría de los errores de
+    software significativos, independiente de si estos son errores se encuentran en la unidad independiente, en la
+    integración de las unidades o en el trabajo de las unidades integradas en un caso de ejemplo de usuario final
+    significativo.
+</p>
+<h3>
+    <a id="DeveloperTestingPitfalls" name="DeveloperTestingPitfalls"></a>Obstáculos de la iniciación a la Prueba de
+    desarrollador
+</h3>
+<p>
+    Muchos desarrolladores que intentan por primera vez hacer un trabajo de prueba sustancialmente más minucioso abandonan
+    el esfuerzo muy pronto, porque tienen la impresión de que no obtienen resultados de valor. Además, algunos
+    desarrolladores que empiezan bien la prueba de desarrollador se encuentran con que han creado un conjunto de
+    aplicaciones de prueba insostenible y terminan por abandonar.
+</p>
+<p>
+    En esta página se ofrecen algunas directrices para superar los primeros obstáculos y para crear un conjunto de
+    aplicaciones de prueba que evite la trampa de mantenimiento. Para obtener más información, consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/maintaining_automated_test_suites_C1BF312D.html" guid="2.0721213907815595E-305">Directriz: Mantenimiento de conjuntos de aplicaciones de prueba automatizados</a>.
+</p>
+<h4>
+    Establezca expectativas
+</h4>
+<p>
+    Los desarrolladores que encuentran la prueba gratificante, la hacen. Los que la encuentran trabajosa, la evitan. Este
+    hecho se debe simplemente a la naturaleza de la mayoría de los desarrolladores en la mayoría de las industrias, y
+    tratarlo como una falta de disciplina vergonzosa no ha producido resultados satisfactorios a lo largo de la historia.
+    Por lo tanto, como desarrollador, debe esperar que la prueba sea gratificante y hacer lo correspondiente para que lo
+    sea.
+</p>
+<p>
+    La prueba de desarrollador ideal sigue un bucle de prueba de edición muy estricto. Se hace un cambio muy pequeño en el
+    producto, como añadir un método nuevo a una clase y, a continuación, se vuelven a ejecutar inmediatamente las pruebas.
+    Si falla alguna prueba, sabrá exactamente cual es el código que provoca el error. Este ritmo sencillo y estable de
+    desarrollo es la mejor gratificación que puede ofrecer una prueba de desarrollador. Las sesiones de depuración largas
+    deberían ser la excepción.
+</p>
+<p>
+    Es frecuente que un cambio realizado en una clase interrumpa algo en otra, por lo que debería contar con repetir la
+    ejecución de no sólo las pruebas de la clase modificada, sino de muchas pruebas. Idealmente, debe volver a ejecutarse
+    el conjunto de aplicaciones de prueba completo para el componente muchas veces cada hora. Cada vez que haga un cambio
+    significativo, debe volver a ejecutar el conjunto de aplicaciones, observar los resultados y continuar con el siguiente
+    cambio o arreglar el último. Debe invertir parte del esfuerzo en conseguir obtener la información de retorno rápido.
+</p>
+<h4>
+    Automatice las pruebas
+</h4>
+<p>
+    Normalmente, la ejecución de las pruebas manuales no resulta práctica. Para algunos componentes, las pruebas
+    automatizadas son sencillas. Un ejemplo sería una base de datos en la memoria, que se comunique con los clientes a
+    través de una API y no tenga otra interfaz con el mundo exterior. Las pruebas para esta base de datos serían similares
+    a esta:
+</p>
+<blockquote>
+<pre>
+  /* Comprobar que los elementos se pueden añadir como mucho una vez. */
+</pre>
+<pre>
+ // Setup
+</pre>
+<pre>
+ Database db = tnew Database();
+</pre>
+<pre>
+ db.add("key1", "value1");
+</pre>
+<pre>
+ // Test
+</pre>
+<pre>
+ boolean result = db.add("key1", "another value");
+</pre>
+<pre>
+ expect(result == false);
+</pre>
+</blockquote>
+<p>
+    Las pruebas sólo se diferencian del código de cliente corriente en una cosa: en vez que de confiar en el resultado de
+    las llamadas a la API, los comprueban. Si la API facilita la escritura del código de cliente, también facilita la
+    escritura del código de prueba. Si el código de prueba <i>no</i> es fácil de escribir, ha recibido un aviso previo de
+    que la API se puede mejorar. El diseño de primera prueba es coherente con el foco de Rational Unified Process en tratar
+    los riesgos importantes pronto.
+</p>
+<p>
+    Sin embargo, cuanto más estrecha sea la conexión del componente con el mundo exterior, más difícil será probarlo. Hay
+    dos casos comunes: interfaces gráficas de usuario y componentes de fondo.
+</p>
+<h5>
+    Interfaces gráficas de usuario
+</h5>
+<p>
+    Supongamos que la base de datos del ejemplo anterior recibe los datos a través de una devolución de llamada de un
+    objeto de interfaz de usuario. La devolución de llamada se invoca cuando el usuario rellena varios campos de texto y
+    pulsa un botón. No es demasiado apetecible realizar esta prueba rellenando manualmente los campos y pulsando el botón
+    varias veces en una hora. Debe encontrar una manera de proporcionar la información de los campos con un control
+    programático, normalmente "pulsando" el botón del código.
+</p>
+<p>
+    Al pulsar el botón, se ejecuta parte del código del componente. Lo más probable es que el código cambie el estado de
+    varios objetos de interfaz de usuario. También debe encontrar una manera de consultar estos objetos de manera
+    programática.
+</p>
+<h5>
+    Componentes de fondo
+</h5>
+<p>
+    Supongamos que el componente que está probando no implementa una base de datos, sino que es un derivador de una base de
+    datos real en disco. Realizar la prueba contra una base de datos real puede ser complicado; es posible que sea difícil
+    de instalar y configurar, y que la licencia sea cara. La base de datos puede ralentizar tanto las pruebas que no desee
+    ejecutarlas a menudo. En estos casos, es mejor "apagar" la base de datos y sustituirla por un componente más simple que
+    haga lo suficiente para poder soportar las pruebas.
+</p>
+<p>
+    Los fragmentos para simulación también son útiles cuando un componente con el que se comunica su componente todavía no
+    está preparado. No es recomendable esperar a que otra persona termine el código para realizar las pruebas.
+</p>
+<p>
+    Para obtener más información, consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/stubs_9CB734F8.html" guid="6.347489919609074E-305">Concepto: Fragmentos para
+    simulación</a>.
+</p>
+<h4>
+    No escriba sus propias herramientas
+</h4>
+<p>
+    La prueba de desarrollador parece bastante sencilla. Se configuran varios objetos, se hace una llamada a través de una
+    API, se comprueba el resultado y se anuncia una anomalía de la prueba si los resultados no son los esperados. También
+    es conveniente poder agrupar las pruebas de manera que se puedan ejecutar individualmente o como conjuntos completos de
+    aplicaciones. Las herramientas que dan soporte a estos requisitos se llaman <i>infraestructuras de prueba</i>.
+</p>
+<p>
+    La prueba de desarrollador <b>es</b> sencilla y los requisitos de las infraestructuras de prueba no son complicados.
+    Sin embargo, si cede a la tentación de escribir su propia infraestructura de prueba, perderá mucho más tiempo
+    jugueteando con la infraestructura del que seguramente espera. Hay muchas infraestructuras de prueba disponibles, tanto
+    comerciales como de código abierto, y no hay motivo para no utilizar alguna de estas.
+</p>
+<h4>
+    Cree código de soporte
+</h4>
+<p>
+    El código de prueba suele ser repetitivo. Las secuencias de código como la siguiente son comunes:
+</p>
+<blockquote>
+<pre>
+    // null name not allowed
+</pre>
+<pre>
+    retval = o.createName(""); 
+</pre>
+<pre>
+    expect(retval == null);
+</pre>
+<pre>
+    // leading tspaces not allowed
+</pre>
+<pre>
+    retval = o.createName(" l"); 
+</pre>
+<pre>
+    expect(retval == null);
+</pre>
+<pre>
+    // trailing spaces not allowed
+</pre>
+<pre>
+    retval = o.createName("name "); 
+</pre>
+<pre>
+    expect(retval == null);
+</pre>
+<pre>
+    // first character may not be numeric
+</pre>
+<pre>
+    retval = o.createName("5allpha"); 
+</pre>
+<pre>
+    expect(retval == null);    
+</pre>
+</blockquote>
+<p>
+    Este código se crea copiando una comprobación, pegándola y editándola para hacer otra comprobación.
+</p>
+<p>
+    El peligro de esta acción es doble. Si la interfaz cambia, habrá que hacer mucho trabajo de edición. (En casos más
+    complicados, no bastará con un sencillo reemplazo global). Además, si el código es complicado, se puede perder el
+    propósito de la prueba entre todo el texto.
+</p>
+<p>
+    Cuando vea que se repite, considere seriamente la posibilidad de factorizar la repetición en código de soporte. Aunque
+    este ejemplo de código es sencillo, es más fácil de leer y mantener si se escribe así:
+</p>
+<blockquote>
+<pre>
+  void expectNameRejected(MyClass o, String s) { 
+</pre>
+<pre>
+    Object retval = o.createName(s);    
+</pre>
+<pre>
+    expect(retval == null); }
+</pre>
+<pre>
+ ...
+</pre>
+<pre>
+ // null name not allowed
+</pre>
+<pre>
+ expectNameRejected(o, ""); 
+</pre>
+<pre>
+ // leading spaces not allowed.
+</pre>
+<pre>
+ expectNameRejected(o, " l"); 
+</pre>
+<pre>
+ // trailing spaces not allowed.
+</pre>
+<pre>
+ expectNameRejected(o, "name "); 
+</pre>
+<pre>
+ // first character may not be numeric.
+</pre>
+<pre>
+ expectNameRejected(o, "5alpha"); 
+</pre>
+</blockquote>
+<p>
+    Los desarrolladores que escriben pruebas suelen abusar del copiar y pegar. Si cree que lo está haciendo, le resultará
+    útil hacer lo contrario conscientemente. Tome la decisión de deshacer el código de todo el texto duplicado.
+</p>
+<h4>
+    Escriba las pruebas antes
+</h4>
+<p>
+    Escribir las pruebas después del código es una faena. Se tiene mucha prisa por acabarlo y seguir con otra cosa. Al
+    escribir las pruebas antes del código, las pruebas formarán parte de un bucle de información de retorno positivo. A
+    medida que implementa más código, verá pasar todas las pruebas hasta que haya terminado. Si se escriben las pruebas
+    antes, el nivel de satisfacción es más alto, y no se tarda más tiempo. Para obtener más información sobre cómo hacer
+    las pruebas antes, consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/test-first_design_6124EA6D.html" guid="2.5962561793181055E-305">Concepto:
+    Diseño de primera prueba</a>
+</p>
+<h4>
+    Haga las pruebas comprensibles
+</h4>
+<p>
+    Debe contar con que usted, u otra persona, tendrá que modificar las pruebas más adelante. Una situación típica es que
+    una iteración posterior pida un cambio en el comportamiento del componente. Suponga, por ejemplo, que el componente
+    declaró un método de raíz cuadrada como el siguiente:
+</p>
+<blockquote>
+    <p>
+        <tt>double sqrt(double x);</tt>
+    </p>
+</blockquote>
+<p>
+    En esta versión, un argumento negativo provocó que <tt>sqrt</tt> devolviese NaN ("no es un número" del estándar IEEE
+    754-1985 <i>Standard for Binary Floating-Point Arithmetic</i>). En la iteración nueva, el método de raíz cuadrada
+    aceptará números negativos y devolverá un resultado complejo.
+</p>
+<blockquote>
+    <p>
+        <tt>Complex sqrt(double x);</tt>
+    </p>
+</blockquote>
+<p>
+    Habrá que cambiar las pruebas antiguas de <tt>sqrt</tt>. Es decir, saber lo que hacen y actualizarlas de manera que
+    funcionen con el <tt>sqrt</tt> nuevo. Cuando actualice las pruebas, tenga cuidado de no destruir su capacidad de
+    detectar errores. Una manera de hacerlo es la siguiente:
+</p>
+<blockquote>
+<pre>
+  void testSQRT () {    
+</pre>
+<pre>
+    //  Update these tests for Complex     
+</pre>
+<pre>
+    // when I have time -- bem    
+</pre>
+<pre>
+    /* double result = sqrt(0.0); ...     */ }
+</pre>
+</blockquote>
+<p>
+    Hay otras maneras más sutiles: las pruebas se modifican para que se puedan ejecutar, pero ya no prueban lo que fueron
+    diseñadas para probar originalmente. El resultado final, en muchas iteraciones, puede ser un conjunto de aplicaciones
+    de prueba demasiado débil para capturar muchos errores. A veces, esto se llama "decadencia del conjunto de aplicaciones
+    de prueba". No merece la pena mantener un conjunto de aplicaciones decaído.
+</p>
+<p>
+    No se puede mantener la capacidad de detectar de errores de una prueba a no ser que esté claro qué <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/test-ideas_list_A6CEF011.html" guid="6.149711039531016E-305">Ideas de prueba</a> implementa una prueba. El código de prueba no suele estar comentado,
+    a pesar de que a veces es más difícil comprender su motivo que el del código de producto.
+</p>
+<p>
+    La decadencia del conjunto de aplicaciones de prueba es menos probable en las pruebas directas para sqrt que en las
+    pruebas indirectas. Habrá código que invoca a sqrt. Este código tendrá pruebas. Cuando <tt>sqrt</tt> cambie, algunas de
+    estas pruebas fallarán. La persona que cambie <tt>sqrt</tt> probablemente tendrá que cambiar estas pruebas. Dado que
+    esta persona está poco familiarizada con las pruebas, y que su relación con el cambio es menos clara, es más probable
+    que las debilite en el proceso de hacerlas pasar.
+</p>
+<p>
+    Cuando cree código de soporte para pruebas (como se recomienda más arriba), tenga cuidado: el código de soporte debe
+    clarificar, no oscurecer, el objetivo de las pruebas que lo utilizan. Una queja común sobre los programas orientados a
+    objetos es que no hay ningún sitio donde se pueda hacer todo. Si observa cualquier método, lo único que descubrirá es
+    que reenvía el trabajo a otro lugar. Una estructura de este tipo tiene ventajas, pero dificulta que las personas nuevas
+    conozcan el código. A no ser que hagan un esfuerzo, es probable que sus cambios sean incorrectos o que hagan el código
+    todavía más complicado o frágil. Esto también es cierto para el código de prueba, salvo que es todavía menos probable
+    que los mantenedores posteriores realicen el trabajo adecuadamente. Puede evitar el problema escribiendo pruebas
+    comprensibles.
+</p>
+<h4>
+    Haga que la estructura de la prueba coincida con la estructura del producto
+</h4>
+<p>
+    Supongamos que alguien ha heredado su componente y necesita cambiar una parte de éste. Puede que desee estudiar las
+    pruebas anteriores para ayudarle a realizar el nuevo diseño, o que desee actualizar las pruebas antiguas antes de
+    escribir el código (diseño de primera prueba).
+</p>
+<p>
+    Todas estas buenas intenciones se quedarán en nada si no consigue encontrar las pruebas adecuadas. Lo que tendrá que
+    hacer es realizar el cambio, ver qué pruebas fallan y arreglarlas. Esto contribuiría a la decadencia del conjunto de
+    aplicaciones de prueba.
+</p>
+<p>
+    Por este motivo, es importante que el conjunto de aplicaciones de prueba esté bien estructurado y que la ubicación de
+    las pruebas sea previsible a partir de la estructura del producto. Por lo general, los desarrolladores ordenan las
+    pruebas en un jerarquía paralela, con una clase de prueba por cada clase de producto. De esta manera, si alguien
+    alguien cambia una clase llamada <tt>Registro</tt>, sabrá que la clase de prueba es <tt>RegistroPrueba</tt> y dónde
+    puede encontrar el archivo de origen.
+</p>
+<h4>
+    Permita que las pruebas infrinjan la encapsulación
+</h4>
+<p>
+    Puede limitar las pruebas para interactuar con el componente exactamente de la misma manera que el código de cliente,
+    mediante la misma interfaz que utiliza el código de cliente. No obstante, esto tiene desventajas. Supongamos que está
+    probando una clase simple que mantiene una lista con dos enlaces:
+</p>
+<p align="center">
+    <img height="46" alt="Imagen de ejemplo de la lista con dos enlaces" src="./../../../core.base_rup/guidances/concepts/resources/dvltst-img1.gif" width="195" />
+</p>
+<p class="picturetext">
+    Figura 1: Lista con dos enlaces
+</p>
+<p>
+    En concreto, está probando el método <tt>DoublyLinkedList.insertBefore(Object existing, Object newObject)</tt>. En una
+    de las pruebas, introduzca un elemento en medio de la lista y, a continuación, compruebe si se ha introducido
+    correctamente. La prueba utiliza la lista anterior para crear esta lista actualizada:
+</p>
+<p align="center">
+    <img height="46" alt="Imagen de ejemplo de la lista con dos enlaces con elemento insertado"     src="./../../../core.base_rup/guidances/concepts/resources/dvltst-img2.gif" width="318" />
+</p>
+<p class="picturetext">
+    Figura 2: Lista con dos enlaces - elemento insertado
+</p>
+<p>
+    Comprueba la corrección de la lista de la siguiente manera:
+</p>
+<blockquote>
+<pre>
+  // the list is now one longer. 
+</pre>
+<pre>
+ expect(list.size()==3);
+</pre>
+<pre>
+ // the new element is in the correct position
+</pre>
+<pre>
+ expect(list.get(1)==m);
+</pre>
+<pre>
+ // check that other elements are still there.
+</pre>
+<pre>
+ expect(list.get(0)==a); expect(list.get(2)==z);
+</pre>
+</blockquote>
+<p>
+    Parece que esto es suficiente, pero no lo es. Supongamos que la implementación de la lista es incorrecta y que los
+    punteros de retroceso no se han establecido correctamente. Es decir, supongamos que la lista actualizada tiene el
+    siguiente aspecto:
+</p>
+<p align="center">
+    <img height="73" alt="Imagen de ejemplo de la lista con dos enlaces con anomalía de implementación"     src="./../../../core.base_rup/guidances/concepts/resources/dvltst-img3.gif" width="318" />
+</p>
+<p class="picturetext">
+    Figura 3: Lista con dos enlaces - anomalía de implementación
+</p>
+<p>
+    Si <tt>DoublyLinkedList.get(int index)</tt> cruza la lista desde el principio al final (probablemente), la prueba
+    pasará por alto esta anomalía. Si la clase proporciona los métodos <tt>elementBefore</tt> y <tt>elementAfter</tt>, la
+    comprobación de estas anomalías es sencilla:
+</p>
+<blockquote>
+<pre>
+  // Check that links were all updated
+</pre>
+<pre>
+ expect(list.elementAfter(a)==m);
+</pre>
+<pre>
+ expect(list.elementAfter(m)==z);
+</pre>
+<pre>
+ expect(list.elementBefore(z)==m);
+</pre>
+<pre>
+ //this will fail
+</pre>
+<pre>
+ expect(list.elementBefore(m)==a);
+</pre>
+</blockquote>
+<p>
+    Pero, ¿y si no proporciona estos métodos? Podría concebir secuencias de llamadas a método más elaboradas que fallen si
+    encuentran el defecto sospechoso. Por ejemplo:
+</p>
+<blockquote>
+<pre>
+  // Check whether back-link from Z is correct.
+</pre>
+<pre>
+ list.insertBefore(z, x);
+</pre>
+<pre>
+ // If it was incorrectly not updated, X will have 
+</pre>
+<pre>
+ // been inserted just after A.
+</pre>
+<pre>
+ expect(list.get(1)==m); 
+</pre>
+</blockquote>
+<p>
+    Sin embargo, una prueba de este tipo supone más trabajo de creación y es probable que sea significativamente más
+    difícil de mantener. (A no ser que escriba unos buenos comentarios, no estará claro por qué la prueba está haciendo
+    determinada operación). Hay dos soluciones:
+</p>
+<ol>
+    <li>
+        Añada los métodos <tt>elementBefore</tt> y <tt>elementAfter</tt> a la interfaz pública. Esta acción muestra la
+        implementación a todo el mundo y dificulta la introducción de cambios en el futuro.
+    </li>
+    <li>
+        Permita que las pruebas profundicen y comprueben los punteros directamente.
+    </li>
+</ol>
+<p>
+    La última suele ser la mejor solución, incluso para una clase sencilla como <tt>DoublyLinkedList</tt> y, especialmente,
+    para las clases más complejas que se encuentran en los productos.
+</p>
+<p>
+    Normalmente, las pruebas se colocan en el mismo paquete que la clase que prueban. Se les proporciona acceso de amigo o
+    protegido.
+</p>
+<h3>
+    <a id="TestDesignMistakes" name="TestDesignMistakes"></a>Errores característicos del diseño de pruebas
+</h3>
+<p>
+    Cada prueba ejercita un componente y comprueba si los resultados son correctos. El diseño de la prueba, las entradas
+    que utiliza y cómo comprueba la corrección, puede ser bueno para revelar defectos o puede ocultarlos involuntariamente.
+    A continuación, se muestran algunos errores característicos del diseño de pruebas.
+</p>
+<h4>
+    No se han podido especificar los resultados esperados por adelantado
+</h4>
+<p>
+    Supongamos que está probando un componente que convierte XML en HTML. Existe la tentación de coger XML de ejemplo,
+    ejecutarlo en la conversión y, a continuación, observar los resultados en un navegador. Si la pantalla parece correcta,
+    guarda el HTML como el resultado oficial esperado. Después, una prueba compara la salida real de la conversión con el
+    resultado esperado.
+</p>
+<p>
+    Esta práctica es peligrosa, ya que incluso los usuarios avanzados están acostumbrados a fiarse de lo que hace el
+    ordenador y es probable que pase por alto errores en la apariencia de la pantalla. (A parte de que los navegadores
+    tienen una tolerancia bastante alta al HTML con formato incorrecto). Al proponer el HTML incorrecto como resultado
+    esperado oficial, se asegura de que la prueba nunca encontrará un problema.
+</p>
+<p>
+    Es un poco menos peligroso realizar dos comprobaciones observando directamente el HTML. Dado que la salida es
+    complicada, es fácil pasar por alto los errores. Encontrará más defectos si antes escribe la salida esperada a mano.
+</p>
+<h4>
+    No se ha podido comprobar el fondo
+</h4>
+<p>
+    Normalmente, las pruebas comprueban que se ha cambiado lo necesario, pero los creadores se olvidan con frecuencia de
+    comprobar que no se ha tocado lo que no se tenía que tocar. Supongamos, por ejemplo, que un programa debe cambiar los
+    100 primeros registros de un archivo. Es una buena idea comprobar que la prueba 101 no se cambiado.
+</p>
+<p>
+    En teoría, debe comprobar que no se ha olvidado nada del "fondo" (todo el sistema de archivos, toda la memoria, todo lo
+    alcanzable a través de la red). En la práctica, debe elegir cuidadosamente qué puede permitirse comprobar. Es
+    importante que tome esa decisión.
+</p>
+<h4>
+    No se ha podido comprobar la permanencia
+</h4>
+<p>
+    El hecho de que el componente le diga que ha realizado un cambio, no significa que se haya confirmado realmente en la
+    base de datos. Debe comprobar la base de datos a través de otra ruta.
+</p>
+<h4>
+    No se ha podido añadir variedad
+</h4>
+<p>
+    Una prueba puede estar diseñada para comprobar el efecto de tres campos en un registro de la base de datos, pero hay
+    que rellenar muchos otros campos para poder ejecutarla. A menudo, los verificadores utilizan los mismos valores una y
+    otra vez para estos campos "irrelevantes". Por ejemplo, siempre utilizan el nombre de su mujer en los campos de texto,
+    o 999 en los campos numéricos.
+</p>
+<p>
+    El problema es que, a veces, lo que no debería importar, importa. De vez en cuando, hay un error que depende de una
+    oscura combinación de entradas poco probables. Si siempre utiliza las mismas entradas, no dará oportunidad a encontrar
+    estos errores. Si cambia las entradas constantemente, puede que los encuentre. Por lo general, apenas cuesta utilizar
+    un número diferente a 999 o el nombre de otra persona. Si cambiar los valores utilizados en las pruebas tiene un coste
+    ínfimo y tiene algún beneficio potencial, cámbielos. (Nota: No es inteligente utilizar el nombre de novias antiguas si
+    la actual trabaja con usted).
+</p>
+<p>
+    Aquí se encuentra otra ventaja. Un plausible fallo de que el programa utilice el campo <i>X</i> en vez de utilizar el
+    campo <i>Y</i>. Si los dos campos contienen "Amanecer", no se puede detectar la anomalía.
+</p>
+<h4>
+    No se han podido utilizar datos realistas
+</h4>
+<p>
+    Es frecuente utilizar datos inventados en las pruebas. Por lo general, los datos son increíblemente simples. Por
+    ejemplo, los nombre de clientes pueden ser "Mickey", "Snoopy" y "Donald". Puesto que los datos son diferentes de lo que
+    especifican los usuarios reales (por ejemplo, mucho más breves), se pueden omitir defectos que verían los clientes
+    reales. Por ejemplo, estos nombres de una sola palabra no detectarían que el código no admite nombres con espacios.
+</p>
+<p>
+    Es prudente realizar un pequeño esfuerzo adicional para utilizar datos realistas.
+</p>
+<h4>
+    No se ha podido detectar que el código no funciona
+</h4>
+<p>
+    Supongamos que inicializa un registro de la base de datos en cero, ejecuta un cálculo que debería tener cero como
+    resultado de almacenamiento en el registro y, a continuación, comprueba que el registro es cero. ¿Qué ha mostrado la
+    prueba? Puede que el cálculo no se haya realizado, que no se haya almacenado nada, y que la prueba no lo muestre.
+</p>
+<p>
+    Este ejemplo parece poco probable. Aunque el mismo error puede producirse de maneras más sutiles. Por ejemplo, puede
+    escribir una prueba para un programa de instalador complicado. La prueba se ha diseñado para comprobar que se eliminan
+    todos los archivos temporales después de una instalación satisfactoria. Pero, dadas todas las opciones del instalador,
+    en dicha prueba, no se ha creado un archivo temporal determinado. Seguramente sea el que el programa se olvidó de
+    eliminar.
+</p>
+<h4>
+    No se ha podido detectar que el código realiza una función incorrecta
+</h4>
+<p>
+    A veces, los programas hacen lo correcto por motivos incorrectos. Como un ejemplo trivial, considere este código:
+</p>
+<blockquote>
+<pre>
+  if (a &lt; b && c)     
+</pre>
+<pre>
+     return 2 * x;
+</pre>
+<pre>
+ else    
+</pre>
+<pre>
+     return x * x;
+</pre>
+</blockquote>
+<p>
+    La expresión lógica es errónea y ha escrito una prueba que hace que evalúe incorrectamente y tome la ramificación
+    equivocada. Desgraciadamente, por pura coincidencia, la variable X tiene el valor 2 en dicha prueba. Por lo que, de
+    manera accidental, el resultado de la ramificación errónea es correcto; igual que el resultado que hubiera devuelto la
+    ramificación correcta.
+</p>
+<p>
+    Para cada resultado esperado, debería preguntarse si hay alguna manera plausible de obtener ese resultado por motivos
+    erróneos. A veces es imposible saberlo, pero otras veces no.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

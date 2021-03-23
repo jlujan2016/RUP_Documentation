@@ -1,0 +1,1170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de tareas: Dise&ntilde;o de clase</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="class_design" name="uma.name">
+<meta content="Dise&ntilde;o de clase" name="uma.presentationName">
+<meta content="_xrlnMEocEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="Dise&ntilde;ador">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={002674F9-6511-4D15-8623-B761D8C48986}&path={002674F9-6511-4D15-8623-B761D8C48986},{FB3EB753-A979-4849-B57B-97F39271F82B},_xrlnMEocEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_XSr4YCFtEdqrX8YVzvtlIg", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_xrlnMEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_J1u8gCGYEdqMcovRzkCQow", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_xrlnMEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_vllcADIKEdqGgPtrSpB0vQ", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_xrlnMEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_XSr4YCFtEdqrX8YVzvtlIg", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_xrlnMEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_J1u8gCGYEdqMcovRzkCQow", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_xrlnMEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_vllcADIKEdqGgPtrSpB0vQ", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_xrlnMEocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_XSr4YCFtEdqrX8YVzvtlIg", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_xrlnMEocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_J1u8gCGYEdqMcovRzkCQow", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_xrlnMEocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_vllcADIKEdqGgPtrSpB0vQ", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_xrlnMEocEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_xrlnMEocEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Dise&ntilde;o de clase</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta tarea define cómo diseñar la estructura de clases de un subsistema o componente.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="clase" text="diseñar" name="XE_class__designing" id="XE_class__designing" class="index"></a> 
+<ul>
+    <li>
+        Garantizar que la clase proporciona el comportamiento que requieren las realizaciones de los casos de uso
+    </li>
+    <li>
+        Garantizar que se proporciona suficiente información para implementar la clase sin ambigüedad
+    </li>
+    <li>
+        Manejar los requisitos no funcionales relacionados con la clase
+    </li>
+    <li>
+        Incorporar los mecanismos de diseño que utiliza la clase
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Principal:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_designer_D022ADCE.html" guid="_oAYVQTbYEdqdbfmtFQj8qA">Dise&ntilde;ador</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Adicional:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">Asistencia:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_analysis_class_B47A47A8.html" guid="_mju5QL9dEdqBwpaAk4N49g">Clase de an&aacute;lisis</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_analysis_class_45E0F882.html" guid="_m-5LQL9dEdqBwpaAk4N49g">Clase de an&aacute;lisis</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_project_specific_guidelines_286E840C.html" guid="_CPHNtxi2Edq_uI8xTPML6g">Directrices espec&iacute;ficas del proyecto</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_supplementary_specification_F9C7C5E1.html" guid="_oAeb4jbYEdqdbfmtFQj8qA">Especificaciones suplementarias</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_storyboard_328ACCE3.html" guid="_xrrt0EocEdqrjq4i3fchvA">Gui&oacute;n gr&aacute;fico</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_465A5F1.html" guid="_oAeb4zbYEdqdbfmtFQj8qA">Modelo de dise&ntilde;o</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_user_interface_prototype_C73ECF8B.html" guid="_CPBHEhi2Edq_uI8xTPML6g">Prototipo de interfaz de usuario</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_465A5F1.html" guid="_oAeb4zbYEdqdbfmtFQj8qA">Modelo de dise&ntilde;o</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    Las clases son la fuerza de trabajo del proyecto de diseño, las que realizan el trabajo real del sistema. Los otros
+    elementos de diseño como, por ejemplo, los subsistemas, los paquetes y las colaboraciones, describen cómo se agrupan y
+    cómo interactúan las clases.
+</p>
+<p class="reactive">
+    Las cápsulas son también clases estereotipadas, que se utilizan para representar hebras de ejecución concurrentes en
+    sistemas en tiempo real. En estos casos, las otras clases de diseño son clases pasivas, que se ejecutan en el contexto
+    de ejecución proporcionado por las cápsulas activas. Cuando el diseñador y el arquitecto de software deciden no
+    utilizar un enfoque de diseño basado en cápsulas, todavía se puede modelar el comportamiento concurrente utilizando
+    clases activas.
+</p>
+<p>
+    Las clases activas son clases de diseño que coordinan y controlan el comportamiento de las clases pasivas: una clase
+    activa es una clase cuyas instancias son objetos activos, que poseen su propia hebra de control.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> Utilizar mecanismos y patrones de dise&ntilde;o </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="patrones" text="usar" name="XE_patterns__using" id="XE_patterns__using" class="index"></a><a key="mecanismos" text="usar" name="XE_mechanisms__using" id="XE_mechanisms__using" class="index"></a><a id="Use Design Patterns and Mechanisms" name="Use Design Patterns and Mechanisms"></a>
+<p>
+    Utilice los mecanismos y los patrones de diseño que se adapten a la clase o posibilidad que está diseñando, de acuerdo
+    con las directrices de diseño del proyecto.
+</p>
+<p>
+    La incorporación de un patrón y/o un mecanismo significa realizar de forma eficaz muchos de los pasos posteriores en
+    esta tarea (añadir nuevas clases, operaciones, atributos y relaciones), de acuerdo con las reglas definidas por el
+    patrón o mecanismo.
+</p>
+<p>
+    Tenga en cuenta que los patrones y los mecanismos se incorporan normalmente a medida que evoluciona el diseño, no sólo
+    como el primer paso en esta tarea. También se aplican a menudo entre un conjunto de clases, en lugar de sólo a una
+    clase.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Crear clases de dise&ntilde;o inicial </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="clase" text="crear clases de diseño inicialmente" name="XE_class__creating_design_classes_initially" id="XE_class__creating_design_classes_initially" class="index"></a><a id="Create Initial Design Classes" name="Create Initial Design Classes"></a>
+<p>
+    Cree una o varias clases de diseño inicial para la clase de análisis proporcionada como entrada a esta tarea y asigne
+    dependencias de rastreo. Las clases de diseño creadas en este paso se perfeccionarán, ajustarán, dividirán o fusionarán
+    en los pasos posteriores cuando se les asignen distintas propiedades de diseño como, por ejemplo, operaciones, métodos
+    y una máquina de estado, que describen cómo se diseña la clase de análisis.
+</p>
+<p>
+    Dependiendo del tipo de clase de análisis (límite, entidad o control) que se está diseñando, existen estrategias
+    específicas que puede utilizar para crear clases de diseño inicial.
+</p>
+<h4>
+    <a key="clase de límite" text="diseñar" name="XE_boundary_class__designing" id="XE_boundary_class__designing" class="index"></a><a id="Designing boundary classes" name="Designing boundary classes">Diseño de clases de límite</a>
+</h4>
+<p>
+    Las clases de límite representan interfaces con los usuarios u otros sistemas.
+</p>
+<p>
+    Normalmente, las clases de límite que representan interfaces con otros sistemas se modelan como subsistemas, ya que a
+    menudo tienen un comportamiento interno complejo. Si el comportamiento de la interfaz es sencillo (por ejemplo, si
+    actúa sólo como paso a través a una API existente del sistema externo), puede elegir representar la interfaz con una o
+    más clases de diseño. Si elige esta ruta, utilice una única clase de diseño por protocolo, interfaz o API, y tenga en
+    cuenta los requisitos especiales sobre los estándares que ha utilizado en los requisitos especiales de la clase.
+</p>
+<p>
+    Las clases de límite que representan interfaces con usuarios generalmente siguen la regla de una clase de límite para
+    cada ventana, o una para cada formulario, en la interfaz de usuario. Por lo tanto, las responsabilidades de las clases
+    de límite pueden tener un nivel bastante alto, y se deben perfeccionar y detallar en este paso. Los modelos o
+    prototipos adicionales de la interfaz de usuario pueden ser otra fuente de entrada a considerar en este paso.
+</p>
+<p>
+    El diseño de las clases de límite depende de las herramientas de desarrollo de la interfaz de usuario (UI) que hay
+    disponibles para el proyecto. Utilizando la tecnología actual, lo normal es que la UI se construya directamente en la
+    herramienta de desarrollo de forma visual. Esto crea automáticamente clases de UI que se deben relacionar con el diseño
+    de las clases de control y entidad. Si el entorno de desarrollo de UI crea automáticamente las clases de soporte que
+    necesita para implementar la UI, no es necesario considerarlas en el diseño. Sólo es necesario diseñar aquellos
+    elementos que no crea el entorno de desarrollo automáticamente.
+</p>
+<h4>
+    <a key="clase de entidad" text="diseñar" name="XE_entity_class__designing" id="XE_entity_class__designing" class="index"></a><a id="Designing Entity Classes" name="Designing Entity Classes">Diseño de clases de entidad</a>
+</h4>
+<p>
+    Durante el análisis, las clases de entidad representan unidades de información manipuladas. A menudo son pasivas y
+    persistentes, y se pueden identificar y asociar con el mecanismo de análisis de la persistencia. Los detalles del
+    diseño de un mecanismo de persistencia basado en base de datos se describen en <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/database_design_8552DD3.html" guid="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}">Tarea: Diseño de
+    base de datos</a>. Las consideraciones del rendimiento pueden forzar la refactorización de las clases persistentes,
+    provocando cambios en el modelo de diseño que se describen conjuntamente en <a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">Rol:
+    Diseñador de base de datos</a> y <a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Rol: Diseñador</a>.
+</p>
+<p>
+    Puede encontrar más adelante una descripción más amplia de los temas de diseño de las clases persistentes en la
+    cabecera <a href="#Define Persistent Classes">Identificar clases persistentes</a>.
+</p>
+<h4>
+    <a key="clase de control" text="diseñar" name="XE_control_class__designing" id="XE_control_class__designing" class="index"></a><a id="Designing Control Classes" name="Designing Control Classes">Diseño de clases de control</a>
+</h4>
+<p>
+    Un objeto de control es responsable de gestionar el flujo de un caso de uso y, por lo tanto, coordina la mayoría de sus
+    acciones; los objetos de control encapsulan la lógica que no está particularmente relacionada con los aspectos de la
+    interfaz de usuario (objetos de límite) o los aspectos de la ingeniería de datos (objetos de entidad). Esta lógica se
+    denomina también <b>lógica de aplicaciones</b> o la <b>lógica empresarial</b>.
+</p>
+<p>
+    Tenga en cuenta los aspectos siguientes cuando diseñe clases de control:
+</p>
+<ul>
+    <li>
+        <b>Complejidad</b>: Puede manejar el comportamiento de coordinación o control que no es complicado utilizando
+        clases de límite o entidad. No obstante, a medida que aumenta la complejidad de la aplicación, este enfoque
+        presenta algunos inconvenientes significativos como, por ejemplo:
+    </li>
+</ul>
+<blockquote>
+    <ul>
+        <li>
+            el comportamiento de coordinación del caso de uso se incorpora en la UI, lo que hace que sea más difícil
+            cambiar el sistema
+        </li>
+        <li>
+            la misma UI no se puede utilizar en realizaciones de casos de uso diferentes sin dificultad
+        </li>
+        <li>
+            la UI se sobrecarga de funcionalidad adicional, lo que reduce su rendimiento
+        </li>
+        <li>
+            los objetos de entidad se pueden sobrecargar con el comportamiento específico del caso de uso , lo que reduce
+            su generalidad
+        </li>
+    </ul>
+</blockquote>
+<blockquote>
+    <p>
+        Para evitar estos problemas, se introducen las clases de control para proporcionar un comportamiento relacionado
+        con la coordinación de flujos de sucesos.
+    </p>
+</blockquote>
+<ul>
+    <li>
+        <b>Probabilidad de cambio</b>: Si la probabilidad de cambiar flujos de sucesos es menor o el coste es
+        insignificante, el gasto y la complejidad adicionales de añadir clases de control puede no estar justificada.
+    </li>
+    <li>
+        <b>Distribución y rendimiento</b>: La necesidad de ejecutar componentes de la aplicación en distintos nodos, o en
+        distintos espacios de proceso, introduce la necesidad de especializar los elementos del modelo de diseño. Esta
+        especialización se consigue normalmente añadiendo objetos de control y distribuyendo el comportamiento desde las
+        clases de límite y entidad a las clases de control. De esta forma, las clases de límite migran a proporcionar sólo
+        servicios de UI, las clases de entidad pasan a proporcionar sólo servicios de datos y las clases de control
+        proporcionan el resto.
+    </li>
+    <li>
+        <b>Gestión de transacciones</b>: La gestión de transacciones es una actividad de coordinación clásica. Sin una
+        infraestructura para manejar la gestión de transacciones, una o varias clases de <b>gestor de transacciones</b>
+        tendrán que interactuar para garantizar que se mantiene la integridad de las transacciones.
+    </li>
+</ul>
+<p>
+    En los últimos dos casos, si la clase de control representa una hebra de control independiente, puede que sea más
+    adecuado utilizar una clase activa para modelar la hebra de control. En un sistema en tiempo real, el uso de <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_capsule_FC4A34FD.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">Producto de trabajo: Cápsula</a>s es el enfoque de modelado preferido.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar clases persistentes </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="clase permanente" text="identificar" name="XE_persistent_class__identifying" id="XE_persistent_class__identifying" class="index"></a><a key="clase de entidad" text="definir clases permanentes" name="XE_entity_class__define_persistent_classes" id="XE_entity_class__define_persistent_classes" class="index"></a><a id="Define Persistent Classes" name="Define Persistent Classes"></a>
+<p>
+    Las clases que deben almacenar su estado en un medio permanente se conocen como persistentes. La necesidad de almacenar
+    su estado puede ser para el registro permanente de información de las clases, como copia de seguridad en el caso de una
+    anomalía del sistema, o para el intercambio de información. Una clase persistente puede tener instancias persistentes y
+    transitorias; el etiquetado de una clase como persistente significa sólo que algunas instancias de la clase puede que
+    tengan que ser persistentes.
+</p>
+<p>
+    Incorpore los mecanismos de diseño correspondientes a los mecanismos de persistencia encontrados durante el análisis.
+    Por ejemplo, dependiendo de las necesidades de la clase, el mecanismo de análisis de persistencia puede realizarse
+    mediante uno de estos mecanismos de diseño:
+</p>
+<ul>
+    <li>
+        Almacenamiento en memoria
+    </li>
+    <li>
+        Tarjeta Flash
+    </li>
+    <li>
+        Archivo binario
+    </li>
+    <li>
+        Sistema de gestión de bases de datos (DBMS)
+    </li>
+</ul>
+<p>
+    Los objetos persistentes puede que no se deriven sólo de clases de entidad; los objetos persistentes también pueden ser
+    necesarios para manejar requisitos no funcionales en general. Algunos ejemplos son los objetos persistentes necesarios
+    para mantener la información relevante para el control de procesos o para mantener información de estado entre
+    transacciones.
+</p>
+<p>
+    La identificación de clases persistentes permite notificar al <a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">Rol:
+    Diseñador de base de datos</a> que la clase necesita especial atención a las características de almacenamiento físico.
+    También notifica al <a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Rol: Arquitecto de software</a> que la clase debe ser persistente y al <a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Rol: Diseñador</a> responsable del mecanismo de persistencia que las
+    instancias de la clase deben convertirse en persistentes.
+</p>
+<p>
+    Debido a la necesidad de una estrategia de persistencia coordinada, el <a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">Rol:
+    Diseñador de base de datos</a> es el responsable de correlacionar las clases persistentes en la base de datos,
+    utilizando una infraestructura de persistencia. Si el proyecto desarrolla una infraestructura de persistencia, el
+    desarrollador de la infraestructura también será responsable de entender los requisitos de persistencia de las clases
+    de diseño. Para proporcionar a estas personas la información que necesitan, es suficiente en este punto indicar que la
+    clase es persistente o, más concretamente, que las instancias de la clase son persistentes.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Definir la visibilidad de la clase </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Define Class Visibility" name="Define Class Visibility"></a>
+<p>
+    Para cada clase, determine la visibilidad de la clase en el paquete en el que reside. Se puede hacer referencia a una
+    clase <i>pública</i> fuera del paquete que la contiene. Sólo se puede hacer referencia a una clase <i>privada</i> (o
+    una cuya visibilidad es <i>implementación</i>) desde las clases dentro del mismo paquete.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Definir operaciones </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="operación" text="definir en clases" name="XE_operation__defining_on_classes" id="XE_operation__defining_on_classes" class="index"></a><a id="Define Operations" name="Define Operations"></a>
+<ul>
+    <li>
+        <a href="#Identifying operations">Identificación de operaciones</a>
+    </li>
+    <li>
+        <a href="#Naming and describing the operations">Denominación y descripción de las operaciones</a>
+    </li>
+    <li>
+        <a href="#Defining operation visibility">Definición de la visibilidad de la operación</a>
+    </li>
+    <li>
+        <a href="#Defining class operations">Definición de las operaciones de clase</a>
+    </li>
+</ul>
+<h4>
+    <a id="Identifying operations" name="Identifying operations">Identificación de operaciones</a>
+</h4>
+<p>
+    Para identificar operaciones en las clases de diseño:
+</p>
+<ul>
+    <li>
+        Estudie las responsabilidades de cada clase de análisis correspondiente, creando una operación para cada
+        responsabilidad. Utilice la descripción de la responsabilidad como la descripción inicial de la operación.
+    </li>
+    <li>
+        Estudie las realizaciones de los casos de uso en la clase <i>participates</i> para ver cómo utilizan las
+        operaciones. Amplíe las operaciones, para cada realización de caso de uso , y perfecciones las operaciones, sus
+        descripciones, tipos de retorno y parámetros. Los requisitos de cada realización de caso de uso pertenecientes a
+        las clases se describen textualmente en el Flujo de sucesos de la realización del caso de uso .
+    </li>
+    <li>
+        Estudie el caso de uso Requisitos especiales para asegurarse de que no omite los requisitos implícitos en la
+        operación que allí se indica.
+    </li>
+</ul>
+<p>
+    Las operaciones son necesarias para dar soporte a los mensajes que aparecen en los diagramas de secuencia, ya que los
+    scripts -especificaciones de mensajes temporales que no se han asignado todavía a las operaciones- describen el
+    comportamiento que se espera de la clase. En la Figura 1 se muestra un ejemplo de un diagrama de secuencia.
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/guidances/guidelines/resources/seqdiag1.gif" width="672" height="417"     alt="Diagrama descrito en el texto adjunto." />
+</p>
+<p class="picturetext" align="center">
+    Figura 1: Los mensajes constituyen la base para identificar operaciones
+</p>
+<p>
+    Las realizaciones de los casos de uso no pueden proporcionar suficiente información para identificar todas las
+    operaciones. Para encontrar las operaciones restantes, tenga en cuenta lo siguiente:
+</p>
+<ul>
+    <li>
+        ¿Hay alguna forma de inicializar una nueva instancia de la clase, incluido conectarla a instancias de otras clases
+        con las que está asociada?
+    </li>
+    <li>
+        ¿Es necesario probar si dos instancias de la clase son iguales?
+    </li>
+    <li>
+        ¿Es necesario crear una copia de una instancia de la clase?
+    </li>
+    <li>
+        ¿Hay operaciones necesarias en la clase por los mecanismos que utilizan? Por ejemplo, un mecanismo de
+        <i>recopilación de basura</i> puede necesitar que un objeto pueda eliminar todas sus referencias a los demás
+        objetos, para que se puedan liberar los recursos no utilizados.
+    </li>
+</ul>
+<p>
+    No defina operaciones que sólo obtengan y establezcan los valores de atributos públicos (consulte <a href="#Define Attributes">Definir atributos</a> y <a href="#Define Associations">Definir asociaciones</a>).
+    Normalmente, se generan mediante recursos de generación de código y no es necesario definirlas de forma explícita.
+</p>
+<h4>
+    <a key="operación" text="denominación" name="XE_operation__naming" id="XE_operation__naming" class="index"></a><a id="Naming and describing the operations" name="Naming and describing the operations">Denominación y descripción de las
+    operaciones</a>
+</h4>
+<p>
+    Utilice convenios de denominación para el lenguaje de implementación cuando denomine operaciones, tipos de retorno, y
+    parámetros y sus tipos. Se describen en las <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_project_specific_guidelines_8DC8DA32.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">Directrices específicas del proyecto</a>.
+</p>
+<p>
+    Para cada operación, debe definir lo siguiente:
+</p>
+<ul>
+    <li>
+        <b>El nombre de operación</b>: Proporcione un nombre abreviado y descriptivo del resultado de la operación. 
+        <ul>
+            <li>
+                Los nombres de las operaciones deben seguir la sintaxis del lenguaje de implementación. Por ejemplo:
+                <b>find_location</b> será aceptable para C++ o Visual Basic, pero no para Smalltalk (donde no se utilizan
+                subrayados); un nombre más adecuado será <b>findLocation</b>.
+            </li>
+            <li>
+                Evite nombres que impliquen cómo se realiza la operación. Por ejemplo, <b>Employee.wages()</b> es mejor que
+                <b>Employee.calculateWages()</b>, ya que el último implica que se realiza un cálculo. La operación puede
+                devolver simplemente un valor en una base de datos.
+            </li>
+            <li>
+                El nombre de una operación debe mostrar claramente su objetivo. Evite nombres poco específicos como, por
+                ejemplo, <b>getData</b>, que no son descriptivos del resultado que devuelven. Utilice un nombre que muestre
+                exactamente qué se espera como, por ejemplo, <b>getAddress</b>. O mejor aún, haga que el nombre de la
+                operación sea el nombre de la propiedad que se devuelve o se establece. Si tiene un parámetro, establece la
+                propiedad. Si no tiene ningún parámetro, obtiene la propiedad. Por ejemplo: la operación <b>address</b>
+                devuelve la dirección de un <b>Cliente</b>, mientras que <b>address(aString)</b> establece o cambia la
+                dirección del <b>Cliente</b>. La naturaleza de <i>obtener</i> y <i>establecer</i> de la operación es
+                implícita desde la firma de la operación.
+            </li>
+            <li>
+                Las operaciones que son conceptualmente idénticas deberían tener el mismo nombre, aunque las definan clases
+                diferentes, se implementen de forma completamente distinta o tengan un número de parámetros diferente. Por
+                ejemplo, una operación que crea un objeto debería tener el mismo nombre en todas las clases.
+            </li>
+            <li>
+                Si hay operaciones en varias clases que tienen la misma firma, la operación debe devolver el mismo tipo de
+                resultado adecuado para el objeto receptor. Este es un ejemplo del concepto de <b>polimorfismo</b>, que
+                establece que objetos diferentes deben responder al mismo mensaje de forma parecida. Por ejemplo: la
+                operación <b>name</b> debe devolver el nombre del objeto, independientemente de cómo se almacene o se
+                derive el nombre. Si se sigue este principio, el modelo es más fácil de entender.
+            </li>
+        </ul>
+    </li>
+    <li>
+        <b>El tipo de retorno</b>: El tipo de retorno debe ser la clase de objeto que devuelve la operación.
+    </li>
+    <li>
+        <b>Una breve descripción</b>: Aunque proporcione un nombre de operación significativo, a menudo sólo es vagamente
+        útil cuando se intenta entender qué hace la operación. Proporcione una breve descripción de la operación formada
+        por un par de frases, escritas desde la perspectiva del <b>usuario</b> de la operación.
+    </li>
+    <li>
+        <b>Los parámetros</b>: Para cada parámetro, cree un nombre descriptivo abreviado, decida su clase y proporcione una
+        breve descripción. Cuando especifique parámetros, recuerde que cuanto menor sea el número de parámetros, mayor es
+        la capacidad de reutilización. Un número pequeño de parámetros hace que la operación sea más fácil de entender y,
+        por lo tanto, hay una mayor probabilidad de encontrar operaciones parecidas. Puede que tenga que dividir una
+        operación con muchos parámetros en varias operaciones. La operación debe ser comprensible para aquellos que deseen
+        utilizarla. La breve descripción debe incluir: 
+        <ul>
+            <li>
+                el significado de los parámetros, si no es aparente en el nombre
+            </li>
+            <li>
+                si el parámetro se pasa <b>por valor</b> o <b>por referencia</b>
+            </li>
+            <li>
+                parámetros que deben tener valores proporcionados
+            </li>
+            <li>
+                parámetros que pueden ser opcionales y los valores por omisión, si no se proporciona ningún valor
+            </li>
+            <li>
+                rangos válidos para los parámetros, si es aplicable
+            </li>
+            <li>
+                qué se hace en la operación
+            </li>
+            <li>
+                qué parámetros <b>por referencia</b> modifica la operación
+            </li>
+        </ul>
+    </li>
+</ul>
+<p align="left">
+    Una vez definidas las operaciones, complete los diagramas de secuencia con información sobre qué operaciones se invocan
+    para cada mensaje.
+</p>
+<p align="left">
+    Consulte el apartado <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/design_class_E98280BF.html#Class Operations" guid="2.914882084937444E-305">Directriz de producto de trabajo: Clase de diseño</a> para obtener más información.
+</p>
+<h4 align="left">
+    <a id="Defining operation visibility" name="Defining operation visibility">Definición de la visibilidad de la
+    operación</a>
+</h4>
+<p align="left">
+    Para cada operación, identifique la visibilidad de exportación de la operación a partir de estas opciones:
+</p>
+<ul>
+    <li>
+        <b>Pública</b>: la operación es visible para modelar elementos diferentes de la propia clase.
+    </li>
+    <li>
+        <b>Implementación</b>: la operación es visible sólo dentro de la misma clase.
+    </li>
+    <li>
+        <b>Protegida</b>: la operación es visible sólo para la clase, sus subclases, o para <i>amigos</i> de la clase
+        (dependientes del lenguaje).
+    </li>
+    <li>
+        <b>Privada</b>: la operación sólo es visible para la clase y los <i>amigos</i> de la clase.
+    </li>
+</ul>
+<p>
+    Elija la visibilidad más restringida posible que pueda lograr los objetivos de la operación. Para ello, observe los
+    diagramas de secuencia y, para cada mensaje, determine si el mensaje proviene de una clase fuera del paquete del
+    receptor (requiere visibilidad <b>pública</b>), del interior del paquete (requiere visibilidad de
+    <b>implementación</b>), de una subclase (requiere visibilidad <b>protegida</b>), o de la propia clase o un amigo
+    (requiere visibilidad <b>privada</b>).
+</p>
+<h4>
+    <a id="Defining class operations" name="Defining class operations">Definición de las operaciones de clase</a>
+</h4>
+<p>
+    En la mayoría de los casos, las operaciones son operaciones de instancias; esto es, se ejecutan en instancias de la
+    clase. No obstante, hay casos en los que una operación se aplica a todas las instancias de la clase y, por lo tanto, es
+    una operación de <b>ámbito de clase</b>. El receptor de la operación de clase es una instancia de una <b>metaclase</b>
+    -la descripción de la propia clase- en lugar de una instancia específica de la clase. Los ejemplos de las operaciones
+    de clase incluyen mensajes que crean nuevas instancias, que devuelven <b>todas las instancias</b> de una clase.
+</p>
+<p>
+    La serie de la operación se subraya para denotar una operación de ámbito de clase.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Definir m&eacute;todos </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="método" text="definir en clase" name="XE_method__defining_on_class" id="XE_method__defining_on_class" class="index"></a><a id="Define Methods" name="Define Methods"></a>
+<p>
+    Un método especifica la implementación de una operación. En muchos casos en los que el comportamiento necesario para la
+    operación está suficientemente definido por el nombre de operación, la descripción y los parámetros, los métodos se
+    implementan directamente en el lenguaje de programación. Cuando la implementación de una operación requiere el uso de
+    un algoritmo específico o más información de la que se presenta en la descripción de la operación, se necesita una
+    descripción de <b>método</b> aparte. El <b>método</b> describe cómo funciona la operación, no sólo lo que hace.
+</p>
+<p>
+    El método debe describir cómo:
+</p>
+<ul>
+    <li>
+        se implementarán las operaciones
+    </li>
+    <li>
+        se implementarán los atributos y se utilizarán para implementar operaciones
+    </li>
+    <li>
+        se implementarán las relaciones y se utilizarán para implementar operaciones
+    </li>
+</ul>
+<p>
+    Los requisitos variarán de un caso a otro, aunque las especificaciones de método de una clase deben indicar siempre:
+</p>
+<ul>
+    <li>
+        qué se hará de acuerdo con los requisitos
+    </li>
+    <li>
+        qué otros objetos se utilizarán (y sus operaciones)
+    </li>
+</ul>
+<p>
+    Otros requisitos más específicos hacen referencia a:
+</p>
+<ul>
+    <li>
+        cómo se implementarán los parámetros
+    </li>
+    <li>
+        qué algoritmos especiales, si hay alguno, se utilizarán
+    </li>
+</ul>
+<p>
+    Los diagramas de secuencia constituyen una fuente importante de información. A partir de ellos, se deduce qué
+    operaciones se utilizarán en otros objetos cuando se ejecute una operación. La especificación de qué operaciones se
+    utilizarán en otros objetos es necesaria para la completa implementación de una operación. Por lo tanto, la producción
+    de una especificación de método completa requiere que identifique las operaciones de los objetos implicados e
+    inspeccione los diagramas de secuencia correspondientes.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Definir estados </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="estado" text="definir en clases" name="XE_state__defining_on_classes" id="XE_state__defining_on_classes" class="index"></a><a id="Define States" name="Define States"></a> 
+<p>
+    Para algunas operaciones, el comportamiento de la operación depende del estado en el que está el objeto receptor. Una
+    máquina de estado es una herramienta que describe los estados que puede asumir un objeto y los sucesos que hacen que el
+    objeto pase de un estado a otro (consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/statechart_diagram_640B5D0B.html" guid="1.4528459404144188E-304">Técnica:
+    Diagrama de gráfico de estados</a>). Las máquinas de estado son muy útiles para describir clases activas. La
+    utilización de máquinas de estado es particularmente importante para definir el comportamiento de <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_capsule_FC4A34FD.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">Producto de trabajo: Cápsula</a>s.
+</p>
+<p>
+    En la Figura 2 se muestra un ejemplo de una máquina de estado simple.
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/statedg.gif" width="439" height="363" alt="Diagrama descrito en el texto adjunto." />
+</p>
+<p class="picturetext">
+    Figura 2: Un diagrama de gráfico de estados simple de un dispensador de combustible
+</p>
+<p>
+    Cada suceso de transición de estado se puede asociar con una operación. Dependiendo del estado del objeto, la operación
+    puede tener un comportamiento diferente y los sucesos de transición describen este cambio de comportamiento.
+</p>
+<p>
+    La descripción de <b>método</b> de la operación asociada se debe actualizar con la información específica del estado,
+    indicando para cada estado relevante qué debe hacer la operación. Los estados se representan a menudo utilizando
+    <b>atributos</b>; los diagramas de gráfico de estados sirven como entrada en el paso de identificación del atributo.
+</p>
+<p>
+    Para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/statechart_diagram_640B5D0B.html" guid="1.4528459404144188E-304">Técnica:
+    Diagrama de gráfico de estados</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Definir atributos </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="atributo de objeto" text="definir en clases" name="XE_attribute_on_object__defining_on_classes" id="XE_attribute_on_object__defining_on_classes" class="index"></a><a id="Define Attributes" name="Define Attributes"></a><a id="Define Attributes" name="Define Attributes"></a>
+<p>
+    Durante la definición de los <b>métodos</b> y la identificación de los <b>estados</b>, se identifican los atributos que
+    necesita la clase para llevar a cabo sus operaciones. Los atributos proporcionan almacenamiento de información para la
+    instancia de clase y a menudo se utilizan para representar el estado de la instancia de clase. La información mantenida
+    por la clase se mantiene mediante sus <b>atributos</b>. Para cada atributo, defina:
+</p>
+<ul>
+    <li>
+        el <b>nombre</b>, que debe seguir los convenios de denominación del lenguaje de implementación y el proyecto
+    </li>
+    <li>
+        el <b>tipo</b>, que será un tipo de datos elemental soportado por el lenguaje de implementación
+    </li>
+    <li>
+        el <b>valor inicial o por omisión</b> con el que se inicializa cuando se crean nuevas instancias de la clase
+    </li>
+    <li>
+        la <b>visibilidad</b>, que tomará uno de los valores siguientes: 
+        <ul>
+            <li>
+                <b>Pública</b>: el atributo es visible desde dentro y fuera del paquete que contiene la clase
+            </li>
+            <li>
+                <b>Protegida</b>: el atributo es visible sólo para la clase, sus subclases, o para amigos de la clase
+                (dependientes del lenguaje)
+            </li>
+            <li>
+                <b>Privada</b>: el atributo sólo es visible para la clase o los amigos de la clase
+            </li>
+            <li>
+                <b>Implementación</b>: el atributo es visible sólo para la clase
+            </li>
+        </ul>
+    </li>
+    <li>
+        las <b>clases persistentes</b>, tanto si el atributo es persistente (valor por omisión) como si es transitorio.
+        Aunque la clase sea persistente, no todos los atributos de la clase tienen que ser persistentes.
+    </li>
+</ul>
+<p>
+    Compruebe que todos los atributos son necesarios. Los atributos deben estar justificados; es fácil que los atributos se
+    añadan al principio del proceso y sobrevivan cuando ya no son necesarios debido a falta de previsión. Los atributos
+    adicionales, multiplicados por miles o millones de instancias, pueden tener un efecto negativo en el rendimiento y los
+    requisitos de almacenamiento de un sistema.
+</p>
+<p>
+    Consulte el apartado <i>Atributos</i> en <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/design_class_E98280BF.html" guid="2.914882084937444E-305">Directriz de producto
+    de trabajo: Clase de diseño</a> para obtener más información sobre los atributos.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Definir dependencias </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Define Dependencies" name="Define Dependencies"></a>
+<p>
+    En los casos en los que se necesite la comunicación entre objetos, hágase estas preguntas:
+</p>
+<ul>
+    <li>
+        ¿La referencia al receptor se ha pasado como parámetro a la operación? En caso afirmativo, establezca una
+        <b>dependencia</b> entre las clases de emisor y receptor en un diagrama de clase que contenga las dos clases.
+        Asimismo, si se utiliza el formato de <b>diagrama de comunicación</b> para las interacciones, califique la
+        visibilidad del enlace y establézcala como <b>parámetro</b>.
+    </li>
+    <li>
+        ¿El receptor es global? En caso afirmativo, establezca una <b>dependencia</b> entre las clases de emisor y receptor
+        en un diagrama de clase que contenga las dos clases. Asimismo, si se utiliza el formato de <b>diagrama de
+        comunicación</b> para las interacciones, califique la visibilidad del enlace y establézcala como <b>global</b>.
+    </li>
+    <li>
+        ¿El receptor es un objeto temporal creado y destruido durante la operación? En caso afirmativo, establezca una
+        <b>dependencia</b> entre las clases de emisor y receptor en un diagrama de clase que contenga las dos clases.
+        Asimismo, si se utiliza el formato de <b>diagrama de comunicación</b> para las interacciones, califique la
+        visibilidad del enlace y establézcala como <b>local</b>.
+    </li>
+</ul>
+<p>
+    Tenga en cuenta que los enlaces modelados de esta forma son enlaces transitorios, que sólo existen un tiempo limitado
+    en el contexto específico de la colaboración; en este sentido, son instancias del rol de asociación en la colaboración.
+    No obstante, la relación en un modelo de clase (es decir, independiente del contexto) debe ser una dependencia, tal
+    como se ha indicado anteriormente. Como se describe en [<a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html#RUM98" guid="7.755968586980351E-308">RUM98</a>], en la
+    definición de <b>enlace transitorio</b>: "Todos estos enlaces se pueden modelar como asociaciones, pero las condiciones
+    de las asociaciones se deben establecer de forma amplia, y pierden mucha precisión en la restricción de combinaciones
+    de objetos". En esta situación, el modelado de una dependencia es menos importante que el modelado de la relación en la
+    colaboración, ya que la dependencia no describe la relación completamente; sólo que existe.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Definir asociaciones </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Define Associations" name="Define Associations"></a><a id="Define Attributes and Relationships" name="Define Attributes and Relationships"></a>
+<p>
+    Las asociaciones proporcionan el mecanismo para que los objetos se comuniquen entre ellos. Proporcionan a los objetos
+    un conducto por el que pueden fluir los mensajes. También documentan las dependencias entre clases, resaltando que los
+    cambios en una clase se pueden sentir en muchas otras clases.
+</p>
+<p>
+    Examine las descripciones de <b>método</b> de cada operación para entender cómo se comunican y colaboran las instancias
+    de la clase con otros objetos. Para enviar un mensaje a otro objeto, un objeto debe tener una referencia al receptor
+    del mensaje. Un diagrama de comunicación (una representación alternativa de un diagrama de secuencia) mostrará la
+    comunicación del objeto en términos de enlaces, tal como se muestra en la Figura 3.
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/collabd.gif" width="610" height="493" alt="Diagrama descrito en el texto adjunto." />
+</p>
+<p class="picturetext">
+    Figura 3: Un ejemplo de un diagrama de comunicación
+</p>
+<h4>
+    <a id="Defining associations and aggregations" name="Defining associations and aggregations">Definición de asociaciones
+    y agregaciones</a>
+</h4>
+<p>
+    Los restantes mensajes utilizan la <b>asociación</b> o la <b>agregación</b> para especificar la relación entre las
+    instancias de dos clases que se comunican. Consulte los apartados <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/association_98710829.html" guid="5.540135518285335E-305">Técnica: Asociación</a>
+    y <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/aggregation_A53E33AB.html" guid="1.1538495077622037E-304">Técnica: Agregación</a> para obtener información sobre cómo elegir la representación
+    adecuada. Para estas dos asociaciones, establezca la visibilidad del enlace como <b>campo</b> en los diagramas de
+    comunicación. Otras tareas posibles son:
+</p>
+<ul>
+    <li>
+        Establezca la navegabilidad de las asociaciones y las agregaciones. Para ello, considere que las navegabilidades
+        son necesarias en las creaciones de instancias de enlaces en los diagramas de interacción. Como la navegabilidad es
+        <b>true</b> por omisión, sólo tiene que encontrar asociaciones (y agregaciones) allí donde todos los roles de
+        enlace opuestos de todos los objetos de una clase en la asociación no requieran navegabilidad. En estos casos,
+        establezca la navegabilidad en <b>false</b> en el rol de la clase.
+    </li>
+    <li>
+        Si hay atributos en la propia asociación (representados por clases de asociación), cree una clase de diseño para
+        representar la clase de asociación, con los atributos correspondientes. Interponga esta clase entre las otras dos
+        clases y establezca asociaciones con la multiplicidad adecuada entre la clase de asociación y las otras dos clases.
+    </li>
+    <li>
+        Especifique si los <i>extremos de la asociación</i> se deben <b>ordenar</b> o no; este es el caso cuando los
+        objetos asociados con un objeto en el otro extremo de la asociación tienen un orden que se debe conservar.
+    </li>
+    <li>
+        Si sólo se hace referencia a la clase asociada (o agregada) en la clase actual, considere si se debe anidar la
+        clase. Las ventajas de anidar las clases son una mensajería más rápida y un modelo de diseño más sencillo. Las
+        desventajas son la asignación estática del espacio de la clase anidada, independientemente de si hay instancias de
+        la clase anidada, la falta de identidad de los objetos independiente de la clase inclusiva, o la incapacidad de
+        hacer referencia a instancias de clases anidadas desde fuera de la clase inclusiva.
+    </li>
+</ul>
+<p>
+    Las asociaciones y las agregaciones se definen mejor en un diagrama de clase que describa las clases asociadas. El
+    diagrama de clase debe ser <b>propiedad</b> del paquete que contiene las clases asociadas. En la Figura 4 se muestra un
+    ejemplo de un diagrama de clase donde se describen las asociaciones y las agregaciones.
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/classdg.gif" width="469" height="396" alt="Diagrama descrito en el texto adjunto." />
+</p>
+<p class="picturetext">
+    Figura 4: Ejemplo de un diagrama de clase donde se muestran las asociaciones, agregaciones y generalizaciones entre
+    clases
+</p>
+<h4>
+    <a id="Handling Subscribe-Associations between Analysis Classes" name="Handling Subscribe-Associations between Analysis Classes">Manejo de asociaciones de suscripción entre clases de
+    análisis</a>
+</h4>
+<p>
+    Las asociaciones de suscripción entre <b>clases de análisis</b> se utilizan para identificar las dependencias de
+    sucesos entre clases. En el modelo de diseño, debe manejar estas dependencias de sucesos de forma explícita. Para ello,
+    utilice las infraestructuras de manejador de sucesos disponibles, o bien diseñe y cree su propia infraestructura de
+    manejador de sucesos. En algunos lenguajes de programación como, por ejemplo, Visual Basic, es sencillo: el usuario
+    declara, detecta y maneja los sucesos correspondientes. En otros lenguajes, deberá utilizar una biblioteca adicional de
+    funciones reutilizables para manejar las suscripciones y los sucesos. Si la funcionalidad no se puede adquirir, deberá
+    diseñarla y construirla. Consulte también <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/subscribe-association_1AB75163.html" guid="1.401846671640991E-305">Técnica:
+    Asociación de suscripción</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Definir la estructura interna </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Define Internal Structure" name="Define Internal Structure"></a>
+<p>
+    Algunas clases pueden representar abstracciones complejas y pueden tener una estructura compleja. Cuando se modela una
+    clase, el diseñador puede desear representar los elementos de participación interna y sus relaciones, para asegurarse
+    de que el implementador implementa las colaboraciones que se producen dentro de la clase como corresponde.
+</p>
+<p>
+    En UML 2.0, las clases se definen como <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/structured_class_4BB99B12.html" guid="_yW3E4NnmEdmO6L4XMImrsA">clases
+    estructuradas</a>, con la posibilidad de tener una estructura interna y puertos. Las clases se pueden descomponer en
+    recopilaciones de componentes conectados que se pueden a descomponer, a su vez. Una clase se puede encapsular forzando
+    las comunicaciones desde el exterior para pasar a través de los puertos que obedecen a las interfaces declaradas.
+</p>
+<p>
+    Cuando encuentre una clase compleja con una estructura compleja, cree un diagrama de estructura compuesta para esa
+    clase. Modele las partes que ejecutarán los roles de ese comportamiento de clase. Establezca cómo se 'conectan' las
+    partes entre sí utilizando conectores. Utilice los puertos con interfaces declaradas si desea permitir que distintos
+    clientes de esa clase accedan a partes específicas del comportamiento que ofrece la clase. Utilice también los puertos
+    para aislar completamente las partes internas de la clase de su entorno.
+</p>
+<p>
+    Para obtener más información sobre este tema y ejemplos de diagramas de estructura compuesta, consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/structured_class_FF8DB16F.html" guid="1.1994826813129747E-304">Concepto: Clase estructurada</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Definir generalizaciones </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Define Generalizations" name="Define Generalizations"></a>
+<p>
+    Las clases se pueden organizar en una jerarquía de generalizaciones para reflejar el comportamiento común y la
+    estructura común. Se puede definir una <b>superclase</b> común, desde la que las <b>subclases</b> pueden heredar el
+    comportamiento y la estructura. La generalización es un convenio de notación que permite definir una estructura y un
+    comportamiento común en un lugar, y utilizarlos donde se encuentre un comportamiento y una estructura repetidos.
+    Consulte el apartado <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/generalization_94751549.html" guid="1.839540980397304E-305">Técnica:
+    Generalización</a> para obtener más información sobre las relaciones de generalización.
+</p>
+<p>
+    Cuando encuentre una generalización, cree una superclase común que contenga los atributos, las asociaciones, las
+    agregaciones y las operaciones comunes. Elimine el comportamiento común de las clases que serán subclases de la
+    superclase común. Defina una <b>relación de generalización</b> desde la subclase a la superclase.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Resolver colisiones de casos de uso  </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="conflictos de concurrencia" text="identificar" name="XE_concurrency_conflicts__identifying" id="XE_concurrency_conflicts__identifying" class="index"></a><a id="Resolve Use-Case Collisions" name="Resolve Use-Case Collisions"></a>
+<p>
+    El objetivo de este paso es evitar los conflictos de concurrencia provocados cuando dos o más casos de uso pueden
+    acceder simultáneamente a instancias de la clase de diseño, probablemente de forma incoherente.
+</p>
+<p>
+    Una de las dificultades de continuar "caso de uso " a "caso de uso " a través del proceso de diseño es que dos o más
+    casos de uso pueden intentar invocar operaciones simultáneamente en objetos de diseño de forma que entren en conflicto.
+    En estos casos, los conflictos de concurrencia se deben identificar y resolver explícitamente.
+</p>
+<p>
+    Si se utiliza la mensajería síncrona, la ejecución de una operación bloqueará las posteriores llamadas a los objetos
+    hasta que finalice la operación. La mensajería síncrona implica un orden de "primero en llegar, primero en servirse"
+    para el proceso de mensajes. Esto puede resolver el conflicto de concurrencia, especialmente en aquellos casos en los
+    que todos los mensajes tienen la misma prioridad o en los que cada mensaje se ejecuta dentro de la misma hebra de
+    ejecución. En los casos donde distintas hebras de ejecución (representadas por clases activas) pueden acceder a un
+    objeto, se deben utilizar mecanismos explícitos para impedir o resolver el conflicto de concurrencia.
+</p>
+<p class="reactive">
+    En sistemas en tiempo real en los que las hebras están representadas por <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_capsule_FC4A34FD.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">Producto de
+    trabajo: Cápsula</a>s, este problema todavía tiene que resolverse para el acceso concurrente múltiple a objetos
+    pasivos, mientras que las cápsulas proporcionan un mecanismo de cola y fuerzan la semántica de ejecución hasta el final
+    para manejar el acceso concurrente. Una solución recomendada es encapsular los objetos pasivos en cápsulas, lo que
+    evita el problema del acceso concurrente mediante la semántica de la propia cápsula.
+</p>
+<p>
+    Varias hebras de ejecución diferentes pueden invocar simultáneamente distintas operaciones en el mismo objeto sin que
+    se produzca ningún conflicto de concurrencia; por ejemplo, se pueden modificar concurrentemente el nombre y la
+    dirección de un cliente sin ningún conflicto. Es sólo cuando dos hebras de ejecución diferentes intentan modificar la
+    misma propiedad del objeto cuando se produce el conflicto.
+</p>
+<p>
+    Para cada objeto al que pueden acceder concurrentemente varias hebras de ejecución diferentes, identifique las
+    secciones de código que se deben proteger del acceso simultáneo. Al principio de la fase de elaboración, no se podrán
+    identificar segmentos de código específicos; las operaciones que se deben proteger bastarán. Posteriormente, seleccione
+    o diseñe los mecanismos de control de acceso adecuados para impedir los conflictos de acceso simultáneo. Ejemplos de
+    estos mecanismos son la cola de mensajes para serializar el acceso, el uso de semáforos o señales para permitir el
+    acceso a una hebra cada vez, u otras variantes de mecanismos de bloqueo. La elección del mecanismo tiende a depender
+    mucho de la implementación y normalmente varía con el lenguaje de programación y el entorno operativo. Consulte las <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_project_specific_guidelines_8DC8DA32.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">Directrices específicas del proyecto</a> para obtener ayuda en la
+    selección de mecanismos de concurrencia.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Manejar requisitos no funcionales en general </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="requisitos no funcionales" text="manejo de" name="XE_nonfunctional_requirements__handling_of" id="XE_nonfunctional_requirements__handling_of" class="index"></a><a id="Handle Non-Functional Requirements" name="Handle Non-Functional Requirements"></a> 
+<p>
+    Las clases de diseño están perfeccionadas para manejar requisitos no funcionales generales. Una entrada importante para
+    este paso son los requisitos no funcionales en una clase de análisis que puede tener ya establecidos sus requisitos
+    especiales y responsabilidades. Estos requisitos se especifican a menudo en términos de qué mecanismos de arquitectura
+    (análisis) se necesitan para realizar la clase; en este paso, la clase se perfecciona para incorporar los mecanismos de
+    diseño correspondientes a estos mecanismos de análisis.
+</p>
+<p>
+    El arquitecto de software identifica y caracteriza los mecanismos de diseño disponibles. Para cada mecanismo de diseño
+    necesario, califique tantas características como sea posible, proporcionando rangos cuando corresponda. Consulte el
+    apartado <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}">Tarea: Identificar los mecanismos de diseño</a>, <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/analysis_mechanisms_36135B43.html" guid="9.76539014099254E-305">Concepto: Mecanismos de análisis</a> y <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/design_and_implementation_mechanisms_A37EAC7D.html" guid="6.131233324119695E-305">Concepto: Mecanismos de implementación y diseño</a> para obtener más información sobre
+    los mecanismos de diseño.
+</p>
+<p>
+    Existen varios mecanismos y directrices de diseño generales que se deben tener en cuenta cuando se diseñan las clases,
+    por ejemplo, cómo...
+</p>
+<ul>
+    <li>
+        utilizar los productos y los componentes existentes
+    </li>
+    <li>
+        adaptarse al lenguaje de programación
+    </li>
+    <li>
+        distribuir objetos
+    </li>
+    <li>
+        conseguir un rendimiento aceptable
+    </li>
+    <li>
+        alcanzar determinados niveles de seguridad
+    </li>
+    <li>
+        manejar los errores
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Evaluar los resultados </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Evaluate Your Results" name="Evaluate Your Results"></a> 
+<p>
+    Compruebe el modelo de diseño en esta fase para verificar que el trabajo sigue la dirección correcta. No es necesario
+    revisar el modelo al detalle, pero debe tener en cuenta las siguientes listas de comprobación:
+</p>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/checklists/design_model_18BE347C.html" guid="1.4639852935143625E-305">Modelo de diseño</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/checklists/design_class_436B6210.html" guid="1.1028389988231071E-306">lista de comprobación de Clases de diseño</a>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Varias apariciones" abbr="Varias apariciones">Varias apariciones</th><td align="left" class="sectionTableCell" headers="property_Varias apariciones"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Condicionado por sucesos" abbr="Condicionado por sucesos">Condicionado por sucesos</th><td align="left" class="sectionTableCell" headers="property_Condicionado por sucesos"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Continuo" abbr="Continuo">Continuo</th><td align="left" class="sectionTableCell" headers="property_Continuo"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Se puede repetir" abbr="Se puede repetir">Se puede repetir</th><td align="left" class="sectionTableCell" headers="property_Se puede repetir"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Conceptos</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/concurrency_EE2E011A.html" guid="3.5787175388799096E-305">Concurrencia</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/statechart_diagram_640B5D0B.html" guid="1.4528459404144188E-304">Diagrama de gráfico de estados</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/class_diagram_B2F8A2E2.html" guid="4.2570304587974485E-305">Diagrama de clase</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/aggregation_A53E33AB.html" guid="1.1538495077622037E-304">Agregación</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/association_98710829.html" guid="5.540135518285335E-305">Asociación</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/subscribe-association_1AB75163.html" guid="1.401846671640991E-305">Asociación de suscripción</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/generalization_94751549.html" guid="1.839540980397304E-305">Generalización</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/user_interface_general_12B3C0B9.html" guid="6.780901688276357E-305">Interfaz de usuario (General)</a>
+</li>
+<li>
+<a href="./../../tech.j2ee/guidances/guidelines/designing_enterprise_javabeans_ejbs_1F6B0E88.html" guid="2.8082009592332426E-306">Diseño de Enterprise JavaBeans (EJB) </a>
+</li>
+<li>
+<a href="./../../tech.j2ee/guidances/guidelines/designing_entity_beans_7CD45D28.html" guid="5.953653009453999E-307">Diseño de beans de entidad</a>
+</li>
+<li>
+<a href="./../../tech.j2ee/guidances/guidelines/designing_message-driven_beans_DE3F4EC4.html" guid="7.497484412493539E-306">Diseño de beans controlados por mensajes</a>
+</li>
+<li>
+<a href="./../../tech.j2ee/guidances/guidelines/designing_session_beans_BDBA5DEB.html" guid="5.207478815358005E-306">Diseño de beans de sesión</a>
+</li>
+<li>
+<a href="./../../tech.j2ee/guidances/guidelines/designing_javabeans_D9D65D19.html" guid="1.360568578285337E-305">Diseño de JavaBeans</a>
+</li>
+<li>
+<a href="./../../tech.j2ee/guidances/guidelines/designing_javaserver_pages_jsps_D9156656.html" guid="2.2384712199461326E-305">Diseño de JavaServer Pages (JSP)</a>
+</li>
+<li>
+<a href="./../../tech.j2ee/guidances/guidelines/designing_servlets_FD9084F5.html" guid="1.1396160853725076E-306">Diseño de servlets</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_class_E87F7860.html" guid="{234EB01D-88DF-4EBC-B806-CAA81CD2BF13}">Gestión de clases utilizando Rational Rose</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/class_design_5CE83B0A.html" guid="{D1C3F9B8-8EE3-4AF6-8E7B-0653AF1F2936}">Diseño de clases utilizando Rational XDE Developer</a>
+</li>
+<li>
+<a href="./../../tech.j2ee/guidances/toolmentors/ejb_design_BE2BE948.html" guid="{AE563102-AE3C-46BE-A020-4DF7144064E8}">Diseño de EJB mediante Rational XDE Developer - Java Platform Edition</a>
+</li>
+<li>
+<a href="./../../tech.j2ee/guidances/toolmentors/modeling_a_j2ee_app_in_rose_DE0D8A81.html" guid="{E2D2968D-F30B-4C0B-9006-E72B96A846FF}">Modelado del diseño de una aplicación J2EE en Rational Rose</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/toolmentors/designing_classes_using_rsa_ext_6DE4C248.html" guid="_31ZpcK4GEdqFg48R_ivTjA">Diseño de clases mediante Rational Software Architect</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/toolmentors/designing_classes_using_rsd_68C005C0.html" guid="_x5rR4K4GEdqFg48R_ivTjA">Diseño de clases mediante Rational Systems Developer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

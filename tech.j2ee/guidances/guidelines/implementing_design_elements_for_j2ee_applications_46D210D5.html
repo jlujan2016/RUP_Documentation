@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Implementaci&oacute;n del dise&ntilde;o de elementos para aplicaciones J2EE</title>
+<meta content="Guideline" name="uma.type">
+<meta content="implementing_design_elements_for_j2ee_applications" name="uma.name">
+<meta content="Implementaci&oacute;n del dise&ntilde;o de elementos para aplicaciones J2EE" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.693634112172613E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.693634112172613E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Implementaci&oacute;n del dise&ntilde;o de elementos para aplicaciones J2EE</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata cómo desarrollar código fuente para cualquiera de los componentes de J2EE (incluidos los applets, los clientes de aplicación, los componentes web y los EJB). </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_component_AE366827.html" guid="{3293F4F7-EFCD-4476-BFF1-81AC3812B512}">Implementar elementos de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h2>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h2>
+<p>
+    Esta directriz se centra en el <a href="#DevelopingJ2EESourceCode">desarrollo de código fuente</a> para cualquiera de
+    los componentes de J2EE (incluidos los applets, los clientes de aplicación, los componentes web y los EJB).
+</p>
+<p>
+    Los componentes J2EE que se obtengan se empaquetarán en módulos J2EE durante la integración. Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_modules_17925A58.html" guid="3.7932077950837037E-305">Directriz: ensamblaje de módulos J2EE</a> para obtener más información.
+</p>
+<h2>
+    <a id="DevelopingJ2EESourceCode" name="DevelopingJ2EESourceCode"></a>Desarrollo de código fuente de J2EE
+</h2>
+<p>
+    El código fuente de J2EE incluye el código fuente de cualquiera de los componentes de J2EE (incluidos los applets, los
+    clientes de aplicación, los componentes web y los EJB), así como el código fuente de clases Java estándar y JavaBeans.
+    En concreto, para las aplicaciones J2EE se pueden realizar las <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Producto de trabajo: implementaciones de elementos</a>:
+</p>
+<ul>
+    <li>
+        Archivos fuente (como JSP, archivos HTML estáticos, archivos de imágenes, archivos Java).
+    </li>
+    <li>
+        Archivos compilados (archivos de código de bytes de Java).
+    </li>
+</ul>
+<p>
+    La implementación de un componente J2EE presupone el acabar de completar el diseño, incluidas las interfaces, las
+    definiciones de tipo y las clases de ayudante. La ayuda necesaria para completar esta tarea es en esencia la misma que
+    la que se necesita para el diseño, sin embargo, ahora hay que completarlo hasta llegar a un nivel en que las
+    operaciones estén acabadas, permitiendo la ejecución y la prueba de los componentes.
+</p>
+<h2>
+    <a id="ModelingGuidelines" name="ModelingGuidelines"></a>Guía para el modelado
+</h2>
+<p>
+    El modelado de la implementación J2EE puede utilizar todos los mismos elementos constructivos que en el modelo de
+    diseño y también incluir diagramas que muestren la implementación en términos de <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Guía de producto: implementación de elementos</a> como, por ejemplo,
+    archivos fuente .java y archivos .class compilados.
+</p>
+<p>
+    Sin embargo, generalmente la mayoría de los archivos no están modelados, a no ser que se proporcione el soporte de
+    alguna herramienta de ingeniería de doble sentido o que se necesiten mostrar algunas relaciones no tan obvias. Esto se
+    debe a que las relaciones de archivo a menudo son obvias. Habitualmente hay un archivo .java por cada clase o interfaz
+    Java, y un archivo .class compilado por cada archivo .java. Por lo tanto no hay demasiado interés en modelar estos
+    archivos.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

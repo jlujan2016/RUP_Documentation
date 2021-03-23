@@ -1,0 +1,768 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Diagrama de gr&aacute;fico de estados</title>
+<meta content="Guideline" name="uma.type">
+<meta content="statechart_diagram" name="uma.name">
+<meta content="Diagrama de gr&aacute;fico de estados" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "1.4528459404144188E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "1.4528459404144188E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "1.4528459404144188E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.4528459404144188E-304"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "1.4528459404144188E-304"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "1.4528459404144188E-304"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "1.4528459404144188E-304"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "{FACE1697-1CB6-4F57-8B39-ED507BE7006F}", "1.4528459404144188E-304"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.4528459404144188E-304"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Diagrama de gr&aacute;fico de estados</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Los diagramas de gráfico de estado son una notación gráfica formal de la especificación de máquinas de estado que se utilizan para modelar el comportamiento dinámico de los elementos de modelo. En esta directriz se presenta esta notación y demuestra cómo utilizarla de forma eficaz.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/capsule_design_BF66E39A.html" guid="{F13C1161-7F17-45E3-A8B7-03944A1FA6E4}">Diseño de la cápsula</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">Diseño de caso de uso</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}">Diseño del subsistema</a>
+</li>
+<li>
+<a href="./../../../soa.rup_soma/tasks/soa_subsystem_design_B9BB36BD.html" guid="{FACE1697-1CB6-4F57-8B39-ED507BE7006F}">Diseño de subsistema (SOA)</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Arquitecto de software</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Diseño de clase</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Modelo de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="máquina de estado" text="directrices para" name="XE_state_machine__guidelines_for" id="XE_state_machine__guidelines_for" class="index"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">Explicación</a>
+</h3>
+<p>
+    Las máquinas de estado se utilizan para modelar el comportamiento dinámico de un elemento de modelo, y más
+    específicamente, los aspectos dirigidos por sucesos del comportamiento del sistema (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/events_and_signals_734567DC.html" guid="1.800598287887014E-305">Concepto: Sucesos y señales</a>). Las máquinas de estado se utilizan específicamente para
+    definir un comportamiento dependiente del estado, o el comportamiento que varía dependiendo del estado en que se
+    encuentran los elementos de modelo. Los elementos de modelo cuyo comportamiento no varía con el estado del elemento, no
+    requieren máquinas de estado para describir su comportamiento (estos elementos son habitualmente clases pasivas cuya
+    responsabilidad principal es gestionar datos). En concreto, las máquinas de estado deben utilizarse para modelar el
+    comportamiento de clases activas que utilizan sucesos de llamada y sucesos de señal para implementar sus operaciones
+    (como transiciones en la máquina de estado de la clase).
+</p>
+<p>
+    Una máquina de estado consta de estados, enlazados por transiciones. Un estado es una condición de un objeto en que se
+    lleva a cabo alguna tarea o donde se espera un suceso. Una transición es una relación entre dos estados que se
+    desencadenan con algún suceso, que efectúa ciertas acciones o evaluaciones, y que resulta en un estado final
+    específico. Los elementos de una máquina de estado se ilustran en la Figura 1.
+</p>
+<p align="center">
+    <img height="278" alt="Diagrama que muestra la notación de una máquina de estado." src="./../../../core.base_rup/guidances/guidelines/resources/md_state1.gif"     width="511" />
+</p>
+<p class="picturetext" align="center">
+    Figura 1. Notación de máquina de estado.
+</p>
+<p>
+    Un editor sencillo se puede visualizar como máquina de estado finita con los estados <b>Vacío</b>, <b>Esperando un
+    mandato</b> y <b>Esperando texto</b>. Los sucesos <b>Cargar archivo</b>, <b>Insertar texto</b>, <b>Insertar
+    carácter</b> y <b>Guardar y salir</b> generan transiciones en la máquina de estado. La máquina de estado del editor se
+    ilustra en la Figura 1 a continuación.
+</p>
+<p class="picturecenter" align="center">
+    <img height="263" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/md_stad2.gif" width="437" />
+</p>
+<p class="picturetext">
+    Figura 2. La máquina de estado para un editor sencillo.
+</p>
+<h3>
+    <a id="States" name="States">Estados</a>
+</h3>
+<p align="left">
+    Un estado es una condición de un objeto en que se lleva a cabo alguna tarea o donde se espera un suceso. Un objeto
+    puede mantenerse en un estado durante una cantidad de tiempo finita. Un estado tiene diferentes propiedades:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="65%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="row" width="40%">
+                    Nombre
+                </th>
+                <td width="60%">
+                    Una cadena de texto que distingue el estado de otros estados; un estado también puede ser anónimo, lo
+                    que significa que no tiene nombre .
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="40%">
+                    Acciones de entrar/salir
+                </th>
+                <td width="60%">
+                    Acciones que se ejecutan al entrar o al salir del estado.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="40%">
+                    Transiciones internas
+                </th>
+                <td width="60%">
+                    Las transiciones que se manejan sin generar cambios en el estado.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="40%">
+                    Subestados
+                </th>
+                <td width="60%">
+                    La estructura anidada de un estado, que implica subestados desconectados (secuencialmente activos) o
+                    concurrentes (simultáneamente activos).
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="40%">
+                    Sucesos diferidos
+                </th>
+                <td width="60%">
+                    Una lista de sucesos que no se manejan en ese estado sino que se posponen y se ponen en cola para que
+                    los maneje el objeto en otro estado.
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Tal como se ilustra en la Figura 1, hay dos estados especiales que se pueden definir para la máquina de estado de un
+    objeto. El estado inicial indica el lugar de inicio por omisión para la máquina de estado o subestado. Un estado
+    inicial se ilustra como un círculo lleno. El estado final indica la terminación de la ejecución de la máquina de estado
+    o que el estado incluido se ha completado. Un estado final se representa como un círculo negro lleno rodeado por un
+    círculo sin llenar. En realidad, los estados inicial y final son seudoestados. Ninguno de ellos puede tener los
+    componentes habituales de un estado normal, excepto un nombre. Una transición de un estado inicial a un estado final
+    puede tener el complemento completo de características, incluida una condición de vigilancia y una acción, pero puede
+    no tener un suceso desencadenante.
+</p>
+<h3>
+    <a id="Transitions" name="Transitions">Transiciones</a>
+</h3>
+<ul>
+    <li>
+        <a href="#Event Triggers">Desencadenantes de sucesos</a>
+    </li>
+    <li>
+        <a href="#Guard Conditions">Condiciones de vigilancia</a>
+    </li>
+    <li>
+        <a href="#Actions">Acciones</a>
+    </li>
+    <li>
+        <a href="#Entry and Exit Actions">Acciones de entrar y salir</a>
+    </li>
+    <li>
+        <a href="#Internal Transitions">Transiciones internas</a>
+    </li>
+    <li>
+        <a href="#Deferred Events">Sucesos diferidos</a>
+    </li>
+</ul>
+<p>
+    Una transición es una relación entre dos estados que indican que un objeto que se encuentra en el primer estado realiza
+    acciones determinadas y entrar en un segundo estado cuando ocurra un suceso especificado y se satisfagan las
+    condiciones especificadas. En dicho cambio de estado, la transición se "lanza". Hasta que se lanza la transición, el
+    objeto se encuentra en el estado "origen" y una vez que se ha lanzado, se encuentra en el estado de "destino". Una
+    transición tiene varias propiedades:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="row" width="40%">
+                    Estado de origen
+                </th>
+                <td width="60%">
+                    Estado al que afecta la transición; si un objeto está en el estado de origen, se puede lanzar una
+                    transición saliente cuando el objeto recibe el suceso desencadenante de la transición y si se satisface
+                    la condición de vigilancia, si hay alguna.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="40%">
+                    <b>Desencadenante de suceso</b>
+                </th>
+                <td width="60%">
+                    Suceso que convierte la transición en elegible para el lanzamiento (siempre que se satisfaga su
+                    condición de vigilancia) cuando la recibe el objeto del estado de origen.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="40%">
+                    <b>Condición de vigilancia</b>
+                </th>
+                <td width="60%">
+                    Expresión booleana que se evalúa cuando la recepción del desencadenante de suceso desencadena la
+                    transición; si la expresión evalúa Verdadero, la transición es elegible para el lanzamiento, y si
+                    evalúa Falso, no se lanza. Si el mismo suceso no puede desencadenar ninguna otra transición, el suceso
+                    se pierde.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="40%">
+                    Acción
+                </th>
+                <td width="60%">
+                    Cálculo global ejecutable que puede actuar directamente en el objeto que posee la máquina de estado, e
+                    indirectamente en otros objetos que son visibles para el objeto.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="40%">
+                    Estado de destino
+                </th>
+                <td width="60%">
+                    El estado que está activo con la terminación de la transición.
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Una transición puede tener varios orígenes, en cuyo caso representa una unión de varios estados concurrentes, así como
+    varios destinos, en cuyo caso representa una bifurcación a varios estados concurrentes.
+</p>
+<h4>
+    <a id="Event Triggers" name="Event Triggers">Desencadenantes de sucesos</a>
+</h4>
+<p>
+    En el contexto de la máquina de estado, un suceso es una aparición de un estímulo que puede desencadenar una transición
+    de estado. Los sucesos pueden incluir sucesos de señal, sucesos de llamada, el paso del tiempo o un cambio de estado.
+    Una señal o llamada puede tener parámetros cuyos valores estén disponibles para la transición, incluidas expresiones
+    para las condiciones de vigilancia y la acción. También puede haber una transición sin desencadenante, representada por
+    una transición sin desencadenante de sucesos. Estas transiciones, también denominadas transiciones de terminación, se
+    desencadenan implícitamente cuando el estado de origen ha completado su tarea.
+</p>
+<h4>
+    <a id="Guard Conditions" name="Guard Conditions">Condiciones de vigilancia</a>
+</h4>
+<p>
+    Una condición de vigilancia se evalúa después de que se produzca el suceso desencadenante para la transición. Puede
+    haber varias transiciones a partir del mismo estado origen y con el mismo desencadenante de suceso, siempre que las
+    condiciones de vigilancia no se solapen. Una condición de vigilancia se evalúa sólo una vez para la transición en el
+    momento en el que produce el suceso. La expresión booleana puede hacer referencia al estado del objeto.
+</p>
+<h4>
+    <a id="Actions" name="Actions">Acciones</a>
+</h4>
+<p>
+    Una acción es un cálculo global ejecutable, lo que significa que no la puede interrumpir un suceso y, por tanto, se
+    ejecuta hasta su terminación. A diferencia de una tarea, que pueden interrumpir otros sucesos. Las acciones pueden
+    incluir llamadas de operaciones (al propietario de la máquina de estado, así como a otros objetos visibles), la
+    creación o destrucción de otro objeto, o bien, el envío de una señal a otro objeto. En el caso del envío de una señal,
+    el nombre de señal tiene el prefijo de la palabra clave 'send'.
+</p>
+<h4>
+    <a id="Entry and Exit Actions" name="Entry and Exit Actions">Acciones de entrar y salir</a>
+</h4>
+<p>
+    Las acciones de entrar y salir permiten enviar la misma acción cada vez que se entra o sale del estado,
+    respectivamente. Las acciones de entrar y salir permiten llevarlo a cabo sin tener que poner explícitamente acciones en
+    cada transición entrante o saliente. Las acciones de entrar y salir pueden no tener argumentos o condiciones de
+    vigilancia. Las acciones de entrar que se encuentran en el nivel superior de una máquina de estado para el elemento de
+    modelo pueden tener parámetros que representen los argumentos que recibe la máquina al crear el elemento.
+</p>
+<h4>
+    <a id="Internal Transitions" name="Internal Transitions">Transiciones internas</a>
+</h4>
+<p>
+    Las transiciones internas permiten manejar los sucesos en el estado sin salir del estado, evitando así el
+    desencadenamiento de acciones de entrar o salir. Las transiciones internas pueden tener sucesos con parámetros y
+    condiciones de vigilancia y representan, básicamente, manejadores de interrupción.
+</p>
+<h4>
+    <a id="Deferred Events" name="Deferred Events">Sucesos diferidos</a>
+</h4>
+<p>
+    Los sucesos diferidos son aquellos cuyo manejo se pospone hasta que se activa un estado en el que el suceso no se
+    aplaza. Cuando se activa dicho estado, se desencadena la aparición del suceso y puede causar transiciones como si
+    acabara de ocurrir. La implementación de los sucesos diferidos requiere la presencia de una cola de sucesos interna. Si
+    se produce un suceso pero se lista como diferido, se pone en cola. Los sucesos se quitan de la cola tan pronto como el
+    objeto entra en un estado que no difiera dichos sucesos.
+</p>
+<h3>
+    <a id="Substates" name="Substates">Subestados</a>
+</h3>
+<p>
+    Un estado sencillo es un estado que no tiene subestructura. Un estado con subestados (estados anidados) se denomina
+    estado compuesto. Los subestados se pueden anidar en cualquier nivel. Una máquina de estado anidada puede tener, como
+    máximo, un estado inicial y un estado final. Los subestados se utilizan para simplificar máquinas de estado planas
+    complejas al mostrar que algunos estados sólo son posibles dentro de un contexto concreto (el estado inclusivo).
+</p>
+<p align="center">
+    <img height="279" alt="Diagrama que muestra subestados." src="./../../../core.base_rup/guidances/guidelines/resources/md_state2.gif" width="449" />
+</p>
+<p class="picturetext" align="center">
+    Figura 3. Subestados.
+</p>
+<p>
+    Desde un origen externo a un estado compuesto inclusivo, una transición puede dirigir el estado compuesto o dirigir un
+    subestado. Si el destino es el estado compuesto, la máquina de estado anidada debe incluir un estado inicial, a la que
+    pasa el control después de pasar al estado compuesto y de enviar la acción de entrada (si procede). Si el destino es el
+    estado anidado, el control pasa al estado anidado después de enviar la acción de entrada del estado compuesto (si
+    procede) y, a continuación, la acción de entrada del estado anidado (si procede).
+</p>
+<p>
+    Una transición que conduce fuera de un estado compuesto puede tener como origen el estado compuesto o un subestado. En
+    cualquier caso, en primer lugar el control abandona el estado anidado (y se envía su acción de salir, si existe alguna)
+    y, a continuación sale del estado compuesto (y se envía su acción de salir, si existe alguna). Una transición cuyo
+    origen es el estado compuesto, esencialmente, interrumpe la tarea de la máquina de estado anidado.
+</p>
+<h3>
+    <a id="History States" name="History States">Estados de historial</a>
+</h3>
+<p>
+    A no ser que se especifique lo contrario, cuando una transacción entra en un estado compuesto, la acción de la máquina
+    de estado anidado vuelve a iniciarse en el estado inicial (a menos que la transición dirija directamente a un
+    subestado). Los estados de historial permiten que la máquina de estado vuelva a entrar en el último subestado activo
+    antes de salir del estado compuesto. En la Figura 3 se presenta un ejemplo de la utilización de los estados de
+    historial.
+</p>
+<p align="center">
+    <img height="211" alt="Diagrama que muestra estados de historial." src="./../../../core.base_rup/guidances/guidelines/resources/md_state3.gif" width="412" />
+</p>
+<p class="picturetext" align="center">
+    Figura 4. Estado de historial.
+</p>
+<h3>
+    <a id="Common Modeling Techniques" name="Common Modeling Techniques">Técnicas de modelado común</a>
+</h3>
+<p>
+    Normalmente, las máquinas de estado se utilizan para modelar el comportamiento de un objeto a lo largo de su ciclo de
+    vida. En especial, se necesitan cuando los objetos tienen comportamiento dependiente del estado. Los objetos que pueden
+    tener máquinas de estado incluyen clases, subsistemas, guiones de uso e interfaces (para afirmar los estados que debe
+    satisfacer un objeto que realiza la interfaz). En el caso de los sistemas de tiempo real, también se utilizan máquinas
+    de estado para cápsulas y protocolos (para afirmar los estados que debe satisfacer un objeto que realiza el protocolo).
+</p>
+<p>
+    No todos los objetos necesitan máquinas de estados. Si un objeto tiene un comportamiento simple, por ejemplo, sólo
+    almacena o recupera datos, el comportamiento del objeto es de estado invariable y, prácticamente, la máquina de estado
+    carece de interés.
+</p>
+<p>
+    El modelado del ciclo de vida de un objeto implica tres cuestiones: especificar los sucesos a los que puede responder
+    el objeto, la respuesta a dichos sucesos y el impacto del pasado en el comportamiento actual. Modelar el ciclo de vida
+    de un objeto también implica decidir el orden en el que puede responder el objeto de modo significativo a los sucesos,
+    empezando en el momento de la creación del objeto y continuando hasta su destrucción.
+</p>
+<p>
+    Para modelar el ciclo de vida de un objeto:
+</p>
+<ul>
+    <li>
+        Establezca el contexto de la máquina de estado, si es una clase, un guión de uso o un sistema en su totalidad. 
+        <ul>
+            <li>
+                Si el contexto es una clase o un guión de uso, recopile las clases contiguas, incluidas las clases padre o
+                las clases a las que pueden llegar las asociaciones o las dependencias. Las clases contiguas son destinos
+                candidatos tanto para acciones como para condiciones de vigilancia e inclusión.
+            </li>
+            <li>
+                Si el contexto es el sistema en su totalidad, limite el foco a un comportamiento del sistema y, a
+                continuación, considere los ciclos de vida de los objetos implicados en dicho aspecto. El ciclo de vida del
+                sistema completo es, sencillamente, demasiado grande como foco significativo.
+            </li>
+        </ul>
+    </li>
+    <li>
+        Establezca estados iniciales y finales para el objeto. Si existen condiciones previas o posteriores de los estados
+        inicial y final, defínalas también.
+    </li>
+    <li>
+        Determine los sucesos a los que responde el objeto. Se pueden encontrar en las interfaces del objeto. En el caso de
+        los sistemas de tiempo real, también pueden hallar en los protocolos del objeto.
+    </li>
+    <li>
+        Empezando por el estado inicial al estado final, diseñe los estados de nivel superior en los que puede estar el
+        objeto. Conecte dichos estados con transiciones desencadenadas por los suceso adecuados. Siga añadiendo
+        transiciones.
+    </li>
+    <li>
+        Identifique cualquier acción de entrar o salir.
+    </li>
+    <li>
+        Amplíe o simplifique la máquina de estado mediante subestados.
+    </li>
+    <li>
+        Compruebe que todos los sucesos que desencadenan transiciones en la máquina de estado coincidan con los sucesos que
+        esperan las interfaces que realiza el objeto. Asimismo, compruebe que la máquina de estado maneje todos los sucesos
+        que esperan las interfaces de los objetos. En el caso de los sistemas de tiempo real, realice comprobaciones
+        equivalentes para los protocolos de una cápsula y, por último, observe las ubicaciones en las que desea,
+        explícitamente, que se ignoren los sucesos (por ejemplo, sucesos diferidos).
+    </li>
+    <li>
+        Compruebe que las relaciones, los métodos y las operaciones del objeto inclusivo ofrezcan soporte para todas las
+        acciones de la máquina de estado.
+    </li>
+    <li>
+        Rastree a través de la máquina de estado, comparándola con las secuencias de sucesos esperados y sus respuestas.
+        Busque estados inalcanzables y estados en los que la máquina se atasque.
+    </li>
+    <li>
+        Si reorganiza o reestructura la máquina de estado, asegúrese de que la semántica no cambie.
+    </li>
+</ul>
+<h3>
+    <a id="Hints and Tips" name="Hints and Tips">Consejos y sugerencias</a>
+</h3>
+<ul>
+    <li>
+        Cuando se facilite una opción, utilice la semántica visual de la máquina de estado en lugar de escribir código de
+        transición detallado. Por ejemplo, no desencadene una transición en varias señales y después utilice código
+        detallado para gestionar el flujo de control de forma diferente en función de la señal. Utilice transiciones
+        separadas, desencadenadas por medio de señales separadas. Evite la lógica condicional en el código de transición
+        que oculta comportamiento adicional.
+    </li>
+    <li>
+        Denomine los estados de acuerdo con lo que se espera y lo que sucede durante el estado. Recuerde que un estado no
+        es un "punto en el tiempo", sino que es un período durante el que la máquina de estado espera que suceda algo. Por
+        ejemplo, "waitingForEnd" resulta un nombre más adecuado que "end"; 'timingSomeTask' es mejor que "timeout". No
+        denomine los estados como si fueran acciones.
+    </li>
+    <li>
+        Denomine de modo exclusivo a todos los estados y las transiciones de una máquina de estado puesto que, de este
+        modo, se simplifica la depuración a nivel de origen.
+    </li>
+    <li>
+        Utilice con prudencia las variables de estado (atributos que se utilizan para controlar el comportamiento); no las
+        utilice en lugar de crear nuevos estados. Se pueden utilizar variables de estado si existen pocos estados, con poco
+        o ningún comportamiento dependiente del estado y, si hay poco o ningún comportamiento que pueda concurrir con o que
+        sea independiente del objeto que contiene la máquina de estado. Si existe un comportamiento complejo y dependiente
+        del estado que pueda ser concurrente, o bien, si los sucesos que se deben manejar se pueden originar fuera del
+        objeto que contiene la máquina de estado, considere la posibilidad de utilizar una colaboración de dos o más
+        objetos activos (posiblemente, definidos como una composición). En los sistemas de tiempo real, el comportamiento
+        concurrente, complejo y dependiente del estado se debe modelar utilizando una cápsula que contenga subcápsulas.
+    </li>
+    <li>
+        Si hay más de 5 ± 2 estados en un solo diagrama, considere el uso de subestados. Se aplica el sentido común: diez
+        estados en un patrón absolutamente normal puede ser correcto, pero dos estados con cuarenta transiciones entre
+        estos requiere, obviamente, una nueva orientación. Asegúrese de que la máquina de estado resulte comprensible.
+    </li>
+    <li>
+        Denomine las transiciones por lo que desencadena el suceso y lo que sucede durante la transición. Elija nombres que
+        mejoren la comprensión.
+    </li>
+    <li>
+        Cuando observe un vértice de opción, debe preguntarse si puede delegar la responsabilidad para dicha opción en otro
+        componente, parecido al modo en el que se presenta al objeto como un conjunto de señales diferentes sobre las que
+        actuar (por ejemplo, en lugar de una opción en msg-&gt;data &gt; x), que el remitente o algún otro actor
+        intermediario tomen la decisión y envíen una señal con la decisión explicitada en el nombre de señal (por ejemplo,
+        utilizar señales denominadas isFull e isEmpty, en lugar de tener una señal denominada value y comprobar datos de
+        mensajes).
+    </li>
+    <li>
+        Denomine la pregunta respondida del vértice de opción de modo descriptivo, por ejemplo, "isThereStillLife" o
+        "isItTimeToComplain".
+    </li>
+    <li>
+        En cualquier objeto dado, intente que los nombres de los vértices de opción sean exclusivos (por el mismo motivo
+        que los nombres de transición deben ser exclusivos).
+    </li>
+    <li>
+        ¿Hay fragmentos de código demasiado largos en las transiciones? ¿Se van a utilizar funciones en su lugar y se han
+        capturado fragmentos de código común como funciones? Una transición se debe leer como seudocódigo de alto nivel y
+        debe cumplir las mismas reglas de longitud o, incluso, reglas más estrictas que las funciones C++. Por ejemplo, una
+        transición con más de 25 líneas de código se considera excesivamente larga.
+    </li>
+    <li>
+        Las funciones deben denominarse según lo que hacen.
+    </li>
+    <li>
+        Preste especial atención a las acciones de entrar y salir: resulta especialmente fácil hacer cambios y olvidar
+        cambiar las acciones de entrar y salir.
+    </li>
+    <li>
+        Las acciones de salir se pueden utilizar para proporcionar características de seguridad, por ejemplo, la acción de
+        salir del estado "heaterOn" desactiva el calentador, mientras que las acciones se utilizan para reforzar una
+        aserción.
+    </li>
+    <li>
+        Por lo general, los subestados deben contener dos o más estados, a menos que la máquina de estado sea abstracta y
+        la perfeccionen subclases del elemento inclusivo.
+    </li>
+    <li>
+        Se deben utilizar puntos de opción en lugar de lógica condicional en las acciones o las transiciones. Los puntos de
+        opción se ven fácilmente, mientras que la lógica condicional del código queda oculta a la vista y se pasa por alto
+        fácilmente.
+    </li>
+    <li>
+        Evite las condiciones de vigilancia. 
+        <ul>
+            <li>
+                Si el suceso desencadena varias transiciones, no existe control sobre la condición de vigilancia que se
+                debe evaluar en primer lugar. Por lo tanto, los resultados son imprevisibles.
+            </li>
+            <li>
+                Más de una condición de vigilancia puede ser "verdadera", pero sólo se puede seguir una transición. La vía
+                de acceso elegida puede ser imprevisible.
+            </li>
+            <li>
+                Las condiciones de vigilancia no son visuales; resulta más difícil "ver" su presencia.
+            </li>
+        </ul>
+    </li>
+    <li>
+        Evite las máquinas de estado que se parecen a los gráficos de flujo. 
+        <ul>
+            <li>
+                Puede indicar un intento de modelar una abstracción que, en realidad, no se encuentra ahí, por ejemplo: 
+                <ul>
+                    <li>
+                        utilizar una clase activa para modelar el comportamiento más adecuado para una clase de datos o
+                        pasiva
+                    </li>
+                    <li>
+                        modelar una clase de datos utilizando una clase de datos y una clase activa que estén estrechamente
+                        acopladas (es decir, la clase de datos se utiliza para pasar información de tipo, pero la clase
+                        activa contiene la mayor parte de los datos que se deben asociar a la clase de datos).
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Los síntomas siguientes permiten reconocer la utilización inadecuada de las máquinas de estado: 
+                <ul>
+                    <li>
+                        mensajes enviados a 'self', básicamente, sólo para reutilizar código
+                    </li>
+                    <li>
+                        pocos estados, con muchos puntos de elección
+                    </li>
+                    <li>
+                        en algunos casos, una máquina de estado sin ciclos. Dichas máquinas de estado son válidas en
+                        aplicaciones de control de procesos, o bien, al intentar controlar una secuencia de sucesos;
+                        normalmente, su presencia durante el análisis representa la degeneración de la máquina de estado en
+                        un gráfico de flujo.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Cuando se ha identificado el problema: 
+                <ul>
+                    <li>
+                        Considere la división de la clase activa en unidades más pequeñas con responsabilidades más claras.
+                    </li>
+                    <li>
+                        Mueva más comportamiento a una clase de datos que está asociada a la clase activa del problema.
+                    </li>
+                    <li>
+                        Mueva más comportamiento a funciones de clase activa.
+                    </li>
+                    <li>
+                        Haga señales más significativas en lugar de transferirlas a los datos.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<h3 align="justify">
+    <a id="Designing Abstract State Machines" name="Designing Abstract State Machines">Diseño con máquinas de estado
+    abstractas</a>
+</h3>
+<p align="justify">
+    Una máquina de estado abstracta es una máquina de estado a la que se debe añadir más detalle antes de que se pueda
+    utilizar para objetivos prácticos. Se pueden utilizar máquinas de estado abstractas para definir comportamiento
+    genérico reutilizable, que se perfecciona en elementos de modelo subsiguientes.
+</p>
+<p align="center">
+    <img height="201" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/md_cpsl2.gif" width="167" />
+</p>
+<p class="picturetext">
+    Figura 5. Una máquina de estado abstracta.
+</p>
+<p align="justify">
+    Considere la máquina de estado abstracta de la Figura 5. La máquina de estado simple que se ilustra es representativa
+    del nivel de comportamiento más abstracto (el autómata "control") de varios tipos de elementos diferentes en sistemas
+    dirigidos por sucesos. Aunque comparten este formato de alto nivel, los diferentes tipos de elementos pueden tener
+    comportamientos detallados muy distintos en el estado de ejecución dependiendo de su objetivo. Por este motivo, lo más
+    probable es que esta máquina de estado se defina en alguna clase abstracta que sirva como clase raíz para diferentes
+    clases activas especializadas.
+</p>
+<p align="justify">
+    Por tanto, vamos a definir dos perfeccionamientos diferentes de esta máquina de estado abstracta, utilizando la
+    herencia. Ambos perfeccionamientos, R1 y R2, se muestran en la Figura 6. Con el objeto de simplificar su comprensión,
+    los elementos heredados de la clase padre se han dibujado utilizando una pluma de color gris.
+</p>
+<p align="center">
+    <img height="204" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/md_cpsl3.gif" width="391" />
+</p>
+<p align="center">
+    Figura 6. Dos perfeccionamientos de la máquina de estado de la Figura 5.
+</p>
+<p align="justify">
+    Los dos perfeccionamientos se diferencia claramente en el modo de descomponer el estado de ejecución y también de
+    ampliar la transición de inicio original. Por supuesto, estas opciones sólo se pueden realizar una vez que se conoce el
+    perfeccionamiento y, por tanto, no se podrían realizar con una transición única de extremo a extremo en la clase
+    abstracta.
+</p>
+<h3 align="justify">
+    <a id="Chain States" name="Chain States">Estados de cadena</a>
+</h3>
+<p align="justify">
+    <font size="3">La posibilidad de "continuar" tanto las transiciones entrantes como las transiciones salientes es
+    fundamental para el tipo de perfeccionamiento descrito más arriba. Puede parecer que los puntos de entrada y los
+    estados finales, combinados con transiciones, son suficientes para facilitar la semántica. Desgraciadamente, no basta
+    cuando se deben ampliar numerosas transiciones diferentes.</font>
+</p>
+<p align="justify">
+    <font size="3">Lo que necesita el patrón de comportamiento abstracto es un procedimiento para encadenar dos o más
+    segmentos de transición, en el que todos se ejecuten en el ámbito de un solo paso de ejecución hasta el final.
+    Significa que las transiciones que entran en un estado jerárquico se dividen en la parte entrante que, en efecto,
+    termina en el límite de estado y una ampliación que continúa dentro del estado. Asimismo, las transiciones salientes
+    que proceden de un estado anidado jerárquicamente se segmentan en una parte que termina en el límite de estado
+    inclusivo y una parte que continúa del límite de estado al estado de destino. Este efecto se puede lograr en UML por
+    medio de la introducción del concepto <b>estado de cadena</b>. Lo modela un estereotipo (&lt;&lt;chainState&gt;&gt;)
+    del concepto Estado de UML. Se trata de un estado cuyo único objetivo es "encadenar" transiciones automáticas nuevas
+    (sin desencadenantes) en una transición de entrada. Un estado de cadena no tiene ninguna acción de entrar, estructura
+    interna, tarea interna o acción de salir. Tampoco tiene transiciones que desencadenen los sucesos. Puede tener
+    cualquier número de transiciones de entrada, y una transición saliente sin suceso desencadenante; esta transición se
+    lanza automáticamente cuando una transición de entrada activa el estado. El objetivo del estado es encadenar una
+    transición de entrada a una transición de salida separada. Entre las transiciones de entrada y la transición de salida
+    encadenada, una conecta al otro estado del estado contenedor y la otra conecta a otro estado fuera del estado
+    contenedor. El objetivo de presentar un estado de cadena es separar la especificación interna del estado contenedor de
+    su entorno externo; es cuestión de la encapsulación.</font>
+</p>
+<p align="justify">
+    En efecto, un estado de cadena representa un estado de "paso a través" que sirve para encadenar una transición a una
+    transición de continuación específica. Si no se define ninguna transición de continuación, la transición termina en el
+    estado de cadena, y se debe lanzar alguna transición en un estado inclusivo para que, finalmente, las cosas avancen.
+</p>
+<p align="justify">
+    El segmento de máquina de estado de ejemplo de la Figura 7 ilustra estados de cadena y su notación. Los estados de
+    cadena se representan en un diagrama de máquina de estado por medio de pequeños círculos blancos situados en el estado
+    jerárquico adecuado (esta notación es similar a los estados inicial y final, a los que se parecen). Los círculos son
+    iconos de estereotipos del estereotipo del estado de cadena y, por lo general, se dibujan cerca del límite para mayor
+    comodidad. (De hecho, una variación de notación sería dibujarlas en el borde del estado inclusivo).
+</p>
+<p align="center">
+    <img height="152" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_cpsl4.gif" width="391" />
+</p>
+<p class="picturetext">
+    Figura 7. Estados de cadena y transiciones encadenadas.
+</p>
+<p align="justify">
+    La transición encadenada de este ejemplo consta de los tres segmentos de transición encadenados, e1/a11-/a12-/a13.
+    Cuando se recibe la señal e1, se toma la transición etiquetada como e1/a11, se ejecuta su acción a11 y, a continuación,
+    se alcanza el estado encadenado c1. Después de ello, se toma la transición de continuación entre c1 y c2 y, por último,
+    puesto que c2 también es un estado de cadena, la transición de c2 a S21. Si todos los estados junto con las vías de
+    acceso tienen acciones de entrar y salir, la secuencia real de la ejecución de la acción se realiza tal como se indica
+    a continuación:
+</p>
+<ul>
+    <li>
+        acción de salir de S11
+    </li>
+    <li>
+        acción a11
+    </li>
+    <li>
+        acción de salir de S1
+    </li>
+    <li>
+        acción a12
+    </li>
+    <li>
+        acción de entrar de S2
+    </li>
+    <li>
+        acción a13
+    </li>
+    <li>
+        acción de entrar de S21
+    </li>
+</ul>
+<p align="justify">
+    Todo ello se ejecuta en el ámbito de un solo paso de ejecución hasta el final.
+</p>
+<p align="justify">
+    Se debe comparar con respecto a la semántica de ejecución de acciones de la transición directa e2/a2, que es:
+</p>
+<ul>
+    <li>
+        acción de salir de S11
+    </li>
+    <li>
+        acción de salir de S1
+    </li>
+    <li>
+        acción a2
+    </li>
+    <li>
+        acción de entrar para estado S2
+    </li>
+    <li>
+        acción de entrar para estado S21
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

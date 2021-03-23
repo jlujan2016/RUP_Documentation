@@ -1,0 +1,547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Implementaci&oacute;n de un conjunto de aplicaciones de prueba automatizado utilizando Rational TestManager</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="implementing_test_suite" name="uma.name">
+<meta content="Implementaci&oacute;n de un conjunto de aplicaciones de prueba automatizado utilizando Rational TestManager" name="uma.presentationName">
+<meta content="Tool:rup_test_manager_tool:Rational TestManager" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational TestManager" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{803E510B-B96F-481B-92A9-EEF6CF6AAA24}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{803E510B-B96F-481B-92A9-EEF6CF6AAA24}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{803E510B-B96F-481B-92A9-EEF6CF6AAA24}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{803E510B-B96F-481B-92A9-EEF6CF6AAA24}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Implementaci&oacute;n de un conjunto de aplicaciones de prueba automatizado utilizando Rational TestManager</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo utilizar Rational TestManager para diseñar un conjunto de aplicaciones de prueba funcional o de rendimiento.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_test_manager_tool_2C79A4DC.html" guid="{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}">Rational TestManager</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_the_test_implementation_AAB73625.html" guid="{ED9DF0C0-744A-443A-AEBA-604382E05A5F}">Estructurar la implementación de la prueba</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_test_suite_94F58DEC.html" guid="{1C759E0D-B364-4095-A7CF-CD9E39301689}">Implementar el conjunto de aplicaciones de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    Visión general
+</h3>
+<p>
+    Un conjunto de aplicaciones muestra una representación jerárquica de la tarea de la carga de trabajo que se desea
+    ejecutar y probar. Muestra elementos tales como, por ejemplo, los grupos de sistemas, los recursos asignados a cada
+    grupo de sistemas, qué scripts de prueba se ejecutan en los grupos de sistemas y cuántas veces se ejecuta cada script
+    de prueba.
+</p>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Microsoft Windows 98/2000/NT 4.0.
+</p>
+<h4>
+    Pasos de la herramienta
+</h4>
+<p>
+    Para diseñar un conjunto de aplicaciones de prueba automatizado utilizando Rational TestManager, debe llevar a cabo los
+    pasos que se indican a continuación:
+</p>
+<ol>
+    <li>
+        <a href="#Create a suite">Crear un conjunto de aplicaciones</a>
+    </li>
+    <li>
+        <a href="#Insert user groups into a suite (for performance testing only)">Insertar grupos de
+        usuarios en un conjunto de aplicaciones (sólo para la prueba de rendimiento)</a>
+    </li>
+    <li>
+        <a href="#Insert computer groups into a suite">Insertar grupos de sistemas en un conjunto de
+        aplicaciones</a>
+    </li>
+    <li>
+        <a href="#Insert test scripts into a suite">Insertar scripts de prueba en un conjunto de aplicaciones</a>
+    </li>
+    <li>
+        <a href="#Insert other items into a suite">Insertar otros elementos en un conjunto de aplicaciones</a>
+    </li>
+</ol>
+<h3>
+    1.&nbsp;&nbsp; <a id="Create a suite" name="Create a suite">Crear un conjunto de aplicaciones</a>
+</h3>
+<p>
+    Un conjunto de aplicaciones le permite no sólo ejecutar scripts de prueba,&nbsp; sino lo que es más importante,&nbsp;
+    emular las acciones de los verificadores virtuales utilizando&nbsp; un sistema. Un conjunto de aplicaciones puede ser
+    tan simple como un verificador virtual que ejecuta un script&nbsp; de prueba, o tan complejo como un centenar de
+    verificadores virtuales en grupos diferentes, donde&nbsp; cada grupo ejecuta scripts de prueba distintos en tiempos
+    diferentes utilizando&nbsp; recursos distintos.
+</p>
+<p>
+    Para crear un conjunto de aplicaciones existen diversos procedimientos:
+</p>
+<blockquote>
+    <ul>
+        <li>
+            Utilizando el asistente para el conjunto de aplicaciones de prueba de rendimiento
+        </li>
+        <li>
+            Utilizando el asistente para el conjunto de aplicaciones de prueba funcional
+        </li>
+        <li>
+            Basadas en un conjunto de aplicaciones existente de cualquier tipo
+        </li>
+        <li>
+            Basándose en una sesión de Robot existente
+        </li>
+        <li>
+            Utilizando un conjunto de aplicaciones de prueba de rendimiento en blanco
+        </li>
+        <li>
+            Utilizando un conjunto de aplicaciones de prueba funcional en blanco
+        </li>
+    </ul>
+</blockquote>
+<p>
+    Para crear un nuevo conjunto de aplicaciones utilizando cualquiera de estos métodos, pulse <b>Archivo &gt; Nuevo
+    conjunto de aplicaciones</b>.
+</p>
+<p>
+    <b>Nota</b>: Cuando crea un nuevo conjunto de aplicaciones utilizando los asistentes, debe tener scripts de prueba
+    válidos disponibles para utilizarlos en el conjunto de aplicaciones.
+</p>
+<p>
+    <img height="16" alt="icono de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte el tema de
+    la ayuda en línea de Rational TestManager que trata sobre la <i>creación de un conjunto de aplicaciones</i>.
+</p>
+<h3>
+    2.&nbsp;&nbsp;<a id="Insert user groups into a suite (for performance testing only)" name="Insert user groups into a suite (for performance testing only)">Insertar grupos de usuarios en un conjunto de
+    aplicaciones (sólo para la prueba de rendimiento)</a>
+</h3>
+<p>
+    Un grupo de usuarios es el bloque de compilación básico de todos los conjuntos de prueba de rendimiento. Un grupo de
+    usuarios es una recopilación de verificadores virtuales que llevan a cabo la misma actividad.
+</p>
+<ul>
+    <li>
+        Para insertar un grupo de usuarios en un conjunto de aplicaciones, en un conjunto de aplicaciones abierto, pulse
+        <b>Conjunto de aplicaciones &gt; Insertar &gt; Grupo de usuarios</b>.
+    </li>
+    <li>
+        Establezca el recuento de usuarios tal como se indica a continuación:
+    </li>
+</ul>
+<blockquote>
+    <p>
+        <b>Fijo</b>-Especifica un número estático de verificadores virtuales. Entre el número máximo de verificadores
+        virtuales que desea que puedan ejecutar.
+    </p>
+    <p>
+        <b>Escalable</b>-Especifica un número dinámico de verificadores virtuales. Teclee el porcentaje de la carga de
+        trabajo que representa el grupo de usuarios.
+    </p>
+</blockquote>
+<ul>
+    <li>
+        Establezca los sistemas tal como se indica a continuación:
+    </li>
+</ul>
+<blockquote>
+    <p>
+        El sistema por omisión es el sistema local de TestManager, pero puede especificar que el grupo de usuarios se
+        ejecute en cualquier sistema definido.
+    </p>
+    <p>
+        <b>Nota</b>: Copie todas las bibliotecas C externas personalizadas creadas,&nbsp; los archivos de clase Java, o
+        bien,&nbsp; los componentes COM necesarios para la prueba del sistema Agente.
+    </p>
+</blockquote>
+<ul>
+    <li>
+        También puede distribuir los verificadores virtuales entre varios sistemas.&nbsp;Para&nbsp; distribuir los
+        verificadores virtuales de un grupo de usuarios entre varios sistemas, pulse <b>Conjunto de aplicaciones &gt;
+        Insertar &gt; Grupo de usuarios</b> y, a continuación, pulse <b>Varios sistemas</b>.
+    </li>
+</ul>
+<p>
+    <img height="16" alt="icono de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte el tema de
+    la ayuda en línea de Rational TestManager que trata sobre <i>grupos de usuarios en un conjunto de aplicaciones</i>.
+</p>
+<h3>
+    3.&nbsp;&nbsp;<a id="Insert computer groups into a suite" name="Insert computer groups into a suite">Insertar grupos de
+    sistemas en un conjunto de aplicaciones</a>
+</h3>
+<p>
+    Un grupo de sistemas es el bloque de compilación básico para todos los conjuntos de aplicaciones de prueba
+    funcional.&nbsp;la actividad de implementar las pruebas consiste, básicamente, en crear scripts de prueba
+    reutilizables. Un grupo de sistemas puede ser uno o más sistemas, o listas de sistemas, en los que se ejecutan los
+    mismos scripts de prueba y, por consiguiente, se prueba la misma aplicación.
+</p>
+<ul>
+    <li>
+        Para insertar un grupo de sistemas en un conjunto de aplicaciones, pulse <b>Conjunto de aplicaciones &gt; Insertar
+        &gt; Grupo de sistemas</b>.
+    </li>
+</ul>
+<blockquote>
+    <b>Nota:</b> al añadir grupos de sistemas a los conjuntos de aplicaciones, puede especificar un&nbsp; grupo de
+    sistemas&nbsp; para el que solicitar recursos en&nbsp; el tiempo de ejecución, o bien, grupos de sistemas numerosos
+    para los que solicitar recursos en el tiempo de ejecución.&nbsp;En un conjunto de aplicaciones no puede mezclar lo
+    siguiente: grupos de sistemas con recursos&nbsp; específicos, y grupos de sistemas sin recursos específicos.&nbsp;
+</blockquote>
+<ul>
+    <li>
+        Para distribuir los verificadores virtuales de un grupo de sistema en varios sistemas, pulse <b>Conjunto de
+        aplicaciones &gt; Insertar &gt; Grupo de sistemas</b> y, a continuación, pulse <b>Cambiar</b>.
+    </li>
+</ul>
+<blockquote>
+    <p>
+        <b>Nota</b>: La ventaja es que permite ahorrar tiempo, puesto que los verificadores virtuales se ejecutan
+        simultáneamente en sistemas diferentes.
+    </p>
+</blockquote>
+<p>
+    <img height="16" alt="icono de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte el tema de
+    la ayuda en línea de Rational TestManager que trata sobre <i>grupos de sistemas en un conjunto de aplicaciones</i>.
+</p>
+<h3>
+    4.&nbsp;&nbsp;<a id="Insert test scripts into a suite" name="Insert test scripts into a suite">Insertar scripts de
+    prueba en un conjunto de aplicaciones</a>
+</h3>
+<p>
+    Para ejecutar el script de prueba de un conjunto de aplicaciones abierto, seleccione <b>grupos de sistemas</b> para la
+    prueba funcional o grupos de usuarios para la prueba de rendimiento y, a continuación, pulse <b>Conjunto de
+    aplicaciones &gt; Insertar &gt; Script de prueba</b>.
+</p>
+<p>
+    Debe tomar las decisiones siguientes:
+</p>
+<ul>
+    <li>
+        <b>Origen de script de prueba</b>-debe elegir los tipos de scripts como, por ejemplo, GUI, VU, VB o Java, entre
+        otros.
+    </li>
+    <li>
+        <b>Consulta</b>-debe elegir el tipo de consulta que desea utilizar para buscar&nbsp; un script o para adaptar uno
+        nuevo.
+    </li>
+    <li>
+        Condición previa-recordatorio de la secuencia del conjunto de aplicaciones, lo que significa que el script de
+        prueba, el conjunto de aplicaciones o el guión de prueba se deben completar satisfactoriamente durante la ejecución
+        del conjunto de aplicaciones para que se ejecuten los elementos subordinados de la secuencia del conjunto de
+        aplicaciones.
+    </li>
+    <li>
+        Iteraciones-frecuencia con la que se va a repetir el script seleccionado.
+    </li>
+    <li>
+        Método de planificación-muestra la condición de los elementos, si están disponibles o pendientes.
+    </li>
+</ul>
+<p>
+    <b>Nota</b>: No puede mezclar scripts de prueba de GUI y VU en un grupo de usuarios. Sin embargo, puede mezclar otros
+    tipos de script de prueba.
+</p>
+<p>
+    <img height="16" alt="icono de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte el tema de
+    la ayuda en línea de Rational TestManager que trata sobre los <i>scripts de prueba en un conjunto de aplicaciones</i>.
+</p>
+<h3>
+    5.&nbsp;&nbsp;<a id="Insert other items into a suite" name="Insert other items into a suite">Insertar otros elementos
+    en un conjunto de aplicaciones</a>
+</h3>
+<p>
+    Un conjunto de aplicaciones sólo requiere grupos de sistemas y scripts de prueba para su ejecución. Sin embargo,&nbsp;
+    un conjunto de aplicaciones que modele de manera realista el trabajo que realizan verificadores virtuales reales es,
+    probablemente, más complejo&nbsp; y variado que este modelo de ejemplo. Un conjunto de aplicaciones realista&nbsp;
+    también puede contener guiones de prueba, conjuntos de aplicaciones de prueba subordinados, selectores (sólo para la
+    prueba de rendimiento), retardos, puntos de sincronización y gestores&nbsp; (sólo para la prueba de rendimiento&nbsp;)
+    que representen diversas acciones de los verificadores virtuales.
+</p>
+<p>
+    Otros elementos que puede insertar en un conjunto de aplicaciones incluyen:
+</p>
+<ul>
+    <li>
+        Inserción de un guión de prueba
+    </li>
+    <li>
+        Inserción de un conjunto de aplicaciones
+    </li>
+    <li>
+        Inserción de un caso de ejemplo
+    </li>
+    <li>
+        Inserción de un selector (sólo para la prueba de rendimiento)
+    </li>
+    <li>
+        Inserción de un retardo
+    </li>
+    <li>
+        Inserción de un gestor (sólo para la prueba de rendimiento)
+    </li>
+    <li>
+        Inserción de un punto de sincronización
+    </li>
+</ul>
+<p>
+    <img height="16" alt="icono de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte el tema de
+    la ayuda en línea de Rational TestManager que trata sobre <i>otros elementos en un conjunto de aplicaciones</i>.
+</p>
+<h4>
+    Inserción de un guión de prueba
+</h4>
+<ol>
+    <li>
+        Para insertar un guión de prueba en un conjunto de aplicaciones, pulse Conjunto de aplicaciones &gt; Insertar &gt;
+        Guión de prueba.
+    </li>
+    <li>
+        También se pueden aplicar condiciones previas a los guiones de prueba. Pulse el botón derecho del ratón sobre el
+        guión de prueba y, a continuación, seleccione <b>Ejecutar propiedades</b>.&nbsp;
+    </li>
+</ol>
+<blockquote>
+    <p>
+        <b>Nota</b>: Un guión de prueba se puede considerar configurado, dependiendo de sus propiedades.
+    </p>
+</blockquote>
+<h4>
+    Inserción de un conjunto de aplicaciones
+</h4>
+<p>
+    Para insertar un conjunto de aplicaciones en un conjunto de aplicaciones, pulse <b>Conjunto de aplicaciones &gt;
+    Insertar &gt; Conjunto de aplicaciones</b>.
+</p>
+<p>
+    <b>Nota</b>:&nbsp; No puede colocar un conjunto de aplicaciones de rendimiento basado en un grupo de usuarios en otro
+    conjunto de aplicaciones. Además, los conjuntos de aplicaciones funcionales basados en un grupo de sistemas que se
+    colocan en un conjunto de aplicaciones se deben haber creado con la opción <b>Solicitar recursos</b> seleccionada para
+    el grupo de sistemas.
+</p>
+<h4>
+    Inserción de un caso de ejemplo
+</h4>
+<p>
+    Un caso de ejemplo le permite agrupar scripts de prueba con el objeto de que los pueda compartir más de un grupo de
+    usuarios. Si tiene un conjunto de aplicaciones complejo que utiliza varios scripts de prueba, la agrupación de los
+    scripts de prueba en un caso de ejemplo ofrece la ventaja añadida de que el conjunto de aplicaciones resulta más fácil
+    de leer y mantener.
+</p>
+<ol>
+    <li>
+        Para crear un nuevo caso de ejemplo, en la sección <b>Casos de ejemplo</b> del conjunto de aplicaciones, pulse
+        <b>Conjunto de aplicaciones &gt; Insertar &gt; Caso de ejemplo</b>.
+    </li>
+    <li>
+        Para insertar un caso de ejemplo en un conjunto de aplicaciones, pulse en el lugar en el que desea situar el caso
+        de ejemplo y, a continuación, pulse <b>Conjunto de aplicaciones &gt; Insertar &gt; Caso de ejemplo</b>.
+    </li>
+</ol>
+<p>
+    <b>Nota</b>: Antes de añadir un caso de ejemplo a un grupo de usuario, se aconseja rellenar el caso de ejemplo. Un caso
+    de ejemplo sólo requiere scripts de prueba para su ejecución. Sin embargo, como en el caso de un grupo de usuarios, un
+    caso de ejemplo realista también puede contener selectores, retardos, puntos de sincronización y gestores. Un caso de
+    ejemplo puede contener, incluso, otros casos de ejemplo.
+</p>
+<h4>
+    Inserción de un selector (sólo para la prueba de rendimiento)
+</h4>
+<p>
+    Un selector proporciona control más sofisticado que cuando se ejecuta una secuencia simple de elementos consecutivos en
+    un conjunto de aplicaciones. Un selector le indica a TestManager los elementos que ejecuta cada verificador virtual y
+    en qué secuencia.
+</p>
+<p>
+    Para insertar un selector en un conjunto de aplicaciones, seleccione el caso de ejemplo o el grupo de sistemas que va a
+    contener el selector y, a continuación, pulse <b>Conjunto de aplicaciones &gt; Insertar &gt; Selector</b>.
+</p>
+<p>
+    Los tipos de selectores incluyen:
+</p>
+<ul>
+    <li>
+        <b>Secuencial</b>-ejecuta cada caso de ejemplo o script de prueba en el orden en el que aparece en el conjunto de
+        aplicaciones.
+    </li>
+    <li>
+        <b>Paralelo</b>-distribuye los casos de ejemplo o los scripts de prueba a un verificador virtual disponible (un
+        verificador&nbsp; virtual por sistema)
+    </li>
+    <li>
+        <b>Aleatorio con sustitución</b>-el selector ejecuta los elementos de modo aleatorio y, cada vez que se selecciona
+        un elemento, las probabilidades de que se vuelva a seleccionar siguen siendo las mismas.
+    </li>
+    <li>
+        <b>Aleatorio sin sustitución</b>-el selector ejecuta los elementos de modo aleatorio, pero cada vez que se
+        selecciona un elemento, las probabilidades cambian.
+    </li>
+    <li>
+        <b>Equilibrio de carga dinámica</b>-con esta opción, los elementos no se seleccionan de modo aleatorio. Los
+        elementos se seleccionan para equilibrar la carga de trabajo conforme al peso que se ha establecido. Puede
+        equilibrar la carga de trabajo por tiempo o por frecuencia.
+    </li>
+</ul>
+<h4>
+    Inserción de un retardo
+</h4>
+<p>
+    Un retardo le indica a TestManager la duración de la pausa antes de que se ejecute el siguiente elemento del conjunto
+    de aplicaciones.
+</p>
+<p>
+    Para insertar un retarda en un conjunto de aplicaciones, pulse el <b>grupo de sistemas</b> (para la prueba funcional),
+    el <b>grupo de usuarios</b> (para la prueba de rendimiento), el <b>caso de ejemplo</b> o el <b>selector</b> al que
+    añadir un retardo y, a continuación, pulse <b>Conjunto de aplicaciones &gt; Insertar &gt; Retardo</b>.
+</p>
+<p>
+    <b>Nota</b>: Puede insertar un retardo en un conjunto de aplicaciones o script de prueba. Las ventajas de insertar un
+    retardo en un conjunto de aplicaciones son que el retardo es visible en el conjunto de aplicaciones, y se puede cambiar
+    el retardo fácilmente sin necesidad de editar el script de prueba.
+</p>
+<h4>
+    Inserción de un gestor (sólo para la prueba de rendimiento)
+</h4>
+<p>
+    Un gestor le indica a TestManager el número de tareas que ejecuta cada verificador virtual en un período de tiempo
+    dado.
+</p>
+<p>
+    Para insertar un gestor en un conjunto de aplicaciones, seleccione el grupo de usuarios o el selector que va a contener
+    el gestor y, a continuación, pulse <b>Conjunto de aplicaciones &gt; Insertar &gt; Gestor</b>.
+</p>
+<p>
+    El gestor puede ser de uno de los dos tipos siguientes:
+</p>
+<ul>
+    <li>
+        Un gestor <b>coordinado</b>, que tiene puntos de sincronización incorporados y permite especificar el índice total
+        que se desea obtener.
+    </li>
+    <li>
+        Un gestor <b>independiente</b>, que permite que cada verificador virtual (VT) opere de modo independiente. No
+        coordina los VT con un punto de sincronización incorporado.
+    </li>
+</ul>
+<p>
+    Un gestor puede tener uno de los dos índices siguientes:
+</p>
+<ul>
+    <li>
+        <b>Índice total</b>-para un gestor coordinado, por lo general, se selecciona este índice.
+    </li>
+    <li>
+        <b>Índice de usuario</b>-para un gestor independiente, se debe seleccionar este índice.
+    </li>
+</ul>
+<p>
+    &nbsp;Existen tres opciones de distribución para un gestor:
+</p>
+<ul>
+    <li>
+        Una <b>distribución constante</b>. Significa que cada transacción se produce exactamente en base al índice que se
+        ha especificado.
+    </li>
+    <li>
+        Una <b>distribución uniforme</b>. Significa que, con el tiempo, la transacción es por término medio el índice que
+        se ha especificado, si bien el tiempo entre cada transacción se mantiene constante.
+    </li>
+    <li>
+        Por el contrario, una <b>distribución exponencial negativa</b> cambia la probabilidad del momento del inicio de una
+        transacción. Esta distribución emula más exactamente las ráfagas de actividad al ir disminuyendo una actividad que
+        es típica del comportamiento de VT.
+    </li>
+</ul>
+<h4>
+    Inserción de un punto de sincronización
+</h4>
+<p>
+    Un punto de sincronización le permite coordinar las actividades de varios VT al pausar la ejecución de cada VT en un
+    punto determinado, denominado el punto de sincronización.
+</p>
+<p>
+    Para insertar un punto de sincronización en un conjunto de aplicaciones, pulse <b>Conjunto de aplicaciones &gt;
+    Insertar &gt; Punto de sincronización</b>.
+</p>
+<p>
+    La configuración de los puntos de sincronización incluye:
+</p>
+<ul>
+    <li>
+        <b>En conjunto</b>-libera todos los verificadores virtuales al mismo tiempo.
+    </li>
+    <li>
+        <b>De modo escalonado</b>-libera los verificadores virtuales uno a uno.
+    </li>
+    <li>
+        <b>Tiempo de espera</b>-significa que el período de tiempo para un punto de sincronización especifica el tiempo
+        total que TestManager espera a que los VT lleguen al punto de sincronización. El período de tiempo de espera
+        empieza cuando el primer VT llega al punto de sincronización.
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

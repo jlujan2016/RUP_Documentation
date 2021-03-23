@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Dise&ntilde;o de bases de datos utilizando XDE Developer.</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="database_design" name="uma.name">
+<meta content="Dise&ntilde;o de bases de datos utilizando XDE Developer." name="uma.presentationName">
+<meta content="Tool:rup_xde:Rational XDE Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational XDE Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{A7B13419-14D8-4C55-B98C-497B2E17CC73}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{A7B13419-14D8-4C55-B98C-497B2E17CC73}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{A7B13419-14D8-4C55-B98C-497B2E17CC73}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{A7B13419-14D8-4C55-B98C-497B2E17CC73}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{A7B13419-14D8-4C55-B98C-497B2E17CC73}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Dise&ntilde;o de bases de datos utilizando XDE Developer.</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo compilar un modelo de datos con el Modelador de datos de Rational XDE Developer.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_xde_D81FFA70.html" guid="{303A82D2-E3AB-4501-8563-0D4D43782AF9}">Rational XDE Developer</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/database_design_8552DD3.html" guid="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}">Diseño de base de datos</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    Visión general
+</h3>
+<p>
+    En esta guía de la herramienta se describe cómo compilar un <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">modelo de
+    datos</a> con el Modelador de datos.
+</p>
+<ul>
+    <li>
+        Los pasos que se indican en esta guía de la herramienta coinciden con los de la tarea correspondiente.
+    </li>
+    <li>
+        En esta guía de la herramienta se llevan a cabo los pasos siguientes:
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <ul>
+            <li>
+                <a href="#Develop Logical Data Model">Desarrollar el modelo de datos lógico</a> &lt;opcional&gt;
+            </li>
+            <li>
+                <a href="#Develop Physical Data Model">Desarrollar el modelo de datos físico</a> 
+                <ul>
+                    <li>
+                        <a href="#Define Domains">Definir dominios</a>
+                    </li>
+                    <li>
+                        <a href="#Transform Logical Database Design into Physical Database Design">Crear
+                        elementos de diseño de la base de datos física inicial</a>
+                    </li>
+                    <li>
+                        <a href="#Define Reference Tables">Definir tablas de referencia</a>
+                    </li>
+                    <li>
+                        <a href="#Create Primary Key and Unique Key Constraints">Crear restricciones de clave
+                        principal y clave exclusiva</a>
+                    </li>
+                    <li>
+                        <a href="#Define Data and Referential Integrity Enforecment Rules">Definir datos y
+                        reglas de imposición de integridad referencial</a>
+                    </li>
+                    <li>
+                        <a href="#De-Normalize the Database Design to Optimize for Performance">Desnormalizar
+                        el diseño de base de datos para optimizar el rendimiento</a>
+                    </li>
+                    <li>
+                        <a href="#Optimize Data Access">Optimizar el acceso a los datos</a>
+                    </li>
+                    <li>
+                        <a href="#Define Storage Characteristics">Definir características de almacenamiento</a>
+                    </li>
+                    <li>
+                        <a href="#Distribute Class Behavior to the Database">Diseñar procedimientos almacenados
+                        para distribuir el comportamiento de clase a la base de datos</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#Review the Results">Revisar los resultados</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+<p>
+    La herramienta de software de Rational XDE&trade; incluye características que permiten que los desarrolladores de
+    aplicaciones y los diseñadores de bases de datos desarrollen las aplicaciones y las bases de datos utilizando la misma
+    herramienta. Como <u><a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">diseñador de base de datos</a></u> o <u><a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">diseñador</a></u>, puede utilizar XDE para modelar y diseñar bases de
+    datos, así como para integrar la aplicación y la base de datos. &nbsp;El modelador de datos de XDE utiliza el perfil de
+    UML (Lenguaje unificado de modelado) para modelado de base de datos como notación estándar para compilar modelos de
+    datos. &nbsp;Para obtener información básica clave sobre detalles específicos relacionados con el modelado de base de
+    datos y el desarrollo utilizando Rational XDE, consulte los temas de la ayuda en línea de XDE que tratan sobre:
+</p>
+<ul>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Bases de datos soportadas en
+        Rational XDE</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_r_db_support"); -->:
+        Lista las bases de datos para las que Rational XDE ofrece soporte.
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Controladores de JDBC y
+        proveedores de DB OLE soportados</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_r_support_ole_db_jdbc"); -->: Lista
+        los controladores y los proveedores de acceso de datos para los que Rational XDE ofrece soporte.
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Establecimiento de opciones para
+        modelos de datos</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_data_pref"); -->: Resume el
+        establecimiento de la asignación de base de datos por omisión y el destino de la base de datos.
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Establecimiento de la asignación
+        de base de datos por omisión</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_set_default_db_assign"); -->:
+        Proporciona una guía para configurar modelos de datos de XDE que señalen a una base de datos denominada
+        específicamente.
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Perfil de modelado de datos
+        UML</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_r_uml_dm_profile"); -->:
+        Resume los elementos de modelo de UML (Lenguaje unificado de modelado) utilizados en el modelo de datos.
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Iconos de visibilidad de modelado
+        de datos</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_r_visible_icon"); -->:
+        Lista elementos de notación para definir claves principales/externas y desencadenantes de base de datos específicos
+        de un modelo de datos.
+    </li>
+</ul>
+<p>
+    Para iniciar un <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">modelo de datos</a> en XDE, existen tres procedimientos:
+</p>
+<ul>
+    <li>
+        Compilar el modelo de datos directamente en XDE utilizando las herramientas del modelador de datos.
+    </li>
+    <li>
+        Transformar clases permanentes en el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">modelo de diseño</a> para crear tablas en el modelo de datos.
+    </li>
+    <li>
+        Ingeniería inversa de un esquema de base de datos existente o script DDL para crear un modelo de datos.&nbsp;
+    </li>
+</ul>
+<p>
+    Para obtener más información sobre los diferentes métodos para crear el modelo de datos, consulte en el ayuda de XDE
+    los temas que tratan sobre:
+</p>
+<ul>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Diseño de modelos de datos</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_bld_dm"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Transformación de clase en
+        tabla</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_clss_tbl_transf"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Compilación de modelos de datos
+        por medio de ingeniería inversa</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_gen_dm_re"); -->
+    </li>
+</ul>
+<p>
+    En las secciones restantes de esta guía de la herramienta se facilitan instrucciones para compilar un modelo de datos
+    transformando clases permanentes del modelo de diseño para su desarrollo. La estructura del paquete de modelo de datos
+    que se trata aquí, se describe con más detalle en la sección Modelo de datos de <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/model_structure_guidelines_for_rational_xde_developer_6D2FD64A.html" guid="2.67081400527339E-306">Directrices de la estructura de modelo de XDE</a>.
+</p>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/reverse_engineering_db_31C775E7.html" guid="{8F40AECA-8AAA-4409-81F0-BFB7B6BECDBC}">Guía de la herramienta: Ingeniería inversa de bases de datos utilizando
+    Rational XDE</a> proporciona más información sobre cómo crear un modelo de datos al revertir la ingeniería del diseño
+    de bases de datos físicas.
+</p>
+<h3>
+    <a id="Develop Logical Data Model" name="Develop Logical Data Model">Desarrollar el modelo de datos lógico
+    &lt;opcional&gt;</a>
+</h3>
+<p>
+    Es posible que algunos proyectos requieran la creación de un modelo "lógico" idealizado del diseño de la base de datos
+    que capture una vista independiente de la aplicación de las entidades de datos lógicas clave y sus relaciones. Este
+    modelo de datos lógico se puede considerar como un tipo de modelo de "análisis" similar al <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_model_76C3B70C.html" guid="{98EA224C-36F6-46E6-AB36-2999382B58B3}">Producto de trabajo: Modelo de análisis</a> opcional que se puede
+    utilizar en el desarrollo del diseño de la aplicación.&nbsp;Se debe tener en cuenta que el modelo de datos lógico está
+    incluido en el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Producto de trabajo: Modelo de datos</a>, y que no se considera como un
+    producto de trabajo de RUP separado. &nbsp;&nbsp;
+</p>
+<p>
+    El modelo de datos lógico se puede crear directamente gracias a las herramientas del modelador de datos de XDE.
+    &nbsp;Consulte las <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/model_structure_guidelines_for_rational_xde_developer_6D2FD64A.html" guid="2.67081400527339E-306">Directrices de la estructura de modelo de XDE</a> para obtener más información sobre la
+    creación de un modelo de datos lógico en el producto de trabajo Modelo de datos global. &nbsp;Referencia: <img     alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Modelos de datos lógicos</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_logical_dm"); -->
+</p>
+<h3>
+    <a id="Develop Physical Data Model" name="Develop Physical Data Model">Desarrollar el diseño de la base de datos
+    física</a>
+</h3>
+<p>
+    Puede perfeccionar el modelo de datos lógico para crear un modelo detallado del diseño de la base de datos física
+    utilizando Rational XDE.<br />
+     (Consulte el apartado <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /> <i>Modelos de
+    datos físicos</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_phys_dm"); -->.) A
+    continuación, a este modelo de datos físico se puede aplicar la ingeniería para crear una base de datos. (Consulte la
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/forward_engineering_db_14F5AD0B.html" guid="{F55D370E-F820-4646-A0B8-C2242A07A83F}">Guía de la herramienta: Ingeniería directa de bases de datos en Rational
+    XDE</a>).&nbsp;Más abajo se describen los pasos más importantes que debe llevar a cabo para desarrollar un modelo de
+    datos físico.
+</p>
+<h4>
+    <a id="Define Domains" name="Define Domains">Definir dominios</a>
+</h4>
+<p>
+    Cree dominios para implementar tipos de datos definidos por el usuario que se puedan utilizar a través del modelo de
+    datos para imponer estándares de diseño de base de datos. (Consulte el apartado <img     alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Dominios</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_dom"); -->.)&nbsp;Los dominios también
+    se pueden utilizar para incorporar reglas empresariales en columnas.
+</p>
+<p>
+    Con el objeto de utilizar los tipos de datos que definen los dominios en el modelo de datos, debe seguir las
+    directrices que se indican a continuación:
+</p>
+<ul>
+    <li>
+        Los dominios se deben definir en un paquete separado en el modelo de datos. Para los equipos más grandes, con
+        frecuencia se garantiza un modelo XDE separado. (Consulte el apartado <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creación de dominios</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_dom"); -->.)
+    </li>
+    <li>
+        El paquete que contiene los dominios se debe asignar al componente de base de datos que ejecuta las tablas en la
+        base de datos. (Consulte el apartado <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Asignación de paquetes de dominio a las bases de datos</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_assign_dom_pkg_db"); -->.)
+    </li>
+</ul>
+<p>
+    Para obtener información sobre cómo aplicar un dominio a una columna del modelo de datos, consulte el apartado <img     alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Asignación de dominios a columnas</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_assign_dom_col"); -->.&nbsp;
+</p>
+<h4>
+    <a id="Transform Logical Database Design into Physical Database Design" name="Transform Logical Database Design into Physical Database Design">Crear elementos de diseño de la base de datos
+    física inicial</a>
+</h4>
+<p>
+    Transforme las clases permanentes del modelo de diseño en tablas. (Consulte el apartado <img     alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Transformación de clase en tabla</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_clss_tbl_transf"); -->.)&nbsp; Los
+    atributos de las clases se convierten en columnas en la tablas. &nbsp;Rational XDE proporciona una opción de definición
+    de atributos de las clases como claves candidatas. (Consulte el apartado <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Asignación de claves candidatas</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_assign_cand_key"); -->.) Rational XDE
+    también convierte asociaciones específicas entre las clases en relaciones entre las tablas. Puede obtener más
+    información sobre la transformación de las clases en tablas en los temas de la ayuda en línea de Rational XDE que
+    tratan sobre:
+</p>
+<ul type="square">
+    <li>
+        Información de correlación general - <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Correlación de la transformación de clase en tabla</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_r_clsstbl_transf_map"); -->
+    </li>
+    <li>
+        Información de correlación específica de DBMS - <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Correlación de tipo de datos de transformación de clase en tabla</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_clss_tbltransf_dtmap"); -->
+    </li>
+</ul>
+<h4>
+    <a id="Define Reference Tables" name="Define Reference Tables">Definir tablas de referencia</a>
+</h4>
+<p>
+    Cree tablas de referencia según sea necesario para gestionar los elementos de datos estáticos de la base de
+    datos.&nbsp;Puede crear tablas de referencia directamente en el modelo de datos utilizando las características del
+    modelador de datos de XDE. Referencia: <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Modelado de tablas y columnas</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_tables_col"); -->
+</p>
+<h4>
+    <a id="Create Primary Key and Unique Key Constraints" name="Create Primary Key and Unique Key Constraints">Crear
+    restricciones de clave principal y clave exclusiva</a>
+</h4>
+<p>
+    Defina las restricciones de clave principal y clave exclusiva para identificar filas de información en una tabla.
+    Consulte el tema de la ayuda en línea <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Restricciones de clave principal</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_pk_cnstrnt"); -->En el tema de la ayuda
+    en línea&nbsp; <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creación de
+    restricciones de clave principal</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_pk_cnstrnt"); -->se describen
+    los pasos que se deben seguir para crear una restricción de clave principal en una o más columnas de una tabla. &nbsp;
+    La información sobre la definición de restricciones de clave exclusiva está contenida en el apartado <img     alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Restricciones de clave exclusiva</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_uk_cnstrnt"); -->Los pasos para crear
+    una restricción de clave exclusiva en el modelo: <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creación de restricciones de clave exclusiva</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_uk_cnstrnt"); -->.
+</p>
+<p>
+    Consulte el tema de la ayuda en línea de Rational XDE que trata sobre la <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>creación de restricciones</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_create_cnstrnt"); -->
+</p>
+<h4>
+    <a id="Define Data and Referential Integrity Enforecment Rules" name="Define Data and Referential Integrity Enforecment Rules">Definir datos y reglas de imposición de integridad
+    referencial</a>
+</h4>
+<p>
+    Las restricciones de comprobación se pueden utilizar para controlar actualizaciones en elementos de datos en las
+    tablas. &nbsp;Rational XDE ofrece la posibilidad de definir restricciones de comprobación para tablas, columnas y
+    dominios. Consulte el tema <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Restricciones de comprobación</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_ck_cnstrnt"); -->Para obtener una
+    descripción sobre cómo crear los tres tipos de restricciones de comprobación en el modelo de datos, consulte los temas
+    de la ayuda en línea de XDE que trata sobre:
+</p>
+<ul>
+    <li>
+        Restricciones de comprobación de columna - <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creación de restricciones de comprobación de columna</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_ckcnstrnt_col"); -->
+    </li>
+    <li>
+        Restricciones de comprobación de tabla - <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creación de restricciones de comprobación de tabla</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_ckcnstrnt_tbl"); -->
+    </li>
+    <li>
+        Restricciones de comprobación de dominio - <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creación de restricciones de comprobación de dominio</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_ckcnstrnt_dom"); -->
+    </li>
+</ul>
+<p>
+    Otro tipo de restricción que se utiliza para garantizar la integridad referencial es la restricción de clave externa.
+    (Consulte el apartado <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Restricciones de
+    clave externa</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_fk_cnstrnt"); -->.)&nbsp; Las
+    restricciones de clave externa sólo se pueden producir al crear una relación entre tablas. (Consulte el apartado <img     alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creación de restricciones de clave
+    externa</i><!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_fk_cnstrnt"); -->.)&nbsp;;La
+    excepción es el proceso de ingeniería inversa de una base de datos o script DDL en un modelo de datos, en cuyo caso se
+    generan automáticamente las relaciones y, por consiguiente, las claves externas.&nbsp;La migración de claves depende
+    del tipo de relación de identificación frente a no identificación que se ha añadido entre dos tablas.
+</p>
+<p>
+    Referencia: <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Migración de claves</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_key_mig"); -->Referencia: <img     alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Cambio de la clave migrada</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_chng_mig_key"); -->.
+</p>
+<h4>
+    <a id="De-Normalize the Database Design to Optimize for Performance" name="De-Normalize the Database Design to Optimize for Performance">Desnormalizar el diseño de base de datos para
+    optimizar el rendimiento</a>
+</h4>
+<p>
+    Dependiendo de la situación del proyecto específico, es posible que deba ajustar el diseño de base de datos físico
+    normalizado de modo que se ajuste a los requisitos de rendimiento. &nbsp;Optimice el modelo de datos para mejorar el
+    rendimiento diseñando las tablas para que almacenen objetos recuperados juntos en la misma tabla. &nbsp;Esta técnica se
+    denomina desnormalización.&nbsp;Para desnormalizar, combine las columnas exclusivas de las dos columnas en una y
+    elimine la segunda tabla. &nbsp;
+</p>
+<h4>
+    <a id="Optimize Data Access" name="Optimize Data Access">Optimizar el acceso a los datos</a>
+</h4>
+<p>
+    Una técnica de optimización adicional consiste en utilizar el indexado de columnas para acceder a los datos de las
+    tablas de modo más eficaz. Consulte el apartado <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Índices</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_index"); -->Descripción sobre cómo
+    crear índices en el modelo de datos: <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creación de índices</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_index"); -->
+</p>
+<p>
+    Otro aspecto del acceso a los datos consiste en utilizar vistas de base de datos.&nbsp;Se pueden utilizar vistas para
+    controlar o restringir el acceso a los datos de una o más tablas.&nbsp;Consulte el apartado <img     alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creación de vistas</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_view"); -->&nbsp;para obtener
+    una descripción sobre cómo crear una vista en el modelo de datos. Referencia: <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Modelado de vistas</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_view"); -->
+</p>
+<h4>
+    <a id="Define Storage Characteristics" name="Define Storage Characteristics">Definir características de
+    almacenamiento</a>
+</h4>
+<p>
+    Cree un diseño de almacenamiento de modelos para la base de datos definiendo los espacios de tablas y los contenedores
+    de espacios de tablas. (Consulte el apartado <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Espacios de tablas</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_ts_overview"); -->.) Correlacione los
+    elementos de diseño de la base de datos física con los elementos de almacenamiento a través de relaciones de ejecución.
+    En el tema de la ayuda en línea de XDE que trata sobre <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>adición de espacios de tablas a bases de datos</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_add_ts_db"); -->se describe cómo crear
+    espacios de tablas para una base de datos específica. En el tema de la ayuda en línea de XDE que trata sobre <img     alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>asignación de tablas a espacios de
+    tablas</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_assign_tbl_ts"); -->se
+    describe cómo asignar las tablas del modelo a los espacios de tablas.
+</p>
+<p>
+    Actualmente, Rational XDE ofrece soporte para el modelado de espacios de tablas para Oracle, DB2 y SQL
+    Server.&nbsp;Para obtener una guía sobre cómo modelar espacios de tablas para estos productos de DBMS, consulte los
+    temas de la ayuda en línea de XDE que tratan sobre:&nbsp;
+</p>
+<ul>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Modelado de espacios de tablas de
+        Oracle</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_oracle_ts"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Modelado de espacios de tablas de
+        DB2</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_db2_ts"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Modelado de espacios de tablas de
+        SQL Server</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_sqlsrv_ts"); -->
+    </li>
+</ul>
+<p>
+    Para obtener más información sobre elementos de modelo de base de datos y espacios de tablas, consulte los temas de la
+    ayuda en línea de Rational XDE que tratan sobre:
+</p>
+<ul>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Modelado de bases de datos y
+        espacios de tablas</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_ts"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Bases de datos</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_db"); -->
+    </li>
+</ul>
+<h4>
+    <a id="Distribute Class Behavior to the Database" name="Distribute Class Behavior to the Database">Diseño de
+    procedimientos almacenados para distribuir el comportamiento de clase a la base de datos</a>
+</h4>
+<p>
+    Defina procedimientos almacenados según sea necesario para dar soporte al almacenamiento y la recuperación eficaz de
+    información de la base de datos. Examine las operaciones de las clases de diseño que se han utilizado para crear las
+    tablas para procedimientos almacenados candidatos. &nbsp;Los procedimientos almacenados se pueden implementar como
+    procedimientos o funciones. &nbsp;Consulte el apartado <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Procedimientos almacenados</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_sp"); -->Los procedimientos almacenados
+    deben residir en un contenedor de procedimientos almacenados, tal como se describe en el apartado <img     alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Contenedores de procedimientos
+    almacenados</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_sp_cont"); -->. Los
+    procedimientos almacenados se crean como operaciones de la clase Contenedor de procedimientos almacenados en la que
+    residen. Consulte el apartado <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creación
+    de procedimientos almacenados</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_sp"); -->, <img     alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creación de contenedores de procedimientos
+    almacenados</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_sp_cont"); -->,
+    <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creación de parámetros de
+    procedimientos almacenados</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_sp_prmtr"); -->
+</p>
+<p>
+    Consulte el tema de la ayuda en línea de Rational XDE que trata sobre <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>modelado de procedimientos almacenados</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_sp"); -->
+</p>
+<p>
+    Defina desencadenantes según sea necesario para controlar y gestionar las modificaciones efectuadas en la información
+    de las tablas. Referencia: tema <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Modelado de desencadenantes</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_trig"); -->
+</p>
+<h3>
+    <a id="Review the Results" name="Review the Results">Revisar los resultados</a>
+</h3>
+<p>
+    Revise los resultados del diseño de la base de datos del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">modelo de
+    datos</a> de modo que haya coherencia con el diseño de aplicación del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">modelo
+    de diseño</a> y con la estructura global de la arquitectura de la aplicación. Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/checklists/data_model_D22985A5.html" guid="2.800761632096845E-305">Lista de comprobación: Modelo de datos</a> para elementos específicos que revisar.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.appliedis.com" target="_blank"><img alt="Icono de Applied Information Sciences"                 src="./../../../core.base_rup/guidances/supportingmaterials/resources/appliedis.gif" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Contenido desarrollado o parcialmente desarrollado por <a href="http://www.appliedis.com" target="_blank">Applied Information Sciences</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,630 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Modelo de caso de uso</title>
+<meta content="Guideline" name="uma.type">
+<meta content="use-case_model" name="uma.name">
+<meta content="Modelo de caso de uso" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_KVkLoN7HEdm8G6yT7-Wdqw", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "1.7617672560167394E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "1.7617672560167394E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.7617672560167394E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_N13eYAINEdq-_NKqZM1EhA", "_KVkLoN7HEdm8G6yT7-Wdqw", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "1.7617672560167394E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.7617672560167394E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Modelo de caso de uso</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Un modelo de guión de uso es un modelo de las funciones previstas del sistema y su entorno, y sirve como un contrato entre el cliente y los desarrolladores. Esta directriz proporciona un mapa para desarrollar un modelo de guión de uso.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_use_case_model_93D8F44.html" guid="{F7D9D038-B184-43CC-9353-15BA154F87B5}">Estructurar el modelo de guión de uso</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">Modelo de caso de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="modelo de guión de uso" text="directrices para" name="XE_use-case_model__guidelines_for" id="XE_use-case_model__guidelines_for" class="index"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">Explicación</a>
+</h3>
+<p>
+    Un modelo de caso de uso es un modelo de las funciones previstas del sistema y su entorno y sirve como un contrato
+    entre el cliente y los desarrolladores. Los casos de uso sirven como hebra de unión a lo largo del desarrollo del
+    sistema. El mismo modelo de caso de uso es el resultado de la disciplina de Requisitos y se utiliza como entrada para
+    disciplinas de Prueba, Diseño y Análisis.
+</p>
+<p>
+    En el diagrama que se incluye más abajo se muestra una parte de un modelo de caso de uso para el Sistema de máquinas de
+    reciclaje.
+</p>
+<p class="picturecenter" align="center">
+    <img height="213" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/md_ucmo2.gif" width="421" />
+</p>
+<p class="picturetext">
+    Diagrama de caso de uso que muestra un ejemplo de un modelo de caso de uso con actores y casos de uso .
+</p>
+<p>
+    Hay muchos modos de modelar un sistema, y cada uno de ellos puede servir para un objetivo diferente. Sin embargo, el
+    objetivo más importante de un modelo de caso de uso es comunicar el comportamiento del sistema al cliente o usuario.
+    Por lo tanto, el modelo debe ser fácil de comprender.
+</p>
+<p>
+    Los usuarios y cualquier otro sistema que pueda interactuar con el sistema son los actores. Puesto que representan
+    usuarios del sistema, los actores ayudan a delimitar el sistema y a facilitar una imagen más clara de lo que se supone
+    que se debe hacer. Los casos de uso se desarrollan en base a las necesidades de los actores, garantizando así que el
+    sistema resulta ser lo que los usuarios esperaban.
+</p>
+<h3>
+    <a id="How the Use-Case Model Evolves" name="How the Use-Case Model Evolves">Cómo evoluciona el modelo de caso de
+    uso</a>
+</h3>
+<p>
+    Los actores y los casos de uso se encuentran gracias a los requisitos de los clientes y usuarios potenciales
+    considerada como información vital. Cuando se descubren, los casos de uso y los actores se deben describir brevemente.
+    Antes de describir los casos de uso con detalle, el cliente debe revisar el modelo de caso de uso para verificar que se
+    encuentren todos los casos de uso y los actores y que, juntos, pueden facilitar lo que desea el cliente.
+</p>
+<p>
+    En el entorno de desarrollo iterativo, debe seleccionar un subconjunto de casos de uso que se detallan en cada
+    iteración. Consulte también el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/prioritize_use_cases_E6E4D9A0.html" guid="{6E23D919-D149-43C2-9D37-8AF77B667CA8}">Tarea: Dar
+    prioridad a los casos de uso</a> .
+</p>
+<p>
+    Una vez que se han encontrado los actores y los casos de uso , se describe con detalle el flujo de sucesos de cada caso
+    de uso . Las descripciones muestran cómo interactúa el sistema con los actores y lo que hace el sistema en cada caso
+    individual.
+</p>
+<p>
+    Por último, se revisa el modelo de guiíón de uso completado (incluidas las descripciones de los casos de uso ) y lo
+    utilizan los desarrolladores y los clientes a fin de ponerse de acuerdo sobre lo que debe llevar a cabo el sistema.
+</p>
+<h3>
+    <a id="Avoiding Functional Decomposition" name="Avoiding Functional Decomposition">Cómo evitar la descomposición
+    funcional</a>
+</h3>
+<p>
+    No es extraño que el modelo de caso de uso degenere en una descomposición funcional del sistema. Para evitarlo, fíjese
+    en los síntomas siguientes:
+</p>
+<ul>
+    <li>
+        Casos de uso "pequeños", lo que significa que el flujo de sucesos sólo tiene una o unas pocas sentencias.
+    </li>
+    <li>
+        "Muchos" casos de uso , lo que significa que el número de casos de uso es algún múltiplo de cien, en lugar de un
+        múltiplo de diez.
+    </li>
+    <li>
+        Nombres de casos de uso que son construcciones tales como "realice esta operación en estos datos concretos", o
+        bien, "realice esta función con estos datos concretos". Por ejemplo, "Entre número de identificación personal en un
+        cajero automático" no se debe modelar como un caso de uso separado para el cajero automático, puesto que nadie
+        utiliza el sistema sólo para hacer esto. Un caso de uso es un flujo de sucesos completo, cuyo resultado es algo de
+        valor para un actor.
+    </li>
+</ul>
+<p>
+    A fin de evitar la descomposición, asegúrese de que el modelo de caso de uso ayuda a responder preguntas como, por
+    ejemplo:
+</p>
+<ul>
+    <li>
+        ¿Cuál es el contexto del sistema?
+    </li>
+    <li>
+        ¿Por qué se ha construido el sistema?
+    </li>
+    <li>
+        ¿Qué quiere conseguir el usuario al utilizar el sistema?
+    </li>
+    <li>
+        ¿Qué valor añade el sistema a los usuarios?
+    </li>
+</ul>
+<h3>
+    <a id="Non-Functional Requirements" name="Non-Functional Requirements">Requisitos no funcionales</a>
+</h3>
+<p>
+    Resulta bastante fácil ver que los casos de uso son un procedimiento óptimo para capturar requisitos funcionales en un
+    sistema. Pero ¿qué sucede en el caso de los requisitos no funcionales? ¿Qué son y dónde se capturan?
+</p>
+<p>
+    Con frecuencia, los requisitos no funcionales se clasifican por categorías como, por ejemplo, utilización, rendimiento
+    y requisitos sustituibles (consulte también el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/requirements_62E28784.html" guid="4.582668643506599E-305">Concepto:
+    Requisito</a>). Suelen ser requisitos que especifican la necesidad de satisfacer los requisitos legales y normativos.
+    También pueden ser restricciones de diseño debido al sistema operativo utilizado, el entorno de plataforma, problemas
+    de compatibilidad o los estándares aplicables de cualquier aplicación. En general, cualquier requisito que no permita
+    más de una opción de diseño se debe considerar como una restricción de diseño.
+</p>
+<p>
+    Muchos requisitos no funcionales se aplican a un caso de uso individual y se capturan en las propiedades de dicho caso
+    de uso . En ese caso, se capturan en el flujo de sucesos del caso de uso , o bien, como un requisito especial del caso
+    de uso (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use_case_CC89870D.html" guid="4.1983217662266927E-305">Directriz: Caso de
+    uso</a> ).
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    En el Sistema de máquinas de reciclaje, un requisito no funcional específico del caso de uso Devolver elementos de
+    depósito podría ser:
+</p>
+<p class="example">
+    La máquina debe poder reconocer elementos de depósito con una fiabilidad de más del 95 por ciento.
+</p>
+<p>
+    A menudo, los requisitos funcionales se aplican al sistema completo. Este tipo de requisitos se capturan en las
+    Especificaciones suplementarias (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">Producto de trabajo: Especificaciones suplementarias</a>).
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    En el Sistema de máquinas de reciclaje, un requisito no funcional que se aplique al sistema completo podría ser:
+</p>
+<p class="example">
+    La máquina sólo permite un usuario a la vez.
+</p>
+<h3>
+    <a id="The What vs. How Dilemma" name="The What vs. How Dilemma">El dilema del qué frente al cómo</a>
+</h3>
+<p>
+    Una de las cosas más difíciles es aprender cómo determinar el nivel de detalle de los casos de uso para "empezar y
+    terminar". ¿Dónde se inician las características y empiezan los casos de uso , y dónde termina el caso de uso y empieza
+    el diseño? Con frecuencia se ha indicado que los casos de uso o los requisitos de software debe indicar lo que hace el
+    sistema, pero no cómo lo lleva a cabo. Considere el gráfico siguiente:
+</p>
+<p align="center">
+    <img height="196" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/ucm2.gif" width="382" />
+</p>
+<p class="picturetext">
+    El destino de una persona es el punto de inicio de otra.
+</p>
+<p>
+    Dependiendo del fondo, puede utilizar un contexto diferente para decidir lo que considera que es "qué" y lo que es
+    "cómo". Debe tener en cuenta estas necesidades cuando vaya a determinar si un detalle concreto se debe quitar o no del
+    modelo de caso de uso .
+</p>
+<h3>
+    <a id="Concrete and Abstract Use Cases" name="Concrete and Abstract Use Cases"></a><a key="guión de uso abstracto" text="descripción de" name="XE_abstract_use_case__description_of" id="XE_abstract_use_case__description_of" class="index"></a>
+</h3>
+<p>
+    Existe una distinción entre los casos de uso concretos y abstractos. Un actor inicializa el caso de uso <b>concreto</b>
+    y constituye un flujo de sucesos completo. "Completo" significa que una instancia del caso de uso lleva a cabo toda la
+    operación a la que ha llamado el actor.
+</p>
+<p>
+    Una caso de uso <b>abstracto</b> nunca crea instancias de sí mismo. Los casos de uso abstractos se incluyen en
+    (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/include-relationship_5AE2718.html" guid="7.259881398615376E-305">Directriz:
+    Relación de inclusión</a>), se amplían en (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/extend-relationship_EF38D814.html" guid="3.679940320411645E-305">Directriz:
+    Relación ampliada</a>) o bien se generalizan en (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use-case_generalization_B301F53B.html" guid="3.7061366529594173E-305">Directriz de producto de trabajo: Generalización de caso de uso</a> ) otros casos de uso
+    . Cuando se inicia un caso de uso concreto, se crea una instancia del caso de uso . Dicha instancia también muestra el
+    comportamiento que especifican sus casos de uso abstractos asociados. Por lo tanto, no se crean instancias separadas de
+    los casos de uso abstractos.
+</p>
+<p>
+    La distinción entre ambas es importante, puesto que lo que "ven" los actores son casos de uso concretos, y se inician
+    en el sistema.
+</p>
+<p>
+    Puede indicar que un caso de uso es abstracto escribiendo el nombre en cursiva.
+</p>
+<h5>
+    Ejemplo:
+</h5>
+<p align="center">
+    <img height="165" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/ucmex3.gif" width="213" />
+</p>
+<p class="picturetext">
+    El caso de uso Crear tarea se incluye en el caso de uso Registrar pedido. Crear tarea es un caso de uso abstracto.
+</p>
+<p class="example">
+    En el Sistema de manipulación de almacén, el caso de uso abstracto Crear tarea se incluye en el caso de uso Registrar
+    pedido. Cuando se inicia Registrar pedido, se crea una instancia de Registrar pedido que, aparte de seguir el flujo de
+    sucesos de Registrar pedido, también sigue el flujo de sucesos descrito en el caso de uso Crear tarea incluido. Crear
+    tarea nunca se ejecuta por sí mismo, siempre como parte de Registrar pedido (o cualquier otro caso de uso en el que se
+    haya incluido). Por consiguiente, Crear tarea es un caso de uso abstracto.
+</p>
+<h3>
+    <a id="Structuring the Use-Case Model" name="Structuring the Use-Case Model">Estructuración del modelo de caso de
+    uso</a>
+</h3>
+<p>
+    Existen tres motivos principales para estructurar el modelo de caso de uso :
+</p>
+<ul>
+    <li>
+        Para simplificar la comprensión de los casos de uso .
+    </li>
+    <li>
+        Para particionar el comportamiento común descrito en varios casos de uso .
+    </li>
+    <li>
+        Para simplificar el mantenimiento del modelo de caso de uso .
+    </li>
+</ul>
+<p>
+    No obstante, la estructuración no es la primera cosa que debe hacer. No es necesario estructurar los casos de uso hasta
+    que se sepa un poco más sobre su comportamiento, más allá de una descripción breve de una frase. Debe haber
+    establecido, al menos, un esquema paso a paso para el flujo de sucesos del caso de uso con el objeto de garantizar que
+    las decisiones se basan en la comprensión bastante precisa del comportamiento.
+</p>
+<p>
+    Para estructurar los casos de uso , existen tres tipos de relaciones. Debe utilizar dichas relaciones para descomponer
+    en factores fragmentos de los casos de uso que se pueden reutilizar en otros casos de uso , o que son especializaciones
+    u opciones del caso de uso . El caso de uso que representa la modificación se denomina <b>caso de uso de adición</b>.
+    El caso de uso que se modifica se denomina <b>caso de uso de base</b>.
+</p>
+<ul>
+    <li>
+        Si alguna parte del caso de uso de base representa una función y el caso de uso sólo depende del resultado de ésta,
+        no del método utilizado para generar el resultado, puede descomponer en factores dicha parte en un caso de uso de
+        adición. La adición se inserta explícitamente en el caso de uso de base utilizando la relación de inclusión.
+        Consulte también el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/include-relationship_5AE2718.html" guid="7.259881398615376E-305">Directriz: Relación de inclusión</a>.
+    </li>
+    <li>
+        Si alguna parte del caso de uso es opcional o no se necesita para comprender el objetivo principal del caso de uso
+        , puede descomponerla en factores en un caso de uso de adición con el objeto de simplificar la estructura del caso
+        de uso de base. La adición se inserta implícitamente en el caso de uso de base utilizando la relación de
+        ampliación. Consulte también el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/extend-relationship_EF38D814.html" guid="3.679940320411645E-305">Directriz: Relación ampliada</a>.
+    </li>
+    <li>
+        Si hay casos de uso que tienen puntos comunes en el comportamiento y la estructura y similitudes en el objetivo,
+        sus partes comunes se pueden descomponer en factores en un caso de uso de base (padre) que heredan los casos de uso
+        de adición (hijos). Los casos de uso hijos pueden insertar nuevo comportamiento y modificar comportamiento
+        existente en la estructura que heredan del caso de uso padre. Consulte también el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use-case_generalization_B301F53B.html" guid="3.7061366529594173E-305">Directriz de producto de trabajo: Generación de caso de uso</a> .
+    </li>
+</ul>
+<p>
+    Puede utilizar la generalización de actor para mostrar cómo los actores son especializaciones entre sí. Consulte
+    también el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/actor-generalization_2AFC6BE3.html" guid="2.144844789747145E-305">Directriz:
+    Generalización de actor</a>.
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    Considere parte del modelo de caso de uso para un Sistema de gestión de pedidos.
+</p>
+<p class="example">
+    Resulta útil separar el Cliente común del Cliente de Internet, puesto que propiedades ligeramente diferentes. No
+    obstante, puesto que el Cliente de Internet muestra todas las propiedades de un Cliente, el Cliente de Internet se
+    puede presentar como una especialización del Cliente, indicado con una generalización de actor.
+</p>
+<p class="example">
+    Los casos de uso concretos que se muestran en este diagrama son Pedido por teléfono (que inicializa el actor Cliente) y
+    Pedido por Internet (que inicializa el Cliente de Internet). Ambos casos de uso son variaciones del caso de uso Hacer
+    pedido, más general, que en este ejemplo es abstracto. El caso de uso Solicitar catálogo representa un segmento ce
+    comportamiento opcional que no forma parte del objetivo principal de Hacer pedido. Se ha descompuesto en factores en un
+    caso de uso abstracto a fin de simplificar el caso de uso Hacer pedido. El caso de uso Suministrar datos de cliente
+    representa un segmento de comportamiento que se ha descompuesto en factores, puesto que es una función separada de la
+    que sólo el resultado afecta al caso de uso Hacer pedido. El caso de uso Suministrar datos de cliente también se puede
+    reutilizar en otros casos de uso . En este ejemplo, tanto Solicitar catálogo como Suministrar datos de cliente son
+    abstractos.
+</p>
+<p align="center">
+    <img height="366" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/ucmex2.gif" width="354" />
+</p>
+<p class="picturetext">
+    El diagrama de caso de uso muestra parte del modelo de caso de uso para un Sistema de gestión de pedidos.
+</p>
+<p>
+    En la tabla siguiente se muestra una comparación más detallada entre las tres relaciones de casos de uso diferentes:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th width="20%">
+                    Pregunta
+                </th>
+                <th width="20%">
+                    Ampliación
+                </th>
+                <th width="27%">
+                    Inclusión
+                </th>
+                <th width="33%">
+                    Generalización
+                </th>
+            </tr>
+            <tr>
+                <td width="20%">
+                    ¿Cuál es la dirección de la relación?
+                </td>
+                <td width="20%">
+                    El caso de uso de adición hace referencia al caso de uso de base.
+                </td>
+                <td width="27%">
+                    El caso de uso de base hace referencia al caso de uso de adición.
+                </td>
+                <td width="33%">
+                    El caso de uso de adición (hijo) hace referencia al caso de uso de base (padre).
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    ¿La relación tiene multiplicidad?
+                </td>
+                <td width="20%">
+                    Sí, en la parte de la adición.
+                </td>
+                <td width="27%">
+                    No. Si se desea incluir el mismo segmento de comportamiento más de una vez, se debe establecer en el
+                    caso de uso de base.
+                </td>
+                <td width="33%">
+                    No.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    ¿La relación tiene una condición?
+                </td>
+                <td width="20%">
+                    Sí.
+                </td>
+                <td width="27%">
+                    No. Si se desea expresar una condición en la inclusión, se debe indicar explícitamente en el caso de
+                    uso de base.
+                </td>
+                <td width="33%">
+                    No.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    ¿El caso de uso de adición es abstracto?
+                </td>
+                <td width="20%">
+                    Con frecuencia sí, pero no necesariamente.
+                </td>
+                <td width="27%">
+                    Sí.
+                </td>
+                <td width="33%">
+                    Con frecuencia no, pero puede serlo.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    ¿Modifica la adición el caso de uso de base?
+                </td>
+                <td width="20%">
+                    La ampliación modifica implícitamente el comportamiento del caso de uso de base.
+                </td>
+                <td width="27%">
+                    La inclusión modifica explícitamente el efecto del caso de uso de base.
+                </td>
+                <td width="33%">
+                    Las instancias que se crean del caso de uso de base (padre) no afectan al hijo. Para obtener los
+                    efectos de la adición, se deben crear instancias del caso de uso de base (hijo).
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    ¿El caso de uso de base debe ser completo y significativo?
+                </td>
+                <td width="20%">
+                    Sí.
+                </td>
+                <td width="27%">
+                    Junto con las adiciones, sí.
+                </td>
+                <td width="33%">
+                    Si es abstracto, no.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    ¿El caso de uso de adición debe ser completo y significativo?
+                </td>
+                <td width="20%">
+                    No.
+                </td>
+                <td width="27%">
+                    No.
+                </td>
+                <td width="33%">
+                    Junto con el caso de uso de base (padre), sí.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    ¿El caso de uso de adición puede acceder a los atributos del caso de uso de base?
+                </td>
+                <td width="20%">
+                    Sí.
+                </td>
+                <td width="27%">
+                    No. La inclusión está encapsulada, y sólo se "ve" a sí misma.
+                </td>
+                <td width="33%">
+                    Sí, por parte de los mecanismos de herencia normales.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    ¿El caso de uso de base puede acceder a los atributos del caso de uso de adición?
+                </td>
+                <td width="20%">
+                    No. El caso de uso de base debe estar bien formado a falta de la adición.
+                </td>
+                <td width="27%">
+                    No. El caso de uso de base sólo conoce el efecto de la adición. La adición está encapsulada.
+                </td>
+                <td width="33%">
+                    No. En este sentido, el caso de uso de base (padre) debe estar bien formado a falta de la adición
+                    (hijo).
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Otro aspecto de la organización del modelo de caso de uso para simplificar la comprensión consiste en agrupar los casos
+    de uso en paquetes. El modelo de caso de uso se puede organizar como una jerarquía de paquetes de casos de uso , con
+    "hojas" que son actores o casos de uso . Consulte también <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use-case_package_1EFD6458.html" guid="9.871865834975133E-306">Directriz:
+    Paquete de casos de uso</a> .
+</p>
+<p class="picturecenter" align="center">
+    <img height="235" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/md_ucmo6.gif" width="181" />
+</p>
+<p class="picturetext">
+    Este gráfico muestra la jerarquía del modelo de caso de uso . Las flechas indican posibles propiedades.
+</p>
+<h3>
+    <a id="Use Cases Are Always Related to Actors" name="Use Cases Are Always Related to Actors">¿Los casos de uso siempre
+    están relacionados con actores?</a>
+</h3>
+<p>
+    La ejecución de cada caso de uso incluye la comunicación con uno o más actores. Un actor que solicita al sistema que
+    lleve a cabo una acción determinada inicia siempre las instancias de caso de uso . Esto implica que todos los casos de
+    uso deben tener asociaciones de comunicación con actores. El motivo de esta regla es reforzar el sistema para
+    proporcionar sólo la funcionalidad que necesitan los usuarios, y nada más. Tener casos de uso que nadie solicita,
+    indica que existe algún error en el modelo de caso de uso o en los requisitos.
+</p>
+<p>
+    Sin embargo, esta regla tiene algunas excepciones:
+</p>
+<ul>
+    <li>
+        Si el caso de uso es abstracto (no se pueden crear instancias del mismo por separado), su comportamiento puede no
+        incluir la interacción con actores. En este caso, no existe ninguna asociación de comunicación con actores desde el
+        caso de uso abstracto.
+    </li>
+    <li>
+        Un caso de uso hijo en una relación de generalización no necesita tener un actor asociado al mismo si el caso de
+        uso padre describe la comunicación con todos los actores.
+    </li>
+    <li>
+        Un caso de uso de base en una relación de inclusión no necesita tener un actor asociado al mismo si el caso de uso
+        de inclusión describe la comunicación con todos los actores.
+    </li>
+    <li>
+        Un caso de uso se puede iniciar según una planificación (por ejemplo, una vez a la semana o una vez al día), lo que
+        significa que el reloj del sistema es el iniciador. El reloj del sistema es interno del sistema, y un actor no
+        inicia el caso de uso , sino que lo inicia un suceso interno del sistema. Si no se produce ninguna otra interacción
+        de los actores en el caso de uso , no tiene ninguna asociación con los actores. Sin embargo, para mayor claridad,
+        puede utilizar un actor ficticio, "Hora", a fin de mostrar el modo en el que se inicia el caso de uso en los
+        diagramas de caso de uso .
+    </li>
+</ul>
+<h3>
+    <a id="The Survey Description" name="The Survey Description">Descripción de inspección</a>
+</h3>
+<p>
+    La descripción de inspección del modelo de caso de uso debe:
+</p>
+<ul>
+    <li>
+        Establecer cuáles son los casos de uso principales del sistema (el motivo por el que se ha construido el sistema).
+    </li>
+    <li>
+        Resumir hechos técnicos importantes sobre el sistema.
+    </li>
+    <li>
+        Señalar las delimitaciones del sistema - cosas se espera que no haga el sistema.
+    </li>
+    <li>
+        Resumir el entorno del sistema, por ejemplo, las plataformas de destino y el software existente.
+    </li>
+    <li>
+        Describir todas las secuencias en las que se ejecutan normalmente los casos de uso en el sistema.
+    </li>
+    <li>
+        Especificar la funcionalidad que no maneja el modelo de caso de uso .
+    </li>
+</ul>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    <font color="#000000">A continuación, se incluye un ejemplo de una descripción de inspección del modelo de caso de uso
+    de la Máquina de reciclaje:</font>
+</p>
+<p class="example">
+    Este modelo contiene tres actores y tres casos de uso . El caso de uso principal es Elementos de reciclaje, que
+    representa el objetivo más importante de la máquina de reciclaje.
+</p>
+<p class="example">
+    Los casos de uso de soporte son los siguientes:
+</p>
+<ul>
+    <li>
+        <p class="example">
+            Imprimir informe diario, que permite que un operador obtenga un informe sobre el número de elementos que se han
+            reciclado.
+        </p>
+    </li>
+    <li>
+        <p class="example">
+            Administrar elemento de depósito, que permite que un operador cambie el valor de reembolso por un tipo de
+            elemento de depósito, o bien, que añada nuevos tipos de elementos de depósito.
+        </p>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

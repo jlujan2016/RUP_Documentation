@@ -1,0 +1,990 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de tareas: An&aacute;lisis de caso de uso</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="use_case_analysis" name="uma.name">
+<meta content="An&aacute;lisis de caso de uso" name="uma.presentationName">
+<meta content="_fzcg-UocEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="Dise&ntilde;ador">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={002674F9-6511-4D15-8623-B761D8C48986}&path={002674F9-6511-4D15-8623-B761D8C48986},{DAFB461E-9ADB-4849-8285-B7E3E72BDB43},_fzcg-UocEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_XSr4YCFtEdqrX8YVzvtlIg", "_Cgn1MCCdEdq3qtLcbHn6PQ", "_fzcg-UocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_J1u8gCGYEdqMcovRzkCQow", "_Cgn1MCCdEdq3qtLcbHn6PQ", "_fzcg-UocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_vllcADIKEdqGgPtrSpB0vQ", "_Cgn1MCCdEdq3qtLcbHn6PQ", "_fzcg-UocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_XSr4YCFtEdqrX8YVzvtlIg", "_Cgn1MCCdEdq3qtLcbHn6PQ", "_fzcg-UocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_J1u8gCGYEdqMcovRzkCQow", "_Cgn1MCCdEdq3qtLcbHn6PQ", "_fzcg-UocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_vllcADIKEdqGgPtrSpB0vQ", "_Cgn1MCCdEdq3qtLcbHn6PQ", "_fzcg-UocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_XSr4YCFtEdqrX8YVzvtlIg", "_Cgn1MCCdEdq3qtLcbHn6PQ", "_fzcg-UocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_J1u8gCGYEdqMcovRzkCQow", "_Cgn1MCCdEdq3qtLcbHn6PQ", "_fzcg-UocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_vllcADIKEdqGgPtrSpB0vQ", "_Cgn1MCCdEdq3qtLcbHn6PQ", "_fzcg-UocEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_fzcg-UocEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: An&aacute;lisis de caso de uso</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta tarea se describe cómo desarrollar una realización de guión de uso a nivel de análisis desde un guión de uso.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<ul>
+    <li>
+        Identificar las clases que ejecutan el flujo de sucesos de un caso de uso
+    </li>
+    <li>
+        Distribuir el comportamiento del caso de uso a esas clases, utilizando realizaciones de caso de uso de análisis
+    </li>
+    <li>
+        Identificar las responsabilidades, los atributos y las asociaciones de las clases
+    </li>
+    <li>
+        Tener en cuenta el uso de mecanismos de arquitectura
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Principal:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_designer_807FBB41.html" guid="_AezXQDnfEdqxANP9kNH4WA">Dise&ntilde;ador</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Adicional:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">Asistencia:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_usecase_612DD52E.html" guid="_kYZqIb9dEdqBwpaAk4N49g">Caso de uso</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_usecase_5F72F5EA.html" guid="_lH9e0b9dEdqBwpaAk4N49g">Caso de uso</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_project_specific_guidelines_DBA13489.html" guid="_CQXK5hi2Edq_uI8xTPML6g">Directrices espec&iacute;ficas del proyecto</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_ED082073.html" guid="_CQXK5Ri2Edq_uI8xTPML6g">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_supplementary_specification_E63F1499.html" guid="_CQXK5xi2Edq_uI8xTPML6g">Especificaciones suplementarias</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_glossary_7D36D5E4.html" guid="_fzouMEocEdqrjq4i3fchvA">Glosario</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_analysis_model_E26A4063.html" guid="_CQXK5Bi2Edq_uI8xTPML6g">Modelo de an&aacute;lisis</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_usecase_model_CA572A41.html" guid="_CQjYIxi2Edq_uI8xTPML6g">Modelo de caso de uso</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_21AD327A.html" guid="_CQXK4xi2Edq_uI8xTPML6g">Modelo de dise&ntilde;o</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_use_case_realization_2E556719.html" guid="_CQpewxi2Edq_uI8xTPML6g">Ejecuci&oacute;n de casos de uso</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_analysis_model_E26A4063.html" guid="_CQXK5Bi2Edq_uI8xTPML6g">Modelo de an&aacute;lisis</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> Crear una realizaci&oacute;n de caso de uso  de an&aacute;lisis </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Create Use-Case Realization" name="Create Use-Case Realization"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Crear el elemento de modelado que se utiliza para expresar el comportamiento del caso de uso .&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Los casos de uso constituyen la base de gran parte del primer trabajo de análisis y diseño. Para habilitar la
+    transición entre tareas centradas en los requisitos y tareas centradas en el análisis/diseño, el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">Producto de trabajo: Realización de casos de uso</a> sirve como puente,
+    ya que proporciona una forma de rastrear hacia atrás el comportamiento en los modelos de análisis y diseño hasta llegar
+    al modelo de caso de uso , y organiza las colaboraciones alrededor del concepto de caso de uso .
+</p>
+<p>
+    Si no existe una, cree una realización de caso de uso de análisis en el modelo de análisis para el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">Caso de uso</a> .&nbsp; El nombre de la realización de caso de uso de
+    análisis debe ser el mismo que el del caso de uso asociado, y se debe establecer una relación "realiza" desde la
+    realización de caso de uso de análisis con el caso de uso asociado.
+</p>
+<p>
+    Para obtener más información sobre las realizaciones de casos de uso , consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/use-case_realization_C690D81F.html" guid="1.6790343052744206E-305">Técnica:
+    Realización de casos de uso</a> .
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Complementar la descripci&oacute;n del caso de uso  </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Supplement the use-case description" name="Supplement the use-case description"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Capturar la información adicional necesaria para entender el comportamiento interno necesario del sistema
+                que puede faltar en la descripción del caso de uso escrita para el consumidor del sistema.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    La descripción de cada caso de uso no es siempre suficiente para encontrar clases de análisis y sus objetos. El cliente
+    generalmente no encuentra interesante la información sobre qué ocurre dentro del sistema, por lo que las descripciones
+    de caso de uso pueden dejar fuera esa información. En estos casos, la descripción del caso de uso se lee como una
+    descripción de 'caja negra', en la que los detalles internos sobre qué hace el sistema como respuesta a las acciones de
+    un actor o bien no se incluyen o bien se describen resumidos brevemente. Para encontrar los objetos que ejecutan el
+    caso de uso , necesita la descripción de 'caja blanca' de qué hace el sistema desde una perspectiva interna.
+</p>
+<p class="exampleheading">
+    Ejemplo
+</p>
+<p class="example">
+    En el caso de un cajero automático, el cliente del sistema preferirá decir
+</p>
+<div style="margin-left: 2em">
+    <p class="example">
+        "El cajero automático valida la tarjeta del cliente del banco".
+    </p>
+</div>
+<p class="example">
+    para describir el comportamiento de autenticación del usuario del sistema. Aunque esto puede ser suficiente para el
+    cliente, no nos da ninguna idea real de qué pasa realmente dentro del cajero automático cuando se valida la tarjeta.
+</p>
+<p class="example">
+    Para tener una imagen interna de cómo funciona el sistema, con un nivel suficiente de detalle para identificar los
+    objetos, necesitaremos información adicional. Tomando como ejemplo la actividad de validación de la tarjeta del cajero
+    automático, la descripción ampliada será:
+</p>
+<div style="margin-left: 2em">
+    <p class="example">
+        "El cajero automático envía el número de cuenta del cliente y el PIN a la red de cajeros para que los valide. La
+        red de cajeros devuelve una respuesta satisfactoria si el número del cliente y el PIN coinciden, y se autoriza al
+        cliente para que realice transacciones; de lo contrario, la red de cajeros devuelve una anomalía".
+    </p>
+</div>
+<p class="example">
+    Este nivel de detalle da una idea clara de qué información es necesaria (el número de cuenta y el PIN) y quién es
+    responsable de la autenticación (la red de cajeros, un actor en el modelo de caso de uso ). A partir de esta
+    información, podemos identificar dos objetos posibles (un objeto Cliente, con atributos de número de cuenta y PIN, y
+    una Interfaz de la red de cajeros automáticos), así como sus responsabilidades.
+</p>
+<p>
+    Examine la descripción del caso de uso para ver si el comportamiento interno del sistema está claramente definido. El
+    comportamiento interno del sistema no debe tener ambigüedades, para que esté claro qué debe hacer el sistema. No es
+    necesario definir los elementos dentro del sistema (objetos) que son responsables de ejecutar el comportamiento; sólo
+    se necesita una definición clara de qué se debe hacer.
+</p>
+<p>
+    Las fuentes de información de este detalle incluyen los expertos del dominio que pueden ayudar a definir qué debe hacer
+    el sistema. Cuando se considera un determinado comportamiento del sistema, una buena pregunta es "¿qué significa hacer
+    esto para el sistema?". Si lo que hace el sistema para ejecutar el comportamiento no está bien definido para responder
+    a la pregunta, probablemente hay más información que debe descubrir.
+</p>
+<p>
+    Existen las siguientes alternativas para complementar la descripción del <b>Flujo de sucesos</b>:
+</p>
+<ul>
+    <li>
+        <b>No realizar ninguna descripción</b>. Este puede ser el caso si cree que los diagramas de interacción se explican
+        por sí mismos, o si el <b>Flujo de sucesos</b> del caso de uso correspondiente proporciona una descripción
+        suficiente.
+    </li>
+    <li>
+        <b>Complementar la descripción del flujo de sucesos existente</b>. Añada descripciones suplementarias al <b>Flujo
+        de sucesos</b> en aquellas áreas en las que el texto no esté claro sobre las acciones que debe realizar el sistema.
+    </li>
+    <li>
+        <b>Describirlo como un flujo textual completo</b>, aparte de la descripción del flujo de sucesos del caso de uso
+        "externo". Esto es adecuado cuando el comportamiento interno del sistema tiene poco parecido con el comportamiento
+        externo del sistema. En este caso, se garantiza una descripción completamente independiente, asociada con la
+        realización del caso de uso de análisis en lugar de con el caso de uso .
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Buscar clases de an&aacute;lisis del comportamiento del caso de uso  </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Find Classes from Use-Case Behavior" name="Find Classes from Use-Case Behavior"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Identificar un conjunto candidato de elementos de modelo (clases de análisis) que puedan ejecutar el
+                comportamiento descrito en los casos de uso .&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Buscar un conjunto candidato de clases de análisis es el primer paso en la transformación del sistema desde una mera
+    sentencia de comportamiento necesario a una descripción de cómo funcionará el sistema. En este esfuerzo, las clases de
+    análisis se utilizan para representar los roles de los elementos de modelo que proporcionan el comportamiento necesario
+    para cumplir los requisitos funcionales especificados por los casos de uso y los requisitos no funcionales
+    especificados por los requisitos suplementarios. A medida que el enfoque del proyecto cambia al diseño, estos roles
+    evolucionan en un conjunto de elementos de diseño que realizan los casos de uso .
+</p>
+<p>
+    Los roles identificados en el análisis de casos de uso expresan principalmente el comportamiento de las capas
+    superiores del comportamiento específico de la aplicación del sistema y el comportamiento específico del dominio. Las
+    clases de límite y las clases de control normalmente evolucionan en elementos de diseño de la capa de aplicación,
+    mientras que las clases de entidad evolucionan en elementos de diseño específicos del dominio. Los elementos de diseño
+    de las capas inferiores evolucionan normalmente a partir de los mecanismos de análisis que utilizan las clases de
+    análisis identificadas aquí.
+</p>
+<p>
+    Las técnicas que se describen en este documento utilizan tres perspectivas diferentes del sistema para dirigir la
+    identificación de las clases candidatas. Las tres perspectivas son las del <b>límite</b> entre el sistema y los
+    actores, la información que utiliza el sistema y la lógica de control del sistema. Los estereotipos de clase
+    correspondientes, el límite, la entidad y el control, son convenios utilizados durante el análisis que desaparecen en
+    el diseño.
+</p>
+<p>
+    La identificación de las clases significa justo eso: se deben identificar, denominar y describir brevemente en unas
+    pocas frases.
+</p>
+<p>
+    Para obtener más información sobre la identificación de las clases de análisis, consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/analysis_class_7E97273E.html" guid="2.2738948033145062E-306">Técnica: Clase de análisis</a>. Para obtener más información sobre las realizaciones de
+    casos de uso de análisis, consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/use-case_realization_C690D81F.html" guid="1.6790343052744206E-305">Técnica:
+    Realización de casos de uso</a> .
+</p>
+<p>
+    Si se han documentado mecanismos de análisis y/o patrones de análisis concretos en las directrices específicas del
+    proyecto, se deben utilizar como otra fuente de "inspiración" para las clases de análisis.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Distribuir el comportamiento a las clases de an&aacute;lisis </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Distribute behavior to analysis classes" name="Distribute behavior to analysis classes"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Expresar el comportamiento de los casos de uso en términos de clases de análisis de colaboración.
+                Determinar las responsabilidades de las clases de análisis.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Para cada subflujo independiente (caso de ejemplo):
+</p>
+<ul>
+    <li>
+        <b>Cree uno o varios diagramas de interacción (comunicación o secuencia)</b>. Normalmente, se necesita como mínimo
+        un diagrama para el flujo principal de sucesos del caso de uso , más un diagrama como mínimo para cada flujo
+        alternativo/excepcional. Se necesitarán diagramas independientes para los subflujos que tengan puntos de decisión o
+        de tiempo complejos, o para simplificar los flujos complejos que sean demasiado grandes para capturarlos fácilmente
+        en un diagrama.
+    </li>
+    <li>
+        <b>Identifique las clases de análisis</b> responsables del comportamiento necesario revisando el flujo de sucesos
+        del caso de ejemplo, y asegúrese de que la realización del caso de uso de análisis proporciona todo el
+        comportamiento que necesita el caso de uso .
+    </li>
+    <li>
+        <b>Ilustre las interacciones entre las clases de análisis en el diagrama de interacción.</b> El diagrama de
+        interacción debe mostrar también las interacciones del sistema con los actores (las interacciones deben empezar por
+        un actor, ya que el actor es el que invoca siempre el caso de uso ).
+    </li>
+    <li>
+        <b>Incluya las clases que representen las clases de control de los casos de uso utilizados.</b> (Utilice un
+        diagrama de interacción independiente para cada caso de uso de ampliación, donde se muestra sólo el comportamiento
+        variante del caso de uso de ampliación).
+    </li>
+</ul>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/ac_ucan1.gif" alt="ejemplo de diagrama de comunicación" border="0" width="613" height="260" />
+</p>
+<p class="picturetext">
+    Un diagrama de comunicación para el caso de uso <b>Recibir elemento de depósito</b>.
+</p>
+<p>
+    Si se han documentado mecanismos de análisis y/o patrones de análisis concretos en las directrices específicas del
+    proyecto, se deben reflejar en la asignación de la responsabilidad y en los diagramas de interacción resultantes.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Describir responsabilidades </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Describe responsibilities" name="Describe responsibilities"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Describir las responsabilidades de una clase de objetos identificados a partir del comportamiento del caso
+                de uso .&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Una responsabilidad es una sentencia de algo que se puede pedir a un objeto. Las responsabilidades evolucionan en una o
+    varias (normalmente) operaciones sobre las clases del diseño; se pueden caracterizar como:
+</p>
+<ul>
+    <li>
+        las acciones que puede ejecutar el objeto
+    </li>
+    <li>
+        el conocimiento que mantiene el objeto y que proporciona a otros objetos
+    </li>
+</ul>
+<p>
+    Cada clase de análisis debe tener varias responsabilidades; una clase con sólo una responsabilidad es probablemente
+    demasiado simple, mientras que una docena o más es forzar el límite de lo razonable, por lo que se deben repartir en
+    varias clases.
+</p>
+<p>
+    Obviamente, todos los objetos se pueden crear y suprimir; no reformule lo obvio a menos que el objeto ejecute algún
+    comportamiento especial cuando se crea o se suprime. (Algunos objetos no se pueden suprimir si existen determinadas
+    relaciones).
+</p>
+<h4>
+    Buscar las responsabilidades
+</h4>
+<p>
+    Las responsabilidades se derivan de mensajes en diagramas de interacción. Para cada mensaje, examine la clase del
+    objeto al que se envía el mensaje. Si la responsabilidad no existe todavía, cree una nueva responsabilidad que
+    proporcione el comportamiento solicitado.
+</p>
+<p>
+    Las demás responsabilidades se derivarán de requisitos no funcionales. Cuando cree una nueva responsabilidad, compruebe
+    los requisitos no funcionales para ver si se aplican requisitos relacionados. Aumente la descripción de la
+    responsabilidad o cree una nueva responsabilidad para reflejarlo.
+</p>
+<h4>
+    Documentar las responsabilidades
+</h4>
+<p>
+    Las responsabilidades se documentan con un nombre abreviado (de varias palabras) para la responsabilidad y una
+    descripción abreviada (de varias frases). La descripción incluye qué hace el objeto para cumplir la responsabilidad y
+    qué resultado se devuelve cuando se invoca la responsabilidad.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Describir atributos y asociaciones </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Describe attributes and associations" name="Describe attributes and associations"></a><a key="atributo de objeto" text="describir" name="XE_attribute_on_object__describing" id="XE_attribute_on_object__describing" class="index"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Definir las otras clases de las que depende el análisis.<br />
+                 Definir los sucesos en las otras clases de análisis que debe conocer la clase.<br />
+                 Definir la información que la clase de análisis es responsable de mantener.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Para llevar a cabo sus responsabilidades, las clases dependen a menudo de que otras clases proporcionen el
+    comportamiento adecuado. Las asociaciones documentan las relaciones entre clases y permiten entender el acoplamiento de
+    clases; para crear sistemas mejores y más resistentes, es importante entender bien el acoplamiento de clases y reducir
+    el acoplamiento siempre que sea posible.
+</p>
+<p>
+    En los pasos siguientes se definen los atributos de las clases y las asociaciones entre ellas:
+</p>
+<ul>
+    <li>
+        <a href="#Define Attributes">Definir atributos</a>
+    </li>
+    <li>
+        <a href="#Establish associations between analysis classes">Establecer asociaciones entre clases de
+        análisis</a>
+    </li>
+    <li>
+        <a href="#Describe event dependencies between analysis classes">Describir dependencias de sucesos entre
+        clases de análisis</a>
+    </li>
+</ul>
+<h4>
+    <a id="Define Attributes" name="Define Attributes">Definir atributos</a>
+</h4>
+<p>
+    Las clases utilizan atributos para almacenar información. En concreto, los atributos se utilizan donde:
+</p>
+<ul>
+    <li>
+        Se hace referencia a la información "por su valor"; esto es, lo único que es importante es el valor de la
+        información, no su ubicación ni el identificador del objeto.
+    </li>
+    <li>
+        La información es "propiedad" exclusiva del objeto al que pertenece; no hay otros objetos que hagan referencia a la
+        información.
+    </li>
+    <li>
+        Las operaciones que acceden a la información sólo obtienen, establecen o ejecutan transformaciones sencillas en la
+        información; la información no tiene un comportamiento "real" aparte de proporcionar su valor.
+    </li>
+</ul>
+<p>
+    Por otro lado, si la información tiene un comportamiento complejo, está compartida por dos o más objetos, o se pasa
+    "por referencia" entre dos o más objetos, la información se deberá modelar como una clase aparte.
+</p>
+<p>
+    El nombre del atributo debe ser un nombre que refleje claramente qué información mantiene el atributo.
+</p>
+<p>
+    La descripción del atributo debe incluir qué información se va a almacenar en el atributo; puede ser opcional cuando la
+    información almacenada es obvia sólo con el nombre del atributo.
+</p>
+<p>
+    El tipo de atributo es el tipo de datos simple del atributo. Puede ser <b>serie</b>, <b>entero</b>, <b>número</b>.
+</p>
+<h4>
+    <a id="Establish associations between analysis classes" name="Establish associations between analysis classes">Establecer asociaciones entre clases de análisis</a>
+</h4>
+<p>
+    Empiece por estudiar los enlaces en los diagramas de interacción producidos en <a href="#Distribute behavior to analysis classes">Distribuir comportamiento a las clases de análisis</a>. Los
+    enlaces entre clases indican que los objetos de las dos clases se deben comunicar entre ellos para ejecutar el caso de
+    uso . Cuando se empieza a diseñar el sistema, estos enlaces se pueden realizar de varias formas:
+</p>
+<ul>
+    <li>
+        El objeto puede tener un ámbito "global", en cuyo caso cualquier objeto del sistema puede enviarle mensajes.
+    </li>
+    <li>
+        Un objeto puede pasarse con el segundo objeto como parámetro y podrá enviar mensajes al objeto pasado.
+    </li>
+    <li>
+        El objeto puede tener una asociación permanente con el objeto al que se envían los mensajes.
+    </li>
+    <li>
+        El objeto se puede crear y destruir dentro del ámbito de la operación (un objeto 'temporal'); estos objetos se
+        consideran 'locales' en la operación.
+    </li>
+</ul>
+<p>
+    En este punto al principio de la "vida" de la clase, es demasiado pronto para empezar a tomar estas decisiones: todavía
+    no disponemos de suficiente información para tomar decisiones documentadas. Debido a ello, en el análisis se crean
+    asociaciones y agregaciones que representen (y "transporten") los mensajes que se deben enviar entre los objetos de las
+    dos clases. (La agregación, una forma especial de asociación, indica que los objetos participan en una relación de
+    "parte/todo" (consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/association_98710829.html" guid="5.540135518285335E-305">Técnica: Asociación</a>
+    y <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/aggregation_A53E33AB.html" guid="1.1538495077622037E-304">Técnica: Agregación</a>)).
+</p>
+<p>
+    Estas asociaciones y agregaciones se perfeccionarán en la <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Tarea: Diseño de
+    clase</a>.
+</p>
+<p>
+    Para cada clase, haga un diagrama de clase donde se muestren las asociaciones que tiene cada clase con las demás:
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/aclssdg.gif"     alt="un ejemplo de diagrama de clase, donde se muestran las asociaciones y las agregaciones" width="358"     height="222" />
+</p>
+<p class="picturetext">
+    Diagrama de clases de análisis de ejemplo de una parte de un sistema de entrada de pedido
+</p>
+<p>
+    Céntrese sólo en las asociaciones necesarias para realizar los casos de uso ; no añada una asociación que "crea" que
+    puede existir a menos que sea necesaria según los diagramas de interacción.
+</p>
+<p>
+    Proporcione a las asociaciones nombres de rol y multiplicidades.
+</p>
+<ul>
+    <li>
+        Un nombre de rol debe ser un nombre que exprese el rol que tiene el objeto asociado en relación con el objeto al
+        que se asocia.
+    </li>
+    <li>
+        Suponga una multiplicidad de 0..* (cero a muchos), a menos que exista una evidencia clara de otro valor. Una
+        multiplicidad cero implica que la asociación es opcional; asegúrese de que es lo que desea; si un objeto no se
+        encuentra, las operaciones que utilicen la asociación deberán ajustarse en consecuencia.
+    </li>
+    <li>
+        Se pueden especificar límites de multiplicidad más reducidos (por ejemplo, de 3..8).
+    </li>
+    <li>
+        Dentro de las gamas de multiplicidad, se pueden especificar probabilidades. De esta forma, si la multiplicidad es
+        de 0..*, se espera que sea entre 10 y 20 en el 85% de los casos (tome nota de ello); esta información será de gran
+        importancia durante el diseño. Por ejemplo, si se va a implementar el almacenamiento persistente utilizando una
+        base de datos relacional, la reducción de los límites permite organizar mejor las tablas de la base de datos.
+    </li>
+</ul>
+<p>
+    Escriba una breve descripción de la asociación para indicar cómo se utiliza la asociación, o qué relaciones representa
+    la asociación.
+</p>
+<h4>
+    <a id="Describe event dependencies between analysis classes" name="Describe event dependencies between analysis classes">Describir dependencias de sucesos entre clases de
+    análisis</a>
+</h4>
+<p>
+    A veces, los objetos necesitan saber cuándo se produce un suceso en algún objeto de "destino", sin que el "destino"
+    tenga que saber todos los objetos que requieren notificación cuando se produce el suceso. Como abreviatura para mostrar
+    esta dependencia de notificación de sucesos, una asociación de suscripción permite expresar esta dependencia de forma
+    compacta y precisa.
+</p>
+<p>
+    Una asociación de suscripción entre dos objetos indica que el objeto que realiza la suscripción será informado cuando
+    se produzca un determinado suceso en el objeto suscrito. Una asociación de suscripción tiene una <b>condición</b> que
+    define el suceso que provoca la notificación del suscriptor. Para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/subscribe-association_1AB75163.html" guid="1.401846671640991E-305">Técnica: Asociación de suscripción</a>
+</p>
+<p>
+    Las condiciones de la asociación de <b>suscripción</b> se deben expresar en términos de características abstractas, en
+    lugar de en términos de sus operaciones o atributos específicos. De este modo, el objeto de asociación se mantiene
+    independiente del contenido del objeto de entidad asociado, que es posible que cambie.
+</p>
+<p>
+    Se necesita una asociación de suscripción:
+</p>
+<ul>
+    <li>
+        si el objeto está influenciado por algo que ocurre en otro objeto
+    </li>
+    <li>
+        si se debe crear un nuevo objeto para tratar con algún suceso; por ejemplo, cuando se produce un error, se debe
+        crear una nueva ventana para notificar al usuario
+    </li>
+    <li>
+        si un objeto necesita saber cuándo se ha creado una instancia de otro objeto, o se ha modificado o destruido el
+        otro objeto
+    </li>
+</ul>
+<p>
+    Los objetos 'a los que se suscribe' son normalmente objetos de entidad. Los objetos de entidad son almacenes pasivos de
+    información, con un comportamiento relacionado generalmente con sus responsabilidades de almacenamiento de información.
+    Muchos otros objetos a menudo necesitan saber cuándo cambian los objetos de entidad. La asociación de suscripción evita
+    que el objeto de entidad tenga que estar informado sobre todos estos otros objetos; simplemente 'registran' interés en
+    el objeto de entidad y se les notifica cuando éste cambia.
+</p>
+<p>
+    Hasta ahora sólo se trata de un 'truco de análisis': en diseño, tenemos que definir exactamente cómo funciona esta
+    notificación. Podemos adquirir una infraestructura de notificación, o puede que tengamos que diseñar y crear una
+    propia. Pero de momento, es suficiente con saber que existe la notificación.
+</p>
+<p>
+    La dirección de la asociación muestra que sólo se informa al objeto de suscripción de la relación entre ambos objetos.
+    La descripción de la suscripción está totalmente en el objeto de suscripción. A su vez, el objeto de entidad asociado
+    se define del modo habitual sin tener en cuenta que otros objetos pueden estar interesados en su actividad, lo que
+    también implica que se pueden añadir o eliminar un objeto de suscripción del modelo, sin cambiar el objeto al que se
+    suscribe.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Reconciliar las realizaciones de caso de uso  de an&aacute;lisis </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Reconcile the Use-Case Realizations" name="Reconcile the Use-Case Realizations"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Reconciliar las realizaciones individuales de caso de uso de análisis e identificar un conjunto de clases
+                de análisis con relaciones coherentes.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Las realizaciones de caso de uso de análisis se han desarrollado como resultado de analizar un determinado caso de uso
+    .&nbsp; Ahora, las realizaciones individuales de caso de uso de análisis se deben reconciliar.&nbsp; Examine las <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">Clases de análisis</a> y las asociaciones de soporte definidas para cada
+    una de las realizaciones de caso de uso de análisis.&nbsp; Identifique y resuelva las incoherencias y elimine los
+    duplicados.&nbsp; Por ejemplo, dos realizaciones de caso de uso de análisis diferentes pueden incluir una clase de
+    análisis que es conceptualmente la misma, pero como las clases de análisis las han identificado <a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Diseñador</a>es diferentes, se ha utilizado un nombre
+    diferente.&nbsp;<br />
+     Nota: la duplicación entre realizaciones de caso de uso de análisis se puede reducir significativamente si el <a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Arquitecto de software</a> realiza un buen trabajo cuando define la
+    arquitectura inicial (consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Tarea:
+    Análisis de la arquitectura</a>).
+</p>
+<p>
+    Cuando se reconcilian los elementos del modelo, es importante tener en cuenta sus relaciones.&nbsp; Si las dos clases
+    se fusionan, o una sustituye a la otra, asegúrese de propagar las relaciones de la clase original a la nueva clase.
+</p>
+<p>
+    El <a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Arquitecto de software</a> debe participar en la reconciliación de las
+    realizaciones de caso de uso de análisis, ya que se necesita un conocimiento del contexto empresarial, así como una
+    visión anticipada de la arquitectura de software y el diseño, para que se puedan seleccionar las clases de análisis que
+    mejor representan el problema y los dominios de solución.
+</p>
+<p>
+    Para obtener más información sobre las clases, consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/analysis_class_7E97273E.html" guid="2.2738948033145062E-306">Técnica: Clase de
+    análisis</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Calificar mecanismos de an&aacute;lisis </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="mecanismos de análisis" text="calificar" name="XE_analysis_mechanisms__qualifying" id="XE_analysis_mechanisms__qualifying" class="index"></a><a id="Qualify Analysis Mechanisms" name="Qualify Analysis Mechanisms"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Identificar los mecanismos de análisis (si existen) utilizados por las clases de análisis. Proporcionar
+                información adicional sobre cómo aplican las clases de análisis los mecanismos de análisis.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    En este paso, se examinan los mecanismos de análisis que se aplican a cada una de las clases de análisis identificadas.
+</p>
+<p>
+    Si una clase de análisis utiliza uno o varios mecanismos de análisis, la información adicional capturada ahora ayudará
+    al arquitecto de software y a los diseñadores a determinar las posibilidades necesarias de los mecanismos de diseño de
+    arquitectura. El número de instancias de la clase de análisis, el tamaño, la frecuencia de acceso y la duración
+    esperada se encuentran entre las propiedades más importantes que pueden ayudar a los diseñadores a seleccionar los
+    mecanismos adecuados.
+</p>
+<p>
+    Para cada mecanismo de análisis que utiliza una clase de análisis, califique las características relevantes que se
+    deben considerar cuando se seleccionan los mecanismos de diseño e implementación adecuados. Estos variarán dependiendo
+    del tipo de mecanismo; proporcione rangos donde corresponda, o cuando exista todavía demasiada incertidumbre. Los
+    mecanismos de arquitectura diferentes tendrán características diferentes, por lo que esta información es puramente
+    descriptiva y sólo debe estructurarse lo necesario para capturar y comunicar la información. Durante el análisis, esta
+    información es generalmente bastante especulativa, pero su captura ofrece ventajas ya que los cálculos hipotéticos se
+    pueden revisar cuando se descubre más información.
+</p>
+<p>
+    No es necesario capturar formalmente los mecanismos de análisis que utiliza una clase y sus características asociadas;
+    una nota adjunta a un diagrama o una ampliación en la descripción de la clase basta para comunicar la información. La
+    información de las características en este punto de la evolución de la clase es bastante fluida y especulativa, por lo
+    que el énfasis se pone en la captura de los valores esperados, en lugar de en formalizar la definición de los
+    mecanismos.
+</p>
+<p class="exampleheading">
+    Ejemplo
+</p>
+<p class="example">
+    Las características del mecanismo de persistencia utilizado por una clase <b>Vuelo</b> se pueden calificar como:
+</p>
+<blockquote>
+    <p class="example">
+        <b>Granularidad</b>: de 2 a 24 Kbytes por vuelo
+    </p>
+    <p class="example">
+        <b>Volumen</b>: Hasta 100.000
+    </p>
+    <p class="example">
+        <b>Frecuencia de acceso</b>:
+    </p>
+    <blockquote>
+        <blockquote>
+            <ul>
+                <li>
+                    Creación/supresión: 100 por hora
+                </li>
+                <li>
+                    Actualización: 3.000 actualizaciones por hora
+                </li>
+                <li>
+                    Lectura: 9.000 accesos por hora
+                </li>
+            </ul>
+        </blockquote>
+    </blockquote>
+</blockquote>
+<p class="exampleheading">
+    Ejemplo
+</p>
+<p class="example">
+    Las características del mecanismo de persistencia utilizado por una clase <b>Misión</b> se pueden calificar como:
+</p>
+<blockquote>
+    <p class="example">
+        <b>Granularidad</b>: de 2 a 3 Mbytes por misión
+    </p>
+    <p class="example">
+        <b>Volumen</b>: 4
+    </p>
+    <p class="example">
+        <b>Frecuencia de acceso</b>:
+    </p>
+</blockquote>
+<blockquote>
+    <blockquote>
+        <blockquote>
+            <ul>
+                <li>
+                    Creación/supresión: 1 por día
+                </li>
+                <li>
+                    Actualización: 10 por día
+                </li>
+                <li>
+                    Lectura: 100 por hora
+                </li>
+            </ul>
+        </blockquote>
+    </blockquote>
+</blockquote></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Establecer la rastreabilidad </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Establish Traceability" name="Establish Traceability"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Mantener las relaciones de rastreabilidad entre el modelo de análisis y los otros modelos.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Las directrices específicas del proyecto especifican qué rastreabilidad se necesita para los elementos del modelo de
+    análisis.
+</p>
+<p>
+    Por ejemplo, si hay un modelo independiente de la interfaz de usuario, será útil rastrear pantallas u otros elementos
+    de la interfaz de usuario de ese modelo hasta las clases de límite en el modelo de análisis.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Revisar los resultados </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Review the Results" name="Review the Results"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Verificar que los objetos de análisis cumplen los requisitos funcionales realizados sobre el sistema.<br />
+                 Verificar que los objetos de análisis y las interacciones son coherentes.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Realice una revisión informal al final del taller, como punto de sincronización y como conclusión a la <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">Tarea: Análisis de caso de uso</a> .
+</p>
+<p>
+    Utilice las listas de comprobación de la salida de los productos de trabajo según esta tarea.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Varias apariciones" abbr="Varias apariciones">Varias apariciones</th><td align="left" class="sectionTableCell" headers="property_Varias apariciones"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Condicionado por sucesos" abbr="Condicionado por sucesos">Condicionado por sucesos</th><td align="left" class="sectionTableCell" headers="property_Condicionado por sucesos"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Continuo" abbr="Continuo">Continuo</th><td align="left" class="sectionTableCell" headers="property_Continuo"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Se puede repetir" abbr="Se puede repetir">Se puede repetir</th><td align="left" class="sectionTableCell" headers="property_Se puede repetir"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Listas de comprobaci&oacute;n</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/checklists/use-case_realization_444C8317.html" guid="9.828360528787822E-305">Ejecución de casos de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/use-case-analysis_workshop_B07C9D03.html" guid="4.6416720607434916E-306">Taller de análisis de guión de uso</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/use-case_realization_C690D81F.html" guid="1.6790343052744206E-305">Ejecución de casos de uso</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/sequence_diagram_AFA76EBB.html" guid="3.211008403369512E-306">Diagrama de secuencia</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/communication_diagram_FFFEA1B5.html" guid="4.5194432001390347E-305">Diagrama de comunicación</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/analysis_class_7E97273E.html" guid="2.2738948033145062E-306">Clase de análisis</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/capture_results_use_case_analysis_7C8B82CF.html" guid="{F33662D0-DB04-4B24-AFC4-EFEFCDD20D42}">Captura de los resultados del análisis de guión de uso utilizando Rational Rose</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/create_use_case_realization_1212EF9.html" guid="{AAB8D0D6-C666-4F4D-9D26-2AF026558A4C}">Creación de ejecuciones de guiones de uso utilizando Rational Rose</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/performing_use_case_analysis_12C8207E.html" guid="{D498540C-E196-4936-AAFB-0BC37CF05A40}">Realización del análisis de guión de uso utilizando Rational XDE Developer</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_collaboration_diagram_42655C1D.html" guid="{49ACA284-8922-4308-BEA7-2EDE22B77AA2}">Gestión de diagramas de colaboración utilizando Rational Rose</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_sequence_diagrams_C11A1E78.html" guid="{70C1E98C-D6AC-4278-8554-1E000AF5A57D}">Gestión de diagramas de secuencia utilizando Rational Rose</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_design_model_1D45D75E.html" guid="{BD1DD906-031C-4D8C-8078-87B6869A8C14}">Gestión del modelo de diseño utilizando Rational Rose</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/toolmentors/performing_use-case_analysis_using_rsa_ext_7C05A1BB.html" guid="_VoY0QK4LEdqFg48R_ivTjA">Realización del análisis de guiones de uso mediante Rational Software Architect</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/toolmentors/performing_use-case_analysis_using_rsd_4917F92.html" guid="_TAoH0K4LEdqFg48R_ivTjA">Realización del análisis de guión de uso mediante Rational Systems Developer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

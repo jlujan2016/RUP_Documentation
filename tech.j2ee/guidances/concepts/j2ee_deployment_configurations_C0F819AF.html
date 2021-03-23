@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concepto: Configuraciones de despliegue de J2EE</title>
+<meta content="Concept" name="uma.type">
+<meta content="j2ee_deployment_configurations" name="uma.name">
+<meta content="Configuraciones de despliegue de J2EE" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "7.671163061311939E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "7.671163061311939E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "7.671163061311939E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "7.671163061311939E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="7.671163061311939E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concepto: Configuraciones de despliegue de J2EE</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se trata de las ventajas e inconvenientes de las distintas configuraciones de despliegue para la plataforma J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/define_test_environment_configurations_605902BA.html" guid="{187268D3-3166-4823-8DD8-5E1112004AC3}">Definir las configuraciones del entorno de prueba</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/perform_developer_test_512B18D9.html" guid="{55EAEE66-A254-457F-BCC3-D1C21ED88134}">Ejecutar pruebas de desarrollador</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Arquitecto de software</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h2>
+    Introducción
+</h2>
+<p class="Body">
+    La plataforma J2EE da soporte al desarrollo y despliegue de varias configuraciones de despliegue estándar. Son estas
+    configuraciones de despliegue estándar <span style="COLOR: windowtext">origen de muchas conjeturas en relación con el
+    desarrollo de la aplicación.</span> En las siguientes secciones, encontrará descripciones sobre las configuraciones de
+    despliegue más habituales así como de sus ventajas e inconvenientes.
+</p>
+<p style="MARGIN-LEFT: 0px">
+    Si todavía no está familiarizado con los conceptos de J2EE, consulte los conceptos descritos en la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307">Visión general de Java 2 Platform Enterprise Edition (J2EE)</a> antes de continuar.
+</p>
+<h2>
+    <a name="Standalone Deployment Configuration" id="Standalone Deployment Configuration"></a>Configuración de despliegue
+    autónomo
+</h2>
+<p class="Body">
+    En la figura 1 se muestra la primera configuración de despliegue. En esta configuración, no hay un contenedor web ni un
+    contenedor EJB, un cliente accede a los recursos EIS directamente y es responsable de manejar toda la lógica de
+    presentación, la lógica empresarial y la lógica de integración por sí mismo.
+</p>
+<p class="JDFPFigure" align="center">
+    <img height="182" alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/concepts/resources/co_j2e1.jpg" width="294" />
+</p>
+<p class="FN" align="center">
+    <b><font size="2">Figura 1: Configuración de despliegue autónomo.</font></b>
+</p>
+<p class="Body">
+    A primera vista, esta configuración parece atractiva para aplicaciones que dan lugar a una manipulación simple de los
+    datos que se mantienen en los recursos EIS. Sin embargo, esta configuración puede tener varios inconvenientes.
+</p>
+<p class="Body">
+    Los cambios que se realicen en los recursos EIS tienen un gran impacto en la implementación de la aplicación, que a
+    menudo depende de forma directa de la estructura interna de cada recurso EIS, como por ejemplo la estructura de tablas
+    de bases de datos. Cualquier cambio en la misma aplicación requiere una implementación completa para cada usuario; no
+    hay un servidor en el que esté desplegada la aplicación de forma que los clientes no tienen un acceso inmediato a los
+    últimos arreglos.
+</p>
+<p class="Body">
+    Además, la configuración del despliegue no fomenta una división de responsabilidades. Por ejemplo, a menudo ocurre que
+    la lógica de la presentación y la lógica empresarial están fuertemente acopladas, haciendo difícil el dar soporte al
+    mantenimiento y la evolución de la aplicación.
+</p>
+<p class="Body">
+    Sin embargo, los verdaderos problemas con esta configuración de despliegue, comienzan a aparecer cuando se decide
+    escalar la aplicación. Las estaciones de trabajo de cliente tienen características limitadas de rendimiento, de forma
+    que lo ideal, sería distribuir el proceso entre distintas máquinas. Sin embargo, la configuración autónoma no está
+    diseñada para dar soporte al proceso distribuido. Además, cuando se intenta dar soporte a más clientes accediendo a los
+    recursos EIS de forma concurrente, puede encontrarse que las aplicaciones están restringidas por el recurso EIS en sí
+    mismo como, por ejemplo, el número de conexiones de base de datos concurrentes.
+</p>
+<h2>
+    <a name="EJB-Centric Deployment Configuration" id="EJB-Centric Deployment Configuration"></a>Configuración de
+    despliegue centrado en EJB
+</h2>
+<p class="Body">
+    En la figura 2 se muestra la configuración de despliegue centrado en EJB. En esta configuración, existe un contenedor
+    EJB entre el contenedor del cliente y los recursos EIS, así mismo, no hay un contenedor web. La lógica de presentación
+    está en el cliente y la lógica empresarial reside en el EJB. En lugar de acceder a los recursos EIS directamente, todas
+    las solicitudes de los clientes las gestionan los EJB que corresponda. Los clientes están, por lo tanto, protegidos
+    ante los cambios en los recursos EIS.
+</p>
+<p class="JDFPFigure" align="center">
+    <img height="171" alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/concepts/resources/co_j2e2.jpg" width="443" />
+</p>
+<p class="FN" align="center">
+    <b><font size="2">Figura 2: configuración de despliegue centrado en EJB</font></b>
+</p>
+<p class="Body">
+    Se ha diseñado la configuración de despliegue centrado en EJB para solucionar muchos de los problemas que hay en la
+    configuración de despliegue autónomo. Desde una perspectiva de escalabilidad, la implementación de la plataforma J2EE
+    permite distribuir el proceso a lo largo de distintas máquinas. Además, un contenedor EJB es el responsable de asegurar
+    un uso eficiente de los recursos limitados como, por ejemplo, las conexiones con las bases de datos. Desde una
+    perspectiva de mantenimiento y evolución de una aplicación, esta configuración también fomenta una separación entre la
+    lógica de la presentación y la lógica empresarial.
+</p>
+<p class="Body">
+    Sin embargo, uno de los inconvenientes de la configuración de despliegue centrado en EJB es que incluso un pequeño
+    cambio en la interfaz de usuario precisa una implementación completa de la aplicación para cada usuario. A pesar de que
+    la lógica empresarial encapsulada en los EJB se puede volver a desplegar en el servidor (y, por lo tanto,
+    proporcionando a los usuarios un acceso inmediato a todos los cambios), esto no es cierto para la lógica de la
+    presentación. Esto es inconveniente, puesto que el aspecto y apariencia de una aplicación puede estar sometida a
+    frecuentes cambios.
+</p>
+<h2>
+    <a name="Web-Centric Deployment Configuration" id="Web-Centric Deployment Configuration"></a>Configuración de
+    despliegue centrado en la web
+</h2>
+<p class="Body">
+    En la figura 3 se muestra la configuración de despliegue centrado en la web. En esta configuración, existe un
+    contenedor web entre el contenedor del cliente y los recursos EIS, así mismo, no hay un contenedor EJB. Tanto la lógica
+    de presentación como la lógica empresarial la manejan elementos en el contenedor web (JSP y servlets). En esta
+    configuración, en el cliente se utiliza un lenguaje de códigos simple como, por ejemplo, HTML, a pesar de que también
+    podría ser XML o WML.
+</p>
+<p class="JDFPFigure" align="center">
+    <img height="177" alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/concepts/resources/co_j2e3.jpg" width="458"     v:shapes="_x0000_i1027" />
+</p>
+<p class="FN" align="center">
+    <b><font size="2">Figura 3: Configuración de despliegue centrado en la web</font></b>
+</p>
+<p class="Body">
+    Normalmente, en una configuración de despliegue centrado en la web se enfatiza el aspecto y la apariencia de la
+    aplicación final, con un menor énfasis en el soporte a la lógica empresarial. Una configuración de este tipo es capaz
+    de soportar cambios frecuentes al aspecto y apariencia de una aplicación. Este tipo de configuración es ampliamente
+    utilizado hoy en día.
+</p>
+<p class="Body">
+    Una configuración de despliegue centrado en la web proporciona varias ventajas. En primer lugar, los clientes no se ven
+    afectados por cambios en los recursos EIS, puesto que los clientes no acceden a estos recursos de forma directa. En
+    segundo lugar, existe la posibilidad de volver a desplegar toda la aplicación sin que sea necesaria ninguna
+    implementación para los usuarios, puesto que la aplicación reside en su totalidad en un servidor.
+</p>
+<p class="Body">
+    Sin embargo, aunque a veces se considera que la utilización de los EJB es desproporcionada para el trabajo que se tiene
+    entre manos, la omisión de los EJB tiene como resultado la aparición de algunos de los problemas de la configuración de
+    despliegue autónoma. De forma específica, esta configuración no fomenta una clara división de responsabilidades entre
+    la lógica de la presentación y la lógica empresarial, a menudo dando lugar a elementos fuertemente acoplados que
+    impiden el mantenimiento y la evolución de la aplicación. Además, todos los problemas relacionados con la escalabilidad
+    presentes en la configuración de despliegue autónomo también se aplican a una arquitectura centrada en la web.
+</p>
+<h2>
+    <a name="Multi-Tier Deployment Configuration" id="Multi-Tier Deployment Configuration"></a>Configuración de despliegue
+    de varias capas
+</h2>
+<p class="Body">
+    En la figura 4 se muestra una configuración de despliegue de varias capas. Esta configuración incluye tanto un
+    contenedor web y un contenedor EJB, y muestra todas las ventajas tratadas en las otras configuraciones de despliegue
+    sin ninguno de sus inconvenientes. Los elementos en el contenedor web manejan la lógica de presentación, aunque los EJB
+    en el contenedor EJB manejan la lógica empresarial.
+</p>
+<p class="JDFPFigure" align="center">
+    <img height="253" alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/concepts/resources/co_j2e4.jpg" width="571" />
+</p>
+<p class="FN" align="center">
+    <b><font size="2">Figura 4: Configuración de despliegue de varias capas.</font></b>
+</p>
+<p class="Body">
+    Los clientes no se ven afectados por cambios en los recursos EIS puesto que no se accede directamente a estos recursos.
+    Además, existe la posibilidad de volver a desplegar toda la aplicación sin que sea necesaria ninguna implementación
+    para los usuarios, puesto que la aplicación reside en su totalidad en el servidor.
+</p>
+<p class="Body">
+    Desde una perspectiva de escalabilidad, el proceso se puede distribuir para dar soporte a procesos concurrentes.
+    También desde una perspectiva de escalabilidad, el contenedor EJB es el responsable de asegurar un uso eficiente de los
+    recursos limitados como, por ejemplo, las conexiones con las bases de datos.
+</p>
+<p class="Body">
+    Desde una perspectiva de mantenimiento y evolución de una aplicación, esta configuración también fomenta una separación
+    clara de responsabilidades. La lógica de presentación se desacopla de los recursos EIS, y la lógica empresarial se
+    aísla del aspecto y la apariencia. Esta clara separación puede ayudar en la asignación del trabajo a distintos
+    desarrolladores expertos y permite el desarrollo de forma concurrente de la lógica empresarial y la lógica de
+    presentación.
+</p>
+<p class="Body">
+    La configuración de despliegue de varias capas también facilita la migración de un dispositivo de cliente (como por
+    ejemplo, un navegador web) u otro (como por ejemplo, un PDA). No es necesario reescribir toda la aplicación puesto que
+    la lógica empresarial encapsulada en los EJB no cambia y se puede utilizar tal como está.
+</p>
+<p class="Body">
+    A modo de resumen, hay varias configuraciones de despliegue, cada una con sus ventajas e inconvenientes. Uno de los
+    objetivos de la plataforma J2EE es ser lo suficientemente flexible para dar soporte a cualquier configuración de
+    despliegue que se considere apropiada para una organización y al mismo tiempo resolver las preocupaciones de la
+    empresa.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Creaci&oacute;n de un script de prueba de rendimiento automatizada utilizando Rational Robot</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="create_perf_test_scripts" name="uma.name">
+<meta content="Creaci&oacute;n de un script de prueba de rendimiento automatizada utilizando Rational Robot" name="uma.presentationName">
+<meta content="Tool:rup_robot:Rational Robot" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Robot" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{DEBC41D9-6B28-40CE-BD55-4888609A46FA}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{DEBC41D9-6B28-40CE-BD55-4888609A46FA}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{DEBC41D9-6B28-40CE-BD55-4888609A46FA}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{DEBC41D9-6B28-40CE-BD55-4888609A46FA}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Creaci&oacute;n de un script de prueba de rendimiento automatizada utilizando Rational Robot</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo utilizar Rational Robot para registrar un script de prueba de rendimiento automatizada para probar el rendimiento.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_robot_26C85D92.html" guid="{1A26E508-8140-4241-865E-0A2A5BCAEFFF}">Rational Robot</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_test_35C1B0AA.html" guid="{BC805E79-736B-42D5-BDC1-B95E7D002312}">Implementar la prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    Visión general
+</h3>
+<p class="MsoNormal">
+    Con frecuencia, para la prueba de rendimiento, los scripts se crean registrándolos en Robot. Cuando se registra un
+    script de usuario virtual, las interacciones con la aplicación que se somete a prueba causan comunicación específica
+    del protocolo entre el cliente y el servidor. Robot registra dicha comunicación y la abstrae en scripts de prueba de
+    lenguaje de VU una vez que se ha completado el registro de la sesión.
+</p>
+<p class="MsoNormal">
+    A continuación, un conjunto de aplicaciones de prueba de rendimiento de TestManager ejecuta varias instancias de los
+    scripts para aplicar una carga al sistema que se somete a prueba.
+</p>
+<p class="MsoNormal">
+    Esta guía de la herramienta se aplica a plataformas Windows 98/ME/XP/2000 y NT 4.0.
+</p>
+<h4>
+    Pasos de la herramienta
+</h4>
+<p>
+    Para registrar un script de usuario virtual utilizando Robot debe:&nbsp;&nbsp;&nbsp;
+</p>
+<ol type="1">
+    <li>
+        <a href="#Start recording the virtual user script">Iniciar el registro del script de usuario virtual</a>
+    </li>
+    <li>
+        <a href="#Insert timers, blocks, comments, and synchronization points">Insertar temporizadores,
+        bloques, comentarios y puntos de sincronización</a>
+    </li>
+    <li>
+        <a href="#Split script or end session recording">Dividir el script o finalizar el registro de la
+        sesión</a>
+    </li>
+    <li>
+        <a href="#Edit the virtual user test script, if necessary">Editar el script de usuario virtual, si
+        fuera necesario</a>
+    </li>
+</ol>
+<h3>
+    1. <a id="Start recording the virtual user script" name="Start recording the virtual user script">Iniciar el registro
+    del script de usuario virtual</a>
+</h3>
+<p>
+    Cuando se registra un script de usuario virtual, las interacciones con la aplicación que se somete a prueba causan
+    comunicación específica del protocolo entre el cliente y el servidor. Robot registra la comunicación y la utiliza para
+    la generación de script una vez que ha finalizado la sesión de registro.
+</p>
+<ol>
+    <li>
+        Prepare el entorno de prueba estableciendo las opciones de registro de usuario virtual. Consulte el apartado
+        relacionado con el establecimiento de opciones de registro del manual <i>Rational Robot User's Guide</i>.
+    </li>
+    <li>
+        Pulse el botón <b>Registrar script de VU</b> de la barra de herramientas de Robot.&nbsp;
+    </li>
+    <li>
+        Escriba un nombre de sesión (40 caracteres, como máximo).
+    </li>
+    <li>
+        Pulse <b>Aceptar</b> para iniciar el registro.
+    </li>
+    <li>
+        Robot se minimiza (comportamiento por omisión) y&nbsp;aparece la barra de herramientas <b>Registro de sesión</b>
+        flotante. Utilice la barra de herramientas para detener el registro o dividir los scripts y volver a visualizar
+        Robot. Utilice la barra de herramientas <b>Inserción de sesión</b> para&nbsp;insertar características como, por
+        ejemplo, temporizadores, bloques, comentarios o puntos de sincronización en un script. También se puede utilizar
+        para iniciar una aplicación. &nbsp;
+    </li>
+    <li>
+        En el recuadro de diálogo Iniciar aplicación, especifique el ejecutable que iniciar, que debe ser el ejecutable de
+        la aplicación cliente. Para aplicaciones web, utilice el navegador para acceder al sitio web.
+    </li>
+    <li>
+        Pulse <b>Aceptar</b> para iniciar la aplicación cliente.
+    </li>
+    <li>
+        Empiece a interactuar con la aplicación que se somete a prueba tal como especifica el guión de prueba. Se registra
+        el tráfico de protocolos entre el cliente y el servidor.
+    </li>
+</ol>
+<h3>
+    2. <a id="Insert timers, blocks, comments, and synchronization points" name="Insert timers, blocks, comments, and synchronization points">Insertar temporizadores, bloques, comentarios y
+    puntos de sincronización</a>
+</h3>
+<p>
+    Mientras registra una sesión de usuario virtual, puede insertar temporizadores, bloques, comentarios o puntos de
+    sincronización. Pulse el botón de la barra de herramientas <b>Visualizar inserción de sesión</b> de la barra de
+    herramientas <b>Registro de sesión</b> y, a continuación, pulse <b><i>uno</i></b> de los botones siguientes:
+</p>
+<ul>
+    <li>
+        <b>Iniciar temporizador</b>: Se muestra el recuadro de diálogo Iniciar temporizador y le solicita el nombre del
+        temporizador que desea iniciar.&nbsp;Entre un nombre y pulse <b>Aceptar</b>, o bien, utilice el botón
+        <b>Cancelar</b> para salir del recuadro de diálogo.<br />
+    </li>
+    <li>
+        <b>Detener temporizador</b>: Se muestra el recuadro de diálogo Detener temporizador y le solicita el nombre del
+        temporizador que desea detener.&nbsp;Entre un nombre y pulse <b>Aceptar</b>, o bien, utilice el botón
+        <b>Cancelar</b> para salir del recuadro de diálogo. &nbsp;
+    </li>
+</ul>
+<blockquote>
+    <p>
+        Un temporizador es un "corchete" en torno a un conjunto de interacciones cliente-servidor. Después de la ejecución
+        de un conjunto de aplicaciones de prueba de rendimiento en TestManager, los tiempos que se necesitan para la
+        ejecución de cada temporizador se muestran en los informes de Rendimiento y Respuesta.
+    </p>
+</blockquote>
+<ul>
+    <li>
+        <b>Comentario</b>: Se muestra el recuadro de diálogo Comentario y le solicita el comentario que desea añadir al
+        script. Entre un comentario y pulse <b>Aceptar</b>, o bien, utilice el botón <b>Cancelar</b> para salir del
+        recuadro de diálogo.&nbsp;Los comentarios son texto en un script. Ayudan a que los lectores comprendan el script,
+        pero no afectan en modo alguna a la ejecución del script.<br />
+    </li>
+    <li>
+        <b>Punto de sincronización</b>: Se muestra el recuadro de diálogo Comentario y le solicita el nombre del punto de
+        sincronización que&nbsp;desea añadir al script. Entre un nombre y pulse <b>Aceptar</b>, o bien, utilice el botón
+        <b>Cancelar</b> para salir del recuadro de diálogo.&nbsp;Un punto de sincronización es una característica del
+        script que, durante la ejecución del script, permite la coordinación de acciones entre&nbsp;varios verificadores
+        virtuales.<br />
+    </li>
+    <li>
+        <b>Iniciar bloque</b>: Se muestra el recuadro de diálogo Iniciar bloque y le solicita el bloque que desea iniciar
+        en el script.&nbsp;Entre un nombre y pulse <b>Aceptar</b>, o bien, utilice el botón <b>Cancelar</b> para salir del
+        recuadro de diálogo.<br />
+    </li>
+    <li>
+        <b>Detener bloque</b>: Se muestra el recuadro de diálogo Detener bloque y muestra el nombre del bloque actual.
+        &nbsp;<br />
+         Pulse <b>Aceptar</b>, o bien, utilice el botón <b>Cancelar</b> para salir del recuadro de diálogo.
+    </li>
+</ul>
+<blockquote>
+    <p>
+        Como en el caso de los temporizadores, un bloque es un corchete en torno a un conjunto de interacciones
+        cliente-servidor. &nbsp;A diferencia de los temporizadores, el tiempo de planteamiento del usuario inicial no está
+        incluido en un bloque. Además,&nbsp;todos los identificadores de mandatos de un bloque tienen el prefijo del nombre
+        del bloque (mientras que en los temporizadores, todos los identificadores de mandatos tienen el prefijo del nombre
+        del script).
+    </p>
+</blockquote>
+<p>
+    <img height="16" alt="icono de Ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte los temas
+    de la ayuda en línea de Robot que tratan sobre:&nbsp;
+</p>
+<ul>
+    <li>
+        <i>Creación de un nuevo conjunto de aplicaciones</i>
+    </li>
+    <li>
+        <i>Inserción de comentarios en un script</i>
+    </li>
+    <li>
+        <i>Inserción de un bloque en un script</i>
+    </li>
+    <li>
+        <i>Inserción de un temporizador durante el registro de usuario virtual</i>
+    </li>
+    <li>
+        <i>Inserción de un punto de sincronización durante el registro</i>
+    </li>
+</ul>(Todos los recuadros de diálogo para insertar una característica en un script de usuario virtual contienen un botón de
+ayuda para iniciar la ayuda en línea de Robot). 
+<p>
+    <img height="16" alt="icono de Ayuda" src="./../../../core.base_rup/resources/book.gif" width="16" />&nbsp;&nbsp; Consulte el tema
+    referente a la <i>adición de características a los scripts</i> de la publicación <i>Rational Robot User's
+    Guide</i>.&nbsp;
+</p>
+<h3>
+    3. <a id="Split script or end session recording" name="Split script or end session recording">Dividir el script o
+    finalizar el registro de la sesión</a>
+</h3>
+<p>
+    Una vez que haya finalizado la ejecución del guión de prueba o la unidad lógica de la actividad del usuario, puede
+    dividir un script o finalizar el registro de la sesión. &nbsp;
+</p>
+<p>
+    Dividir una sesión significa que todo lo que se ha registrado hasta la última división de la sesión (o principio de la
+    sesión) representa una unidad lógica, como iniciar la sesión en una base de datos o modificar un registro concreto; por
+    ejemplo, actualizar la información de un cliente en una aplicación de gestión de relaciones de clientes.
+</p>
+<ol>
+    <li>
+        Para dividir un script:
+    </li>
+</ol>
+<ul>
+    <li>
+        <p>
+            Pulse el botón <b>Dividir script</b> de la barra de herramientas <b>Registro de sesión</b>.&nbsp;
+        </p>
+    </li>
+    <li>
+        <p>
+            Escriba el nombre de un script de usuario virtual (40 caracteres, como máximo) para la actividad que se acaba
+            de registrar.
+        </p>
+    </li>
+</ul>
+<ol start="2">
+    <li>
+        Para detener el registro de sesión:
+    </li>
+</ol>
+<ul>
+    <li>
+        Pulse el botón <b>Detener registro</b> de la barra de herramientas <b>Registro de sesión</b>.&nbsp;
+    </li>
+    <li>
+        Escriba el nombre de un script de usuario virtual (40 caracteres, como máximo).
+    </li>
+    <li>
+        Para cambiar las opciones de registro, pulse <b>Opciones</b>. Cuando finalice, pulse <b>Aceptar</b>.
+    </li>
+    <li>
+        Dependiendo de la configuración previa para los registros de usuario virtual, el generador&nbsp;genera un script
+        (Filtrado automático) o le solicita que seleccione el protocolo y las comunicaciones de cliente y
+        servidor&nbsp;(Filtrado manual), que se deben utilizar para generar&nbsp;un script de usuario virtual.
+    </li>
+</ul>
+<p>
+    <img height="16" alt="icono de Ayuda" src="./../../../core.base_rup/resources/book.gif" width="16" />&nbsp;&nbsp; Consulte el capítulo
+    referente al <i>registro de sesiones - elección de protocolos que incluir en un script</i> de la publicación
+    <i>Rational Robot User's Guide</i>.
+</p>
+<h3>
+    4. <a id="Edit the virtual user test script, if necessary" name="Edit the virtual user test script, if necessary">Editar el script de usuario virtual, si fuera necesario</a>
+</h3>
+<p>
+    Puede editar scripts existentes cambiando manualmente el texto de un script, tal como se indica a continuación:
+</p>
+<ul type="disc">
+    <li>
+        Edite el texto de un script (suprima una línea y mueva texto, por ejemplo).
+    </li>
+    <li>
+        Añada una nueva acción de usuario a un script existente (añada funcionalidad o una variable compartida).
+    </li>
+    <li>
+        Añada una nueva característica a un script existente (añada temporizadores, bloques o comentarios, entre otros).
+    </li>
+</ul>
+<p>
+    <img height="16" alt="icono de Ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte el tema que
+    trata sobre la <i>referencia de lenguaje de VU</i> de la ayuda en línea de Robot.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

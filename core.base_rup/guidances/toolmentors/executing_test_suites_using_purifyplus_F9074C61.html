@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Ejecuci&oacute;n de conjuntos de aplicaciones de prueba utilizando las herramientas de Rational PurifyPlus (Windows y UNIX)</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="executing_test_suites_using_purifyplus" name="uma.name">
+<meta content="Ejecuci&oacute;n de conjuntos de aplicaciones de prueba utilizando las herramientas de Rational PurifyPlus (Windows y UNIX)" name="uma.presentationName">
+<meta content="Tool:rup_purifyplus:Rational PurifyPlus" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational PurifyPlus" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{F86573D5-C2E6-4E4F-9B29-23CC99B2BB8D}", "{0FBC2989-4BF7-4161-86A4-760F327D0E04}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{F86573D5-C2E6-4E4F-9B29-23CC99B2BB8D}", "{0FBC2989-4BF7-4161-86A4-760F327D0E04}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{F86573D5-C2E6-4E4F-9B29-23CC99B2BB8D}", "{0FBC2989-4BF7-4161-86A4-760F327D0E04}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{F86573D5-C2E6-4E4F-9B29-23CC99B2BB8D}", "{0FBC2989-4BF7-4161-86A4-760F327D0E04}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{0FBC2989-4BF7-4161-86A4-760F327D0E04}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Ejecuci&oacute;n de conjuntos de aplicaciones de prueba utilizando las herramientas de Rational PurifyPlus (Windows y UNIX)</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe la utilización de las herramientas de Rational PurifyPlus en conjuntos de aplicaciones de prueba para detectar fugas y errores de memoria potencialmente dañinos a fin de garantizar que las pruebas alcanzan un nivel de cobertura de código aceptable y para llamar la atención sobre los problemas de rendimiento.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_purifyplus_CABB5CD4.html" guid="{F86573D5-C2E6-4E4F-9B29-23CC99B2BB8D}">Rational PurifyPlus</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/perform_developer_test_512B18D9.html" guid="{55EAEE66-A254-457F-BCC3-D1C21ED88134}">Ejecutar pruebas de desarrollador</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/execute_test_suite_492795DE.html" guid="{6B420194-5EB7-4A12-A061-09FAA5DC18DE}">Ejecutar el conjunto de aplicaciones de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<p>
+    Esta guía de la herramienta se aplica para su utilización tanto en sistemas Microsoft Windows como con sistemas UNIX.
+</p>
+<p>
+    Las herramientas de PurifyPlus incluyen Rational Purify, Rational PureCoverage y Rational Quantify.
+</p>
+<p>
+    <img height="15" alt="icono Publicación" hspace="0" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> Si desea
+    obtener más información sobre las herramientas de PurifyPlus, lea el manual de <i>Iniciación a</i> de PurifyPlus
+    (versión Windows o versión UNIX).
+</p>
+<p>
+    <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"     border="0" /> Para obtener información paso a paso sobre la utilización de las herramientas de PurifyPlus, consulte la
+    ayuda en línea de la herramienta.
+</p>
+<p>
+    Puede utilizar las herramientas de PurifyPlus para lo siguiente:
+</p>
+<ul>
+    <li>
+        <b>Detectar fugas y errores de memoria (programas C/C++ en Windows y UNIX).</b> Utilice Purify para determinar
+        fugas y errores en la aplicación que se somete a prueba.
+    </li>
+    <li>
+        <b>Supervisar la cobertura de código (Windows y UNIX).</b> Utilice PureCoverage para que se muestren los vacíos de
+        la prueba y alertarle sobre las regresiones.
+    </li>
+    <li>
+        <b>Perfilar el rendimiento (Windows y UNIX).</b> Utilice Quantify para que le avise en caso de que nuevas
+        incorporaciones degraden el rendimiento.
+    </li>
+</ul>
+<p>
+    El resultado de ejecutar conjuntos de aplicaciones de prueba con PurifyPlus es código fiable y sin errores que se
+    ejecuta con la máxima eficacia.
+</p><br />
+<h4>
+    Pasos de la herramienta
+</h4>
+<p>
+    Para implementar las pruebas utilizando herramientas de PurifyPlus debe:
+</p>
+<div style="MARGIN-LEFT: 2em">
+    <ol>
+        <li>
+            <a href="#Step1">Ejecutar el programa en Purify para recopilar datos de fugas y errores (sólo programas
+            C/C++)</a>
+        </li>
+        <li>
+            <a href="#Step2">Ejecutar el programa en PureCoverage para supervisar la cobertura de código</a>
+        </li>
+        <li>
+            <a href="#Step3">Ejecutar el programa en Quantify para perfilar el rendimiento</a>
+        </li>
+    </ol>
+</div>
+<h3>
+    1. <a id="Step1" name="Step1"></a><b>Ejecutar el programa en Purify para recopilar errores, fugas y datos de cobertura
+    (sólo programas C/C++)&nbsp;</b>
+</h3>
+<p>
+    Purify detecta errores de tiempo de ejecución, incluidas fugas de memoria, en la aplicación que se somete a prueba y en
+    los componentes que utiliza. Informa sobre errores de memoria como, por ejemplo, errores de límites de matriz, acceso a
+    través de punteros pendientes, lecturas de memoria no inicializadas, errores de asignación de memoria y fugas de
+    memoria, lo que permite resolverlos antes de que se produzcan posibles daños. &nbsp;
+</p>
+<p>
+    Para empezar, incorpore Purify en los archivos make, los archivos de proceso por lotes y los scripts Perl existentes.
+</p>
+<ul>
+    <li>
+        <b>En Windows</b>, modifique las líneas de mandatos que ejecutan el programa. <font         face="courier">&lt;NombrePrograma&gt;.exe</font><br />
+         &nbsp;<br />
+         <font face="courier">Purify /SaveTextData &lt;NombrePrograma&gt;.exe</font><br />
+         &nbsp;
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <br />
+         &nbsp;
+    </li>
+    <li>
+        <b>En UNIX</b>, modifique la línea de enlace y compilación:<br />
+         &nbsp;<br />
+         <font face="courier">% purify -logfile=&lt;nombreArchivo&gt; cc -g &lt;nombre_programa&gt;.c</font>
+    </li>
+</ul>
+<p>
+    El uso de la opción <font face="courier">/SaveTextData</font> <font face="courier">-logfile</font> en UNIX, hace que
+    Purify se ejecute sin interfaz de usuario y, cuando se ejecuta el programa desde el script, envía los datos de fuga y
+    error a un archivo de salida de texto cuando termina el programa.
+</p>
+<p>
+    Examine el archivo de salida, o bien, escriba scripts para analizarlo. Puede utilizar los mensajes de aviso y error del
+    archivo como criterios adicionales para los resultados de la prueba.
+</p>
+<p>
+    Si ha instalado PureCoverage, puede recopilar datos de cobertura para las mismas ejecuciones añadiendo la opción <font     face="courier">/Coverage</font> (Windows), o bien, añadiendo <font face="courier">purecov</font> <font     face="courier">purify</font> (UNIX). La utilización de los datos de cobertura también le permite buscar las partes del
+    código en las que no ha comprobado si hay errores. Para obtener más información sobre la utilización de los datos de
+    cobertura, consulte el Paso 2 de esta Guía de la herramienta.
+</p>
+<p>
+    <b>Nota</b>:
+</p>
+<ul>
+    <li>
+        Utilice la API de Purify para controlar la recopilación de datos de control del programa.
+    </li>
+    <li>
+        Purify también dispone de opciones de línea de mandatos que le permiten guardar datos de prueba como archivos
+        binarios que puede examinar por medio de la interfaz gráfica de usuario de Purify; este aspecto se trata en la Guía
+        de la herramienta "Análisis del rendimiento de tiempo de ejecución utilizando las herramientas de Rational
+        PurifyPlus".
+    </li>
+</ul>
+<p>
+    <b><img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"     border="0" /></b> Para obtener más información, busque los temas del índice de la ayuda en línea de Purify que tratan
+    sobre:
+</p>
+<ul>
+    <li>
+        <i>ejecución de programas</i>
+    </li>
+    <li>
+        <i>mensajes de error</i>
+    </li>
+    <li>
+        <i>opciones</i>
+    </li>
+    <li>
+        <i>funciones de API</i>
+    </li>
+    <li>
+        <i>cómo guardar datos</i>
+    </li>
+</ul>
+<h3>
+    2. <a id="Step2" name="Step2"></a><b>Ejecutar el programa en PureCoverage para supervisar la cobertura de
+    código&nbsp;</b>
+</h3>
+<p>
+    PureCoverage ofrece información precisa sobre la cobertura de código tanto a nivel de función como a nivel de línea.
+    Utilice PureCoverage con las pruebas nocturnas para garantizar que las pruebas avanzan al mismo paso que el desarrollo
+    de código.
+</p>
+<p>
+    Para empezar, incorpore PureCoverage en los archivos make, los archivos de proceso por lotes y los scripts Perl
+    existentes.
+</p>
+<ul>
+    <li>
+        <b>En Windows</b>, modifique las líneas de mandatos que ejecutan el programa o el archivo de clase Java, el archivo
+        .jar o el applet, para incluir PureCoverage:<br />
+         &nbsp;<br />
+         Para programas C/C++: <font face="courier">Coverage /SaveTextData &lt;NombrePrograma&gt;.exe</font><br />
+         Para archivos de clase Java: <font face="courier">Coverage /SaveTextData /Java Java.exe
+        &lt;NombreClase&gt;.class</font><br />
+         Para programas de código gestionado .NET: <font face="courier">Coverage /SaveTextData /Net
+        &lt;NombrePrograma&gt;.exe</font><br />
+         &nbsp;<br />
+         El uso de la opción <font face="courier">/SaveTextData</font> hace que PureCoverage se ejecute sin interfaz de
+        usuario y, cuando se ejecuta el programa desde el script, envía los datos a un archivo de salida de texto cuando
+        termina el programa.
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <br />
+         &nbsp;
+    </li>
+    <li>
+        <b>En UNIX</b>, modifique la línea de enlace y compilación:<br />
+         &nbsp;<br />
+         Para programas C/C++: <font face="courier">% purecov cc -g &lt;nombre_programa&gt;.c</font><br />
+         Para archivos de clase Java: <font face="courier">% purecov -java java &lt;nombre_clase&gt;</font><br />
+         &nbsp;<br />
+         Utilice la opción <font face="courier">-export</font> de PureCoverage después de la salida del programa para
+        escribir los datos de cobertura en un archivo de salida de texto.
+    </li>
+</ul>
+<p>
+    A medida que ejecuta el código, PureCoverage registra datos sobre las líneas y las funciones que se han utilizado.
+    Puede llamar a funciones de API de PureCoverage desde el programa para guardar datos en puntos específicos del código,
+    o bien, puede recopilar datos sólo para ciertas rutinas. Al salir del programa, dispone de un conjunto preciso de datos
+    en el que se indica las líneas y las funciones que ha abarcado la prueba, y las que no.
+</p>
+<p>
+    Puede fusionar datos de cobertura de varias ejecuciones o mantenerlos en archivos separados para analizar los cambios
+    de la cobertura.
+</p>
+<p>
+    Utilice scripts para comparar los datos actuales con datos que ha recopilado de ejecuciones anteriores. Si la cobertura
+    se desactiva, es posible que las pruebas no ejecuten nuevo código o que el nuevo código incluya un defecto que haga que
+    no se pruebe una gran sección de código. Utilice una herramienta de prueba como, por ejemplo, Rational Robot o Rational
+    Visual Test para escribir guiones de prueba que utilicen el nuevo código.
+</p>
+<p>
+    <b>Nota:</b> puede examinar archivos de datos de cobertura binarios utilizando la interfaz gráfica de usuario de
+    PureCoverage.
+</p>
+<p>
+    <img height="15" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"     border="0" /> Para obtener más información, consulte los temas del índice de la ayuda en línea de PureCoverage que
+    tratan sobre:
+</p>
+<ul>
+    <li class="mvd-P">
+        <i>ejecución de programas</i>
+    </li>
+    <li>
+        <i>opciones</i>
+    </li>
+    <li class="mvd-P">
+        <i>funciones de API</i>
+    </li>
+    <li class="mvd-P">
+        <i>cómo guardar datos</i>
+    </li>
+    <li class="mvd-P">
+        <i>comparación de datos</i>
+    </li>
+</ul>
+<h3>
+    3. <a id="Step3" name="Step3"></a><b>Ejecutar el programa en Quantify para perfilar el rendimiento&nbsp;</b>
+</h3>Quantify proporciona un conjunto de datos de rendimiento preciso y completo para el programa y sus componentes, que le
+permite supervisar el rendimiento e identificar pronto regresiones en el ciclo de prueba y desarrollo.&nbsp; 
+<p>
+    Para empezar, incorpore Quantify en los archivos make, los archivos de proceso por lotes y los scripts Perl existentes.
+</p>
+<ul>
+    <li>
+        <b>En Windows</b>, modifique las líneas de mandatos que ejecuta el programa o el archivo de clase, el archivo .jar
+        o el applet para incluir:<br />
+         &nbsp;<br />
+         Para programas C/C++: <font face="courier">Quantify /SaveTextData &lt;NombrePrograma&gt;.exe</font><br />
+         Para archivos de clase Java: <font face="courier">Quantify /SaveTextData /Java Java.exe
+        &lt;NombreClase&gt;.class</font><br />
+         Para programas de código gestionado .NET: <font face="courier">Quantify /SaveTextData /Net
+        &lt;NombrePrograma&gt;.exe</font><br />
+         &nbsp;<br />
+         El uso de la opción <font face="courier">/SaveTextData</font> hace que Quantify se ejecute sin interfaz de usuario
+        y, cuando se ejecuta el programa desde el script, envía los datos a un archivo de salida de texto cuando termina el
+        programa.
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <br />
+         &nbsp;
+    </li>
+    <li>
+        <b>En UNIX</b>, modifique la línea de enlace y compilación:<br />
+         &nbsp;<br />
+         Para programas C/C++: <font face="courier">% quantify cc -g &lt;nombre_programa&gt;.c</font><br />
+         Para archivos de clase Java: <font face="courier">% quantify -java java &lt;nombre_clase&gt;</font><br />
+         &nbsp;<br />
+         Utilice la opción <font face="courier">-export</font> de Quantify después de la salida del programa para escribir
+        l os datos de rendimiento en un archivo de salida de texto.
+    </li>
+</ul>
+<p>
+    A medida que ejecuta el código, Quantify registra datos sobre el rendimiento del programa. Puede utilizar funciones de
+    API para pausar y reanudar el registro de datos en cualquier momento, limitando así el perfilado de partes de código
+    concretas. También puede guardar datos en puntos determinados de la ejecución del código, o bien, recopilar datos de
+    rendimiento sólo para rutinas específicas. Al salir del programa, Quantify tiene un perfil preciso sobre el
+    rendimiento.
+</p>
+<p>
+    Puede escribir scripts en los que se comparen conjuntos de datos y se informe sobre los cambios de rendimiento:
+</p>
+<ul>
+    <li>
+        Las degradaciones del rendimiento pueden indicar que el código que se ha incorporado más recientemente ha
+        ralentizado el programa. Analice los datos que ha recopilado para buscar las secciones del programa que presentan
+        un rendimiento inadecuado.
+    </li>
+    <li>
+        Las mejoras marcadas pueden indicar que los desarrolladores han mejorado el código, o bien, que por alguna razón
+        las pruebas no se han ejecutado en grandes secciones del código. Compruebe los datos de cobertura para ver si se
+        siguen obteniendo los niveles de cobertura anteriores.
+    </li>
+</ul>
+<p>
+    <b>Nota:</b> Quantify también puede guardar datos de prueba como archivos binarios, que se pueden examinar utilizando
+    la interfaz gráfica de usuario de Quantify; este aspecto se trata en la Guía de la herramienta "Análisis del
+    rendimiento de tiempo de ejecución utilizando las herramientas de Rational PurifyPlus".
+</p>
+<p>
+    Para obtener más información, busque los temas del índice de la ayuda en línea de Quantify que tratan sobre:
+</p>
+<ul>
+    <li>
+        <i>ejecución de programas</i>
+    </li>
+    <li>
+        <i>opciones</i>
+    </li>
+    <li>
+        <i>funciones de API</i>
+    </li>
+    <li>
+        <i>cómo guardar datos</i>
+    </li>
+    <li>
+        <i>comparación de datos</i>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

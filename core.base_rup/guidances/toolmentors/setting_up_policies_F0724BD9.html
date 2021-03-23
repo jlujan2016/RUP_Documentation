@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Establecimiento de pol&iacute;ticas utilizando Rational ClearCase</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="setting_up_policies" name="uma.name">
+<meta content="Establecimiento de pol&iacute;ticas utilizando Rational ClearCase" name="uma.presentationName">
+<meta content="Tool:rup_clearcase:Rational ClearCase" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational ClearCase" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{A7DB751F-6724-468A-8FA0-7C4B54DC2AF6}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{A7DB751F-6724-468A-8FA0-7C4B54DC2AF6}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{A7DB751F-6724-468A-8FA0-7C4B54DC2AF6}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_85i-sDIFEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{A7DB751F-6724-468A-8FA0-7C4B54DC2AF6}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_XxCC0AIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{A7DB751F-6724-468A-8FA0-7C4B54DC2AF6}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{A7DB751F-6724-468A-8FA0-7C4B54DC2AF6}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{A7DB751F-6724-468A-8FA0-7C4B54DC2AF6}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{A7DB751F-6724-468A-8FA0-7C4B54DC2AF6}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Establecimiento de pol&iacute;ticas utilizando Rational ClearCase</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo establecer políticas de proyecto con UCM (Gestión unificada de cambios) de Rational ClearCase.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_clearcase_9665C.html" guid="{B2D1373B-A826-4169-A38A-B53B2122DC7C}">Rational ClearCase</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/establish_project_cm_policies_6B9785AC.html" guid="{E45B1CBF-29EB-431E-9417-F40E45BBAFD1}">Establecer políticas de gestión de la configuración (CM)</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    Las políticas de proyecto permiten la imposición de recomendaciones de desarrollo en un equipo. Al establecer políticas
+    puede, por ejemplo, minimizar los problemas que se pueden producir al integrar trabajo estableciendo una política que
+    requiera que los desarrolladores actualicen sus áreas de trabajo con líneas base recomendadas del proyecto antes de
+    entregar trabajo a la corriente de datos compartida. Esta práctica reduce la posibilidad de incluir defectos de código.
+</p>
+<p>
+    Las políticas de proyecto se establecen al crear un proyecto de UCM, y se pueden modificar en cualquier momento.
+</p>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Microsoft Windows.
+</p>
+<h3>
+    Pasos de la herramienta
+</h3>
+<p>
+    Para establecer políticas para proyectos de UCM existen dos procedimientos:
+</p>
+<ul>
+    <li>
+        <a href="#SetPoliciesForNewProjects">Establecer políticas para nuevos proyectos</a>
+    </li>
+    <li>
+        <a href="#SetOrChangeExistingProjectPolicies">Establecer o cambiar políticas para proyectos existentes</a>
+    </li>
+</ul>
+<h3>
+    1. <a id="SetPoliciesForNewProjects" name="SetPoliciesForNewProjects">Establecer políticas para nuevos proyectos</a>
+</h3>
+<ul>
+    <li>
+        Desde la barra de tareas de Windows, seleccione <b>Inicio &gt; Programas &gt; Software Rational &gt; Rational
+        ClearCase &gt; Explorador de proyectos</b>.
+    </li>
+    <li>
+        En el menú <b>Archivo</b>, seleccione <b>Nuevo &gt; Proyecto</b> para iniciar el <b>asistente Proyecto nuevo</b>.
+        Cuando se le solicite, seleccione las políticas que imponer para este proyecto.
+    </li>
+</ul>
+<p>
+    <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> Para obtener
+    detalles, consulte el tema de la ayuda en línea que trata sobre la <i>gestión de proyectos de software</i>.
+</p>
+<h3>
+    2. <a id="SetOrChangeExistingProjectPolicies" name="SetOrChangeExistingProjectPolicies">Establecer o cambiar políticas
+    para proyectos existentes</a>
+</h3>
+<ol>
+    <li>
+        En el Explorador de proyectos, localice el proyecto que desea modificar.
+    </li>
+    <li>
+        Pulse el botón derecho del ratón sobre el proyecto y seleccione <b>Políticas</b>.
+    </li>
+    <li>
+        Pulse las diferentes pestañas para visualizar y seleccionar políticas de proyecto.
+    </li>
+</ol>
+<p>
+    Consulte el tema de la ayuda según contexto para el diálogo Políticas para obtener una descripción de cada política de
+    proyecto.
+</p>
+<p>
+    <img height="15" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" /> Consulte el capítulo que trata
+    sobre el "establecimiento de políticas" del manual <i>IBM Rational ClearCase Guide to Managing Software Projects</i>
+    para obtener más información sobre las políticas que se pueden establecer para proyectos de UCM.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Java Messaging Service (JMS)</title>
+<meta content="Guideline" name="uma.type">
+<meta content="java_messaging_service_jms" name="uma.name">
+<meta content="Java Messaging Service (JMS)" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.706166121514094E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.706166121514094E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Java Messaging Service (JMS)</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se muestra la forma en que utilizar JMS (Java Message Service), así como la forma en que diseñar y modelarlo para una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}">Identificar mecanismo de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    JMS (Java Message Service) sirve para proporcionar comunicación entre componentes. Las características de JMS como, por
+    ejemplo, la comunicación síncrona y la entrega garantizada, hacen que JMS sea elegido con frecuencia para las
+    aplicaciones empresariales. JMS también se puede utilizar para comunicaciones síncronas, pero lo habitual es utilizarlo
+    para comunicaciones asíncronas.
+</p>
+<p>
+    Estas directrices describen cuándo utilizar JMS, cómo modelarlo así como algunas consideraciones de diseño aplicables.
+</p>
+<p>
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_messaging_service_jms_84F49452.html" guid="9.950419951286216E-306">Concepto: Java Messaging Service (JMS)</a> para obtener más información sobre JMS.
+</p>
+<h3>
+    <a id="Modeling_JMS" name="Modeling_JMS"></a>Modelado de JMS
+</h3>
+<p>
+    Los clientes JMS se modelan como clases. El siguiente diagrama ilustra una interacción típica de un productor de
+    mensajes para enviar mensajes con JMS. En este ejemplo se utiliza una cola como destino.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/jms_send_queue.gif" />
+    </p>
+</blockquote>
+<p>
+    Un cliente JMS debe implementar la interfaz de escucha de mensajes. El proveedor JMS se asegura de que se llama al
+    método especial <i>onMessage</i> siempre que llega un mensaje.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/msg_consumer.gif" />
+    </p>
+</blockquote>
+<p>
+    En el siguiente diagrama se muestra una configuración típica de un cliente consumidor de JMS.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/msg_consumer_sequ.gif" />
+    </p>
+</blockquote>
+<h3>
+    <a id="Designing_JMS" name="Designing_JMS"></a>Diseño de JMS
+</h3>
+<p>
+    Principalmente hay dos formas de diseñar las aplicaciones JMS: <i>punto a punto</i> y <i>publicación y suscripción</i>.
+</p>
+<p>
+    En un modelo <b>punto a punto</b>, se utiliza JMS para entregar un mensaje a un ÚNICO cliente.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/pt_to_pt.gif" />
+    </p>
+</blockquote>
+<p>
+    Los productores de mensajes se comunican con un consumidor de mensajes mediante el envío de mensajes a una cola. De
+    forma conceptual, una cola sólo tiene un consumidor, pero muchos proveedores JMS permiten a varios consumidores para
+    dar soporte al equilibrio de carga. Cuando se utilizan varios consumidores, uno y sólo uno de los consumidores maneja
+    el mensaje. Los mensajes quedan retenidos en la cola hasta que son consumidos o hasta que caducan.
+</p>
+<p>
+    En un modelo de <b>publicación y suscripción</b>, el patrón de comunicación permite que varios productores envíen
+    mensajes a varios consumidores. Los consumidores se suscriben a temas, y el middleware entrega los mensajes a los
+    consumidores.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/publish_subscribe.gif" />
+    </p>
+</blockquote>
+<p>
+    A diferencia del modelo de punto a punto, el modelo de publicación y suscripciónmantiene los mensajes en un tema hasta
+    que todos los clientes lo han recibido.
+</p><b>Nota:</b> desde JMS 1.1 existe la posibilidad de combinar estos dos modelos en la misma aplicación JMS. <br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.inferdata.com" target="_blank"><img alt="logotipo de Inferdata"                 src="./../../../tech.j2ee/guidances/supportingmaterials/resources/inferdata.gif" width="100" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Contenido desarrollado o parcialmente desarrollado por <a href="http://www.inferdata.com/" target="_blank">Inferdata Corporation</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; Copyright&nbsp;IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

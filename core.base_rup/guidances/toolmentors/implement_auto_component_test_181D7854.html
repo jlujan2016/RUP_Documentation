@@ -1,0 +1,809 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Implementaci&oacute;n de una prueba de componentes automatizada utilizando Rational QualityArchitect</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="implement_auto_component_test" name="uma.name">
+<meta content="Implementaci&oacute;n de una prueba de componentes automatizada utilizando Rational QualityArchitect" name="uma.presentationName">
+<meta content="Tool:rup_quality_architect:Rational QualityArchitect" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational QualityArchitect" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{11A91795-5221-4C65-A9DE-EE431CEA6993}", "{CE38BCE7-D8E1-460F-ADF0-1FC94CB1D7E2}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{11A91795-5221-4C65-A9DE-EE431CEA6993}", "{CE38BCE7-D8E1-460F-ADF0-1FC94CB1D7E2}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{11A91795-5221-4C65-A9DE-EE431CEA6993}", "{CE38BCE7-D8E1-460F-ADF0-1FC94CB1D7E2}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{CE38BCE7-D8E1-460F-ADF0-1FC94CB1D7E2}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Implementaci&oacute;n de una prueba de componentes automatizada utilizando Rational QualityArchitect</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se proporciona una visión general de las tareas de prueba de unidad que se realizan con Rational QualityArchitect.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_quality_architect_3444CDC5.html" guid="{11A91795-5221-4C65-A9DE-EE431CEA6993}">Rational QualityArchitect</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_developer_test_66FE6BEE.html" guid="{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}">Implementar la prueba de desarrollador</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/perform_developer_test_512B18D9.html" guid="{55EAEE66-A254-457F-BCC3-D1C21ED88134}">Ejecutar pruebas de desarrollador</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    Visión general
+</h3>
+<p>
+    En esta guía de la herramienta se proporciona una visión general de las cuatro tareas de prueba de unidad principales
+    que se llevan a cabo con Rational QualityArchitect:
+</p>
+<ul>
+    <li>
+        Prueba de unidad
+    </li>
+    <li>
+        Prueba del caso de ejemplo
+    </li>
+    <li>
+        Generación de fragmentos
+    </li>
+    <li>
+        Registro de sesión EJB
+    </li>
+</ul>
+<p>
+    Una propuesta arriesgada es la de un proceso de desarrollo que posterga la prueba hasta que se puedan ensamblar todos
+    los componentes en un sistema completado. Los defectos que se localizan de forma tan tardía en el ciclo vital son más
+    difíciles de arreglar y tienen más probabilidades de causar retardos importantes en la planificación, en especial, si
+    se trata de problemas de la arquitectura que es posible que requieran un rediseño para su corrección.
+</p>
+<p>
+    Incluso si un equipo tiene un nivel de confianza justificado en la calidad de los componentes del sistema, la confianza
+    global del sistema puede seguir siendo inaceptablemente baja. Por ejemplo, si se considera un sistema sencillo que
+    consta de cinco componentes, en el que cada uno se califica (bien por la métrica de cobertura de la prueba, bien por
+    métodos menos cuantitativos) con una fiabilidad del 95 por ciento. Puesto que la fiabilidad del sistema es acumulativa,
+    la valoración global es de 95 % x 95 % x 95 % x 95 % x 95 %, o bien, se sitúa justo por encima del 77 por ciento.
+    Mientras que la posibilidad de problemas en cualquier componente puede ser sólo de 1 sobre 20, el sistema global se
+    aproxima a 1 sobre 4 y, en este caso, se trata de un sistema con relativamente pocos componentes.
+</p>
+<p>
+    Por el contrario, un proceso de desarrollo que incorpore la prueba de componentes a través de un proceso de desarrollo
+    iterativo ofrece varias ventajas importantes:
+</p>
+<ul>
+    <li>
+        Los problemas se pueden localizar y arreglar en un contexto aislado, por lo que no sólo son más fáciles de reparar,
+        sino que también son más fáciles de detectar y diagnosticar.
+    </li>
+    <li>
+        Puesto que la prueba y el desarrollo están estrechamente acoplados durante el ciclo vital, las medidas de progreso
+        son creíbles, es decir, ahora el progreso se puede ver en términos de la parte del proyecto que está codificada y
+        en funcionamiento, no sólo codificada.
+    </li>
+    <li>
+        Se minimizan las interrupciones de la planificación debidas a problemas imprevistos, por lo que la planificación
+        global resulta más realista y se reduce el riesgo del proyecto.
+    </li>
+</ul>
+<p>
+    Aunque realizar la prueba pronto ofrece importantes ventajas, la práctica está lejos de lo habitual, en especial,
+    cuando se trata de probar componentes de la capa intermedia, sin la GUI.
+</p>
+<p>
+    ¿Por qué? Porque requiere tiempo y resulta aburrido y, con frecuencia, en el pasado, los costes de superar estas
+    cuestiones prácticas ha pesado más que las ventajas. Además, puesto que la mayoría de pruebas están adaptadas a un
+    componente concreto, existen pocas posibilidades de reutilización. Muchas organizaciones reconocen el gasto inútil que
+    supone compilar fragmentos y aprovechamientos de pruebas partiendo de cero, utilizarlos y, a continuación, desecharlos
+    proyecto tras proyecto. Prefieren centrar sus recursos limitados en otras áreas.
+</p>
+<p>
+    Con QualityArchitect, realizar las pruebas pronto es, realmente, factible, puesto que los fragmentos y los
+    aprovechamientos de pruebas se generan de modo automático, no sólo una vez, sino de modo incremental a medida que
+    evoluciona el modelo durante todo el desarrollo. El proceso de desarrollo completo es, así, más estructurado, medido y
+    visible, puesto que los resultados de las pruebas de los componentes facilitan criterios de entrada más enérgicos para
+    evitar la prueba del sistema prematura. Gracias a QualityArchitect, los desarrolladores se pueden centrar en los
+    aspectos creativos de la definición de pruebas, por lo que pueden dedicar tiempo a pensar sobre el mejor modo de
+    ejecutar un componente, en lugar de escribir y depurar fragmentos y controladores de pruebas. Los desarrolladores y los
+    arquitectos trabajan conjuntamente con los modelos visuales compartidos, lo que les permite desarrollar de forma
+    natural una relación más productiva entre sí.
+</p>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Windows 98/2000/NT 4.0.
+</p>
+<h4>
+    Pasos de la herramienta
+</h4>
+<p>
+    En esta guía de la herramienta se tratan las tareas principales asociadas a la implementación de una prueba de
+    componentes automatizada utilizando QualityArchitect:
+</p>
+<ol>
+    <li>
+        <a href="#Prerequisite steps for unit testing">Pasos de requisitos previos para la prueba de unidad</a>
+    </li>
+    <li>
+        <a href="#Implement a unit test">Implementar una prueba de unidad</a>
+    </li>
+    <li>
+        <a href="#Implement a scenario test">Implementar una prueba de caso de ejemplo</a>
+    </li>
+    <li>
+        <a href="#Create a stub component">Crear un componente de fragmento</a>
+    </li>
+    <li>
+        <a href="#Using the EJB session recorder">Utilizar el grabador de sesión de EJB</a>
+    </li>
+</ol>
+<h3>
+    1.&nbsp;&nbsp;<a id="Prerequisite steps for unit testing" name="Prerequisite steps for unit testing">Pasos de
+    requisitos previos para la prueba de unidad</a>
+</h3>
+<p>
+    Para generar cualquier prueba utilizando QualityArchitect, si son para componentes COM de EJB, se debe crear y
+    configurar un proyecto de Rational utilizando Rational Administrator. Dicho proyecto debe contener un almacén de datos
+    de prueba para mantener todos los activos de prueba como, por ejemplo, agrupaciones de datos y resultados de la prueba,
+    que se describe en la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/configure_projects_82600862.html" guid="{63D2EE2A-A8D2-4A1D-BC41-8D62E9DA7CBF}">Guía de la herramienta: Configuración de proyectos utilizando Rational
+    Administrator</a>.
+</p>
+<h3>
+    2.&nbsp;&nbsp;<a id="Implement a unit test" name="Implement a unit test">Implementar una prueba de unidad</a>
+</h3>
+<p>
+    El objetivo de una prueba de unidad es validar que una operación concreta o un componente determinado proporciona el
+    valor de retorno correcto para un conjunto de entradas dado. Las pruebas de unidad se crean fuera de la especificación
+    de la clase en la vista lógica. El proceso de creación y ejecución de una prueba de unidad consta de tres pasos:
+</p>
+<ul>
+    <li>
+        Generación de código de prueba de unidad
+    </li>
+    <li>
+        Generación de datos de prueba de unidad
+    </li>
+    <li>
+        Ejecución de la prueba y examen de los resultados
+    </li>
+</ul>
+<h4>
+    Generación de código de prueba de unidad
+</h4>
+<p>
+    El código de prueba de unidad contiene todas las instrucciones necesarias para crear instancias del componente, llamar
+    a la operación que somete a prueba y examinar el resultado devuelto con respecto a una línea base.
+</p>
+<h5>
+    Para componentes COM
+</h5>
+<ol>
+    <li>
+        En la vista lógica, seleccione la operación que someter a prueba en la interfaz de componentes.
+    </li>
+    <li>
+        Pulse el botón derecho del ratón sobre la operación listada en la interfaz del componente y seleccione <b>Rational
+        Test &gt; Generar prueba de unidad</b>. Si se le solicita, es posible que durante este proceso deba registrar un
+        proyecto de Rational.
+    </li>
+</ol>
+<blockquote>
+    <p>
+        QualityArchitect genera código compatible con Visual Basic 6 como salida del proceso.
+    </p>
+</blockquote>
+<p>
+    En Visual Basic, primero debe intentar compilar el código. Todos los posibles errores de compilación se deben examinar.
+    Bajo circunstancias determinadas, QualityArchitect no puede generar código para probar operaciones en las que se
+    utilizan con frecuencia tipos de datos complejos. En estos casos, QualityArchitect inserta código no válido y, en el
+    tiempo de compilación, resalta los segmentos de código en los que se requiere codificación manual. Una vez que se haya
+    compilado el código, puede continuar con el paso siguiente, <a href="#GeneratingUnitTestData">Generación de datos de
+    prueba de unidad</a>.
+</p>
+<h5>
+    Para componentes EJB
+</h5>
+<ol>
+    <li>
+        En la vista lógica, seleccione la operación que someter a prueba de la interfaz remota.
+    </li>
+    <li>
+        Pulse el botón derecho del ratón sobre la operación y seleccione <b>Rational Test &gt; Seleccionar plantilla de
+        prueba de unidad</b>.
+    </li>
+    <li>
+        Navegue a la plantilla adecuada para el servidor EJB. Para WebSphere, seleccione websphere_remote.template en la
+        carpeta de métodos de EJBWebSphereBusiness. Para Web Logic, seleccione weblogic_remote.template en la carpeta de
+        métodos de EJBWeb LogicBusiness.
+    </li>
+    <li>
+        Seleccione <b>Rational Test &gt; Generar prueba de unidad</b>. Si se le solicita durante el proceso, es posible que
+        deba iniciar la sesión en un proyecto de Rational.&nbsp;
+    </li>
+</ol>
+<blockquote>
+    <p>
+        QualityArchitect genera código Java como salida del proceso.
+    </p>
+    <p>
+        Puede utilizar el IDE o editor que prefiera para examinar el código Java. Rational Rose se entrega con el editor
+        R2, que se puede utilizar para este objetivo.
+    </p>
+</blockquote>
+<p>
+    Una vez que se encuentre en el editor, en primer lugar puede intentar compilar el código. Todos los posibles errores de
+    compilación se deben examinar. Bajo circunstancias determinadas, QualityArchitect no puede generar código en el que se
+    utilizan con frecuencia tipos de datos complejos. En estos casos, QualityArchitect inserta código no válido que no
+    compila las líneas de código señaladas en las que se requiere codificación manual. Una vez que se haya compilado el
+    código, puede continuar con el paso siguiente, <a href="#GeneratingUnitTestData">Generación de datos de prueba de
+    unidad</a>.
+</p>
+<h4>
+    <a id="GeneratingUnitTestData" name="GeneratingUnitTestData">Generación de datos de prueba de unidad</a>
+</h4>
+<p>
+    La medida verdadera de una prueba de unidad satisfactoria son los datos de la prueba. El código de prueba en sí es
+    completamente desechable, puesto que QualityArchitect puede volver a generar código en cualquier momento. Mientras que
+    QualityArchitect puede crear código de prueba, no puede crear datos de prueba significativos. Ésta es responsabilidad
+    del analista o implementador. Se debe prestar atención al crear datos de prueba que validen pruebas positivas y
+    negativas representativas. Los datos de prueba que se centran en las condiciones de límite de la lógica del componente
+    son candidatos óptimos para los datos de prueba de unidad.
+</p>
+<h5>
+    Para componentes COM
+</h5>
+<ol>
+    <li>
+        En la vista lógica, seleccione la operación que someter a prueba en la interfaz del componente.
+    </li>
+    <li>
+        Pulse el botón derecho del ratón sobre la operación y seleccione <b>Rational Test &gt; Crear agrupación de
+        datos</b>.
+    </li>
+    <li>
+        Una vez que haya seleccionado <b>Crear agrupación de datos</b>, se muestra el diálogo Propiedades de la agrupación
+        de datos. En este punto, puede seleccionar <b>Editar datos de la agrupación de datos</b> para empezar a entrar
+        datos, o bien, seleccionar <b>Definir campos de la agrupación de datos</b> para que QualityArchitect genere datos
+        de prueba automáticamente.
+    </li>
+</ol>
+<h5>
+    Para componentes EJB
+</h5>
+<ol>
+    <li>
+        En la vista lógica, seleccione la operación que someter a prueba de la interfaz remota.
+    </li>
+    <li>
+        Pulse el botón derecho del ratón sobre la operación listada en la interfaz remota y seleccione Rational Test &gt;
+        Crear agrupación de datos.
+    </li>
+    <li>
+        Una vez que haya seleccionado <b>Crear agrupación de datos</b>, se muestra el diálogo Propiedades de la agrupación
+        de datos. En este punto, puede seleccionar <b>Editar datos de la agrupación de datos</b> para empezar a entrar
+        datos, o bien, seleccionar <b>Definir campos de la agrupación de datos</b> para que QualityArchitect genere datos
+        de prueba automáticamente.
+    </li>
+</ol>
+<h5>
+    <a id="Working with Datapools" name="Working with Datapools">Cómo trabajar con agrupaciones de datos</a>
+</h5>
+<p>
+    Si selecciona <b>Definir campos de la agrupación de datos</b>, puede utilizar las posibilidades de generación de datos
+    de prueba de QualityArchitect. QualityArchitect puede generar diversos tipos de datos genéricos, que se especifican en
+    la lista desplegable del campo <b>Tipo</b>.&nbsp;
+</p>
+<p>
+    Cuando haya seleccionado los tipos adecuados, seleccione el número de filas que generar y pulse <b>Generar datos</b>.
+    Es bastante probable que QualityArchitect no pueda generar automáticamente todos los tipos de datos. Por ejemplo,
+    QualityArchitect puede generar una lista genérica de ciudades de Estados Unidos, pero no dispone de la posibilidad de
+    generar una lista válida de números de factura específicos del sistema para un sistema de pedidos. Estos datos se deben
+    entrar de forma manual como un tipo de datos, o bien, directamente en una agrupación de datos. El valor de la creación
+    de un tipo de datos con datos personalizados es que, desde este punto de vista, QualityArchitect puede generar el tipo
+    de datos a partir de la interfaz Definir campos de la agrupación de datos. Si entra los datos directamente en la
+    agrupación de datos, éstos sólo están disponibles para la agrupación de datos específica.
+</p>
+<p>
+    Cuando selecciona <b>Editar datos de la agrupación de datos</b>, entra directamente en datos de prueba significativos.
+    Hay un campo para cada argumento, así como un campo para una devolución esperada y un campo para un error esperado.
+    Cuando especifica un error, son entradas válidas tanto los mensajes de error de texto como de número de error. Si la
+    operación requiere un objeto complejo como argumento, o bien, si debe devolver un objeto complejo, no puede insertar la
+    referencia a objetos en la agrupación de datos. En vez de ello, divida el objeto para los tipos de argumentos simples
+    que se requieren para compilar una instancia del objeto. Utilice los botones <b>Insertar antes</b> e <b>Insertar
+    después</b> para añadir campos a la agrupación de datos para este objetivo. Debe modificar el código de prueba para
+    compilar una instancia del objeto con los datos facilitados.
+</p>
+<h4>
+    Ejecución de la prueba y examen de los resultados
+</h4>
+<p>
+    ´Después de crear tanto el código como los datos de prueba, puede ejecutar la prueba desde el IDE, o bien, planificar
+    la prueba en un conjunto de aplicaciones de TestManager. Consulte la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/executing_test_suite_AF13B74.html" guid="{4F5BE3FD-35F5-40E8-828B-EFE6013FCF00}">Guía de la herramienta: Ejecución de un conjunto de aplicaciones de
+    prueba utilizando Rational TestManager</a> para obtener más información sobre este tema.
+</p>
+<ol>
+    <li>
+        En cuanto se empieza a ejecutar la prueba, se le solicita que proporcione una ubicación para los resultados de
+        registro de la prueba. Una vez que haya especificado una ubicación, TestManager coloca los resultados de la
+        ejecución de la prueba en la ubicación indicada.
+    </li>
+    <li>
+        Al finalizar la ejecución, TestManager muestra el registro de prueba. Para ver los resultados de la prueba,
+        seleccione la pestaña <b>Vista detallada</b> de la ventana Visor de registros. Expanda la vista de árbol de los
+        resultados para ver los detalles de la ejecución de la prueba. Puede acceder a más información pulsando el botón
+        derecho del ratón sobre cualquier línea y seleccionando <b>Propiedades</b>.
+    </li>
+</ol>
+<h3>
+    3.&nbsp;&nbsp; <a id="Implement a scenario test" name="Implement a scenario test">Implementar una prueba de caso de
+    ejemplo</a>
+</h3>
+<p>
+    El objetivo de una prueba de caso de ejemplo es validar que una serie determinada de operaciones a través de una serie
+    concreta de componentes se combina para realizar correctamente una tarea colectiva. Las pruebas de casos de ejemplo se
+    crean a partir de diagramas de interacción, en especial, diagramas de secuencia y de colaboración. El proceso de
+    creación y ejecución de una prueba de unidad consta de los tres pasos que se indican a continuación:
+</p>
+<ul>
+    <li>
+        Generación de código de prueba de caso de ejemplo
+    </li>
+    <li>
+        Generación de datos de prueba de caso de ejemplo
+    </li>
+    <li>
+        Ejecución de la prueba y examen de los resultados
+    </li>
+</ul>
+<h4>
+    Generación de código de prueba de caso de ejemplo
+</h4>
+<p>
+    El código de prueba de caso de ejemplo incluye todo el código de controlador de prueba necesario para crear instancias
+    de los componentes, llamar a las operaciones que se someten a prueba y evaluar los resultados de las operaciones
+    utilizando puntos de verificación. Los puntos de verificación son un mecanismo por el que el código de prueba puede
+    ejecutar sentencias SQL con respecto a una base de datos para verificar la manipulación adecuada de los datos
+    subyacentes.
+</p>
+<h5>
+    Para componentes EJB
+</h5>
+<ol>
+    <li>
+        Seleccione el diagrama de colaboración en el navegador.
+    </li>
+    <li>
+        Pulse el botón derecho del ratón sobre el diagrama y seleccione <b>Rational Test &gt; Seleccionar plantilla
+        ScenarioTest</b>.
+    </li>
+    <li>
+        Navegue a la plantilla adecuada para el servidor EJB. Para WebSphere, seleccione
+        websphere<sub>_</sub>scenario.template en la carpeta EJBWebSphereScenario. Para Web Logic, seleccione
+        weblogic_scenario.template en la carpeta EJBWeb LogicScenario.
+    </li>
+    <li>
+        Abra el diagrama de colaboración o secuencia concreto que modela el caso de ejemplo que se somete a prueba. Es
+        importante especificar los mensajes para los componentes en el diagrama que se va a probar. Los mensajes se pueden
+        especificar efectuando una doble pulsación en la línea de mensaje y especificando un nombre en el recuadro de lista
+        desplegable de la pestaña <b>General</b>. El nombre debe corresponder a la operación que se está probando. Además,
+        las especificaciones de pueden modificar para incluir datos de guión de prueba.<br />
+        <br />
+         Por ejemplo, Rose expone, por omisión, la especificación de mensaje como:<br />
+         <font face="Courier New" size="2">getTransactions(customerID : String)</font><br />
+        <br />
+         Esta especificación se puede modificar para incluir un único guión de datos, tal como se indica a
+        continuación:<br />
+         <font face="Courier New" size="2">getTransactions(customerID : String="BBryson")<br />
+        <br />
+        </font> Para cada prueba de caso de ejemplo, QualityArchitect genera de modo automático una agrupación de datos
+        para datos de guión de prueba. Se rellena la primera fila de datos del diagrama. A partir de este punto, puede
+        añadir más filas.
+    </li>
+    <li>
+        Para iniciar la prueba, pulse el botón derecho del ratón sobre el diagrama en el navegador y seleccione <b>Rational
+        Test &gt; Generar prueba de caso de ejemplo</b>. Si se le solicita que inicie la sesión en el proyecto,
+        hágalo.&nbsp;
+    </li>
+    <li>
+        Se muestra un diálogo en el que se le solicita que seleccione los destinos de la prueba de caso de ejemplo.
+        Seleccione todos los componentes del diagrama que van a formar parte de la prueba. Para cada componente
+        seleccionado, se invoca la operación correspondiente especificada en el mensaje del componente. &nbsp;
+    </li>
+</ol>
+<h5>
+    Para componentes COM
+</h5>
+<ol>
+    <li>
+        Abra el diagrama de colaboración o secuencia concreto que modela el caso de ejemplo que se somete a prueba. Es
+        importante especificar los mensajes para los componentes en el diagrama que se va a probar. Los mensajes se pueden
+        especificar efectuando una doble pulsación en la línea de mensaje y especificando un nombre en el recuadro de lista
+        desplegable de la pestaña <b>General</b>. El nombre debe corresponder a la operación que se está probando. Además,
+        las especificaciones de pueden modificar para incluir datos de guión de prueba.<br />
+        <br />
+         Por ejemplo, Rose expone, por omisión, la especificación de mensaje como:<br />
+         <font face="Courier New" size="2">getTransactions(customerID : String)</font><br />
+        <br />
+         Esta especificación se puede modificar para incluir un único guión de datos, tal como se indica a
+        continuación:<br />
+         <font face="Courier New" size="2">getTransactions(customerID : String="BBryson")<br />
+        <br />
+        </font> Para cada prueba de caso de ejemplo, QualityArchitect genera de modo automático una agrupación de datos
+        para datos de guión de prueba. Se rellena la primera fila de datos del diagrama. A partir de este punto, puede
+        añadir más filas.
+    </li>
+    <li>
+        Para iniciar la prueba, pulse el botón derecho del ratón sobre el diagrama en el navegador y seleccione <b>Rational
+        Test &gt; Generar prueba de caso de ejemplo</b>. Si se le solicita que inicie la sesión en el proyecto,
+        hágalo.&nbsp;
+    </li>
+    <li>
+        Se muestra un diálogo en el que se le solicita que seleccione los destinos de la prueba de caso de ejemplo.
+        Seleccione todos los componentes del diagrama que van a formar parte de la prueba. Para cada componente
+        seleccionado, se invoca la operación correspondiente especificada en el mensaje del componente. &nbsp;
+    </li>
+</ol>
+<h5>
+    Puntos de verificación
+</h5>
+<p>
+    Para cada operación que se va a invocar, y al final de la prueba, se le solicita que inserte un punto de verificación.
+    QualityArchitect utiliza punto de verificación para validar si las operación se han realizado correctamente. Aunque la
+    arquitectura de puntos de verificación es abierta y ampliable, en la actualidad sólo se ha implementado el punto de
+    verificación de base de datos. El punto de verificación de base de datos le permite entrar SQL para ejecutar la
+    consulta. La consulta creada se ejecuta en el tiempo de prueba para validar si el componente manipula la base de datos
+    correctamente. &nbsp;
+</p>
+<p>
+    <img height="16" alt="icono de Ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;Puede implementar sus
+    propios puntos de verificación. Para ello, siga los pasos que se indican en la ayuda en línea de QualityArchitect.
+</p>
+<ol>
+    <li>
+        Seleccione <b>Sí</b> para insertar un punto de verificación.
+    </li>
+    <li>
+        Seleccione el tipo de punto de verificación adecuado que insertar. A menos que haya implementado sus propios puntos
+        de verificación, debe seleccionar <b>PV de base de datos</b>.
+    </li>
+    <li>
+        Se presenta un compilador de consultas, que puede utilizar para establecer los parámetros de conexión a la base de
+        datos y para compilar la consulta que se va a ejecutar para validar el funcionamiento correcto de la operación que
+        se invoca. Para establecer esta conexión y crear la consulta, se requieren conocimientos básicos sobre la base de
+        datos subyacente y la sintaxis SQL.
+    </li>
+</ol>
+<p>
+    En esta fase se produce la salida del código necesario para crear instancias de todos los componentes, llamar a todas
+    las operaciones y ejecutar los puntos de verificación insertados.
+</p>
+<h4>
+    Generación de datos de prueba de caso de ejemplo
+</h4>
+<p>
+    Para cada prueba de caso de ejemplo generada, QualityArchitect crea de modo automático una agrupación de datos para que
+    contenga los datos de prueba. Si se han especificado datos en el diagrama, la primera fila de la agrupación de datos ya
+    se ha rellenado con dicha información, así como la información relacionada con todos los puntos de verificación
+    insertados. Si no es así, la agrupación de datos sólo contiene información relacionada con los puntos de verificación.
+</p>
+<p>
+    Para ver y editar la información, siga los pasos que se indican a continuación:
+</p>
+<ol>
+    <li>
+        En Rose, seleccione Herramientas &gt; Rational Test &gt; Barra de herramientas.
+    </li>
+    <li>
+        En la barra de herramientas, seleccione el segundo elemento de la barra de herramientas para editar la agrupación
+        de datos. QualityArchitect ha creado una agrupación de datos que contiene el nombre del diagrama de caso de
+        ejemplo, que finaliza con _D. El algoritmo que se utiliza para denominar la agrupación de datos bastante compleja,
+        por lo que resulta muy difícil predecir el nombre cada agrupación de datos en esta documentación.
+    </li>
+</ol>
+<p>
+    Para editar los datos, siga los pasos básicos que se esquematizan en el apartado <a href="#Working with Datapools">Cómo trabajar con agrupaciones de datos</a>.
+</p>
+<h4>
+    Ejecución de la prueba y examen de los resultados
+</h4>
+<p>
+    Después de crear tanto el código como los datos de prueba, puede ejecutar la prueba desde el IDE, o bien, planificar la
+    prueba en un conjunto de aplicaciones de TestManager. Consulte la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/executing_test_suite_AF13B74.html" guid="{4F5BE3FD-35F5-40E8-828B-EFE6013FCF00}">Guía de la herramienta: Ejecución de un conjunto de aplicaciones de
+    prueba utilizando Rational TestManager</a> para obtener más información sobre este tema.
+</p>
+<ol>
+    <li>
+        En cuanto se empieza a ejecutar la prueba, se le solicita que proporcione una ubicación para los resultados de
+        registro de la prueba. Una vez que haya especificado una ubicación, TestManager coloca los resultados de la
+        ejecución de la prueba en la ubicación indicada.
+    </li>
+    <li>
+        Al finalizar la ejecución, TestManager muestra el registro de prueba. Para ver los resultados de la prueba,
+        seleccione la pestaña <b>Vista detallada</b> de la ventana Visor de registros. Expanda la vista de árbol de los
+        resultados para ver los detalles de la ejecución de la prueba. Puede acceder a más información pulsando el botón
+        derecho del ratón sobre cualquier línea y seleccionando <b>Propiedades</b>.
+    </li>
+</ol>
+<p>
+    Para los puntos de verificación, no se proporciona ninguna indicación de <b>Correcto</b> o <b>Incorrecto</b> en la
+    primera ejecución, que se utiliza para capturar una instantánea de los resultados de la consulta que se van a utilizar
+    como datos de línea base para futuras ejecuciones de prueba.
+</p>
+<p>
+    Efectúe una doble pulsación en los puntos de verificación para visualizar un comparador que presenta los resultados de
+    la consulta. Los resultados se pueden editar, por lo que, si la consulta no devuelve los resultados correctos, puede
+    modificar los datos. Todas las ejecuciones subsiguientes de la prueba comparan los resultados de la consulta con los
+    que se han capturado en la primera ejecución.
+</p>
+<h3>
+    4.&nbsp;&nbsp;<a id="Create a stub component" name="Create a stub component">Crear un componente de fragmento</a>
+</h3>
+<p>
+    Con frecuencia, los componentes que se prueban en una prueba de unidad o caso de ejemplo dependen de otros componentes
+    para completar sus tareas. Los problemas surgen cuando los componentes secundarios no están operativos. En ocasiones,
+    aún están en desarrollo, y otras veces tienen bugs. A pesar de ello, la prueba del componente primario no se debe
+    detener hasta que los componentes secundarios están disponibles. En su lugar, con el objetivo de la prueba se pueden
+    reemplazar los componentes no operativos por un fragmento o componente temporal. El fragmento no implementa la
+    funcionalidad del componente real, simplemente, reacciona a las entradas. Los fragmentos devuelven una respuesta
+    programada para un conjunto de valores determinado, sin implementar ninguna lógica. Se trata de una relación simple de
+    respuesta de estímulo.
+</p>
+<p>
+    QualityArchitect puede crear fragmentos, fácilmente, tanto para componentes COM como para componentes EJB. Los
+    fragmentos dependen de tablas de búsqueda para crear réplicas de la lógica empresarial de los componentes a los que
+    están reemplazando. La tabla, implementada como una agrupación de datos, determina lo que debe ser el valor devuelto
+    para un conjunto concreto de entradas.
+</p>
+<p>
+    El proceso de creación y despliegue de un fragmento consta de los tres pasos que se indican a continuación:
+</p>
+<ul>
+    <li>
+        Generación de un componente de fragmento
+    </li>
+    <li>
+        Generación de una tabla de búsqueda de fragmento
+    </li>
+    <li>
+        Despliegue del fragmento
+    </li>
+</ul>
+<h4>
+    Generación de un componente de fragmento
+</h4>
+<p>
+    Cuando genera un fragmento, debe generar un componente completo. Para las operaciones que va a fragmentar, necesita
+    crear una tabla de búsqueda. Un componente fragmentado, que contiene código de fragmento para todas las operaciones de
+    dicho componente, es la salida del proceso de generación de fragmento. No puede fragmentar una sola operación.
+</p>
+<h5>
+    Para componentes COM
+</h5>
+<ol>
+    <li>
+        En la vista lógica, seleccione la interfaz del componente.
+    </li>
+    <li>
+        Pulse el botón derecho del ratón sobre la interfaz y seleccione <b>Rational Test &gt; Generar fragmento</b>. Se le
+        solicita la ubicación en la que desea colocar el código de fragmento generado. Seleccione la ubicación. El código
+        se genera.
+    </li>
+</ol>
+<h5>
+    Para componentes EJB
+</h5>
+<ol>
+    <li>
+        En la vista lógica, seleccione la clase de implementación de bean.&nbsp;
+    </li>
+    <li>
+        Pulse el botón derecho del ratón sobre la clase y seleccione <b>Rational Test &gt; Generar fragmento</b>. Se le
+        solicita la ubicación en la que desea colocar el código de fragmento generado. Seleccione la ubicación. El código
+        se genera.
+    </li>
+</ol>
+<h4>
+    Generación de una tabla de búsqueda de fragmento
+</h4>
+<p>
+    Para crear réplicas de la lógica del componente real, el fragmento debe conocer la reacción del componente real cuando
+    se proporciona un conjunto de argumentos. La lógica se mantiene es una tabla de búsqueda, que especifica el valor o
+    error que se debe devolver para un conjunto concreto de argumentos. Debe crear una tabla de búsqueda para cada
+    operación del componente que se fragmenta.
+</p>
+<h5>
+    Para componentes COM
+</h5>
+<ol>
+    <li>
+        En la vista lógica, seleccione la operación de la interfaz del componente.
+    </li>
+    <li>
+        Pulse el botón derecho del ratón sobre la interfaz y seleccione <b>Rational Test &gt; Crear tabla de búsqueda</b>.
+        Se muestra el diálogo Propiedades de la agrupación de datos.
+    </li>
+    <li>
+        Para crear la tabla de búsqueda, siga los mismos pasos básicos que se esquematizan en el apartado <a href="#Working with Datapools">Cómo trabajar con agrupaciones de datos</a>. Esta tabla se utiliza para
+        especificar los valores o las excepciones que devolver para un conjunto determinado de argumentos.
+    </li>
+</ol>
+<h5>
+    Para componentes EJB
+</h5>
+<ol>
+    <li>
+        En la vista lógica, seleccione la operación de la clase de implementación de bean.&nbsp;
+    </li>
+    <li>
+        Pulse el botón derecho del ratón sobre la clase y seleccione&nbsp;
+    </li>
+    <li>
+        <b>Rational Test &gt; Crear tabla de búsqueda</b>. Se muestra el diálogo Propiedades de la agrupación de datos.
+    </li>
+    <li>
+        Para crear la tabla de búsqueda, siga los mismos pasos básicos que se esquematizan en el apartado <a href="#Working with Datapools">Cómo trabajar con agrupaciones de datos</a>. Esta tabla se utiliza para
+        especificar los valores o las excepciones que devolver para un conjunto determinado de argumentos.
+    </li>
+</ol>
+<h4>
+    Despliegue del fragmento
+</h4>
+<p>
+    Una vez que se hayan generado el fragmento y la tabla de búsqueda, el fragmento se puede desplegar en lugar del
+    componente existente. Este proceso es específico del entorno, y en la ayuda en línea de QualityArchitect se proporciona
+    una guía para la realización de esta tarea.
+</p>
+<h3>
+    5.&nbsp;&nbsp;<a id="Using the EJB session recorder" name="Using the EJB session recorder">Utilizar el grabador de
+    sesión de EJB</a>
+</h3>
+<p>
+    El grabador de sesión de EJB es una aplicación Java que le permite interactuar con componentes EJB desplegados. Esta
+    funcionalidad sólo está disponible para Enterprise JavaBeans, no para componentes COM.
+</p>
+<p>
+    El proceso de utilización del grabador de sesión de EJB implica los pasos siguientes:
+</p>
+<ul>
+    <li>
+        Inicio de una sesión de grabación de XML
+    </li>
+    <li>
+        Conexión al servidor EJB
+    </li>
+    <li>
+        Creación de una instancia del bean que se somete a prueba
+    </li>
+    <li>
+        Invocación de la operación en el bean
+    </li>
+    <li>
+        Inserción de puntos de verificación y código Java
+    </li>
+    <li>
+        Generación de código de prueba de la grabación de la sesión de EJB
+    </li>
+</ul>
+<p>
+    El grabador de sesión de EJB se puede utilizar de dos modos: grabando y sin grabar. Cuando se graba, todas las acciones
+    llevadas a cabo se graban en un registro XML que el grabador de sesión de EJB convierte en código Java ejecutable. El
+    código contiene todas las llamadas a método, el código Java insertado y los puntos de verificación. Cuando se utiliza
+    la modalidad sin grabación, la herramienta se limita a crear instancias de los EJB y a invocar sus operaciones.
+</p>
+<ol>
+    <li>
+        Para conectar al servidor EJB, debe proporcionar el URL de Proveedor e InitialContextFactory para conectar al
+        servidor EJB. Esta información debe ser la misma que la que utiliza el código de cliente para conectar al servidor.
+        Puede obtener la información de conexión por omisión para WebSphere y Web Logic en la documentación del producto en
+        línea.&nbsp;
+    </li>
+    <li>
+        Cuando haya proporcionado la información de conexión, seleccione <b>Conectar</b>. Se presenta una lista de los
+        beans desplegados en el servidor. Puede interactuar con uno o más beans durante una sesión y, en este punto, debe
+        seleccionar el primer bean con el que interactuar.
+    </li>
+    <li>
+        Debe crear una instancia del primer bean que se somete a prueba. Seleccione el método de creación adecuado de la
+        mitad superior de la ventana Métodos. Si el método de creación requiere parámetros específicos, especifíquelos en
+        la sección <b>Parámetros</b>. Cuando haya terminado, seleccione <b>Invocar</b> para crear una instancia del bean.
+    </li>
+    <li>
+        Después de crear la instancia del bean, el grabador de sesión de EJB le presenta las distintas operaciones
+        disponibles en el bean. En la mitad superior de la ventana Métodos se muestran las operaciones propias del bean, y
+        en la mitad inferior se muestran las operaciones heredadas. Por norma general, las operaciones heredadas no se
+        prueban. Una vez que haya seleccionado la operación que desea probar, puede proporcionar los parámetros adecuados
+        para ésta en la ventana Parámetros.
+    </li>
+    <li>
+        Si el parámetro es un objeto complejo, se muestra una parte inferior denominada Nuevo, que abre otra ventana en la
+        que se presenta un diálogo que le permite crear una instancia del objeto necesario. La ventana muestra todos los
+        constructores y los argumentos necesarios para compilar una instancia del objeto. Después de facilitar la
+        información del constructor, debe denominar el objeto a fin de que más tarde se pueda hacer referencia al mismo
+        durante la grabación, si fuera necesario. &nbsp;
+    </li>
+    <li>
+        La asignación de nombres para parámetros tiene un valor, puesto que estos valores se vuelven a utilizar durante la
+        grabación de la sesión. Si proporciona un nombre, QualityArchitect puede rellenar el valor de cualquier campo de
+        parámetro cuando se pulsa el botón derecho del ratón sobre dicho campo.
+    </li>
+    <li>
+        Al pulsar <b>Invocar</b>, se llama a la operación con los parámetros proporcionados. El valor de retorno se muestra
+        en el campo <b>Último valor de retorno</b>. Si se necesita este valor como entrada de una llamada posterior, se
+        puede arrastrar y soltar en el campo necesario. También puede pulsar el botón derecho del ratón sobre el mismo
+        cuando el ratón señala al campo del parámetro en el que se va a insertar el valor. Para determinar los valores que
+        presentar en el menú de pulsación del botón derecho del ratón, el grabador de sesión de EJB compara el tipo de
+        parámetro con los tipos anteriores que se han utilizado durante la prueba. &nbsp;
+    </li>
+    <li>
+        En cualquier momento de la sesión, puede insertar código Java y puntos de verificación del menú <b>Insertar</b>.
+        Los puntos de verificación son los mismos que los que se utilizan al generar código de prueba de caso de ejemplo.
+        De igual modo, se puede insertar código Java para realizar proceso adicional.
+    </li>
+    <li>
+        Si se encuentra en modalidad de registro, puede convertir la grabación basada en XML en código Java una vez que
+        haya completado todos los pasos de la prueba. Pulse <b>Detener</b> para llevar a cabo esta acción. Se le solicita
+        que convierta el código XML en código Java, y necesita indicar un nombre de sesión y un nombre de script. El código
+        Java, que se puede ejecutar para crear réplicas de los pasos llevados a cabo durante la grabación, es la salida del
+        proceso. &nbsp;
+    </li>
+</ol></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

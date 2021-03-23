@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Descripci&oacute;n de la distribuci&oacute;n de aplicaciones J2EE</title>
+<meta content="Guideline" name="uma.type">
+<meta content="describing_distribution_for_j2ee_applications" name="uma.name">
+<meta content="Descripci&oacute;n de la distribuci&oacute;n de aplicaciones J2EE" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.0306406686133254E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.0306406686133254E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Descripci&oacute;n de la distribuci&oacute;n de aplicaciones J2EE</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se trata de la forma en la que crear modelos de despliegue de módulos y aplicaciones J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/describe_distribution_9BA1477C.html" guid="{6A112808-0A90-427A-BAB9-E14F3FBF72B5}">Describir la distribución</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Introducción
+</h3>
+<p>
+    Las aplicaciones J2EE tienen características específicas que permiten un despliegue flexible. Las siguientes secciones
+    corresponden a directrices pensadas para el despliegue de&nbsp;<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">módulos J2EE</a> y <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_436A58D2.html" guid="1.6057780853529704E-306">aplicaciones J2EE</a>.
+</p>
+<p>
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/j2ee_deployment_configurations_C0F819AF.html" guid="7.671163061311939E-306">Concepto: configuraciones de despliegue de J2EE</a> para obtener más información sobre
+    las configuraciones de despliegue estándar que J2EE proporciona.
+</p>
+<h3>
+    Modelo de distribución
+</h3>
+<p>
+    La sección <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/describe_distribution_9BA1477C.html" guid="{6A112808-0A90-427A-BAB9-E14F3FBF72B5}">Tarea: descripción de la distribución</a> proporciona un ejemplo genérico
+    de un modelo de despliegue de alto nivel. A continuación hay une ejemplo específico de J2EE, de una aplicación de
+    subastas en línea.
+</p>
+<p align="center">
+    <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/basic_deployment.gif" />
+</p>
+<p>
+    En este ejemplo muy simple, se muestra cada uno de los nodos físicos y proporciona una idea de qué contenedores y
+    procesos se ejecutan en cada nodo.
+</p>
+<p>
+    Sin embargo, un despliegue de J2EE puede ser mucho más complejo. En el siguiente ejemplo se muestra un ejemplo más
+    complejo.
+</p>
+<p align="center">
+    <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/clustered_deployment.gif" />
+</p>
+<p align="left">
+    En este ejemplo, un equilibrador de carga direcciona peticiones a un clúster de servidores web y servidores de
+    aplicaciones. Una aplicación J2EE puede incluir también varios servidores de nombres JNDI, clientes de aplicación
+    pesados, servidores de mensajes, etc. También es posible complementar el diagrama con protocolos, tipos de conexión de
+    red, cortafuegos, etc.
+</p>
+<p align="left">
+    Observe que en el anterior ejemplo, no se listan o modelan los módulos J2EE de cada nodo. Esto se debe a que en estos
+    ejemplos, sólo hay un contenedor EJB lógico y un contenedor web. Todos los EJB y JAR de EJB se despliegan en todos los
+    servidores EJB. Algo parecido ocurre con los componentes web.
+</p>
+<p align="left">
+    Otra opción para modelar la distribución de una aplicación es crear un modelo de correlación entre módulos J2EE y/o
+    aplicaciones J2EE con servidores específicos. Esto se muestra en un diagrama de despliegue UML dibujando una
+    dependencia (estereotipo &lt;&lt;deploy&gt;&gt;) desde el archivador al nodo. En el siguiente diagrama se muestra esta
+    opción. En este ejemplo, se correlaciona un archivador J2EE (un EAR) con un nodo (un servidor de aplicaciones
+    específico).
+</p>
+<p align="center">
+    <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/ear_deployment.gif" />
+</p>
+<p align="left">
+    En general, no es necesario crear modelos sobre la asignación de archivadores J2EE con nodos y contenedores. Sin
+    embargo, en algunas circunstancias, puede haber la necesidad que determinados elementos del sistema residan en un nodo
+    con características específicas (por ejemplo, un nodo que dé soporte a una base de datos, o un nodo que dé soporte a un
+    sistema tradicional). En casos como este, se puede desear crear un modelo del despliegue de módulos J2EE en nodos
+    específicos. Además, la creación de modelos de la correlación entre archivadores y servidores es especialmente útil si
+    existe la automatización para dar soporte al despliegue real de archivadores en el servidor especificado.
+</p><br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

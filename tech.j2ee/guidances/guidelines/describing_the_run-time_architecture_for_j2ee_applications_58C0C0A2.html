@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Descripci&oacute;n de la arquitectura de tiempo de ejecuci&oacute;n de aplicaciones J2EE</title>
+<meta content="Guideline" name="uma.type">
+<meta content="describing_the_run-time_architecture_for_j2ee_applications" name="uma.name">
+<meta content="Descripci&oacute;n de la arquitectura de tiempo de ejecuci&oacute;n de aplicaciones J2EE" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.7390519818410197E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.7390519818410197E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Descripci&oacute;n de la arquitectura de tiempo de ejecuci&oacute;n de aplicaciones J2EE</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata cómo modelar la arquitectura de tiempo de ejecución de una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">Describir la arquitectura de tiempo de ejecución</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    La arquitectura de tiempo de ejecución de una aplicación se describe en la Vista de proceso, una vista arquitectónica
+    que describe los elementos concurrentes de un sistema. Estas directrices proporcionan ayuda específica sobre cómo
+    modelar la Vista de proceso de una aplicación J2EE.
+</p>
+<p>
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/process_view_E3DD0B09.html" guid="6.45284088262517E-306">Concepto: Vista de
+    proceso</a> para obtener más información.
+</p>
+<h3>
+    <a id="Modeling" name="Modeling"></a>Cómo modelar la Vista de proceso
+</h3>
+<p>
+    Los componentes J2EE (consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html#J2EE_Components" guid="1.527482214591853E-307">Concepto: visión general de J2EE: componentes de J2EE</a>) se despliegan en entornos
+    denominados contenedores. Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html#J2EE_Containers" guid="1.527482214591853E-307">Concepto: visión general J2EE : contenedores de J2EE</a> para obtener una descripción de
+    cada uno de los tipos de contenedores que J2EE define.
+</p>
+<p>
+    Cada contenedor es un elemento concurrente y, por lo tanto, debería aparecer en la Vista de proceso de la arquitectura.
+    Otros elementos concurrentes importantes que aparecen normalmente en la vista de proceso de alto nivel son los sistemas
+    externos.
+</p>
+<p>
+    A continuación se muestra un diagrama típico de la vista de proceso de alto nivel de una aplicación J2EE.
+</p>
+<p align="center">
+    <img src="./../../../tech.j2ee/guidances/guidelines/resources/process_view.gif" alt="Diagrama descrito en el texto adjunto." />
+</p>
+<p>
+    En un ejemplo real, se vería también representado un middleware orientado a mensajes (MOM) de un proveedor específico,
+    así como sistemas tradicionales y clientes de aplicación. Sin embargo, el contenedor web y el contenedor EJB son
+    contenedores estándar que deberían aparecer en todas las vistas de proceso de J2EE.
+</p>
+<p>
+    Hay que tener en cuenta que en este diagrama no se muestra la distribución física de estos sistemas en nodos de
+    hardware específicos. Esto se muestra en el modelo de despliegue (consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/describing_distribution_for_j2ee_applications_93B5A232.html" guid="2.0306406686133254E-306">Técnica: descripción de la distribución para las aplicaciones J2EE</a> para obtener más
+    información).
+</p>
+<p>
+    En este ejemplo, se ven los mecanismos de comunicación entre procesos seleccionados y empleados entre los contenedores.
+    J2EE proporciona mecanismos de comunicación entre procesos específicos. Son los siguientes:
+</p>
+<ul>
+    <li>
+        RMI (Java Remote Method Invocation) para comunicaciones síncronas entre clases Java.
+    </li>
+    <li>
+        RMI-IIOP para operaciones con clientes CORBA (habitualmente aplicaciones tradicionales).
+    </li>
+    <li>
+        HTTP/HTTPS para comunicaciones con clientes basados en la web (a pesar de que se da soporte a otros protocolos,
+        como cuando se interactúa con servicios web XML).
+    </li>
+    <li>
+        JMS (Java Message Service) para mensajes e interacciones con el middleware orientado a mensajes (MOM).
+    </li>
+</ul>
+<p>
+    Al definir la vista de proceso, una decisión importante es decidir cuándo utilizar JMS frente a RMI o RMI-IIOP. En este
+    ejemplo, el cliente de aplicación, el contenedor EJB y otros sistemas tradicionales utilizan mensajería para
+    comunicarse. Sin embargo, no está claro qué elementos se comunican con qué otros. Para resolver esta ambigüedad,
+    considere eliminar el sistema MOM del diagrama, y mostrar a JMS como la asociación entre los elementos que se comunican
+    mediante mensajería.
+</p>
+<p>
+    Otra ambigüedad es saber si los EJB se comunican entre sí mediante mensajería. Esto se puede aclarar mostrando una
+    asociación JMS del contenedor EJB consigo mismo. El diagrama final pasa a ser:
+</p>
+<p align="center">
+    <img src="./../../../tech.j2ee/guidances/guidelines/resources/process_view_simplified.gif" alt="Diagrama descrito en el texto adjunto." />
+</p>
+<p>
+    La vista de proceso, sin embargo, es algo más que tan sólo contenedores y sistemas de alto nivel. También trata sobre
+    la concurrencia dentro de estos contenedores y sistemas.
+</p>
+<p>
+    La vista de proceso debería identificar y modelar los siguientes tipos de clases activas.
+</p>
+<ul>
+    <li>
+        Hebras de Java.
+    </li>
+    <li>
+        Destinos de mensajes.
+    </li>
+    <li>
+        Beans controlados por mensajes (puesto que se invocan de forma asíncrona mediante mensajes). Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_enterprise_javabeans_ejbs_2581AEE5.html" guid="9.931732120190802E-307">Técnica: identificación de Enterprise JavaBeans</a> para obtener información sobre
+        estereotipos específicos utilizados para modelar beans controlados por mensajes.
+    </li>
+    <li>
+        Procesos adicionales que son parte del diseño global del sistema. Un proceso temporizador separado es un ejemplo de
+        este tipo de proceso.
+    </li>
+</ul>
+<p>
+    Al utilizar JMS, se puede elegir relacionar directamente consumidores y productores de mensajes, o modelar la relación
+    de forma más precisa modelando temas y colas.
+</p>
+<p>
+    Los diagramas de interacciones sirven para mostrar tanto la comunicación síncrona como la comunicación síncrona entre
+    elementos de diseño. También se pueden utilizar para analizar el comportamiento concurrente a efectos de problemas
+    lógicos y de rendimiento. En concreto, un arquitecto de software puede buscar dónde se producen mensajes frecuentes o
+    se dan elevados volúmenes de transferencia de datos en la red. Esto puede hacer que el arquitecto rediseñe interfaces,
+    o reasigne elementos de diseño entre hebras de control, entre servidores o entre cliente y servidor.<br />
+</p>
+<p>
+    Hay que observar que dentro de un contenedor EJB, es éste quien maneja las hebras y los procesos; los EJB no pueden
+    crear o gestionar hebras. Por lo tanto, cada EJB se debería considerar como una clase activa, sin embargo, puesto que
+    las llamadas a beans de sesión y beans de identidad son llamadas con bloqueo síncrono, normalmente no se modelan como
+    clases activas. Normalmente, la vista de proceso de un contenedor EJB se limita a un mecanismo de concurrencia
+    disponible: JMS con beans controlados por mensajes JMS.
+</p>
+<p>
+    A pesar de que los beans de sesión y los beans de entidad generalmente no se modelan como clases activas, haya
+    problemas de concurrencia, como cuando hay un EJB leyendo de la base de datos mientras otro escribe en ella. Estos
+    problemas se tratan mediante la utilización de transacciones. La aproximación para utilizar transacción se debería
+    documentar en las directrices específicas del proyecto.
+</p>
+<h3>
+    <a id="Allocating" name="Allocating"></a>Asignación de elementos de diseño a clases activas
+</h3>
+<p>
+    La sección <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">Tarea: descripción de la arquitectura de tiempo de ejecución</a> trata
+    sobre la necesidad de asignar elementos de diseño a procesos y hebras. En una aplicación J2EE, todos los componentes
+    web se asignan al contenedor web, y todos los EJB al contenedor EJB. Dada esta relación simple, no hay necesidad de
+    modelar esta asignación.
+</p>
+<p>
+    Sin embargo, si el diseño incluye procesos concurrentes adicionales (como por ejemplo dos aplicaciones de cliente
+    distintas) puede ser útil especificar qué elementos de diseño se ejecutan en cada aplicación.
+</p>
+<p>
+    Para las hebras de Java, los beans controlados por mensajes, las colas y temas JMS, los problemas están más en la forma
+    en que se comunican, para evitar puntos muertos, datos no coherentes, etc. Estas situaciones se exploran mejor
+    examinando guiones de uso realizados que incluyan estos elementos.
+</p>
+<h3>
+    <a id="Alternatives" name="Alternatives"></a>Otras alternativas de modelado
+</h3>
+<p>
+    Debido a la afinidad entre la Vista de proceso y la Vista de despliegue, a menudo se combinan los diagramas de alto
+    nivel de estas vistas.
+</p>
+<p>
+    Además, puesto que cada contenedor J2EE no es sólo un proceso, sino que también es un entorno de ejecución, se puede
+    modelar como un "nodo lógico" en lugar de como una clase activa.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

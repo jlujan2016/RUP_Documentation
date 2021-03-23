@@ -1,0 +1,360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Dise&ntilde;o con objetos activos en Rational Rose RealTime</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="designing_with_active_objects" name="uma.name">
+<meta content="Dise&ntilde;o con objetos activos en Rational Rose RealTime" name="uma.presentationName">
+<meta content="Tool:rup_rose_rt:Rational Rose RealTime" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Rose RealTime" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B3026434-672D-4564-9106-A951C326EBF5}", "{8A0A5BB3-5CBC-4A38-BFD2-4A21CA5FF833}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B3026434-672D-4564-9106-A951C326EBF5}", "{8A0A5BB3-5CBC-4A38-BFD2-4A21CA5FF833}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B3026434-672D-4564-9106-A951C326EBF5}", "{8A0A5BB3-5CBC-4A38-BFD2-4A21CA5FF833}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{8A0A5BB3-5CBC-4A38-BFD2-4A21CA5FF833}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Dise&ntilde;o con objetos activos en Rational Rose RealTime</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describen los componentes de objetos activos y se explica cómo diseñar con objetos activos en Rational Rose RealTime.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_rose_rt_DDC0220E.html" guid="{B3026434-672D-4564-9106-A951C326EBF5}">Rational Rose RealTime</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/capsule_design_BF66E39A.html" guid="{F13C1161-7F17-45E3-A8B7-03944A1FA6E4}">Diseño de la cápsula</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    Un objeto activo consta de cápsulas con protocolos y puertos.
+</p>
+<p>
+    Las cápsulas son objetos muy encapsulados que utilizan la comunicación basada en mensajes con otras cápsulas a través
+    de sus objetos de puerto. Las cápsulas pueden agregar otras cápsulas. Una estructura de cápsulas pueden contener otras
+    cápsulas, que son roles de cápsulas.
+</p>
+<p>
+    El conjunto de mensajes intercambiados entre dos objetos cumple con un patrón de comunicación denominado un protocolo.
+    Básicamente, es un acuerdo contractual que define los tipos de mensajes válidos que se pueden intercambiar entre los
+    participantes del protocolo.
+</p>
+<p>
+    Un diagrama de estado es un modo de definir el comportamiento de los objetos. Muestra la secuencia de estados por los
+    que pasa un objeto o interacción durante su vida en respuesta a los mensajes recibidos, junto con sus respuestas y
+    acciones.
+</p>
+<h3>
+    Pasos de la herramienta
+</h3>
+<p>
+    Para diseñar objetos activos en Rational Rose RealTime, debe llevar a cabo los pasos siguientes:
+</p>
+<ol>
+    <li>
+        <a href="#Create a capsule role">Crear un rol de cápsula</a>
+    </li>
+    <li>
+        <a href="#Create ports and bind to protocols">Crear puertos y vincularlos a protocolos</a>
+    </li>
+    <li>
+        <a href="#Define a capsule state machine">Definir una máquina de estado de cápsula</a>
+    </li>
+    <li>
+        <a href="#Define states and substates">Definir estados y subestados</a>
+    </li>
+    <li>
+        <a href="#Define state transitions">Definir transiciones de estado</a>
+    </li>
+    <li>
+        <a href="#Define attributes on classes">Definir atributos en clases</a>
+    </li>
+</ol>
+<h3>
+    1. <a id="Create a capsule role" name="Create a capsule role">Crear un rol de cápsula</a>
+</h3>
+<p>
+    Las cápsulas se crean en la vista lógica del navegador de modelos.
+</p>
+<ol>
+    <li>
+        Seleccione la herramienta <b>Rol de cápsula</b> en el cuadro de herramientas.
+    </li>
+    <li>
+        Sitúe el cursor en la ubicación en la que se va a colocar el rol de cápsula y pulse el botón izquierdo del ratón.
+    </li>
+    <li>
+        Seleccione la nueva cápsula asociada al rol de cápsula de la lista desplegable.
+    </li>
+    <li>
+        Proporcione un nombre adecuado al rol de cápsula.
+    </li>
+    <li>
+        Repita los pasos anteriores para cada rol de cápsula que desee crear.
+    </li>
+</ol>
+<h3>
+    2. <a id="Create ports and bind to protocols" name="Create ports and bind to protocols">Crear puertos y vincularlos a
+    protocolos</a>
+</h3>
+<ol>
+    <li>
+        Busque la cápsula en el navegador de modelos o en un diagrama de clase.
+    </li>
+    <li>
+        Expanda los elementos de la cápsula del navegador, o bien, pulse el botón derecho del ratón sobre la cápsula de un
+        diagrama de clase para abrir el diagrama de estructura de la cápsula.
+    </li>
+    <li>
+        Utilice la herramienta <b>Puerto</b> del cuadro de herramientas para colocar un puerto en el diagrama de estructura
+        de la cápsula. El puerto se puede soltar en el borde de la cápsula o dentro del área de rectángulo.
+    </li>
+    <li>
+        Establezca el nombre del puerto.
+    </li>
+    <li>
+        Seleccione un protocolo de la lista o cree uno nuevo.
+    </li>
+    <li>
+        Pulse el botón derecho del ratón sobre el puerto para seleccionar el diálogo Especificación del puerto.
+    </li>
+    <li>
+        Utilice el diálogo Especificación del puerto para cambiar el protocolo, para seleccionar si el puerto va a estar
+        cableado o no, y para establecer si el puerto se va a conjugar.
+    </li>
+</ol>
+<h3>
+    3. <a id="Define a capsule state machine" name="Define a capsule state machine">Definir una máquina de estado de
+    cápsula</a>
+</h3>
+<ol>
+    <li>
+        Busque la cápsula en el navegador de modelos o en un diagrama de clase.
+    </li>
+    <li>
+        Expanda los elementos de la cápsula en el navegador, o bien, pulse el botón derecho del ratón sobre la cápsula de
+        un diagrama de clase para abrir el diagrama de estado de la cápsula.
+    </li>
+    <li>
+        Utilice el cuadro de herramientas <b>Diagrama de estado</b> para colocar estados y transiciones en el diagrama de
+        estado.
+    </li>
+</ol>
+<h3>
+    4. <a id="Define states and substates" name="Define states and substates">Definir estados y subestados</a>
+</h3>
+<ol>
+    <li>
+        Busque la cápsula para la que se está actualizando el comportamiento. Las cápsulas se pueden encontrar en el
+        navegador de modelos o en un diagrama de clase.
+    </li>
+    <li>
+        Pulse el botón derecho del ratón sobre la cápsula para abrir el Diagrama de estado. De este modo, se abre el
+        diagrama en un editor de diagramas de estado.
+    </li>
+    <li>
+        Utilice la herramienta <b>Estado</b> del cuadro de herramientas para soltar un nuevo estado en el diagrama. Repita
+        esta acción para cada estado que desee crear.
+    </li>
+    <li>
+        Proporciona un nombre adecuado a cada estado.
+    </li>
+    <li>
+        Efectúe una doble pulsación en un estado que vaya a tener subestados. De este modo, se muestra un nuevo diagrama de
+        estado en el que puede añadir subestados.
+    </li>
+    <li>
+        Utilice la pestaña que se encuentra en la parte inferior de la ventana para elegir el nivel de estado en el que
+        desea volver a navegar.
+    </li>
+</ol>
+<p>
+    <b>Nota</b>: De forma alternativa, puede añadir estados a través del área Navegador del editor de diagramas de estado.
+</p>
+<h3>
+    5. <a id="Define state transitions" name="Define state transitions">Definir transiciones de estado</a>
+</h3>
+<h4>
+    Añadir transiciones iniciales
+</h4>
+<ol>
+    <li>
+        Pulse en el punto inicial del diagrama y arrastre la transición encima del estado de destino. El punto inicial es
+        el círculo negro que aparece en el ángulo superior izquierdo del diagrama.
+    </li>
+    <li>
+        Proporcione un nombre adecuado para la transición, si no es el valor por omisión. La transición inicial tiene el
+        nombre por omisión de Inicial. Puede cambiar el nombre seleccionando la etiqueta y escribiéndolo en la misma. La
+        transición inicial se invoca de modo automático en el tiempo de ejecución al crear la instancia de la cápsula.
+        Todos los códigos de acción asociados a la transición inicial se ejecutan en cuanto se crea la instancia de la
+        cápsula.
+    </li>
+</ol>
+<h4>
+    Añadir transiciones
+</h4>
+<ol>
+    <li>
+        Seleccione la herramienta de transición del cuadro de herramientas y arrastre una transición del estado de origen
+        al estado de destino.
+    </li>
+    <li>
+        Proporcione un nombre adecuado para la transición, o bien, acepte el valor por omisión.
+    </li>
+</ol>
+<h4>
+    Añadir código de detalle a las máquinas de estado
+</h4>
+<p>
+    Se puede añadir código C, C++ o Java como acciones en transiciones, puntos de opción y entrada o salida de estado en
+    los diagramas de estado de la cápsula para que se ejecuten en el tiempo de ejecución. En el código generado para el
+    modelo, sólo se incluye el código añadido a los diagramas de estado de la cápsula. Las acciones detalladas en diagramas
+    de estado de clase de datos o protocolo no se incluyen en el código generado para estas clases.
+</p>
+<h4>
+    Añadir desencadenantes
+</h4>
+<p>
+    Antes de que se pueda establecer un desencadenante para una transición, se debe haber definido el puerto en el que se
+    va a recibir el desencadenante.
+</p>
+<ol>
+    <li>
+        Efectúe una doble pulsación en la transición para abrir el diálogo Especificación de la transición.&nbsp;
+    </li>
+    <li>
+        Seleccione la pestaña <b>Desencadenante</b>.
+    </li>
+    <li>
+        Con el cursor en el área de la lista de puertos, pulse el botón derecho del ratón y seleccione <b>Insertar</b> en
+        el menú.
+    </li>
+    <li>
+        En el área Puerto, seleccione el puerto en el que se va a recibir el desencadenante.
+    </li>
+    <li>
+        En el área Señal, seleccione la señal de puerto que va a causar el suceso desencadenante.
+    </li>
+    <li>
+        Pulse los botones <b>Aceptar</b> para cerrar los diálogos abiertos.
+    </li>
+</ol>
+<h4>
+    Añadir código a la transición
+</h4>
+<p>
+    Ahora que ya tiene todos los elementos necesarios colocados (estado inicial, transición inicial y puertos), debe añadir
+    código de detalle a la transición inicial, así como transiciones de estado a estado. El código de detalle se ejecuta
+    cuando se ejecuta la transición inicial en el tiempo de ejecución del modelo, o bien, cuando se recibe un
+    desencadenante en la transición de estado a estado.
+</p>
+<ol>
+    <li>
+        Efectúe una doble pulsación en la transición para abrir el diálogo Especificación de la transición.
+    </li>
+    <li>
+        Seleccione la pestaña <b>Acciones</b> para visualizar la ventana de código.
+    </li>
+    <li>
+        Añada el código que se va a ejecutar en la transición.
+    </li>
+    <li>
+        Seleccione el botón <b>Aceptar</b> para cerrar el diálogo abierto.
+    </li>
+</ol>
+<p>
+    <b>Nota</b>: No es necesario que incluya llaves de apertura y cierre "{`, `}". El generador de código las añade
+    automáticamente.
+</p>
+<h3>
+    6. <a id="Define attributes on classes" name="Define attributes on classes">Definir atributos en clases</a>
+</h3>
+<ol>
+    <li>
+        Abra el recuadro de diálogo Especificación de la cápsula efectuando una doble pulsación en la cápsula del
+        navegador, o bien, seleccionando la cápsula en un diagrama y seleccionando <b>Abrir especificación</b> en el menú
+        emergente.
+    </li>
+    <li>
+        Seleccione la pestaña <b>Atributos</b> de la Especificación de la cápsula.
+    </li>
+    <li>
+        Con el cursor en el área abierta de la pestaña, pulse el botón derecho del ratón y seleccione <b>Insertar</b>.
+    </li>
+    <li>
+        Cambie el nombre de NewAttribute1 por algo que le resulte más significativo y, a continuación, pulse Intro.
+    </li>
+    <li>
+        Efectúe una doble pulsación en el nuevo atributo para visualizar el diálogo Especificación del atributo.
+    </li>
+    <li>
+        Utilice el diálogo Especificación del atributo para establecer el tipo de atributo y el valor inicial.
+    </li>
+</ol><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

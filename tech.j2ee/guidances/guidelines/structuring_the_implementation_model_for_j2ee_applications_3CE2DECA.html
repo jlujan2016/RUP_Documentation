@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Estructuraci&oacute;n de un modelo de implementaci&oacute;n para aplicaciones J2EE</title>
+<meta content="Guideline" name="uma.type">
+<meta content="structuring_the_implementation_model_for_j2ee_applications" name="uma.name">
+<meta content="Estructuraci&oacute;n de un modelo de implementaci&oacute;n para aplicaciones J2EE" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "8.351669390824964E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="8.351669390824964E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Estructuraci&oacute;n de un modelo de implementaci&oacute;n para aplicaciones J2EE</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata cómo estructurar el modelo de implementación para una aplicación J2EE.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">Estructurar el modelo de implementación</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h2>
+    Introducción
+</h2>
+<p>
+    En esta sección se presupone que el lector está familiarizado con la información general sobre J2EE como una plataforma
+    de tecnología, tal como se trata en la sección <a href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307" class="elementLinkWithUserText">Concepto: visión general de Java 2 Platform Enterprise
+    Edition (J2EE)</a> y <a href="./../../../core.base_rup/guidances/concepts/mapping_from_design_to_code_D1454680.html" guid="1.424219730601675E-305" class="elementLinkWithUserText">Concepto: correlación del diseño al código</a>. Algunos
+    de los conceptos en estas directrices son propios de UML 1.4, mientras que es posible que lo esté utilizando en el
+    contexto de un plug-in basado en UML 1.3. En el caso que se presenten dificultades en comprender algún aspecto,
+    compruebe qué indican las dos especificaciones UML sobre dicho aspecto.
+</p>
+<h2>
+    <a name="Structuring the Implementation Model" id="Structuring the Implementation Model"></a>Estructuración del modelo
+    de implementación
+</h2>
+<p>
+    La sección <a href="./../../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}" class="elementLinkWithUserText">Tarea: estructuración del modelo de
+    implementación</a>&nbsp;describe la forma en que crear una estructura del modelo de implementación que esté en gran
+    medida alineada con la estructura en el modelo de diseño y que, a la vez, refleje todas las restricciones del entorno
+    de desarrollo y que dé soporte al desarrollo paralelo y la integración incremental.
+</p>
+<p>
+    La estructura del modelo de implementación para una aplicación J2EE depende del entorno de implementación y desarrollo,
+    sin embargo, en general, hay cuatro estructuras potenciales dentro de un modelo de implementación de J2EE:
+</p>
+<ul>
+    <li>
+        Soporte de despliegue (módulos J2EE y descriptores de despliegue).
+    </li>
+    <li>
+        Estructura de directorios virtuales (páginas HTML, JSP).
+    </li>
+    <li>
+        Directorio Java para elementos desplegados en un servidor web (servlets, JavaBeans).
+    </li>
+    <li>
+        Directorio Java para elementos desplegados en un servidor de aplicaciones EJB.
+    </li>
+</ul>
+<h2>
+    <a name="Modeling Implementation Subsystems" id="Modeling Implementation Subsystems"></a>Modelado de subsistemas de
+    implementación
+</h2>
+<p>
+    La vista de implementación en el <a href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}" class="elementLinkWithUserText">Producto de trabajo: documento de
+    arquitectura de software</a> proporciona una visión general a alto nivel del modelo de implementación. Esto incluye la
+    identificación de subsistemas de implementación. En una aplicación J2EE, podría ocurrir que los subsistemas de
+    implementación no se correlacionasen con un único directorio en el sistema de archivos o en un único paquete en el
+    modelo, puesto que el subsistema de implementación podría incluir elementos no Java de un modelo (como páginas HTML y
+    JSP) y elementos Java de otro. Una estrategia ante esta situación es tener una estructura de empaquetado paralela en
+    cada modelo. Los paquetes con el mismo nombre en cada modelo se asocian de forma implícita.<br />
+</p>
+<p>
+    Es habitual que un subsistema de implementación proporcione la implementación para un único archivo de implementación
+    desplegable (un archivo EAR, JAR o WAR). En este caso, la identificación de archivos que se despliegan podría servir
+    para identificar los subsistemas de implementación.
+</p>
+<p>
+    Dentro de cada <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_subsystem_118747E9.html" guid="{0F629848-C19E-49AB-A6C1-C8D6A094898A}">subsistema de implementación</a> podría haber una representación de
+    elementos físicos, formados por los directorios de implementación y los archivos de implementación. También podría
+    haber elementos lógicos, formados por <a href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}" class="elementlinkwithusertext">clases</a>, componentes, <a href="./../../../core.base_rup/workproducts/rup_design_package_8376BC8E.html" guid="{80CC5437-F481-487B-A69B-957D9D236D8D}" class="elementlinkwithusertext">paquetes</a>, etc., que corresponderían a los elementos del <a href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}" class="elementLinkWithUserText">Producto de trabajo: modelo de diseño</a>, pero son un modelo preciso del código fuente
+    (un modelo de ingeniería de doble sentido). Consulte la sección <a href="./../../../core.base_rup/guidances/concepts/mapping_from_design_to_code_D1454680.html" guid="1.424219730601675E-305" class="elementLinkWithUserText">Concepto: correlación de diseño a código</a> para obtener más información sobre las
+    relaciones entre el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">modelo
+    de diseño</a> y el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">modelo de implementación</a>.<br />
+</p>
+<p>
+    Los modelos de ingeniería de doble sentido proporcionan una representación precisa del código fuente. In J2EE, cada
+    paquete en un modelo Java representa un paquete Java, cada clase representa una clase Java, y así sucesivamente. Sin
+    embargo, a menudo hay la necesidad de complementar los modelos de ingeniería de doble sentido con información
+    adicional, tal como:
+</p>
+<ul>
+    <li>
+        Diagramas en los que se muestra información que no se crea de forma automática como parte de la ingeniería de doble
+        sentido.
+    </li>
+    <li>
+        Abstracciones de nivel superior del modelo.
+    </li>
+</ul>
+<p>
+    El modelo de diseño es una abstracción que se realiza a partir de las clases, los componentes, los paquetes y así
+    sucesivamente. Sin embargo, también podría haber la necesidad de abstracciones de nivel superior o diagramas
+    adicionales para los elementos físicos (archivos y directorios). Dichos elementos se describen en las secciones
+    posteriores.
+</p>
+<h2>
+    <a name="Modeling Implementation Directories" id="Modeling Implementation Directories"></a>Modelado de directorios de
+    implementación
+</h2>
+<p>
+    Generalmente la ingeniería de doble sentido sólo maneja un subconjunto de los directorios necesarios en el entorno de
+    desarrollo. A menudo se necesitan directorios adicionales para organizar artefactos de prueba, unidades de despliegue,
+    documentación, etc. Generalmente no es preciso modelar, puesto que los directorios se pueden visualizar como parte del
+    sistema de archivos.
+</p>
+<h2>
+    <a name="Modeling Implementation Files" id="Modeling Implementation Files"></a>Modelado de archivos de implementación
+</h2>
+<p>
+    Los archivos de implementación en general no se modelan a no ser que se proporcione el soporte de alguna herramienta de
+    ingeniería de doble sentido o que se necesiten mostrar algunas relaciones no tan obvias.
+</p>
+<p>
+    Normalmente hay un archivo .java por cada clase o interfaz Java, y un archivo .class compilado por cada archivo .java.
+    Por lo tanto, modelar estos archivos no es muy interesante.
+</p>
+<p>
+    En J2EE, un subsistema contiene normalmente uno o más archivos de archivado (archivos JAR, WAR o EAR).
+</p>
+<p>
+    La forma más correcta de modelar archivos de archivado es mediante una relación de composición desde el archivo de
+    archivado a los archivos que contiene. Sin embargo, cuando los archivos .class compilados se combinan para formar un
+    archivo JAR podría ser más útil mostrar una dependencia desde el archivo JAR a las clases e interfaces que implementa
+    en última instancia.
+</p>
+<p>
+    Si el subsistema de implementación sólo crea un archivo JAR, quizás no será necesario modelar más; especialmente si
+    todos los archivos que se pueden desplegar en el subsistema de implementación se presupone que son parte del archivo
+    JAR.
+</p>
+<h4>
+    Solapamiento de archivos de archivado
+</h4>
+<p>
+    Es posible, pero en general poco recomendable, el definir dos archivos de archivado que contengan algunos de los
+    elementos comunes. Por ejemplo, dos archivos EAR podrían contener algunos, pero no todos, JAR de EJB iguales; o dos JAR
+    de EJB podrían contener los mismos EJB, pero distintos descriptores de despliegue.
+</p>
+<p>
+    Es mejor que los archivos de archivado <b>no</b> se solapen para mantener una correspondencia cercana entre los
+    subsistemas de implementación y los archivos de archivado desplegables. Sin embargo, si el solapamiento es necesario,
+    podría ser útil el modelarlos junto a las causas para dichos solapamientos.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

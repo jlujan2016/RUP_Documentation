@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concepto: C&aacute;lculo del esfuerzo del proyecto</title>
+<meta content="Concept" name="uma.type">
+<meta content="estimating_project_effort" name="uma.name">
+<meta content="C&aacute;lculo del esfuerzo del proyecto" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qIh6UABuEdqrKcHWz1HoWw", "{EE97A8CD-66CA-4A9B-9871-E3B94CCED528}", "2.0746098019135414E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "2.0746098019135414E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_qIh6UABuEdqrKcHWz1HoWw", "{EE97A8CD-66CA-4A9B-9871-E3B94CCED528}", "2.0746098019135414E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.0746098019135414E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concepto: C&aacute;lculo del esfuerzo del proyecto</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz de explica cómo calcular el esfuerzo del proyecto con técnicas de cálculo basadas en guiones de uso y la técnica de cálculo Delphi de banda ancha.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/roles/rup_project_manager_363CE680.html" guid="{EE97A8CD-66CA-4A9B-9871-E3B94CCED528}">Gestor de proyectos</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="calcular el esfuerzo" text="concepto de" name="XE_estimating_effort__concept_of" id="XE_estimating_effort__concept_of" class="index"></a> 
+<h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    Uno de los deseos más comunes en los proyectos de desarrollo de software es determinar con precisión y por adelantado
+    el coste total del proyecto. La norma en el ámbito industrial suelen ser los desbordamientos de costes y planificación,
+    por lo que este deseo es comprensible. Sin embargo, actualmente, la práctica de desarrollo de software no es una
+    ciencia predictiva, como evidencia la gran cantidad de errores de los proyectos.
+</p>
+<p>
+    Dicho esto, todavía resulta útil intentar calcular los costes del proyecto y, después, calibrar estos cálculos en
+    función de los resultados reales como los progresos del proyecto. A continuación se proporcionan algunas técnicas que
+    pueden resultarle útiles para calcular los costes del proyecto de software.
+</p>
+<h3>
+    <a id="UseCasePoints" name="UseCasePoints">Puntos de guión de uso</a>
+</h3>
+<p>
+    Esta técnica se originó a partir del trabajo de Objective Systems SF AB; la propuso por primera vez Gustav Karner en un
+    documento con fecha de 1993 titulado <i>Resource Estimation for Objectory Projects</i>. Esta técnica permite calcular
+    los recursos necesarios para desarrollar un sistema de software utilizando los elementos del modelo de guión de uso
+    como base del cálculo. Los puntos de guión de uso (UCP) que se derivan de este método se pueden utilizar para
+    determinar el recuento del punto de función (FP) equivalente. Los puntos de función (FP) son una técnica común de
+    cálculo, propuesta por Albrecht A. J. (1979), <i>Measuring application development productivity</i>.
+</p>
+<p>
+    Para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/the_estimation_of_effort_based_on_use_cases_9C41D15B.html" guid="1.9405904686693683E-305">Whitepaper: The Estimation of Effort Based on Use Cases</a>.
+</p>
+<h3>
+    <a id="WidebandDelphi" name="WidebandDelphi">Delphi de banda ancha</a>
+</h3>
+<p>
+    Esta técnica se originó en Rand Corporation, en 1948, y empezó como el método de cálculo Delphi. La técnica básica
+    instigó a un equipo reducido de expertos a generar de forma anónima cálculos individuales a partir de la descripción de
+    un problema y alcanzar un consenso sobre un conjunto final de cálculos mediante la iteración.
+</p>
+<p>
+    A principios de 1970, Barry Boehm y sus compañeros de Rand ampliaron el método básico con una mayor interacción con el
+    equipo de cálculo, lo que dio como resultado el método Delphi de banda ancha; consulte <i>Software Engineering
+    Economics.</i> [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" target="ory_doc" guid="7.755968586980351E-308">BOE81</a>]. Mary Sakry y Neil Potter, de The Process Group, un empresa
+    consultora con sede en Dallas (Texas), crearon un procedimiento repetible para aplicar el método de cálculo Delphi de
+    banda ancha en proyectos de software. En esta directriz se explica dicho procedimiento.
+</p>
+<p>
+    Para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/estimating_effort_using_the_wide-band_delphi_technique_CAC30635.html" guid="8.245547473531647E-305">Technique: Estimating Effort Using the Wideband Delphi Technique</a>.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

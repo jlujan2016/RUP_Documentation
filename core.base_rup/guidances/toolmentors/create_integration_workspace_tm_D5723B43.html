@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Creaci&oacute;n de un espacio de trabajo de compilaci&oacute;n e integraci&oacute;n utilizando Rational ClearCase</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="create_integration_workspace_tm" name="uma.name">
+<meta content="Creaci&oacute;n de un espacio de trabajo de compilaci&oacute;n e integraci&oacute;n utilizando Rational ClearCase" name="uma.presentationName">
+<meta content="Tool:rup_clearcase:Rational ClearCase" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational ClearCase" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{AECDE96A-18C0-485F-9B06-1A975A33301C}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{AECDE96A-18C0-485F-9B06-1A975A33301C}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{AECDE96A-18C0-485F-9B06-1A975A33301C}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_85i-sDIFEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{AECDE96A-18C0-485F-9B06-1A975A33301C}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_XxCC0AIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{AECDE96A-18C0-485F-9B06-1A975A33301C}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{AECDE96A-18C0-485F-9B06-1A975A33301C}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{AECDE96A-18C0-485F-9B06-1A975A33301C}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{AECDE96A-18C0-485F-9B06-1A975A33301C}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Creaci&oacute;n de un espacio de trabajo de compilaci&oacute;n e integraci&oacute;n utilizando Rational ClearCase</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo crear un espacio de trabajo de compilación e integración utilizando Rational ClearCase.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_clearcase_9665C.html" guid="{B2D1373B-A826-4169-A38A-B53B2122DC7C}">Rational ClearCase</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/create_integration_workspace_791B9994.html" guid="{85EC2AE2-FEAF-4DAE-B633-A4D97A9136D2}">Crear espacios de trabajo de integración</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    La noción de un espacio de trabajo de integración es similar al "espacio de trabajo privado" de los implementadores,
+    donde se puede desarrollar y cambiar código en un área contenida. El espacio de trabajo de integración es donde los
+    integradores de software verifican si se pueden compilar componentes probados y desarrollados por separado y trabajar
+    unidos como un producto.
+</p>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Microsoft Windows.
+</p>
+<h3>
+    <a id="ToolSteps" name="ToolSteps">Pasos de la herramienta</a>
+</h3>
+<p>
+    Para crear un espacio de trabajo de compilación e integración utilizando ClearCase:
+</p>
+<ol>
+    <li>
+        Desde la barra de tareas de Windows, vaya al <b>Asistente para la creación de vistas</b> pulsando <b>Inicio &gt;
+        Programas &gt; Software Rational &gt; Rational ClearCase &gt; Crear vista</b>.
+    </li>
+    <li>
+        Utilice el <b>Asistente para la creación de vistas</b> para crear un espacio de trabajo (vista de ClearCase) y
+        configúrelo para seleccionar los cambios de desarrollo promocionados. Se le solicita que proporcione lo
+        siguiente:<br />
+        <br />
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <ul>
+            <li>
+                nombre de la vista
+            </li>
+            <li>
+                ubicación de la vista
+            </li>
+            <li>
+                otra información relacionada con la configuración de su sitio (el Asistente para la creación de vistas le
+                guía a través de los pasos que debe seguir)
+            </li>
+        </ul>
+    </li>
+</ol>
+<p>
+    <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;Consulte la
+    ayuda en línea disponible en el Asistente para la creación de vistas para obtener información detallada sobre la
+    creación de una vista.
+</p>
+<p>
+    <img height="15" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" />&nbsp;Puede obtener información
+    general sobre las vistas de ClearCase, incluida información de configuración, en el manual de ClearCase <i>Developing
+    Software</i>.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

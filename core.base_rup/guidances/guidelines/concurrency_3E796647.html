@@ -1,0 +1,657 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Concurrencia</title>
+<meta content="Guideline" name="uma.type">
+<meta content="concurrency" name="uma.name">
+<meta content="Concurrencia" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "1.5676516174458592E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "1.5676516174458592E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.5676516174458592E-304"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "1.5676516174458592E-304"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.5676516174458592E-304"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Concurrencia</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz ayudará a los desarrolladores a elegir la mejor forma de satisfacer las necesidades de la concurrencia en un sistema de software.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/capsule_design_BF66E39A.html" guid="{F13C1161-7F17-45E3-A8B7-03944A1FA6E4}">Diseño de la cápsula</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">Describir la arquitectura de tiempo de ejecución</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Modelo de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="concurrencia" text="directrices para" name="XE_concurrency__guidelines_for" id="XE_concurrency__guidelines_for" class="index"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">Introducción</a>
+</h3>
+<p>
+    El arte de un buen diseño es elegir la mejor forma de cubrir una serie de requisitos. El arte de un buen diseño de
+    sistema concurrente a menudo es elegir el modo más simple de satisfacer las necesidades de la concurrencia. Una de las
+    primeras normas de los diseñadores debería ser evitar volver a inventar la rueda. Se han desarrollado buenos patrones
+    de diseño y lenguajes de diseño para solucionar la mayoría de problemas. Vista la complejidad de los sistemas
+    concurrentes, sólo tiene sentido utilizar soluciones probadas y esforzarse por conseguir la simplicidad de diseño.
+</p>
+<h3>
+    <a id="Concurrency approaches" name="Concurrency approaches">Enfoques de concurrencia</a>
+</h3>
+<p>
+    Las tareas concurrentes que tienen lugar enteramente dentro de un sistema, se denominan <b>hebras de ejecución</b>.
+    Como todas las tareas concurrentes, las hebras de ejecución son un concepto abstracto ya que se producen en el tiempo.
+    Lo mejor que se puede hacer para capturar físicamente una hebra de ejecución es representar su estado en un instante
+    concreto en el tiempo.
+</p>
+<p>
+    La forma más directa de representar tareas concurrentes mediante sistemas es dedicar un sistema separado para cada
+    tarea. Sin embargo, esto suele ser demasiado caro y no siempre contribuye en la resolución de conflictos. Es común, por
+    lo tanto proporcionar soporte a múltiples tareas en el mismo procesador físico a través de alguna forma de <b>proceso
+    de múltiples tareas</b>. En este caso, se comparten el procesador y los recursos asociados como memoria y buses. (Por
+    desgracia, compartir recursos también puede generar nuevos conflictos que no estaban presentes en el problema
+    original).
+</p>
+<p>
+    La forma más común de proceso de múltiples tareas es proporcionar un procesador "virtual" a cada tarea. Se suele hacer
+    referencia al procesador virtual como un <b>proceso o tarea</b>. Habitualmente, cada proceso tiene su propio espacio de
+    direcciones que, lógicamente, es distinto del espacio de direcciones de otros procesadores virtuales. Esto protege los
+    procesos de entrar en conflicto entre si y contra sobrescrituras accidentales de la memoria. Por desgracia, los gastos
+    generales necesarios para conmutar el procesador físico de un proceso a otro suelen ser prohibitivos. Implica el
+    intercambio significativo de conjuntos de registro dentro de la CPU (<b>conmutación del contexto</b>) que incluso con
+    los procesadores modernos de alta velocidad, tarda cientos de microsegundos.
+</p>
+<p>
+    Para reducir estos gastos generales, muchos sistemas operativos proporcionan la posibilidad de incluir múltiples
+    <b>hebras ligeras</b> dentro de un único proceso. Las hebras de un proceso comparten el espacio de direcciones de ese
+    proceso. Esto reduce los gastos generales implicados en la conmutación del contexto, pero aumenta la posibilidad de
+    conflictos en la memoria.
+</p>
+<p>
+    Para algunas transacciones de alto rendimiento, incluso los gastos generales de las hebras ligeras puede ser
+    inaceptablemente alto. En tales situaciones, es habitual tener una forma más ligera de proceso de múltiples tareas que
+    se alcanza aprovechando algunas características especiales de la aplicación.
+</p>
+<p>
+    Los requisitos de concurrencia del sistema pueden tener un impacto dramático en la arquitectura del sistema. La
+    decisión de mover la funcionalidad de una arquitectura de único proceso a una arquitectura de proceso múltiple
+    introduce cambios significativos en la estructura del sistema, en muchas dimensiones. Es posible que resulte necesario
+    introducir mecanismos adicionales (por ej., las llamadas a procedimiento remotos) que pueden cambiar sustancialmente la
+    arquitectura del sistema.
+</p>
+<p>
+    Los requisitos de disponibilidad del sistema deben tenerse en cuenta, así como los gastos generales adicionales de
+    gestionar los procesos y las hebras adicionales.
+</p>
+<p>
+    Como la mayoría de decisiones arquitectónicas, cambiar la arquitectura del proceso conlleva, efectivamente, un conjunto
+    de problemas para otro:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="18%">
+                    <p class="tableheading">
+                        Enfoque
+                    </p>
+                </th>
+                <th scope="col" width="46%">
+                    <p class="tableheading">
+                        Ventajas
+                    </p>
+                </th>
+                <th scope="col" width="46%">
+                    <p class="tableheading">
+                        Desventajas
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="18%">
+                    Proceso único, sin hebras
+                </td>
+                <td width="46%">
+                    <ul>
+                        <li>
+                            Simplicidad
+                        </li>
+                        <li>
+                            Mensajería rápida dentro del proceso
+                        </li>
+                    </ul>
+                </td>
+                <td width="46%">
+                    <ul>
+                        <li>
+                            Carga de trabajo difícil de equilibrar
+                        </li>
+                        <li>
+                            No se puede escalar a múltiples procesadores
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td width="18%">
+                    Proceso único, con múltiples hebras
+                </td>
+                <td width="46%">
+                    <ul>
+                        <li>
+                            Mensajes rápidos dentro del proceso
+                        </li>
+                        <li>
+                            Proceso de múltiples tareas sin comunicación entre el proceso
+                        </li>
+                        <li>
+                            Proceso de múltiples tareas mejorado sin los gastos generales de los procesos pesados
+                        </li>
+                    </ul>
+                </td>
+                <td width="46%">
+                    <ul>
+                        <li>
+                            La aplicación debe ser de 'enhebramiento seguro'
+                        </li>
+                        <li>
+                            El sistema operativo debe tener una gestión de hebras eficaz
+                        </li>
+                        <li>
+                            Hay que tener en cuenta las cuestiones de memorias compartidas
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td width="18%">
+                    Múltiples procesos
+                </td>
+                <td width="46%">
+                    <ul>
+                        <li>
+                            Se escala bien a medida que se añaden procesadores
+                        </li>
+                        <li>
+                            Relativamente fácil de distribuir a través de nodos
+                        </li>
+                    </ul>
+                </td>
+                <td width="46%">
+                    <ul>
+                        <li>
+                            Sensible a límites de proceso: utilizar demasiada comunicación entre el proceso afecta al
+                            rendimiento
+                        </li>
+                        <li>
+                            El intercambio y la conmutación de contexto son caros
+                        </li>
+                        <li>
+                            Más difícil de diseñar
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Una vía de acceso evolutiva típica es empezar con una arquitectura de proceso único, añadiendo procesos para grupos de
+    comportamientos que deben ocurrir simultáneamente. Dentro de estas agrupaciones más amplias, tenga en cuenta las
+    necesidades adicionales de concurrencia, añadiendo hebras en los procesos para aumentar la concurrencia.
+</p>
+<p>
+    El punto de partida inicial es asignar muchos objetos activos a una única tarea o hebra del sistema operativo, mediante
+    un planificador de objetos activos creado con este objetivo. De este modo suele ser posible alcanzar una simulación muy
+    ligera de la concurrencia, aunque, con una única tarea o hebra del sistema operativo, no será posible aprovechas las
+    máquinas con múltiples CPU.&nbsp; La decisión clave es aislar el comportamiento de bloqueo en hebras separadas, para
+    que el comportamiento de bloqueo no se convierta en un cuello de botella. Esto resultará en una separación de los
+    objetos activos con comportamiento de bloqueo en sus propias hebras de sistema operativo.
+</p>
+<p class="reactive">
+    En sistemas de tiempo real, este razonamiento se aplica igualmente a cápsulas - cada cápsula tiene una hebra lógica de
+    control que puede compartir, o no, la hebra de un sistema operativo, tarea o proceso con otras cápsulas.
+</p>
+<h3>
+    <a id="Issues" name="Issues">Problemas</a>
+</h3>
+<p>
+    Por desgracia, como muchas decisiones arquitectónicas, no existen respuestas sencillas; la solución correcta implica un
+    enfoque cuidadosamente equilibrado. Los pequeños prototipos arquitectónicos se pueden utilizar para explorar las
+    implicaciones de un conjunto concreto de opciones. En la creación del prototipo de la arquitectura del proceso,
+    céntrese en la escala del número de procesos hasta los máximos teórico para el sistema. Tenga en cuenta las cuestiones
+    siguientes:
+</p>
+<ul>
+    <li>
+        ¿El número de procesos se puede escalar al máximo? ¿Hasta que punto máximo se puede forzar el sistema? ¿Existe
+        capacidad de crecimiento potencial?
+    </li>
+    <li>
+        ¿Cuál es el impacto de cambiar algunos de los procesos para aligerar las hebras que operan en un espacio de
+        direcciones de proceso compartido?
+    </li>
+    <li>
+        ¿Qué sucede con el tiempo de respuesta a medida que se añaden procesos? ¿A medida que la comunicación entre el
+        proceso (IPC) se aumenta? ¿Se percibe la degradación?
+    </li>
+    <li>
+        ¿La cantidad de IPC se puede reducir combinando o reorganizando los procesos? ¿Este cambio producirá procesos
+        grandes y monolíticos cuya carga es difícil de equilibrar?
+    </li>
+    <li>
+        ¿Se puede utilizar una memoria compartida para reducir el IPC?
+    </li>
+    <li>
+        ¿Todos los procesos deben obtener un "tiempo equivalente" cuando se asignan los recursos de tiempo? ¿Es posible
+        llevar la asignación de tiempo? ¿Existen posibles inconvenientes a cambiar las propiedades de la planificación?
+    </li>
+</ul>
+<h4>
+    <font size="+0"><b><a id="Inter-Object Communications" name="Inter-Object Communications">Comunicaciones entre
+    objetos</a></b></font>
+</h4>
+<p>
+    Los objetos activos se pueden comunicar entre si de forma síncrona o asíncrona. La comunicación síncrona es útil porque
+    puede simplificar las colaboraciones complejas a través de secuencias controladas estrictamente. Es decir, mientras un
+    objeto activo ejecuta un paso hasta su conclusión que implique invocaciones síncronas de otros objetos activos,
+    cualquier interacción concurrente iniciada por otros objetos se puede omitir hasta que se haya completado toda la
+    secuencia.
+</p>
+<p>
+    Aunque resulta útil en algunos casos, también puede ser problemático ya que puede ocurrir que un suceso más importante
+    de alta prioridad tenga que esperar (inversión de la prioridad). Esto se agrava con la posibilidad de que el objeto
+    invocado síncronamente se bloquee esperando una respuesta a una invocación síncrona de si mismo. Esto puede conducir a
+    una inversión de la prioridad ilimitada. En los casos más extremos, si hay circularidad en la cadena de invocaciones
+    síncronas, puede llevar a un punto muerto.
+</p>
+<p>
+    Las invocaciones asíncronas evitan este problema habilitando los tiempos de respuesta definidos. Sin embargo,
+    dependiendo de la arquitectura de software, la comunicación asíncrona suele conducir a un código más complejo ya que un
+    objeto activo puede tener que responder a varios sucesos asíncronos (cada uno de los cuales puede conllevar una
+    compleja secuencia de interacciones asíncronas con otros objetos activos) en cualquier momento. Esto puede resultar muy
+    difícil y ser propenso a errores de implementación.&nbsp;
+</p>
+<p>
+    La utilización de una tecnología de mensajería asíncrona con entrega de mensajes garantizada puede simplificar la tarea
+    de programación de la aplicación. La aplicación puede proseguir con la operación incluso si la conexión de red o la
+    aplicación remota no está disponible. La mensajería asíncrona no excluye su utilización en modo síncrono. La tecnología
+    síncrona requerirá que esté disponible una conexión siempre que esté disponible la aplicación. Como se sabe que existe
+    una conexión, el manejo de confirmación del proceso será más sencillo.
+</p>
+<p class="reactive">
+    En el enfoque recomendado en Rational Unified Process para sistemas de tiempo real, las <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_capsule_FC4A34FD.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">cápsulas</a> comunican asíncronamente a través del uso de <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_signal_AD16C912.html" guid="{8CA124DA-A80C-45D7-BC65-BA6B4247FF11}">señales</a>, de acuerdo con unos <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_protocol_BEB5FBE1.html" guid="{6E4F4D6F-2934-432C-9335-5537B795F67F}">protocolos</a> concretos. Es posible, todavía, alcanzar la comunicación
+    síncrona a través del uso de los pares de señales, uno en cada dirección.
+</p>
+<h4>
+    <font size="+0"><b><a id="Pragmatics" name="Pragmatics">Pragmática</a></b></font>
+</h4>
+<p>
+    Aunque los gastos generales de conmutación del contexto de los objetos activos puede ser muy bajo, es posible que
+    algunas aplicaciones todavía puedan encontrar que el coste es inaceptable. Esto suele ocurrir en situaciones en que
+    grandes cantidades da datos deben procesarse a una velocidad muy elevada. En estos casos, es posible que deba volver a
+    utilizar los objetos pasivos y técnicas de gestión de la concurrencia más tradicionales (pero con riesgos más elevados)
+    como los semáforos.
+</p>
+<p>
+    Estas consideraciones, sin embargo, no implican necesariamente que debamos abandonar totalmente el enfoque del objeto
+    activo. Incluso en estas aplicaciones de datos intensivos, suele ocurrir que los componentes sensibles a rendimiento
+    son una parte relativamente pequeña del sistema global. Esto implica que el resto del sistema todavía puede aprovechar
+    el paradigma de objeto activo.
+</p>
+<p>
+    En general, el rendimiento es sólo uno de los criterios de diseño en lo referente al diseño de sistema. Si el sistema
+    es complejo, los otros criterios como la capacidad de mantenimiento, la facilidad de cambio, la comprensibilidad, etc.,
+    existen igualmente o son incluso más importantes. El enfoque del objeto activo tiene una ventaja clara ya que oculta
+    parte de la complejidad de la concurrencia y la gestión de la concurrencia al tiempo que permite que el diseño se
+    exprese en términos específicos de la aplicación en oposición a los mecanismos específicos de la tecnología de bajo
+    nivel.
+</p>
+<h3>
+    <a id="Heuristics" name="Heuristics">Heurística</a>
+</h3>
+<h4>
+    <a id="Focus on interactions" name="Focus on interactions">Atención a las interacciones entre componentes
+    concurrentes</a>
+</h4>
+<p>
+    Los componentes concurrentes sin interacciones son prácticamente un problema trivial. Casi todos los retos del diseño
+    están relacionados con las interacciones entre tareas concurrentes, para que debamos centrar primero nuestra energía en
+    comprender las interacciones. Algunas de las preguntas que debe formularse son:
+</p>
+<ul>
+    <li>
+        ¿La interacción es unidireccional, bidireccional o multidireccional?
+    </li>
+    <li>
+        ¿Existe una relación cliente/servidor o maestro/esclavo?
+    </li>
+    <li>
+        ¿Es necesaria alguna forma de sincronización?
+    </li>
+</ul>
+<p>
+    Una vez que se haya comprendido la interacción, podemos pensar en los modos de implementarla. La implementación debe
+    seleccionarse para producir el diseño más simple coherente con los objetivos de rendimiento del sistema. Los requisitos
+    de rendimiento generalmente incluyen producción global y latencia aceptable en la respuesta a sucesos generados
+    externamente.
+</p>
+<p class="reactive">
+    Estas cuestiones son incluso más críticas para sistemas de tiempo real, que a menudo son menos tolerantes a variaciones
+    de rendimiento, por ejemplo, 'variaciones' en tiempo de respuesta, o con horas límite incumplidas.
+</p>
+<h4>
+    <a id="Isolate and encapsulate external interfaces." name="Isolate and encapsulate external interfaces.">Aislar y
+    encapsular interfaces externas</a>
+</h4>
+<p>
+    Es una práctica incorrecta incorporar las suposiciones específicas sobre interfaces externas en toda la aplicación, y
+    es muy ineficaz tener varias hebras de control bloqueado esperando un suceso. En su lugar, asigne a un único objeto la
+    tarea dedicada de detectar el suceso. Cuando ocurre el suceso, ese objeto puede notificar a quienes deben conocer el
+    suceso. Este diseño se basa en un patrón de diseño conocido y probado, el patrón "Observador" [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">GAM94</a>]. Se puede ampliar fácilmente para obtener una mayor flexibilidad con el
+    "Patrón Editor-suscriptor", donde el editor de un objeto actúa como intermediario entre los detectores del suceso y los
+    objetos interesados en el suceso ("suscriptores") [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">BUS96</a>].
+</p>
+<h4>
+    <a id="Isolate and encapsulate blocking and polling behavior." name="Isolate and encapsulate blocking and polling behavior.">Aislar y encapsular el comportamiento de bloqueo y
+    sondeo</a>
+</h4>
+<p>
+    Las acciones en un sistema se pueden desencadenar con la aparición de sucesos generados externamente. Un suceso
+    generado externamente muy importante puede ser simplemente el paso del tiempo, tal como lo representa el tictac de un
+    reloj. Otros sucesos externos provienen de los dispositivos de entrada conectados al hardware externo, que incluye
+    dispositivos de interfaz de usuario, sensores de proceso y enlace de comunicaciones con otros sistemas. Esto es
+    predominantemente cierto para sistemas de tiempo real, que habitualmente tienen una alta conectividad con el mundo
+    exterior.
+</p>
+<p>
+    Para que el software detecte un suceso debe estar bloqueado esperando una interrupción, o bien debe comprobar el
+    hardware periódicamente para ver si se ha producido el suceso. En el último caso, el ciclo periódico puede necesitar
+    ser corto para evitar perder un suceso reciente o múltiples apariciones, o simplemente minimizar la latencia entre la
+    aparición y la detección del suceso.
+</p>
+<p>
+    El aspecto interesante sobre esto es que no importa lo inusual que sea un suceso, algún software debe estar bloqueado
+    esperándolo o comprobándolo con frecuencia. Pero muchos (o la mayoría) de los sucesos que un sistema debe manejar son
+    poco usuales; la mayor parte del tiempo, en cualquier sistema, no sucede nada relevante.
+</p>
+<p>
+    El sistema del ascensor proporciona muchos buenos ejemplos de esto. Los sucesos importantes en la vida de un ascensor
+    incluyen las llamadas de servicio, la selección del piso del pasajero, la mano de un pasajero que bloquea la puerta y
+    pasar de un piso al siguiente. Algunos de estos sucesos requieren una respuesta crítica en el tiempo, pero son
+    extremadamente inusuales en comparación con la escala de tiempo del tiempo de respuesta deseado.
+</p>
+<p>
+    Un único suceso puede desencadenar muchas acciones, y las acciones pueden depender de los estados de diferentes
+    objetos. Además, las diferentes configuraciones de un sistema pueden usar el mismo suceso de modos distintos. Por
+    ejemplo, cuando un ascensor pasa un piso la pantalla de la cabina del ascensor se debe actualizar y el propio ascensor
+    debe saber dónde está para saber cómo responder a nuevas llamadas y selecciones del piso del pasajero. Pueden haber, o
+    no, pantallas de ubicación del ascensor en cada piso.
+</p>
+<h4>
+    <a id="Prefer reactive behavior to scheduled behavior." name="Prefer reactive behavior to scheduled behavior.">Preferir
+    el comportamiento reactivo al comportamiento de sondeo</a>
+</h4>
+<p>
+    Los sondeos son caros; requieren que una parte del sistema se detenga periódicamente lo que está haciendo para
+    comprobar si se ha producido un suceso. Si se debe responder rápidamente al suceso, el sistema tendrá que comprobar con
+    frecuencia la llegada del suceso, además de limitar la cantidad de otros trabajos que puede cumplir.
+</p>
+<p>
+    Resulta mucho más eficaz asignar una interrupción al suceso, con el código dependiente del suceso que se activa con la
+    interrupción. Aunque las interrupciones suelen evitarse porque se consideran "caras", si se utilizan juiciosamente
+    pueden ser mucho más eficaces que un sondeo repetido.
+</p>
+<p>
+    Los casos en que las interrupciones serían preferibles como mecanismo de notificación de sucesos son aquellos donde la
+    llegada del suceso es aleatoria y poco frecuente, como cuando la mayoría de esfuerzos de sondeo descubren que el suceso
+    no ha sucedido. Los casos en que el sondeo sería preferible son aquellos donde los sucesos llegan de forma regular y
+    previsible y la mayoría de esfuerzos de sondeo descubren que el suceso se ha producido. En el medio, existirá un punto
+    en que uno es indiferente al sondeo o al comportamiento reactivo - funcionará bien igualmente y la elección no importa.
+    En la mayoría de casos, sin embargo, vista la aleatoriedad de los sucesos del mundo real, es preferible el
+    comportamiento reactivo.
+</p>
+<h4>
+    <a id="Prefer event notification to data broadcasting" name="Prefer event notification to data broadcasting">Preferir
+    la notificación de sucesos a la difusión de datos</a>
+</h4>
+<p>
+    La difusión de datos (habitualmente utilizando señales) es cara, y habitualmente un desperdicio - sólo unos pocos
+    objetos pueden estar interesados en los datos, pero todos (o muchos) se detendrán a examinarlos. Un enfoque mejor y que
+    consume menos recursos es la utilización de la notificación para informar sólo a los objetos que están interesados que
+    se ha producido un suceso. Restrinja la difusión a los sucesos que requieren la atención de muchos objetos
+    (habitualmente, los sucesos de tiempo o de sincronización).
+</p>
+<h4>
+    <a id="Make heavy use of light-weight mechanisms and light use of heavy-weight mechanisms." name="Make heavy use of light-weight mechanisms and light use of heavy-weight mechanisms.">Utilice con frecuencia
+    mecanismos ligeros y evite los mecanismos pesados</a>
+</h4>
+<p>
+    Más concretamente:
+</p>
+<ul>
+    <li>
+        Utilice objetos pasivos e invocaciones de método síncrono donde la concurrencia no es un problema pero la respuesta
+        instantánea sí.
+    </li>
+    <li>
+        Utilice los objetos activos y los mensajes asíncronos para la amplia mayoría de conceptos de concurrencia de nivel
+        de aplicación.
+    </li>
+    <li>
+        Utilice hebras de sistema operativo para aislar los elementos de bloqueo. Un objeto activo puede correlacionarse
+        con una hebra de sistema operativo.
+    </li>
+    <li>
+        Utilice procesos de sistema operativo para obtener un aislamiento máximo. Son necesarios procesos independientes si
+        los programas necesitan iniciarse y apagarse independientemente, y para subsistemas que pueden ser necesarios para
+        su distribución.
+    </li>
+    <li>
+        Utilice CPU separadas para la distribución física o para caballos de potencia brutos.
+    </li>
+</ul>
+<p>
+    Quizás la directriz más importante para el desarrollo eficaz de aplicaciones concurrentes es maximizar el uso de los
+    mecanismos de concurrencia de peso más ligero. El hardware y el software del sistema operativo juegan un papel
+    importante en el soporte de la concurrencia, pero ambos proporcionan mecanismos relativamente pesados, dejando una gran
+    parte del trabajo al diseñador de la aplicación. Nos queda salvar las distancias entre las herramientas disponibles y
+    las necesidades de aplicaciones concurrentes.
+</p>
+<p>
+    Los objetos activos ayudan a salvar las distancias mediante dos características clave:
+</p>
+<ul>
+    <li>
+        Unifican las abstracciones de diseño encapsulando la unidad básica de concurrencia (una hebra de control) que se
+        puede implementar mediante cualquiera de los mecanismos subyacentes proporcionados por el sistema operativo o la
+        CPU.
+    </li>
+    <li>
+        Cuando los objetos activos comparten una hebra de sistema operativo única, se convierten en un mecanismo de
+        concurrencia ligero y muy eficaz que, si no, tendrá que implementarse directamente en la aplicación.
+    </li>
+</ul>
+<p>
+    Los objetos activos forman también un entorno ideal para los objetos pasivos proporcionados por los lenguajes de
+    programación. Diseñar un esquema completamente desde la fundación de los objetos concurrentes sin artefactos de
+    procedimiento como programas y procesos conduce a diseños más modulares, consistentes y comprensibles.
+</p>
+<h4>
+    <a id="Eschew performance bigotry." name="Eschew performance bigotry.">Evite la intolerancia al rendimiento</a>
+</h4>
+<p>
+    En la mayoría de sistemas, menos del 10% del código utiliza más del 90% de los ciclos de CPU.
+</p>
+<p>
+    Muchos diseñadores de sistemas actúan como si todas las líneas de código debieran optimizarse. En lugar de eso, dedique
+    el tiempo a optimizar el 10% del código que se ejecuta más a menudo o que ocupa más tiempo. Diseñe el 90% restante
+    enfatizando la capacidad de comprensión, de mantenimiento, la modularidad y la facilidad de implementación.
+</p>
+<h3>
+    <a id="Choosing Mechanisms" name="Choosing Mechanisms">Elección de mecanismos</a>
+</h3>
+<p>
+    Los requisitos no funcionales y la arquitectura del sistema afectarán a la elección de los mecanismos utilizados para
+    implementar las llamadas de procedimiento remoto. &nbsp; Una visión general de los tipos de renuncias entre
+    alternativas se presenta a continuación. &nbsp;
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="20%">
+                    Mecanismo
+                </th>
+                <th scope="col" width="26%">
+                    Usos
+                </th>
+                <th scope="col" width="54%">
+                    Comentarios
+                </th>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Mensajería
+                </td>
+                <td width="26%">
+                    Acceso asíncrono de los servidores de la empresa
+                </td>
+                <td width="54%">
+                    El middleware de mensajería puede simplificar la tarea de programación de la aplicación manejando las
+                    colas, los tiempos de espera y las condiciones de recuperación/reinicio. También puede utilizar el
+                    middleware de mensajería en modalidad pseudosíncrona. Habitualmente, la tecnología de mensajería puede
+                    proporcionar soporte a mensajes de gran tamaño. Algunos enfoques de RPC pueden estar limitados respecto
+                    al tamaño de los mensajes, requiriendo programación adicional para manejar mensajes grandes.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    JDBC/ODBC
+                </td>
+                <td width="26%">
+                    Llamadas de la base de datos
+                </td>
+                <td width="54%">
+                    Estas son interfaces independientes de la base de datos para servlets Java o programas de aplicación
+                    para realizar llamadas a bases de datos que pueden estar en el mismo o en otro servidor.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Interfaces nativas
+                </td>
+                <td width="26%">
+                    Llamadas de la base de datos
+                </td>
+                <td width="54%">
+                    Muchos proveedores de bases de datos han implementado interfaces de programa de aplicación nativas a
+                    sus propias bases de datos que ofrecen una ventaja de rendimiento sobre ODBC a expensas de la
+                    portabilidad de aplicación.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Llamada a procedimiento remoto
+                </td>
+                <td width="26%">
+                    Para llamar programas en servidores remotos
+                </td>
+                <td width="54%">
+                    Es posible que no necesite programar en el nivel de RPC si tiene un constructor de aplicación que se
+                    encarga de esto en su lugar.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    Conversacional
+                </td>
+                <td width="26%">
+                    Poco utilizado en aplicaciones de e-business
+                </td>
+                <td width="54%">
+                    Habitualmente, la comunicación de programa a programa de bajo nivel utiliza protocolos como APPC o
+                    Sockets.
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h3>
+    <a id="Summary" name="Summary">Resumen</a>
+</h3>
+<p>
+    Muchos sistemas requieren comportamiento concurrente y componentes distribuidos. La mayoría de lenguajes de
+    programación nos facilitan poca ayuda con cualquiera de estas cuestiones. Hemos visto que es necesaria una buena dosis
+    de abstracción para comprender la necesidad de concurrencia en las aplicaciones, y las opciones para implementarla en
+    el software. También hemos visto que, paradójicamente, mientras el software concurrente es inherentemente más complejo
+    que el software no concurrente, también es capaz de simplificar mucho el diseño de los sistemas que deben tratar con la
+    concurrencia en el mundo real.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

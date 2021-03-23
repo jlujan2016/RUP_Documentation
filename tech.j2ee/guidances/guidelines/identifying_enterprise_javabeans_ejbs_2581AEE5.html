@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Identificaci&oacute;n de Enterprise JavaBeans (EJB)</title>
+<meta content="Guideline" name="uma.type">
+<meta content="identifying_enterprise_javabeans_ejbs" name="uma.name">
+<meta content="Identificaci&oacute;n de Enterprise JavaBeans (EJB)" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "9.931732120190802E-307"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="9.931732120190802E-307"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Identificaci&oacute;n de Enterprise JavaBeans (EJB)</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la forma en que identificar y modelar EJB para una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identificar elementos de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h2>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h2>
+<p>
+    Esta directriz se centra en identificar EJB. En la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305">Directriz: Enterprise JavaBean (EJB)</a> se proporciona ayuda adicional sobre los EJB.
+</p>
+<h2>
+    <a id="Guidelines" name="Guidelines"></a>Identificación de EJB
+</h2>
+<p>
+    Habitualmente los EJB sirven para implementar un objeto empresarial del lado del servidor que precisa soporte para las
+    transacciones, la seguridad y acceso remoto, o que funciona con datos compartidos (como por ejemplo actualizando
+    información de cuentas).
+</p>
+<p>
+    Los EJB a menudo se identifican al identificar clases de diseño en el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">Producto de trabajo: clases de análisis</a>. Las clases de control son
+    buenas candidatas como beans de sesión, puesto que los beans de sesión se utilizan para proporcionar lógica de control.
+    Las clases de entidad son buenas candidatas como beans de entidad, puesto que los beans de entidad se utilizan para los
+    datos persistentes.
+</p>
+<p>
+    Consulte también las siguientes secciones para conocer directrices más específicas:
+</p>
+<ul type="disc">
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_session_beans_5E45D5DA.html" guid="6.241144674389355E-307">Identificación de beans de sesión</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_entity_beans_F497D4.html" guid="4.3141371110020564E-306">Identificación de beans de entidad</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_message-driven_beans_63C9FE78.html" guid="1.4428031829474456E-305">Identificación de beans controlados por mensajes</a>
+    </li>
+</ul>
+<h4>
+    <a id="Comparing_Session,_Message-Driven,_and_Entity_EJBs" name="Comparing_Session,_Message-Driven,_and_Entity_EJBs"></a>Comparación entre beans de sesión, de entidad y
+    controlados por mensajes
+</h4>
+<p>
+    Resumiendo algunas de las directrices mencionadas con anterioridad, en esta tabla se identifican los roles que
+    desempeñan los distintos EJB, la forma en la que se accede a los mismos y la naturaleza de su estado.
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th id="col1" width="15%">
+                    &nbsp;
+                </th>
+                <th id="col2" width="30%">
+                    Sesión
+                </th>
+                <th id="col3" width="25%">
+                    Controlado por mensajes
+                </th>
+                <th id="col4" width="30%">
+                    Entidad
+                </th>
+            </tr>
+            <tr>
+                <th id="row2" align="left" headers="col1" width="15%">
+                    <p>
+                        Rol
+                    </p>
+                </th>
+                <td headers="col2 row2" width="30%">
+                    <p>
+                        Implementa la lógica empresarial específica del cliente.
+                    </p>
+                </td>
+                <td headers="col3 row2" width="25%">
+                    <p>
+                        Implementa la lógica empresarial específica del proceso de mensajes.
+                    </p>
+                </td>
+                <td headers="col4 row2" width="30%">
+                    <p>
+                        Implementa la lógica empresarial específica de la entidad empresarial.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th id="row3" align="left" headers="col1" width="15%">
+                    <p>
+                        Método de acceso
+                    </p>
+                </th>
+                <td headers="col2 row3" width="30%">
+                    <p>
+                        Único cliente mediante interfaces locales o remotas.
+                    </p>
+                </td>
+                <td headers="col3 row3" width="25%">
+                    <p>
+                        Contenedor mediante la interfaz JMS MessageListener; los clientes no pueden acceder directamente.
+                    </p>
+                </td>
+                <td headers="col4 row4" width="30%">
+                    <p>
+                        Muchos clientes simultáneos mediante interfaces locales y remotas.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th id="row4" align="left" headers="col1" width="15%">
+                    <p>
+                        Estado
+                    </p>
+                </th>
+                <td headers="col2 row4" width="30%">
+                    <p>
+                        Se puede mantener el estado conversacional transitorio entre cliente y contenedor.
+                    </p>
+                </td>
+                <td headers="col3 row4" width="25%">
+                    <p>
+                        Sin estado, pero puede mantener manejadores a recursos en instancias.
+                    </p>
+                </td>
+                <td headers="col4 row4" width="30%">
+                    <p>
+                        Estado persistente que se guarda en una base de datos.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h2>
+    <a id="Modeling" name="Modeling"></a>Modelado de EJB
+</h2>
+<p>
+    Los EJB se modelan como un conjunto de clases con estereotipos. De forma específica, las clases de bean y todas las
+    clases de interfaz de EJB. Las interfaces EJB se modelan como clases con estereotipos, y no como interfaces UML, por
+    las razones que se tratan en la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/interfaces_for_j2ee_applications_23711CC0.html" guid="4.292643163694118E-306">Directriz: interfaces para aplicaciones J2EE</a>.
+</p>
+<p>
+    Las relaciones entre clases de bean y las interfaces EJB se modelan como dependencias desde la clase de bean a las
+    interfaces y no como relaciones de realización. Habitualmente, la implementación Java de una construcción se representa
+    como una realización entre una interfaz y una clase. Sin embargo, las clases EJB no implementan sus clases de interfaz
+    y, por lo tanto, es más adecuado una dependencia. En el siguiente diagrama se muestra un ejemplo. Consulte la sección
+    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_subsystems_for_j2ee_applications_B6B8EE31.html" guid="7.612097453921368E-307">Directriz: diseño de subsistemas para aplicaciones J2EE</a> para obtener más información
+    sobre este ejemplo en concreto.
+</p>
+<p align="center">
+    <img height="518" alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/ejb_structure.gif" width="692" />
+</p>
+<p class="picturetext">
+    Ejemplo de clases de ayudante y EJB
+</p>
+<p>
+    A continuación se indican los estereotipos UML aplicables al modelado de EJB.
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th align="left" width="35%">
+                    Estereotipo
+                </th>
+                <th align="left" width="15%">
+                    Se aplica a
+                </th>
+                <th align="left" width="50%">
+                    Definición
+                </th>
+            </tr>
+            <tr>
+                <td width="35%">
+                    <p>
+                        &lt;&lt;EJBSessionHomeInterface&gt;&gt;<br />
+                         &lt;&lt;EJBEntityHomeInterface&gt;&gt;
+                    </p>
+                </td>
+                <td width="15%">
+                    Clase
+                </td>
+                <td width="50%">
+                    Indica una interfaz inicial de sesión o entidad respectivamente.
+                </td>
+            </tr>
+            <tr>
+                <td width="35%">
+                    &lt;&lt;EJBRemoteInterface&gt;&gt;
+                </td>
+                <td width="15%">
+                    Clase
+                </td>
+                <td width="50%">
+                    Indica una interfaz remota EJB.
+                </td>
+            </tr>
+            <tr>
+                <td width="35%">
+                    &lt;&lt;EJBLocalInterface&gt;&gt;
+                </td>
+                <td width="15%">
+                    Clase
+                </td>
+                <td width="50%">
+                    Indica una interfaz local EJB.
+                </td>
+            </tr>
+            <tr>
+                <td width="35%">
+                    &nbsp;
+                </td>
+                <td width="15%">
+                    &nbsp;
+                </td>
+                <td width="50%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td width="35%">
+                    &lt;&lt;EJBSession&gt;&gt;
+                </td>
+                <td width="15%">
+                    Clase
+                </td>
+                <td width="50%">
+                    Indica una clase de bean de sesión EJB.
+                </td>
+            </tr>
+            <tr>
+                <td width="35%">
+                    &lt;&lt;EJBEntity&gt;&gt;
+                </td>
+                <td width="15%">
+                    Clase
+                </td>
+                <td width="50%">
+                    Indica una clase de bean de entidad EJB.
+                </td>
+            </tr>
+            <tr>
+                <td width="35%">
+                    &lt;&lt;EJBMessageDriven&gt;&gt;
+                </td>
+                <td width="15%">
+                    Clase
+                </td>
+                <td width="50%">
+                    Indica que la clase es un bean controlado por mensajes.
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Habitualmente, un EJB se agrupa en un subsistema, junto con clases y EJB estrechamente relacionados. Esto permite al
+    desarrollador el proporcionar una vista de <i>especificación</i> de EJB que es independiente de su implementación, así
+    como agrupar con otros elementos de diseño para proporcionar un nivel más alto de abstracción. Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_subsystems_for_j2ee_applications_B6B8EE31.html" guid="7.612097453921368E-307">Directriz: diseño de subsistemas para aplicaciones J2EE</a> para conocer más detalles.
+</p>
+<p>
+    Consulte también la especificación de correlación UML/EJB (<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/supportingmaterials/java_references_110189E3.html" guid="1.4494927535802764E-304">RSC01</a>) para ver una lista completa de estereotipos para representar construcciones
+    EJB.
+</p>
+<h4>
+    <a id="Modeling_MDBs" name="Modeling_MDBs">Modelado de beans controlados por mensajes</a>
+</h4>
+<p>
+    Modele dependencias a los temas o colas a los que se suscribe el bean controlado por mensajes. Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/describing_the_run-time_architecture_for_j2ee_applications_58C0C0A2.html" guid="1.7390519818410197E-305">Directriz: descripción de la arquitectura de tiempo de ejecución para aplicaciones
+    J2EE</a> para obtener más ayuda sobre la forma en la que modelar elementos concurrentes en una aplicación J2EE.
+</p>
+<h4>
+    <a id="Modeling_EJB_Properties" name="Modeling_EJB_Properties">Modelado de propiedades EJB</a>
+</h4>
+<p>
+    La utilización de mecanismos como, por ejemplo, la persistencia controlada mediante contenedor, las transacciones o la
+    autorización, se puede modelar como propiedades adicionales de la clase de bean, o simplemente incluir en una
+    descripción de texto asociada con la clase de bean.
+</p>
+<p>
+    Utilice los diagramas de secuencias para considerar casos de ejemplo que utilicen estos mecanismos.
+</p>
+<h4>
+    <a id="Modeling_EJB_Object_Interactions" name="Modeling_EJB_Object_Interactions">Modelado de interacciones de objetos
+    EJB</a>
+</h4>
+<p>
+    Los diagramas de interacciones (diagramas de secuencias y colaboración) sirven para mostrar el comportamiento dinámico
+    de los EJB y de la interacción de elementos que no son EJB (incluyendo componentes web y aplicaciones de cliente
+    externa) con EJB.
+</p>
+<p>
+    Estos diagramas de interacciones son esencialmente los mismos que los descritos en la sección <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">Tarea: diseño de guiones de uso</a>. Las interacciones se pueden mostrar
+    con el bean como una <i>caja negra</i>, interactuando sólo con las interfaces de EJB. Las interacciones también podrían
+    mostrar la implementación del bean mostrando interacciones entre las interfaces EJB y la clase de implementación del
+    bean. Observe que generalmente no se muestra la interacción de intervención con el contenedor.
+</p>
+<p>
+    Los beans controlados por mensajes consumen de forma asíncrona los mensajes que reciben de otros orígenes. Se podría
+    elegir mostrar el flujo de un mensaje asíncrono directamente desde un productor a un consumidor, o podría modelar la
+    relación de forma más precisa modelando temas y colas.
+</p>
+<p>
+    En la figura 2 se muestra un ejemplo de un diagrama de secuencias que muestra una interacción de una clase de cliente
+    con interfaces de EJB.
+</p>
+<p style="TEXT-ALIGN: center" align="center">
+    <img id="_x0000_i1026" height="580" alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/external_sequence.gif"     width="442" border="0" />
+</p>
+<p style="TEXT-ALIGN: center" align="center">
+    <a id="Figure_2" name="Figure_2"><b><font size="2">Figura 2</font></b></a><font size="2"><b>: interacción de una clase
+    de cliente con interfaces EJB.</b></font>
+</p>
+<p>
+    La figura 3 es un diagrama de secuencias similar al de la figura 2, pero que muestra interacciones con la
+    implementación de bean.
+</p>
+<h5 style="TEXT-ALIGN: center" align="center">
+    <img id="_x0000_i1027" height="538" alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/internal_sequence.gif"     width="743" border="0" />
+</h5>
+<p style="TEXT-ALIGN: center" align="center">
+    <a id="Figure_3" name="Figure_3"><b>Figura 3</b></a><b>: ejemplo de una interacción con una implementación de EJB.</b>
+</p>
+<h4>
+    <a id="Modeling_Alternatives" name="Modeling_Alternatives">Alternativas de modelado</a>
+</h4>
+<p>
+    El EJB, como un grupo de una clase de implementación de bean más interfaces EJB, también se puede modelar como un
+    subsistema o componente.
+</p>
+<p>
+    Algunos diseñadores podrían también elegir el modelar un EJB como una clase y asignar estereotipos a las operaciones
+    para indicar si pertenecen a las interfaces "inicial", "local" o "remota". De esta forma se proporciona una notación
+    más compacta que con las otras alternativas.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

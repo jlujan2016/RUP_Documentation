@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Estructuraci&oacute;n del modelo de gui&oacute;n de uso mediante la plataforma de desarrollo de software Rational</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="structuring_the_use_case_model_using_rsa" name="uma.name">
+<meta content="Estructuraci&oacute;n del modelo de gui&oacute;n de uso mediante la plataforma de desarrollo de software Rational" name="uma.presentationName">
+<meta name="element_type" content="tool_mentor">
+<meta content="" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{558B6610-D6CC-473C-9820-01C5862243BD}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Estructuraci&oacute;n del modelo de gui&oacute;n de uso mediante la plataforma de desarrollo de software Rational</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta guía de la herramienta describe cómo estructurar el modelo de guión de uso mediante el entorno de modelado SDP.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    En esta guía de la herramienta, se presupone que ya se ha creado un modelo de guión de uso, rellenado con actores y
+    guiones de uso, siguiendo los pasos descritos en <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/find_actors_and_use_cases_1ACB35F0.html" guid="{3CD5FA7E-160C-4A39-9DEB-C6D162D8AECD}">Búsqueda de actores y guiones de uso</a>.
+</p>
+<p>
+    Esta guía de la herramienta consta de los pasos siguientes:
+</p>
+<ul>
+    <li>
+        <a href="#Identify Common Requirements">Identificar requisitos comunes</a>
+    </li>
+    <li>
+        <a href="#Establish Include-Relationships Between Use Cases">Establecer relaciones de inclusión entre
+        guiones de uso</a>
+    </li>
+    <li>
+        <a href="#Establish Extend-Relationships Between Use Cases">Establecer relaciones de ampliación entre
+        guiones de uso</a>
+    </li>
+    <li>
+        <a href="#Establish Generalizations Between Use Cases">Establecer generalizaciones entre guiones de uso</a>
+    </li>
+    <li>
+        <a href="#Establish Generalizations Between Actors">Establecer generalizaciones entre actores</a>
+    </li>
+    <li>
+        <a href="#Evaluate Your Results">Evaluar los resultados</a>
+    </li>
+</ul>
+<p>
+    <a href="#MoreInfo">Información adicional sobre la herramienta</a>
+</p>
+<h3>
+    <a id="Identify Common Requirements" name="Identify Common Requirements">Identificar requisitos comunes</a>&nbsp;
+</h3>
+<p>
+    El compartimiento de guiones de uso comunes se consigue añadiendo relaciones entre guiones de uso existentes o creando
+    nuevos guiones de uso. Para ello, siga los pasos que se indican a continuación:
+</p>
+<ol>
+    <li>
+        Abra el modelo de guión de uso.
+    </li>
+    <li>
+        Navegue al paquete que contiene los guiones de uso. Consulte <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a>.
+    </li>
+    <li>
+        En <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/find_actors_and_use_cases_1ACB35F0.html" guid="{3CD5FA7E-160C-4A39-9DEB-C6D162D8AECD}">Búsqueda de actores y guiones de uso</a>, se ha creado un diagrama de
+        guión de uso que contiene todos los actores y guiones de uso. Navegue a dicho diagrama.
+    </li>
+    <li>
+        Refactorice los guiones de uso y cree nuevos, según proceda. El procedimiento para crear nuevos guiones de uso se
+        describe en <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/find_actors_and_use_cases_1ACB35F0.html" guid="{3CD5FA7E-160C-4A39-9DEB-C6D162D8AECD}">Búsqueda de actores y guiones de uso</a>. El detalle de los nuevos
+        guiones de uso se describe en <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/detail_a_use_case_D9BECBF4.html" guid="{536BC669-A8FB-426D-88FF-CBEA806A9066}">Detalle
+        de un guión de uso</a>.
+    </li>
+    <li>
+        Añada relaciones entre los guiones de uso. En las secciones siguientes se describe cómo añadir cada tipo de
+        relación.
+    </li>
+    <li>
+        Documente cada relación. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documentación de elementos de modelo</i>.
+    </li>
+</ol>
+<p>
+    Cree diagramas de guión de uso adicionales y empaquételos según sea necesario para gestionar la complejidad. Consulte
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adición de
+    diagramas de guión de uso a modelos</i> y <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Organización de elementos de modelo en paquetes</i>.
+</p>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modelado del comportamiento de un
+    sistema&nbsp;mediante&nbsp;diagramas de guiones de uso</i>.
+</p>
+<h3>
+    <a id="Establish Include-Relationships Between Use Cases" name="Establish Include-Relationships Between Use Cases">Establecer relaciones de inclusión entre guiones de uso</a>
+</h3>
+<p>
+    Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Incluir
+    relaciones</i>.
+</p>
+<h3>
+    <a id="Establish Extend-Relationships Between Use Cases" name="Establish Extend-Relationships Between Use Cases">Establecer relaciones de ampliación entre guiones de uso</a>
+</h3>
+<p>
+    Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Ampliación del comportamiento de guiones de uso</i>.
+</p>
+<h3>
+    <a id="Establish Generalizations Between Use Cases" name="Establish Generalizations Between Use Cases">Establecer
+    generalizaciones entre guiones de uso</a>
+</h3>
+<p>
+    Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Relaciones de generalización</i>.
+</p>
+<h3>
+    <a id="Establish Generalizations Between Actors" name="Establish Generalizations Between Actors">Establecer
+    generalizaciones entre actores</a>
+</h3>
+<ol>
+    <li>
+        Abra el modelo de guión de uso.
+    </li>
+    <li>
+        Navegue al paquete que contiene los actores. Consulte <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a>.
+    </li>
+    <li>
+        En <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/find_actors_and_use_cases_1ACB35F0.html" guid="{3CD5FA7E-160C-4A39-9DEB-C6D162D8AECD}">Búsqueda de actores y guiones de uso</a>, se ha creado un diagrama
+        para capturar todos los actores. Abra dicho diagrama.
+    </li>
+    <li>
+        Refactorice actores existentes y cree nuevos actores, según proceda. El procedimiento para crear actores se explica
+        en <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/find_actors_and_use_cases_1ACB35F0.html" guid="{3CD5FA7E-160C-4A39-9DEB-C6D162D8AECD}">Búsqueda de actores y guiones de uso</a>.
+    </li>
+    <li>
+        Añada generalizaciones entre actores. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Relaciones de generalización</i>.
+    </li>
+    <li>
+        Si lo desea, documente cada relación de generalización. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documentación de elementos de modelo</i>.
+    </li>
+</ol>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modelado del comportamiento de un
+    sistema&nbsp;mediante&nbsp;diagramas de guiones de uso</i>.
+</p>
+<h3>
+    <a id="Evaluate Your Results" name="Evaluate Your Results">Evaluar los resultados</a>
+</h3>
+<p>
+    La herramienta&nbsp;puede producir informes que extraigan información de guión de uso en un formato fácil de
+    revisar.&nbsp;También puede publicar un modelo entero en un formato adecuado para la visualización y la navegación en
+    navegador web.
+</p>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Publicación de modelos</i> y el tutorial <img height="16"     alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Publicación de un modelo en un
+    sitio web</i> .
+</p>
+<h3>
+    <a id="MoreInfo" name="MoreInfo">Información adicional sobre la herramienta</a>
+</h3>
+<p>
+    Tutoriales:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Asociación de
+        requisitos y elementos de modelo</i>
+    </li>
+</ul>
+<p>
+    Ejemplos:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modelos UML:
+        Modelo UML simple</i>&nbsp;
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../tech.rsa/guidances/toolmentors/structuring_the_use_case_model_using_rsa_ext_B2062393.html" guid="_buxHMK4MEdqFg48R_ivTjA">Estructuración del modelo de guión de uso mediante Rational Software Architect</a>
+</li>
+<li>
+<a href="./../../../tech.rsa/guidances/toolmentors/structuring_the_use_case_model_using_rsd_FC82D8C7.html" guid="_eprZIK4MEdqFg48R_ivTjA">Estructuración del modelo de guión de uso utilizando Rational Systems Developer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

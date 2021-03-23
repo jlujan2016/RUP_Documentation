@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Identificaci&oacute;n de servlets</title>
+<meta content="Guideline" name="uma.type">
+<meta content="identifying_servlets" name="uma.name">
+<meta content="Identificaci&oacute;n de servlets" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "6.749276633239724E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="6.749276633239724E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Identificaci&oacute;n de servlets</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la forma en que identificar y modelar servlets para una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identificar elementos de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Introducción
+</h3>
+<p>
+    Esta directriz se centra en identificar servlets. En la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/servlet_FB1EC186.html" guid="7.265155609265114E-306">Directriz:
+    servlets</a> se proporciona ayuda adicional sobre servlets.
+</p>
+<h3>
+    Identificación de servlets
+</h3>
+<p>
+    Los servlets son clases de servidor que interactúan con clientes basados en la web. Se identifican fundamentalmente de
+    las clases de control (consulte la sección <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/analysis_class_7E97273E.html" guid="2.2738948033145062E-306">Directriz: clase
+    de análisis</a>) en arquitecturas web. Se pueden utilizar para generar páginas web a efectos de presentación, pero en
+    general, las JSP son más adecuadas para ello (consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/javaserver_page_jsp_C204C841.html" guid="2.5833499297818664E-306">Directriz: JavaServer Page (JSP)</a> para obtener más información). También se pueden
+    utilizar para interactuar con bases de datos, como en una configuración de despliegue centrada en la web, tal como se
+    describe en la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/j2ee_deployment_configurations_C0F819AF.html" guid="7.671163061311939E-306">Concepto: configuraciones de despliegue de J2EE</a>. Y desde J2EE 1.4, también se pueden
+    utilizar para implementar servicios web tal como define la especificación <a class="elementlinkwithusertext" href="http://java.sun.com/webservices/jaxrpc/index.jsp" target="_blank">JAX-RPC</a>.
+</p>
+<p>
+    Sin embargo, para aplicaciones con una lógica empresarial significativa, o para aplicaciones que necesitan las
+    características que ofrecen los EJB, es más adecuado una configuración de despliegue de varias capas (consulte la
+    sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/j2ee_deployment_configurations_C0F819AF.html" guid="7.671163061311939E-306">Concepto: configuraciones de despliegue de J2EE</a> para obtener más información). En
+    este caso, los servlets habitualmente se utilizan para coordinar la lógica de presentación y para proporcionar un
+    puente entre la lógica empresarial y los datos que proporcionan los EJB.
+</p>
+<p>
+    Un uso habitual de un servlet es el de controlador frontal. Los controladores frontales proporcionan un único punto de
+    entrada a una aplicación, que hace que la seguridad, el estado de la aplicación y la presentación tengan un carácter
+    uniforme y sean más fáciles de mantener. Un&nbsp;controlador frontal acepta una solicitud de usuario, la procesa y
+    determina cuál es el componente adecuado para reenviársela. Consulte <i>Core J2EE Design Patterns - Front
+    Controller</i> ([<a class="elementlinkwithusertext" href="./../../../tech.j2ee/guidances/supportingmaterials/java_references_110189E3.html" guid="1.4494927535802764E-304">ALU01</a>]) para obtener más detalles.
+</p>
+<p>
+    Si el diseño tiene un gran número de JSP con un código de control similar, considere el introducir un servlet para
+    consolidar esta lógica en un único lugar.
+</p>
+<h3>
+    Modelado de servlets
+</h3>
+<p>
+    En RUP los servlets se representan con <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Producto de trabajo: clases de diseño</a> y por lo tanto se modelan como
+    clases. Con los servlets para manejar solicitudes HTTP se utiliza el estereotipo &lt;&lt;HTTPServlet&gt;&gt;. Con los
+    servlets para manejar otros protocolos se utiliza el estereotipo &lt;&lt;GenericServlet&gt;&gt;.
+</p>
+<p>
+    Se puede pensar como si cada servlet proporciona la misma interfaz, una única operación que da servicio a solicitudes y
+    que proporciona información de contexto de servlet, sesión y cliente estándar. Por lo tanto, al modelar un servlet no
+    se trata tanto de definir las operaciones de interfaz, sino de como definir sus responsabilidades y cómo interactúa con
+    otros elementos de diseño como, por ejemplo, clientes, JSP, clases de ayudante, EJB, etc.
+</p>
+<h2>
+    Punto final de servicios web
+</h2>
+<p>
+    Como se ha visto con anterioridad, los servlets se pueden utilizar para implementar servicios web, con la necesidad de
+    cumplir requisitos que se indican a continuación:
+</p>
+<ul>
+    <li>
+        Debe tener un constructor público predeterminado.
+    </li>
+    <li>
+        Debe implementar todos los métodos que se declaran en la sección <a class="elementlinkwithusertext" href="./../../../tech.j2ee/guidances/concepts/web_services_for_j2ee_4E401D7.html" guid="1.2274284020937826E-305">Interfaz de punto final de servicio</a> y sus métodos deben ser públicos y no
+        finales ni estáticos.
+    </li>
+    <li>
+        Debe ser sin estado.
+    </li>
+    <li>
+        La clase debe ser pública, y no final ni abstracta.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

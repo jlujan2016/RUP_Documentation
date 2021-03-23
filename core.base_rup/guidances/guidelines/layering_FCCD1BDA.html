@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Capas</title>
+<meta content="Guideline" name="uma.type">
+<meta content="layering" name="uma.name">
+<meta content="Capas" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "4.458864982057142E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "4.458864982057142E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.458864982057142E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "4.458864982057142E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.458864982057142E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Capas</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz presenta las estrategias para dividir un sistema en capas.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Modelo de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="capas" text="directrices" name="XE_layering__guidelines" id="XE_layering__guidelines" class="index"></a> 
+<h3>
+    <a id="LayeringGuidelines" name="LayeringGuidelines">Directrices de capas</a>
+</h3>
+<p>
+    Las capas proporcionan una partición lógica de los subsistemas en una serie de conjuntos, con ciertas reglas como por
+    ejemplo, cómo se pueden formar relaciones entre capas. Las capas proporcionan un modo de restringir las dependencias
+    entre subsistemas, con el resultado que el sistema se acopla más holgadamente y, por lo tanto, se mantiene más
+    fácilmente.
+</p>
+<p>
+    Los criterios para agrupar subsistemas siguen unos cuantos patrones:
+</p>
+<ul>
+    <li>
+        <b>Visibilidad</b>. Los subsistemas sólo pueden depender de subsistemas de la misma capa y de la capa inferior
+        siguiente.
+    </li>
+    <li>
+        <b>Volatilidad</b>. 
+        <ul>
+            <li>
+                <b>En las capas más altas</b>, coloque elementos que varíen cuando cambien los requisitos de los usuarios.
+            </li>
+            <li>
+                <b>En las capas más bajas</b>, coloque elementos que varíen cuando la plataforma de implementación
+                (hardware, lenguaje, sistema operativo, base de datos, etc.) cambie.
+            </li>
+            <li>
+                En medio, coloque elementos que sean generalmente aplicables a través de amplios gamas de sistemas y
+                entornos de implementación.
+            </li>
+            <li>
+                Añada capas cuando particiones adicionales dentro de estas amplias categorías ayuden a organizar el modelo.
+            </li>
+        </ul>
+    </li>
+    <li>
+        <b>Generalidad</b>. Los elementos de modelo abstracto tienden a colocarse en la parte inferior del modelo. Si no es
+        específico de la implementación, tienden a gravitar hacia las capas intermedias.
+    </li>
+    <li>
+        <b>Número de capas</b>. Para sistemas pequeños, son suficientes tres capas. Para sistemas complejos, suelen ser
+        suficientes 5-7 capas. Para cualquier grado de complejidad, más de 10 capas se deben visualizar con la sospecha de
+        que aumenten con el número de capas. A continuación se presentan algunas normas generales:
+    </li>
+</ul>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th width="40%">
+                    <p align="center" scope="col">
+                        <b>Número de clases</b>
+                    </p>
+                </th>
+                <th width="60%">
+                    <p align="center" scope="col">
+                        <b>Número de capas</b>
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="40%">
+                    <p align="center">
+                        0 - 10
+                    </p>
+                </td>
+                <td width="60%">
+                    No son necesarias las capas
+                </td>
+            </tr>
+            <tr>
+                <td width="40%">
+                    <p align="center">
+                        10 - 50
+                    </p>
+                </td>
+                <td width="60%">
+                    2 capas
+                </td>
+            </tr>
+            <tr>
+                <td width="40%">
+                    <p align="center">
+                        25 - 150
+                    </p>
+                </td>
+                <td width="60%">
+                    3 capas
+                </td>
+            </tr>
+            <tr>
+                <td width="40%">
+                    <p align="center">
+                        100 - 1000
+                    </p>
+                </td>
+                <td width="60%">
+                    4 capas
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Los subsistemas y paquetes dentro de una capa concreta sólo deben depender de los subsistemas dentro de la misma capa,
+    y la capa inferior siguiente. Si no se pueden restringir las dependencias de este modo se produce la degradación
+    arquitectónica y el sistema es frágil y difícil de mantener.
+</p>
+<p>
+    Las excepciones incluyen casos donde los subsistemas necesitan acceso directo a servicios de capas inferiores: debe
+    tomarse una decisión consciente sobre cómo manejar los servicios primitivos necesarios a través del sistema, como la
+    impresión, enviar mensajes, etc. No tiene demasiado valor restringir los mensajes a capas inferiores si la solución es
+    implementar el paso a través efectivo de una llamada en las capas intermedias.
+</p>
+<h3>
+    <a id="PartitioningPatterns" name="PartitioningPatterns">Patrones de partición</a>
+</h3>
+<p>
+    Dentro de las capas superiores del sistema, la partición adicional puede ayudar a organizar el modelo. Las directrices
+    siguientes para la partición presentan diferentes cuestiones a tener en cuenta:
+</p>
+<ul>
+    <li>
+        <b>Organización del usuario</b>. Los subsistemas se pueden organizar en líneas que reflejan la organización de la
+        funcionalidad en la organización de la empresa (por ej., la partición ocurre a lo largo de las líneas
+        departamentales). Esta partición a menudo ocurre en un estadio temprano del diseño porque un modelo de empresa
+        existente tiene una estructura fuertemente partida organizativamente. Este patrón de organización habitualmente
+        afecta sólo las pocas capas superiores de servicios específicos de la aplicación, y a menudo desaparece a medida
+        que el diseño evoluciona. 
+        <ul>
+            <li>
+                La partición de las líneas de organización del usuario puede ser un punto de partida interesante para el
+                modelo.
+            </li>
+            <li>
+                La estructura de la organización de usuario no es estable durante un periodo de tiempo prolongado (debido a
+                la reorganización empresarial) y no es una buena base a largo plazo para la partición del sistema. La
+                organización interna del sistema debe permitir que el sistema evolucione y se mantenga independientemente
+                de la organización de la empresa a la que da soporte.
+            </li>
+        </ul>
+    </li>
+    <li>
+        <b>Áreas de competencia y/o habilidades</b>. Los subsistemas se pueden organizar para partir las responsabilidades
+        de los componentes del modelo entre diferentes grupos de la organización de desarrollo. Habitualmente, esto se
+        produce en las capas medias e inferiores del sistema, y refleja la necesidad de especialización en habilidades
+        durante el desarrollo y soporte de tecnología de infraestructura compleja. Ejemplos de tales tecnologías incluyen
+        la gestión de la red y la distribución, la gestión de la base de datos, la gestión de la comunicación y el control
+        del proceso, entre otros. La partición a lo largo de las líneas de competencia también puede ocurrir en las capas
+        superiores, donde es necesaria una competencia especial en el dominio del problema para comprender y dar soporte a
+        la funcionalidad clave del negocio; los ejemplos incluyen la gestión de llamadas de telecomunicaciones, comercio de
+        valores, procesamiento de reclamaciones de seguros y control del tráfico aéreo, para mencionar unos cuantos.
+    </li>
+    <li>
+        <b>Distribución del sistema</b>. Dentro de cualquiera de las capas del sistema, las capas se pueden partir, a su
+        vez, "horizontalmente" para reflejar la distribución física de la funcionalidad. 
+        <ul>
+            <li>
+                Crear particiones para reflejar la distribución puede ayudar a visualizar la comunicación de red que
+                ocurrirá a medida que se ejecuta el sistema.
+            </li>
+            <li>
+                La partición para reflejar la distribución puede, sin embargo, dificultar los cambios del sistema si el
+                modelo de despliegue cambia significativamente.
+            </li>
+        </ul>
+    </li>
+</ul>
+<ul>
+    <li>
+        <b>Áreas de privacidad</b>. Algunas aplicaciones, especialmente las que requieren permisos de seguridad para
+        desarrollar y/o dar soporte, requieren particiones adicionales junto con las líneas de privilegio de acceso de
+        seguridad. El software que controla el acceso a las áreas de privacidad lo debe desarrollar y mantener personal con
+        la autorización apropiada. Si el número de personas con este conocimiento del proyecto es limitado, la
+        funcionalidad que requiere permisos especiales debe ser partida en subsistemas que se desarrollarán
+        independientemente de otros subsistemas, y las interfaces de las áreas de privacidad serán el único aspecto visible
+        de estos subsistemas.
+    </li>
+    <li>
+        <b>Áreas de variabilidad</b>. La funcionalidad que es probable que sea opcional, y por lo tanto se entrega sólo en
+        algunas variantes del sistema, se debe organizar en subsistemas independientes que se desarrollan y se entregan
+        independientemente de la funcionalidad obligatoria del sistema.
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

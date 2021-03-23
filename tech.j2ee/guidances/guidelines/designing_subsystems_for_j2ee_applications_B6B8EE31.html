@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Dise&ntilde;o de subsistemas para aplicaciones J2EE</title>
+<meta content="Guideline" name="uma.type">
+<meta content="designing_subsystems_for_j2ee_applications" name="uma.name">
+<meta content="Dise&ntilde;o de subsistemas para aplicaciones J2EE" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "7.612097453921368E-307"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "{FACE1697-1CB6-4F57-8B39-ED507BE7006F}", "7.612097453921368E-307"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="7.612097453921368E-307"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Dise&ntilde;o de subsistemas para aplicaciones J2EE</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la forma en que diseñar subsistemas para una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}">Diseño del subsistema</a>
+</li>
+<li>
+<a href="./../../../soa.rup_soma/tasks/soa_subsystem_design_B9BB36BD.html" guid="{FACE1697-1CB6-4F57-8B39-ED507BE7006F}">Diseño de subsistema (SOA)</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Introducción
+</h3>
+<p>
+    En esta directriz se complementa la sección <a href="./../../../core.base_rup/guidances/guidelines/design_subsystem_B26FD609.html" guid="1.2314266786534317E-305" class="elementLinkWithUserText">Directriz: subsistemas de diseño</a> con ayuda específica para el desarrollo de
+    aplicaciones J2EE. Es recomendable leer la sección Directriz: subsistemas de diseño antes de leer estas directrices
+    específicas para J2EE. Estas directrices se aplican al diseño de subsistemas con una granularidad mayor que EJB
+    individuales. Consulte la sección <a href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305" class="elementLinkWithUserText">Directriz: Enterprise JavaBean (EJB)</a> para conocer
+    las directrices relacionadas con EJB.
+</p>
+<p>
+    Observe que también se considera que un cliente de aplicación es un subsistema de diseño especializado. Consulte la
+    sección <a href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_client_3499CC99.html" guid="8.333388171077014E-306" class="elementLinkWithUserText">Directriz: cliente de aplicación J2EE</a> para obtener
+    más información.
+</p>
+<h3>
+    <a name="Evolving Design Subsystems" id="Evolving Design Subsystems"></a>Evolución de los subsistemas de diseño
+</h3>
+<p>
+    Cuando se identifica por primera vez un subsistema, inicialmente éste puede ser tecnológicamente neutral. Esto es, se
+    puede especificar mediante interfaces, una descripción de texto y algunas máquinas de estados que describan el
+    comportamiento esperado de las operaciones. Sin embargo, estos subsistemas tecnológicamente neutrales habitualmente
+    evolucionan a representaciones tecnológicas específicas.
+</p>
+<p>
+    A continuación se muestra un ejemplo de cómo un subsistema de diseño tecnológicamente neutral evoluciona a un
+    subsistema tecnológico específico.
+</p>
+<h5>
+    Especificación del subsistema (vista de caja negra del subsistema)
+</h5>
+<p>
+    Una especificación de subsistema se puede modelar inicialmente como si tuviese interfaces UML abstractas.
+</p>
+<p>
+    Considere el diseño preliminar de un subsistema Customer, que se muestra en la figura 1.&nbsp;
+</p>
+<p align="center">
+    <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/dsub_abstract_external.gif" />
+</p>
+<p align="center">
+    <b><font size="2">Figura 1: diseño preliminar del subsistema Customer</font></b>
+</p>
+<p>
+    ICustomerMgt se define en más detalle con operaciones, como "getCustomerDetails" y "setCustomerDetails".
+</p>
+<p>
+    A medida que el diseño se hace más detallado (<a href="./../../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}" class="elementLinkWithUserText">Tarea:
+    subsystem_design_real-time_design</a>), estas interfaces abstractas se sustituyen con un lenguaje y elementos
+    tecnológicos específicos. (Se puede elegir mantener el modelo abstracto del subsistema; por ejemplo, si hay la
+    necesidad de implementar el mismo diseño en más de un lenguaje o tecnología. Consulte la sección <a href="./../../../core.base_rup/guidances/concepts/mapping_from_design_to_code_D1454680.html" guid="1.424219730601675E-305" class="elementLinkWithUserText">Concepto: correlación del diseño al código</a> para obtener más información sobre estas
+    opciones). El correspondiente diseño del <a href="./../../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}" class="elementLinkWithUserText">Producto de trabajo: realización de
+    guiones de uso</a> se actualiza para que coincidan los cambios de interfaz.
+</p>
+<p>
+    En este ejemplo, la figura 2 es una vista de especificación o caja negra del subsistema Customer. El diseño posterior
+    indicó que el subsistema Customer debería ser una entidad EJB. El&nbsp;subsistema de diseño preliminar se transforma en
+    interfaces EJB tal como se indica:
+</p>
+<ul>
+    <li>
+        ICustomerMgt =&gt; 
+        <ul>
+            <li>
+                CustomerHome "EJBEntityHomeInterface"
+            </li>
+        </ul>
+    </li>
+    <li>
+        ICustomer =&gt; 
+        <ul>
+            <li>
+                Customer "EJBRemoteInterface"
+            </li>
+        </ul>
+    </li>
+</ul>
+<p align="center">
+    <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/dsub_external.gif" />
+</p>
+<p align="center">
+    <b>Figura 2: vista de caja negra del subsistema de diseño de Customer.</b>
+</p>
+<p>
+    Las <i>interfaces</i> que exponen los subsistemas de diseño pueden incluir interfaces Java regulares, interfaces EJB
+    (como interfaces Java), interfaces EJB (remotas e iniciales) o incluso una o más clases de <i>delegados</i> o de
+    <i>acceso</i> que ocultan totalmente la existencia de uno o más EJB. Observe que todas estas interfaces, incluidas las
+    de Java, se modelan como clases UML y no como interfaces UML (consulte la sección <a href="./../../../tech.j2ee/guidances/guidelines/interfaces_for_j2ee_applications_23711CC0.html" guid="4.292643163694118E-306" class="elementLinkWithUserText">Directriz: interfaces para aplicaciones J2EE</a> para
+    obtener más información). Por ejemplo, a menudo se utiliza un bean de sesión como una fachada para acceder a un
+    conjunto de beans de entidad estrechamente relacionados. En este caso, sólo se exportarían del subsistema interfaces de
+    beans de sesión.
+</p>
+<p>
+    Los beans controlados por mensajes consumen de forma asíncrona mensajes de un destino (o punto final). Por lo tanto, un
+    destino podría también servir como una "interfaz" de un subsistema de diseño que contuviese beans controlados por
+    mensajes.
+</p>
+<p>
+    Observe que puesto que otros EJB estrechamente acoplados dentro del mismo subsistema de diseño utilizan las interfaces
+    locales, ellos aparecen en la realización de subsistemas más a menudo que en las interfaces visibles que un subsistema
+    expone.
+</p>
+<p>
+    Consulte la sección <a href="./../../../tech.j2ee/guidances/guidelines/interfaces_for_j2ee_applications_23711CC0.html" guid="4.292643163694118E-306" class="elementLinkWithUserText">Directriz: interfaces para aplicaciones J2EE</a> para
+    obtener más información sobre interfaces en una aplicación J2EE. Consulte la sección <a href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305" class="elementLinkWithUserText">Directriz: Enterprise JavaBean (EJB)</a> para obtener
+    más información sobre cómo modelar EJB.
+</p>
+<h5>
+    Realización del subsistema (vista de caja blanca del subsistema)
+</h5>
+<p>
+    Los subsistemas de diseño sólo deberían exponer lo que los clientes necesitan. &nbsp;Por lo tanto, la clase que
+    implementa un EJB es privada en relación con el subsistema y es una parte lógica de la realización del subsistema. La
+    realización del subsistema puede convertirse en:
+</p>
+<ul>
+    <li>
+        Un conjunto de clases y EJB de colaboración, ocultadas por una o más clases de <i>delegado</i> o de <i>acceso</i>.
+    </li>
+    <li>
+        Un único EJB sin otras clases de colaboración.
+    </li>
+</ul>
+<p>
+    Continuando con el ejemplo del subsistema Customer, la realización del subsistema incluye:
+</p>
+<ul>
+    <li>
+        CustomerEntityEJB (componente) "EJBEntityBean"
+    </li>
+    <li>
+        CustomerBean "EJBImplementation"
+    </li>
+    <li>
+        Clases de ayudante adicionales
+    </li>
+</ul>
+<p>
+    En la figura 3 se muestra una vista de caja blanca (esto es, <i>dentro</i> del subsistema) del subsistema de diseño.
+    Observe que las clases EJB se modelan de acuerdo a lo descrito en la sección <a href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305" class="elementLinkWithUserText">Directriz: Enterprise JavaBean (EJB)</a>. Se hace
+    referencia a esta vista interna del subsistema como una realización del subsistema. En esta vista, se ven las
+    decisiones ocultadas a los clientes. Por ejemplo, en esta realización del subsistema una clase DAO (Data Access Object)
+    accede a los datos persistentes utilizando la API JDBC. (En otro diseño, se podría haber utilizado la persistencia
+    gestionada por contenedor). Consulte la sección <a href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305" class="elementLinkWithUserText">Directriz: Enterprise JavaBean (EJB)</a> para obtener
+    más información sobre las clases DAO.
+</p>
+<p align="center">
+    <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/ejb_structure.gif" />
+</p>
+<p align="center">
+    <b><font size="2">Figura 3: vista de caja blanca del subsistema de diseño de Customer.</font></b>
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,658 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de tareas: Determinar resultados de prueba</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="determine_test_results" name="uma.name">
+<meta content="Determinar resultados de prueba" name="uma.presentationName">
+<meta content="_vqUgwEohEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="Analista de pruebas">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={35359DDF-6361-43E5-8B1B-18D204DA8CFF}&path={35359DDF-6361-43E5-8B1B-18D204DA8CFF},{0AE0042B-034C-4296-9FA0-D9DCC61FC7B4},_vqUgwEohEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_C6jF0EdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_vqUgwEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_dTvnIEdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_vqUgwEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_zvv6IEdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_vqUgwEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_C6jF0EdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_vqUgwEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_dTvnIEdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_vqUgwEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_zvv6IEdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_vqUgwEohEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_C6jF0EdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_vqUgwEohEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_dTvnIEdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_vqUgwEohEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_zvv6IEdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_vqUgwEohEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_vqUgwEohEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Determinar resultados de prueba</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta tarea se describe cómo registrar de forma precisa los resultados de la prueba y qué tipo de seguimiento es necesario.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="prueba" text="determinar resultados de" name="XE_test__determining_results_of" id="XE_test__determining_results_of" class="index"></a> 
+<p>
+    El objetivo de esta tarea es:
+</p>
+<ul>
+    <li>
+        Realizar evaluaciones continuas del resumen de la calidad percibida del producto
+    </li>
+    <li>
+        Identificar y capturar los resultados detallados de la prueba
+    </li>
+    <li>
+        Proponer las acciones correctivas adecuadas para resolver anomalías en la calidad
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Principal:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_analyst_563F95C8.html" guid="_CTae4Ri2Edq_uI8xTPML6g">Analista de pruebas</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Adicional:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">Asistencia:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_strategy_A2EC23E0.html" guid="_CSvwhBi2Edq_uI8xTPML6g">Estrategia de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_ideas_list_E22F15F7.html" guid="_CSvwgxi2Edq_uI8xTPML6g">Lista de ideas de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_log_1C3E1D2.html" guid="_shwNVEohEdqrjq4i3fchvA">Registro de prueba</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_case_36ADC82E.html" guid="_CSvwjRi2Edq_uI8xTPML6g">Caso de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_workload_analysis_model_9C231806.html" guid="_CSvwhhi2Edq_uI8xTPML6g">Modelo de an&aacute;lisis de carga de trabajo</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_results_CC338534.html" guid="_vqguAUohEdqrjq4i3fchvA">Resultados de la prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_evaluation_summary_C195A524.html" guid="_vqguAEohEdqrjq4i3fchvA">Resumen de evaluaci&oacute;n de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> Examinar todos los incidentes y anomal&iacute;as de la prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ExamineTestIncidentsandFailures" name="ExamineTestIncidentsandFailures"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Investigar cada incidente y obtener información detallada de los problemas resultantes.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    En esta tarea, se analizan los registros de prueba para determinar los resultados de prueba significativos, teniendo en
+    cuenta las diferencias entre los resultados esperados y los resultados reales de cada prueba. Identifique y analice uno
+    a uno cada incidente y cada anomalía. Aprenda todo lo que pueda sobre cada aparición.
+</p>
+<p>
+    Busque los incidentes duplicados, los síntomas comunes y otras relaciones entre los incidentes. Estas condiciones
+    proporcionan a menudo una pista importante sobre la causa raíz de un grupo de incidentes.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Crear y mantener solicitudes de cambio </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="CreateMaintainCRs" name="CreateMaintainCRs"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Especificar información de solicitud de cambio en una herramienta de seguimiento para la valoración, la
+                gestión y la resolución.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Las diferencias indican defectos potenciales en los elementos del destino de la prueba y se deben especificar en un
+    sistema de seguimiento como incidentes o solicitudes de cambio, con una indicación de las acciones correctivas
+    adecuadas que se deben realizar.
+</p>
+<p>
+    <b>Subtemas:</b>
+</p>
+<ul>
+    <li>
+        <a href="#VerifyIncidentFacts">Verificar los hechos de los incidentes</a>
+    </li>
+    <li>
+        <a href="#ClarifyCRDetail">Aclarar los detalles de las solicitudes de cambio</a>
+    </li>
+    <li>
+        <a href="#CRSeverityPriority">Indicar la gravedad del impacto relativo y la prioridad de las resoluciones</a>
+    </li>
+    <li>
+        <a href="#LogAnotherCR">Registrar las solicitudes de cambio adicionales por separado</a>
+    </li>
+</ul>
+<h4>
+    <a id="VerifyIncidentFacts" name="VerifyIncidentFacts">Verificar los hechos de los incidentes</a> <a href="#CreateMaintainCRs"><img src="./../../core.base_rup/resources/top.gif" alt="Ir a la parte superior de la página" border="0"     width="26" height="20" /></a>
+</h4>
+<p>
+    Verifique que estén disponibles datos de soporte precisos. Recopile los datos para adjuntarlos directamente a la
+    solicitud de cambio, o haga referencia a dónde se pueden obtener los datos por separado.
+</p>
+<p>
+    Siempre que sea posible, compruebe que el problema sea reproducible. Los problemas reproducibles tienen una
+    probabilidad mayor de recibir atención del desarrollador y que se solucionen; un problema que no se puede reproducir
+    supone una frustración para el personal de desarrollo y malgasta recursos valiosos de programación en una búsqueda sin
+    frutos. Aún así, se recomienda registrar estos incidentes, pero intente identificar los incidentes no reproducibles
+    aparte de los reproducibles.
+</p>
+<h4>
+    <a id="ClarifyCRDetail" name="ClarifyCRDetail">Aclarar los detalles de las solicitudes de cambio</a> <a href="#CreateMaintainCRs"><img src="./../../core.base_rup/resources/top.gif" alt="Ir a la parte superior de la página" border="0"     width="26" height="20" /></a>
+</h4>
+<p>
+    Es importante que las solicitudes de cambio sean comprensibles, especialmente el titular. Asegúrese de que el titular
+    sea claro y preciso, y que articule claramente el problema específico. Un titular breve es útil para las listas de
+    defectos de resumen y el debate en las reuniones de estado <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/ccb_59E01CD3.html" target="_blank" guid="_x9h-49nmEdmO6L4XMImrsA">CCB</a>.
+</p>
+<p>
+    Es importante que la descripción detallada de la solicitud de cambio no sea ambigua y que se pueda interpretar
+    fácilmente. Se recomienda registrar las solicitudes de cambio lo antes posible, pero dedique tiempo después a volver y
+    mejorar y ampliar las descripciones antes de que lleguen a manos del personal de desarrollo.
+</p>
+<p>
+    Proporcione otras soluciones, tantas como resulte práctico. Esto permite reducir las ambigüedades restantes en la
+    descripción y facilita la aclaración. También garantiza un aumento de la probabilidad de que la solución se aproxime a
+    sus excepciones. Asimismo, demuestra que el equipo de prueba no sólo está preparado para encontrar los problemas, sino
+    también para identificar las soluciones adecuadas.
+</p>
+<p>
+    Otros detalles a incluir son las capturas de imagen de pantalla, los archivos de datos de prueba, los scripts de prueba
+    automática, la salida de los programas de utilidad de diagnóstico y otra información que puede resultar de utilidad a
+    los desarrolladores para aislar y corregir la anomalía subyacente.
+</p>
+<h4>
+    <a id="CRSeverityPriority" name="CRSeverityPriority">Indicar la gravedad del impacto relativo y la prioridad de las
+    resoluciones</a> <a href="#CreateMaintainCRs"><img src="./../../core.base_rup/resources/top.gif"     alt="Ir a la parte superior de la página" border="0" width="26" height="20" /></a>
+</h4>
+<p>
+    Proporcione una indicación de la gravedad del problema al personal de gestión y desarrollo. En los equipos más grandes,
+    la prioridad de resolución real la determina el equipo de gestión, aunque puede dejar que las personas indiquen su
+    prioridad de resolución preferida y la ajusten posteriormente según sea necesario. Como norma general, se recomienda
+    asignar a las solicitudes de cambio una prioridad de resolución media por omisión, y aumentarla o disminuirla en cada
+    caso según sea necesario.
+</p>
+<p>
+    Deberá diferenciar el impacto que tendrá la solicitud de cambio en el entorno de producción si no se ejecuta y el
+    impacto que tendrá la solicitud de cambio en el esfuerzo de prueba si no se ejecuta. Es tan importante para el equipo
+    de gestión saber cuándo afecta un defecto al esfuerzo de prueba, como para los usuarios ser conscientes de la gravedad.
+</p>
+<p>
+    A veces es difícil prever por qué necesita ambos atributos. Es posible que un incidente sea realmente grave, por
+    ejemplo, una caída del sistema, pero que las acciones necesarias para reproducirlo sea muy poco probable que se
+    produzcan. En este caso, el equipo puede indicar la gravedad como alta, pero indicar una prioridad de resolución muy
+    baja.
+</p>
+<h4>
+    <a id="LogAnotherCR" name="LogAnotherCR">Registrar las solicitudes de cambio adicionales por separado</a>
+</h4>
+<p>
+    A menudo, los incidentes ponen de manifiesto el dicho "Cuando el río suena, agua lleva"; cuando se identifica y se
+    registra una solicitud de cambio, se identifican otros problemas que se deben solucionar. Evite la tentación de añadir
+    simplemente estos resultados adicionales a la solicitud de cambio existente: si la información está directamente
+    relacionada y ayuda a solucionar mejor el problema existente, es correcto. Pero si los otros problemas son diferentes,
+    identificarlos en una CR existente puede hacer que no se accionen esos problemas, que no obtengan la prioridad correcta
+    o que afecten a la velocidad con la que se solucionan otros problemas.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Analizar y evaluar el estado </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="AnalyzeEvaluateStatus" name="AnalyzeEvaluateStatus"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%">
+                    <b>Objetivo:</b>&nbsp;
+                </td>
+                <td width="95%">
+                    Calcular y proporcionar las medidas y los indicadores clave de la prueba.&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    <b>Subtemas:</b>
+</p>
+<ul>
+    <li>
+        <a href="#IncidentData">Distribución de incidentes</a>
+    </li>
+    <li>
+        <a href="#ExecutionCoverageData">Cobertura de la ejecución de la prueba</a>
+    </li>
+    <li>
+        <a href="#CRData">Estadísticas de solicitudes de cambio</a>
+    </li>
+</ul>
+<h4>
+    <a id="IncidentData" name="IncidentData">Distribución de incidentes</a>
+</h4>
+<p>
+    Analice los incidentes basándose en dónde se distribuyen, por ejemplo, el área funcional, los riesgos de calidad, el
+    verificador asignado y el desarrollador asignado.
+</p>
+<p>
+    Busque patrones en la distribución como, por ejemplo, áreas funcionales que aparentemente tengan un recuento de
+    defectos por encima de la media. Asimismo, busque desarrolladores y verificadores que tengan una carga excesiva de
+    trabajo y cuya calidad de trabajo esté disminuyendo
+</p>
+<h4>
+    <a id="ExecutionCoverageData" name="ExecutionCoverageData">Cobertura de la ejecución de la prueba</a>
+</h4>
+<p>
+    Para evaluar la cobertura de la ejecución de la prueba, debe revisar los registros de prueba y determinar:
+</p>
+<ul>
+    <li>
+        La proporción entre cuántas pruebas (scripts de prueba o guiones de prueba) se han realizado en este ciclo de
+        prueba y el número total de pruebas de todos los elementos de prueba de destino previstos.
+    </li>
+    <li>
+        La proporción de guiones de prueba ejecutados satisfactoriamente.
+    </li>
+</ul>
+<p>
+    El objetivo es garantizar que se han ejecutado de forma satisfactoria un número suficiente de pruebas destinadas a este
+    ciclo de prueba. Si esto no es posible, o para aumentar los datos de ejecución, se pueden identificar uno o varios
+    criterios de cobertura de prueba adicionales, basándose en:
+</p>
+<ul>
+    <li>
+        La prioridad o el riesgo de calidad
+    </li>
+    <li>
+        La cobertura basada en la especificación (requisitos, etc.)
+    </li>
+    <li>
+        La prioridad o la necesidad empresarial
+    </li>
+    <li>
+        La cobertura basada en códigos
+    </li>
+</ul>
+<p>
+    Consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/key_measures_of_test_62253EE4.html#Requirements-based test coverage" guid="5.312818155786224E-305">Concepto: Medidas clave de la prueba, Cobertura de la prueba basada en requisitos</a>.
+</p>
+<p>
+    Registre y presente los resultados de la prueba en un informe de evaluación de prueba para este ciclo de prueba.
+</p>
+<h4>
+    <a id="CRData" name="CRData">Estadísticas de solicitudes de cambio</a>
+</h4>
+<p>
+    Para analizar los defectos, debe revisar y analizar las medidas elegidas como parte de la estrategia de análisis de
+    defectos. Las medidas de defectos que se utilizan con más frecuencia incluyen las siguientes medidas (a menudo
+    expresadas en forma de gráfico):
+</p>
+<ul>
+    <li>
+        <b>Densidad de defectos</b> - el número de defectos se muestra como una función de uno o dos atributos de defectos
+        (por ejemplo, la distribución respecto al área funcional, o el riesgo de calidad comparado con el estado o la
+        gravedad).
+    </li>
+    <li>
+        <b>Tendencia de defectos</b> - el recuento de defectos se muestra como una función en el tiempo.
+    </li>
+    <li>
+        <b>Antigüedad de defectos</b> - un informe especial de densidad de defectos en el que los recuentos de defectos se
+        muestran como una función de la cantidad de tiempo que un defecto ha permanecido en un determinado estado (abierto,
+        nuevo, esperando verificación, etc.)
+    </li>
+</ul>
+<p>
+    Compare las medidas de este ciclo de prueba con los totales en ejecución de la iteración actual y los del análisis de
+    iteraciones anteriores para entender mejor las tendencias emergentes en el tiempo.
+</p>
+<p>
+    Se recomienda presentar los resultados en un diagrama con los resultados de soporte de la solicitud.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Realizar una valoraci&oacute;n de la experiencia de calidad actual </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="AssessCurrentQuality" name="AssessCurrentQuality"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Proporcionar información de retorno sobre la calidad actual experimentada y percibida en el producto de
+                software.&nbsp;
+            </td>
+        </tr>
+    </table>
+    <p>
+        Formule un resumen de la experiencia de calidad actual, resaltando los aspectos buenos y malos de la calidad de los
+        productos de software.
+    </p>
+</div></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Realizar una valoraci&oacute;n de los riesgos de calidad pendientes </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="AssessQualityRisks" name="AssessQualityRisks"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Proporcionar información de retorno sobre cuáles de las áreas de riesgo restantes proporcionan la máxima
+                exposición potencial al proyecto.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Identifique y explique aquellas áreas que no se hayan tratado todavía en términos de riesgos de calidad, e indique qué
+    impacto y exposición suponen para el equipo.
+</p>
+<p>
+    Proporcione una indicación de qué prioridad considera que tiene cada riesgo de calidad pendiente, y utilice la
+    prioridad para indicar el orden en el que se deben intentar solucionar estos problemas.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Realizar una valoraci&oacute;n de la cobertura de la prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="TestCoverage" name="TestCoverage"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Realizar una valoración de resumen del análisis de la cobertura de la prueba.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Basándose en el trabajo del paso de <a href="#ExecutionCoverageData">cobertura de la ejecución de la prueba</a>,
+    proporcione una breve sentencia de resumen del estado y la información que representan los datos.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Esbozar el resumen de evaluaci&oacute;n de la prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="GenerateTestEvaluationSummary" name="GenerateTestEvaluationSummary"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Comunicar los resultados de la prueba a los interesados y realizar una valoración objetiva de la calidad y
+                el estado de la prueba.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Presente los resultados de la prueba de este ciclo de prueba en un resumen de evaluación de la prueba. Este paso
+    consiste en desarrollar el borrador inicial del resumen. Se consigue ensamblando la información anterior que se ha
+    recopilado en un informe de resumen legible. Dependiendo de los receptores interesados y del contexto del proyecto, el
+    formato y el contenido real del resumen variará.
+</p>
+<p>
+    A menudo, es una buena idea distribuir el borrador inicial a un subconjunto de interesados para obtener información de
+    retorno que puede incorporar antes de publicarla a un público más amplio.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Advertir a los interesados de los resultados clave </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="AdviseStakeholdersFindings" name="AdviseStakeholdersFindings"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Promover y hacer público el resumen de evaluación según corresponda.&nbsp;
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    Utilizando los medios que sean necesarios, haga pública esta información. Se recomienda publicar estos datos en un
+    sitio de proyecto centralizado, o presentarlos en reuniones convocadas regularmente para permitir recopilar información
+    de retorno y determinar las próximas acciones.
+</p>
+<p>
+    Tenga en cuenta que hacer públicos los resúmenes de evaluación puede ser a veces una cuestión de sensibilidad política.
+    Negocie con el gestor de desarrollo para presentar los resultados de forma que reflejen un resumen preciso y sincero de
+    los resultados, respetando siempre el trabajo de los desarrolladores.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Evaluar y verificar los resultados </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="EvaluateResults" name="EvaluateResults"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Verificar que la tarea se ha realizado correctamente y que los productos de trabajo resultantes son
+                aceptables.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Ahora que ha terminado el trabajo, se recomienda verificar que el trabajo tenía el valor suficiente y que no sólo ha
+    gastado una gran cantidad de papel. Debe evaluar si el trabajo tiene la calidad correcta y si es lo suficientemente
+    completo para que resulte útil a aquellos miembros del equipo que vayan a utilizarlo posteriormente como entrada de su
+    trabajo. Siempre que sea posible, utilice las listas de comprobación proporcionadas en RUP para verificar que la
+    calidad y la completitud son lo "suficientemente buenas".
+</p>
+<p>
+    Fomente la participación en la revisión del trabajo interno de las personas que realizan tareas basadas en los
+    resultados de su trabajo. Hágalo mientras todavía tenga tiempo para realizar acciones para solucionar sus problemas.
+    También debe evaluar su trabajo en los productos de trabajo de entrada clave para asegurarse de que los ha representado
+    de forma precisa y suficiente. Para ello, es muy útil hacer que el autor del producto de trabajo de entrada revise su
+    trabajo.
+</p>
+<p>
+    Recuerde que RUP es un proceso de entrega iterativo y que en muchos casos los productos de trabajo evolucionan con el
+    tiempo. Como tal, no siempre es necesario (y a veces es contraproducente) formar completamente un producto de trabajo
+    que sólo se utilizará de forma parcial o que no se utilizará en absoluto en un trabajo inmediatamente posterior. Esto
+    se debe a que existe una alta probabilidad de que la situación alrededor del producto de trabajo cambie (y que las
+    suposiciones realizadas cuando se creó el producto de trabajo se demuestre que son incorrectas) antes de que se utilice
+    el producto, lo que da como resultado un esfuerzo inútil y una revisión costosa. Asimismo, evite la trampa de invertir
+    demasiados ciclos en la presentación en detrimento del valor del contenido. En entornos de proyecto en los que la
+    presentación tenga importancia y un gran valor económico como entregable del proyecto, puede utilizar un recurso
+    administrativo para ejecutar tareas de presentación.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Varias apariciones" abbr="Varias apariciones">Varias apariciones</th><td align="left" class="sectionTableCell" headers="property_Varias apariciones"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Condicionado por sucesos" abbr="Condicionado por sucesos">Condicionado por sucesos</th><td align="left" class="sectionTableCell" headers="property_Condicionado por sucesos"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Continuo" abbr="Continuo">Continuo</th><td align="left" class="sectionTableCell" headers="property_Continuo"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Se puede repetir" abbr="Se puede repetir">Se puede repetir</th><td align="left" class="sectionTableCell" headers="property_Se puede repetir"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/eval_execution_of_suite_75D39B9.html" guid="{E4299918-C096-4CEE-A119-490B0DE11867}">Evaluación de los resultados de la ejecución de un conjunto de aplicaciones de prueba utilizando Rational TestFactory</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/evaluate_test_execution_result_7F4BCD38.html" guid="{037E5AB9-7DC1-4CDB-8395-A2647F5A7F24}">Análisis de anomalías de las pruebas utilizando Rational TestManager y TestFactory</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/eval_and_measure_code_based_coverage_32EF4DC6.html" guid="{F0ECC223-C6D1-46A9-802B-E4D86FD1572B}">Utilización de Rational TestFactory para medir y evaluar la cobertura de la prueba basada en código en scripts de prueba de Rational Robot</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/eval_test_coverage_8F1DEC44.html" guid="{D4C656B2-68B7-4C88-B999-FA80AA417C6C}">Evaluación de la cobertura de la prueba utilizando Rational TestFactory</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/report_defect_trends_status_345B6B16.html" guid="{FB4F9056-6E9F-4E1A-8190-099CAFE40736}">Informe de tendencias de defectos y estado utilizando Rational ClearQuest</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/submit_change_request_form_4C353A19.html" guid="{5B77C491-E5E9-4BE3-86BD-E4C8A82F8E32}">Envío de solicitudes de cambio utilizando Rational ClearQuest</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

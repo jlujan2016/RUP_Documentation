@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Dise&ntilde;o de Enterprise JavaBeans (EJB) </title>
+<meta content="Guideline" name="uma.type">
+<meta content="designing_enterprise_javabeans_ejbs" name="uma.name">
+<meta content="Dise&ntilde;o de Enterprise JavaBeans (EJB) " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.8082009592332426E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.8082009592332426E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Dise&ntilde;o de Enterprise JavaBeans (EJB) </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la forma en que diseñar Enterprise JavaBeans (EJB) para una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Diseño de clase</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    Esta directriz se centra en el diseño de EJB. En la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305">Directriz de producto de trabajo: EJB</a> encontrará ayuda adicional sobre los EJB como,
+    por ejemplo, en la forma de identificarlos y modelarlos.
+</p>
+<p>
+    En las directrices que se indican a continuación encontrará ayuda específica sobre el diseño de tipos específicos EJB:
+</p>
+<ul type="disc">
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_session_beans_BDBA5DEB.html" guid="5.207478815358005E-306">Diseño de beans de sesión</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_entity_beans_7CD45D28.html" guid="5.953653009453999E-307">Diseño de beans de entidad</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_message-driven_beans_DE3F4EC4.html" guid="7.497484412493539E-306">Diseño de beans controlados por mensajes</a>
+    </li>
+</ul>
+<h3>
+    <a id="Local" name="Local">Interfaces locales frente a interfaces remotas</a>
+</h3>
+<p>
+    En la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html#Enterprise_JavaBeans" guid="1.527482214591853E-307">Concepto: visión general de J2EE: Enterprise JavaBeans</a> se describen las interfaces
+    locales y remotas.
+</p>
+<p>
+    Las interfaces locales son más eficientes que las interfaces remotas. Se deberían proporcionar interfaces locales si
+    hay clientes específicos que son siempre locales respecto al EJB.
+</p>
+<p>
+    En las directrices para los tipos específicos de EJB encontrará ayuda más específica sobre este tema.
+</p>
+<h3>
+    <a id="Parameter" name="Parameter"></a>Paso de parámetros
+</h3>
+<p>
+    El rendimiento puede verse afectado en gran medida según el número de llamadas remotas y la cantidad de datos que se
+    transfieren en cada llamada. Esto se puede resolver si se proporcionan llamadas específicas que devuelvan todos los
+    datos que requiere el cliente remoto. Por ejemplo, un bean de sesión, actuando como fachada de un conjunto de beans de
+    entidad relacionados, puede copiar datos de varios beans de entidad en objetos de valor serializable, y devolver estos
+    datos en una única llamada remota. Esto se describe en detalle en <i>Core J2EE Patterns - Value Object Pattern</i> ([<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/supportingmaterials/java_references_110189E3.html#ALU01" guid="1.4494927535802764E-304">ALU01</a>]).
+</p>
+<p>
+    Hay que buscar un equilibrio entre esta estrategia y el mantener las interfaces lo más genéricas que sea posible así
+    como evitar el envío de demasiados datos innecesarios.
+</p>
+<h3>
+    <a id="Transactions" name="Transactions">Transacciones</a>
+</h3>
+<p>
+    Demarcar transacciones significa iniciar transacciones, confirmar transacciones y tratar las transacciones que terminan
+    anormalmente. Un diseñador de EJB debe decidir cuándo implementar una demarcación de transacción gestionada por bean o
+    cuándo implementar una demarcación de transacción gestionada por contenedor. Hay que decidirlo en las ubicaciones de
+    los límites de la transacción en la secuencia de lógica empresarial que la aplicación realiza. Consulte las secciones
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html#Modeling Transactions" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">Tarea: diseño de guión de uso, modelado de transacciones</a> y <i>Gestión
+    de transacciones</i> en <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307">Concepto: visión general de J2EE</a> para obtener más información.
+</p>
+<p>
+    Es mejor utilizar transacciones gestionadas por contenedor siempre que sea posible. De esta forma mantendrá el código
+    simple y permitirá que los desarrolladores se centren en la lógica empresarial de la aplicación.
+</p>
+<p>
+    En general, las transacciones con una mayor granularidad dan lugar a un mejor rendimiento en general. Supongamos que se
+    realiza una secuencia de llamadas de método a un EJB (por ejemplo getX, getY y setZ). De forma predeterminada cada
+    método se ejecutará en una nueva transacción, dando lugar a un rendimiento más bajo. Para realizar estas llamadas
+    dentro de la misma transacción, habría que crear otro método, por ejemplo el método processXYZ de un EJB de sesión y
+    establecer los atributos de transacción de los métodos que se llaman en <i>Required</i>, de forma que utilizasen la
+    transacción existente (esto es, la transacción del método que llama en el bean de sesión). &nbsp;
+</p>
+<h3>
+    <a id="Security" name="Security">Seguridad</a>
+</h3>
+<p>
+    Los conceptos relacionados con la seguridad básica de EJB se tratan en <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html#Security" guid="1.527482214591853E-307">Concepto: visión general de la plataforma J2EE: seguridad</a>.
+</p>
+<p>
+    Los requisitos de seguridad de EJB se establecen definiendo <i>roles de seguridad</i> y <i>permisos de método</i>.
+    Los&nbsp;roles de seguridad y los permisos de método se definen en el descriptor de despliegue del EJB. Es&nbsp;el
+    servidor (mediante la utilización de herramientas de administrador) quien debe correlacionar roles de seguridad con
+    usuarios o grupos de usuarios. &nbsp;
+</p>
+<p>
+    Un rol de seguridad define un conjunto de tipos similares de actividades que se agrupan bajo un único nombre. Un
+    permiso de método otorga a un rol de seguridad concreto el derecho de llamar al método. Por&nbsp;ejemplo, considere una
+    entidad EJB <i>Employee</i>, con los métodos <i>setAddress</i>, <i>setSalary</i> etc. A un rol de seguridad
+    <i>manager</i> se le podría otorgar un permiso de método para los métodos setAddress y setSalary, mientras que a un rol
+    de seguridad <i>employee</i> se le podría otorgar únicamente el permiso de método para el método
+    setAddress.&nbsp;&nbsp;
+</p>
+<p>
+    En algunas situaciones no es posible dar soporte a los requisitos de seguridad de una aplicación con permisos de
+    métodos declarados en el descriptor de despliegue. En este caso se utilizarían los métodos getCallerPrincipal e
+    isCallerInRole de la interfaz javax.ejb.EJBContext. &nbsp;
+</p>
+<h3>
+    <a id="Timer_Service" name="Timer_Service">Servicio de temporizador</a>
+</h3>
+<p>
+    Desde J2EE 1.4 (con más exactitud, desde EJB 2.1) los beans de sesión sin estado y los beans controlados por mensajes
+    tienen la posibilidad de utilizar temporizadores para planificar procesos por lotes con el servicio de temporizador de
+    EJB.
+</p>
+<p>
+    El servicio de temporizador de EJB proporciona métodos que permiten devoluciones de llamada para planificar para
+    sucesos temporizados. El contenedor proporciona un servicio de notificación transaccional y fiable para sucesos
+    temporizados. Las notificaciones del temporizador se pueden planificar para que se produzcan en un momento específico
+    del tiempo, después de que haya transcurrido un intervalo de tiempo específico o en intervalos específicos que se
+    repiten periódicamente.
+</p>
+<p>
+    El contenedor EJB implementa el servicio de temporizador de forma que un EJB puede acceder a este servicio mediante la
+    interfaz EJBContext.
+</p>
+<p>
+    El servicio de temporizador de EJB es un servicio de notificación de temporizador estándar ("coarse-grained") diseñado
+    para utilizarlo en el modelado de procesos a nivel de aplicación y que no está pensado para modelar sucesos en tiempo
+    real.
+</p>
+<h3>
+    <a id="Direct_Access_vs._Entity_EJBs" name="Direct_Access_vs._Entity_EJBs"></a>Acceso directo frente a beans de entidad
+</h3>
+<p>
+    La utilización de beans de entidad para los datos persistentes proporciona un mecanismo estándar y con muchas
+    características para acceder a los datos persistentes. La decisión de utilizar persistencia gestionada por bean o
+    persistencia gestionada por contenedor se puede ocultar a los clientes, proporcionando algo de flexibilidad al diseño.
+    Los EJB se pueden aprovechar de las características de transacciones, gestión de recursos, equilibrio de carga y otras
+    más que el entorno J2EE proporciona.
+</p>
+<p>
+    Sin embargo, podría haber situaciones en que se desee acceder directamente a la base de datos evitando el utilizar
+    beans de entidad. Por ejemplo, si siempre se accede a los datos en modalidad de sólo lectura por un único cliente, el
+    acceso directo a la base de datos sería más eficiente.
+</p>
+<p>
+    Si se accede directamente a la base de datos (por ejemplo, desde un bean de sesión sin estado), se debe encapsular todo
+    el acceso a la base de datos dentro de una clase DAO (Data Access Object). Tan sólo se trata de una clase Java que
+    oculta y encapsula el mecanismo de almacenamiento que subyace detrás ella y que aísla de los cambios en la interfaz al
+    origen de datos, si es que cambia. Consulte <i>Core J2EE Patterns - Data Access Object Pattern</i> ([<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/supportingmaterials/java_references_110189E3.html#ALU01" guid="1.4494927535802764E-304">ALU01</a>]) para obtener más información.
+</p>
+<h3>
+    <a id="Database_Connections" name="Database_Connections">Conexiones con bases de datos</a>
+</h3>
+<p>
+    Prácticamente todos los contenedores EJB proporcionan soporte a la agrupación de conexiones, compartiendo un conjunto
+    de conexiones ya creadas entre los clientes. Estas conexiones se asignan a los EJB siempre que es necesario. Los EJB
+    sacan partido al hecho de obtener una conexión sin el gasto que supone crearla e inicializarla. Cuando la conexión se
+    devuelve a la agrupación, se recicla. El tamaño de la agrupación debería tener disponibles las suficientes conexiones
+    listas para reciclar las utilizadas.
+</p>
+<p>
+    Con beans de entidad con persistencia gestionada por contenedor, el contenedor gestiona la conexión con la base de
+    datos y accede a la agrupación de conexiones de base de datos.
+</p>
+<p>
+    Con beans de entidad gestionados por persistencia (o para los EJB de sesión o controlados por mensajes que acceden a
+    una base de datos), corresponde al desarrollador codificar la rutina de conexión. Se deberían seguir estas normas:
+</p>
+<ul>
+    <li>
+        Aislar el código de acceso a la base de datos en una clase DAO.
+    </li>
+    <li>
+        No codificar por programa el URL real de la base de datos; en lugar de ello, es mejor utilizar un nombre lógico que
+        se pueda recuperar con una búsqueda JNDI (Java Naming and Directory Interface). De esta forma es posible reutilizar
+        el EJB en varias aplicaciones, posiblemente con distintos nombres de base de datos.
+    </li>
+    <li>
+        En general, es mejor utilizar agrupaciones de conexiones, y sólo retener la conexión mientras se necesita. Por
+        ejemplo, un bean de entidad se podría conectar, actualizar una fila en la tabla y a continuación desconectarse. De
+        esta forma se permite que muchos EJB compartan la misma conexión. La especificación JDBC da soporte a la agrupación
+        de conexiones.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

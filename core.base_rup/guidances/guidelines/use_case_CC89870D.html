@@ -1,0 +1,925 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Caso de uso</title>
+<meta content="Guideline" name="uma.type">
+<meta content="use_case" name="uma.name">
+<meta content="Caso de uso" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{B1526BC5-E346-42CB-A08A-3C0D7F382407}", "4.1983217662266927E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.1983217662266927E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.1983217662266927E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Caso de uso</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Un guión de uso describe lo que hace el sistema para satisfacer un requisito. En esta directriz se explica cómo identificar y desarrollar guiones de uso.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">Caso de uso</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_use_case_model_93D8F44.html" guid="{F7D9D038-B184-43CC-9353-15BA154F87B5}">Estructurar el modelo de guión de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="guión de uso" text="directrices para" name="XE_use_case__guidelines_for" id="XE_use_case__guidelines_for" class="index"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">Explicación</a>
+</h3>
+<p>
+    En esta definición hay numerosas palabras clave:
+</p>
+<ul>
+    <li>
+        <b>Instancia de guión de uso</b><i>.</i> La secuencia a la que se hace referencia en la definición es, en realidad,
+        un flujo de sucesos específico a través del sistema, o una instancia. Puede haber varios flujos de sucesos, y
+        muchos de ellos pueden ser muy similares. Para que el modelo de guiones de uso sea comprensible, debe agrupar
+        flujos de sucesos similares en un guión de uso. Identificar y describir un guión de uso significa, en realidad,
+        identificar y describir un grupo de flujos de sucesos relacionados.
+    </li>
+    <li>
+        <b>Ejecuciones del sistema</b><i>.</i> Significa que el sistema proporciona el guión de uso. Un actor se comunica
+        con una instancia de guión de uso del sistema.
+    </li>
+    <li>
+        <b>Un valor de resultado observable</b>. Puede transferir un valor en un guión de uso ejecutado satisfactoriamente.
+        Un guión de uso debe asegurarse de que un actor puede realizar una tarea que tiene un valor identificable. Es muy
+        importante al identificar la granularidad o el nivel correcto para un guión de uso. El nivel correcto hace
+        referencia a conseguir guiones de uso que no sean demasiado pequeños. En circunstancias determinadas, puede
+        utilizar un guión de uso como una unidad de planificación en una organización que incluya personas que son actores
+        en el sistema.
+    </li>
+    <li>
+        <b>Acciones</b>. Una acción es un procedimiento algorítmico o computacional. Se invoca cuando el actor proporciona
+        una señal al sistema, o bien, cuando el sistema obtiene un suceso de tiempo. Una acción puede implicar
+        transmisiones de señal al actor de la invocación o a otros actores. Una acción es global, lo que significa que se
+        realiza toda o no se lleva a cabo en absoluto.
+    </li>
+    <li>
+        <b>Un actor determinado</b><i>.</i> Un actor es clave para buscar el guión de uso correcto y, en especial, debido a
+        que el actor ayuda a evitar guiones de uso que sean demasiado grandes. Imagine, por ejemplo, una herramienta de
+        modelado visual. En realidad, hay dos actores para esta aplicación: un desarrollador, es decir, alguien que
+        desarrolla sistemas utilizando la herramienta como soporte, y un administrador del sistema, es decir, una persona
+        que gestiona la herramienta. Cada uno de estos actores tiene sus propias demandas del sistema y, por ello,
+        necesitan un conjunto propio de guiones de uso.
+    </li>
+</ul>
+<p>
+    La funcionalidad de un sistema se define por medio de guiones de uso diferentes, donde cada uno de ellos representa un
+    flujo de sucesos específico. La descripción de un guión de uso define lo que sucede en el sistema cuando se ejecuta el
+    guión de uso.
+</p>
+<p class="picturecenter" align="center">
+    <img height="173" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/im_uc.gif" width="325" />
+</p>
+<p class="picturetext">
+    En un cajero automático el cliente puede, por ejemplo, retirar dinero de una cuenta, transferir dinero a una cuenta o
+    comprobar el saldo de una cuenta. Estas funciones corresponden a flujos que se pueden representar con guiones de uso.
+</p>
+<p>
+    Cada guión de uso tiene una tarea propia que realizar. Los guiones de uso recopilados constituyen todos los modos
+    posibles de utilizar el sistema. Puede obtener una idea de la tarea de un guión de uso sólo con observar su nombre.
+</p>
+<h3>
+    <a id="How to Find Use Cases" name="How to Find Use Cases">Cómo buscar guiones de uso</a>
+</h3>
+<p>
+    A continuación, se incluye un conjunto de preguntas que pueden resultar útiles al identificar guiones de uso:
+</p>
+<ul>
+    <li>
+        Para cada actor identificado, ¿en qué tareas se implica al sistema?
+    </li>
+    <li>
+        ¿Se debe informar al actor sobre ciertas apariciones en el sistema?
+    </li>
+    <li>
+        ¿Debe informar el actor sobre cambios externos repentinos al sistema?
+    </li>
+    <li>
+        ¿Debe proporcionar el sistema el comportamiento correcto a la empresa?
+    </li>
+    <li>
+        ¿Pueden realizar los guiones de uso identificados todas las características?
+    </li>
+    <li>
+        ¿Qué guiones de uso dan soporte y mantienen el sistema?
+    </li>
+    <li>
+        ¿Qué información se debe modificar o crear en el sistema?
+    </li>
+</ul>
+<p>
+    Con frecuencia, los guiones de uso que se pasan por alto debido a que no representan lo que son habitualmente las
+    tareas principales del sistema, pueden ser del tipo siguiente:
+</p>
+<ul>
+    <li>
+        Inicio y detención del sistema.
+    </li>
+    <li>
+        Mantenimiento del sistema. Por ejemplo, añadir nuevos usuarios y establecer perfiles de usuario.
+    </li>
+    <li>
+        Mantenimiento de los datos almacenados en el sistema. Por ejemplo, el sistema se construye para funcionar el
+        paralelo con un sistema heredado y se deben sincronizar los datos entre ambos.
+    </li>
+    <li>
+        Funcionalidad necesaria para modificar el comportamiento del sistema. Un ejemplo sería la funcionalidad para crear
+        nuevos informes.
+    </li>
+</ul>
+<p>
+    Si ha desarrollado un modelo de guión de uso empresarial y un modelo de análisis empresarial, dichos artefactos
+    constituyen un punto de partida adecuado para identificar guiones de uso.
+</p>
+<h3>
+    <a id="How a Use Case Evolves" name="How a Use Case Evolves">Cómo evoluciona un guión de uso</a>
+</h3>
+<p>
+    En iteraciones anteriores de la elaboración, sólo se han descrito algunos guiones de uso (los que se consideraban
+    significativos arquitectónicamente) con un poco más de detalle, además de una descripción breve. En primer lugar,
+    siempre debe desarrollar un esquema del guión de uso (en formato de paso a paso) antes de profundizar en los detalles.
+    Este esquema paso a paso debe ser el primer intento al definir la estructura del flujo de sucesos del guión de uso
+    (consulte el apartado <a href="#Flow of Events - Structure">Flujo de sucesos - Estructura</a> que se incluye
+    más abajo). Empiece siempre por el flujo básico del guión de uso. Una vez que se haya llegado a algún tipo de acuerdo
+    sobre el esquema del flujo básico, puede añadir lo que serán los flujos alternativos en relación con el flujo básico.
+</p>
+<p>
+    Hacia el final de la elaboración, debe haber completado todos los guiones de uso que tenga previstos describir con
+    detalle.
+</p>
+<h3>
+    <a id="Are All Use Cases Described in Detail?" name="Are All Use Cases Described in Detail?">¿Se describen todos los
+    guiones de uso con detalle?</a>
+</h3>
+<p>
+    Con frecuencia, en el modelo hay guiones de uso que son tan simples que no necesitan una descripción detallada del
+    flujo de sucesos, basta con un esquema paso a paso. Los criterios para tomar esta decisión se basan en que no se
+    observan desacuerdos entre el tipo de lectores del usuario sobre lo que significa el guión de uso, y que los
+    diseñadores y los verificadores se siente satisfechos con el nivel de detalle que proporciona el formato paso a paso.
+    Por ejemplo, lo guiones de uso que describen la recuperación o entrada simple de algunos datos del sistema.
+</p>
+<h3>
+    <a key="guión de uso" text="ámbito de un guión de uso" name="XE_use_case__scope_of_a_use_case" id="XE_use_case__scope_of_a_use_case" class="index"></a><a id="The Scope of a Use Case" name="The Scope of a Use Case">Ámbito de un guión de uso</a>
+</h3>
+<p>
+    A menudo resulta difícil decidir si un conjunto de interacciones de usuario-sistema, o diálogo, son uno o varios
+    guiones de uso. Considere el uso de una máquina de reciclaje. El cliente inserta elementos de depósito como, por
+    ejemplo, latas, botellas y cajas en la máquina de reciclaje. Una vez que ha insertado todos los elementos de depósito,
+    pulsa un botón y se imprime un recibo. A continuación, puede intercambiar el recibo por dinero.
+</p>
+<p>
+    ¿Hay un guión de uso para insertar un elemento de depósito y otro guión de uso para solicitar el recibo? O bien, ¿está
+    todo en un guión de uso? Hay dos acciones, pero la una sin la otra tienen escaso valor para el cliente. Más bien, lo
+    que tiene valor para el cliente (y tiene sentido para él), es un diálogo completo con todas las inserciones y la
+    obtención del recibo. Por ello, el diálogo completo, desde la inserción del primer elemento de depósito hasta que pulsa
+    el botón para obtener el recibo, es un guión de uso completo, un solo guión de uso.
+</p>
+<p>
+    Además, es posible que desee mantener juntas las dos acciones, a fin de revisarlas al mismo tiempo, modificarlas y
+    probarlas juntas, escribir manuales y, en general, gestionarlas como una unidad. Esto se convierte en una cuestión
+    obvia en los sistemas más grandes.
+</p>
+<h3>
+    <a id="How Use Cases Are Realized" name="How Use Cases Are Realized">Cómo se realizan los guiones de uso</a>
+</h3>
+<p>
+    Un guión de uso describe lo que sucede en el sistema cuando un actor interactúa con el sistema para ejecutar el guión
+    de uso. El guión de uso no define cómo ejecuta el sistema internamente sus tareas en términos de objetos de
+    colaboración. Este aspecto se deja para que lo muestren las realizaciones de los guiones de uso.
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    En el ejemplo del teléfono, el guión de uso indica, entre otras cosas, que el sistema emite una señal cuando se
+    descuelga el receptor y que entonces el sistema recibe dígitos, busca la parte receptora, llama a su teléfono, conecta
+    la llamada, transmite la conversación, y así sucesivamente.
+</p>
+<p>
+    En un sistema que se está ejecutando, una instancia de un guión de uso no corresponde a ningún objeto concreto del
+    modelo de implementación (por ejemplo, una instancia de una clase en el código). En cambio, corresponde a un flujo de
+    sucesos específico que ha invocado un actor y ejecutado como una secuencia de sucesos entre un conjunto de objetos. En
+    otras palabras, las instancias de los guiones de uso corresponden a comunicar instancias de objetos implementados. Esto
+    se llama la realización del guión de uso. A menudo, los mismos objetos participan en realizaciones de más de un guión
+    de uso. Por ejemplo, ambos guiones de uso, Depósito y Retirada, de un sistema de banca puede utilizar un objeto de
+    cuenta concreto en su realización, lo que no significa que los dos guiones de uso se comuniquen, sino que utilizan el
+    mismo objeto en su realización.
+</p>
+<p>
+    Un flujo de sucesos consta de varios subflujos que, unidos, producen el flujo total de sucesos. Puede reutilizar la
+    descripción de un subflujo en otros flujos de sucesos de los guiones de uso. Los subflujos de la descripción del flujo
+    de sucesos del guión de uso pueden ser comunes a los de otros guiones de uso. En el diseño, los mismos objetos deben
+    ejecutar el comportamiento común para todos los guiones de uso relevantes; es decir, sólo un conjunto de objetos debe
+    realizar este comportamiento, no importa el guión de uso que se ejecute.
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    En un sistema de cajeros automáticos, el subflujo inicial es el mismo que el flujo de sucesos de los guiones de uso
+    Retirar dinero y Comprobar saldo. El flujo de sucesos de ambos guiones de uso empieza comprobando la identidad de la
+    tarjeta y el código de acceso personal de cliente.
+</p>
+<h3>
+    <a id="A Use-Case has Many Possible Instances" name="A Use-Case has Many Possible Instances">Un guión de uso tiene
+    varias instancias posibles</a>
+</h3>
+<p>
+    Una instancia de guión de uso puede seguir un número de vías de acceso casi ilimitado, pero enumerable. Dichas vías de
+    acceso representan opciones abiertas para la instancia de guión de uso en la descripción de su flujo de sucesos. La vía
+    de acceso elegida depende de los sucesos. Los tipos de sucesos incluyen:
+</p>
+<ul>
+    <li>
+        Entrada de un actor. Por ejemplo, un actor puede decidir, entre varias opciones, lo que desea hacer a continuación.
+    </li>
+</ul>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    En el guión de uso Elementos de reciclaje del Sistema de máquinas de reciclaje, el Cliente siempre tiene dos opciones:
+    entregar otro elemento de depósito u obtener el recibo de elementos devueltos.
+</p>
+<ul>
+    <li>
+        Una comprobación de valores o tipos de un atributo u objeto interno. Por ejemplo, el flujo de sucesos puede ser
+        distinto si un valor es mayor o menor que un valor concreto.
+    </li>
+</ul>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    En el guión de uso Retirar dinero de un sistema de cajeros automáticos, el flujo de sucesos puede ser diferente si el
+    Cliente solicita más dinero del que tiene en la cuenta. Por lo tanto, la instancia de guión de uso permite vías de
+    acceso diferentes.
+</p>
+<h3>
+    <a id="Concurrency of Use Case Instances" name="Concurrency of Use Case Instances">Concurrencia de instancias de guión
+    de uso</a>
+</h3>
+<p>
+    Las instancias de varios guiones de uso y varias instancias del mismo guión de uso funcionan simultáneamente si el
+    sistema lo permite. En el modelado de guiones de uso, puede suponer que instancias de guiones de uso pueden estar
+    activas de modo concurrente sin que existan conflictos. Se espera que el modelo de diseño resuelva este problema,
+    puesto que el modelado de guiones de uso no describe cómo funcionan las cosas. Un modo de verlo es suponiendo que sólo
+    una instancia de guión de uso está activa a la vez, y que la ejecución de dicha instancia es una acción global. En el
+    modelado de guiones de uso, la "máquina de interpretación" se considera infinitamente rápida, por lo que la
+    serialización de instancias de guiones de uso no supone ningún problema.
+</p>
+<h3>
+    <a id="Name" name="Name">Nombre</a>
+</h3>
+<p>
+    Cada guión de uso debe tener un nombre que indique lo que se ha conseguido por medio de su interacción con el actor. Es
+    posible que el nombre deba constar de varias palabras para que se comprenda. Dos guiones de uso no pueden tener el
+    mismo nombre.
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    A continuación, se incluyen ejemplos de variaciones del nombre para el guión de uso Elementos de reciclaje del ejemplo
+    Máquina de reciclaje:
+</p>
+<ul>
+    <li>
+        Recibir elementos de depósito
+    </li>
+    <li>
+        Recibiendo elementos de depósito
+    </li>
+    <li>
+        Devolver elementos de depósito
+    </li>
+    <li>
+        Elementos de depósito
+    </li>
+</ul>
+<h3>
+    <a id="Brief Description" name="Brief Description">Descripción breve</a>
+</h3>
+<p>
+    La descripción breve del guión de uso debe reflejar su objetivo. Cuando escriba la descripción, consulte a los actores
+    implicados en el guión de uso, el glosario y, si lo necesita, defina nuevos conceptos.
+</p>
+<h5>
+    Ejemplo:
+</h5>
+<p class="example">
+    A continuación, se incluyen descripciones breves de los guiones de uso Elementos de reciclaje y Añadir tipo de botella
+    nuevo del Sistema de máquinas de reciclaje:
+</p>
+<p class="example">
+    <b>Elementos de reciclaje</b>: El usuario utiliza esta máquina para que se cuenten, automáticamente, todos los
+    elementos de devolución (botellas, latas y cajas), y recibir un recibo. El recibo se debe hacer efectivo en una máquina
+    registradora.
+</p>
+<p class="example">
+    <b>Añadir tipo de botella nuevo</b>: Se pueden añadir nuevos tipos de botellas a la máquina empezando en la "modalidad
+    de aprendizaje" e insertando 5 muestras, igual que al devolver elementos. De este modo, la máquina puede medir las
+    botellas y aprender a identificarlas. El gestor especifica el valor de reembolso para el nuevo tipo de botella.
+</p>
+<h3>
+    <a key="guión de uso" text="flujo de sucesos" name="XE_use_case__flow_of_events" id="XE_use_case__flow_of_events" class="index"></a><a key="flujo de sucesos" text="directrices para" name="XE_flow_of_events__guidelines_for" id="XE_flow_of_events__guidelines_for" class="index"></a><a id="Flow of Events - Contents" name="Flow of Events - Contents">Flujo de sucesos - Contenido</a>
+</h3>
+<p>
+    El <b>Flujo de sucesos</b> de un guión de uso contiene la información más importante derivada del trabajo de modelado
+    del guión de uso. Debe describir el flujo de sucesos del guión de uso de forma lo suficientemente clara como para que
+    una persona independiente lo comprenda con facilidad. Recuerde que el flujo de sucesos debe presentar lo que hace el
+    sistema, no cómo se ha diseñado el sistema para ejecutar el comportamiento necesario.
+</p>
+<p>
+    Las directrices para el contenido del flujo de sucesos son las siguientes:
+</p>
+<ul>
+    <li>
+        Describa cómo se inicia y finaliza el guión de uso.
+    </li>
+    <li>
+        Describa los datos que se intercambian entre el actor y el guión de uso.
+    </li>
+    <li>
+        No describa los detalles de la interfaz de usuario, a menos que sea necesario para comprender el comportamiento del
+        sistema. Por ejemplo, suele ser apropiado utilizar un conjunto limitado de terminología específica de la web cuando
+        se conoce de antemano que la aplicación se va a basar en web. Si no es así, corre el riesgo de que el texto del
+        guión de uso se perciba como demasiado abstracto. En la terminología puede incluir, por ejemplo, las palabras
+        "navegar", "examinar", "hiperenlace" "página", "enviar" y "navegador". Sin embargo, no se aconseja incluir
+        referencias a "marcos" o "páginas web" de modo que se establezcan supuestos sobre los límites entre estas. Ésta es
+        una decisión de diseño crítica. &nbsp;
+    </li>
+    <li>
+        Describa el flujo de sucesos, no sólo la funcionalidad. Para reforzarlo, empiece cada acción con "Cuando el actor
+        ... ".
+    </li>
+    <li>
+        Describa sólo los sucesos que pertenecen al guión de uso, y no lo que sucede en otros guiones de uso o fuera del
+        sistema.
+    </li>
+    <li>
+        Evite terminología imprecisa.
+    </li>
+    <li>
+        Detalle el flujo de sucesos. Se debe dar respuesta a todos los "qués". Recuerde que los diseñadores de pruebas van
+        a utilizar este texto para identificar guiones de prueba.
+    </li>
+</ul>
+<p>
+    Si ha utilizado términos concreto en otros guiones de uso, asegúrese de que utiliza los mismos términos exactos en este
+    guión de uso, y que su significado quiere decir lo mismo. Para gestionar términos comunes, póngalos en un glosario.
+</p>
+<h3>
+    <a id="Flow of Events - Structure" name="Flow of Events - Structure">Flujo de sucesos - Estructura</a> <a href="#Top"><img height="20" alt="Ir a la parte superior de la página" src="./../../../core.base_rup/resources/top.gif"     width="26" border="0" /></a>
+</h3>
+<p>
+    Las dos partes principales del flujo de sucesos son <b>flujo de sucesos básico</b> y <a key="flujo de sucesos" text="flujo alternativo" name="XE_flow_of_events__alternative_flow" id="XE_flow_of_events__alternative_flow" class="index"></a><b>flujo de sucesos alternativo</b>. El flujo de sucesos básico debe abarcar lo que ocurre
+    "normalmente" cuando se ejecuta el guión de uso. Los flujos de sucesos alternativos deben comprender el comportamiento
+    de carácter opcional o excepcional en relación con el comportamiento normal, y también las variaciones del
+    comportamiento normal. Puede considerar los flujos de sucesos alternativos como "desvíos" del flujo de sucesos básico,
+    algunos de los cuales vuelven al flujo de sucesos básico y otros finalizan la ejecución del guión de uso.
+</p>
+<p align="center">
+    <img height="212" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/ucstrct.gif" width="231" />
+</p>
+<p class="picturetext">
+    La estructura típica del flujo de sucesos. La flecha recta representa el flujo básico de sucesos y las curvas
+    representan vías de acceso alternativas en relación con lo normal. Algunas vías de acceso alternativas vuelven al flujo
+    básico de sucesos, mientras que otras finalizan el guión de uso.
+</p>
+<p>
+    Los flujos de sucesos básico y alternativo se deben estructurar más en pasos o subflujos. Al hacerlo, el objetivo
+    principal debe ser la legibilidad del texto (consulte también el apartado <a href="#Flow of Events - Style">Flujo de sucesos - Estilo</a>, que se encuentra más abajo). Como norma general,
+    el subflujo debe ser un segmento de comportamiento del guión de uso con un objetivo claro, y es global en el sentido
+    que se realizan o todas o ninguna de las acciones descritas. Es posible que necesite varios niveles de subflujos, pero
+    si puede lo debe evitar, puesto que el texto resulta más complejo y difícil de comprender. Puede ilustrar la estructura
+    del flujo de sucesos con un diagrama de actividad. Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/activity_diagram_in_the_use-case_model_C2043F1.html" guid="7.230899877161861E-305">Directriz de producto de trabajo: Diagrama de actividad en el guión de uso</a>.
+</p>
+<p>
+    Este tipo de texto escrito y estructurado en subsecciones consecutivas, por su naturaleza da a entender al lector que
+    existe una secuencia entre los subflujos. Para evitar malentendidos, siempre debe indicar si se ha fijado o no el orden
+    de los subflujos. Con frecuencia, las consideraciones de este tipo están relacionadas con:
+</p>
+<ul>
+    <li>
+        Reglas empresariales. Por ejemplo, se debe haber autorizado al usuario para que el sistema pueda hacer disponibles
+        determinados datos.
+    </li>
+    <li>
+        Diseño de la interfaz de usuario. Por ejemplo, el sistema no debe imponer alguna secuencia de comportamiento que
+        pueda resultar intuitiva para unos, pero no para otros usuarios.
+    </li>
+</ul>
+<p>
+    Para aclarar en qué lugar de la estructura se ajusta un flujo de sucesos alternativo, debe describir lo siguiente para
+    cada "desvío" del flujo de sucesos básico:
+</p>
+<ul>
+    <li>
+        En qué lugar del flujo de sucesos básico se puede insertar el comportamiento alternativo.
+    </li>
+    <li>
+        La condición que se debe cumplir para que se inicie el comportamiento alternativo.
+    </li>
+    <li>
+        Cómo y dónde se reanuda el flujo de sucesos básico, o bien, cómo finaliza el guión de uso.
+    </li>
+</ul>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    Éste es un subflujo alternativo del guión de uso Devolver elementos del Sistema de máquinas de reciclaje.
+</p>
+<p class="example">
+    <b>2.1. Atasco de botella</b>
+</p>
+<p class="example">
+    Si en el apartado 1.5, Insertar elementos de depósito, una botella se atasca en la entrada, los sensores en torno a la
+    entrada y la entrada de medición detectan el problema. La cinta transportadora se detiene y la máquina emite una alarma
+    para llamar al operador. La máquina espera a que el operador indique que el problema se ha resuelto. A continuación, la
+    máquina continúa en la sección 1.9 del flujo básico.
+</p>
+<p>
+    En el ejemplo anterior, el flujo de sucesos alternativo se inserta en una ubicación específica del flujo de sucesos
+    básico. También hay flujos de sucesos alternativos que se pueden insertar en más de una ubicación, algunos se pueden
+    insertar incluso en cualquier ubicación del flujo de sucesos básico.
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    Éste es un subflujo alternativo del guión de uso Devolver elementos del Sistema de máquinas de reciclaje.
+</p>
+<p class="example">
+    <b>2.2. Desmontaje del panel frontal</b>
+</p>
+<p class="example">
+    Si alguien desmonta el panel frontal de la Máquina de reciclaje, la compresión de latas se desactiva. Resulta imposible
+    iniciar la compresión de latas con el panel frontal extraído. La extracción también activa una alarma para el operador.
+    Una vez que se haya vuelto a cerrar el panel frontal, la máquina reinicia el funcionamiento a partir de la ubicación
+    del flujo de sucesos básico en el que se había detenido.
+</p>
+<p>
+    Puede resultar tentador, si el flujo de sucesos alternativo es muy simple, describirlo sólo en la sección del flujo de
+    sucesos básico (utilizando alguna construcción "si-entonces-lo otro" informal). Se debe evitar. Demasiadas alternativas
+    dificultan que se vea el comportamiento normal. Además, si se incluyen vías de acceso alternativas en la sección del
+    flujo de sucesos básico, el texto es más "similar a un seudocódigo", por lo que resulta más complicado de leer.
+</p>
+<p>
+    Por lo general, al extraer partes del flujo de sucesos y describir dichas partes por separado, se puede mejorar la
+    legibilidad del flujo de sucesos básico, así como la estructura del guión de uso y del modelo de guión de uso. Puede
+    modelar las partes extraídas como:
+</p>
+<ul>
+    <li>
+        Un flujo de sucesos alternativo dentro del guión de uso de base si es una variante, opción o excepción simple del
+        flujo de sucesos básico.
+    </li>
+    <li>
+        Como una inclusión explícita en el guión de uso de base (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/include-relationship_5AE2718.html" guid="7.259881398615376E-305">Directriz de producto de trabajo: Relación de inclusión</a>), si desea encapsularlo
+        de modo que lo puedan reutilizar otros guiones de uso.
+    </li>
+    <li>
+        Como una inclusión implícita en el guión de uso de base (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/extend-relationship_EF38D814.html" guid="3.679940320411645E-305">Directriz de producto de trabajo: Relación ampliada</a>), si el flujo de sucesos
+        básico está completo, es decir, tienen un principio y un final definidos. La naturaleza del flujo de ampliación
+        debe ser tal que se prefiera ocultarlo en la descripción del guión de uso de base para convertirlo en menos
+        complejo.
+    </li>
+    <li>
+        Un subflujo del flujo de sucesos básico, posiblemente como otra opción, si no se aplica ninguna de las alternativas
+        anteriores. Por ejemplo, en un guión de uso Mantener información de los empleados, puede haber subflujos separados
+        para añadir, suprimir y modificar información de los empleados.
+    </li>
+</ul>
+<h3>
+    <a id="Flow of Events - Style" name="Flow of Events - Style">Flujo de sucesos - Estilo</a> <a href="#Top"><img     height="20" alt="Ir a la parte superior de la página" src="./../../../core.base_rup/resources/top.gif" width="26"     border="0" /></a>
+</h3>
+<p>
+    Puede describir guiones de uso en varios estilos. Como ejemplo, se muestra el flujo de sucesos básico del guión de uso
+    Administrar orden descrito en tres estilos diferentes, cuya principal variación es su formalidad. Se recomienda el
+    primer estilo, que se muestra más abajo, en el <a href="#Example 1:">ejemplo 1</a>, puesto que es fácil de comprender
+    y el orden en el que suceden las cosas es claramente evidente. El texto se divide en subsecciones numeradas y
+    denominadas. Se incluyen números con el objeto de poder hacer referencia fácilmente a una subsección. Los nombres de
+    las subsecciones permiten que el lector disponga de una visión general rápida del flujo de sucesos examinando el texto
+    y leyendo sólo las cabeceras.
+</p>
+<p>
+    Más abajo, en el <a href="#Example 2:">ejemplo 2</a>, la descripción del flujo de sucesos no aclara el orden en el
+    que suceden las cosas. Si escribe en este estilo, es posible que usted y los demás pasen por alto cosas importantes que
+    atañan al sistema.
+</p>
+<p>
+    En el <a href="#Example 3:">Ejemplo 3</a> se muestra aún otro estilo, que puede resultar útil en caso de que sea
+    difícil expresar la secuencia de sucesos con claridad. Este seudoestilo es más preciso, pero el texto resulta pesado de
+    leer para una persona que no sea técnica, especialmente, si se desea comprender el flujo de sucesos con rapidez.
+</p>
+<h5>
+    <a id="Example 1:" name="Example 1:">Ejemplo 1:</a>
+</h5>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="100%">
+                    <b>1.1. Inicio del guión de uso</b> 
+                    <p>
+                        Este guión de uso se inicia cuando el actor Operador le indica al sistema que cree una orden de
+                        medida. A continuación, el sistema recupera todos los actores Elemento de red, sus objetos de
+                        medida y las funciones de medida correspondientes que están disponibles para este Operador
+                        concreto. Los Elementos de red disponibles son aquellos que están en funcionamiento y para los que
+                        el Operador tiene autorización de acceso. La disponibilidad de las funciones de medida depende de
+                        lo que se haya establecido para un tipo determinado de objeto de medida.
+                    </p>
+                    <p>
+                        <b>1.2. Configurar orden de medida</b>
+                    </p>
+                    <p>
+                        El sistema permite que el actor Operador seleccione los Elementos de red que medir y, a
+                        continuación, muestra los objetos de medida que están disponibles para los Elementos de red
+                        seleccionados. El sistema permite que el Operador seleccione entre los objetos de medida, y que
+                        después seleccione las funciones de medida que establecer para cada objeto de medida.
+                    </p>
+                    <p>
+                        El sistema permite que el Operador entre un comentario textual en la orden de medida.
+                    </p>
+                    <p>
+                        El Operador le indica al sistema que complete la orden de medida. El sistema responde generando un
+                        nombre exclusivo para la orden de medida y estableciendo valores por omisión para cuándo, con qué
+                        frecuencia y durante cuánto tiempo se debe realizar la medida. Los valores por omisión son
+                        exclusivos de cada Operador. A continuación, el sistema permite que el Operador edite los valores
+                        por omisión.
+                    </p>
+                    <p>
+                        <b>1.3. Inicializar orden</b>
+                    </p>
+                    <p>
+                        El Operador le indica al sistema que inicialice la orden de medida. El sistema registra la
+                        identidad del Operador que la ha creado, la fecha de creación y el estado "Planificada" de la orden
+                        de medida.
+                    </p>
+                    <p>
+                        <b>1.4. Finalización del guión de uso</b>
+                    </p>
+                    <p>
+                        El sistema confirma la inicialización de la orden de medida al Operador, y la orden de medida se
+                        pone a disposición de otros actores para su visualización.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p class="picturetext" align="center">
+    Descripción del guión de uso: En este estilo, el texto resulta fácil de leer y el flujo de sucesos es fácil de seguir.
+    Propóngase este estilo en sus descripciones.
+</p>
+<h5>
+    <a id="Example 2:" name="Example 2:">Ejemplo 2:</a>
+</h5>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="100%">
+                    Los ordenantes pueden crear Órdenes para recopilar datos de medida de los Elementos de red. 
+                    <p>
+                        El sistema asigna a la Orden un nombre exclusivo, así como valores por omisión que indiquen la
+                        longitud y el tiempo de la medida, además de la frecuencia con la que se deben repetir. El
+                        Ordenante puede editar dichos valores.
+                    </p>
+                    <p>
+                        El Ordenante debe especificar también las funciones de medida, los elementos de red y los objetos
+                        de medida que se aplican. El Ordenante puede añadir, además, un comentario personal a la orden.
+                    </p>
+                    <p>
+                        Una vez que se ha definido la información necesaria, se crea e inicializa una nueva Orden con los
+                        atributos definidos, el nombre del creador y la fecha de creación. El estado de la orden se
+                        establece en "planificada". (Los valores posibles para el estado son: Planificada, Ejecutándose,
+                        Completada, Cancelada y Con error).
+                    </p>
+                    <p>
+                        A continuación, se notifica a la interfaz de usuario que se ha creado una nueva Orden y recibe una
+                        referencia a la nueva orden a fin de que se pueda visualizar.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p class="picturetext">
+    Descripción de un guión de uso: Este estilo es legible, pero el flujo de sucesos no se presenta de forma clara.
+</p>
+<h5>
+    <a id="Example 3:" name="Example 3:">Ejemplo 3:</a>
+</h5>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="65%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="100%">
+<pre>
+<small>
+'Administrar orden' (Identidad de usuario)
+REPEAT
+    &lt;= 'Show administer order menu'
+    IF ( =&gt; 'Creación de una orden' (Función de medida,
+elemento de red, objeto de medida)) THEN
+    El sistema encuentra un nombre exclusivo, valores por omisión
+para cuándo y cuánto tiempo se debe ejecutar la medida.
+&lt;= 'Show order' (Default attributes)
+REPEAT
+    =&gt; 'Editar orden' (Atributo a cambiar, Nuevo valor de atributo)
+    &lt;= 'Update screen' (New attributes)
+UNTIL (All attributes are defined)
+REPEAT
+    IF ( =&gt; 'Editar orden' (Atributo a cambiar, Nuevo valor de atributo)
+THEN &lt;= 'Update screen' (New attributes)
+ELSIF ( =&gt; 'Guardar orden' (Identidad de orden, atributos)) THEN
+    La orden se crea e inicializa en el sistema con
+    los atributos definidos, el nombre del creador,
+    la fecha de creación y el estado 'planificada'.
+    &lt;= 'New order created' (The order)
+ENDIF
+UNTIL (=&gt; 'Abandonar')
+    ENDIF
+UNTIL 'Abandonar administrar orden'</small>
+</pre>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p class="picturetext">
+    Descripción de un guión de uso: Aquí, el escritor ha elegido un estilo formal utilizando seudocódigo. Este estilo
+    dificulta la comprensión rápida de los pasos del proceso, pero puede resultar útil si el flujo de sucesos es difícil de
+    capturar con precisión.
+</p>
+<h3>
+    <a key="flujo de sucesos" text="ejemplos de" name="XE_flow_of_events__examples_of" id="XE_flow_of_events__examples_of" class="index"></a><a id="Flow of Events - Example" name="Flow of Events - Example">Flujo de sucesos - Ejemplo</a>
+</h3>
+<p>
+    La descripción completa del flujo de sucesos del guión de uso Administrar orden, incluidos sus flujos alternativos,
+    podría tener un aspecto similar al siguiente:
+</p>
+<p>
+    <b>1. Flujo de sucesos básico</b>
+</p>
+<p>
+    <b>1.1. Inicio del guión de uso</b>
+</p>
+<p>
+    Este guión de uso se inicia cuando el actor Operador le indica al sistema que cree una orden de medida. A continuación,
+    el sistema recupera todos los actores Elemento de red, sus objetos de medida y las funciones de medida correspondientes
+    que están disponibles para este Operador concreto. Los Elementos de red disponibles son aquellos que están en
+    funcionamiento y para los que el Operador tiene autorización de acceso. La disponibilidad de las funciones de medida
+    depende de lo que se haya establecido para un tipo determinado de objeto de medida.
+</p>
+<p>
+    <b>1.2. Configurar orden de medida</b>
+</p>
+<p>
+    El sistema permite que el actor Operador seleccione los Elementos de red que medir y, a continuación, muestra los
+    objetos de medida que están disponibles para los Elementos de red seleccionados. El sistema permite que el Operador
+    seleccione entre los objetos de medida, y que después seleccione las funciones de medida que establecer para cada
+    objeto de medida.
+</p>
+<p>
+    El sistema permite que el Operador entre un comentario textual en la orden de medida.
+</p>
+<p>
+    El Operador le indica al sistema que complete la orden de medida. El sistema responde generando un nombre exclusivo
+    para la orden de medida y estableciendo valores por omisión para cuándo, con qué frecuencia y durante cuánto tiempo se
+    debe realizar la medida. Los valores por omisión son exclusivos de cada Operador. A continuación, el sistema permite
+    que el Operador edite los valores por omisión.
+</p>
+<p>
+    <b>1.3. Inicializar orden</b>
+</p>
+<p>
+    El Operador le indica al sistema que inicialice la orden de medida. El sistema registra la identidad del Operador que
+    la ha creado, la fecha de creación y el estado "Planificada" de la orden de medida.
+</p>
+<p>
+    <b>1.4. Finalización del guión de uso</b>
+</p>
+<p>
+    El sistema confirma la inicialización de la orden de medida al Operador, y la orden de medida se pone a disposición de
+    otros actores para su visualización.
+</p>
+<p>
+    <b>2. Flujos de sucesos alternativos</b>
+</p>
+<p>
+    <b>2.1. No hay elementos de red disponibles</b>
+</p>
+<p>
+    Si en el punto 1.1, Inicio del guión de uso, resulta que no hay Elementos de red disponibles que medir para este
+    Operador, el sistema informa al Operador y, a continuación, finaliza el guión de uso.
+</p>
+<p>
+    <b>2.2. No hay funciones de medida disponibles</b>
+</p>
+<p>
+    Si en el punto 1.2, Configurar orden de medida, no hay funciones de medida disponibles para los elementos de red
+    seleccionados, el sistema informa al operador y permite que el operador seleccione otros elementos de red.
+</p>
+<p>
+    <b>2.3. Cancelar orden de medida</b>
+</p>
+<p>
+    El sistema permite que el Operador cancela todas las acciones en cualquier punto durante la ejecución del guión de uso,
+    a continuación, vuelve al estado en el que se encontraba antes del inicio del guión de uso y finaliza el guión de uso.
+</p>
+<h3>
+    <a id="Special Requirements" name="Special Requirements">Requisitos especiales</a> <a href="#Top"><img height="20"     alt="Ir a la parte superior de la página" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    En los Requisitos especiales de un guión de uso, puede describir todos los requisitos del guión de uso que no tratan
+    los flujos de sucesos. Hay requisitos no funcionales que influyen en el modelo de diseño. Consulte también la discusión
+    sobre requisitos no funcionales en el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use-case_model_CC121CF4.html" guid="1.7617672560167394E-305">Directriz de
+    producto de trabajo: Modelo de guión de uso</a>. Si lo desea, puede organizar estos requisitos por categorías como, por
+    ejemplo, Utilización, Fiabilidad, Rendimiento y Condición de sustitución pero, por lo general, hay tan pocos que este
+    tipo de agrupación no añade especialmente valor.
+</p>
+<h5>
+    Ejemplo:
+</h5>
+<p class="example">
+    En el Sistema de máquinas de reciclaje, un requisito especial del guión de uso Devolver elementos de depósito podría
+    ser:
+</p>
+<p class="example">
+    La máquina debe poder reconocer elementos de depósito con una fiabilidad de más del 95 por ciento.
+</p>
+<h3>
+    <a key="condición posterior" text="directrices para" name="XE_postcondition__guidelines_for" id="XE_postcondition__guidelines_for" class="index"></a><a key="condición previa" text="directrices para" name="XE_precondition__guidelines_for" id="XE_precondition__guidelines_for" class="index"></a><a id="preconditions and Postconditions" name="preconditions and Postconditions">Condiciones previas y posteriores</a>
+</h3>
+<p>
+    Puede resultar útil usar las nociones de <b>condición previa</b> y <b>condición posterior</b> para aclarar cómo se
+    inicia y finaliza el flujo de sucesos. Sin embargo, sólo las debe utilizar si se consideran como un valor añadido por
+    parte de los receptores del guión de uso.
+</p>
+<p align="center">
+    <img height="278" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/ucprepst.gif" width="344" />
+</p>
+<p class="picturetext">
+    Una condición previa es el estado del sistema y su entorno necesario para que se pueda iniciar el guión de uso. Una
+    condición posterior son los estados en los que se puede encontrar el sistema una vez que ha finalizado el guión de uso.
+</p>
+<p>
+    Considere lo siguiente:
+</p>
+<ul>
+    <li>
+        Los estados que describen las condiciones previas y posteriores deben ser estados que pueda observar el usuario.
+        "El usuario ha iniciado la sesión en el sistema", o bien, "El usuario ha abierto el documento" son ejemplos de
+        estados observables.
+    </li>
+    <li>
+        Una condición previa es una restricción sobre el momento en el que se iniciar un guión de uso. No es el suceso que
+        inicia el guión de uso.
+    </li>
+    <li>
+        Una condición previa para un guión de uso no es una condición previa sólo para un subflujo, aunque se pueden
+        definir condiciones previas y posteriores a nivel del subflujo.
+    </li>
+    <li>
+        Una condición posterior para un guión de uso debe ser verdadera, independientemente de los flujos alternativos que
+        se ejecuten: no debe ser verdadera sólo para el flujo principal. Si algo diera error, se podría tratar en la
+        condición posterior indicando "La acción se ha completado, o bien, si algo da error, la acción no se ha llevado a
+        cabo", en lugar de indicar, simplemente, "La acción se ha completado".
+    </li>
+    <li>
+        Cuando utiliza condiciones posteriores junto con relaciones de ampliación, debe prestar atención para que el guión
+        de uso de ampliación no incluya un subflujo que infrinja la condición posterior del guión de uso de base.
+    </li>
+    <li>
+        Las condiciones posteriores pueden ser una herramienta eficaz para describir guiones de uso. En primer lugar, debe
+        definir lo que se supone que debe conseguir el guión de uso - la condición posterior. A continuación, debe
+        describir cómo alcanzar dicha condición - el flujo de sucesos necesario.
+    </li>
+</ul>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    Una condición previa para el guión de uso Retirada de dinero en el cajero automático: El cliente dispone de una tarjeta
+    emitida con carácter personal que encaja en el lector de tarjetas, tiene un número de PIN emitido y está registrada en
+    el sistema de banca.
+</p>
+<p class="example">
+    Una condición posterior para el guión de uso Retirada de dinero en el cajero automático: Al final del guión de uso, se
+    cuadran todos los registros de cuenta y transacción, se reinicializa la comunicación con el sistema de banca y se
+    devuelve la tarjeta el cliente.
+</p>
+<h3>
+    <a id="Extension Points" name="Extension Points">Puntos de ampliación</a>
+</h3>
+<p>
+    Un <b>punto de ampliación</b> ofrece la posibilidad de que el guión de uso disponga de una ampliación. Tiene un nombre
+    y una lista de referencias a una o más ubicaciones del flujo de sucesos del guión de uso. Un punto de ampliación puede
+    hacer referencia a una sola ubicación entre dos pasos de comportamiento del guión de uso. Puede, incluso, hacer
+    referencia a un conjunto de ubicaciones separadas.
+</p>
+<p>
+    Para utilizar puntos de ampliación denominados, le puede ayudar separar la especificación del comportamiento del guión
+    de uso de ampliación de los detalles internos del guión de uso de base. El guión de uso de base se puede modificar o
+    reorganizar, siempre que los nombres de los puntos de ampliación sigan siendo los mismos no afecta al guión de uso de
+    ampliación. Al mismo tiempo, no cargue el texto de describe el flujo de suceso del guión de uso de base con detalles
+    sobre dónde se puede ampliar el comportamiento. Consulte también el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/extend-relationship_EF38D814.html" guid="3.679940320411645E-305">Directriz de
+    producto de trabajo: Relación ampliada</a>.
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    En un sistema telefónico, el guión de uso <a key="guión de uso" text="guión de uso abstracto" href="./../../../core.base_rup/guidances/guidelines/use-case_model_CC121CF4.html#Concrete and Abstract Use Cases" class="index" guid="1.7617672560167394E-305" name="XE_use_case__abstract_use_case" id="XE_use_case__abstract_use_case"></a> Mostrar identidad del llamador puede ampliar el guión de uso Establecer
+    llamada. Es un servicio opcional al que, con frecuencia, se hace referencia como "ID de llamador", que puede haber
+    solicitado, o no, el receptor. Una descripción del punto de ampliación del guión de uso Establecer llamada podría ser
+    similar a la siguiente:
+</p>
+<p class="example">
+    <b>Nombre</b>: Mostrar identidad
+</p>
+<p class="example">
+    <b>Ubicación</b>: Después de la sección 1.9 Llamada al teléfono de la parte receptora.
+</p>
+<h3>
+    <a id="Use-Case Diagrams" name="Use-Case Diagrams">Diagramas de guión de uso</a>
+</h3>
+<p>
+    Si lo desea, puede elegir un diagrama de guión de uso para ilustrar cómo se relaciona un guión de uso con actores y
+    otros guiones de uso (en casos extraordinarios, más de un diagrama), propiedad del guión de uso. Resulta útil si el
+    guión de uso está relacionado con varios actores o tiene relaciones con otros guiones de uso. Un diagrama de este tipo
+    tiene carácter "local", puesto que muestra el modelo de guión de uso desde la perspectiva de un solo guión de uso, y su
+    finalidad no es explicar ningún hecho general sobre el modelo de guión de uso completo. Consulte también el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use-case_diagram_B894D435.html" guid="4.246859429016601E-305">Directriz de producto de trabajo: Diagrama de guión de uso</a>.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

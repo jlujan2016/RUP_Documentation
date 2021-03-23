@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Tarea: Implementar la prueba de desarrollador</title>
+<meta content="Task" name="uma.type">
+<meta content="implement_developer_test" name="uma.name">
+<meta content="Implementar la prueba de desarrollador" name="uma.presentationName">
+<meta content="Discipline:rup_implementation_discipline:Implementaci&oacute;n" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="Implementador">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_yd3ExNnmEdmO6L4XMImrsA", "{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_IY0NkAISEdqTna4sZVFRow", "_yd3ExNnmEdmO6L4XMImrsA", "{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', true, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Implementar la prueba de desarrollador</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta tarea se describe cómo crear un conjunto de pruebas para comprobar que el componente funciona correctamente antes de que se realicen más pruebas formales en él.</td>
+</tr>
+<tr>
+<td>Disciplinas: <a href="./../../core.base_rup/disciplines/rup_implementation_discipline_263E22DB.html" guid="_yd3ExNnmEdmO6L4XMImrsA">Implementación</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="Implementar componente" text="implementación de pruebas para" name="XE_Implement_Component__implementation_of_tests_for" id="XE_Implement_Component__implementation_of_tests_for" class="index"></a><a key="prueba de unidad" text="implementación de" name="XE_unit_test__implementation_of" id="XE_unit_test__implementation_of" class="index"></a><a key="prueba" text="implementar pruebas de desarrollador" name="XE_Test__Implementing_Developer_Tests" id="XE_Test__Implementing_Developer_Tests" class="index"></a> 
+<ul>
+    <li>
+        Implementar una o varias pruebas que permitan la validación de los componentes de software individuales mediante la
+        ejecución física
+    </li>
+    <li>
+        Desarrollar pruebas que se puedan ejecutar conjuntamente con otras pruebas como parte de una infraestructura de
+        prueba mayor
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Realizador principal:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_implementer_D145E819.html" guid="{75501BAA-0CCE-4852-A7B2-B10CA71C002A}">Implementador</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Otras actividades adicionales que realiza:
+								</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Elemento de implementaci&oacute;n</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_design_DD152CC4.html" guid="{1EDAA1F0-EB1D-4175-A59A-2ED82642F89B}">Dise&ntilde;o de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_component_9EC4F18F.html" guid="{35BD7E4D-4757-441D-B531-E9CF5BD87DE4}">Elemento de comprobabilidad</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Modelo de dise&ntilde;o</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_stub_5B2BA807.html" guid="{6EF8936C-371E-4B2D-B172-0AF461980480}">Prueba de fragmento para simulaci&oacute;n</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_developer_test_44109C5.html" guid="{74C60DFE-7221-45F1-BB8B-922A81C5AA98}">Prueba de desarrollador</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Uso del proceso</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/implementation_8FF0AAD4.html" guid="{F2AD342D-0F3B-4E19-A351-75ECDCB806F5}">Implementación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/implement_components_AFD1799D.html" guid="{4DC6F53E-1FE1-44EE-812B-003D3BD1ACEA}">Implementar componentes</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/implement_developer_test_64BC2739.html" guid="_H1X24UofEdqrjq4i3fchvA">Implementar la prueba de desarrollador</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/implementation_8FF0AAD4.html" guid="{F2AD342D-0F3B-4E19-A351-75ECDCB806F5}">Implementación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/integrate_each_subsystem_B9835A47.html" guid="{26723872-54F2-48C0-8384-0F595BD86EAD}">Integrar los subsistemas</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/implement_developer_test_616ACA87.html" guid="_Ku1-YEofEdqrjq4i3fchvA">Implementar la prueba de desarrollador</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableSingleCell">
+<div class="stepHeading"> Perfeccionar el &aacute;mbito e identificar las pruebas </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Refine_the_Scope_and_Identify_the_Tests" name="Refine_the_Scope_and_Identify_the_Tests"></a>
+<div align="left">
+    <table border="1" summary="tabla de diseño" width="100%" cellspacing="0" cellpadding="4"     style="border: 1px solid rgb(128,128,128)" bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <th width="5%">
+                Objetivo:&nbsp;
+            </th>
+            <td width="95%">
+                Identificar el componente que se está probando y definir un conjunto de pruebas que aporten el máximo de
+                ventajas a la iteración actual
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    En un entorno formal, los componentes y las pruebas que se deben desarrollar se especifican en el artefacto Diseño de
+    pruebas, con lo que este paso es opcional. Existen otras ocasiones en las que las pruebas de desarrollador están
+    controladas por solicitudes de cambio, arreglos de errores, decisiones de implementación que se tienen que validar o
+    pruebas de subsistemas que tienen el modelo de diseño como única entrada. Para cada uno de estos casos:
+</p>
+<ul>
+    <li>
+        defina el objetivo: validación de interfaz de subsistema/componente, validación de implementación, reproducción de
+        un defecto
+    </li>
+    <li>
+        defina el ámbito: subsistema, componente, grupo de componentes
+    </li>
+    <li>
+        defina el tipo de prueba y los detalles: caja negra, caja blanca, condiciones previas, condiciones posteriores,
+        invariantes, condiciones de ejecución y entrada/salida, puntos de observación/control, acciones de limpieza
+    </li>
+    <li>
+        decida cuál es el ciclo vital de la prueba; por ejemplo, una prueba creada especialmente para solucionar un defecto
+        puede ser desechable, mientras que una que ejercite las interfaces externas tendrá el mismo ciclo vital que el
+        componente que se está probando
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Seleccionar la t&eacute;cnica de implementaci&oacute;n adecuada </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Select_Appropriate_Implementation_Technique" name="Select_Appropriate_Implementation_Technique"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <th width="5%">
+                Objetivo:&#160;
+            </th>
+            <td width="95%">
+                Determinar la técnica adecuada para implementar la prueba
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Existen varias técnicas disponibles para implementar una prueba, pero se pueden considerar en términos de dos
+    categorías generales: prueba manual y automatizada. La mayoría de pruebas de desarrollador se implementan utilizando
+    las técnicas de prueba automatizada:
+</p>
+<ul>
+    <li>
+        pruebas programadas, que utilizan los mismos entornos y técnicas de programación de software que el componente que
+        se está probando, o herramientas y lenguajes de programación menos complejos (por ej., lenguajes de scripts: tcl,
+        basados en shell, etc.)
+    </li>
+    <li>
+        pruebas registradas o capturadas, que se crean utilizando herramientas de automatización de pruebas que capturan
+        las interacciones entre el componente que se está probando y el resto del sistema, y producen las pruebas básicas
+    </li>
+    <li>
+        pruebas generadas: algunos aspectos de la prueba, ya sean los procedimientos o los datos de prueba, se pueden
+        generar automáticamente utilizando herramientas de automatización de pruebas más complejas
+    </li>
+</ul>Aunque el enfoque más utilizado es la "prueba programada", en algunos casos (por ejemplo, las pruebas relacionadas con
+la GUI), la forma más eficaz de realizar una prueba es manualmente, siguiendo una secuencia de instrucciones que se han
+capturado en forma de descripción textual.</td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Implementar la prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Implement_the_Test" name="Implement_the_Test"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <th width="5%">
+                Objetivo:&nbsp;
+            </th>
+            <td width="95%">
+                Implementar las pruebas identificadas en la tarea o el paso de definición
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Implemente todos los elementos definidos en el primer paso. Detalle y especifique claramente las condiciones previas
+    del entorno de prueba y cuáles son los pasos necesarios para llevar el componente que se está probando al estado en el
+    que se puedan realizar las pruebas. Identifique los pasos de limpieza a seguir para poder restaurar el entono al estado
+    original. Preste especial atención a la implementación de los puntos de observación/control, ya que estos aspectos
+    pueden necesitar la implementación de un soporte especial en el componente que se está probando.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Establecer conjuntos de datos externos </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Establish_External_Data_Sets" name="Establish_External_Data_Sets"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <th width="5%">
+                Objetivo:&nbsp;
+            </th>
+            <td width="95%">
+                Crear y mantener datos, almacenados externamente a la prueba, que se van a utilizar en la prueba durante la
+                ejecución
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    En la mayoría de los casos, la separación de los datos de prueba de la prueba da lugar a una solución más mantenible.
+    Si el ciclo vital de la prueba es muy corto, la codificación de los datos de la prueba puede ser más eficaz, pero si se
+    necesitan muchos ciclos de ejecución de la prueba utilizando distintos conjuntos de datos, la forma más sencilla es
+    almacenarlos externamente. Existen otras ventajas si los datos de prueba se separan de la prueba:
+</p>
+<ul>
+    <li>
+        más de una prueba puede utilizar el mismo conjunto de datos
+    </li>
+    <li>
+        modificaciones y/o multiplicaciones más sencillas
+    </li>
+    <li>
+        se puede utilizar para controlar la lógica de ramificaciones condicionales dentro de la prueba
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Verificar la implementaci&oacute;n de la prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Verify_the_Test_Implementation" name="Verify_the_Test_Implementation"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <th width="5%">
+                Objetivo:&nbsp;
+            </th>
+            <td width="95%">
+                Verificar el funcionamiento correcto de la prueba
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Pruebe la prueba. Compruebe la configuración del entorno y las instrucciones de limpieza. Ejecute la prueba, observe su
+    comportamiento y solucione los defectos de la prueba. Si la prueba va a durar mucho, pida a una persona con menos
+    conocimiento interno que la ejecute y compruebe si contiene suficiente información de soporte. Revísela con otras
+    personas dentro del equipo de desarrollo y otras partes interesadas.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Mantener relaciones de rastreabilidad </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Maintain_Traceability_Relationships" name="Maintain_Traceability_Relationships"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <th width="5%">
+                Objetivo:&nbsp;
+            </th>
+            <td width="95%">
+                Permitir ejecutar el análisis de impactos y el informe de valoración en el elemento rastreado.
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Dependiendo del nivel de formalidad, puede que tenga que mantener relaciones de rastreabilidad. En caso afirmativo,
+    utilice los requisitos de rastreabilidad descritos en el plan de prueba para actualizar las relaciones de
+    rastreabilidad según sea necesario.
+</p><br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/maintaining_automated_test_suites_C1BF312D.html" guid="2.0721213907815595E-305">Mantenimiento de conjuntos de aplicaciones de prueba automatizados</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/unit_test_9A3F053.html" guid="9.315724622037552E-305">Prueba de unidad</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/test_case_81FD1D9F.html" guid="1.3981505661923931E-304">Caso de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/implement_auto_component_test_181D7854.html" guid="{CE38BCE7-D8E1-460F-ADF0-1FC94CB1D7E2}">Implementación de una prueba de componentes automatizada utilizando Rational QualityArchitect</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/record_test_scripts_7A61D605.html" guid="{279B8DDC-F3D9-4087-87CE-AC8D718D8C8E}">Implementación de scripts de prueba utilizando Rational Robot</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/implement_developer_tests_23B4C147.html" guid="{FD49B4B3-FA09-4475-A99A-DA8EBBEA220E}">Implementación de pruebas de desarrollador utilizando Rational Test RealTime</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

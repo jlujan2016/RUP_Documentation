@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Utilizaci&oacute;n de conjuntos de cambios de UCM con Rational ClearCase</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="using_ucm_change_sets_with_clearcase" name="uma.name">
+<meta content="Utilizaci&oacute;n de conjuntos de cambios de UCM con Rational ClearCase" name="uma.presentationName">
+<meta content="Tool:rup_clearcase:Rational ClearCase" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational ClearCase" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{C7D320FC-FD99-4842-9193-28565FC50FEB}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{C7D320FC-FD99-4842-9193-28565FC50FEB}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{C7D320FC-FD99-4842-9193-28565FC50FEB}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_85i-sDIFEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{C7D320FC-FD99-4842-9193-28565FC50FEB}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_XxCC0AIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{C7D320FC-FD99-4842-9193-28565FC50FEB}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{C7D320FC-FD99-4842-9193-28565FC50FEB}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{C7D320FC-FD99-4842-9193-28565FC50FEB}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{C7D320FC-FD99-4842-9193-28565FC50FEB}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Utilizaci&oacute;n de conjuntos de cambios de UCM con Rational ClearCase</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo utilizar conjuntos de cambios con actividades UCM (Gestión unificada de cambios) para crear y registrar cambios.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_clearcase_9665C.html" guid="{B2D1373B-A826-4169-A38A-B53B2122DC7C}">Rational ClearCase</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/make_changes_to_configuration_items_9F1D8304.html" guid="{A56F93A6-DAD6-4453-936D-D7AE4A34D45D}">Realizar cambios</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    En el diagrama siguiente se ilustra el flujo de trabajo de UCM. En esta guía de la herramienta se tratan las áreas
+    sombreadas.
+</p>
+<h4>
+    Flujo de trabajo de UCM
+</h4>
+<p>
+    <img height="125"     alt="Buscar y establecer actividades, trabajar en actividades (extraer y modificar, incorporar), entregar actividades y cambiar la base del área de trabajo."      src="./../../../core.base_rup/guidances/toolmentors/resources/wflow_work.gif" width="274" border="0" />
+</p>
+<p>
+    <i><b>Nota sobre terminología</b></i>: Una actividad de UCM de ClearCase correlaciona exactamente con un <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_work_order_CFBC805B.html" guid="{18DB40A1-6272-467A-AC68-B2C4BE1DCD6C}">pedido de trabajo</a> de RUP.&nbsp;No se debe confundir con el concepto
+    de RUP de una <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/termdefinitions/activity_1D028230.html" guid="_yoVhMB_IEdq6CKKKq4D7YA">actividad</a>.
+</p>
+<p>
+    Una actividad de UCM hace un seguimiento de las versiones que se crean al trabajar en una tarea de desarrollo. Una
+    actividad incluye un titular de texto que describe la tarea, el ID de usuario del creador de la actividad y un conjunto
+    de cambios que identifica todas las versiones que se crean al trabajar en la actividad.&nbsp;Cuando esté preparado para
+    modificar archivos de origen, debe establecer la vista de desarrollo para una actividad.
+</p>
+<p>
+    Antes de modificar los archivos, debe establecer una actividad para la vista de desarrollo.&nbsp;
+</p>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Microsoft Windows.&nbsp;
+</p>
+<h3>
+    Pasos de la herramienta
+</h3>
+<p>
+    Para trabajar con actividades de UCM, debe:
+</p>
+<ol>
+    <li>
+        <a href="#1">Crear o buscar y establecer una actividad</a>
+    </li>
+    <li>
+        <a href="#3">Extraer y modificar versiones</a>
+    </li>
+    <li>
+        <a href="#4">Incorporar el trabajo</a>
+    </li>
+</ol>
+<h3>
+    1.&nbsp;<a id="1" name="1">Crear o buscar y establecer una actividad</a>&nbsp;
+</h3>
+<p>
+    Cuando extrae archivos o directorios de un proyecto de UCM, se le solicita que especifique una actividad para hacer el
+    seguimiento del trabajo.
+</p>
+<h4>
+    Cree una nueva actividad y establézcala en la vista actual
+</h4>
+<ol>
+    <li>
+        En un recuadro de diálogo Extraer, Incorporar o Añadir al control de origen, pulse <b>Nuevo</b>.
+    </li>
+    <li>
+        En el recuadro de diálogo Nueva actividad, entre el titular de una actividad.
+    </li>
+    <li>
+        Pulse <b>Aceptar</b>.
+    </li>
+    <li>
+        Para añadir la actividad a la corriente de datos y establecerla en la vista, pulse <b>Aceptar</b>.
+    </li>
+</ol>
+<h4>
+    Busque y establezca una actividad
+</h4>
+<p>
+    Las actividades se mantienen entre sesiones de trabajo. Para buscar una actividad existente y establecerla en la vista
+    de desarrollo, siga los pasos que se indican a continuación: &nbsp;
+</p>
+<p>
+    En el Explorador de ClearCase:
+</p>
+<ol>
+    <li>
+        En el Explorador de ClearCase, pulse la pestaña <b>Vistas</b>.&nbsp;
+    </li>
+    <li>
+        Pulse la página del proyecto y, a continuación, seleccione la vista de desarrollo.&nbsp;
+    </li>
+    <li>
+        En el panel Carpeta, pulse <b>Mis actividades</b>.
+    </li>
+    <li>
+        En el panel Detalles, marque el recuadro de diálogo que se encuentra junto a la actividad que desea establecer.
+    </li>
+</ol>
+<p>
+    En los recuadros de diálogo de ClearCase:
+</p>
+<ol>
+    <li>
+        En el recuadro de diálogo Extraer, Incorporar o Añadir al control de origen, realice una de las acciones
+        siguientes:
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            Elija una actividad de la lista Actividad.
+        </li>
+        <li>
+            Pulse <b>Examinar</b> y elija otros criterios de selección.
+        </li>
+    </ul>
+</blockquote>
+<ol start="2">
+    <li>
+        Pulse <b>Aceptar</b>. ClearCase establece la vista para la actividad que se ha seleccionado actualmente en la lista
+        Actividad.
+    </li>
+</ol>
+<h3>
+    2.&nbsp;<a id="3" name="3">Extraer y modificar versiones</a>&nbsp;
+</h3>
+<p>
+    Antes de modificar archivos de origen, vaya a la vista Desarrollo y extráigalos. La extracción permite que se pueda
+    escribir en las versiones de archivo o directorio de la vista. &nbsp;
+</p>
+<ol>
+    <li>
+        En el Explorador de ClearCase, seleccione archivos o directorios y, a continuación, pulse el botón derecho del
+        ratón sobre la selección y pulse <b>Extraer</b>.&nbsp;
+    </li>
+    <li>
+        ClearCase abre el recuadro de diálogo Extraer con la actividad establecida actualmente, seleccionada en la lista
+        Actividad. Puede aceptar la selección, elegir otra actividad o crear una nueva actividad.
+    </li>
+    <li>
+        En el recuadro <b>Comentario</b>, describa los cambios que ha planificado. Los comentarios se muestran en el
+        navegador Propiedades de la versión y en el navegador Historial del elemento.
+    </li>
+    <li>
+        Realice una de las acciones siguientes:
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            Para extraer sólo un archivo, pulse <b>Aceptar</b>.
+        </li>
+        <li>
+            Para utilizar los valores actuales de este recuadro de diálogo para todos los elementos seleccionados, pulse
+            <b>Aplicar a todos</b>.
+        </li>
+        <li>
+            Para interrumpir el proceso de extracción, salir y dejar todos los elementos restantes incorporados, pulse
+            <b>Cancelar</b>.
+        </li>
+    </ul>
+</blockquote>
+<h3>
+    3. <a id="4" name="4">Incorporar el trabajo</a>&nbsp;
+</h3>
+<p>
+    Cuando desee mantener un registro del estado actual de un archivo, incorpórelo. La incorporación de archivos o
+    directorios añade nuevas versiones a la VOB. La actividad establecida actualmente registra la información de la
+    versión.&nbsp;&nbsp;
+</p>
+<p>
+    Después de una incorporación, la vista se mantiene establecida en la actividad actual.&nbsp;
+</p>
+<ol>
+    <li>
+        En el Explorador de ClearCase, seleccione archivos o directorios extraídos.&nbsp;
+    </li>
+    <li>
+        Pulse el botón derecho del ratón sobre la selección y, a continuación, pulse <b>Incorporar</b>.
+    </li>
+    <li>
+        En el recuadro <b>Comentario</b>, puede sobrescribir o añadir lo que desee al comentario que ha entrado al extraer
+        el archivo o la carpeta.
+    </li>
+    <li>
+        Realice una de las acciones siguientes:
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            Para incorporar sólo un archivo, pulse <b>Aceptar</b>.
+        </li>
+        <li>
+            Para utilizar los valores actuales de este recuadro de diálogo para todos los elementos seleccionados, pulse
+            <b>Aplicar a todos</b>.
+        </li>
+        <li>
+            Para interrumpir el proceso de incorporación, salir y dejar todos los elementos restantes extraídos, pulse
+            <b>Cancelar</b>.
+        </li>
+    </ul>
+</blockquote>
+<p>
+    <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="15" /> Consulte la ayuda
+    en línea de <i>Desarrollo de software</i> para obtener información detallada sobre cada paso.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

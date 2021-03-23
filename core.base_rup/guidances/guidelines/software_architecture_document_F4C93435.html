@@ -1,0 +1,663 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Documento de arquitectura de software</title>
+<meta content="Guideline" name="uma.type">
+<meta content="software_architecture_document" name="uma.name">
+<meta content="Documento de arquitectura de software" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}", "2.9494785550310917E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3aJCcN7REdmjRZts2c4ZjQ", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}", "2.9494785550310917E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.9494785550310917E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}", "2.9494785550310917E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_hsuoEDIFEdqwaNnSEheSAg", "{35BAFA92-EAF9-41E8-8BDE-AB9B61A68E04}", "2.9494785550310917E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.9494785550310917E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Documento de arquitectura de software</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz proporciona una visión general de los contenidos del documento de arquitectura de software.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/review_the_architecture_D27975CC.html" guid="{35BAFA92-EAF9-41E8-8BDE-AB9B61A68E04}">Revisar la arquitectura</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">Documento de arquitectura de software</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="vista lógica" text="directrices para" name="XE_logical_view__guidelines_for" id="XE_logical_view__guidelines_for" class="index"></a> 
+<h3>
+    <a id="References" name="References">Referencias</a>
+</h3>
+<p>
+    La sección de referencias presenta documentos externos que proporcionan información de fondo importante para la
+    comprensión de la arquitectura del sistema. Si existe un gran número de referencias, estructure la sección en
+    subsecciones:
+</p>
+<ol>
+    <li>
+        documentos externos
+    </li>
+    <li>
+        documentos internos
+    </li>
+    <li>
+        documentos de gobierno
+    </li>
+    <li>
+        documentos no gubernamentales
+    </li>
+    <li>
+        etc.
+    </li>
+</ol>
+<h3>
+    <a id="Architectural Goals and Constraints" name="Architectural Goals and Constraints">Objetivos y restricciones de la
+    arquitectura</a>
+</h3>
+<p>
+    La arquitectura se formará teniendo en cuenta:
+</p>
+<ul>
+    <li>
+        requisitos funcionales, capturados en el modelo de guión de uso
+    </li>
+    <li>
+        requisitos no funcionales, capturados en las especificaciones suplementarias
+    </li>
+</ul>
+<p>
+    No obstante, estas no son las únicas influencias que formarán la arquitectura: existirán restricciones impuestas por el
+    entorno en que el software debe operar; por la necesidad de reutilizar los activos existentes; por la imposición de
+    diferentes estándares; por la necesidad de compatibilidad con los sistemas existentes, etc. &nbsp; También puede haber
+    un conjunto preexistente de <b>principios y políticas arquitectónicas</b> que orientarán el desarrollo, y que deben ser
+    elaboradas y&nbsp;verificadas para el proyecto. &nbsp; Esta sección del documento de arquitectura de software es el
+    lugar para describir estos objetivos y restricciones, y cualquier <b>decisión arquitectónica</b> que fluya de ellos que
+    no encuentre un inicio preparado (como requisitos) en otra parte.&nbsp;
+</p>
+<p>
+    Cuando se crea este documento, una entrada importante es una especificación del entorno de implementación. Ejemplos de
+    cosas que se deben especificar son plataformas de destino (hardware, sistema operativo), sistema de ventanas,
+    herramientas de desarrollo (lenguaje, constructor de GUI), sistema de gestión de base de datos y bibliotecas de
+    componentes. &nbsp; También es valorable especificar qué tecnologías de interfaz de usuario se permiten y cuáles
+    no.&nbsp; Muchos sistemas escogen no utilizar ciertas tecnologías de presentación (JavaScript, Applets, Frames, XML,
+    etc.) para que más sistemas cliente puedan utilizar la aplicación, o para que la aplicación sea más sencilla de
+    desarrollar. &nbsp;&nbsp;Las decisiones se capturan aquí en el documento de arquitectura de software, mientras que los
+    detalles sobre cómo utilizar y aplicar las tecnologías escogidas se documenta en <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_project_specific_guidelines_8DC8DA32.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">Producto de trabajo: Directrices específicas de proyecto</a>.
+</p>
+<p>
+    La aplicación de estas decisiones se alcanza formando un conjunto de <b>criterios de evaluación de arquitectura</b> que
+    se utilizará como parte de la valoración de iteración.
+</p>
+<p>
+    Los criterios de evaluación también se derivan de los <b>Guiones de cambio</b> que documentan los posibles cambios
+    futuros a:
+</p>
+<ul>
+    <li>
+        las capacidades y las propiedades del sistema
+    </li>
+    <li>
+        el modo en que se utiliza el sistema
+    </li>
+    <li>
+        los entornos operativo y de soporte del sistema
+    </li>
+</ul>
+<p>
+    Los guiones de cambio aclaran estas propiedades del sistema descrito por frases subjetivas como "fácil de ampliar",
+    "fácil de conectar al puerto", "fácil de mantener", "robusto ante los cambios" y "rápido de desarrollar". Los guiones
+    de cambio se centran en lo que es importante y probable en lugar de centrarse sólo en lo que es posible.
+</p>
+<p>
+    Los guiones de cambio intentan predecir los cambios: estas predicciones raramente acaban siendo exactamente ciertas.
+</p>
+<p>
+    Las propiedades de un sistema las determinan los usuarios, patrocinadores, proveedores, desarrolladores y otros
+    interesados. Los cambios pueden surgir de muchos orígenes, por ejemplo:
+</p>
+<ul>
+    <li>
+        Controladores empresariales: procesos empresariales nuevos y modificados y objetivos
+    </li>
+    <li>
+        Controladores de tecnología: adaptación del sistema a nuevas plataformas, integración con nuevos componentes
+    </li>
+    <li>
+        Cambios en los perfiles del usuario medio
+    </li>
+    <li>
+        Cambios en las necesidades de integración con otros sistemas
+    </li>
+    <li>
+        Cambios de ámbito que surgen de la migración de la funcionalidad de sistemas externos
+    </li>
+</ul>
+<h3>
+    <a id="The Use-Case View" name="The Use-Case View">La vista de guión de uso</a>
+</h3>
+<p>
+    La vista de guión de uso presenta un subconjunto de <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">Producto de trabajo: Modelo de guión de uso</a>, que presenta los guiones
+    de uso arquitectónicamente significativos del sistema. Describe el conjunto de casos de ejemplo y/o guiones de uso que
+    representan alguna funcionalidad significativa o central. También describe el conjunto de casos de ejemplo y/o guiones
+    de uso que tienen una cobertura arquitectónica sustancial (que ejercen muchos elementos arquitectónicos)o que presionan
+    o ilustran un punto específico, delicado, de la arquitectura.
+</p>
+<p>
+    Si el modelo es mayor, habitualmente se organizará en paquetes; para facilitar la comprensión, la vista de guión de
+    uso, debe organizarse similarmente por paquete, si están empaquetados. Para cada guión de uso significativo, incluya
+    una subsección con la información siguiente:
+</p>
+<ol>
+    <li>
+        El nombre del guión de uso.
+    </li>
+    <li>
+        Una descripción breve del guión de uso.
+    </li>
+    <li>
+        Descripciones significativas de los <b>Sucesos de flujo</b> del guión de uso. Puede ser la descripción completa del
+        <b>Flujo de sucesos</b>, o subsecciones de este que describen flujos significativos o casos de ejemplo del guión de
+        uso.
+    </li>
+    <li>
+        Las descripciones significativas de relaciones que implican el guión de uso, como las relaciones de inclusión y
+        ampliación, o las asociaciones de comunicación.
+    </li>
+    <li>
+        Una enumeración de los diagramas de guión de uso relacionados con el guión de uso.
+    </li>
+    <li>
+        Descripciones significativas de <b>Requisitos especiales</b> del guión de uso. Puede ser la descripción completa de
+        los <b>Requisitos especiales</b>, o subsecciones de este que describen requisitos significativos.
+    </li>
+    <li>
+        <b>Imágenes de la interfaz de usuario</b> significativas, que aclaren el guión de uso.
+    </li>
+    <li>
+        Las realizaciones de estos guiones de uso deben encontrarse en la vista lógica.
+    </li>
+</ol>
+<h3>
+    La <a id="Contents" name="Contents">Vista lógica</a>
+</h3>
+<p>
+    La vista lógica es un subconjunto del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Producto de trabajo: Modelo de diseño</a> que presenta los elementos de
+    diseño arquitectónicamente significativos. Describe las clases más importantes, su organización en paquetes y
+    subsistemas, y la organización de estos paquetes y subsistemas en capas. También describe las ejecuciones de guión de
+    uso más importantes, por ejemplo, los aspectos dinámicos de la arquitectura.
+</p>
+<p>
+    Un sistema complejo puede requerir una serie de secciones que descubran la vista lógica:
+</p>
+<ol>
+    <li>
+        <b>Visión general</b> 
+        <p>
+            Esta subsección describe el desglose global del modelo de diseño en términos de la jerarquía y las capas de su
+            paquete. Si el sistema tiene varios niveles de paquetes, primero debe describir los que son significativos en
+            el nivel superior. Incluya los diagramas que muestran los paquetes significativos de nivel superior, así como
+            sus interdependencias y capas. Los siguientes presentan todos los paquetes significativos dentro de estos, y
+            así sucesivamente hasta los paquetes significativos de la parte inferior de la jerarquía.
+        </p>
+    </li>
+    <li>
+        <b>Paquete de diseños arquitectónicamente significativos</b> 
+        <p>
+            Para cada paquete significativo, incluya una subsección con la información siguiente:
+        </p>
+        <ol>
+            <li>
+                Su nombre.
+            </li>
+            <li>
+                Una descripción breve.
+            </li>
+            <li>
+                Un diagrama con todas las clases significativas y paquetes contenidos dentro del paquete. Para mejorar la
+                comprensión, este diagrama puede mostrar algunas clases de otros paquetes si fuera necesario.
+            </li>
+            <li>
+                Para cada clase significativa del paquete, incluya nombre, descripción breve y, opcionalmente, una
+                descripción de alguna de sus principales responsabilidades, operaciones y atributos. Describa también las
+                relaciones importantes si fuera necesario para comprender los diagramas incluidos.
+            </li>
+        </ol>
+    </li>
+    <li>
+        <b>Ejecuciones de guión de uso</b> 
+        <p>
+            Esta sección ilustra cómo funciona el software dando unas cuantas ejecuciones de guión de uso (o casos de
+            ejemplo) seleccionadas, y explica cómo los diferentes elementos de modelo de diseño contribuyen en su
+            funcionalidad. Las ejecuciones que se muestran se han elegido porque representan funcionalidades significativas
+            y centrales del sistema final; o por su cobertura arquitectónica - ejercen muchos elementos arquitectónicos - o
+            destacan o ilustran un punto específico o delicado de la arquitectura. Los guiones de uso y casos de ejemplo
+            correspondientes a estas ejecuciones deben encontrarse en la vista de guión de uso.
+        </p>
+        <p>
+            Para cada ejecución de guiones de uso significativa, incluya una subsección con la información siguiente:
+        </p>
+        <ol>
+            <li>
+                El nombre del guión de uso realizado.
+            </li>
+            <li>
+                Una descripción breve del guión de uso realizado.
+            </li>
+            <li>
+                Descripciones significativas del <b>Flujo de sucesos - Diseño</b> de la ejecución de guiones de uso. Puede
+                ser la descripción completa del <b>Flujo de sucesos - Diseño</b>, o subsecciones de este que describen la
+                ejecución de flujos significativos o casos de ejemplo del guión de uso.
+            </li>
+            <li>
+                Una enumeración de la interacción significativa o diagramas de clase relacionados con la ejecución de
+                guiones de uso.
+            </li>
+            <li>
+                Descripciones significativas de <b>Requisitos derivados</b> de la ejecución de guiones de uso. Puede ser la
+                descripción completa de los <b>Requisitos derivados</b>, o subsecciones de este que describen requisitos
+                significativos.
+            </li>
+        </ol>
+    </li>
+</ol>
+<h4>
+    Elementos de diseño arquitectónicamente significativos
+</h4>
+<p>
+    Para ayudar en la decisión de qué es arquitectónicamente significativo, se presentan algunos ejemplos de elementos
+    calificativos y sus características:
+</p>
+<ul>
+    <li>
+        Un elemento de modelo que encapsula una abstracción principal del dominio del problema, como por ejemplo: 
+        <ul>
+            <li>
+                Un plan de vuelo en un sistema de control de vuelos.
+            </li>
+            <li>
+                Un empleado en un sistema de nóminas.
+            </li>
+            <li>
+                Un suscriptor en un sistema telefónico.
+            </li>
+        </ul>
+    </li>
+</ul>
+<div style="MARGIN-LEFT: 2em">
+    <p>
+        Subtipos de estos no deben incluirse necesariamente, por ej., Distinguir un <b>Plan de vuelo estándar ICAO</b> de
+        un <b>Plan de vuelo doméstico en EE.UU.</b> no es importante; son planes de vuelos y comparten una cantidad
+        sustancial de atributos y operaciones.
+    </p>
+    <p>
+        Distinguir un suscriptor con una línea de datos, o con una línea de voz, no importa siempre que el manejo de la
+        llamada entre de un modo similar.
+    </p>
+</div>
+<ul>
+    <li>
+        Un elemento de modelo que se utiliza en muchos otros elementos de modelo.
+    </li>
+    <li>
+        Un elemento de modelo que encapsula un mecanismo principal (servicio) del sistema
+    </li>
+    <li>
+        Mecanismos de diseño 
+        <ul>
+            <li>
+                Mecanismo de permanencia (gestión del depósito, base de datos, memoria).
+            </li>
+            <li>
+                Mecanismo de comunicación (RPC, difusión, servicio intermediario).
+            </li>
+            <li>
+                Manejo de errores o mecanismo de recuperación.
+            </li>
+            <li>
+                Mecanismo de visualización, y otras interfaces comunes (ventanas, captura de datos, condicionamiento de
+                señal, etc.).
+            </li>
+            <li>
+                Mecanismos de parametrización.
+            </li>
+        </ul>
+    </li>
+</ul>
+<p>
+    En general, cualquier mecanismo que se pueda utilizar en muchos paquetes diferentes (en oposición a completamente
+    interno en un paquete), y para el cual es positivo tener una única implementación común en el sistema, o como mínimo
+    una única interfaz que oculta varias implementaciones alternativas.
+</p>
+<ul>
+    <li>
+        Un elemento de modelo que participa en una interfaz principal del sistema con, por ejemplo: 
+        <ul>
+            <li>
+                Un sistema operativo.
+            </li>
+            <li>
+                Un producto asequible (sistema de ventanas, RDBMS, sistema de información geográfica).
+            </li>
+            <li>
+                Una clase que implementa o proporciona soporte a un patrón de arquitectura (como patrones para desacoplar
+                elementos de modelo, que incluyen el patrón modelo-vista-controlador, o el patrón intermediario).
+            </li>
+        </ul>
+    </li>
+</ul>
+<ul>
+    <li>
+        Un elemento de modelo que tiene visibilidad localizada, pero puede tener un gran impacto en el rendimiento global
+        del sistema, por ejemplo: 
+        <ul>
+            <li>
+                Un mecanismo de sondeo para explorar los sensores a una velocidad muy alta.
+            </li>
+            <li>
+                Un mecanismo de rastreo para solucionar problemas.
+            </li>
+            <li>
+                Un mecanismo de sincronización por puntos de comprobación para sistemas de alta disponibilidad (punto de
+                comprobación y reinicio).
+            </li>
+            <li>
+                Una secuencia de inicio.
+            </li>
+            <li>
+                Una actualización en línea del código.
+            </li>
+            <li>
+                Una clase que encapsula un algoritmo nuevo y técnicamente arriesgado, o algún algoritmo que es crítico para
+                la seguridad, como por ejemplo: la computación del nivel de irradiación; criterios para evitar la colisión
+                de aviones en un espacio aéreo congestionado; cifrado de contraseñas.
+            </li>
+        </ul>
+    </li>
+</ul>
+<p>
+    Los criterios de lo que es arquitectónicamente significativo evolucionará en las iteraciones tempranas del proyecto, a
+    medida que descubra las dificultades técnicas y empiece a comprender mejor el sistema. Como norma, sin embargo, debe
+    etiquetar como máximo un 10% de los elementos de modelo como "<b>arquitectónicamente significativo</b>." Si no, se
+    arriesga a diluir el concepto de arquitectura y que "todo sea arquitectura".
+</p>
+<p>
+    Cuando define e incluye los elementos de modelo arquitectónicamente significativos en la vista lógica, también debe
+    considerar los aspectos siguientes:
+</p>
+<ul>
+    <li>
+        Identifique el potencial de similitudes y reutilizaciones. ¿Qué clases podrían ser subclases de una clase común, o
+        instancias de la misma clase parametrizada?
+    </li>
+    <li>
+        Identifique el potencial de parametrización. ¿Qué componente del diseño puede ser más reutilizable o flexible
+        utilizando parámetros estáticos y de tiempo de ejecución (como un comportamiento regido por una tabla, o datos de
+        recurso cargados en el inicio)?
+    </li>
+    <li>
+        Identifique el potencial de utilización de productos asequibles.
+    </li>
+</ul>
+<h3>
+    <a id="The Process View" name="The Process View">La vista de proceso</a>
+</h3>
+<p>
+    La vista de proceso describe la estructura de proceso del sistema. Como la estructura de proceso tiene un mayor impacto
+    en la arquitectura, todos los procesos deben presentarse. Dentro de los procesos, sólo deben presentarse las hebras
+    ligeras arquitectónicamente significativas. La vista de proceso describe las tareas (procesos y hebras) implicadas en
+    la ejecución del sistema, sus interacciones y configuraciones y la asignación de objetos y clases a las tareas.
+</p>
+<p>
+    Para cada red de procesos, incluya una subsección con la información siguiente:
+</p>
+<ol>
+    <li>
+        Su nombre.
+    </li>
+    <li>
+        Los procesos implicados.
+    </li>
+    <li>
+        Las interacciones entre procesos en forma de diagramas de comunicación, en que los objetos son procesos reales que
+        engloban sus propias hebras de control. Para cada proceso, describa brevemente su comportamiento, tiempo de vida y
+        características de comunicación.
+    </li>
+</ol>
+<h3>
+    <a id="The Deployment View" name="The Deployment View">La vista de despliegue</a>
+</h3>
+<p>
+    En esta sección se describen una o más configuraciones de redes físicas (hardware) donde el software está desplegado y
+    ejecutándose. También describe la asignación de tareas (de la <b>Vista de proceso</b>) a los nodos físicos. Para cada
+    configuración de red física, incluya una subsección con la información siguiente:
+</p>
+<ol>
+    <li>
+        Su nombre.
+    </li>
+    <li>
+        Un diagrama de despliegue que ilustra la configuración, seguido de una correlación de procesos para cada
+        procesador.
+    </li>
+    <li>
+        Si existen muchas posibles configuraciones físicas, describa sólo una típica y explique las reglas de correlación
+        generales para seguir definiendo otras. También debe incluir, en la mayoría de casos, descripciones de
+        configuraciones de red para efectuar pruebas y simulaciones de software.
+    </li>
+</ol>
+<p>
+    Esta vista se genera a partir del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_deployment_model_57DF1DF5.html" guid="{5981B6BE-2FD1-4984-AA94-2F7428439BA6}">Producto de trabajo: Modelo de despliegue</a>.
+</p>
+<h3>
+    <a id="The Implementation View" name="The Implementation View">La vista de implementación</a>
+</h3>
+<p>
+    En esta sección se describe la descomposición del software en capas y subsistemas de implementación en el modelo de
+    implementación. También proporciona una visión general de la asignación de elementos de diseño (desde la vista lógica)
+    hasta la implementación. Contiene dos subsecciones:
+</p>
+<ol>
+    <li>
+        <b>Visión general</b> 
+        <p>
+            Esta subsección nombre y define las diferentes capas y sus contenidos, las reglas que gobiernan la inclusión de
+            una capa determinada, y los límites entre capas. Incluye un diagrama de componentes que muestra las relaciones
+            entre capas.
+        </p>
+    </li>
+    <li>
+        <b>Capas</b> 
+        <p>
+            Para cada capa, incluya una subsección con la información siguiente:
+        </p>
+        <ol>
+            <li>
+                Su nombre.
+            </li>
+            <li>
+                Un diagrama de componentes que muestra los subsistemas de implementación y sus dependencias de importación.
+            </li>
+            <li>
+                Si resulta apropiado, una esquematización de la relación de la capa con los elementos de la vista lógica o
+                de proceso.
+            </li>
+            <li>
+                Una enumeración de los subsistemas de implementación que se encuentran en la capa. Para cada subsistema de
+                implementación:
+            </li>
+            <li style="LIST-STYLE-TYPE: none">
+                <ul>
+                    <li>
+                        Facilite el nombre, abreviación o apodo, una descripción breve y un motivo de su existencia;
+                    </li>
+                    <li>
+                        Si resulta apropiado, indique una relación del subsistema de implementación con los elementos de la
+                        vista lógica o de proceso. En muchos casos, un subsistema de implementación implementará uno o más
+                        subsistemas de diseño de la vista lógica.
+                    </li>
+                    <li>
+                        Si un subsistema de implementación contiene subsistemas de implementación arquitectónicamente
+                        significativos y/o<br />
+                         directorios, considere reflejar esto en la jerarquía de subsección.<br />
+                    </li>
+                    <li>
+                        Si un subsistema de implementación no correlaciona de uno a uno con un directorio de
+                        implementación, incluya una explicación sobre cómo se ha definido el subsistema de implementación
+                        en términos de directorios de implementación y/o archivos.
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </li>
+</ol>
+<h3>
+    <a id="The Data View" name="The Data View">La vista de datos</a>
+</h3>
+<p>
+    Esta vista sólo es relevante para sistemas que impliquen la permanencia soportada de la base de datos. Describe los
+    elementos permanentes arquitectónicamente significativos en el modelo de datos. Describe una visión general del modelo
+    de datos y su organización en términos de tablas, vistas, índices, desencadenantes y procedimientos almacenados
+    utilizados para proporcionar permanencia al sistema. También describe la correlación de clases permanentes (desde la
+    vista lógica) a la estructura de datos de la base de datos
+</p>
+<p>
+    Habitualmente incluye:
+</p>
+<ul>
+    <li>
+        La correlación de clases de diseño permanentes clave, especialmente donde la correlación no es trivial.
+    </li>
+    <li>
+        Los componentes arquitectónicamente significativos del sistema que se han implementado en la base de datos, en
+        forma de procedimientos almacenados y desencadenantes.
+    </li>
+    <li>
+        Decisiones importantes en otras vistas que tienen implicaciones de datos, como elecciones de estrategias de
+        transacción, distribución, concurrencia y tolerancia a errores. Por ejemplo, la opción de utilizar la gestión de
+        transacción basada en base de datos (basada en la base de datos para confirmar o cancelar las transacciones)
+        requiere que el mecanismo de manejo de errores utilizado en la arquitectura incluya una estrategia para recuperar
+        de una transacción anómala renovando el estado de permanencia de los objetos de la memoria caché de la aplicación.
+    </li>
+</ul>
+<p>
+    Debe presentar los elementos de modelo de datos significativos arquitectónicamente, describir sus responsabilidades,
+    así como unas pocas relaciones y comportamientos muy importantes (desencadenante, procedimientos almacenados, etc.).
+</p>
+<h3>
+    <a id="Size and Performance" name="Size and Performance">Tamaño y rendimiento</a>
+</h3>
+<p>
+    En esta sección se describen las características volumétricas de definición arquitectónica y de respuesta del sistema.
+    La información presentada puede incluir:
+</p>
+<ul>
+    <li>
+        El número de elementos clave que el sistema tendrá que manejar (como el número de vuelos simultáneos de un sistema
+        de control de tráfico aéreo, el número de llamadas telefónicas simultáneas de un conmutador de telecomunicaciones,
+        el número de usuarios simultáneos en línea de un sistema de reserva de líneas aéreas, etc.) .
+    </li>
+    <li>
+        Las medidas de rendimiento clave del sistema, como el tiempo de respuesta medio para sucesos clave; índices de
+        rendimiento medio, máximo y mínimo, etc.
+    </li>
+    <li>
+        La impresión (en el disco y la memoria) de los programas ejecutables - esencial si el sistema es un sistema
+        incorporado que debe vivir dentro de restricciones extremadamente limitadas.
+    </li>
+</ul>
+<p>
+    La mayoría de estas cualidades se capturan como requisitos; se presentan aquí porque forman la arquitectura en modos
+    significativos y garantizan enfoques especiales. Para cada requisito, discuta como la arquitectura da soporte a este
+    requisito.
+</p>
+<h3>
+    <a id="Quality" name="Quality">Calidad</a>
+</h3>
+<p>
+    En esta sección, liste las dimensiones de calidad clave del sistema que forma la arquitectura. La información
+    presentada puede incluir:
+</p>
+<ul>
+    <li>
+        Requisitos de rendimiento operativo, como <b>tiempo medio entre anomalías</b> (MTBF).
+    </li>
+    <li>
+        Destinos de calidad, como "tiempo de inactividad no planificado"
+    </li>
+    <li>
+        Destinos ampliables, como "el software se podrá actualizar mientras en sistema se esté ejecutando".
+    </li>
+    <li>
+        Destinos con portabilidad, como plataformas de hardware, sistemas operativos, lenguajes.
+    </li>
+</ul>
+<p>
+    Para cada dimensión, discuta como la arquitectura da soporte a este requisito. Puede organizar la sección por las
+    diferentes vistas (lógica, implementación, y etc.), o por calidad. Cuando unas características concretas son
+    importantes en el sistema, por ejemplo, seguridad o privacidad, el soporte arquitectónico para estas características
+    debe delinearse cuidadosamente en esta sección.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

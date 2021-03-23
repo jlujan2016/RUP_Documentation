@@ -1,0 +1,586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Tarea: Estructurar la implementaci&oacute;n de la prueba</title>
+<meta content="Task" name="uma.type">
+<meta content="structure_the_test_implementation" name="uma.name">
+<meta content="Estructurar la implementaci&oacute;n de la prueba" name="uma.presentationName">
+<meta content="Discipline:rup_test_discipline:Prueba" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="Dise&ntilde;ador de pruebas">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_1yMJAN7YEdmjRZts2c4ZjQ", "{84F723B5-288F-4AC4-B6C1-C75A07BFEEED}", "{ED9DF0C0-744A-443A-AEBA-604382E05A5F}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_yd3EzdnmEdmO6L4XMImrsA", "{ED9DF0C0-744A-443A-AEBA-604382E05A5F}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_1yMJAN7YEdmjRZts2c4ZjQ", "{84F723B5-288F-4AC4-B6C1-C75A07BFEEED}", "{ED9DF0C0-744A-443A-AEBA-604382E05A5F}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_u2yEADIEEdqwaNnSEheSAg", "_yd3EzdnmEdmO6L4XMImrsA", "{ED9DF0C0-744A-443A-AEBA-604382E05A5F}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', true, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="{ED9DF0C0-744A-443A-AEBA-604382E05A5F}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Estructurar la implementaci&oacute;n de la prueba</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta tarea se describe cómo definir la estructura general para la implementación del conjunto de aplicaciones de prueba.</td>
+</tr>
+<tr>
+<td>Disciplinas: <a href="./../../core.base_rup/disciplines/rup_test_discipline_9DFAFB2F.html" guid="_yd3EzdnmEdmO6L4XMImrsA">Prueba</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    El objetivo de esta tarea es:
+</p>
+<ul>
+    <li>
+        Establecer la estructura en la que residirá la implementación del conjunto de aplicaciones de prueba
+    </li>
+    <li>
+        Asignar responsabilidades para las áreas de implementación del conjunto de aplicaciones de prueba y su contenido
+    </li>
+    <li>
+        Esquematizar los conjuntos de aplicaciones de prueba necesarios
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Realizador principal:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_test_designer_5F59E64F.html" guid="{84F723B5-288F-4AC4-B6C1-C75A07BFEEED}">Dise&ntilde;ador de pruebas</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Otras actividades adicionales que realiza:
+								</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_suite_DA8938D2.html" guid="{33DE37A2-ECFE-483B-934B-629F5802F87C}">Conjunto de aplicaciones de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_strategy_C1677B8.html" guid="{DC3E85E6-C5A9-4AC6-8DDF-E2CF2CB0573E}">Estrategia de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_script_2140080.html" guid="{293A9F23-BB20-4993-AABE-76C1E8E1A589}">Script de prueba</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_automation_architecture_650DD06A.html" guid="{B5B77528-E14B-43CA-BC73-D64A90A17E2D}">Arquitectura de automatizaci&oacute;n de pruebas</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_case_8AFEC963.html" guid="{D525758B-EBA2-4F59-9BA6-226820C27ADD}">Caso de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_environment_configuration_B6BBDD6.html" guid="{DB50EF75-2B05-4487-8299-D82D2A0AD45C}">Configuraci&oacute;n de entorno de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_suite_DA8938D2.html" guid="{33DE37A2-ECFE-483B-934B-629F5802F87C}">Conjunto de aplicaciones de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_data_AD333F7A.html" guid="{5FFF9828-AB23-4C09-8293-42A90E90378B}">Datos de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_project_specific_guidelines_8DC8DA32.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">Directrices espec&iacute;ficas del proyecto</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_interface_specification_F1C8A203.html" guid="{020BA1FD-8940-4473-9C5B-0CA35FDDF4E6}">Especificaci&oacute;n de interfaz de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_development_infrastructure_21BD206E.html" guid="{A40A3A6E-A090-46B4-B2FE-5F1AC36F010B}">Infraestructura de desarrollo</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_plan_53712941.html" guid="{B95CA9FA-A00E-4C6C-AA16-133297812CC0}">Plan de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_suite_DA8938D2.html" guid="{33DE37A2-ECFE-483B-934B-629F5802F87C}">Conjunto de aplicaciones de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_script_2140080.html" guid="{293A9F23-BB20-4993-AABE-76C1E8E1A589}">Script de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Uso del proceso</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">Prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/improve_test_assets_1C99FFB9.html" guid="{CD77CBDA-CC13-4593-BB81-41AF3FF7A84C}">Mejorar los activos de prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/structure_the_test_implementation_5797B052.html" guid="_urfEgEoiEdqrjq4i3fchvA">Estructurar la implementación de la prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">Prueba</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/test_and_evaluate_4D17BD6A.html" guid="{93B7D625-C83A-4EFB-9772-B88F2EB02CE2}">Probar y evaluar</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/structure_the_test_implementation_639FF693.html" guid="_9VPYoEohEdqrjq4i3fchvA">Estructurar la implementación de la prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableSingleCell">
+<div class="stepHeading"> Examinar el enfoque de prueba, los elementos de prueba de destino y las necesidades de valoraci&oacute;n </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ExamineApproachTargetsAndAssmnt" name="ExamineApproachTargetsAndAssmnt"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Entender cómo se valorarán las pruebas, y sus implicaciones en el modo en que se deben implementar los
+                conjuntos de aplicaciones de prueba específicos, para valorar los elementos de prueba de destino.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Empezando por una revisión del plan de prueba para determinar las necesidades de valoración, considere cómo se puede
+    determinar la valoración del grado de prueba y la calidad del software utilizando el enfoque de prueba indicado. Tenga
+    en cuenta las necesidades especiales relacionadas con elementos de prueba de destino específicos.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Examinar los mecanismos de comprobabilidad y los elementos de soporte </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ExamineMechanismsAndElements" name="ExamineMechanismsAndElements"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Conocer los elementos de comprobabilidad disponibles, y entender a qué mecanismos dan soporte y qué
+                ventajas ofrecen.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Revise los mecanismos que son útiles para habilitar las pruebas en este entorno, e identifique los elementos de
+    comprobabilidad específicos que implementan esos mecanismos. Esto incluye revisar recursos como, por ejemplo, las
+    bibliotecas de funciones que ha desarrollado el equipo de prueba, y los fragmentos o los fijadores que ha implementado
+    el equipo de desarrollo.
+</p>
+<p>
+    La comprobabilidad se obtiene mediante la combinación del desarrollo de software que se puede probar y la definición de
+    un enfoque de prueba que proporciona el soporte adecuado a las pruebas. De esta forma, la comprobabilidad es un aspecto
+    importante del desarrollo de activos de los equipos de prueba, a la vez que constituye una parte importante del
+    esfuerzo de desarrollo de software. Para alcanzar la comprobabilidad (la habilidad de probar el producto de software de
+    manera eficaz), se necesita normalmente una combinación de lo siguiente:
+</p>
+<ul>
+    <li>
+        habilitadores de comprobabilidad proporcionados por las herramientas de automatización de pruebas
+    </li>
+    <li>
+        técnicas específicas para crear los scripts de prueba de componentes
+    </li>
+    <li>
+        bibliotecas de funciones que separan y encapsulan la complejidad de la definición básica de procedimientos de
+        prueba en el script de prueba, a la vez que proporcionan un punto central de control y modificación.
+    </li>
+</ul>
+<h4>
+    <a id="AnalyzeDistribution" name="AnalyzeDistribution">Analizar los requisitos de distribución</a>
+</h4>
+<p>
+    ¿Tiene el conjunto de aplicaciones de prueba actual el requisito de estar distribuido? En caso afirmativo, utilice los
+    elementos de comprobabilidad que dan soporte a la distribución. Estos elementos serán normalmente características de
+    herramientas específicas de soporte de automatización que distribuirán el conjunto de aplicaciones de prueba, lo
+    ejecutarán de forma remota y devolverán el registro de prueba y otras salidas para la determinación de resultados
+    centralizados.
+</p>
+<h4>
+    <a id="AnalyzeConcurrency" name="AnalyzeConcurrency">Analizar los requisitos de concurrencia</a>
+</h4>
+<p>
+    ¿Tiene el conjunto de aplicaciones de prueba actual el requisito de ejecutarse de forma concurrente con otros conjuntos
+    de aplicaciones de prueba? En caso afirmativo, utilice los elementos de comprobabilidad que dan soporte a la
+    concurrencia. Estos elementos serán normalmente una combinación de herramientas específicas de soporte y funciones de
+    programa de utilidad para habilitar la ejecución concurrente de varios conjuntos de aplicaciones de prueba en máquinas
+    físicas diferentes. La concurrencia requiere una gran precisión en el diseño y la gestión de los datos de prueba para
+    garantizar que no se produzcan efectos secundarios imprevistos o inesperados como, por ejemplo, que dos pruebas
+    concurrentes actualicen el mismo registro de datos.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Crear la estructura inicial del conjunto de aplicaciones de prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="CreateTestSuiteStructure" name="CreateTestSuiteStructure"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Esquematizar los conjuntos de aplicaciones de prueba que se van a implementar.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Enumere uno o varios conjuntos de aplicaciones de prueba que proporcionen (cuando se ejecuten) un resultado completo y
+    significativo de gran valor para el equipo de prueba, lo que permite realizar informes posteriores para los
+    interesados. Intente encontrar un equilibrio entre un nivel de detalle suficiente que permita proporcionar información
+    específica al equipo del proyecto, pero que no sea tanto que no se pueda abarcar ni gestionar.
+</p>
+<p>
+    Allí donde ya existan scripts de prueba, puede ensamblar el conjunto de aplicaciones de prueba y sus partes
+    constituyentes, y pasar el trabajo de estabilización del conjunto de aplicaciones de prueba a un implementador de
+    conjuntos de aplicaciones de prueba para que lo complete.
+</p>
+<p>
+    Para los conjuntos de aplicaciones de prueba que requieran la creación de nuevos scripts de prueba, también debe
+    proporcionar alguna indicación de los scripts de prueba (o de otros conjuntos de aplicaciones de prueba) a los que crea
+    que se hará referencia en este conjunto de aplicaciones de prueba. Si es fácil enumerarlos, hágalo. Si no, puede
+    proporcionar simplemente una breve descripción de la cobertura de contenido esperada del conjunto de aplicaciones de
+    prueba principal y dejar que el implementador de conjuntos de aplicaciones de prueba tome las decisiones tácticas sobre
+    qué scripts de prueba se incluyen exactamente.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Adaptar la estructura de conjuntos de aplicaciones de prueba para que refleje la organizaci&oacute;n del equipo y las restricciones de herramientas </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="AdaptStructureToTeam" name="AdaptStructureToTeam"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Perfeccionar la estructura de conjuntos de aplicaciones de prueba para trabajar con las asignaciones de
+                responsabilidad del equipo.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Puede que tenga que subdividir o reestructurar aún más los conjuntos de aplicaciones de prueba que ha identificado para
+    albergar la estructura detallada de trabajo (WBS) con la que trabaja el equipo. Esto permitirá reducir el riesgo de que
+    se produzcan conflictos de acceso durante el desarrollo de conjuntos de aplicaciones de prueba. A veces, las
+    herramientas de automatización de pruebas pueden añadir restricciones sobre cómo pueden trabajar las personas con los
+    activos de automatización, por lo que se deben reestructurar los conjuntos de aplicaciones de prueba para que incluyan
+    esto si es necesario.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar mecanismos de comunicaci&oacute;n entre scripts de prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="IdentifyTestScriptComms" name="IdentifyTestScriptComms"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Identificar datos de prueba y estados del sistema que se deben compartir o pasar entre scripts de
+                prueba.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    En la mayoría de los casos, los conjuntos de aplicaciones de prueba pueden llamar simplemente a scripts de prueba en un
+    orden específico. Esto será suficiente en la mayoría de los casos para garantizar que se pasa el estado del sistema
+    correcto de un script de prueba al siguiente.
+</p>
+<p>
+    No obstante, en determinadas clases de sistema, el sistema genera datos de tiempo de ejecución dinámicos o estos se
+    derivan como resultado de las transacciones que tienen lugar en ellos. Por ejemplo, en un sistema de entrada y envío de
+    pedidos, cada vez que se entra un pedido, el sistema genera un número de pedido exclusivo. Para habilitar un script de
+    prueba automatizado para que envíe un pedido, el script de prueba de entrada de pedido anterior tiene que capturar el
+    número exclusivo que genera el sistema y pasarlo al script de prueba de envío de pedidos.
+</p>
+<p>
+    En casos como este, deberá considerar qué mecanismo de comunicación entre scripts de prueba es el más adecuado. Las
+    alternativas típicas incluyen los parámetros pasados, la escritura y lectura de valores en un archivo de disco y la
+    utilización de variables de tiempo de ejecución globales. Cada estrategia tiene sus pros y sus contras que la hacen más
+    o menos adecuada en cada situación.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Definir dependencias iniciales entre elementos de conjuntos de aplicaciones de prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="DefineTestSuiteDependencies" name="DefineTestSuiteDependencies"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Identificar y registrar las dependencias de tiempo de ejecución entre elementos de conjuntos de
+                aplicaciones de prueba.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Esto se asocia principalmente con la secuencia de los scripts de prueba y probablemente de los conjuntos de
+    aplicaciones de prueba para la ejecución del tiempo de ejecución. Las pruebas que se ejecutan sin tener establecidas
+    las dependencias correctas corren el riesgo de fallar o de notificar datos anómalos.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Modelar visualmente la arquitectura de implementaci&oacute;n de la prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="VisualTestImpModel" name="VisualTestImpModel"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Utilizar un diagrama para documentar y explicar cómo se realiza la implementación de la prueba.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Si tiene acceso a una herramienta de dibujo o de modelado UML, puede crear un diagrama del modelo de implementación de
+    la prueba que describa los elementos clave del software de prueba automatizada. De la misma forma, también puede crear
+    un diagrama de los aspectos clave de la arquitectura de automatización de pruebas.
+</p>
+<p>
+    Otro enfoque es dibujar estos diagramas en una pizarra blanca que sea visible para el equipo de prueba.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Perfeccionar la estructura del conjunto de aplicaciones de prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="RefineTestSuiteStructure" name="RefineTestSuiteStructure"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Realizar los ajustes necesarios para mantener la integridad de la implementación de la prueba.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    A medida que avanza el proyecto, los conjuntos de aplicaciones de prueba pueden cambiar: se añadirán nuevos scripts de
+    prueba, y se actualizarán, reorganizarán o suprimirán scripts antiguos. Estos cambios constituyen una parte normal del
+    mantenimiento del conjunto de aplicaciones de prueba y debe aceptarlos en lugar de evitarlos.
+</p>
+<p>
+    Si no mantiene de manera activa los conjuntos de aplicaciones de prueba, se romperán rápidamente y entrarán en desuso.
+    Si se deja para unas pocas compilaciones, un conjunto de aplicaciones de prueba puede necesitar mucho esfuerzo para
+    volver a funcionar, y será más fácil abandonarlo y crear uno nuevo desde cero. Consulte el apartado <b><a href="#Top">Más información:</a></b> en la tabla de cabecera de esta página para obtener más directrices sobre el
+    mantenimiento de conjuntos de aplicaciones de prueba automatizados.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Mantener relaciones de rastreabilidad </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Traceability" name="Traceability"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Permitir ejecutar el análisis de impactos y el informe de valoración en los elementos rastreados.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Utilizando los requisitos de rastreabilidad descritos en el plan de prueba, actualice las relaciones de rastreabilidad
+    según sea necesario.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Evaluar y verificar los resultados </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="EvaluateResults" name="EvaluateResults"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Verificar que la tarea se ha realizado correctamente y que los productos de trabajo resultantes son
+                aceptables.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Ahora que ha terminado el trabajo, le recomendamos verificar que el trabajo tenía el valor suficiente y que no sólo ha
+    gastado una gran cantidad de papel. Debe evaluar si el trabajo tiene la calidad correcta y si es lo suficientemente
+    completo para que resulte útil a aquellos miembros del equipo que vayan a utilizarlo posteriormente como entrada de su
+    trabajo. Siempre que sea posible, utilice las listas de comprobación proporcionadas en RUP para verificar que la
+    calidad y la completitud son lo "suficientemente buenas".
+</p>
+<p>
+    Fomente la participación en la revisión del trabajo interno de las personas que realizan tareas basadas en los
+    resultados de su trabajo. Hágalo mientras todavía tenga tiempo para realizar acciones para solucionar sus problemas.
+    También debe evaluar su trabajo en los productos de trabajo de entrada clave para asegurarse de que los ha representado
+    de forma precisa y suficiente. Para ello, es muy útil hacer que el autor del producto de trabajo de entrada revise su
+    trabajo.
+</p>
+<p>
+    Recuerde que RUP es un proceso de entrega iterativo y que en muchos casos los productos de trabajo evolucionan con el
+    tiempo. Como tal, no siempre es necesario (y a veces es contraproducente) formar completamente un producto de trabajo
+    que sólo se utilizará de forma parcial o que no se utilizará en absoluto en un trabajo inmediatamente posterior. Esto
+    se debe a que existe una alta probabilidad de que la situación alrededor del producto de trabajo cambie (y que las
+    suposiciones realizadas cuando se creó el producto de trabajo se demuestre que son incorrectas) antes de que se utilice
+    el producto, lo que da como resultado un esfuerzo inútil y una revisión costosa. Asimismo, evite la trampa de invertir
+    demasiados ciclos en la presentación en detrimento del valor del contenido. En entornos de proyecto en los que la
+    presentación tenga importancia y un gran valor económico como entregable del proyecto, puede utilizar un recurso
+    administrativo para ejecutar tareas de presentación.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/maintaining_automated_test_suites_C1BF312D.html" guid="2.0721213907815595E-305">Mantenimiento de conjuntos de aplicaciones de prueba automatizados</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/performance_test_suites_A780E70C.html" guid="{FC006EA3-BFB8-4B16-B23A-753A15126A67}">Creación de conjuntos de aplicaciones de pruebas de rendimiento con Rational TestManager</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/performing_test_activities_A002FD4F.html" guid="{D2ECB600-4B4F-4458-B375-54DCF0D91BB3}">Realización de actividades de prueba utilizando Rational TestManager</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/implementing_test_suite_AE114A0D.html" guid="{803E510B-B96F-481B-92A9-EEF6CF6AAA24}">Implementación de un conjunto de aplicaciones de prueba automatizado utilizando Rational TestManager</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/setup_testfactory_C77C34F4.html" guid="{FAC387D8-BA1A-4056-A53B-E1C43571D1DC}">Establecimiento del entorno de prueba en Rational TestFactory</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/structure_test_implementation_3CC01B9C.html" guid="{AD403709-9F1A-496A-B5F7-F7CF823F8BDD}">Estructuración de la implementación de la prueba con Rational TestFactory</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

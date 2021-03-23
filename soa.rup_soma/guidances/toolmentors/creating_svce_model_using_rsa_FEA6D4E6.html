@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Creaci&oacute;n de un Modelo de Servicio utilizando RSA</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="creating_svce_model_using_rsa" name="uma.name">
+<meta content="Creaci&oacute;n de un Modelo de Servicio utilizando RSA" name="uma.presentationName">
+<meta content="Tool:rup_rational_software_architect:Rational Software Architect" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Software Architect" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "_T5H-cEUCEdqMr9-tA4TBpQ", "{23A022B3-1564-406B-88B5-E8312C764A82}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "_T5H-cEUCEdqMr9-tA4TBpQ", "{23A022B3-1564-406B-88B5-E8312C764A82}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "_T5H-cEUCEdqMr9-tA4TBpQ", "{23A022B3-1564-406B-88B5-E8312C764A82}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "{9EB2B302-79F6-4DF8-AEB7-98E6AC1756DD}", "{23A022B3-1564-406B-88B5-E8312C764A82}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{23A022B3-1564-406B-88B5-E8312C764A82}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Creaci&oacute;n de un Modelo de Servicio utilizando RSA</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta guía de la herramienta describe los pasos a seguir para crear un modelo de servicio simple utilizando Rational Software Architect.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_rational_software_architect_736B9F40.html" guid="_T5H-cEUCEdqMr9-tA4TBpQ">Rational Software Architect</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../soa.rup_soma/tasks/soa_service_specification_AB6BA763.html" guid="{9EB2B302-79F6-4DF8-AEB7-98E6AC1756DD}">Especificación de servicio</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Objetivo
+</h3>
+<p>
+    Los pasos de esta guía de la herramienta coinciden con los de la tarea. Los enlaces con temas de la Ayuda en línea del
+    Rational Software Architect (RSA) se marcan con <img height="16" alt="" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" />.
+</p>
+<h3>
+    Visión general
+</h3>
+<p>
+    Esta guía de la herramienta describe los pasos para crear un modelo de servicio sencillo con RSA. El perfil UML para
+    servicios de software y el modelo de plantilla descritos en la guía de la herramienta pueden no estar instalados en
+    versiones anteriores de RSA. Un paquete descargable que contiene estos elementos e instrucciones de instalación está
+    disponible en IBM developerWorks.
+</p>
+<p>
+    En esta guía de la herramienta se llevan a cabo los pasos siguientes:
+</p>
+<ul>
+    <li>
+        <a href="#New_Modeling_Project">Creación de un proyecto de modelado nuevo</a>.
+    </li>
+    <li>
+        <a href="#New_Service_Model">Creación de un modelo de diseño de servicio</a>.
+    </li>
+    <li>
+        <a href="#New_Messages">Creación de mensajes para el servicio</a>.
+    </li>
+    <li>
+        <a href="#New_Services">Creación de un nuevo servicio desde la biblioteca de modelos</a>.
+    </li>
+    <li>
+        <a href="#New_Partition">Creación de una partición de servicio</a>.
+    </li>
+</ul>
+<h3>
+    <a id="Develop Architecture Overview" name="Develop Architecture Overview">Visión general del desarrollo de la
+    arquitectura</a><b>&nbsp;</b>
+</h3>
+<h3>
+    <a id="New_Modeling_Project" name="New_Modeling_Project">Creación de un proyecto de modelado nuevo</a>
+</h3>
+<p>
+    Este paso también creará un modelo de diseño de servicio, una vez terminado vaya al paso número 3.
+</p>
+<ol>
+    <li>
+        En el menú RSA, seleccione Archivo --&gt; Nuevo --&gt; Proyecto.
+    </li>
+    <li>
+        En el asistente resultante, seleccione la carpeta "Modelado" y, a continuación, el "proyecto UML" del árbol. Si no
+        puede ver estos elementos en el árbol, active la casilla "Mostrar todos los asistentes" situada justo debajo del
+        árbol. Seleccione el botón Siguiente.
+    </li>
+    <li>
+        De al proyecto un nombre como por ejemplo "mi.primer.proyecto.modelodeservicio" y, después, seleccione el botón
+        Siguiente.
+    </li>
+    <li>
+        En la lista de plantillas de modelos, seleccione "Modelo de diseño de servicio" y, a continuación, seleccione el
+        botón Siguiente.
+    </li>
+    <li>
+        Cuando aparezcan con la lista de proyectos a los que puede hacer referencia, seleccione el botón Finalizar.
+    </li>
+</ol>
+<p>
+    Para obtener más información acerca de cómo crear un nuevo proyecto, consulte el tema Transacción de estado en la ayuda
+    en línea de Rational Rose.
+</p>
+<h3>
+    <a id="New_Service_Model" name="New_Service_Model">Creación de un modelo de diseño de servicio nuevo</a>
+</h3>
+<p>
+    Si ya tiene un proyecto de modelado, este paso agregará un modelo de diseño de servicio al proyecto.
+</p>
+<ol>
+    <li>
+        Seleccione el proyecto al que desea agregar el modelo de diseño de servicio.
+    </li>
+    <li>
+        En el menú RSA, seleccione Archivo --&gt; Nuevo --&gt; Otros.
+    </li>
+    <li>
+        En el asistente resultante, seleccione la carpeta "Modelado" y, a continuación, el "Modelo UML" en el árbol. Si no
+        puede ver estos elementos en el árbol, active la casilla "Mostrar todos los asistentes" situada justo debajo del
+        árbol. Seleccione el botón Siguiente.
+    </li>
+    <li>
+        En la lista de plantillas de modelo, seleccione "Modelo de diseño de servicio" y, si lo desea, seleccione un nuevo
+        nombre para el modelo. Seleccione el botón Finalizar.
+    </li>
+</ol>
+<h3>
+    <a id="New_Messages" name="New_Messages">Creación de mensajes para el servicio desde la biblioteca de modelos</a>
+</h3>
+<ol>
+    <li>
+        En el paquete denominado "Vista de mensajes," cree una nueva clase denominada Cliente.
+    </li>
+    <li>
+        Cree otra nueva clase denominada Dirección.
+    </li>
+    <li>
+        Cree una asociación de agregación de Cliente a Dirección.
+    </li>
+    <li>
+        Abra la biblioteca de modelos llamada "Elementos de diseño reutilizables" y pulse Crtl mientras arrastra la clase
+        &lt;&lt;Mensaje&gt;&gt; al paquete de vista de mensajes.
+    </li>
+    <li>
+        Pulse con el botón derecho del ratón sobre la nueva clase recientemente creada en la vista de mensajes y seleccione
+        "Buscar/Sustituir...". 
+        <ol>
+            <li>
+                En el cuadro de diálogo, escriba el texto "${servicio.mensaje}" en el recuadro de texto de "Qué buscar".
+            </li>
+            <li>
+                Seleccione el botón "Sustituir".
+            </li>
+            <li>
+                En el cuadro de diálogo, escriba el texto "CrearCliente" en el recuadro de texto de "Sustituir por".
+            </li>
+            <li>
+                Seleccione Aceptar.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Arrastre la nueva clase de mensaje al diagrama de clase con Cliente y Dirección y agregue una asociación de
+        agregación de CrearCliente a Cliente.
+    </li>
+    <li>
+        Ahora, pulse Ctrl mientras arrastra otra clase de &lt;&lt;mensaje&gt;&gt; al paquete de vista de mensajes y le
+        cambia el nombre por "ActualizarDirecciónCliente" mediante el cuadro de diálogo Buscar/Sustituir.
+    </li>
+    <li>
+        Arrastre la nueva clase de mensaje al diagrama de clase y agregue una nueva asociación de agregación de
+        ActualizarDirecciónCliente a Dirección.
+    </li>
+</ol>
+<h3>
+    <a id="New_Services" name="New_Services">Creación de un nuevo servicio y proveedor</a>
+</h3>
+<ol>
+    <li>
+        Pulse Ctrl mientras arrastra el componente &lt;&lt;ProveedorServicios&gt;&gt; al paquete de vista de servicios y,
+        usando la técnica Buscar/Sustituir descrita anteriormente, cámbiele el nombre por "InformaciónCliente" (el texto
+        "Qué buscar" es "${servicio}" en este caso).
+    </li>
+    <li>
+        Los elementos reales creados son: 
+        <ol>
+            <li>
+                Un componente llamado "ProveedorInformaciónCliente" con un diagrama de estructura compuesta anidado.
+            </li>
+            <li>
+                Una interfaz llamada InfoClienteI estereotipada como una&lt;&lt;EspecificaciónServicio&gt;&gt; que contiene
+                un diagrama de la actividad.
+            </li>
+            <li>
+                Un puerto en el componente denominado InformaciónCliente estereotipado como un &lt;&lt;Servicio&gt;&gt; y
+                llamado InfoClienteI.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Agregue una operación a InfoClienteI llamada "crearCliente" y agregue un parámetro escrito con el mensaje
+        CrearCliente creado anteriormente.
+    </li>
+    <li>
+        Agregue otra operación denominada "actualizarDirecciónCliente" y agregue un parámetro llamado con el mensaje
+        ActualizarDirecciónCliente creado anteriormente.
+    </li>
+</ol>
+<h3>
+    <a id="New_Partition" name="New_Partition">Creación de una partición de servicio</a>
+</h3>
+<ol>
+    <li>
+        Cree otro servicio, siguiente las instrucciones anteriores, pero llámele "AccountMgmt" (no es necesario agregarle
+        operaciones en este caso).
+    </li>
+    <li>
+        Pulse Ctrl mientras arrastra el nodo &lt;&lt;ParticiónServicio&gt;&gt; al paquete de vista de colaboración, usando
+        la técnica Buscar/Sustituir anterior, cambiándole el nombre por "Servicio de gestión". El texto de "Qué buscar" es
+        "${partición}" en este caso.
+    </li>
+    <li>
+        Abra el diagrama de estructuras anidado en la partición y agregue dos partes al diagrama, cuando se le pida
+        seleccionar un elemento existente, y elija los dos proveedores de servicios creados hasta este momento.
+    </li>
+    <li>
+        Esto producirá las partes no sólo estando escritas sino también visualizando los puertos e interfaces asociados con
+        los proveedores.
+    </li>
+    <li>
+        Para crear un canal de servicio entre los dos servicios, elija el conector de la caja de herramientas y conéctelo a
+        los dos puertos. 
+        <ol>
+            <li>
+                Stereotipe el conector &lt;&lt;CanalServicio&gt;&gt;.
+            </li>
+            <li>
+                Seleccione la ficha Avanzada de la vista de propiedades y establezca el vínculo en "RMI".
+            </li>
+        </ol>
+    </li>
+</ol>
+<p>
+    Para crear una partición estricta y exponer sólo el servicio AccountMgmt, siga los siguientes pasos adicionales.
+</p>
+<ol>
+    <li>
+        Pulse con el botón derecho del ratón en la partición del Explorador de modelos y agregue un nuevo puerto.
+    </li>
+    <li>
+        De un nombre al puerto y establezca su estereotipo en &lt;&lt;PasarelaServicio&gt;&gt;.
+    </li>
+    <li>
+        En la vista de propiedades, establezca el tipo del puerto en la especificación de servicio IAccountMgmt.
+    </li>
+    <li>
+        Abra el diagrama de estructura compuesta que hemos creado anteriormente y vea que el nuevo puerto aparece en el
+        diagrama.
+    </li>
+    <li>
+        Cree un &lt;&lt;CanalServicio&gt;&gt; de la pasarela de servicio al servicio AccountMgmt.
+    </li>
+</ol></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

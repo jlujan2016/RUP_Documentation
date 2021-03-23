@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Implementaci&oacute;n de clases</title>
+<meta content="Guideline" name="uma.type">
+<meta content="implementing_classes" name="uma.name">
+<meta content="Implementaci&oacute;n de clases" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "6.392513032248068E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="6.392513032248068E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Implementaci&oacute;n de clases</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta pauta describe cómo implementar clases utilizando el entorno de modelado RAD6.0. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_component_AE366827.html" guid="{3293F4F7-EFCD-4476-BFF1-81AC3812B512}">Implementar elementos de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><div align="left">
+    <ul>
+        <li>
+            <a href="#Implement Operations">Implementación de operaciones</a>
+        </li>
+        <li>
+            <a href="#Implement States">Implementación del estado</a>
+        </li>
+        <li>
+            <a href="#Use Delegation to Reuse Implementation">Uso de la delegación para implementar la
+            reutilización</a>
+        </li>
+        <li>
+            <a href="#Implement Associations">Implementación de asociaciones</a>
+        </li>
+        <li>
+            <a href="#Implement Attributes">Implementación de atributos</a>
+        </li>
+    </ul>
+</div>
+<h3>
+    <a id="Implement Operations" href="#Implement Attributes" name="Implement Operations">Implementación de
+    operaciones</a>
+</h3>
+<p>
+    Para implementar operaciones, haga lo siguiente:
+</p>
+<ul>
+    <li>
+        Elija un algoritmo.
+    </li>
+    <li>
+        Elija estructuras de datos adecuadas para los algoritmos.
+    </li>
+    <li>
+        Defina nuevas clases y operaciones según sea necesario.
+    </li>
+    <li>
+        Codifique la operación.
+    </li>
+</ul>
+<h5>
+    Elija un algoritmo
+</h5>
+<p>
+    Muchas operaciones son lo suficientemente simples para ser implementadas desde la operación y su especificación.
+</p>
+<p>
+    Los algoritmos no triviales son necesarios básicamente por dos motivos: para implementar operaciones complejas para las
+    que se proporciona una especificación y para optimizar operaciones para las que un algoritmo simple pero ineficaz sirve
+    a modo de definición.
+</p>
+<h5>
+    Elija estructuras de datos adecuadas a los algoritmos
+</h5>
+<p>
+    La elección de algoritmos implica elegir la estructura de datos sobre la que trabajan. Muchas estructuras de datos de
+    implementación son clases de contenedores como, por ejemplo, matrices, listas, colas, pilas, conjuntos, agrupaciones y
+    sus respectivas variantes. Muchos lenguajes orientados a objetos y muchos entornos de programación proporcionan
+    bibliotecas de clases con estos tipos de componentes reutilizables.
+</p>
+<h5>
+    Defina nuevas clases y operaciones según sea necesario
+</h5>
+<p>
+    Se pueden encontrar nuevas clases para mantener resultados inmediatos, por ejemplo. Puede que se añadan operaciones de
+    bajo nivel a la clase para descomponer una operación compleja. Estas operaciones a menudo son privadas para la clase,
+    es decir, no son visibles fuera de la propia clase.
+</p>
+<h5>
+    Codifique la operación.
+</h5>
+<p>
+    Escriba el código de la operación empezando por su sentencia de interfaz. Siga las directrices de programación
+    pertinentes.
+</p>
+<h3>
+    <a id="Implement States" href="#Top" name="Implement States">Implementación del estado</a>
+</h3>
+<p>
+    El estado de un objeto puede ser implementado haciendo referencia a los valores de sus atributos, sin una
+    representación especial. Las transiciones de estado para un objeto de este tipo estarán implícitas en los valores
+    variables de los atributos, y los comportamientos variables están programados mediante sentencias condicionales. &nbsp;
+    Esta solución no es satisfactoria en cuanto a comportamientos complejos porque normalmente lleva a estructuras
+    complejas, difíciles de modificar a medida que se añaden más estados o el comportamiento cambia.
+</p>
+<p>
+    Si el comportamiento del elemento de diseño (o de sus constituyentes) depende del estado, normalmente habrá uno o más
+    diagramas de gráfico de estados que describan el comportamiento de los elementos modelo en el elemento de diseño. Estos
+    diagramas de gráfico de estados sirven de entrada importante durante la implementación.
+</p>
+<p>
+    Las máquinas de estado que se muestran en los diagramas de gráficos de estado hacen que el estado de un objeto sea
+    explícito, y las transiciones y el comportamiento necesario están claramente delineados. Una máquina de estado se puede
+    implementar de las siguientes maneras:
+</p>
+<ul>
+    <li>
+        Las máquinas de estado simples pueden ser implementadas definiendo un atributo que enumere los estados posibles, y
+        utilizándolo para seleccionar el comportamiento de los mensajes entrantes. Por ejemplo, en una sentencia de
+        conmutador Java o C++. Esta solución no se escala muy bien en máquinas de estado complejas, y puede conllevar un
+        rendimiento en tiempo de ejecución pobre. Consulte [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">DOUG98</a>], Capítulo
+        4, 4.4.3 para obtener un ejemplo de este método
+    </li>
+    <li>
+        Las máquinas de estado más complejas pueden utilizar el patrón de Estado. Consulte[<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">GAM94</a>] para obtener una descripción del patrón de Estado. El [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">DOUG98</a>], Capítulo 6, 6.2.3, <i>Patrón de estado</i>, también describe este método
+    </li>
+    <li>
+        Un método regida por una tabla funciona bien para las máquinas de estado complejas en las que la facilidad de
+        cambio es un criterio estándar. En esta propuesta, existen entradas para cada estado de una tabla, y cada entrada
+        correlaciona entradas a estados sucesivos y sus acciones de transición asociadas. Consulte [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">DOUG98</a>], Capítulo 6, 6.2.3, <i>Patrón de tabla de estado</i> para obtener un
+        ejemplo de este método.
+    </li>
+</ul>
+<p>
+    Las máquinas de estado con subestados concurrentes pueden ser implementadas delegando la gestión del estado a objetos
+    activos, uno para cada subestado concurrente, ya que los subestados concurrentes representan computaciones
+    independientes (que pueden, sin embargo, interactuar). Cada subestado se puede gestionar utilizando una de las técnicas
+    que se han descrito anteriormente.
+</p>
+<h3>
+    <a id="Use Delegation to Reuse Implementation" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" name="Use Delegation to Reuse Implementation" guid="7.755968586980351E-308">Uso de la delegación para implementar la
+    reutilización</a>
+</h3>
+<p>
+    Si una clase o partes de ella puede ser implementada reutilizando una clase existente, utilice la delegación en lugar
+    de la herencia.
+</p>
+<p>
+    La delegación implica que la clase se implemente con ayuda de otras clases. La clase hace referencia a un objeto de la
+    otra clase utilizando una variable. Cuando se llama a una operación, ésta llama a una operación en el objeto
+    referenciado (de la clase reutilizada) para la verdadera ejecución. Por tanto, delega la responsabilidad a la otra
+    clase.
+</p>
+<h3>
+    <a id="Implement Associations" href="#Top" name="Implement Associations">Implementación de asociaciones</a>
+</h3>
+<p>
+    Una asociación unidireccional se implementa como un puntero - un atributo que contiene una referencia a un objeto. Si
+    la multiplicidad es <b>uno</b>, entonces se implementa como puntero simple. Si la multiplicidad es <b>muchos</b>,
+    entonces se implementa como un conjunto de punteros. Com la multiplicidad establecida en <b>muchos</b>, se puede
+    utilizar una lista en lugar de un conjunto.
+</p>
+<p>
+    Una asociación bidireccional se implementa en forma de atributos en ambas direcciones, utilizando técnicas de
+    asociación unidireccional.
+</p>
+<p>
+    Una asociación calificada se implementa como tabla de búsqueda (por ejemplo, una clase Smalltalk Dictionary) en el
+    objeto calificador. Los valores de selector en la tabla de búsqueda son los calificadores, y los valores de destino son
+    los objetos de la otra clase.
+</p>
+<p>
+    Si se tiene que acceder en orden a los valores de calificador, los calificadores pueden ser clasificados en un conjunto
+    ordenado o un árbol. En este caso, el tiempo de acceso será proporcional al registro N, donde N es el número de valores
+    de calificador.
+</p>
+<p>
+    Si los calificadores se derivan de un conjunto finito compacto, los valores del calificador pueden correlacionarse en
+    un rango de números enteros y la asociación puede implementarse de forma eficaz como matriz. Este método es más
+    atractiva si la asociación está mayormente llena en lugar de contener pocos elementos, y es ideal para conjuntos
+    finitos completos.
+</p>
+<p>
+    La mayoría de lenguajes orientados a objetos y entornos de programación proporcionan bibliotecas de clases con
+    componentes reutilizables para implementar los diferentes tipos de asociaciones.
+</p>
+<h3>
+    <a id="Implement Attributes" href="#Top" name="Implement Attributes">Implementación de atributos</a>
+</h3>
+<p>
+    Implemente atributos mediante alguno de estos tres métodos: utilización de tipos primitivos integrados, utilización de
+    una clase existente, o definición de una clase nueva. Definir una clase nueva normalmente proporciona más flexibilidad,
+    pero introduce un direccionamiento indirecto innecesario. Por ejemplo,el número se seguridad social de un empleado
+    puede ser implementado como atributo de tipo Serie o como una clase nueva.
+</p>
+<p class="picturecenter" align="center">
+    <img height="37" alt="Ilustración sobre implementaciones de atributos alternativas" src="./../../../tech.rad/guidances/guidelines/resources/ac_impc1.gif"     width="430" border="0" />
+</p>
+<p class="picturetext" align="center">
+    Implementaciones alternativas para un atributo.
+</p>
+<p>
+    También puede darse el caso de que grupos de atributos se combinen en nuevas clases, como muestra el ejemplo siguiente.
+    Ambas implementaciones son correctas.
+</p>
+<p class="picturecenter" align="center">
+    <img height="78" alt="Atributos de la implementación en línea de la clase Point" src="./../../../tech.rad/guidances/guidelines/resources/ac_impc2.gif"     width="381" />
+</p>
+<p class="picturetext" align="center">
+    Los atributos en línea se implementan como asociaciones a una clase Point.<br />
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

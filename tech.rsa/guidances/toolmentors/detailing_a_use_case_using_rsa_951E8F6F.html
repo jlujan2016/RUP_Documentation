@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Detalle de un gui&oacute;n de uso mediante la plataforma de desarrollo de software Rational</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="detailing_a_use_case_using_rsa" name="uma.name">
+<meta content="Detalle de un gui&oacute;n de uso mediante la plataforma de desarrollo de software Rational" name="uma.presentationName">
+<meta name="element_type" content="tool_mentor">
+<meta content="" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{CAC2295B-A249-44E4-8AAD-61F8AA82AB63}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Detalle de un gui&oacute;n de uso mediante la plataforma de desarrollo de software Rational</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta guía de la herramienta describe cómo detallar un guión de uso mediante el entorno de modelado SDP.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    En esta guía de la herramienta se da por supuesto que el modelo de guión de uso se ha creado según las <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructurad de modelo para RSx</a>. También se presupone que se ha creado
+    un guión de uso siguiendo los pasos descritos en <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/find_actors_and_use_cases_1ACB35F0.html" guid="{3CD5FA7E-160C-4A39-9DEB-C6D162D8AECD}">Encontrar actores y guiones de uso</a>.
+</p>
+<p>
+    En esta guía de la herramienta se llevan a cabo los pasos siguientes:
+</p>
+<ul>
+    <li>
+        <a href="#Detail the Flow of Events of the Use Case">Detallar el flujo de sucesos del guión de
+        uso</a>
+    </li>
+    <li>
+        <a href="#Structure the Flow of Events of the Use Case">Estructurar el flujo de suceso del guión de
+        uso</a>
+    </li>
+    <li>
+        <a href="#Illustrate Relationships with Actors and Other Use Cases">Ilustrar relaciones con actores y
+        otros guiones de uso</a> &lt;opcional&gt;
+    </li>
+    <li>
+        <a href="#Describe the Special Requirements of the Use Case">Describir los requisitos especiales del
+        guión de uso</a>
+    </li>
+    <li>
+        <a href="#Describe Communication Protocols">Describir protocolos de comunicación</a>
+    </li>
+    <li>
+        <a href="#Describe Preconditions of the Use Case">Describir condiciones previas del guión de uso</a>
+        &lt;opcional&gt;
+    </li>
+    <li>
+        <a href="#Describe Postconditions of the Use Case">Describir condiciones posteriores del guión de uso</a>
+        &lt;opcional&gt;
+    </li>
+    <li>
+        <a href="#Describe Extension Points">Describir puntos de ampliación</a> &lt;opcional&gt;
+    </li>
+    <li>
+        <a href="#Evaluate your Results">Evaluar los resultados</a>
+    </li>
+</ul>
+<p>
+    <a href="#MoreInfo">Información adicional sobre la herramienta</a>
+</p>
+<p>
+    Antes de detallar un guión de uso, debe decidir cómo desea capturar los detalles. Algunas opciones son:
+</p>
+<ul>
+    <li>
+        Utilizar la ventana Documentación de modelo, que le permite documentar cualquier elemento de modelo seleccionado.
+        Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Documentación de elementos de modelo</i>.
+    </li>
+    <li>
+        Se puede crear un documento de especificación de guión de uso separado utilizando la plantilla que proporciona RUP
+        (consulte las plantillas del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">Artefacto: Guión de uso</a>). A continuación, el documento se puede
+        asociar al elemento de modelo de guión de uso. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Enlace de elementos de modelo con archivos externos</i>.
+    </li>
+    <li>
+        También puede asociar los guiones de uso con requisitos y documentos mediante la integración de Rational
+        RequisitePro. Para asociar un guión de uso a un requisito o documento de RequisitePro, consulte la ayuda de la
+        integración de RequisitePro. &nbsp;A continuación, se proporciona más información sobre la integración de
+        RequisitePro.
+    </li>
+</ul>
+<h4>
+    Integración de Rational RequisitePro
+</h4>
+<p>
+    Mediante la integración de Rational RequisitePro, puede editar los elementos del modelo de guión de uso desde sus
+    requisitos asociados en las bases de datos y los documentos de RequisitePro. Puede asociar los guiones de uso con
+    documentos de requisitos de RequisitePro, lo que permite desarrollar una definición textual del guión de uso en un
+    documento RequisitePro de Microsoft Word. En los documentos de guión de uso de RequisitePro, puede elaborar el guión de
+    uso con descripciones, flujos de sucesos, requisitos especiales y condiciones.
+</p>
+<p>
+    La integración también permite asignar la rastreabilidad de requisitos a elementos de modelo. Puede utilizar los
+    requisitos asociados para rastrear las relaciones entre los elementos de modelo y otros requisitos mediante las
+    capacidades de rastreabilidad de requisitos de RequisitePro. Si asocia los elementos de modelo con los requisitos, le
+    permite revisar y valorar el impacto de los cambios de requisitos en los elementos de modelo.
+</p>
+<p>
+    Para obtener más información, consulte las directrices <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/guidelines/managing_use_cases_using_rational_software_architect_and_rationa_2601D5FE.html" guid="3.857679223515255E-306">Gestión de guiones de uso mediante RSx y Rational RequisitePro</a>.
+</p>
+<h3>
+    <a id="Detail the Flow of Events of the Use Case" name="Detail the Flow of Events of the Use Case">Detallar el flujo de
+    sucesos del guión de uso</a>
+</h3>
+<ol>
+    <li>
+        Abra el modelo de guión de uso.
+    </li>
+    <li>
+        Navegue al guión de uso que desea detallar.
+    </li>
+    <li>
+        Entre un flujo de sucesos detallado en la documentación asociada con el elemento de modelo.
+    </li>
+</ol>
+<h3>
+    <a id="Structure the Flow of Events of the Use Case" name="Structure the Flow of Events of the Use Case">Estructurar el
+    flujo de sucesos del guión de uso</a>
+</h3>
+<p>
+    Puede ilustrar la estructura del flujo de sucesos con un diagrama de actividad. Para ello, siga los pasos que se
+    indican a continuación:
+</p>
+<ol>
+    <li>
+        Pulse el botón derecho sobre el guión de uso en el Explorador de modelos, y añada un diagrama de actividad.
+        Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Diagramas de actividad</i>.
+    </li>
+    <li>
+        (opcional) Añada divisiones.
+    </li>
+    <li>
+        Añada el estado inicial, el estado final y las actividades. Consulte&nbsp;<img height="16"         alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Nodos de control.</i>
+    </li>
+    <li>
+        Anote cada actividad con una descripción breve. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documentación de elementos de modelo</i>.
+    </li>
+    <li>
+        Conecte los estados de actividad con transiciones. Consulte&nbsp;<img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Relaciones</i>.
+    </li>
+    <li>
+        Cree barras de sincronización (según sea necesario).
+    </li>
+    <li>
+        Especifique condiciones de vigilancia en las transiciones (según sea necesario).
+    </li>
+</ol>
+<h3>
+    <a id="Illustrate Relationships with Actors and Other Use Cases" name="Illustrate Relationships with Actors and Other Use Cases">Ilustrar relaciones con actores y otros guiones de
+    uso</a> &lt;opcional&gt;
+</h3>
+<p>
+    Este es un paso opcional que se lleva a cabo únicamente para aclarar la relación entre el guión de uso y sus actores y
+    guiones de uso asociados. La adición de relaciones con actores se describe en <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/find_actors_and_use_cases_1ACB35F0.html" guid="{3CD5FA7E-160C-4A39-9DEB-C6D162D8AECD}">Búsqueda de actores y guiones de uso</a>. Las relaciones con otros
+    guiones de uso se describen en <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/structure_use_case_model_93D8F44.html" guid="{F7D9D038-B184-43CC-9353-15BA154F87B5}">Estructura del modelo de guión de uso</a>.
+</p>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modelado del comportamiento de un
+    subsistema&nbsp;mediante&nbsp;diagramas de guiones de uso</i> en la ayuda en línea.
+</p>
+<h3>
+    <a id="Describe the Special Requirements of the Use Case" name="Describe the Special Requirements of the Use Case">Describir los requisitos especiales del guión de uso</a>
+</h3>
+<p>
+    Entre esta información en la documentación asociada con el guión de uso. Tenga en cuenta que existe una sección
+    específica para esta información en la plantilla de especificación de guión de uso.
+</p>
+<h3>
+    <a id="Describe Communication Protocols" name="Describe Communication Protocols">Describir protocolos de
+    comunicación</a>
+</h3>
+<p>
+    Entre esta información en la documentación asociada con el guión de uso. Tenga en cuenta que existe una sección
+    específica para esta información en la plantilla de especificación de guión de uso.
+</p>
+<h3>
+    <a id="Describe Preconditions of the Use Case" name="Describe Preconditions of the Use Case">Describir condiciones
+    previas del guión de uso</a> &lt;opcional&gt;
+</h3>
+<p>
+    Entre esta información en la documentación asociada con el guión de uso. Tenga en cuenta que existe una sección
+    específica para esta información en la plantilla de especificación de guión de uso.
+</p>
+<h3>
+    <a id="Describe Postconditions of the Use Case" name="Describe Postconditions of the Use Case">Describir condiciones
+    posteriores del guión de uso</a> &lt;opcional&gt;
+</h3>
+<p>
+    Entre esta información en la documentación asociada con el guión de uso. Tenga en cuenta que existe una sección
+    específica para esta información en la plantilla de especificación de guión de uso.
+</p>
+<h3>
+    <a id="Describe Extension Points" name="Describe Extension Points">Describir puntos de ampliación</a> &lt;opcional&gt;
+</h3>
+<p>
+    Entre esta información en la documentación asociada con el guión de uso. Tenga en cuenta que existe una sección
+    específica para esta información en la plantilla de especificación de guión de uso.
+</p>
+<h3>
+    <a id="Evaluate your Results" name="Evaluate your Results">Evaluar los resultados</a>
+</h3>
+<p>
+    Cada descripción de guión de uso detallada debe revisarse con los interesados.&nbsp;Los informes de herramienta y los
+    diagramas de modelo de guión de uso (guión de uso y actividad) pueden ayudar en la revisión de la descripción de guión
+    de uso detallada.
+</p>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Publicación de modelos</i> y el tutorial <img height="16"     alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Publicación de un modelo en un
+    sitio web</i> .
+</p>
+<h3>
+    <a id="MoreInfo" name="MoreInfo">Información adicional sobre la herramienta</a>
+</h3>
+<p>
+    Tutoriales:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Asociación de
+        requisitos y elementos de modelo</i>
+    </li>
+</ul>
+<p>
+    Ejemplos:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modelos UML:
+        Modelo&nbsp;UML simple</i>&nbsp;
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../tech.rsa/guidances/toolmentors/detailing_a_use_case_using_rsa_ext_78C0782.html" guid="_z8yuQK4IEdqFg48R_ivTjA">Detalle de un guión de uso mediante Rational Software Architect</a>
+</li>
+<li>
+<a href="./../../../tech.rsa/guidances/toolmentors/detailing_a_use_case_using_rsd_85CF0124.html" guid="_xHCCEK4IEdqFg48R_ivTjA">Detalle de un guión de uso mediante Rational Systems Developer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

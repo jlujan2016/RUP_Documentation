@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Defining Test Strategy for Data Migration</title>
+<meta content="Guideline" name="uma.type">
+<meta content="defining_test_strategy_for_data_migration" name="uma.name">
+<meta content="Defining Test Strategy for Data Migration" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "9.407365359850219E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="9.407365359850219E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Defining Test Strategy for Data Migration</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This guideline describes how to develop a strategy for testing the accuracy and completeness of Data Migration.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/define_test_approach_51A370C3.html" guid="{87F96887-83EF-4F0F-8F79-E98043406B52}">Definir el enfoque de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introduction
+</h3>
+<p>
+    After migrating data as specified in the <a class="elementLinkWithUserText" href="./../../../modernize.legacy_evol/workproducts/database_migration_specification_5091901D.html" guid="{24309CAC-2A58-4011-B0F0-0A7D2FD58AEA}">Work Product: Data Migration Specification,</a> you need to validate the
+    correctness of the resulting data. This is a critical activity. Improperly converted data can lie dormant and cause
+    invalid results in the new system and, often worse, invalid results that remain undetected. Careful validation is
+    needed to prevent this time bomb effect. The risk is often heightened because of the volume of much of the data and
+    because the project team may have only indirect control of the conversion process.
+</p>
+<p>
+    As with all testing activities, you should first define the test strategy that you will use to validate the migrated
+    data. In addition to what is described in <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}">Task: Define Test Approach</a>, the following considerations should be
+    taken into account:
+</p>
+<ul>
+    <li>
+        <a href="#Data_Accuracy">Data accuracy</a>
+    </li>
+    <li>
+        <a href="#Test_Auto_Data_Migration">Testing of Automated Data Migration</a>
+    </li>
+    <li>
+        <a href="#Control_Procedures">Control procedures</a>
+    </li>
+</ul>
+<h3>
+    <a id="Data_Accuracy" name="Data_Accuracy"></a>Data Accuracy
+</h3>
+<p>
+    In data migration, the resulting data may not always need to be completely accurate, as complete accuracy may be
+    uneconomic or impossible. You should define the level of accuracy that will be acceptable in your context. Here are
+    some examples:<br />
+</p>
+<ul>
+    <li>
+        For accounting applications, figures must be accurate but may be only at a summary level.
+    </li>
+    <li>
+        For inventory applications, stock records for expensive items must be exact, but low cost items can be by weight or
+        volume and not necessarily by unit count.
+    </li>
+    <li>
+        For some applications, such as large mailing list applications, it is rarely possible to transfer all source data
+        in fully validated output format nor to remove all duplicates. A small percentage of inaccuracy and duplication,
+        however, may not be a serious problem, as long as most of the data transfers successfully.<br />
+    </li>
+</ul>
+<h3>
+    <a id="Test_Auto_Data_Migration" name="Test_Auto_Data_Migration"></a>Testing of Automated Data Migration
+</h3>
+<p>
+    Special attention must be paid to automatically migrated data to ensure that there are no errors in the migration
+    software. Migrated data should be verified to ensure that an appropriate <a href="#Data_Accuracy">level of accuracy</a>
+    has been achieved.
+</p>
+<p>
+    When results fall outside the acceptable accuracy range, identify the causes and initiate corrective procedures, such
+    as:
+</p>
+<ul>
+    <li>
+        Make required corrections to source data and re-run the conversion.
+    </li>
+    <li>
+        Identify corrections to the automated data conversion software (typically by creating a Change Request), and re-run
+        the conversion once the software has been fixed.
+    </li>
+    <li>
+        Note the data errors for manual correction on the new system.<br />
+    </li>
+</ul>
+<h3>
+    <a id="Control_Procedures" name="Control_Procedures"></a>Control Procedures
+</h3>
+<p>
+    Control procedures must be defined to ensure that all input data is completely and accurately converted. These
+    procedures can consist of manually checking all or a sampling of data before and after conversion or manually checking
+    of reports created from the data. The degree of validation required depends on the criticality of the data being
+    converted.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

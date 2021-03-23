@@ -1,0 +1,733 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de tareas: Describir la arquitectura de tiempo de ejecuci&oacute;n</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="describe_runtime_architecture" name="uma.name">
+<meta content="Describir la arquitectura de tiempo de ejecuci&oacute;n" name="uma.presentationName">
+<meta content="_cSb4UEocEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="Arquitecto de software">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={002674F9-6511-4D15-8623-B761D8C48986}&path={002674F9-6511-4D15-8623-B761D8C48986},{F2160C54-F666-4736-9982-FC7F58F15FAD},_cSb4UEocEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_UNdM0CFtEdqrX8YVzvtlIg", "_cSb4UEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_UNdM0CFtEdqrX8YVzvtlIg", "_cSb4UEocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_UNdM0CFtEdqrX8YVzvtlIg", "_cSb4UEocEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_cSb4UEocEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Describir la arquitectura de tiempo de ejecuci&oacute;n</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta tarea define una arquitectura del proceso para el sistema en términos de clases activas e instancias, y la relación de éstas con los procesos y las hebras del sistema operativo.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<ul>
+    <li>
+        Analizar los requisitos de concurrencia,
+    </li>
+    <li>
+        Identificar los procesos y su ciclo vital&nbsp;
+    </li>
+    <li>
+        Identificar los mecanismos de comunicación entre procesos y&nbsp;asignar recursos de coordinación entre proceso
+    </li>
+    <li>
+        Distribuir elementos de modelo entre los procesos.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Principal:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_architect_8B6C5D41.html" guid="_COWYtRi2Edq_uI8xTPML6g">Arquitecto de software</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Adicional:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">Asistencia:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_7A057157.html" guid="_COWYthi2Edq_uI8xTPML6g">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_84A35167.html" guid="_COWYtxi2Edq_uI8xTPML6g">Modelo de dise&ntilde;o</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_capsule_9F2416F.html" guid="_COWYvBi2Edq_uI8xTPML6g">C&aacute;psula</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_supplementary_specification_4FFE3F60.html" guid="_COWYuRi2Edq_uI8xTPML6g">Especificaciones suplementarias</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_7A057157.html" guid="_COWYthi2Edq_uI8xTPML6g">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_84A35167.html" guid="_COWYtxi2Edq_uI8xTPML6g">Modelo de dise&ntilde;o</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    Los objetos activos (es decir, las instancias de las clases activas) se utilizan para representar hebras de ejecución
+    concurrentes en el sistema: de forma nocional, cada objeto activo tiene su propia hebra de control y, de forma
+    convencional, es la raíz de un marco de pilas de ejecución. La correlación de objetos activos con procesos o hebras
+    reales del sistema operativo varía según los requisitos de capacidad de respuesta, y estará influida por las
+    consideraciones de los gastos generales de conmutación del contexto. Por ejemplo, varios objetos activos, en
+    combinación con un planificador simple, pueden compartir una única hebra del sistema operativo y dar la apariencia de
+    ejecutarse concurrentemente. No obstante, si alguno de los objetos activos presenta un comportamiento de bloqueo, por
+    ejemplo, ejecuta una entrada-salida síncrona, los otros objetos activos del grupo no podrán responder a los sucesos que
+    se producen cuando la hebra del sistema operativo esté bloqueada.
+</p>
+<p>
+    Por otro lado, dar a cada objeto activo su propia hebra del sistema operativo aumentará la capacidad de respuesta,
+    siempre que los recursos del proceso no se vean afectados negativamente por los gastos generales de conmutación del
+    contexto adicionales.
+</p>
+<p class="reactive">
+    En los sistemas en tiempo real, las <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_capsule_FC4A34FD.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">Producto de
+    trabajo: Cápsula</a>s son la forma recomendada de concurrencia de modelado; como las clases activas, cada cápsula tiene
+    su propia hebra de control nocional, aunque las cápsulas tienen una semántica composicional y una encapsulación
+    adicional para que el modelado de los problemas complejos en tiempo real sea más tratable.
+</p>
+<p>
+    Esta tarea define una arquitectura del proceso para el sistema en términos de clases activas e instancias, y la
+    relación de éstas con los procesos y las hebras del sistema operativo.&nbsp;De la misma forma, en los sistemas en
+    tiempo real, la arquitectura del proceso se definirá en términos de cápsulas y una correlación asociada de éstas con
+    las hebras y los procesos del sistema operativo.
+</p>
+<p>
+    Al principio de la fase de elaboración, esta arquitectura será bastante preliminar, pero al final de la elaboración,
+    los procesos y las hebras estarán bien definidos. Los resultados de esta tarea se capturan en el modelo de diseño, en
+    concreto, en la vista de proceso (consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/process_view_E3DD0B09.html" guid="6.45284088262517E-306">Concepto: Vista de
+    proceso</a>).
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading">Analizar los requisitos de concurrencia </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Define Concurrency Requirements" name="Define Concurrency Requirements"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%">
+                    <b>Objetivo&nbsp;</b>
+                </td>
+                <td width="95%">
+                    Definir hasta que punto es necesaria la ejecución paralela del sistema. Esta definición ayudará a
+                    perfilar la arquitectura.&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+     Durante <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Tarea: Identificar elementos de diseño</a>, se consideraban requisitos de
+    concurrencia dirigidos principalmente por demandas de concurrencia naturales en el dominio del problema.&nbsp;
+</div>
+<p>
+    El resultado era un conjunto de clases activas que representaban hebras lógicas de control en el sistema.&nbsp; En los
+    sistemas en tiempo real, estas clases activas estaban representadas por <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_capsule_FC4A34FD.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">Producto de
+    trabajo: Cápsula</a>.
+</p>
+<p>
+    En este paso, consideramos otras fuentes de requisitos de concurrencia, aquellas impuestas por los requisitos no
+    funcionales del sistema.
+</p>
+<p>
+    Los requisitos de concurrencia están determinados por:
+</p>
+<ul>
+    <li>
+        <b>El grado con el que se debe distribuir el sistema.</b> Un sistema cuyo comportamiento se debe distribuir entre
+        varios procesadores o nodos virtualmente requiere una arquitectura de varios procesos. Un sistema que utiliza algún
+        tipo de sistema de gestión de bases de datos (DBMS) o Transaction Manager también debe tener en cuenta los procesos
+        que introducen esos subsistemas importantes.
+    </li>
+    <li>
+        <b>La intensidad de cálculo de los algoritmos de claves.</b> Para proporcionar unos tiempos de respuesta correctos,
+        es recomendable colocar las actividades con una gran carga computacional en una hebra o proceso propio, de forma
+        que el sistema pueda responder a las entradas de usuario mientras se realizan los cálculos, aunque sea con menos
+        recursos.
+    </li>
+    <li>
+        <b>El grado de ejecución paralela soportado por el entorno.</b> Si el sistema operativo o el entorno no dan soporte
+        a las hebras (procesos ligeros), no tiene mucho sentido considerar su efecto en la arquitectura del sistema.
+    </li>
+    <li>
+        <b>La necesidad de tolerancia a errores en el sistema</b>. Los procesadores de copia de seguridad requieren
+        procesos de copia de seguridad y controlan la necesidad de mantener sincronizados los procesos primarios y de copia
+        de seguridad.
+    </li>
+    <li>
+        <b>El patrón de llegada de sucesos en el sistema.</b> En los sistemas con sensores o dispositivos externos, los
+        patrones de llegada de los sucesos entrantes puede variar de un sensor a otro. Algunos sucesos pueden ser
+        periódicos (por ejemplo, producirse con un intervalo fijo, más o menos una pequeña cantidad) o aperiódicos (por
+        ejemplo, con un intervalo irregular). Las clases activas que representan dispositivos que generan patrones de
+        sucesos diferentes se asignarán normalmente a hebras de sistemas operativos diferentes, con algoritmos de
+        planificación diferentes, para garantizar que se cumplan las horas límite de los procesos o los sucesos (si este es
+        un requisito del sistema). Este razonamiento se aplica igualmente a las cápsulas, cuando se utilizan en el diseño
+        de sistemas en tiempo real.
+    </li>
+</ul>
+<p>
+    Al igual que ocurre con muchos problemas de arquitectura, estos requisitos pueden ser a veces mutuamente exclusivos. No
+    es extraño tener, al menos inicialmente, requisitos en conflicto. Establecer un rango de requisitos en términos de
+    importancia ayudará a resolver el conflicto.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar procesos y hebras </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="IdentifyProcessesAndThreads" name="IdentifyProcessesAndThreads"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo&nbsp;</b>
+            </td>
+            <td width="95%">
+                Definir los procesos y las hebras que existirán en el sistema.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+     El enfoque más sencillo es asignar todos los objetos activos a una hebra o proceso común y utilizar un planificador
+    simple de objetos activos, ya que minimiza los gastos generales de conmutación del contexto. No obstante, en algunos
+    casos, deberá distribuir los objetos activos entre una o más hebras o procesos. Este es el caso en la mayoría de
+    sistemas en tiempo real, en el que las cápsulas utilizadas para representar las hebras lógicas a menudo deben cumplir
+    unos requisitos de planificación estrictos.
+</div>
+<p>
+    Si un objeto activo que comparte una hebra del sistema operativo con otros objetos activos hace una llamada síncrona a
+    otro proceso o hebra, y esta llamada bloquea la hebra del sistema operativo compartido del objeto de la invocación, se
+    suspenderán automáticamente los demás objetos activos ubicados en el proceso de la invocación. Ahora bien, este no
+    tiene que ser el caso siempre: una llamada que es síncrona desde el punto de vista del objeto activo, se puede manejar
+    de forma asíncrona desde el punto de vista del planificador simple que controla el grupo de objetos activos; el
+    planificador suspende el objeto activo que hace la llamada (esperando la finalización de la llamada síncrona) y
+    planifica otros objetos activos para que se ejecuten.&nbsp;
+</p>
+<p>
+    Cuando finaliza la operación 'síncrona' original, el objeto activo de la invocación se puede reanudar. No obstante, en
+    algunos casos no se puede aplicar este enfoque, si no es factible diseñar el planificador para que intercepte todas las
+    llamadas síncronas antes de que se bloqueen. Tenga en cuenta que, generalmente, el planificador puede manejar de esta
+    forma una invocación síncrona entre objetos activos que utilizan el mismo proceso o hebra del sistema operativo; y lo
+    mismo ocurre con una llamada de procedimiento desde el punto de vista del objeto activo de la invocación.
+</p>
+<p>
+    Esto nos lleva a la conclusión que los objetos activos se deben agrupar en procesos o hebras según la necesidad de
+    ejecutarse concurrentemente con invocaciones síncronas que bloquean las hebras. Es decir, la única vez que un objeto
+    activo se debe empaquetar en el mismo proceso o hebra con otro objeto que utiliza invocaciones síncronas que bloquean
+    la hebra es si no necesita ejecutarse simultáneamente con ese objeto y puede tolerar que se anule su ejecución mientras
+    el otro objeto está bloqueado. En el caso extremo, cuando la capacidad de respuesta es crítica, esto puede llevar a la
+    necesidad de una hebra o proceso independiente para cada objeto activo.
+</p>
+<p class="reactive">
+    En los sistemas en tiempo real, las interfaces de cápsulas basadas en mensajes significan que es más sencillo concebir
+    un planificador que garantice, al menos para las comunicaciones de cápsula a cápsula, que las hebras del sistema
+    operativo de soporte no estén nunca bloqueadas, aunque una cápsula se comunique de forma síncrona con otra cápsula. No
+    obstante, una cápsula también puede emitir una solicitud directamente al sistema operativo, por ejemplo, para un tiempo
+    de espera síncrona excedido, que bloqueará la hebra. Se deben establecer convenios que eviten este comportamiento para
+    los servicios de nivel inferior invocados por las cápsulas, si las cápsulas deben compartir una hebra común (y utilizar
+    un planificador simple para simular la concurrencia).
+</p>
+<p>
+    Como norma general, en los casos anteriores, es mejor utilizar hebras ligeras en lugar de procesos completos, ya que
+    ello implica un gasto general menor. No obstante, podemos aprovechar algunas de las características especiales de los
+    procesos en algunos casos concretos. Como las hebras comparten el mismo espacio de direcciones, son inherentemente más
+    arriesgadas que los procesos. Si la posibilidad de sobrescrituras accidentales es un problema, se prefieren los
+    procesos. Asimismo, como los procesos representan unidades de recuperación independientes en la mayoría de sistemas
+    operativos, puede ser útil asignar objetos activos a los procesos según la necesidad de recuperarse independientemente
+    unos de otros. Esto es, todos los objetos que se deban recuperar como una unidad se deben empaquetar conjuntamente en
+    el mismo proceso.
+</p>
+<p>
+    Para cada flujo de control aparte que necesite el sistema, cree un proceso o una hebra (proceso ligero). La hebra se
+    debe utilizar en aquellos casos en los que se necesite un flujo de control anidado (por ejemplo, si dentro de un
+    proceso hay necesidad de flujo de control independiente a nivel de subtareas).
+</p>
+<p>
+    Por ejemplo, se necesitan hebras de control aparte para:
+</p>
+<ul>
+    <li>
+        Separar problemas entre distintas áreas de software
+    </li>
+    <li>
+        Aprovechar varias CPU en un nodo o varios nodos en un sistema distribuido
+    </li>
+    <li>
+        Aumentar la utilización de la CPU mediante la asignación de ciclos a otras actividades cuando se suspende una hebra
+        de control
+    </li>
+    <li>
+        Priorizar actividades
+    </li>
+    <li>
+        Dar soporte al compartimiento de carga entre varios procesos y procesadores
+    </li>
+    <li>
+        Aumentar la disponibilidad del sistema mediante procesos de copia de seguridad
+    </li>
+    <li>
+        Dar soporte a DBMS, Transaction Manager u otros subsistemas principales.
+    </li>
+</ul>
+<p class="exampleheading">
+    Ejemplo
+</p>
+<p class="example">
+    En el cajero automático, se deben manejar sucesos asíncronos provenientes de tres orígenes diferentes: el usuario del
+    sistema, los dispositivos de cajero automático (por ejemplo, en el caso de un atasco en el dispensador de dinero) o la
+    red de cajeros automáticos (en el caso de una directiva de cierre de la red). Para manejar estos sucesos asíncronos,
+    podemos definir tres hebras de ejecución independientes dentro del propio cajero automático, tal como se muestra a
+    continuación, utilizando clases activas en el cajero automático.
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/proc1.gif" alt="Ilustración de los procesos y las hebras de cajero automático" width="250"     height="362" />
+</p>
+<p class="picturetext">
+    Procesos y hebras dentro del cajero automático
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar ciclos vitales de los procesos </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="proceso" text="identificar ciclos vitales de los procesos" name="XE_process__identifying_process_lifecycles" id="XE_process__identifying_process_lifecycles" class="index"></a><a id="Identify Process Lifecycles" name="Identify Process Lifecycles"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo&nbsp;</b>
+            </td>
+            <td width="95%">
+                Identificar cuándo se crean y destruyen los procesos y las hebras.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Cada proceso o hebra de control se debe crear y destruir. En una arquitectura de un solo proceso, la creación del
+    proceso se realiza cuando se inicia la aplicación y la destrucción del proceso cuando finaliza la aplicación. En
+    arquitecturas de varios procesos, los nuevos procesos (o hebras) se despliegan o se bifurcan del proceso inicial creado
+    por el sistema operativo cuando se inicia la aplicación. Estos procesos se deben destruir también explícitamente.
+</p>
+<p>
+    La secuencia de sucesos que lleva a la creación y la destrucción de procesos se debe determinar y documentar, así como
+    el mecanismo de creación y supresión.
+</p>
+<p class="exampleheading">
+    Ejemplo
+</p>
+<p class="example">
+    En el cajero automático, se inicia un proceso principal que es responsable de la coordinación del comportamiento de
+    todo el sistema. A su vez, despliega un número de hebras de control subordinadas para supervisar las distintas partes
+    del sistema: los dispositivos del sistema y los sucesos que surgen del cliente y de la red de cajeros automáticos. La
+    creación de estos procesos y hebras se puede mostrar con <b>clases activas</b> en UML, y la creación de instancias de
+    estas clases activas se puede ilustrar en un diagrama de secuencia, tal como se muestra a continuación:
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/proc2.gif" alt="Ilustración de la creación de hebras y procesos de inicio del sistema" width="607"     height="350" />
+</p>
+<p class="picturetext">
+    Creación de procesos y hebras durante la inicialización del sistema
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar mecanismos de comunicaci&oacute;n entre procesos </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="proceso" text="identificar mecanismos de comunicación" name="XE_process__identifying_communication_mechanisms" id="XE_process__identifying_communication_mechanisms" class="index"></a><a id="Identify Inter-Process Communication Mechanisms" name="Identify Inter-Process Communication Mechanisms"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo&nbsp;</b>
+            </td>
+            <td width="95%">
+                Identificar los medios que utilizarán los procesos y las hebras para comunicarse.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Los mecanismos de Comunicación entre procesos (IPC) permiten enviar mensajes entre objetos que se ejecutan en procesos
+    separados.
+</p>
+<p>
+    Los mecanismos de comunicación entre procesos típicos son:
+</p>
+<ul>
+    <li>
+        <b>Memoria compartida</b>, con o sin semáforos para garantizar la sincronización.
+    </li>
+    <li>
+        <b>Encuentros</b>, especialmente cuando están soportados directamente por un lenguaje como Ada
+    </li>
+    <li>
+        <b>Semáforos</b>, utilizados para bloquear el acceso simultáneo a recursos compartidos
+    </li>
+    <li>
+        <b>Paso de mensajes</b>, de punto a punto y de punto a multipunto
+    </li>
+    <li>
+        <b>Buzones</b>
+    </li>
+    <li>
+        <b>RPC</b>: llamadas a procedimientos remotos
+    </li>
+    <li>
+        <b>Difusión de sucesos</b>, utilizando un "bus de software" ("arquitectura de bus de mensaje")
+    </li>
+</ul>
+<p>
+    La elección del mecanismo de IPC cambiará la forma en que está modelado el sistema; por ejemplo, en una "arquitectura
+    de bus de mensaje", no hay necesidad de asociaciones explícitas entre los objetos para enviar mensajes.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Asignar recursos de coordinaci&oacute;n entre procesos </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Allocate Inter-Process Coordination Resources" name="Allocate Inter-Process Coordination Resources"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>
+            </td>
+            <td width="95%">
+                Asignar recursos escasos<br />
+                 Anticipar y gestionar los posibles cuellos de botella de rendimiento&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Los mecanismos de comunicación entre procesos suelen ser escasos. Los semáforos, la memoria compartida y los buzones
+    tienen normalmente un tamaño o un número fijo, y no se pueden aumentar sin un coste significativo. RPC, los mensajes y
+    las difusiones de sucesos absorben cada vez más un ancho de banda de red escaso. Cuando el sistema excede un umbral de
+    recursos, normalmente experimenta una disminución no lineal del rendimiento; cuando se utiliza un recurso escaso, las
+    posteriores solicitudes del recurso tienen probablemente un efecto negativo.
+</p>
+<p>
+    Si los recursos escasos no están disponibles, se pueden seguir varias estrategias:
+</p>
+<ul>
+    <li>
+        reducir la necesidad del recurso escaso mediante la reducción del número de procesos
+    </li>
+    <li>
+        cambiar el uso de los recursos escasos (para uno o más procesos, elegir un recurso diferente, menos escaso, para el
+        mecanismo de IPC)
+    </li>
+    <li>
+        aumentar la cantidad del recurso escaso (por ejemplo, aumentando el número de semáforos). Esto se puede hacer para
+        cambios relativamente pequeños, pero normalmente tiene efectos secundarios o límites fijos.
+    </li>
+    <li>
+        compartir el recurso compartido (por ejemplo, asignar el recurso sólo cuando sea necesario y dejarlo libre cuando
+        haya terminado). Esta estrategia es muy cara y puede anticipar la crisis de recursos.
+    </li>
+</ul>
+<p>
+    Independientemente de la estrategia elegida, el sistema debe disminuir el rendimiento paulatinamente (sin llegar a
+    bloquearse) y debe proporcionar la información necesaria a un administrador del sistema para que pueda resolver el
+    problema (si es posible) en el campo una vez desplegado el sistema.
+</p>
+<p>
+    Si el sistema requiere una configuración especial del entorno de tiempo de ejecución para poder aumentar la
+    disponibilidad de un recurso crítico (a menudo controlado por la reconfiguración del kernel del sistema operativo), la
+    instalación del sistema debe hacerlo automáticamente, o solicitar a un administrador del sistema que lo haga antes de
+    que el sistema esté operativo. Por ejemplo, puede que tenga que reiniciar el sistema para que se apliquen los cambios.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Correlacionar los procesos con el entorno de implementaci&oacute;n </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="proceso" text="correlacionar procesos con el entorno de implementación" name="XE_process__map_process_onto_implementation_environment" id="XE_process__map_process_onto_implementation_environment" class="index"></a><a id="Map Processes onto the Implementation Environment" name="Map Processes onto the Implementation Environment"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>&nbsp;
+            </td>
+            <td width="95%">
+                Correlacionar los "flujos de control" con los conceptos soportados por el entorno de implementación.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Los procesos conceptuales se deben correlacionar con constructos específicos en el entorno operativo. En muchos
+    entornos, hay opciones de tipos de proceso, como mínimo, de procesos y hebras. Las opciones se basarán en el grado de
+    emparejamiento (los procesos son autónomos, mientras que las hebras se ejecutan en el contexto de un proceso inclusivo)
+    y en los requisitos de rendimiento del sistema (la comunicación entre procesos entre varias hebras normalmente es más
+    rápida y eficaz que entre varios procesos).
+</p>
+<p>
+    En muchos sistemas, puede haber un número máximo de hebras por proceso o de procesos por nodo. Estos límites puede que
+    no sean absolutos, sino límites prácticos impuestos por la disponibilidad de los recursos escasos. Se deben tener en
+    cuenta las hebras y los procesos que se están ejecutando en un nodo de destino junto con las hebras y los procesos
+    propuestos en la arquitectura del proceso. Los resultados del paso anterior, Asignar <a href="#Allocate Inter-Process Coordination Resources">Recursos de coordinación entre procesos</a>, se deben tener
+    en cuenta cuando se realice la correlación para asegurarse de que no se está creando un nuevo problema de rendimiento.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Correlacionar elementos de dise&ntilde;o con hebras de control </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="proceso" text="correlacionar elementos de diseño con" name="XE_process__map_design_elements_to" id="XE_process__map_design_elements_to" class="index"></a><a id="Map Design Elements To Threads of Control" name="Map Design Elements To Threads of Control"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo</b>&nbsp;
+            </td>
+            <td width="95%">
+                Determinar en qué hebras de control se deben ejecutar las clases y los subsistemas.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Las instancias de una determinada clase o subsistema se deben ejecutar como mínimo en <b>una</b> hebra de control que
+    proporcione el entorno de ejecución de la clase o el subsistema; de hecho, se pueden ejecutar en varios procesos
+    diferentes.
+</p>
+<p>
+    Utilizando dos estrategias diferentes simultáneamente, se determina la cantidad de concurrencia "correcta" y se define
+    el conjunto de procesos "correcto":
+</p>
+<h4>
+    De dentro a fuera
+</h4>
+<ol>
+    <li>
+        A partir del modelo de diseño, agrupe las clases y los subsistemas en conjuntos de elementos cooperativos que (a)
+        cooperen estrechamente entre ellos y (b) deban ejecutarse en la misma hebra de control. Considere el efecto de
+        introducir la comunicación entre procesos en medio de una secuencia de mensajes antes de separar los elementos en
+        hebras de control independientes.
+    </li>
+    <li>
+        Por otra parte, separe las clases y los subsistemas que no interactúen en absoluto, y colóquelos en hebras de
+        control independientes.
+    </li>
+    <li>
+        Esta agrupación continua hasta que el número de procesos se haya reducido al número mínimo que todavía permita la
+        distribución y el uso de los recursos físicos.
+    </li>
+</ol>
+<h4>
+    De fuera a dentro
+</h4>
+<ol>
+    <li>
+        Identifique los estímulos externos a los que el sistema deba responder. Defina una hebra de control aparte para
+        manejar cada estímulo y una hebra de control de servidor aparte para proporcionar cada servicio.
+    </li>
+    <li>
+        Tenga en cuenta las restricciones de serialización y la integridad de los datos para reducir este conjunto inicial
+        de hebras de control a un número que pueda soportar el entorno de ejecución.
+    </li>
+</ol>
+<p>
+    Este no es un proceso lineal y determinista que dé como resultado una vista óptima del proceso; requiere algunas
+    iteraciones para alcanzar un compromiso aceptable.
+</p>
+<p class="exampleheading">
+    Ejemplo
+</p>
+<p class="example">
+    En el siguiente diagrama se muestra cómo se distribuyen las clases dentro del cajero automático entre los procesos y
+    las hebras del sistema.
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/proc3.gif"     alt="Ilustración de la distribución de clases de cajero automático entre procesos y hebras" width="574" height="403" />
+</p>
+<p class="picturetext">
+    Correlación de clases con procesos para el cajero automático
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Varias apariciones" abbr="Varias apariciones">Varias apariciones</th><td align="left" class="sectionTableCell" headers="property_Varias apariciones"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Condicionado por sucesos" abbr="Condicionado por sucesos">Condicionado por sucesos</th><td align="left" class="sectionTableCell" headers="property_Condicionado por sucesos"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Continuo" abbr="Continuo">Continuo</th><td align="left" class="sectionTableCell" headers="property_Continuo"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Se puede repetir" abbr="Se puede repetir">Se puede repetir</th><td align="left" class="sectionTableCell" headers="property_Se puede repetir"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Conceptos</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/concurrency_EE2E011A.html" guid="3.5787175388799096E-305">Concurrencia</a>
+</li>
+<li>
+<a href="./../../modernize.legacy_evol/guidances/concepts/service-oriented_architecture_92BDF995.html" guid="1.0245783036914358E-305">Introduction to Service-Oriented Architecture</a>
+</li>
+<li>
+<a href="./../../modernize.legacy_evol/guidances/concepts/enterprise_application_integration_3CEC2399.html" guid="3.047769946860121E-305">Enterprise Application Integration</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/concurrency_3E796647.html" guid="1.5676516174458592E-304">Concurrencia</a>
+</li>
+<li>
+<a href="./../../modernize.legacy_evol/guidances/guidelines/integrating_legacy_applications_into_modern_584F495E.html" guid="2.4617992790518683E-308">Integrating Legacy Applications Into Modern Architectures</a>
+</li>
+<li>
+<a href="./../../tech.j2ee/guidances/guidelines/describing_the_run-time_architecture_for_j2ee_applications_58C0C0A2.html" guid="1.7390519818410197E-305">Descripción de la arquitectura de tiempo de ejecución de aplicaciones J2EE</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/document_process_view_6026C17A.html" guid="{059DD277-2FC8-4977-836A-2EDAF219655F}">Documentación de la vista de proceso utilizando Rational Rose</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/capturing_a_concurrency_architecture_FC0B08DB.html" guid="{693A3653-B92C-4342-B427-2BEA239BA15F}">Captura de una arquitectura de concurrencia utilizando Rational Rose RealTime</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/describing_run_time_architecture_FCB465D9.html" guid="{C58782ED-003F-4E87-9A50-D01DDBE4A5AF}">Descripción de la arquitectura de tiempo de ejecución utilizando Rational XDE Developer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

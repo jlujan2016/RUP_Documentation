@@ -1,0 +1,668 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Desarrollo de servicios web</title>
+<meta content="Guideline" name="uma.type">
+<meta content="developing_web_services" name="uma.name">
+<meta content="Desarrollo de servicios web" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "3.866970394121584E-303"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.866970394121584E-303"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Desarrollo de servicios web</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta pauta describe cómo descubrir, crear, probar, desplegar y publicar servicios web utilizando el entorno de moldeado RAD 6.0. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_component_AE366827.html" guid="{3293F4F7-EFCD-4476-BFF1-81AC3812B512}">Implementar elementos de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="introduction" name="introduction"></a>Introducción
+</h3>
+<p>
+    RAD 6.0 proporciona un extenso conjunto de herramientas para dar soporte al descubrimiento, creación, comprobación,
+    desarrollo y publicación de servicios Web. Éstos permiten el desarrollo de servicios web basados en los estándares más
+    actuales y dan soporte al despliegue hacia varios entornos en tiempo de ejecución. Las herramientas también
+    proporcionan asistentes para dar soporte y facilitar los distintos métodos de desarrollo. Este documento describe los
+    distintos métodos proporcionados por RAD 6.0 para desarrollar un servicio web y discute las distintas consideraciones
+    en cuanto a desarrollo en relación con las opciones de despliegue de servicios web y nivel de interoperatividad.
+</p>
+<h3>
+    <a id="introduction" name="introduction"></a>Métodos de desarrollo
+</h3>
+<p>
+    Los asistentes de servicios web de RAD 6.0 le permiten crear un servicio web utilizando métodos que van de lo general a
+    lo detallado o viceversa. El método top-down, que va de lo general a lo detallado, le permite empezar con un documento
+    de Web Services Description Language (WSDL) y generar un bean de Java o un Enterprise JavaBean (EJB) de esqueleto que
+    pueden utilizarse para crear un servicio web. El método bottom-up, que va de lo detallado a lo general, le permite
+    crear un servicio web a partir de un bean de Java que ya exista, un EJB, un archivo DADX (Document Access Definition
+    Extender), un URL o un archivo ISD (Web service Deployment Descriptor). La Figura 1 describe la creación de servicios
+    web proporcionada por RAD 6.0.
+</p>
+<p align="center">
+    <img height="577" alt="Métodos para crear servicios web RAD 6.0 " src="./../../../tech.rad/guidances/guidelines/resources/webservcre.gif" width="634" />
+</p>
+<p align="center">
+    <strong>Figura 1 - Métodos de creación de servicios web RAD 6.0</strong>
+</p>
+<p>
+    Durante la creación de un servicio Web, el asistente le permite opcionalmente:
+</p>
+<ul>
+    <li>
+        Comprobar el servicio web tan pronto como sea creado utilizando la herramienta Explorador de servicios web.
+    </li>
+    <li>
+        Generar un proxy de cliente que puede utilizar en aplicaciones de cliente para acceder a l servicio web.
+    </li>
+    <li>
+        Comprobar un proxy de cliente utilizando la herramienta UTC (Cliente de prueba universal) o una aplicación JSP de
+        ejemplo que genera la herramienta.
+    </li>
+    <li>
+        Publicar el servicio web en una registro de UDDI utilizando la herramienta Explorador servicios web.
+    </li>
+</ul>
+<p>
+    Los servicios web desarrollados en RAD 6.0 tienen que crearse en un proyecto web o EJB y contienen productos que
+    cumplen con los estándares siguientes:
+</p>
+<ul>
+    <li>
+        Web Services Definition Language (WSDL) versión 1.1
+    </li>
+    <li>
+        Simple Object Access Protocol (SOAP) versión 1.1 (incluidas las implementaciones Apache SOAP 2.2 y 2.3)
+    </li>
+    <li>
+        Universal Description, Discovery and Integration (UDDI) versión 2.0
+    </li>
+    <li>
+        Web Services Inspection Language (WSIL) versión 1.0
+    </li>
+    <li>
+        Java API for XML-based Remote Procedure Call (JAX-RPC), también conocido como JSR-101
+    </li>
+    <li>
+        JSR-109 y JSR-921(Implementación de servicios web empresariales)
+    </li>
+    <li>
+        Perfil básico de interoperatividad de servicios web (WS-I) 1.0 (conformidad opcional)
+    </li>
+    <li>
+        WS-Security
+    </li>
+</ul>
+<p>
+    Para obtener más información sobre estos temas consulte Concepts: Web Services for J2EE.
+</p>
+<h4>
+    <a id="introduction" name="introduction"></a>Desarrollo Top-down
+</h4>
+<p>
+    El desarrollo Top-down (de lo general a lo abstracto) le permite tomar la definición abstracta de un servicio web
+    contenida en un documento WSDL y generar una implementación concreta para el mismo. (Nota: RAD 6.0 también proporciona
+    un asistente para crear un documento WSDL). Se da soporte a las dos métodos siguientes:
+</p>
+<ul>
+    <li>
+        Creación de un bean de Java de esqueleto a partir de un documento WSDL 
+        <p>
+            Puede crear un bean de Java de esqueleto a partir de un documento WSDL y exponerlo como servicio web. Los
+            métodos de bean de Java generados corresponden a las operaciones descritas por el documento WSDL y contienen
+            una implementación trivial que puede sustituir. Las consideraciones siguientes se aplican a este método y sus
+            productos de trabajo generados:
+        </p>
+        <ul>
+            <li>
+                Puede especificar el URI de un documento WSDL, o, como alternativa, el de un documento WSIL o HTML que haga
+                referencia a un archivo WSDL como origen del servicio web.
+            </li>
+            <li>
+                El archivo WSDL debe contener un elemento de servicio. También puede generar opcionalmente un documento de
+                referencia WSDL estandarizada (WSIL) para el servicio web resultante.
+            </li>
+            <li>
+                El servicio web generado debe crearse en un proyecto Web.
+            </li>
+        </ul>
+    </li>
+</ul>
+<ul>
+    <li>
+        Creación de un EJB de esqueleto a partir de un documento WSDL 
+        <p>
+            De forma similar, este método le permite crear un EJB de sesión sin estado de esqueleto a partir de un
+            documento WSDL y exponerlo como servicio web. Los métodos en el EJB corresponden a las operaciones descritas en
+            el documento WSDL y contienen una implementación trivial que puede sustituir. Las consideraciones siguientes se
+            aplican a este método y a sus productos de trabajo generados:
+        </p>
+        <ul>
+            <li>
+                Este método sólo se puede utilizar si selecciona IBM WebSphere v6 como entorno de tiempo de ejecución del
+                servicio web (consulte Dependencias de despliegue)
+            </li>
+            <li>
+                Puede especificar el URI de un documento WSDL, o, como alternativa, el de un documento WSIL o HTML que haga
+                referencia a un archivo WSDL como origen del servicio web.
+            </li>
+            <li>
+                El archivo WSDL debe contener un elemento de servicio. También puede generar opcionalmente un documento de
+                referencia WSDL estandarizada (WSIL) para el servicio web resultante.
+            </li>
+            <li>
+                El servicio web generado debe crearse en un proyecto EJB. Además, se crea un proyecto de direccionador para
+                habilitar el servicio web con el fin de recibir solicitudes sobre el transporte HTTP (Nota: El transporte
+                JMS no está soportado en este método). El proyecto de direccionador puede ser un proyecto web o EJB y no
+                puede ser el mismo proyecto que el que contiene el servicio web pero debe estar en el mismo archivo EAR.
+            </li>
+        </ul>
+    </li>
+</ul>
+<h4>
+    <a id="introduction" name="introduction"></a>Desarrollo Bottom-up
+</h4>
+<p>
+    El propósito del desarrollo bottom-up (de lo detallado a lo general) es exponer un componente o recurso de la
+    aplicación existente como servicio web. A continuación se explican los diferentes métodos.
+</p>
+<ul>
+    <li>
+        Creación de un servicio web a partir de un bean de Java 
+        <p>
+            Este método le permite seleccionar un bean de Java existente y expone sus métodos como un servicio web. Los
+            productos de trabajo resultantes incluyen:
+        </p>
+        <ul>
+            <li>
+                Archivo WSDL: Este archivo describe el servicio web y tiene una extensión de nombre de archivo .wsdl. Puede
+                escoger entre tres estilos de WSDL (Documento/Literal, RPC/Literal y RPC/Codificado). Para ver el impacto
+                en la interoperatividad de cada opción, consulte Conformidad con el perfil básico de WS-I.
+            </li>
+            <li>
+                Service Endpoint Interface (SEI): Esta interfaz Java define los métodos del servicio web. Su nombre de
+                archivo tiene un sufijo _SEI.
+            </li>
+            <li>
+                Descriptor de despliegue de servicios web: el archivo webservices.xml especifica los detalles de
+                implementación y despliegue del servicio web.
+            </li>
+            <li>
+                Archivos de correlación JAX-RPC: Estos archivos definen cómo se correlacionan los elementos Java de los
+                servicios web con el WSDL.
+            </li>
+        </ul>
+    </li>
+    <li>
+        Creación de un servicio web a partir de un EJB 
+        <p>
+            Puede exponer los métodos de un bean de sesión sin estado como servicio web. Los productos de trabajo generados
+            son similares a los generados para un bean de Java e incluyen un archivo WSDL, una SEI, un descriptor de
+            desarrollo de servicios web y archivos de correlación JAX-RPC. Las consideraciones siguientes se aplican a este
+            método y a sus productos de trabajo generados:
+        </p>
+        <ul>
+            <li>
+                El servicio web generado debe crearse en un proyecto EJB.
+            </li>
+            <li>
+                Se debe crear un proyecto de direccionador para habilitar el servicio web y poder recibir solicitudes de
+                clientes. Si utiliza SOAP sobre HTTP como método de transporte, cree el proyecto de direccionador como
+                proyecto web. De no ser así, si el cliente utiliza SOAP sobre JMS, créelo como proyecto EJB (el
+                direccionador JMS está implementado como un Bean de mensaje en este caso). Los proyectos de direccionador y
+                servicios web no pueden ser los mismos pero deben contenerse en el mismo archivo EAR.
+            </li>
+            <li>
+                Si utiliza el transporte SOAP sobre JMS, debe configurar un proveedor JMS en su servidor. Tampoco podrá
+                utilizar el Explorador de servicios web para comprobar su servicio web.
+            </li>
+        </ul>
+    </li>
+</ul>
+<ul>
+    <li>
+        Creación de un servicio web a partir de un archivo DADX 
+        <p>
+            Este método le permite recortar datos de DB2 a los que se accede a través de DB2 XML Extender o sentencias SQL
+            regulares dentro de un servicio web. Los datos a los que se accede a través de DB2 XML Extender consisten en
+            documentos XML correlacionados a una base de datos DB2 mediante un documento Document Access Definition (DAD).
+            El punto de partida del método es un archivo DADX que especifica cómo crear un servicio web utilizando el
+            conjunto de operaciones definidas por sentencias SQL regulares o en un archivo DAD. Los productos de trabajo
+            generados incluyen un archivo WSDL, una SEI, un descriptor de desarrollo de servicios web y archivos de
+            correlación JAX-RPC. Las consideraciones siguientes se aplican a este método y a sus productos de trabajo
+            generados:
+        </p>
+        <ul>
+            <li>
+                Este método sólo se puede utilizar si selecciona IBM SOAP como entorno en tiempo de ejecución del servicio
+                web (consulte Dependencias de despliegue).
+            </li>
+            <li>
+                Opcionalmente, puede generar un archivo DADX a partir de una combinación de una o varias sentencias SQL,
+                procedimientos almacenados o archivos DAD .
+            </li>
+            <li>
+                El archivo DADX ha de estar contenido en un grupo DADX que defina la conexión JDBC y otras informaciones
+                compartidas entre los archivos DADX del grupo.
+            </li>
+            <li>
+                El servicio web generado debe crearse en un proyecto Web.
+            </li>
+        </ul>
+    </li>
+</ul>
+<ul>
+    <li>
+        Creación de un servicio web a partir de un URL 
+        <p>
+            A partir de su URL, puede crear un servicio web que acceda directamente a un servlet que se ejecute en un
+            servidor remoto. El asistente le permite describir la interfaz de servlet en términos de puertos, operaciones y
+            parámetros y genera un documento WSDL que describe el servicio web resultante. Las consideraciones siguientes
+            se aplican a este método y a sus productos de trabajo generados:
+        </p>
+        <ul>
+            <li>
+                Este método sólo se puede utilizar si selecciona IBM SOAP como entorno en tiempo de ejecución del servicio
+                web (consulte Dependencias de despliegue).
+            </li>
+            <li>
+                Normalmente, el puerto corresponde a la parte del nombre de dominio/host del URL, la operación corresponde
+                a la parte del contexto de servlet y URI, y los parámetros corresponden a los parámetros de entrada del
+                servlet.
+            </li>
+            <li>
+                El servicio web generado debe crearse en un proyecto Web.
+            </li>
+            <li>
+                No existe un servicio web para desplegar porque ya ha sido implementado por el URL activo.
+            </li>
+        </ul>
+    </li>
+    <li>
+        Creación de un servicio web a partir de un archivo de descriptor de despliegue (ISD) 
+        <p>
+            Cuando se despliega un servicio web, sus atributos de configuración y tiempo de ejecución se definen en un
+            archivo de descriptor de despliegue ISD. Este archivo proporciona información sobre el servicio que debería
+            ponerse a disposición de clientes mediante el entorno de ejecución SOAP, por ejemplo, URI, métodos, clases de
+            implementación (JavaBeans y EJB), serializadores y deserializadores. Puede crear un servicio web a partir de un
+            archivo ISD utilizando esta información disponible. Esto le permite recortar implementaciones de servicios web
+            existentes y volverlas a desplegar como nuevos servicios web sin tener que volver a especificar su información
+            de configuración y correlación. Las consideraciones siguientes se aplican a este método y a sus productos de
+            trabajo generados:
+        </p>
+        <ul>
+            <li>
+                Este método sólo se puede utilizar si selecciona IBM SOAP como entorno en tiempo de ejecución del servicio
+                web (consulte Dependencias de despliegue).
+            </li>
+            <li>
+                El servicio web generado debe crearse en un proyecto Web.<br />
+            </li>
+        </ul>
+    </li>
+</ul>
+<h3>
+    <a id="introduction" name="introduction"></a>Directrices de desarrollo
+</h3>
+<p>
+    Las secciones siguientes tratan sobre consideraciones importantes relacionadas con el desarrollo de un servicio web en
+    RAD 6.0. Describen las opciones de desarrollo disponibles basadas en el despliegue y los requisitos de conformidad con
+    WS-I de su servicio web.
+</p>
+<h4>
+    <a id="introduction" name="introduction"></a>Dependencias de despliegue
+</h4>
+<p>
+    Los métodos (top-down y bottom-up) disponibles para crear un servicio web dependen del entorno de tiempo de ejecución
+    que elija para desplegar. RAD 6.0 da soporte a los entornos de tiempo de ejecución de servicios web siguientes:
+</p>
+<ul>
+    <li>
+        IBM WebSphere v6 
+        <p>
+            Este es el entorno de tiempo de ejecución de los servicios web predeterminados en RAD 6.0 y el recomendado para
+            uso productivo. Soporta un protocolo de transporte JMS y HTTP, permitiendo que los servidores y clientes de
+            servicios web se comuniquen vía conexiones HTTP o vía colas y temas JMS. Tenga en cuenta que un servicio web
+            puede ser implementado como EJB si es accesible a través del transporte JMS.
+        </p>
+    </li>
+    <li>
+        IBM SOAP 
+        <p>
+            El entorno de tiempo de ejecución IBM SOAP da soporte a los protocolos Apache SOAP versión 2.2 y 2.3 (consulte
+            Recursos) y era el único entorno de tiempo de ejecución de servicios web soportado en WebSphere Studio versión
+            5.0 y anterior. Sólo debe utilizarse por motivos de compatibilidad con versiones anteriores.
+        </p>
+    </li>
+    <li>
+        Apache Axis 1.0 
+        <p>
+            Este entorno de tiempo de ejecución da soporte a la implementación SOAP de Apache Axis versión 1.0 (consulte
+            Recursos). No está recomendado para la producción debido a problemas de interoperatividad entre servicios web
+            potenciales (consulte la sección Problemas de uso del entorno de tiempo de ejecución Apache Axis 1.0 en los
+            Contenidos de ayuda de la herramienta).
+        </p>
+    </li>
+</ul>
+<p>
+    Se recomienda que elija el entorno de tiempo de ejecución IBM WebSphere v5 a no ser que su destino de despliegue
+    requiera específicamente que utilice un SOAP Apache o una implementación Apache Axis (de ser así, tenga cuidado con las
+    limitaciones asociadas descritas en la Limitaciones de la herramienta del contenido de ayuda de los servicios web). La
+    Tabla 1 resume las propuestas de creación de servicios web soportadas por RAD 6.0 para cada entorno de tiempo de
+    ejecución.<br />
+</p>
+<table cellspacing="0" cellpadding="5" width="500" align="center" border="1">
+    <tbody>
+        <tr bgcolor="#CCCCCC">
+            <th>
+                Enfoque
+            </th>
+            <th>
+                IBM WebSphere v6
+            </th>
+            <th>
+                IBM SOAP
+            </th>
+            <th>
+                Apache Axis 1.0
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Creación de un JavaBean de esqueleto a partir de un documento WSDL
+            </td>
+            <td>
+                <div align="center">
+                    Sí
+                </div>
+            </td>
+            <td>
+                <div align="center">
+                    Sí
+                </div>
+            </td>
+            <td>
+                <div align="center">
+                    Sí
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Creación de un EJB de esqueleto a partir de un documento WSDL
+            </td>
+            <td>
+                <div align="center">
+                    Sí
+                </div>
+            </td>
+            <td>
+                <div align="center">
+                    No
+                </div>
+            </td>
+            <td>
+                <div align="center">
+                    No
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Creación de un servicio web partir de un JavaBean
+            </td>
+            <td>
+                <div align="center">
+                    Sí
+                </div>
+            </td>
+            <td>
+                <div align="center">
+                    Sí
+                </div>
+            </td>
+            <td>
+                <div align="center">
+                    Sí
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Creación de un servicio web a partir de un EJB
+            </td>
+            <td>
+                <div align="center">
+                    Sí
+                </div>
+            </td>
+            <td>
+                <div align="center">
+                    Sí
+                </div>
+            </td>
+            <td>
+                <div align="center">
+                    No
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Creación de un servicio web a partir de un DADX
+            </td>
+            <td>
+                <div align="center">
+                    No
+                </div>
+            </td>
+            <td>
+                <div align="center">
+                    Sí
+                </div>
+            </td>
+            <td>
+                <div align="center">
+                    No
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Creación de un servicio web a partir de un URL
+            </td>
+            <td>
+                <div align="center">
+                    No
+                </div>
+            </td>
+            <td>
+                <div align="center">
+                    Sí
+                </div>
+            </td>
+            <td>
+                <div align="center">
+                    No
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Creación de un servicio web a partir de un descriptor de despliegue de servicios web (ISD)
+            </td>
+            <td>
+                <div align="center">
+                    No
+                </div>
+            </td>
+            <td>
+                <div align="center">
+                    Sí
+                </div>
+            </td>
+            <td>
+                <div align="center">
+                    No
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p align="center">
+    <strong>Tabla 1 - Propuesta de creación de servicios web compatible con entorno de tiempo de ejecución</strong>
+</p>
+<h4>
+    <a id="introduction" name="introduction"></a>Conformidad con el perfil básico de WS-I
+</h4>
+<p>
+    El perfil básico de interoperatividad de servicios web (WS-I) es un conjunto de requisitos publicados por la
+    organización de WS-I para promover la interoperatividad de servicios web entre plataformas, sistemas operativos y
+    lenguajes de programación. Define los requisitos de tráfico WSDL y de protocolo (SOAP/HTTP) que debe satisfacer un
+    servicio web para estar en conformidad con WS-I. RAD 6.0 incluye herramientas de validación que pueden utilizarse para
+    verificar la conformidad de los servicios web con los requisitos del perfil básico de WS-I 1.0. Puede establecer un
+    nivel de conformidad con WS-I (Solicitar, Sugerir o Ignorar (predeterminado)) para el espacio de trabajo o proyecto
+    antes de desarrollar un servicio web o ejecutar las herramientas de validación tras su desarrollo.
+</p>
+<p>
+    Es recomendable desarrollar servicios web en conformidad con el perfil básico de WS-I. Debe seguir las directrices
+    expuestas a continuación para asegurase de que lo están:
+</p>
+<ul>
+    <li>
+        Utilice Documento/literal o RPC/literal para el estilo WSDL (RPC/codificado no es conforme con WS-I)
+    </li>
+    <li>
+        Utilice SOAP sobre HTTP como protocolos de transporte y mensajería (SOAP sobre JMS no es conforme con WS-I)
+    </li>
+    <li>
+        No utilice ninguna opción de seguridad para el servicio web (la firma digital XML y el cifrado XML no son conformes
+        con WS-I)
+    </li>
+</ul>
+<h4>
+    <a id="introduction" name="introduction"></a>Consideraciones sobre el proxy cliente
+</h4>
+<ul>
+    <li>
+        Existen 2 tipos de proxies cliente que puede generar opcionalmente al crear un servicio web:
+    </li>
+</ul>
+<div style="MARGIN-LEFT: 2em">
+    <ul>
+        <li>
+            Proxy de bean Java
+        </li>
+    </ul>
+    <p>
+        El bean de Java del proxy de cliente le permite invocar métodos de servicio web mediante llamadas a procedimientos
+        remotos. Sólo se puede crear en un proyecto web de cliente si se selecciona IBM SOAP o Apache Axis 1.0 para el
+        entorno de tiempo de ejecución cliente. De no ser así, para un entorno de tiempo de ejecución IBM WebSphere v6, se
+        puede crear en un proyecto Web, Java, EJB o de cliente de aplicación.
+    </p>
+    <ul>
+        <li>
+            Funciones de servicios web definidas por el usuario
+        </li>
+    </ul>
+</div>
+<blockquote>
+    <p>
+        Esta opción le permite crear una función DB2 definida por el usuario (UDF) para cada método del servicio web que
+        desee invocar. Requiere que el paquete de UDF del consumidor de servicios web DB2 y el DB2 XML estén instalados en
+        la base de datos. La UDF se crea y se añade a la definición de base de datos con todos los productos relacionados
+        de trabajo del cliente almacenados en un proyecto web.
+    </p>
+</blockquote>
+<ul>
+    <li>
+        Seleccione un EAR diferente para el servicio web y el cliente del servicio web para reducir las posibilidades de
+        encontrar errores de tiempo de ejecución. Recuerde que se espera que un cliente sea una aplicación diferente que el
+        servicio web, y los servicios web no están concebidos para la comunicación entre aplicaciones.
+    </li>
+</ul>
+<h3>
+    <a id="introduction" name="introduction"></a>Recursos
+</h3>
+<p>
+    Para obtener información adicional sobre los siguientes temas, consulte el enlace correspondiente.
+</p>
+<ul>
+    <li>
+        Apache SOAP: <a href="http://xml.apache.org/soap" target="_blank">http://xml.apache.org/soap</a>
+    </li>
+    <li>
+        Apache Axis: <a href="http://xml.apache.org/axis" target="_blank">http://xml.apache.org/axis</a>
+    </li>
+    <li>
+        Interoperatividad de servicios web (WS-I): <a href="http://www.ws-i.org/" target="_blank">http://www.ws-i.org/</a><br />
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

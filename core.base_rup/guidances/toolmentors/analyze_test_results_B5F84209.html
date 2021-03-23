@@ -1,0 +1,612 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: An&aacute;lisis de los resultados de la prueba utilizando Rational Test RealTime</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="analyze_test_results" name="uma.name">
+<meta content="An&aacute;lisis de los resultados de la prueba utilizando Rational Test RealTime" name="uma.presentationName">
+<meta content="Tool:rup_test_realtime:Rational Test RealTime" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Test RealTime" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}", "{449954B7-E120-43B5-B9F3-B9673E4EF590}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}", "{449954B7-E120-43B5-B9F3-B9673E4EF590}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}", "{449954B7-E120-43B5-B9F3-B9673E4EF590}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{449954B7-E120-43B5-B9F3-B9673E4EF590}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: An&aacute;lisis de los resultados de la prueba utilizando Rational Test RealTime</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo analizar los resultados de la ejecución de la prueba de Rational Test RealTime.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_test_realtime_861C5353.html" guid="{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}">Rational Test RealTime</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/analyze_test_failure_7E42EE55.html" guid="{EA0E3D2C-F87E-49CA-8832-F791886D5741}">Analizar las anomalías en la prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    En esta guía de la herramienta se describe cómo analizar los resultados de la ejecución de la prueba de Rational Test
+    RealTime. No se puede comprender la importancia de realizar pruebas pronto y con frecuencia si los resultados de la
+    actividad de la prueba no se pueden interpretar de forma rápida y fácil y, posteriormente, actuar.
+</p>
+<p>
+    Gracias a una tecnología de inserción de código fuente, así como al análisis de código fuente, Rational Test RealTime
+    puede centrar la funcionalidad de prueba de componentes y análisis de tiempo de ejecución directamente a nivel del
+    código fuente. Se han añadido varias características que garantizan que las anomalías se aíslan de forma rápida y que
+    se puede trabajar de forma fácil y eficaz en el código fuente asociado:
+</p>
+<ul>
+    <li>
+        el código fuente se puede abrir y modificar en el editor de texto de Test RealTime.
+    </li>
+    <li>
+        los programas de control de versión (por ejemplo, Rational ClearCase) se pueden manipular para incorporar/extraer
+        código versionado.
+    </li>
+    <li>
+        se puede acceder directamente a los programas de gestión de cambios (por ejemplo, ClearQuest) para solicitudes de
+        mejora y envíos de defectos.
+    </li>
+</ul>
+<p>
+    Estas características se utilizan junto con los informes de análisis que crean las herramientas de prueba. Cada una de
+    las funciones clave de Test RealTime, como son prueba de componentes, prueba del sistema, perfilado de la memoria,
+    perfilado del rendimiento, análisis de la cobertura de código, rastreo del tiempo de ejecución y generación de métrica
+    estática, tienen un informe dedicado. Dichos informes contienen información extraída de varios archivos de registro que
+    han generado los analizadores de código fuente, los instrumentos de código fuente, los generadores de scripts de
+    prueba, los compiladores de scripts de prueba, los puertos de despliegue de destino y los generadores de informes. Test
+    RealTime puede abrir estos archivos de forma automática cuando concluye una ejecución, o bien, se pueden abrir
+    manualmente.
+</p>
+<p>
+    Cada informe se designa para que se pueda interpretar de modo inmediato, garantizando así que el diagnóstico y la
+    resolución de problemas se llevan a cabo de forma rápida y eficaz.
+</p>
+<h4>
+    Tipos de informes
+</h4>
+<p>
+    Se va a tratar el análisis de informes para cada característica de Test RealTime. Cuando sea adecuando, se tratarán las
+    diferencias de los informes debidas al lenguaje de programación utilizado:
+</p>
+<ul>
+    <li>
+        <a href="#ComponentAndSystemTesting">Prueba de componentes y prueba del sistema</a>
+    </li>
+    <li>
+        <a href="#MemoryProfiling">Perfilado de la memoria</a>
+    </li>
+    <li>
+        <a href="#PerformanceProfiling">Perfilado del rendimiento de la aplicación</a>
+    </li>
+    <li>
+        <a href="#CodeCoverageAnalysis">Análisis de la cobertura de código</a>
+    </li>
+    <li>
+        <a href="#RuntimeTracing">Rastreo del tiempo de ejecución</a>
+    </li>
+    <li>
+        <a href="#StaticMetrics">Métrica estática</a>
+    </li>
+</ul>
+<h3>
+    <a id="ComponentAndSystemTesting" name="ComponentAndSystemTesting">Prueba de componentes y prueba del sistema</a>
+</h3>
+<p>
+    Para abrir estos informes utilizando la pestaña Navegador de proyectos de la ventana Proyectos, situada a la derecha de
+    la interfaz de usuario de Test RealTime, pulse el botón derecho del ratón sobre un nodo de prueba y seleccione Ver
+    informe-&gt;Prueba. Para abrir estos informes utilizando el menú de Test RealTime:
+</p>
+<ol>
+    <li>
+        Seleccione el elemento de menú Archivo-&gt;Buscar informes.
+    </li>
+    <li>
+        Seleccione el botón de la barra de herramientas Añadir.
+    </li>
+    <li>
+        Seleccione <b>Informe</b> de la lista desplegable Archivos de tipo.
+    </li>
+    <li>
+        Busque y seleccione los archivos .xrd correspondientes a los informes que desea visualizar.
+    </li>
+    <li>
+        Pulse el botón Abrir.
+    </li>
+</ol>
+<p>
+    Para abrir estos informes desde la línea de mandatos, simplemente, trate cada archivo .xrd como un parámetro de la
+    línea de mandatos <code><b>studio</b></code>.
+</p>
+<p>
+    El informe se organiza en dos secciones principales, una sección de resumen seguida de una sección de detalles.
+</p>
+<ul>
+    <li>
+        <i>Resumen -</i> La sección de resumen contiene información como, por ejemplo, las ubicaciones de los archivos de
+        informe, la hora de ejecución de la prueba y un recuento de resumen de las pruebas que se han llevado a cabo de
+        modo satisfactorio y con error.<br />
+        <br />
+    </li>
+    <li>
+        <i>Detalles de las pruebas de componentes -</i> Para las pruebas de componentes, en esta sección se proporciona
+        información sobre los controladores/servicios/funciones/métodos/procedimientos que se están probando. Para cada
+        elemento, el informe contiene parte o toda la información, dependiendo del lenguaje fuente y de las opciones que se
+        hayan seleccionado: 
+        <ul>
+            <li>
+                una sección de prueba que proporciona una visión general y resume si la prueba se ha llevado a cabo de
+                forma satisfactoria
+            </li>
+            <li>
+                una sección de valor variable en la que se especifica el valor adquirido para cada variable
+            </li>
+            <li>
+                si se ha llevado a cabo el análisis de cobertura de código, una sección de cobertura de código
+            </li>
+            <li>
+                información adicional relacionada con la validación del contrato (es decir, aserción) y consultas de
+                verificación para C++ y Java
+            </li>
+        </ul><br />
+    </li>
+    <li>
+        <i>Detalles de la prueba del sistema -</i> Para las pruebas del sistema, se proporcionan las subsecciones
+        siguientes: 
+        <ul>
+            <li>
+                una sección de Inicialización, en la que se detallan los pasos que implica abrir una conexión para el
+                componente bajo prueba.
+            </li>
+            <li>
+                una o más secciones de Caso de ejemplo, en las que se detallan las pruebas reales que se han llevado a
+                cabo. Los bloques de casos de ejemplo se pueden anidar.
+            </li>
+            <li>
+                una sección de Terminación, en la que se detallan los pasos que implica terminar la conexión del componente
+                que se prueba.
+            </li>
+        </ul><br />
+    </li>
+</ul>
+<p>
+    Se puede utilizar el Explorador de informes de la interfaz de usuario de Test RealTime para maniobrar a través del
+    informe de prueba (efectúe una doble pulsación en el nodo que le interese); el elemento de menú Informe de las pruebas
+    y la barra de herramientas le permiten filtrar el informe para ver sólo las anomalías. Varias secciones del informe de
+    las pruebas tienen un hiperenlace al script de prueba; simplemente, pulse el botón derecho del ratón sobre las
+    secciones en las que el icono del ratón tiene forma de mano.
+</p>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> Para obtener
+    información detallada sobre la visualización de los informes de las pruebas, consulte el capítulo referente a la prueba
+    automatizada-&gt;prueba de componentes de la publicación <i>Rational Test RealTime User Guide</i>, y las secciones que
+    tratan sobre el informe de las pruebas.
+</p>
+<p>
+    <b><img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /></b> Para obtener
+    información técnica detallada sobre el trabajo con archivos de informe, consulte la publicación <i>Rational Test
+    RealTime Reference Guide</i> y céntrese en las secciones en las que se tratan los distintos generadores de informes de
+    prueba. En especial, consulte la página de los apéndices que trata sobre los tipos de archivo.
+</p>
+<h3>
+    <a id="MemoryProfiling" name="MemoryProfiling">Perfilado de la memoria</a>
+</h3>
+<p>
+    Los informes de perfilado de la memoria para todos los lenguajes soportados, es decir, C, C++ y Java, se almacenan en
+    archivos basados en XML en la carpeta Proyectos o en la carpeta TDP, dependiendo del lenguaje.
+</p>
+<p>
+    Para abrir estos informes utilizando la pestaña Navegador de proyectos de la ventana Proyectos, situada a la derecha de
+    la interfaz de usuario de Test RealTime, pulse el botón derecho del ratón sobre un nodo de prueba y seleccione Ver
+    informe-&gt;Perfil de la memoria.
+</p>
+<p>
+    Para abrir estos informes utilizando el menú de Test RealTime:
+</p>
+<ol>
+    <li>
+        Seleccione el elemento de menú Archivo-&gt;Buscar informes.
+    </li>
+    <li>
+        Seleccione el botón de la barra de herramientas Añadir.
+    </li>
+    <li>
+        Seleccione <b>Perfilado de la memoria</b> de la lista desplegable Archivos de tipo.
+    </li>
+    <li>
+        Busque y seleccione los archivos que desea visualizar.
+    </li>
+    <li>
+        Repita los pasos 2 a 4, según proceda.
+    </li>
+    <li>
+        Pulse el botón Abrir de la ventana Navegador de informes.
+    </li>
+</ol>
+<p>
+    Para abrir estos informes desde la línea de mandatos, simplemente, trate cada archivo que desee visualizar como
+    parámetros de la línea de mandatos <code><b>studio</b></code>.
+</p>
+<p>
+    El informe se organiza en dos secciones principales, una sección de resumen seguida de una sección de detalles.
+</p>
+<ul>
+    <li>
+        <i>Resumen -</i> Un histograma y una sección de informe de texto en la que se proporciona el número total de
+        bloques y bytes asignados y liberados, así como el número máximo de bloques/bytes asignados en un momento
+        determinado.<br />
+        <br />
+    </li>
+    <li>
+        <i>Detalles de C y C++ -</i> Se lista cada uno de los errores y avisos, con su pila de llamada asociada. La pila de
+        llamada se lista con la última función llamada/primer método mencionado; todas las funciones/métodos de la pila de
+        llamada tienen un hiperenlace al código fuente<br />
+        <br />
+    </li>
+    <li>
+        <i>Detalles de Java -</i> Se presenta un listado de todos los métodos con objetos asignados desde la última
+        instantánea. La tabla básica lista el número de objetos y bytes asociados asignados desde la última instantánea
+        para cada método, así como el número total de objetos y bytes que ha asignado cada método y sus descendientes (es
+        decir, métodos hijos del padre).<br />
+        <br />
+    </li>
+</ul>
+<p>
+    Se puede utilizar el Explorador de informes de la interfaz de usuario de Test RealTime para maniobrar a través del
+    informe de prueba (efectúe una doble pulsación en el nodo que le interese); el elemento de menú Informe de las pruebas
+    y la barra de herramientas le permiten filtrar el informe para ver sólo las anomalías. Varias secciones del informe de
+    las pruebas tienen un hiperenlace al script de prueba; simplemente, pulse el botón derecho del ratón sobre las
+    secciones en las que el icono del ratón tiene aspecto de mano.
+</p>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> Para obtener
+    información detallada sobre la visualización de informes de perfilado de la memoria, consulte la publicación
+    <i>Rational Test RealTime User Guide</i> y, en especial, el capítulo que trata sobre el análisis de tiempo de
+    ejecución-&gt;perfilado de la memoria.
+</p>
+<p>
+    <b><img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /></b> Para obtener
+    información técnica detallada sobre el trabajo con archivos de informe, consulte la publicación <i>Rational Test
+    RealTime Reference Guide</i> y céntrese en las secciones en las que se tratan los distintos generadores de informes de
+    prueba. En especial, consulte la página de los apéndices que trata sobre los tipos de archivo.
+</p>
+<h3>
+    <a id="PerformanceProfiling" name="PerformanceProfiling">Perfilado del rendimiento de la aplicación</a>
+</h3>
+<p>
+    Los informes de perfilado del rendimiento para todos los lenguajes soportados, es decir, C, C++ y Java, se almacenan en
+    archivos basados en XML en la carpeta Proyectos o en la carpeta TDP, dependiendo del lenguaje.
+</p>
+<p>
+    Para abrir estos informes utilizando la pestaña Navegador de proyectos de la ventana Proyectos, situada a la derecha de
+    la interfaz de usuario de Test RealTime, pulse el botón derecho del ratón sobre un nodo de prueba y seleccione Ver
+    informe-&gt;Perfil de la memoria.
+</p>
+<p>
+    Para abrir estos informes utilizando el menú de Test RealTime:
+</p>
+<ol>
+    <li>
+        Seleccione el elemento de menú Archivo-&gt;Buscar informes.
+    </li>
+    <li>
+        Seleccione el botón de la barra de herramientas Añadir.
+    </li>
+    <li>
+        Seleccione <b>Perfilado del rendimiento</b> de la lista desplegable Archivos de tipo.
+    </li>
+    <li>
+        Busque y seleccione los archivos que desea visualizar.
+    </li>
+    <li>
+        Repita los pasos 2 a 4, según proceda.
+    </li>
+    <li>
+        Pulse el botón Abrir de la ventana Navegador de informes.
+    </li>
+</ol>
+<p>
+    Para abrir estos informes desde la línea de mandatos, simplemente, trate cada archivo que desee visualizar como
+    parámetros de la línea de mandatos <code><b>studio</b></code>.
+</p>
+<p>
+    El informe se organiza tal como se indica a continuación: en la parte superior de cada informe se muestra un gráfico
+    circular en el que se detallan todas las funciones/métodos (hasta un máximo de seis) que monopolizan el 5 por ciento o
+    más del tiempo de ejecución total. Debajo del gráfico circular se muestra una tabla clasificable en la que se listan
+    todas las funciones/métodos y diversas estadísticas asociadas. Al pulsar una vez el botón del ratón en una cabecera de
+    columna, se clasifica la lista global por el contenido de la columna y, al pulsar una vez el botón del ratón en
+    cualquiera de las funciones/métodos nombrados, se abre el código fuente correspondiente. Ningún valor es,
+    necesariamente, correcto o incorrecto - tiempos de ejecución de funciones largos o tiempos de ejecución de descendiente
+    + función de destino; sólo se resaltan los algoritmos que pueden resultar ineficaces y, por lo tanto, que son
+    candidatos para la optimización.
+</p>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> Para obtener
+    información detallada sobre la visualización de informes de perfilado del rendimiento, consulte la publicación
+    <i>Rational Test RealTime User Guide</i> y, en especial, el capítulo relacionado con el análisis de tiempo de
+    ejecución-&gt;perfilado del rendimiento.
+</p>
+<p>
+    <b><img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /></b> Para obtener
+    información técnica detallada sobre el trabajo con archivos de informe, consulte la publicación <i>Rational Test
+    RealTime Reference Guide</i> y céntrese en las secciones en las que se tratan los distintos generadores de informes de
+    prueba. En especial, consulte la página de los apéndices que trata sobre los tipos de archivo.
+</p>
+<h3>
+    <a id="CodeCoverageAnalysis" name="CodeCoverageAnalysis">Análisis de la cobertura de código</a>
+</h3>
+<p>
+    Los informes de análisis de la cobertura de código para todos los lenguajes soportados, es decir, C, C++ y Java, están
+    almacenados en archivos basados en XML en la carpeta Proyectos o en la carpeta TDP, dependiendo del lenguaje.
+</p>
+<p>
+    Para abrir estos informes utilizando la pestaña Navegador de proyectos de la ventana Proyectos, situada a la derecha de
+    la interfaz de usuario de Test RealTime, pulse el botón derecho del ratón sobre un nodo de prueba y seleccione Ver
+    informe-&gt;Perfil de la memoria.
+</p>
+<p>
+    Para abrir estos informes utilizando el menú de Test RealTime:
+</p>
+<ol>
+    <li>
+        Seleccione el elemento de menú Archivo-&gt;Buscar informes.
+    </li>
+    <li>
+        Seleccione el botón de la barra de herramientas Añadir.
+    </li>
+    <li>
+        Seleccione <b>Cobertura de código</b> de la lista desplegable Archivos de tipo.
+    </li>
+    <li>
+        Busque y seleccione los archivos que desea visualizar.
+    </li>
+    <li>
+        Repita los pasos 2 a 4, según proceda.
+    </li>
+    <li>
+        Pulse el botón Abrir de la ventana Navegador de informes.
+    </li>
+</ol>
+<p>
+    Para abrir estos informes desde la línea de mandatos, simplemente, trate cada archivo que desee visualizar como
+    parámetros de la línea de mandatos <code><b>studio</b></code>.
+</p>
+<p>
+    El informe se organiza en dos componentes principales: un componente Origen y un componente Índices.
+</p>
+<ul>
+    <li>
+        <i>Origen -</i> La pestaña Origen refleja dos niveles de información de cobertura de código: 
+        <ul>
+            <li>
+                Cuando se selecciona la carpeta raíz, la pestaña Origen resume la cobertura el código global utilizando un
+                gráfico de barras.
+            </li>
+            <li>
+                Cuando se selecciona cualquier otro nodo de la ventana de informe, la pestaña Origen utiliza una pantalla
+                codificada por colores para reflejar los códigos que se han cubierto y los que no. La pestaña Origen
+                muestra información relacionada con cualquier nodo que se haya seleccionado.
+            </li>
+        </ul><br />
+    </li>
+    <li>
+        <i>Índices -</i> La pestaña Índices divide el nivel de cobertura de cada función/método/procedimiento en
+        porcentajes.<br />
+        <br />
+    </li>
+</ul>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> Para obtener
+    información detallada sobre la visualización de informes de cobertura de código, consulte la publicación <i>Rational
+    Test RealTime User Guide</i> y, en especial, el capítulo relacionado con el análisis de tiempo de
+    ejecución-&gt;cobertura de código.
+</p>
+<p>
+    <b><img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /></b> Para obtener
+    información técnica detallada sobre el trabajo con archivos de informe, consulte la publicación <i>Rational Test
+    RealTime Reference Guide</i> y céntrese en las secciones en las que se tratan los distintos generadores de informes de
+    prueba. En especial, consulte la página de los apéndices que trata sobre los tipos de archivo.
+</p>
+<h3>
+    <a id="RuntimeTracing" name="RuntimeTracing">Rastreo del tiempo de ejecución</a>
+</h3>
+<p>
+    Los informes de rastreo del tiempo de ejecución para todos los lenguajes soportados, es decir, C, C++ y Java, se
+    almacenan en archivos basados en XML en la carpeta Proyectos o en la carpeta TDP, dependiendo del lenguaje.
+</p>
+<p>
+    Para abrir estos informes utilizando la pestaña Navegador de proyectos de la ventana Proyectos, situada a la derecha de
+    la interfaz de usuario de Test RealTime, pulse el botón derecho del ratón sobre un nodo de prueba y seleccione Ver
+    informe-&gt;Perfil de la memoria.
+</p>
+<p>
+    Para abrir estos informes utilizando el menú de Test RealTime:
+</p>
+<ol>
+    <li>
+        Seleccione el elemento de menú Archivo-&gt;Buscar informes.
+    </li>
+    <li>
+        Seleccione el botón de la barra de herramientas Añadir.
+    </li>
+    <li>
+        Seleccione <b>Archivos de rastreo</b> de la lista desplegable Archivos de tipo.
+    </li>
+    <li>
+        Busque y seleccione los archivos que desea visualizar.
+    </li>
+    <li>
+        Repita los pasos 2 a 4, según proceda.
+    </li>
+    <li>
+        Pulse el botón Abrir de la ventana Navegador de informes.
+    </li>
+</ol>
+<p>
+    Para abrir estos informes desde la línea de mandatos, simplemente, trate cada archivo que desee visualizar como
+    parámetros de la línea de mandatos <code><b>studio</b></code>.
+</p>
+<p>
+    El informe de rastreo del tiempo de ejecución es un diagrama de secuencia de todos los sucesos que han ocurrido durante
+    la ejecución de código de prueba o aplicación. El diagrama de secuencia utiliza una notación tomada del Lenguaje
+    unificado de modelado, por lo que se puede, correctamente, hacer referencia al mismo como a un diagrama de secuencia
+    basado en UML. Las líneas verticales son líneas de vida, y cada línea de vida representa una instancia de objeto Java.
+    La primera línea de vida, representada por medio de la figura de una estaca, se considera el "mundo", es decir, el
+    sistema operativo. Las líneas horizontales conectan las líneas de vida entre sí. Las líneas verdes son llamadas a
+    constructor, las líneas blancas son llamadas a método, las líneas rojas son retornos de método, las líneas azules son
+    llamadas a destructor y las líneas naranjas son excepciones. Coloque el ratón sobre cualquier llamada a método para ver
+    el texto completo. Todas las llamadas y retornos de llamada tienen la indicación de la hora. Todas las líneas
+    verticales y horizontales están hiperenlazadas al código fuente supervisado. El elemento de menú Rastreo del tiempo de
+    ejecución-&gt;Filtros se puede utilizar para crear filtros que permitan que el informe de rastreo del tiempo de
+    ejecución resulte más manejable.
+</p>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> Para obtener
+    información detallada sobre la visualización de informes de tiempo de ejecución, consulte la publicación <i>Rational
+    Test RealTime User Guide</i> y, en especial, el capítulo relacionado con el análisis de tiempo de ejecución-&gt;rastreo
+    del tiempo de ejecución.
+</p>
+<p>
+    <b><img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /></b> Para obtener
+    información técnica detallada sobre el trabajo con archivos de informe, consulte la publicación <i>Rational Test
+    RealTime Reference Guide</i> y céntrese en las secciones en las que se tratan los distintos generadores de informes de
+    prueba. En especial, consulte la página de los apéndices que trata sobre los tipos de archivo.
+</p>
+<h3>
+    <a id="StaticMetrics" name="StaticMetrics">Métrica estática</a>
+</h3>
+<p>
+    Los informes de perfilado de la memoria para todos los lenguajes soportados, es decir, C, C++ y Java, se almacenan en
+    archivos basados en XML en la carpeta Proyectos o en la carpeta TDP, dependiendo del lenguaje.
+</p>
+<p>
+    Para abrir estos informes utilizando la pestaña Navegador de proyectos de la ventana Proyectos, situada a la derecha de
+    la interfaz de usuario de Test RealTime, pulse el botón derecho del ratón sobre un nodo de prueba y seleccione Ver
+    informe-&gt;Perfil de la memoria.
+</p>
+<p>
+    Para abrir estos informes utilizando el menú de Test RealTime:
+</p>
+<ol>
+    <li>
+        Seleccione el elemento de menú Archivo-&gt;Buscar informes.
+    </li>
+    <li>
+        Seleccione el botón de la barra de herramientas Añadir.
+    </li>
+    <li>
+        Seleccione <b>Métrica</b> de la lista desplegable Archivos de tipo.
+    </li>
+    <li>
+        Busque y seleccione los archivos que desea visualizar.
+    </li>
+    <li>
+        Repita los pasos 2 a 4, según proceda.
+    </li>
+    <li>
+        Pulse el botón Abrir de la ventana Navegador de informes.
+    </li>
+</ol>
+<p>
+    Para abrir estos informes desde la línea de mandatos, simplemente, trate cada archivo que desee visualizar como
+    parámetros de la línea de mandatos <code><b>studio</b></code>.
+</p>
+<p>
+    El informe se organiza en dos niveles, la vista Archivo y la vista Objeto:
+</p>
+<ul>
+    <li>
+        <i>Vista Archivo -</i> Cuando se selecciona la carpeta raíz, se presenta un gráfico de barras de una a siete
+        métricas Halstead para cada uno de los archivos seleccionados. La métrica determinada que se muestra se puede
+        cambiar utilizando el menú. Al seleccionar cualquier otro nodo, se presenta la métrica estática específica del
+        nodo.<br />
+        <br />
+    </li>
+    <li>
+        <i>Vista Objeto -</i> Cuando se selecciona la carpeta raíz, se presenta un gráfico en el que se compara la métrica
+        estática concreta para cada función/método, que se puede cambiar utilizando el menú. Al seleccionar cualquier otro
+        nodo, se presenta la métrica estática específica del nodo.<br />
+        <br />
+    </li>
+</ul>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> Para obtener
+    información detallada sobre la visualización de informes de métrica estática, consulte la publicación <i>Rational Test
+    RealTime User Guide</i> y, en especial, el capítulo relacionado con el análisis de tiempo de ejecución-&gt;métrica
+    estática.
+</p>
+<p>
+    <b><img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /></b> Para obtener
+    información técnica detallada sobre el trabajo con archivos de informe, consulte la publicación <i>Rational Test
+    RealTime Reference Guide</i> y céntrese en las secciones en las que se tratan los distintos generadores de informes de
+    prueba. En especial, consulte la página de los apéndices que trata sobre los tipos de archivo.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Dise&ntilde;o de clases mediante la plataforma de desarrollo de software Rational</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="designing_classes_using_rsa" name="uma.name">
+<meta content="Dise&ntilde;o de clases mediante la plataforma de desarrollo de software Rational" name="uma.presentationName">
+<meta name="element_type" content="tool_mentor">
+<meta content="" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{F9566D49-2775-4844-A1D6-90AF558676A7}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Dise&ntilde;o de clases mediante la plataforma de desarrollo de software Rational</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta guía de la herramienta describe cómo diseñar clases mediante el entorno de modelado SDP.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    En esta guía de la herramienta se da por supuesto que se ha creado un <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">modelo
+    de diseño</a> estructurado como parte de la <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Tarea:
+    Análisis de la arquitectura</a>.
+</p>
+<p>
+    En esta guía de la herramienta se llevan a cabo los pasos siguientes:
+</p>
+<ul>
+    <li>
+        <a href="#Use Design Patterns and Mechanisms">Utilizar mecanismos y patrones de diseño</a>
+    </li>
+    <li>
+        <a href="#Create Initial Design Classes">Crear clases de diseño inicial</a>
+    </li>
+    <li>
+        <a href="#Define Persistent Classes">Identificar clases permanentes</a>
+    </li>
+    <li>
+        <a href="#Define Class Visibility">Definir la visibilidad de clase</a>
+    </li>
+    <li>
+        <a href="#Define Operations">Definir operaciones</a>
+    </li>
+    <li>
+        <a href="#Define Methods">Definir métodos</a>
+    </li>
+    <li>
+        <a href="#Define States">Definir estados</a>
+    </li>
+    <li>
+        <a href="#Define Attributes">Definir atributos</a>
+    </li>
+    <li>
+        <a href="#Define Dependencies">Definir dependencias</a>
+    </li>
+    <li>
+        <a href="#Define Associations">Definir asociaciones</a>
+    </li>
+    <li>
+        <a href="#Define Internal Structure">Definir la estructura interna</a>
+    </li>
+    <li>
+        <a href="#Define Generalizations">Definir generalizaciones</a>
+    </li>
+    <li>
+        <a href="#Resolve Use-Case Collisions">Resolver colisiones de guiones de uso</a>
+    </li>
+    <li>
+        <a href="#Handle Non-Functional Requirements">Manejar requisitos no funcionales en general</a>
+    </li>
+    <li>
+        <a href="#Evaluate Your Results">Evaluar los resultados</a>
+    </li>
+</ul>
+<p>
+    <a href="#MoreInfo">Información adicional sobre la herramienta</a>
+</p>
+<h3>
+    <a id="Use Design Patterns and Mechanisms" name="Use Design Patterns and Mechanisms">Utilizar mecanismos y patrones de
+    diseño</a>
+</h3>
+<p>
+    En realidad, incorporar un patrón o mecanismo es llevar a cabo varios pasos consecutivos en esta guía de la herramienta
+    (añadir nuevas clases, operaciones, atributos y relaciones), pero conforme a las reglas que define el patrón o
+    mecanismo.
+</p>
+<p>
+    Si el patrón se encuentra en la biblioteca de la herramienta,el "patrón de aplicación" se experimenta de forma
+    altamente interactiva.&nbsp;Un patrón es una clase especial de transformación, "optimizada para la elaboración
+    interactiva y por partes principalmente en un solo metamodelo y dentro del mismo nivel de abstracción, y a menudo
+    dentro del mismo modelo". Consulte los conceptos <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/concepts/mdd_and_mda_8F9B3685.html" guid="4.227832989444728E-303">Desarrollo
+    controlado por modelos y Arquitectura controlada por modelo</a> y <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/analysis_mechanisms_36135B43.html" guid="9.76539014099254E-305">Mecanismos de
+    análisis</a>.
+</p>
+<p>
+    Para obtener información sobre la utilización de patrones, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Aplicación de patrones</i>.
+</p>
+<h3>
+    <a id="Create Initial Design Classes" name="Create Initial Design Classes">Crear clases de diseño iniciales</a>
+</h3>
+<ol>
+    <li>
+        Añada un diagrama de clase al modelo. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adición de diagramas de clase a elementos de modelo</i>.
+    </li>
+    <li>
+        Añada clases de diseño al diagrama de clase. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adición de clasificadores a diagramas de clase</i>.
+    </li>
+    <li>
+        Documente cada clase. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documentación de elementos de modelo</i>.
+    </li>
+</ol>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modelado de estructura estática&nbsp;mediante&nbsp;diagramas
+    de clase</i>.
+</p>
+<h3>
+    <a id="Define Persistent Classes" name="Define Persistent Classes">Identificar clases permanentes</a>
+</h3>
+<p>
+    Una clase se puede marcar como permanente. Si se utiliza un enfoque MDD (consulte <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/concepts/mdd_and_mda_8F9B3685.html" guid="4.227832989444728E-303">Desarrollo
+    controlado por modelos y Arquitectura controlada por modelo</a>), el perfil aplicado al modelo contendrá estereotipos
+    específicos que permitirán al arquitecto marcar las clases que desea conservar. La transformación utilizará esta
+    información adicional en combinación con las correlaciones de tipo y generará el código adecuado o un modelo más
+    perfeccionado. Para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/analysis_mechanisms_36135B43.html" guid="9.76539014099254E-305">Mecanismos de
+    análisis</a>, <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Aplicación de transformaciones</i> y <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Transición de&nbsp;modelo a código</i>
+</p>
+<p>
+    En el desarrollo de J2EE, normalmente, la permanencia se implementa utilizando EJB de entidad. Consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identificar elementos de diseño</a> para obtener detalles al respecto.
+</p>
+<p>
+    Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Desarrollo de enterprise beans con diagramas de clase&nbsp;UML</i>.
+</p>
+<h3>
+    <a id="Define Class Visibility" name="Define Class Visibility">Definir visibilidad de clase</a>
+</h3>
+<p>
+    Para cada clase, define la visibilidad de clase en el paquete en el que reside.
+</p>
+<p>
+    Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Visibilidad de elementos de modelo</i>.
+</p>
+<h3>
+    <a id="Define Operations" name="Define Operations">Definir operaciones</a>
+</h3>
+<ol>
+    <li>
+        Añada operaciones a cada clase. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adición de operaciones a clasificadores en diagramas</i>.
+    </li>
+    <li>
+        Añada parámetros a las operaciones. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Gestión de parámetros&nbsp;en operaciones</i>.
+    </li>
+    <li>
+        Especifique la visibilidad de las operaciones. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Visibilidad de elementos de modelo</i>.
+    </li>
+</ol>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Gestión de atributos y operaciones en clasificadores</i>.
+</p>
+<h3>
+    <a id="Define Methods" name="Define Methods">Definir métodos</a>
+</h3>
+<p>
+    Se puede añadir una descripción sobre el modo en el que se puede implementar una operación a la descripción de la
+    operación.
+</p>
+<p>
+    Si se desea, se puede utilizar un diagrama de secuencia para describir un método. Consulte el tema de la ayuda en línea
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documentación de
+    elementos de modelo</i>.
+</p>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Diagramas de secuencia</i>.
+</p>
+<h3>
+    <a id="Define States" name="Define States">Definir estados</a>
+</h3>
+<p>
+    Si se desea, se puede utilizar una máquina de estado.
+</p>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Máquinas de estado UML</i>
+</p>
+<h3>
+    <a id="Define Attributes" name="Define Attributes">Definir atributos</a><a id="Define Attributes" href="#Top" name="Define Attributes"></a>
+</h3>
+<ol>
+    <li>
+        Defina atributos. Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Atributos</i>.
+    </li>
+    <li>
+        Añada atributos a los clasificadores. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adición de clasificadores a diagramas</i>.
+    </li>
+    <li>
+        Especifique la visibilidad. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Visibilidad de elementos de modelo</i>.
+    </li>
+</ol>
+<h3>
+    <a id="Define Dependencies" name="Define Dependencies">Definir dependencias</a>
+</h3>
+<p>
+    Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Relaciones de dependencia</i>.
+</p>
+<h3>
+    <a id="Define Associations" name="Define Associations">Definir asociaciones</a>
+</h3>
+<ol>
+    <li>
+        Añada relaciones de asociación.
+    </li>
+    <li>
+        Especifique el tipo de cada asociación. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Especificación de relaciones en diagramas UML</i>.
+    </li>
+</ol>
+<h3>
+    <a id="Define Internal Structure" name="Define Internal Structure">Definir estructura interna</a>
+</h3>
+<p>
+    Consulte los temas de clases estructuradas de <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modelado de estructura estática&nbsp;mediante&nbsp;diagramas
+    de clase</i>.&nbsp;
+</p>
+<h3>
+    <a id="Define Generalizations" name="Define Generalizations">Definir generalizaciones</a>
+</h3>
+<p>
+    Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Relaciones de generalización</i>. &nbsp;
+</p>
+<h3>
+    <a id="Resolve Use-Case Collisions" name="Resolve Use-Case Collisions">Resolver colisiones de guiones de uso</a>
+</h3>
+<p>
+    Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Establecimiento de la propiedad de concurrencia&nbsp;de una&nbsp;operación</i>
+</p>
+<h3>
+    <a id="Handle Non-Functional Requirements" name="Handle Non-Functional Requirements">Manejar requisitos no funcionales
+    en general</a>
+</h3>
+<p>
+    Con frecuencia, los requisitos no funcionales llevan a que una clase incorpore mecanismos de diseño específicos
+    utilizando colaboraciones y patrones. El uso de un componente de infraestructura suele bastar para satisfacer un
+    requisito no funcional. Consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identificar elementos de diseño</a>.
+</p>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Aplicación de patrones</i>.
+</p>
+<h3>
+    <a id="Evaluate Your Results" name="Evaluate Your Results">Evaluar los resultados</a>
+</h3>
+<p>
+    Puede resultar útil publicar los modelos en formato html. Asimismo, tenga en cuenta que dichos diagramas pueden
+    copiarse en Microsoft Word y otros programas.&nbsp;
+</p>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Publicación de modelos</i> y el tutorial <img height="16"     alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Publicación de un modelo en un
+    sitio web</i> .
+</p>
+<h3>
+    <a id="MoreInfo" name="MoreInfo">Información adicional sobre la herramienta</a>
+</h3>
+<p>
+    Tutoriales:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Aplicar&nbsp;un patrón</i>
+    </li>
+</ul>
+<p>
+    Ejemplos:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modelo para
+        una aplicación de patrón: Modelo UML simple</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Patrones:
+        Modelo UML simple</i>&nbsp;
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../tech.rsa/guidances/toolmentors/designing_classes_using_rsa_ext_6DE4C248.html" guid="_31ZpcK4GEdqFg48R_ivTjA">Diseño de clases mediante Rational Software Architect</a>
+</li>
+<li>
+<a href="./../../../tech.rsa/guidances/toolmentors/designing_classes_using_rsd_68C005C0.html" guid="_x5rR4K4GEdqFg48R_ivTjA">Diseño de clases mediante Rational Systems Developer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

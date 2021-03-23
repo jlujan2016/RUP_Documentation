@@ -1,0 +1,525 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Discriminadores del proceso</title>
+<meta content="Guideline" name="uma.type">
+<meta content="process_discriminants" name="uma.name">
+<meta content="Discriminadores del proceso" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.746702783003723E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.746702783003723E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Discriminadores del proceso</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se describen los factores que afectan a la forma en que se personaliza un proceso para un proyecto.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/tailor_process_for_project_6CFD05E2.html" guid="{1BA9AAA0-DA89-4C14-B45A-CE28A8A10894}">Personalizar el proceso de desarrollo para el proyecto</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a id="Overview" name="Overview">Visión general</a>
+</h3>
+<p>
+    Sobre el proceso de desarrollo de software influyen los factores siguientes:
+</p>
+<ul>
+    <li>
+        Factores de dominio como el dominio de la aplicación, el proceso empresarial al que hay que dar soporte, la
+        comunidad de usuarios y las ofertas disponibles de los competidores.
+    </li>
+    <li>
+        Factores del ciclo vital como el plazo de comercialización, la vida prevista para ese software y los releases
+        futuros planificados.
+    </li>
+    <li>
+        Factores técnicos como el lenguaje de programación, las herramientas de desarrollo, la base de datos, las
+        infraestructuras de componentes y los sistemas de software existentes.
+    </li>
+    <li>
+        Factores de la empresa.
+    </li>
+</ul>
+<p>
+    Estos factores no tienen todos la misma importancia. En las secciones siguientes se describen algunos de los factores
+    principales, los que tendrán un efecto más probable sobre la forma global del proceso de desarrollo, y la manera en que
+    se implementarán el proceso y las herramientas en la empresa de desarrollo.
+</p>
+<h3>
+    <a id="Business_Context" name="Business_Context"></a><a key="discriminadores del proceso" text="contexto empresarial" name="XE_process_discriminants__business_context" id="XE_process_discriminants__business_context" class="index"></a>
+</h3>
+<p>
+    El contexto empresarial describe el contexto en el que se desarrolla el software. &nbsp;Existen distintos tipos de
+    contextos empresariales que afectan a la forma en que se puede personalizar mejor el proceso. A continuación, se
+    proporcionan ejemplos de contextos empresariales:
+</p>
+<ul>
+    <li>
+        Trabajo contratado en el que el desarrollador produce software para una especificación del cliente determinado y
+        sólo para él.
+    </li>
+    <li>
+        Desarrollo especulativo o comercial en el que el desarrollador produce el software y carga con el coste de su
+        comercialización.
+    </li>
+    <li>
+        Proyecto internos en los que el cliente y el desarrollador se encuentran en la misma empresa.
+    </li>
+</ul>
+<p>
+    Hay muchas situaciones intermedias; por ejemplo, aquéllas en las que sólo se subcontrata parte del desarrollo del
+    software, aquéllas en las que la dispersión geográfica es un factor adicional, etc. El número total de interesados
+    distintos es un buen indicador del contexto empresarial.
+</p>
+<p>
+    El contexto empresarial afecta al nivel de ceremonia, al nivel de formalidad y la rigidez del proceso. Cuantos más
+    interesados (compradores, subcontratistas, cuerpos reguladores, etc.) estén implicados, más fácil será que el proyecto
+    produzca evidencias formales, como documentos, informes y prototipos, para los principales objetivos del proyecto.
+</p>
+<h3>
+    <a id="The Size of the Software Development Effort" name="The Size of the Software Development Effort">El tamaño del
+    esfuerzo de desarrollo de software</a>
+</h3>
+<p>
+    El tamaño del esfuerzo de desarrollo de software según han definido algunas métricas, como las líneas de código fuente
+    (SLOC), las instrucciones de código fuente entregado o los puntos de funciones, el número de personas y meses o
+    sencillamente el coste.
+</p>
+<p>
+    El tamaño del esfuerzo afectará al nivel de la ceremonia, al nivel de formalidad a la rigidez del proceso. Cuanto más
+    grande sea el proyecto, más grande será el equipo de desarrollo y, con independencia del contexto empresarial, más
+    formalidad y visibilidad deberán tener los distintos equipos y responsables respecto a los requisitos, las interfaces y
+    los indicadores de progreso. Las cuestiones de comunicación de los proyectos de gran tamaño se agravan aún más en los
+    equipos dispersados geográficamente.
+</p>
+<h3>
+    <a id="Degree_of_Novelty" name="Degree_of_Novelty"></a><a key="discriminadores del proceso" text="grado de novedad" name="XE_process_discriminants__degree_of_novelty" id="XE_process_discriminants__degree_of_novelty" class="index"></a>
+</h3>
+<p>
+    El grado de novedad se basa en los precedentes de este esfuerzo de software <b>relativos a la empresa de desarrollo</b>
+    y, en particular, en si el desarrollo se encuentra en un segundo ciclo o en un ciclo subsiguiente. Esto incluye la
+    madurez de la empresa y de su proceso, sus activos, su conjunto de habilidades actual y cuestiones como el ensamblaje y
+    la formación de un equipo, la adquisición de herramientas y otros recursos.
+</p>
+<p>
+    El grado de novedad de un proyecto afecta al proceso de una forma totalmente distinta. Un nuevo proyecto, el primero de
+    este tipo, afecta de forma significativa a la configuración dinámica: las fases inicial y de elaboración serán más
+    largas, y pueden extenderse durante varias iteraciones. Asimismo se dedicará más énfasis a obtener y capturar
+    requisitos, a modelar los guiones de uso, a la arquitectura y a mitigar el riesgo. Para un proyecto que es un <b>ciclo
+    en la evolución</b> a partir de un sistema anterior, la gestión de cambios es más importante y la incorporación del
+    código heredado implica algunos retos tecnológicos.
+</p>
+<p>
+    La novedad no es sólo relativa al sistema que se está desarrollando, sino que también se refiere a la madurez de las
+    empresas que se encargan puesto que la introducción de nuevas técnicas o herramientas afecta al proceso. En particular,
+    la introducción del propio Rational Unified Process (RUP) en una empresa debe realizarse escalonadamente en pasos
+    cuidadosos. Una empresa seguirá presentando cierta inercia antes la adopción de un nuevo proceso y la estrategia de
+    adopción debe intentar una transición suave entre las prácticas existentes y las nuevas.
+</p>
+<h3>
+    <a id="Type of Application" name="Type of Application">Tipo de aplicación</a>
+</h3>
+<p>
+    Existen distintos tipos de aplicaciones, por ejemplo, los sistemas de tiempo real incorporado, los sistemas de
+    información distribuida, los sistemas de telecomunicaciones, las herramientas CASE (ingeniería de software asistida por
+    ordenador), etc. El tipo de aplicación afectará al proceso, especialmente con respecto a las restricciones específicas
+    que puede imponer el dominio sobre el desarrollo, como la seguridad, el rendimiento, la internacionalización, las
+    restricciones de memoria, etc.
+</p>
+<p>
+    El tipo de aplicación puede afectar al proceso si la aplicación es clave para la misión; por ejemplo, el sistema de
+    control de vuelo de un avión. Un sistema clave para la misión precisa un nivel más alto de ceremonia en general, tanto
+    para el rastreo de los requisitos como para garantizar la calidad del producto. Una aplicación clave para la misión
+    también precisa que se empleen más recursos en las pruebas.
+</p>
+<p>
+    El tipo de desarrollo, o el dominio de destino, suscitan cuestiones de proceso como las siguientes:
+</p>
+<ul>
+    <li>
+        Técnicas y herramientas para dar soporte a tareas específicas; por ejemplo la generación automática de código para
+        máquinas con un estado finito.
+    </li>
+    <li>
+        Procedimientos de certificación; por ejemplo, para la instrumentación médica.
+    </li>
+    <li>
+        Compatibilidad con los estándares; por ejemplo para cuestiones fiscales o de contabilidad y para los equipos de
+        telecomunicaciones.
+    </li>
+</ul>
+<h3>
+    <a id="Type of Development" name="Type of Development">Tipo de desarrollo</a>
+</h3>
+<p>
+    Hay varios tipos de desarrollo, entre otros:
+</p>
+<ul>
+    <li>
+        <b>Trabajo contratado</b>, en el que se desarrolla un producto para un cliente determinado. Tiene más interesados
+        que gestionar y con los que negociar cuando lleva a cabo un trabajo contratado. Suelen ser necesarios más productos
+        externos, formales, porque los clientes, o sus representantes, desean supervisar los progresos y mantenerse
+        informados. Asegúrese de que los productos de trabajo que revise el cliente sean fáciles de entender. A veces,
+        existe la necesidad de marcarse un objetivo a partir del cual, el proyecto puede ofrecer un precio fijo sobre el
+        resto del proyecto. En tal caso, puede precisar un nuevo objetivo o ajustar los existentes. En otros casos, es
+        posible que deba ajustarse al modelo de ciclo vital que esté utilizando el cliente con otros objetivos y fases.
+    </li>
+    <li>
+        <b>Desarrollo especulativo</b>, en el que se desarrolla un producto para su comercialización masiva. En el
+        desarrollo especulativo, es un gestor de marketing (de producto) de la propia empresa el que actúa como cliente. En
+        este tipo de desarrollo, los plazos de comercialización suelen ser más importantes que la funcionalidad y se
+        precisan menos revisiones formales.
+    </li>
+    <li>
+        <b>Desarrollo interno</b>, en el que se desarrolla un producto que se entrega a otro departamento de la empresa. Es
+        posible que deba ajustarse a otro modelo de ciclo vital si va a realizar entregas a un proyecto que no utilice RUP.
+        Puede ser más técnico cuando describa los productos de trabajo porque la mayoría de productos de trabajo los
+        revisarán compañeros.
+    </li>
+    <li>
+        <b>Estudios previos</b>, en los que no se suele desarrollar un producto. La finalidad de un proyecto de estudio
+        previo es descubrir si el posible construir un producto. Un proyecto de estudio previo no tiene los mismos
+        objetivos que un proyecto habitual.
+    </li>
+</ul>
+<h3>
+    <a id="The Current Development Process" name="The Current Development Process">El proceso de desarrollo actual</a>
+</h3>
+<p>
+    En la mayoría de los casos, no se sustituye el proceso de desarrollo de software que está en vigor actualmente en la
+    empresa porque, en la mayoría de los casos, va a implementar el nuevo proceso de desarrollo paso a paso, centrándose
+    primero en las áreas más críticas y de mayor importancia. Una parte del proceso de desarrollo de software actual puede
+    continuar existiendo durante un cierto tiempo, incluso de forma permanente.
+</p>
+<h3>
+    <a id="Problems and Root Causes" name="Problems and Root Causes">Problemas y motivos de raíz</a>
+</h3>
+<p>
+    Los problemas que se identifican y priorizan para el proyecto&nbsp;tienen influencia en aquellas áreas del proceso en
+    las que se concentra al principio del proceso de implementación. Es importante tener en cuenta que, si no hay una forma
+    establecida de trabajar en la empresa, puede tener muy poco sentido buscar los problemas. Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/implementing_a_process_in_a_project_3656F98A.html" guid="2.870714010568015E-306">Concepto: Implementación de un proceso en un proyecto</a>. Por el contrario, debe
+    identificar los motivos de raíz de los problemas. Para eliminar los problemas, debe atajar los motivos de raíz
+    mejorando el proceso, introduciendo herramientas para automatizar los procesos y formando personal. &nbsp;
+</p>
+<h5>
+    Ejemplos de problemas comunes
+</h5>
+<p>
+    A continuación, se incluyen algunos ejemplos de algunos problemas comunes:
+</p>
+<ul>
+    <li>
+        Incapacidad para gestionar el ámbito; habitualmente, la empresa intenta hacer más de lo que terminan haciendo.
+    </li>
+    <li>
+        Incapacidad para capturar los requisitos; tienen dificultades para especificar los requisitos.
+    </li>
+    <li>
+        Incapacidad para gestionar de cambios de requisitos.
+    </li>
+    <li>
+        Incapacidad para gestionar los requisitos; los requisitos no llegan al producto final.
+    </li>
+    <li>
+        Incapacidad para realizar cálculos; suelen ser demasiado optimistas acerca de su capacidad para entregar de acuerdo
+        con la planificación.
+    </li>
+    <li>
+        Defecto de diseño; cumplen adecuadamente los requisitos, pero no realizan buenos diseños de sistemas. ¿Qué tipo de
+        problemas de diseño tienen? ¿Son los sistemas difíciles de mantener y mejorar? ¿Tienen problemas de rendimiento,
+        problemas de utilización, problemas de capacidad, etc.?
+    </li>
+    <li>
+        Incapacidad para producir productos de calidad; el producto tiene demasiados defectos que pueden deberse a la falta
+        de pruebas, pero suele estar relacionado con la incapacidad para capturar y gestionar requisitos, así como a
+        deficiencias de diseño.
+    </li>
+    <li>
+        Rendimiento del software inaceptable.
+    </li>
+    <li>
+        Baja utilización.
+    </li>
+    <li>
+        Conflicto entre desarrolladores; existe falta de control respecto a la propiedad y la gestión de la configuración,
+        de forma que los desarrolladores realizan cambios que entran en conflicto y el trabajo se pierde.
+    </li>
+    <li>
+        Descubrimiento tardío de los problemas.&nbsp;
+    </li>
+    <li>
+        Problemas al pasar de los guiones de uso al diseño.
+    </li>
+</ul>
+<h5>
+    Ejemplos de motivos de raíz
+</h5>
+<p>
+    Un problema suele ser un síntoma de que algo no es correcto. Deben identificarse los motivos de raíz de los problemas.
+    A continuación, se incluyen algunos ejemplos de algunos motivos de raíz comunes:&nbsp;&nbsp;
+</p>
+<ul>
+    <li>
+        Gestión insuficiente de requisitos
+    </li>
+    <li>
+        Comunicaciones ambiguas e imprecisas
+    </li>
+    <li>
+        Arquitectura frágil
+    </li>
+    <li>
+        Complejidad abrumadora
+    </li>
+    <li>
+        Incoherencias que no se detectan entre los requisitos, los diseños y las implementaciones.
+    </li>
+    <li>
+        Pruebas insuficientes
+    </li>
+    <li>
+        Valoración subjetiva del estado del proyecto
+    </li>
+    <li>
+        Reducción del riesgo postergada debido al desarrollo de cascada
+    </li>
+    <li>
+        Propagación de cambios sin control
+    </li>
+    <li>
+        Automatización insuficiente
+    </li>
+    <li>
+        Ninguna forma sistemática de construir interfaces de usuario
+    </li>
+    <li>
+        Ninguna forma establecida para ir de los guiones de uso a un diseño
+    </li>
+</ul>
+<h3>
+    <a id="Organizational Factors" name="Organizational Factors">Factores de la empresa</a>
+</h3>
+<p>
+    La implementación del proceso en una empresa, depende de factores propios de la empresa como su capacidad para el
+    cambio, su estructura organizativa, su cultura en los ámbitos de gestión y organización del proyecto, sus competencias
+    y habilidades disponibles, su experiencia previa y sus actitudes actuales.
+</p>
+<p>
+    Los factores de la empresa también afectan a la forma en que se configura el proceso. Por ejemplo, si el personal de la
+    empresa ha utilizado anteriormente una descripción de procesos de desarrollo de software, entonces será más fácil
+    empezar a utilizar RUP. Por otra parte, si el personal no ha utilizado nunca una descripción de procesos de desarrollo
+    de software, puede decidir la limitación del ámbito de la descripción del proceso. También puede asignar un esfuerzo
+    suplementario en hacer la descripción sea más fácil de comprender y de utilizar, asegurándose de que incluya (o haga
+    referencia) a la información que proporcionará un valor mayor.
+</p>
+<p>
+    Si algunas áreas son nuevas para la mayoría del personal, el desarrollo de las mejores directrices posibles facilitará
+    la transición. Por ejemplo, si el lenguaje de programación es nuevo para la mayoría del personal, debe tener unas
+    directrices de programación y de diseño que sean muy buenas para ayudar a su aprendizaje.
+</p>
+<h3>
+    <a id="Attitudes" name="Attitudes">Actitudes</a>
+</h3>
+<p>
+    Las actitudes negativas entre el personal de una empresa ante el cambio a una tecnología nueva, un proceso nuevo o unas
+    herramientas nuevas es posiblemente la mayor amenaza respecto a una implementación satisfactoria del proceso y de las
+    herramientas. Un exceso de entusiasmo hacia el proceso también puede ser un problema, porque puede provocar que el
+    personal se centre en exceso en el proceso.
+</p>
+<p>
+    Para valorar las actitudes del personal respecto a la nueva tecnología, los nuevos procesos y herramientas, haga
+    preguntas como las siguientes:
+</p>
+<ul>
+    <li>
+        ¿Qué ventajas aprecia en la nueva tecnología? ¿Cree que esta nueva tecnología resolverá alguno de los problemas
+        actuales? ¿Qué problemas aprecia en la nueva tecnología?
+    </li>
+    <li>
+        ¿Qué ventajas aprecia en el nuevo proceso? ¿Cree que este nuevo proceso resolverá alguno de los problemas actuales?
+        ¿Qué problemas aprecia en el nuevo proceso?
+    </li>
+    <li>
+        ¿Qué ventajas aprecia en las nuevas herramientas? ¿Cree que estas nuevas herramientas resolverás alguno de los
+        problemas actuales? ¿Qué problemas aprecia en las nuevas herramientas?
+    </li>
+</ul>
+<p>
+    Para valorar la motivación del personal, busque respuestas a preguntas como las siguientes:
+</p>
+<ul>
+    <li>
+        ¿Ven todos los miembros de la empresa la razón por la que se necesita un cambio?
+    </li>
+    <li>
+        ¿Son todos conscientes de lo que la competencia está haciendo y en cómo eso afecta a la empresa?
+    </li>
+    <li>
+        ¿Son todos conscientes de los cambios tecnológicos en el sector y de cómo afectan a la empresa?&nbsp;&nbsp;
+    </li>
+</ul>
+<p>
+    Entre los signos de una actitud negativa se encuentran afirmaciones como las siguientes:
+</p>
+<ul>
+    <li>
+        "El proceso no ayuda, es un obstáculo."
+    </li>
+    <li>
+        "El proceso implica la producción de muchos documentos."
+    </li>
+    <li>
+        "El proceso es abrumador."
+    </li>
+</ul>
+<p>
+    Algunas formas de abordar las actitudes negativas son las siguientes:
+</p>
+<ul>
+    <li>
+        Motivar al personal apuntando a los problemas actuales.
+    </li>
+    <li>
+        Explicar que un proceso no dicta lo que se debe hacer. El proceso debe verse fundamentalmente como un "sistema de
+        ayuda", en el que se consultan las guías, definiciones, etc.
+    </li>
+    <li>
+        Explicar que sólo se utilizan algunas partes pequeñas del proceso. Nadie llega a dominar la totalidad del proceso,
+        y este no es el objetivo, en todo caso. Comparar el proceso con un estante de libros que va leyendo a medida que
+        necesita información.
+    </li>
+    <li>
+        Ejecutar un proyecto piloto satisfactorio en el que muestre que el nuevo proceso y las nuevas herramientas
+        funcionan. Incluir a uno o dos de los escépticos en el proyecto piloto. &nbsp;
+    </li>
+</ul>
+<p>
+    Algunos signos de un entusiasmo excesivo son los siguientes:
+</p>
+<ul>
+    <li>
+        El personal confía totalmente en el proceso, hasta el punto que creen que resolverá todos sus problemas.
+    </li>
+    <li>
+        El proceso es la <i>bala de plata</i> o la fórmula mágica que, si lo seguimos, nos garantiza el éxito.
+    </li>
+    <li>
+        El equipo del proyecto desea emplear mucho tiempo y esfuerzo personalizando el proceso sin antes valorar los
+        problemas relacionados con el proceso que precisan una solución. &nbsp;
+    </li>
+</ul>
+<p>
+    Algunas formas de abordar el exceso de entusiasmo son las siguientes:
+</p>
+<ul>
+    <li>
+        Establezca expectativas. El proceso será de ayuda, pero no resuelve los problemas. Son las personas las que
+        resuelven los problemas.
+    </li>
+    <li>
+        Convenza al personal para que no empleen demasiado tiempo en la personalización del proceso.
+    </li>
+    <li>
+        Haga que el personal se centre en el desarrollo de los producto de software.
+    </li>
+</ul>
+<h3>
+    <a id="Technical_and_Managerial" name="Technical_and_Managerial"></a><a key="discriminadores del proceso" text="complejidad técnica" name="XE_process_discriminants__technical_complexity" id="XE_process_discriminants__technical_complexity" class="index"></a>
+</h3>
+<p>
+    Los <a key="discriminadores del proceso" text="complejidad de gestión" name="XE_process_discriminants__managerial_complexity" id="XE_process_discriminants__managerial_complexity" class="index"></a>distintos tipos de sistemas y sus proyectos pueden clasificarse en términos de la <b>complejidad
+    técnica</b> del sistema y la <b>complejidad de gestión</b>. En la figura siguiente se ilustra un concepto de cómo
+    pueden clasificarse los distintos sistemas. Por ejemplo, un pequeña aplicación de hojas de cálculo típica suele tener
+    muy poca complejidad técnica y es fácil de gestionar. En el otro extremo encontramos un proyecto típico de Weapon
+    Systems, que suele ser complejo técnicamente y complejo de gestionar.
+</p>
+<p>
+    Normalmente al aumentar el tamaño del sistema, la duración del proyecto o el contexto empresarial también aumenta la
+    complejidad de gestión. El aumento de la novedad, en el dominio del problema o en el espacio de la solución, aumenta la
+    complejidad técnica. Existe una interacción entre la complejidad de gestión y la complejidad técnica; muchos proyectos
+    de gran tamaño son también técnicamente complejos. Esto tiene como resultado lo siguiente:
+</p>
+<ul>
+    <li>
+        Una mayor complejidad de gestión que conduce a más ceremonia, incluidos más revisiones y objetivos formales y más
+        productos de trabajo.
+    </li>
+    <li>
+        Una mayor complejidad técnica que conduce a la introducción de técnicas, roles y herramientas específicos y, por
+        tanto, más tareas.
+    </li>
+</ul>
+<p align="center">
+    <img height="390" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/supportingmaterials/resources/complex.gif"     width="467" />
+</p>
+<p class="picturetext">
+    Los sistemas se clasifican en términos de complejidad técnica y complejidad de gestión.<br />
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

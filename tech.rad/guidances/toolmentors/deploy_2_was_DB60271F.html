@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Desplegar una aplicaci&oacute;n web en un WebSphere Application Server</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="deploy_2_was" name="uma.name">
+<meta content="Desplegar una aplicaci&oacute;n web en un WebSphere Application Server" name="uma.presentationName">
+<meta content="Tool:rup_rational_application_developer:Rational Application Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Application Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "__hxOUEUCEdqMr9-tA4TBpQ", "{FF5C8D51-D0A1-48DE-B4EA-D351F9154F53}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "__hxOUEUCEdqMr9-tA4TBpQ", "{FF5C8D51-D0A1-48DE-B4EA-D351F9154F53}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "__hxOUEUCEdqMr9-tA4TBpQ", "{FF5C8D51-D0A1-48DE-B4EA-D351F9154F53}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{FF5C8D51-D0A1-48DE-B4EA-D351F9154F53}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Desplegar una aplicaci&oacute;n web en un WebSphere Application Server</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta guía de la herramienta describe cómo desplegar una aplicación web en un servidor de aplicaciones WebSphere utilizando el entorno de modelado RAD 6.0. </td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_rational_application_developer_BCA25C88.html" guid="__hxOUEUCEdqMr9-tA4TBpQ">Rational Application Developer</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/integrate_subsystem_E8F878D6.html" guid="{58FF0476-120F-411A-AD8C-16573032BE91}">Integrar los subsistemas</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/integrate_system_9AFF7BFD.html" guid="{3233A207-6271-4492-A8BF-64E1D89D6C5E}">Integrar el sistema</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    Antes de poder desplegar una aplicación web, primero se debe ensamblar en un archivo de archivado (Módulo <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">J2EE</a> o Aplicación <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_436A58D2.html" guid="1.6057780853529704E-306">J2EE</a> ). A continuación, el despliegue consiste simplemente en instalar el archivo de
+    archivado en el servidor utilizando las herramientas administrativas de WebSphere. En esta guía de la herramienta se
+    llevan a cabo los pasos siguientes:
+</p>
+<ul>
+    <li>
+        <a href="#step1">Crear un archivo de archivado para la aplicación</a>
+    </li>
+    <li>
+        <a href="#step2">Instalar el archivo de archivado en el WebSphere Application Server</a>
+    </li>
+</ul>
+<h3>
+    <a id="step1" href="#Top" name="step1">Crear un archivo de archivado para la aplicación</a>
+</h3>
+<p>
+    Si su aplicación web ha sido desarrollada en el entorno RAD 6.0, siga los pasos descritos en <a class="elementLinkWithUserText" href="./../../../tech.rad/guidances/toolmentors/assemble_j2ee_mod_app_6CEB1308.html" guid="{255EDC79-8B64-4C22-94B1-AC38FC04EB37}">Tool Mentor: Assembling J2EE Modules and Applications Using RAD 6.0</a>
+    para empaquetarla en un archivo de archivado. De no ser así, puede utilizar el <em>Kit de utilidades de ensamblaje</em>
+    incluido con el WebSphere Application Server para crear un archivo de la manera siguiente:
+</p>
+<ol>
+    <li>
+        Inicie el kit de utilidades de ensamblaje. 
+        <ol type="a">
+            <li>
+                En Windows, seleccione <strong>Inicio &gt; Programas &gt; IBM &gt; ASTK &gt; ASTK</strong>.
+            </li>
+            <li>
+                En la ventana <em>Kit de utilidades del servidor de aplicaciones</em>, especifique un nombre de espacio de
+                trabajo y pulse <strong>Aceptar</strong>.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Para crear un archivo <strong>Enterprise Application Archive (EAR)</strong>: 
+        <ol type="a">
+            <li>
+                En la perspectiva J2EE, seleccione <strong>Archivo &gt; Nuevo &gt; Proyecto de aplicación
+                empresarial</strong>.
+            </li>
+            <li>
+                Utilice el asistente <em>Nuevo proyecto de aplicación empresarial</em> para seleccionar el nivel J2EE al
+                que se dará soporte, especificar el nombre y ubicación del archivo EAR y seleccionar los módulos existentes
+                (Web, EJB, Cliente de aplicación o Conector) para incluirlos en el archivo EAR.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Para crear un archivo <strong>Archivo web (WAR)</strong>: 
+        <ol type="a">
+            <li>
+                En la perspectiva J2EE, seleccione <strong>Archivo &gt; Nuevo &gt; Proyecto de web dinámica</strong>.
+            </li>
+            <li>
+                Utilice el asistente <em>Nuevo proyecto web</em> para especificar el nombre y ubicación del archivo WAR,
+                asociarlo con un archivo EAR y personalizar las opciones de proyecto Web.
+            </li>
+            <li>
+                Tras la creación del nuevo proyecto web, puede importar el contenido web de su aplicación mediante el
+                asistente de <em>Importación</em> disponible en el menú <strong>Archivo</strong>.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Para crear un archivo <strong>EJB JAR</strong>: 
+        <ol type="a">
+            <li>
+                En la perspectiva J2EE, seleccione <strong>Archivo &gt; Nuevo &gt; Proyecto EJB</strong>.
+            </li>
+            <li>
+                Utilice el asistente <em>Nuevo proyecto EJB</em> para seleccionar la versión de especificación que se debe
+                utilizar, especificar el nombre y ubicación del archivo JAR, asociarlo con un archivo EAR y definir
+                cualquier dependencia de módulos y archivos JAR.
+            </li>
+            <li>
+                Tras la creación del nuevo proyecto EJB, puede importar sus Enterprise JavaBeans y productos de trabajo de
+                código relacionados mediante el asistente de <em>Importación</em> disponible en el menú
+                <strong>Archivo</strong>.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Para crear un archivo <strong>JAR de cliente de aplicación</strong>: 
+        <ol type="a">
+            <li>
+                En la perspectiva J2EE, seleccione <strong>Archivo &gt; Nuevo &gt; Proyecto de cliente de
+                aplicación</strong>.
+            </li>
+            <li>
+                Utilice el asistente <em>Creación de un proyecto de cliente de aplicación</em> para seleccionar el nivel
+                J2EE que se debe utilizar, especificar el nombre y ubicación del archivo JAR, asociarlo con un archivo EAR
+                y definir cualquier dependencia de módulos y archivos JAR.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Para crear un archivo <strong>Resource Adapter Archive (RAR)</strong>: 
+        <ol type="a">
+            <li>
+                En la perspectiva J2EE, seleccione <strong>Archivo &gt; Nuevo &gt; Proyecto de conector</strong>.
+            </li>
+            <li>
+                Utilice el asistente <em>Nuevo proyecto de conector</em> para especificar el nombre y ubicación del archivo
+                JAR, asociarlo con un archivo EAR y definir cualquier dependencia de módulos y archivos JAR.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Edite los descriptores de despliegue para aplicaciones empresariales, Web, EJB o módulos de cliente de aplicación
+        según sea necesario. 
+        <ol type="a">
+            <li>
+                En la vista de jerarquía J2EE, pulse con el botón derecho del ratón sobre el módulo y seleccione
+                <strong>Abrir con &gt; Editor del descriptor de despliegue</strong>.
+            </li>
+            <li>
+                Seleccione la pestaña adecuada en la parte inferior de la vista de edición para editar los valores
+                específicos del descriptor de despliegue.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Generación de código de despliegue para los módulos EJB. 
+        <ol type="a">
+            <li>
+                En la vista de jerarquía J2EE, pulse con el botón derecho del ratón sobre el módulo y seleccione
+                <strong>Generar &gt; Código de despliegue y RMIC</strong>.
+            </li>
+            <li>
+                Asegúrese que no se creen informes de problemas durante el proceso de generación.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Generación de código de despliegue para módulos con los servicios web habilitados. 
+        <ol type="a">
+            <li>
+                En la vista de jerarquía J2EE, pulse con el botón derecho del ratón sobre el módulo y seleccione
+                <strong>Servicios web &gt; Despliegue de servicios web</strong>.
+            </li>
+            <li>
+                Asegúrese que no se creen informes de problemas durante el proceso de generación.
+            </li>
+        </ol>
+    </li>
+</ol>
+<h3>
+    <a id="step2" href="#Top" name="step2">Instalar el archivo de archivado en el WebSphere Application Server</a>
+</h3>
+<p>
+    Tras ensamblar la aplicación, utilice las herramientas administrativas de WebSphere para desplegar los archivos EAR,
+    WAR o JAR en el servidor de aplicaciones. Para una interfaz gráfica de usuario o un interfaz basada en scripts, utilice
+    la <em>Consola administrativa</em> o la herramienta <em>wsadmin</em>, respectivamente. para utilizar la <em>Consola
+    administrativa</em>:
+</p>
+<ol>
+    <li>
+        Inicie el servidor de aplicaciones (utilice el mandato <strong>startServer</strong> de una línea de mandatos).
+    </li>
+    <li>
+        Inicie la Consola administrativa abriendo un navegador web y entrando: <strong>http://
+        su_nombre_servidor:9090/admin</strong>.
+    </li>
+    <li>
+        Inicie sesión en la Consola.
+    </li>
+    <li>
+        Siga los pasos para instalar <a href="http://publib.boulder.ibm.com/infocenter/ws51help/topic/com.ibm.websphere.nd.doc/info/ae/ae/trun_app_instwiz.html" target="_blank">una nueva aplicación.</a> .
+    </li>
+</ol></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Dise&ntilde;o de JavaBeans</title>
+<meta content="Guideline" name="uma.type">
+<meta content="designing_javabeans" name="uma.name">
+<meta content="Dise&ntilde;o de JavaBeans" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.360568578285337E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.360568578285337E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Dise&ntilde;o de JavaBeans</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la forma en que diseñar JavaBeans para una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Diseño de clase</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    Esta directriz se centra en el diseño de JavaBeans y las distintas opciones que puede realizar un diseñador.
+</p>
+<p>
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/javabean_D488CF3B.html" guid="7.536447688812142E-306">Concepto:
+    JavaBeans</a> para obtener más información.
+</p>
+<h3>
+    <a id="JavaBean_Properties" name="JavaBean_Properties"></a>Propiedades de los JavaBeans
+</h3>
+<p>
+    De forma interna, un valor de propiedad se puede almacenar como un campo privado, pero también puede ser un campo
+    calculado. El diseñador tiene la posibilidad de precalcular el valor de la propiedad o bien utilizar la evaluación
+    diferida en al que el valor sólo se calculará cuando el interlocutor lo solicite.
+</p>
+<p>
+    El diseñador también tiene la posibilidad establecer límites o restricciones a la propiedad. Si la propiedad tiene
+    límites o restricciones, entonces el diseñador debe decidir sobre el mecanismo de <a href="#Events_and_Notification">sucesos y notificación</a>.
+</p>
+<h3>
+    <a id="Events_and_Notification" name="Events_and_Notification"></a>Sucesos y notificación
+</h3>
+<p>
+    El diseñador tiene dos opciones para implementar el mecanismo de notificación:
+</p>
+<ul>
+    <li>
+        Utilizar las clases <i>PropertyChangeSupport</i> y <i>PropertyChangeEvent</i> del paquete <i>java.beans</i>.
+    </li>
+    <li>
+        Crear un mecanismo personalizado de notificación.
+    </li>
+</ul>
+<p>
+    Las clases del paquete <i>java.beans</i> proporcionan una implementación que se puede aplicar en la mayoría de
+    situaciones. <i>PropertyChangeEvent</i> contiene la referencia al objeto que ha desencadenado el suceso, el nombre de
+    la propiedad como una serie de texto y dos objetos que representan el valor antiguo y el nuevo valor de la propiedad.
+    La clase <i>PropertyChangeSupport</i> mantiene una colección de <i>PropertyChangeListeners</i> y contiene el código
+    para la notificación en el método <i>firePropertyChange</i>.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/property_change_support.gif" />
+    </p>
+</blockquote>
+<p>
+    <i>PropertyChangeSupport</i> se utiliza habitualmente para JavaBeans que forman parte de interfaces de usuario.
+</p>
+<p>
+    La notificación personalizada puede ser apropiada cuando es necesario minimizar la sobrecarga asociada a la creación de
+    objetos de suceso. El inconveniente está en que el implementador debe implementar un mecanismo de notificación. El
+    implementador de la notificación personalizada debe tener en cuenta que distintas hebras pueden añadir o eliminar
+    escuchas durante el proceso de notificación. Para proporcionar un comportamiento correcto, en la mayoría de soluciones
+    se crea una copia de la colección que mantienen los escuchas; la notificación se realiza entonces con la copia. La
+    mayoría de las implementaciones publicadas crean dicha copia al principio del proceso de notificación, que da lugar a
+    la creación de muchos clones y degrada el rendimiento. Sin embargo, dado que las notificaciones son mucho más comunes
+    que las adiciones o eliminaciones de escuchas, una copia de larga vida se puede crear anticipadamente durante la
+    adición o eliminación de los escuchas y a continuación reutilizarla para las notificaciones, proporcionando una
+    ejecución más rápida.
+</p>
+<p>
+    Teniendo en cuenta la productividad de los desarrolladores, la notificación personalizada sólo se debería intentar
+    cuando se demuestre que el rendimiento del soporte de cambio de propiedad del paquete <i>java.beans</i> sea el cuello
+    de botella.
+</p>
+<p>
+    En los siguientes ejemplos se demuestran tanto el uso del soporte de cambio de propiedad del paquete <i>java.beans</i>
+    como la utilización de un mecanismo de notificación personalizado.
+</p>
+<p>
+    &nbsp;
+</p>
+<p>
+    <b>Ejemplo</b>: JavaBean Tank utilizando <i>java.beans.PropertyChangeSupport</i>
+</p>
+<p>
+    Aquí tenemos un JavaBean representando un <i>tanque</i>, que tiene una propiedad de límite: <i>level</i>. Cuando el
+    nivel de <i>Tank</i> cambia, <i>Tank</i> desencadena un <i>PropertyChangeEvent</i> que el objeto <i>TankController</i>
+    maneja.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/tank_example.gif" />
+    </p>
+</blockquote>
+<p>
+    &nbsp;
+</p>
+<p>
+    <b>Ejemplo</b>: JavaBean Tank utilizando notificación personalizada
+</p>
+<p>
+    En el siguiente ejemplo, la clase <i>Tank</i> se implementa con un mecanismo de notificación más eficiente y
+    personalizado, que prescinde de la creación de objetos durante la notificación.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/tank_custom_example.gif" />
+    </p>
+</blockquote><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.inferdata.com" target="_blank"><img alt="logotipo de Inferdata"                 src="./../../../tech.j2ee/guidances/supportingmaterials/resources/inferdata.gif" width="100" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Contenido desarrollado o parcialmente desarrollado por <a href="http://www.inferdata.com/" target="_blank">Inferdata Corporation</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; Copyright&nbsp;IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

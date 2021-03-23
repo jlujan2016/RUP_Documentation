@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de tareas: Manejar las excepciones y los problemas</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="handle_exceptions_and_problems" name="uma.name">
+<meta content="Manejar las excepciones y los problemas" name="uma.presentationName">
+<meta content="_GAAbQEogEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="Gestor de proyectos">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={EA0C1D32-E39A-4D96-B956-E178DB776A96}&path={EA0C1D32-E39A-4D96-B956-E178DB776A96},{F40E3BFA-9909-4D3D-8AEB-E08E3C0DC8F0},_GAAbQEogEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_vyZOwCVuEdqSZ9OimJ-AzA", "_o3nZoSFrEdqrX8YVzvtlIg", "_wh5JcCGGEdqMcovRzkCQow", "_GAAbQEogEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_-VJOICJbEdqQipbmJ0SDbw", "_hpF5YCJbEdqQipbmJ0SDbw", "_GAAbQEogEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_gShAwDHtEdqLw-lQEI8RPw", "_hpF5YCJbEdqQipbmJ0SDbw", "_GAAbQEogEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_bE7sIDHuEdqLw-lQEI8RPw", "_hpF5YCJbEdqQipbmJ0SDbw", "_GAAbQEogEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEoTmTEdqBe965knBZig", "_nnJaEUpZEdqIWYHxYBysQA", "_wh5JcCGGEdqMcovRzkCQow", "_GAAbQEogEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_-VJOICJbEdqQipbmJ0SDbw", "_hpF5YCJbEdqQipbmJ0SDbw", "_GAAbQEogEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_gShAwDHtEdqLw-lQEI8RPw", "_hpF5YCJbEdqQipbmJ0SDbw", "_GAAbQEogEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_bE7sIDHuEdqLw-lQEI8RPw", "_hpF5YCJbEdqQipbmJ0SDbw", "_GAAbQEogEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEoTmTEdqBe965knBZig", "_nnJaEUpZEdqIWYHxYBysQA", "_wh5JcCGGEdqMcovRzkCQow", "_GAAbQEogEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_-VJOICJbEdqQipbmJ0SDbw", "_hpF5YCJbEdqQipbmJ0SDbw", "_GAAbQEogEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_gShAwDHtEdqLw-lQEI8RPw", "_hpF5YCJbEdqQipbmJ0SDbw", "_GAAbQEogEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_bE7sIDHuEdqLw-lQEI8RPw", "_hpF5YCJbEdqQipbmJ0SDbw", "_GAAbQEogEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_GAAbQEogEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Manejar las excepciones y los problemas</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta tarea se describe cómo iniciar las acciones correctivas apropiadas para los problemas y las excepciones que surjan durante el proyecto.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Principal:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_project_manager_DFD4A514.html" guid="_CZbnVRi2Edq_uI8xTPML6g">Gestor de proyectos</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Adicional:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">Asistencia:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_issues_list_CE6DB92A.html" guid="_CZbnVhi2Edq_uI8xTPML6g">Lista de problemas</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_status_assessment_9DBD70B.html" guid="_CZbnUhi2Edq_uI8xTPML6g">Valoraci&oacute;n de estado</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_cm_plan_2DB86FF0.html" guid="_GAMogEogEdqrjq4i3fchvA">Plan de gesti&oacute;n de la configuraci&oacute;n</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_problem_resolution_plan_D90B993A.html" guid="_CZbnVxi2Edq_uI8xTPML6g">Plan de resoluci&oacute;n de problemas</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_issues_list_CE6DB92A.html" guid="_CZbnVhi2Edq_uI8xTPML6g">Lista de problemas</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_work_order_A4668733.html" guid="_CZbnWRi2Edq_uI8xTPML6g">Pedido de trabajo</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    Una valoración de estado se crea en la tarea Informe de estado planificada periódicamente. Cada valoración de estado
+    identifica los <b>problemas</b> o "las cosas que no han funcionado bien". Pueden ser problemas del proyecto (p.ej.,
+    desviaciones de planes, personal), problemas del producto (defectos, ambigüedades en los requisitos, deficiencias en la
+    tecnología) y riesgos realizados. La valoración de estado también identifica las <b>excepciones</b> que se producen.
+    Las excepciones pueden considerarse como problemas que plantean barreras al progreso del proyecto (p.ej.,
+    disponibilidad de equipos, disponibilidad de personas clave para responder a preguntas, dificultad para tomar una
+    decisión). El gestor de proyectos también mantiene una lista de problemas, que se mantiene más o menos de forma
+    continuada y que por tanto suele estar más actualizada que la valoración de estado. Éstas son las formas de registrar y
+    realizar el seguimiento de los problemas que son el estímulo para esta tarea.
+</p>
+<p>
+    El gestor de proyectos invoca la tarea Manejar las excepciones y los problemas para solucionar los problemas a medida
+    que se van conociendo.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> Evaluar las excepciones y los problemas </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Evaluate Exceptions and Problems" name="Evaluate Exceptions and Problems"></a>
+<p>
+    El primer paso es evaluar cada uno de los problemas identificados en la valoración de estado y en la lista de
+    problemas. Para ello, en la mayoría de proyectos se realiza una "reunión de problemas" periódica (a menudo semanal) en
+    la que asisten el gestor de proyectos, el arquitecto de software y los jefes de equipo. Para cada problema, se debe
+    identificar la causa, su impacto sobre el proyecto y determinar las opciones de que se dispone para resolverlo. También
+    se debe determinar si las soluciones posibles están dentro de la autoridad del equipo del proyecto para su
+    implementación.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Determinar las acciones correctivas apropiadas</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Determine Appropriate Corrective Actions" name="Determine Appropriate Corrective Actions"></a>
+<p>
+    A continuación, para cada problema/excepción, seleccione el enfoque preferido para su resolución y determine los pasos
+    que debe seguir para implementarlo. Si este enfoque requiere un cambio en el plan de desarrollo de software o en los
+    requisitos o diseño del producto, deberá crear una solicitud de cambio e implementar el cambio siguiendo el plan de
+    gestión de la configuración. Si el enfoque no cambia uno de los planes de línea base, el gestor de proyectos podrá
+    implementar la solución emitiendo un nuevo pedido de trabajo. En cualquiera de los dos casos, si la solución preferida
+    está fuera de la autoridad del equipo del proyecto, el problema debe escalarse a la autoridad de revisión de proyectos
+    para su resolución. Por ejemplo, si el gestor de proyectos ha determinado que sin la acción correctiva la iteración
+    actual no cumplirá su fecha final planificada, el curso de acción preferido será volver a establecer el ámbito de la
+    iteración (porque las iteraciones deben tener un <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/timeboxing_109B588A.html" guid="_yYy-k9nmEdmO6L4XMImrsA">tiempo
+    límite</a>): si esto afecta a algo que debe entregarse al cliente al final de la iteración, no debe realizarse
+    unilateralmente por el equipo del proyecto.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Emitir solicitudes de cambio y/o pedidos de trabajo</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Issue Change Requests and/or Work Orders" name="Issue Change Requests and/or Work Orders"></a>
+<p>
+    Una vez que se ha determinado la acción correctiva para cada problema o excepción, y las aprobaciones necesarias, el
+    gestor de proyectos documenta el trabajo involucrado y emite solicitudes de cambio y/o pedidos de trabajo para iniciar
+    el trabajo. En este punto, el gestor de proyectos a menudo puede retirar problemas de la lista de problemas ya que el
+    seguimiento del cierre se realizará por otros medios.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Varias apariciones" abbr="Varias apariciones">Varias apariciones</th><td align="left" class="sectionTableCell" headers="property_Varias apariciones"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Condicionado por sucesos" abbr="Condicionado por sucesos">Condicionado por sucesos</th><td align="left" class="sectionTableCell" headers="property_Condicionado por sucesos"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Continuo" abbr="Continuo">Continuo</th><td align="left" class="sectionTableCell" headers="property_Continuo"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Se puede repetir" abbr="Se puede repetir">Se puede repetir</th><td align="left" class="sectionTableCell" headers="property_Se puede repetir"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Scripts de prueba automatizados de programaci&oacute;n</title>
+<meta content="Guideline" name="uma.type">
+<meta content="programming_automated_test_scripts" name="uma.name">
+<meta content="Scripts de prueba automatizados de programaci&oacute;n" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{293A9F23-BB20-4993-AABE-76C1E8E1A589}", "6.202272769754314E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_OKm3oN7UEdmjRZts2c4ZjQ", "{293A9F23-BB20-4993-AABE-76C1E8E1A589}", "6.202272769754314E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "6.202272769754314E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{293A9F23-BB20-4993-AABE-76C1E8E1A589}", "6.202272769754314E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="6.202272769754314E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Scripts de prueba automatizados de programaci&oacute;n</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se describen los principios del desarrollo del script de prueba automatizado eficaz.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_test_script_2140080.html" guid="{293A9F23-BB20-4993-AABE-76C1E8E1A589}">Script de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="script de prueba" text="directrices para" name="XE_test_script__guidelines_for" id="XE_test_script__guidelines_for" class="index"></a> 
+<h3>
+    <a id="StructureOfTestScripts" name="StructureOfTestScripts">Estructura de los scripts de prueba</a>
+</h3>
+<p>
+    Para aumentar la capacidad de mantenimiento y de reutilización de los scripts de prueba, deben estar estructurados
+    antes de que se implementen. Probablemente encontrará que hay acciones que aparecerán en varios scripts de prueba. Un
+    objetivo debería ser identificar estas acciones para que pueda reutilizar su implementación.
+</p>
+<p>
+    Por ejemplo, puede tener scripts de prueba que son combinaciones de diferentes acciones que se pueden efectuar en un
+    registro. Estos scripts de prueba pueden ser combinaciones de adición, modificación y eliminación de un registro:
+</p>
+<ul>
+    <li>
+        Añadir, Modificar, Suprimir (lo obvio)
+    </li>
+    <li>
+        Añadir, Suprimir, Modificar
+    </li>
+    <li>
+        Añadir, Suprimir, Añadir, Suprimir, ...
+    </li>
+    <li>
+        Añadir, Añadir, Añadir ...
+    </li>
+</ul>
+<p>
+    Si identifica e implementa estas acciones como scripts de prueba separados y los reutiliza en otros scripts de prueba,
+    alcanzará un nivel de reutilización más elevado.
+</p>
+<p>
+    Otro objetivo sería estructurar los scripts de prueba de forma que un cambio en el software de destino provoque un
+    cambio localizado y controlable en los scripts de prueba. Esto hará que sus scripts de prueba sean más flexibles ante
+    los cambios en el software de destino. Por ejemplo digamos que la porción de conexión del software ha cambiado. Para
+    todos los casos de prueba que atraviesan la porción de conexión, sólo el script de prueba que pertenece a la conexión
+    tendrá que cambiar.
+</p>
+<h3>
+    <a id="RecordingTechnique" name="RecordingTechnique">Técnica de grabación</a> <a key="técnica de grabación de scripts de prueba" name="XE_recording_techniques_for_test_scripts" id="XE_recording_techniques_for_test_scripts" class="index"></a><a key="script de prueba" text="técnicas de grabación" name="XE_test_script__recording_techniques" id="XE_test_script__recording_techniques" class="index"></a>
+</h3>
+<p>
+    Para alcanzar una alta capacidad de mantenimiento de sus scripts de prueba, debe registrarlos de modo que sea menos
+    vulnerable a los cambios en el destino de la prueba. Por ejemplo, para un script de prueba que rellena los campos de un
+    recuadro de diálogo, existen opciones sobre cómo proceder de un campo al siguiente:
+</p>
+<ul>
+    <li>
+        Utilizar la tecla TAB
+    </li>
+    <li>
+        Utilizar el ratón
+    </li>
+    <li>
+        Utilizar las teclas de aceleración del teclado
+    </li>
+</ul>
+<p>
+    De estas opciones, algunas son más vulnerables a los cambios de diseño que otras. Si se inserta un nuevo campo en la
+    pantalla, el enfoque de tecla TAB no será fiable. Si las teclas de aceleración se reasignan, no proporcionarán un buen
+    registro. Si el método que utiliza el ratón para identificar un campo está sujeto a cambios, este no será un método
+    fiable. Sin embargo, algunas herramientas de automatización de prueba tienen grabadores de scripts de prueba que se
+    pueden instruir para identificar el campo con un método más fiable, como el nombre de objeto asignado por la
+    herramienta de desarrollo (PowerBuilder, SQLWindows o Visual Basic). De este modo, un grabador de script de prueba no
+    está afectado por los cambios menores de la interfaz de usuario (por ej., cambios en el diseño, cambios en las
+    etiquetas de campo, cambios de formato, etc.)
+</p>
+<h3>
+    <a id="Data-DrivenTesting" name="Data-DrivenTesting">Pruebas controladas por datos</a> <a key="pruebas controladas por datos" name="XE_data-driven_testing" id="XE_data-driven_testing" class="index"></a><a key="script de prueba" text="pruebas controladas por datos" name="XE_test_script__data-driven_testing" id="XE_test_script__data-driven_testing" class="index"></a>
+</h3>
+<p>
+    Muchos scripts de prueba implican la entrada de varios conjuntos de datos de campo en una pantalla de entrada de datos
+    para comprobar las funciones de validación de campo, manejo de errores, etc. Los pasos de procedimiento son los mismos;
+    sólo los datos son diferentes. En lugar de registrar un script de prueba para cada conjunto de datos de entrada, un
+    único registro debe realizarse y modificarse posteriormente para manejar múltiples conjuntos de datos. Por ejemplo,
+    todos los conjuntos de datos que producen el mismo error debido a datos no válidos pueden compartir el mismo script de
+    prueba registrado. El script de prueba se modifica para dirigir los datos como información variable, para leer los
+    conjuntos de datos desde un archivo u otra fuente externa y para generar un bucle a través de todos los conjuntos de
+    datos relevantes.
+</p>
+<p>
+    Si los scripts de prueba o el código de prueba se han desarrollado para generar el bucle a través de conjuntos de datos
+    de entrada y de salida los conjuntos de datos deben estar establecidos. El formato habitual para utilizar estos
+    conjuntos de datos son los registros de campos separados por comas en un archivo de texto. Este formato es fácil de
+    leer desde los scripts de prueba y es muy fácil de crear y mantener.
+</p>
+<p>
+    La mayoría de paquetes de base de datos y de hoja de cálculo pueden producir salidas textuales separadas por comas. La
+    utilización de estos paquetes para organizar o capturar conjuntos de datos tiene dos beneficios importantes. Primero,
+    proporcionan un entorno más estructurado para entrar y editar los datos que simplemente utilizar un editor de texto o
+    procesador de texto. Segundo, la mayoría tienen la capacidad de consultar bases de datos existentes y capturar los
+    datos devueltos, permitiendo una forma sencilla de extraer conjuntos de datos de las fuentes existentes.
+</p>
+<h3>
+    <a id="ErrorHandling" name="ErrorHandling">Manejo de errores</a> <a key="manejo de errores" text="en pruebas" name="XE_error_handling__in_testing" id="XE_error_handling__in_testing" class="index"></a>
+</h3>
+<p>
+    El script de prueba registrado es secuencial en esta ejecución. No hay puntos de ramificación. El manejo de errores
+    robusto en los scripts de prueba requiere una lógica adicional para responder a condiciones de error. La lógica de la
+    decisión que se puede emplear cuando ocurren los errores incluye:
+</p>
+<ul>
+    <li>
+        Ramificaciones a diferentes scripts de prueba.
+    </li>
+    <li>
+        Llamada a un script que intenta limpiar la condición de error.
+    </li>
+    <li>
+        Salir del script e iniciar el siguiente.
+    </li>
+    <li>
+        Salir del script y del software, reiniciar y reanudar la prueba en el script de prueba siguiente después del que ha
+        fallado.
+    </li>
+</ul>
+<p>
+    Cada técnica de manejo de errores requiere una lógica de programa añadida al script de prueba. Siempre que sea posible,
+    esta lógica debe confinarse a los scripts de prueba de alto nivel que controlan las secuencias de los scripts de prueba
+    de niveles inferiores. Esto permite que los scripts de prueba de nivel inferior se creen completamente desde el
+    registro.
+</p>
+<h3>
+    <a id="TestScriptSynchronizationAndScheduling" name="TestScriptSynchronizationAndScheduling">Sincronización y
+    planificación de script de prueba</a> <a key="script de prueba" text="sincronización y planificación de" name="XE_test_script__synchronization_and_scheduling_of" id="XE_test_script__synchronization_and_scheduling_of" class="index"></a>
+</h3>
+<p>
+    Cuando se realice una prueba de tensión, suele ser deseable sincronizar los scripts de prueba para que se inicien a
+    horas predefinidas. Los scripts de prueba se pueden modificar para que se inicien en un momento concreto comparando la
+    hora de inicio deseada con la hora del sistema. En sistemas en red, cada estación de prueba compartirá, a través de la
+    red, el mismo reloj. En el ejemplo siguiente (de un script escrito en BASIC), las sentencias se han insertado al inicio
+    de un script para suspender la ejecución del script hasta que se haya alcanzado la hora necesaria.
+</p>
+<p class="example">
+    <code>InputFile$ = "TIME.DAT"<br />
+     Open InputFile$ For Input As 1<br />
+     Input #1, StartTime$<br />
+     Close #1<br />
+     Do While TimeValue(StartTime$) &gt; Time<br />
+     &nbsp;&nbsp;&nbsp;DoEvents<br />
+     Loop</code><br />
+     [Start script]
+</p>
+<p>
+    En este ejemplo, la hora de inicio necesaria se almacena en un archivo. Esto permite que la hora de inicio se cambie
+    sin cambiar el script de prueba. La hora se lee y se almacena en una variable denominada <code>StartTime$</code>. El
+    bucle <code>Do While</code> continua hasta que se alcanza la hora de inicio. La sentencia <code>DoEvents</code> es
+    importante: permite que las tareas de fondo se ejecuten mientras el script de prueba está suspendido y esperando
+    empezar. Sin la sentencia <code>DoEvents</code>, el sistema no respondería hasta que se hubiera alcanzado la hora de
+    inicio.
+</p>
+<h3>
+    <a id="TestingAndDebuggingTestScripts" name="TestingAndDebuggingTestScripts">Prueba y depuración de los scripts de
+    prueba</a> <a key="script de prueba" text="probar y depurar scripts de prueba" name="XE_test_script__testing_and_debugging_test_scripts" id="XE_test_script__testing_and_debugging_test_scripts" class="index"></a>
+</h3>
+<p>
+    Cuando los scripts de prueba que se acaban de registrar se ejecutan en el mismo software en que se registraron, no
+    deben aparecer errores. El entorno y el software son idénticos a cuando se registró. Puede haber instancias en que el
+    script de prueba no se ejecute satisfactoriamente. La prueba de los scripts de prueba revela estos casos, y permite que
+    los scripts se corrijan antes de utilizarse en una prueba real. Dos tipos de problemas típicos se discuten a
+    continuación:
+</p>
+<ul>
+    <li>
+        La ambigüedad en los métodos que se utilizan para seleccionar elementos en una interfaz de usuario puede hacer que
+        los scripts de prueba funcionen de forma diferente en la reproducción. Por ejemplo, dos elementos que se reconocen
+        por su texto (o título) pueden tener un texto idéntico. Habrá ambigüedad cuando se ejecute el script.
+    </li>
+    <li>
+        Se registra la ejecución de la prueba/los datos específicos de la sesión (por ej., un puntero, fecha/hora o algún
+        otro valor de datos generado por el sistema), pero es diferente en la reproducción.
+    </li>
+</ul>
+<p>
+    Las diferencias de tiempo en el registro y la reproducción y puede producir problemas. El registro de los script de
+    prueba es inherentemente un proceso más lento que ejecutarlo. A veces esta diferencia de tiempo provoca que el script
+    de prueba se ejecute por delante del software. En estos casos, los estados de espera se pueden insertar para regular el
+    script de prueba a la velocidad del software.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

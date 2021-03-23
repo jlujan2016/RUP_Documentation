@@ -1,0 +1,543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Decisiones importantes de prueba</title>
+<meta content="Guideline" name="uma.type">
+<meta content="important_decisions_in_test" name="uma.name">
+<meta content="Decisiones importantes de prueba" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_yd3EzdnmEdmO6L4XMImrsA", "2.474890767192022E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.474890767192022E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_u2yEADIEEdqwaNnSEheSAg", "_yd3EzdnmEdmO6L4XMImrsA", "2.474890767192022E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.474890767192022E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Decisiones importantes de prueba</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se describen cuestiones importantes a tener en cuenta cuando se personalizan los aspectos de prueba del proceso.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/develop_development_case_B10E3391.html" guid="{F6999E01-701F-4D48-9E83-A063CB35912B}">Desarrollar el guión de desarrollo</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/tailor_process_for_project_6CFD05E2.html" guid="{1BA9AAA0-DA89-4C14-B45A-CE28A8A10894}">Personalizar el proceso de desarrollo para el proyecto</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/disciplines/rup_test_discipline_9DFAFB2F.html" guid="_yd3EzdnmEdmO6L4XMImrsA">Prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="disciplina de prueba" text="decisiones importantes" name="XE_test_discipline__important_decisions" id="XE_test_discipline__important_decisions" class="index"></a> 
+<h3>
+    <a id="DecideHowToUseArtifacts" name="DecideHowToUseArtifacts">Decidir cómo utilizar los productos de trabajo</a>
+</h3>
+<p>
+    Decida qué productos de trabajo utilizar y cómo utilizarlos de forma efectiva. En la tabla siguiente se describe qué
+    productos de trabajo recomendamos que utilice y cuáles puede tener en cuenta en contextos particulares. Para obtener
+    información más detallada sobre cómo personalizar cada producto de trabajo, y una discusión de las ventajas y
+    desventajas de este producto de trabajo específico, lea la sección titulada "Personalización" de cada producto de
+    trabajo.
+</p>
+<p>
+    Para cada producto de trabajo, decida cómo debe utilizarse el producto de trabajo:Debe tener, Debería tener, Puede
+    tener o No tendrá. Para obtener más detalles, consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/classifying_work_products_4250A298.html" guid="7.27749388241665E-306">Técnica: Clasificación de productos de trabajo</a>.
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="left" width="20%">
+                    Producto de trabajo
+                </th>
+                <th scope="col" align="left" width="40%">
+                    Objetivo
+                </th>
+                <th scope="col" align="left" width="40%">
+                    Personalización (Opcional, recomendada)
+                </th>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_evaluation_summary_D9B4016B.html" guid="{C6AAA2A6-C5AD-42DA-BCBC-9B1349D7B6CF}">Resumen de evaluación de prueba</a>
+                </td>
+                <td width="40%">
+                    Resume los resultados de la prueba que utiliza principalmente el equipo de gestión y otros interesados
+                    externos del equipo de prueba.
+                </td>
+                <td width="40%">
+                    Recomendada para la mayoría de proyectos.<br />
+                    <br />
+                     Donde la cultura del proyecto es relativamente información, puede ser apropiado registrar los
+                    resultados de prueba y no crear resúmenes de evaluación formales. En otros casos, los resúmenes de
+                    evaluación de prueba se pueden incluir como sección dentro de otros productos de trabajo de valoración,
+                    como la <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_iteration_assessment_D08C6F7.html" guid="{06114AF1-4D98-46B5-AE8B-DDEDFFE9B42B}">valoración de iteración</a> o el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_review_record_CA816ECE.html" guid="{4047B5B0-5FB7-4960-8A7E-451719D85DFF}">registro de revisión</a>.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_results_189F0BEF.html" guid="{87374880-B351-4822-8C1E-819ECA9F51D4}">Resultados de la prueba</a>
+                </td>
+                <td width="40%">
+                    Este producto de trabajo es el resultado analizado determinado a partir de los datos brutos de uno o
+                    más registros de prueba.
+                </td>
+                <td width="40%">
+                    Recomendado. La mayoría de equipos de prueba mantienen algún tipo de registro razonablemente detallado
+                    de los resultados de las pruebas. Los resultados de las pruebas manuales habitualmente se registran
+                    aquí directamente, y se combinan con los registros de prueba destilados a partir de las pruebas
+                    automatizadas.<br />
+                    <br />
+                     En algunos casos, los equipos de prueba irán directamente de los registros de prueba a producir el
+                    Resumen de evaluación de prueba.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_log_50821860.html" guid="{528F34BA-0118-40F3-8D29-DE60EF4183A6}">Registro de prueba</a>
+                </td>
+                <td width="40%">
+                    <p>
+                        Los datos brutos obtenidos durante la prueba de ejecución, habitualmente producido por las pruebas
+                        automatizadas.
+                    </p>
+                </td>
+                <td width="40%">
+                    <p>
+                        Opcional.
+                    </p>
+                    <p>
+                        Muchos proyectos que efectúan pruebas automatizadas tendrán alguna forma de registro de prueba. Los
+                        proyectos difieren sobre si los registros de prueba se mantienen o se descartan después de que los
+                        resultados de la prueba se hayan determinado.
+                    </p>
+                    <p>
+                        Puede mantener registros de prueba si necesita satisfacer ciertos requisitos de auditoría, si desea
+                        llevar a cabo el análisis sobre cómo cambian con el tiempo los datos de prueba brutos resultantes o
+                        si no está seguro de qué principio de todos los análisis es necesario que proporcione.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_suite_DA8938D2.html" guid="{33DE37A2-ECFE-483B-934B-629F5802F87C}">Conjunto de aplicaciones de prueba</a>
+                </td>
+                <td width="40%">
+                    Se utiliza para agrupar pruebas individuales relacionadas (script de prueba) en subconjuntos
+                    significativos.
+                </td>
+                <td width="40%">
+                    Recomendado para la mayoría de proyectos.<br />
+                    <br />
+                     También es necesario para definir las secuencias de ejecución de scripts de prueba que sean necesarios
+                    para que las pruebas funcionen correctamente.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_ideas_list_2A0F8E03.html" guid="{45219F27-0F84-4FD5-A7BC-73C19226303B}">Lista de ideas de prueba</a>
+                </td>
+                <td width="40%">
+                    Es una lista enumerada de ideas, a menudo parcialmente formada, que deben tenerse en cuenta como
+                    pruebas útiles de desarrollar.
+                </td>
+                <td width="40%">
+                    Recomendado para la mayoría de proyectos.<br />
+                    <br />
+                     En algunos casos, estas listas se definirán y descartarán informalmente una vez que se hayan definido
+                    scripts de prueba o guiones de prueba para ellos.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_strategy_C1677B8.html" guid="{DC3E85E6-C5A9-4AC6-8DDF-E2CF2CB0573E}">Estrategia de prueba</a>
+                </td>
+                <td width="40%">
+                    Define el plan estratégico sobre cómo se efectuará el esfuerzo de prueba contra uno o más aspectos de
+                    los sistemas de destino.
+                </td>
+                <td width="40%">
+                    Recomendado para la mayoría de proyectos.<br />
+                    <br />
+                     En la mayoría de casos se recomienda una única estrategia de prueba por proyecto o por fase dentro de
+                    un proyecto. De forma opcional, puede reutilizar las estrategias existentes cuando sea apropiado, o
+                    puede volver a subdividir las estrategias de prueba basadas en el tipo de prueba que se realiza.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_plan_53712941.html" guid="{B95CA9FA-A00E-4C6C-AA16-133297812CC0}">Plan de prueba</a>
+                </td>
+                <td width="40%">
+                    Define objetivos de prueba más detallados, motivaciones, enfoques, recursos, planificación y
+                    entregables que gobiernan una iteración.
+                </td>
+                <td width="40%">
+                    Recomendado para la mayoría de proyectos.<br />
+                    <br />
+                     Se recomienda un plan de prueba separado por iteración para definir la estrategia de prueba específica
+                    y de gran granularidad. De forma opcional, puede incluir el plan de prueba como sección dentro del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_iteration_plan_623AFF7F.html" guid="{97269E0F-CDF3-448D-A732-DF39D099BDDD}">plan de iteración</a>.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_plan_53712941.html" guid="{B95CA9FA-A00E-4C6C-AA16-133297812CC0}">Plan de prueba</a>
+                </td>
+                <td width="40%">
+                    Define objetivos de prueba de alto nivel, objetivos, enfoques, recursos, planificación y entregables
+                    que gobiernan una fase o todo el ciclo vital.
+                </td>
+                <td width="40%">
+                    Opcional. Útil para la mayoría de proyectos.<br />
+                    <br />
+                     Un plan de prueba maestro define la estrategia de alto nivel de esfuerzo de prueba sobre grandes
+                    partes del ciclo de vida de desarrollo del software. De forma opcional, puede incluir el plan de prueba
+                    como sección dentro del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_project_plan_D89CA030.html" guid="{D77D6716-B167-4643-A4B6-6F76C7769A80}">plan de desarrollo de software</a>.<br />
+                    <br />
+                     Considere la opción de mantener un plan de prueba "Maestro" además de los planes de prueba de
+                    "Iteración". El plan de prueba maestro cubre principalmente la información de actuación logística y de
+                    proceso que habitualmente está relacionada con todo el ciclo de vida del proyecto y que, por lo tanto,
+                    no es probable que cambie entre las iteraciones.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_script_2140080.html" guid="{293A9F23-BB20-4993-AABE-76C1E8E1A589}">Script de prueba</a>, <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_data_AD333F7A.html" guid="{5FFF9828-AB23-4C09-8293-42A90E90378B}">Datos de prueba</a>
+                </td>
+                <td width="40%">
+                    Los script de prueba y los datos de prueba son la realización o implementación de la prueba, donde el
+                    script de prueba representa los aspectos de procedimiento, y los datos de prueba las características de
+                    definición.
+                </td>
+                <td width="40%">
+                    Recomendado para la mayoría de proyectos.<br />
+                    <br />
+                     Los proyectos suelen diferir en cómo se tratan formalmente estos productos de trabajo. En algunos
+                    casos, estos son informales y transitorios y el equipo de prueba se juzga basándose en otros criterios.
+                    En otros casos, especialmente con pruebas automatizadas, los scripts de prueba y los datos de prueba
+                    asociados (o alguno de sus subconjuntos) se consideran entregables importantes del esfuerzo de prueba.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_case_8AFEC963.html" guid="{D525758B-EBA2-4F59-9BA6-226820C27ADD}">Guión de prueba</a>
+                </td>
+                <td width="40%">
+                    <p>
+                        Define un conjunto específico de entradas de prueba, condiciones de ejecución, y resultados
+                        esperados.
+                    </p>
+                    <p>
+                        La documentación de guiones de prueba permite revisar si están completados y son correctos, y
+                        considerarlos antes de planificar y gastar el esfuerzo de implementación.
+                    </p>
+                    <p>
+                        Esto resulta muy útil donde la entrada, las condiciones de ejecución y los resultados esperados son
+                        especialmente complejos.
+                    </p>
+                </td>
+                <td width="40%">
+                    <p>
+                        Recomendamos que en la mayoría de proyectos, donde las condiciones necesarias para desarrollar
+                        pruebas específicas sean complejas o extensivas, defina guiones de prueba. También necesitará
+                        documentar guiones de prueba donde sean un entregable necesario contractualmente.
+                    </p>
+                    <p>
+                        En la mayoría de otros casos recomendamos mantener la lista de ideas de prueba y los scripts de
+                        prueba implementados en lugar de guiones de prueba textuales detallados.
+                    </p>
+                    <p>
+                        Algunos proyectos simplemente destacan guiones de prueba en un alto nivel y transfieren detalles a
+                        los scripts de prueba. Otro estilo que suele utilizarse es documentar la información de guión de
+                        prueba como comentarios dentro de los scripts de prueba.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_workload_analysis_model_E86A32FF.html" guid="{008164B1-3AC3-47E8-9F93-EE4C36B58A97}">Modelo de análisis de carga de trabajo</a>
+                </td>
+                <td width="40%">
+                    <p>
+                        Un tipo especializado de guión de prueba. Se utiliza para definir una carga de trabajo
+                        representativa para permitir los riesgos de calidad asociados con el sistema que operan debajo de
+                        la carga que se valora.
+                    </p>
+                </td>
+                <td width="40%">
+                    <p>
+                        Recomendado para la mayoría de sistemas, especialmente aquellos en que debe valorarse el
+                        rendimiento del sistema bajo una carga, o donde existen otros riesgos de calidad significativos
+                        asociados con la operación del sistema bajo carga.
+                    </p>
+                    <p>
+                        No suele ser necesario para sistemas que se desplegarán en un sistema de destino autónomo.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <p>
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_class_790117F2.html" guid="{1C78947B-33D4-49AF-9E1F-655E7D74C53F}">Clases de comprobabilidad</a> en el modelo de diseño
+                    </p>
+                    <p>
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_component_9EC4F18F.html" guid="{35BD7E4D-4757-441D-B531-E9CF5BD87DE4}">Elementos de comprobabilidad</a> en el modelo de
+                        implementación
+                    </p>
+                </td>
+                <td width="40%">
+                    <p>
+                        Si el proyecto debe desarrollar un comportamiento adicional especializado significativo para
+                        acomodar y dar soporte a las pruebas, estas preocupaciones se representan con la inclusión de las
+                        clases de comprobabilidad en el modelo de diseño y los elementos de comprobabilidad en el modelo de
+                        implementación.
+                    </p>
+                </td>
+                <td width="40%">
+                    <p>
+                        Donde sea necesario.
+                    </p>
+                    <p>
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/stubs_9CB734F8.html" guid="6.347489919609074E-305">Fragmentos para simulación</a> son una categoría común de las clases
+                        de prueba y los componentes de prueba.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_automation_architecture_650DD06A.html" guid="{B5B77528-E14B-43CA-BC73-D64A90A17E2D}">Arquitectura de automatización de pruebas</a>
+                </td>
+                <td width="40%">
+                    <p>
+                        Proporciona una visión general arquitectónica del sistema de automatización de pruebas, mediante
+                        una serie de vistas arquitectónicas diferentes para representar diferentes aspectos del sistema.
+                    </p>
+                </td>
+                <td width="40%">
+                    <p>
+                        Opcional.
+                    </p>
+                    <p>
+                        Recomendado para proyectos donde la arquitectura de prueba es relativamente compleja, cuando un
+                        número elevado de personas colaborará en las pruebas de construcción automatizada, o cuando se
+                        espera mantener el sistema de automatización de prueba durante un periodo de tiempo prolongado.
+                    </p>
+                    <p>
+                        En algunos casos puede ser, sencillamente, un diagrama en la pizarra que se registre centralmente
+                        para que los consulten las partes interesadas.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_interface_specification_F1C8A203.html" guid="{020BA1FD-8940-4473-9C5B-0CA35FDDF4E6}">Especificación de la interfaz de prueba</a>
+                </td>
+                <td width="40%">
+                    <p>
+                        Define un conjunto necesario de comportamientos por parte de un clasificador (específicamente, una
+                        clase, subsistema o componente) con el objetivo de las pruebas (comprobabilidad). Los tipos comunes
+                        incluyen acceso de prueba, comportamiento fragmentado, registro de diagnóstico y oráculos de
+                        prueba.
+                    </p>
+                </td>
+                <td width="40%">
+                    <p>
+                        Opcional.
+                    </p>
+                    <p>
+                        En muchos proyectos, hay suficiente accesibilidad para probar en las operaciones visibles de las
+                        clases, interfaces de usuario, etc.
+                    </p>
+                    <p>
+                        Algunos motivos comunes para crear especificaciones de la interfaz de prueba incluyen las
+                        ampliaciones de la UI para permitir que las herramientas de prueba de la GUI interactúen con las
+                        rutinas de herramientas y registro de mensajes de diagnóstico, especialmente para procesos por
+                        lotes.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Personalice cada producto de trabajo para que se adecue a las necesidades del proyecto. Para consideraciones sobre la
+    personalización, consulte el apartado de Personalización de la página de descripción de los productos de trabajo, o los
+    pasos descritos debajo del título "Personalizar productos de trabajo por disciplina" en <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/develop_development_case_B10E3391.html" guid="{F6999E01-701F-4D48-9E83-A063CB35912B}">Tarea: Desarrollar guión de desarrollo</a>.
+</p>
+<h3>
+    <a id="DecideHowToReviewArtifacts" name="DecideHowToReviewArtifacts">Decidir cómo revisar los productos de trabajo</a>
+</h3>
+<p>
+    En esta sección se proporcionan algunas directrices que le ayudarán a decidir cómo debe revisar los productos de
+    trabajo de prueba. Para obtener orientaciones generales, consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/review_levels_72ACB304.html" guid="8.546224914239529E-306">Directriz: Niveles
+    de revisión</a>.
+</p>
+<h4>
+    Defectos
+</h4>
+<p>
+    El tratamiento de las revisiones de defecto depende mucho del contexto pero, sin embargo, se trata generalmente como
+    <b>Informal</b>, <b>Formal-Interno</b> o <b>Formal-Externo</b>. Este proceso de revisión suele forzarse o como mínimo
+    asistirse con la gestión de flujo de trabajo en un sistema de seguimiento de defectos. Como comentario general, el
+    nivel de formalidad de la revisión suele estar relacionado con la gravedad percibida o el impacto del defecto; sin
+    embargo, factores como la cultura del proyecto y el nivel de ceremonia a menudo tienen efecto en la elección de la
+    gestión de la revisión.
+</p>
+<p>
+    En algunos casos es posible que deba considerar la separación de la gestión de los defectos, que también se conocen
+    como síntomas o errores- de anomalías; el origen real del error. Para proyectos pequeños, puede gestionar supervisando
+    únicamente los defectos y gestionando implícitamente los errores. Sin embargo, a medida que crece la complejidad del
+    sistema, puede resultar beneficioso separar la gestión de los defectos de los errores. Por ejemplo, muchos defectos
+    pueden ser producidos por el mismo error. Por lo tanto, si se soluciona un error, es necesario encontrar los defectos
+    reportados e informar a los usuarios que enviaron los defectos, lo que sólo es posible si los defectos y errores se
+    pueden identificar separadamente.
+</p>
+<h4>
+    Plan de prueba y Estrategia de prueba
+</h4>
+<p>
+    En cualquier proyecto en que las pruebas no sean triviales, necesitará alguna forma de plan de prueba o estrategia.
+    Generalmente necesitará un plan de prueba para cada iteración y alguna forma de gobierno de la estrategia de prueba.
+    Opcionalmente, puede crear y mantener un plan de prueba maestro. En muchos casos, estos productos de trabajo se revisan
+    como <b>Informales</b>; es decir, se revisan, pero no se aprueban formalmente. Donde la visibilidad de la prueba tiene
+    importancia para los interesados externos del equipo de prueba, debe probarse como <b>Formal-Interno</b> o incluso
+    <b>Formal-Externo</b>.
+</p>
+<h4>
+    Scripts de prueba
+</h4>
+<p>
+    Los scripts de prueba Test se tratan habitualmente como <b>Informales</b>; es decir, los aprueba alguien del equipo de
+    prueba. Si muchos verificadores deben utilizar los scripts de prueba, y los deben compartir o reutilizar para muchas
+    pruebas diferentes, deben tratarse como <b>Formal-Interno</b>.
+</p>
+<h4>
+    Guiones de prueba
+</h4>
+<p>
+    Los guiones de prueba los crea el equipo de prueba y, dependiendo del contexto, se revisan habitualmente utilizando un
+    proceso <b>Informal</b> o simplemente no revisándolos. Cuando corresponda, los guiones de prueba los aprobarán otros
+    miembros del equipo en cuyo caso se pueden tratar como <b>Formal-Interno</b>, o los interesados externos en cuyo caso
+    serían <b>Formal-Externo</b>.
+</p>
+<p>
+    Como norma general, le recomendamos que planee revisar formalmente qué guiones de prueba son necesarios, que
+    generalmente se limitarán a un pequeño subconjunto que representa los guiones de prueba más significativos. Por
+    ejemplo, cuando un cliente desee validar un producto antes de que se lance al mercado, puede seleccionarse algún
+    subconjunto de guiones de prueba como base para esta validación. Estos guiones de prueba deben tratarse como
+    <b>Formal-Externo</b>.
+</p>
+<h4>
+    Productos de trabajo de prueba en diseño e implementación
+</h4>
+<p>
+    Las clases de comprobabilidad se encuentran en el modelo de diseño, y los elementos de comprobabilidad en el modelo de
+    implementación. También existen otros dos productos de trabajo relacionados (aunque no son específicos de la prueba):
+    Paquetes en el modelo de diseño, y subsistemas en el modelo de implementación.
+</p>
+<p>
+    Estos productos de trabajo son productos de trabajo de diseño e implementación, aunque se crean con el objetivo de
+    proporcionar soporte a las pruebas de funcionalidad del software. El lugar natural donde mantenerlos es con los
+    productos de trabajo de diseño e implementación. Recuerde que debe nombrarlas o etiquetarlas de modo que estén
+    claramente separadas del diseño y la implementación del sistema central. Revise estos productos de trabajo siguiendo
+    los procedimientos de revisión para los productos de trabajo de diseño e implementación.
+</p>
+<h3>
+    <a id="DecideOnTestApprovalCriteria" name="DecideOnTestApprovalCriteria">Decidir los criterios de aprobación de la
+    iteración</a>
+</h3>
+<p>
+    A medida que entre cada iteración, esfuércese para definir clara y directamente cómo se juzgará el esfuerzo de prueba
+    para ser suficiente, y sobre que base se medirá ese juicio. Hágalo discutiendo con la persona o grupo responsable de
+    tomar la decisión de aprobación.
+</p>
+<p>
+    A continuación se muestran ejemplos de modos de gestionar la aprobación de la iteración:
+</p>
+<ul>
+    <li>
+        El equipo de gestión del proyecto aprueba la iteración y valora el esfuerzo de prueba revisando los resúmenes de
+        evaluación de prueba.
+    </li>
+    <li>
+        El cliente aprueba la iteración revisando los resúmenes de evaluación de prueba.
+    </li>
+    <li>
+        El cliente aprueba la iteración basada en los resultados de una demostración que ejerce un cierto subconjunto de
+        las pruebas totales. Este subconjunto de pruebas debe definirse y acordarse con anterioridad, preferiblemente en un
+        estadio temprano de la iteración. Estas pruebas se tratan como <b>Formal-Externo</b> y se les suele hacer
+        referencia como <i>pruebas de aceptación</i>.
+    </li>
+    <li>
+        El cliente aprueba la calidad del sistema realizando sus propias pruebas independientes. Una vez más, la naturaleza
+        de estas pruebas debe definirse y acordarse con anterioridad, preferiblemente en un estadio temprano de la
+        iteración. Estas pruebas se tratan como <b>Formal-Externo</b> y se les suele hacer referencia como <i>pruebas de
+        aceptación</i>.
+    </li>
+</ul>
+<p>
+    Esta decisión es importante. No puede alcanzar un objetivo si no sabe qué es.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Dependencia de importaci&oacute;n en implementaci&oacute;n</title>
+<meta content="Guideline" name="uma.type">
+<meta content="import_dependency_in_implementation" name="uma.name">
+<meta content="Dependencia de importaci&oacute;n en implementaci&oacute;n" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_M6RHkN7IEdm8G6yT7-Wdqw", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "2.390918925290993E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "2.390918925290993E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.390918925290993E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_M6RHkN7IEdm8G6yT7-Wdqw", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "2.390918925290993E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.390918925290993E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Dependencia de importaci&oacute;n en implementaci&oacute;n</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Manejar las dependencias entre subsistemas es un aspecto importante de la estructuración de un modelo de implementación. En esta directriz se describe cómo llevarlo a cabo.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">Modelo de implementación</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="capas" text="directrices para las capas en la implementación" name="XE_layering__guidelines_for_layering_in_implementation" id="XE_layering__guidelines_for_layering_in_implementation" class="index"></a><a key="dependencia de importación en la implementación" text="directrices para" name="XE_import-dependency_in_implementation__guidelines_for" id="XE_import-dependency_in_implementation__guidelines_for" class="index"></a><a key="subsistema de implementación" text="manejar las dependencias de importación entre" name="XE_implementation_subsystem__handling_import_dependencies_between" id="XE_implementation_subsystem__handling_import_dependencies_between" class="index"></a> 
+<h3>
+    <a id="Explanation" name="Explanation"></a>Explicación
+</h3>
+<p>
+    Manejar las dependencias entre subsistemas es un aspecto importante de la estructuración de un modelo de
+    implementación. Un elemento en un subsistema cliente sólo puede compilar contra elementos de un subsistema proveedor,
+    si el subsistema cliente importa el subsistema proveedor. Para expresar tales dependencias, utilice la dependencia de
+    importación de un subsistema a otro, para indicar el subsistema en el que existe una dependencia.
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    El diagrama de componentes siguiente ilustra las dependencias de importación entre subsistemas de implementación.
+</p>
+<p class="picturecenter" align="center">
+    <img height="203" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_impi2.gif" width="217" />
+</p>
+<p class="picturetext">
+    El subsistema Banca telefónica tiene una dependencia de importación con el subsistema Servicios empresariales,
+    permitiendo que los elementos de Banca telefónica compilen contra elementos públicos (visibles) en Servicios
+    empresariales.
+</p>
+<h3>
+    <a id="Use" name="Use"></a>Utilización
+</h3>
+<h4>
+    <a key="control de la arquitectura" text="directrices para la dependencia de importación en la implementación" name="XE_architectural_control__guidelines_for_import-dependency_in_implementation" id="XE_architectural_control__guidelines_for_import-dependency_in_implementation" class="index"></a>
+</h4>
+<p>
+    Una utilización importante de la dependencia de importación es controlar la visibilidad entre subsistemas, y reforzar
+    una arquitectura en los implementadores. Cuando el arquitecto de software define la dependencia de importación en un
+    punto temprano del desarrollo, los implementadores sólo pueden permitir que sus elementos de implementación hagan
+    referencia (compilen contra) elementos públicos de los subsistemas de importación. El control de la importación ayuda a
+    mantener la arquitectura de software y evita dependencias no deseadas.
+</p>
+<h4>
+    Los subsistemas se pueden organizar en capas
+</h4>
+<p>
+    El modelo de implementación se organiza normalmente en capas. El número de capas no es fijo, sino que varía de
+    situación en situación. A continuación, se muestra una arquitectura típica con cuatro capas:
+</p>
+<ul>
+    <li>
+        La capa superior, <b>capa de la aplicación</b>, contiene los servicios específicos de la aplicación.
+    </li>
+    <li>
+        La capa siguiente, <b>capa específica de negocios</b>, contiene componentes empresariales específicos, que se
+        utilizan en varias aplicaciones.
+    </li>
+    <li>
+        La <b>capa de middleware</b> contiene componentes como constructores de GUI, interfaces de sistemas de gestión de
+        bases de datos, servicios de sistemas operativos independientes de la plataforma y componentes OLE, como editores
+        de diagramas y hojas de cálculo.
+    </li>
+    <li>
+        La capa inferior, <b>capa de software del sistema</b>, contiene componentes como sistemas operativos, interfaces de
+        hardware específico, etc.
+    </li>
+</ul>
+<p class="picturecenter" align="center">
+    <img height="367" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_impi3.gif" width="454" />
+</p>
+<p class="picturetext">
+    Un ejemplo de un modelo de implementación por capas para un sistema bancario. Las flechas muestran las dependencias de
+    importación entre subsistemas.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

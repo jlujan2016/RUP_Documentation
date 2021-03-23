@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Archivo de datos adjuntos del mensaje</title>
+<meta content="Guideline" name="uma.type">
+<meta content="message_attachments" name="uma.name">
+<meta content="Archivo de datos adjuntos del mensaje" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "7.676056734461877E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "7.676056734461877E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_ObqZoCwUEduKcvYAyaKSaA", "7.676056734461877E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_d5dewE7OEduvcvbnLvkXhA", "7.676056734461877E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="7.676056734461877E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Archivo de datos adjuntos del mensaje</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz presenta distintas formas de tratar la transmisión de elementos muy grandes o complejos como archivos adjuntos a mensajes por referencia o contención, lo que proporciona al diseñador la capacidad para satisfacer las restricciones de rendimiento o de ancho de banda.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../soa.rup_soma/tasks/soa_service_message_design_D1BA096D.html" guid="_ObqZoCwUEduKcvYAyaKSaA">Diseño de mensajes</a>
+</li>
+<li>
+<a href="./../../../soa.rup_soma/workproducts/soa_svce_model_message_BE931590.html" guid="{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}">Mensaje</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a key="message attachments" text="guidelines for" name="XE_message_attachments__guidelines_for" id="XE_message_attachments__guidelines_for" class="index"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">Introducción</a>
+</h3>
+<p>
+    Al diseñar <i><a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_svce_model_message_BE931590.html" guid="{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}">Mensajes</a></i>, a veces existen estructuras que vemos que de hecho se
+    realizan como documentos u otros archivos compuestos y potencialmente grandes. Por ejemplo, la información sobre
+    informes o productos se puede distribuir como archivos PDF o es posible que se adjunten imágenes que describen un
+    producto o elemento. El <i><a class="elementLinkWithUserText" href="./../../../soa.rup_soma/guidances/whitepapers/uml_profile_for_software_services_7ADFB3D2.html" guid="2.972928238097629E-306">Perfil Unified Modeling Language (UML) para servicios de software</a></i> proporciona un
+    &lt;&lt;<i>Archivo de datos adjuntos del mensaje</i>&gt;&gt; de estereotipo adicional que se puede adjuntar a
+    propiedades en un modelo de mensaje que indica que el contenido especificado se ha adjuntado de alguna manera al
+    modelo. Esto permite que el diseñador proporcione una especificación detallada de un aspecto muy importante del diseño
+    del mensaje. En concreto, respecto al rendimiento y al uso del ancho de banda, transferir grandes archivos de datos
+    adjuntos binarios puede ser un factor significativo.
+</p>
+<h4>
+    Archivos de datos adjuntos o enlaces
+</h4>
+<p>
+    En una arquitectura de Internet, hay un enfoque para transferir una gran cantidad de información, la transferencia de
+    un URL que permite al destinatario descargar el contenido mediante un protocolo más adecuado como FTP. Esto resulta
+    también muy útil si los datos no cambian a menudo porque pueden situarse en una ubicación común para que la reciban
+    todos los clientes; también es un mecanismo eficaz si el destinatario del mensaje puede elegir no descargar el
+    contenido adicional. Esto tiene la ventaja de poner el requisito para la descarga del archivo de datos adjunto en el
+    cliente. Esto puede suponer más una desventaja y un trabajo adicional para el cliente.
+</p>
+<p>
+    Otro enfoque posible para los archivos adjuntos es la <i>ubicación bien conocida</i>. Por ejemplo, una parte de la
+    documentación del servicio indica un URL base para los archivos de datos adjuntos y algún elemento del mensaje indica
+    un identificador o nombre de archivo que se puede añadir al URL para obtener el recurso real que hay que descargar.
+</p>
+<h4>
+    Codificación del archivo de datos adjunto
+</h4>
+<p>
+    El estereotipo del archivo de datos adjunto del mensaje también tiene una propiedad que indica el formato de
+    codificación del archivo de datos adjunto. Si bien el nombre es el mismo que el propietario de un mensaje, se
+    recomienda que los valores utilizados para indicar la codificación de los archivos de datos adjuntos sean tipos MIME.
+    Estos tipos ya los utiliza alguna infraestructura de Internet, como el protocolo HTTP para transferir datos binarios
+    como imágenes para páginas web.
+</p>
+<p>
+    Para obtener más información sobre tipos MIME, consulte el IETF RFC 2046 - <i><a href="http://ietf.org/rfc/rfc2046.txt">Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types</a></i>.
+</p>
+<h3>
+    <a id="Example" name="Example">Un ejemplo</a>
+</h3>
+<p>
+    Contemplemos un servicio que proporciona un catálogo de productos. Existen, por supuesto, operaciones para buscar
+    elementos, ejecutar consultas y devolver información completa sobre los productos. Si examinamos un subconjunto del
+    modelo de datos del producto, podemos ver que cada entrada de producto tiene asociada una imagen y posiblemente una
+    imagen ampliada para verla más fácilmente. En el modelo siguiente, también podemos ver que las dos imágenes están
+    marcadas como archivos de datos adjuntos a la estructura de datos del catálogo del producto. Lo que no podemos ver en
+    el diagrama es que el valor para la propiedad de codificación es "image/jpeg" en ambos casos.
+</p>
+<p align="center">
+    <img height="96" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_msg_attachments-02.gif"     width="456" border="0" />
+</p>
+<p>
+    En cuanto al ejemplo que se muestra anteriormente, sería posible enviar un URL para cada imagen, que permite que el
+    cliente decida si desea y cuando desea descargar la imagen real. El URL evidentemente, indicaría el protocolo y la
+    ubicación de la operación de descarga. A continuación, se indica una versión de la estructura ProductCatalogData con
+    las imágenes como enlaces.
+</p>
+<p align="center">
+    <img height="88" alt="El diagrama se describe en el contenido textual." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_msg_attachments-03.gif"     width="142" border="0" />
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

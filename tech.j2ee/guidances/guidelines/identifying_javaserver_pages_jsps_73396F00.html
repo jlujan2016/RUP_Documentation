@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Identificaci&oacute;n de JSP (JavaServer Pages)</title>
+<meta content="Guideline" name="uma.type">
+<meta content="identifying_javaserver_pages_jsps" name="uma.name">
+<meta content="Identificaci&oacute;n de JSP (JavaServer Pages)" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.5318932051119773E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.5318932051119773E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Identificaci&oacute;n de JSP (JavaServer Pages)</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la forma en que identificar y modelar JSP (JavaServer Pages) para una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identificar elementos de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    Esta directriz se centra en identificar JSP. En la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/javaserver_page_jsp_C204C841.html" guid="2.5833499297818664E-306">Directriz: JavaServer Page (JSP)</a> se proporciona ayuda adicional sobre las JSP.
+</p>
+<h3>
+    <a id="Guidelines" name="Guidelines"></a>Identificación de JSP
+</h3>
+<p>
+    Las JSP se asemejan a los servlets en que interactúan con clientes basados en la web. Sin embargo, mientras que los
+    servlets son clases de Java, las JSP utilizan una sintaxis similar a HTML. Las JSP son una manera muy conveniente de
+    crear páginas web dinámicas. Se identifican fundamentalmente de las clases de límites (consulte la sección <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/analysis_class_7E97273E.html" guid="2.2738948033145062E-306">Directriz: clase de análisis</a>) en arquitecturas web. También pueden tener algo de
+    lógica de control, pero en general, dicha lógica es mejor extraerla para ubicarla en servlets u otras clases de Java
+    (consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/servlet_FB1EC186.html" guid="7.265155609265114E-306">Directriz:
+    servlet</a> para obtener más información).
+</p>
+<p>
+    Se debería considerar el utilizar JSP de "plantilla" de presentación para proporcionar un aspecto y apariencia común en
+    la interfaz de usuario de la aplicación. Consulte <i>Core J2EE Patterns - Composite View</i> ([<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/supportingmaterials/java_references_110189E3.html" guid="1.4494927535802764E-304">ALU01</a>]).
+</p>
+<h3>
+    <a id="Modeling" name="Modeling"></a>Modelado de JSP
+</h3>
+<p>
+    En RUP las JSP se representan con <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Producto de trabajo: clases de diseño</a> y por lo tanto se modelan como
+    clases (con estereotipo &lt;&lt;ServerPage&gt;&gt;).
+</p>
+<p>
+    Encontrará ayuda básica relacionada con el modelado de páginas de servidor y páginas de cliente en la sección <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/modeling_web_application_architectures_with_uml_54011136.html" guid="_TACPgEWgEdqT6eCCQuiftQ">Documentación técnica: modelado de arquitecturas de aplicaciones web con&nbsp;UML</a> y
+    en modelado de diseño de aplicación web con UML en <a href="http://www.rational.com/products/whitepapers/100462.jsp" target="_blank">http://www.rational.com/products/whitepapers/100462.jsp</a>
+</p>
+<p>
+    Los JSP se convierten en servlets. Como con los servlets, el diseñador de JSP no define operaciones que los clientes
+    tengan que llamar, sino que se centra en definir responsabilidades y cómo interactúa con otros elementos de diseño,
+    como servlets, otras JSP, clases de JavaBean y las características de la página de cliente que produce.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

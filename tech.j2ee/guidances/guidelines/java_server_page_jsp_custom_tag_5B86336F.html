@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: C&oacute;digos personalizados JSP (Java Server Page)</title>
+<meta content="Guideline" name="uma.type">
+<meta content="java_server_page_jsp_custom_tag" name="uma.name">
+<meta content="C&oacute;digos personalizados JSP (Java Server Page)" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "2.7697091422782074E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.7697091422782074E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.7697091422782074E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: C&oacute;digos personalizados JSP (Java Server Page)</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se describe cuándo hay que utilizar códigos personalizados JSP, cómo modelarlos así como algunas consideraciones de diseño aplicables. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Clase de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    Estas directrices describen cuándo hay que utilizar códigos personalizados JSP, cómo modelarlos así como algunas
+    consideraciones de diseño aplicables.
+</p>
+<p>
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_server_page_jsp_custom_tag_81C52E2B.html" guid="4.4600116920171025E-305">Concepto: códigos personalizados JSP (Java Server Page)</a> para obtener más información
+    sobre códigos personalizados JSP.
+</p>
+<h3>
+    <a id="Identifying_JSP_Custom_Tags" name="Identifying_JSP_Custom_Tags"></a>Identificación de códigos personalizados JSP
+</h3>
+<p>
+    Los códigos personalizados JSP son clases Java simples que materializan la unión entre la implementación Java y las
+    páginas JSP. Los códigos personalizados son una forma de minimizar la utilización de código Java que aparece en las
+    páginas JSP. En proyectos en los que el diseño web y el desarrollo Java deban estar separados, los códigos
+    personalizados sirven para eliminar código Java de la página JSP, ocultando el código Java a los diseñadores Web.
+</p>
+<h3>
+    <a id="Modeling_JSP_Custom_Tags" name="Modeling_JSP_Custom_Tags"></a>Modelado de códigos personalizados JSP
+</h3>
+<p>
+    Los códigos personalizados JSP se modelan como clases Java simples. En UML, el estereotipo &lt;&lt;JSPTag&gt;&gt; las
+    distingue de otras clases Java.
+</p>
+<blockquote>
+    <p>
+        <img alt="Ejemplo de diagrama UML mostrando JSPTag" src="./../../../tech.j2ee/guidances/guidelines/resources/example_tag.gif" />
+    </p>
+</blockquote>
+<h3>
+    <a id="Concurrency" name="Concurrency"></a>Concurrencia
+</h3>
+<p>
+    Una única hebra utiliza al mismo tiempo los manejadores de códigos (a diferencia, por ejemplo, de los servlets); sin
+    embargo, puede haber varias hebras operando en distintas instancias de códigos personalizados. El desarrollador debe
+    tener cuidado a la hora de acceder a recursos compartidos (como por ejemplo, datos estáticos) para evitar problemas de
+    concurrencia.
+</p>
+<h3>
+    <a id="Cleanup" name="Cleanup"></a>Limpieza
+</h3>
+<p>
+    Los manejadores de códigos se pueden colocar en agrupaciones de forma que el contenedor web los reutilice. Si se
+    precisan recursos, se deberían crear en <i>doStartTag()</i> y el desarrollador debería implementar <i>release()</i>
+    para realizar una limpieza de recursos antes de reutilizarlos.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.inferdata.com" target="_blank"><img alt="logotipo de Inferdata"                 src="./../../../tech.j2ee/guidances/supportingmaterials/resources/inferdata.gif" width="100" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Contenido desarrollado o parcialmente desarrollado por <a href="http://www.inferdata.com/" target="_blank">Inferdata Corporation</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; Copyright&nbsp;IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

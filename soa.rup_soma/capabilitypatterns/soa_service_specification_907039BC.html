@@ -1,0 +1,647 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de tareas: Especificaci&oacute;n de servicios</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="soa_service_specification" name="uma.name">
+<meta content="Especificaci&oacute;n de servicios" name="uma.presentationName">
+<meta content="_MZp_AEn3EduC74V7YHXTOQ" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="Dise&ntilde;ador">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc=_6Jd70DtdEdqPaeZADstHAA&path=_6Jd70DtdEdqPaeZADstHAA,_zL1rsEn2EduC74V7YHXTOQ,_MZp_AEn3EduC74V7YHXTOQ';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_XSr4YCFtEdqrX8YVzvtlIg", "_VmaJQEudEdq5N8CMS7wKPw", "_zL1rsEn2EduC74V7YHXTOQ", "_MZp_AEn3EduC74V7YHXTOQ"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_J1u8gCGYEdqMcovRzkCQow", "_VmaJQEudEdq5N8CMS7wKPw", "_zL1rsEn2EduC74V7YHXTOQ", "_MZp_AEn3EduC74V7YHXTOQ"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_vllcADIKEdqGgPtrSpB0vQ", "_VmaJQEudEdq5N8CMS7wKPw", "_zL1rsEn2EduC74V7YHXTOQ", "_MZp_AEn3EduC74V7YHXTOQ"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_XSr4YCFtEdqrX8YVzvtlIg", "_VmaJQEudEdq5N8CMS7wKPw", "_zL1rsEn2EduC74V7YHXTOQ", "_MZp_AEn3EduC74V7YHXTOQ"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_J1u8gCGYEdqMcovRzkCQow", "_VmaJQEudEdq5N8CMS7wKPw", "_zL1rsEn2EduC74V7YHXTOQ", "_MZp_AEn3EduC74V7YHXTOQ"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_vllcADIKEdqGgPtrSpB0vQ", "_VmaJQEudEdq5N8CMS7wKPw", "_zL1rsEn2EduC74V7YHXTOQ", "_MZp_AEn3EduC74V7YHXTOQ"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_XSr4YCFtEdqrX8YVzvtlIg", "_VmaJQEudEdq5N8CMS7wKPw", "_zL1rsEn2EduC74V7YHXTOQ", "_MZp_AEn3EduC74V7YHXTOQ"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_J1u8gCGYEdqMcovRzkCQow", "_VmaJQEudEdq5N8CMS7wKPw", "_zL1rsEn2EduC74V7YHXTOQ", "_MZp_AEn3EduC74V7YHXTOQ"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_vllcADIKEdqGgPtrSpB0vQ", "_VmaJQEudEdq5N8CMS7wKPw", "_zL1rsEn2EduC74V7YHXTOQ", "_MZp_AEn3EduC74V7YHXTOQ"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_MZp_AEn3EduC74V7YHXTOQ"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Especificaci&oacute;n de servicios</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta tarea define y especifica los servicios y la estructura de una solución orientada a servicios desde el punto de vista de las colaboraciones de elementos de diseño contenidos y subsistemas/interfaces externos.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><ul>
+    <li>
+        Definir los servicios y la estructura de una solución orientada a servicios desde el punto de vista de las
+        colaboraciones de elementos de diseño contenidos y subsistemas/interfaces externos.
+    </li>
+    <li>
+        Analizar el servicio para encontrar puntos en común y variabilidad (consulte <a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/guidelines/variability_analysis_ADC6BC98.html" guid="_dyVEgDJdEduxsZm92FKuLw">Directriz: Análisis de variabilidad</a>).
+    </li>
+    <li>
+        Documentar la especificación de servicios.
+    </li>
+    <li>
+        Determinar las dependencias y la comunicación entre los servicios.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Principal:
+							</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_designer_22702C0E.html" guid="_MZwFoEn3EduC74V7YHXTOQ">Dise&ntilde;ador</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Adicional:
+							</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_software_architect_2D0E0C1E.html" guid="_MZwFoUn3EduC74V7YHXTOQ">Arquitecto de software</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Asistencia:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_software_architecture_document_8480F5F9.html" guid="_MZwFo0n3EduC74V7YHXTOQ">Documento de arquitectura de software</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_supplementary_specification_E7020E2D.html" guid="_MZwFpEn3EduC74V7YHXTOQ">Especificaciones suplementarias</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_design_model_1BA72034.html" guid="_MZwFokn3EduC74V7YHXTOQ">Modelo de dise&ntilde;o</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/soa_service_model_F19FEE3D.html" guid="_MZwFpUn3EduC74V7YHXTOQ">Modelo de servicio</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_project_specific_guidelines_E0390253.html" guid="_MZwFpkn3EduC74V7YHXTOQ">Directrices espec&iacute;ficas del proyecto</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_design_model_1BA72034.html" guid="_MZwFokn3EduC74V7YHXTOQ">Modelo de dise&ntilde;o</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/soa_service_model_F19FEE3D.html" guid="_MZwFpUn3EduC74V7YHXTOQ">Modelo de servicio</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell">Esta tarea ajusta el conjunto de <a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_svce_model_svce_spec_37E89A91.html" guid="{20F06B5E-95D5-422C-AB68-7C213D28533A}">Artefactos: Especificación de servicio</a>&nbsp;identificados y calificados
+durante la <a class="elementLinkWithUserText" href="./../../soa.rup_soma/capabilitypatterns/existing_asset_analysis_4B247136.html" guid="_7ZObICxuEdupJ8eX04kqLQ">Actividad: Identificar servicios</a>&nbsp;y ofrece detalles y estructuras adicionales. Este
+detalle de nivel de diseño incluye servicios de interfaz, mensaje y composición, y la asignación de servicios a los
+proveedores.</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading">Reutilizar la cartera de servicios de empresa</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Reuse_Service_Portfolio" name="Reuse_Service_Portfolio"></a> 
+<p>
+    Una de las ventajas a menudo comentadas sobre el uso de una arquitectura orientada a servicios es la posibilidad de que
+    los servicios representen activos reutilizables en la empresa, en lugar del desarrollo de componentes sólo dentro del
+    ámbito de una única aplicación. Esta vista de empresa es importante porque incorpora la noción de que una auténtica
+    arquitectura orientada a servicios para TI ofrece toda la infraestructura y las funciones empresariales como servicios
+    y de que las aplicaciones desarrolladas por la empresa reutilizan funciones de la cartera de servicios.
+</p>
+<p>
+    Por tanto, al iniciar un proyecto resulta importante saber si está desarrollando servicios como parte de la cartera o
+    si está desarrollando funciones de aplicación que utilicen estos servicios. Por ejemplo, el desarrollo de un sitio de
+    portal para que los clientes accedan a su información de cuentas es un proyecto de desarrollo de aplicaciones que
+    utiliza servicios de la cartera para información del cliente, información de cuentas, ofertas, etc. En cada caso, el
+    uso de la cartera tiene distintas implicaciones, el diseñador de servicio describe su especificación de servicio y la
+    publica como parte de la cartera. Esta especificación permite a los desarrolladores de aplicaciones entender los
+    requisitos de interacción para el servicio. El implementador de servicio puede ahora utilizar la misma especificación
+    de servicio para desarrollar una o más implementaciones del servicio, garantizando que la implementación cumple con la
+    especificación.&nbsp; El siguiente diagrama muestra la relación entre la cartera de servicios de toda la empresa y la
+    cartera del proyecto.
+</p>
+<p align="center">
+    <img height="139" alt="" src="./../../soa.rup_soma/tasks/./resources/portfolio_lifecycle.png" width="343" />
+</p>
+<p>
+    Para obtener más información, consulte el concepto <a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/concepts/service_portfolio_52FD64AC.html" guid="1.851952881072508E-305">Cartera
+    de servicios</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Utilizar mecanismos y patrones de dise&ntilde;o</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Utilice los mecanismos y patrones de diseño que se adapten al servicio diseñado y de acuerdo con las directrices de
+    diseño del proyecto. La incorporación de un patrón o mecanismo significa realmente realizar muchos de los pasos
+    posteriores de esta tarea, pero de acuerdo con las reglas definidas por el patrón o el mecanismo.
+</p>
+<p>
+    Tenga en cuenta que los patrones y los mecanismos se incorporan normalmente a medida que evoluciona el diseño, no sólo
+    como el primer paso en esta tarea. También se aplican frecuentemente entre un conjunto de elementos de modelo, en lugar
+    de sólo a un único elemento.
+</p>
+<p>
+    La transformación de un servicio en su realización a menudo entraña un conjunto de patrones, algunos de los cuales se
+    describen en la <a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/guidelines/service_component_patterns_A4634107.html" guid="_p_6wsExREdumvs0NuKFubw">Directriz: Patrones de componentes de servicio</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Describir la organizaci&oacute;n l&oacute;gica de la soluci&oacute;n</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Describe_Logical_Organization" name="Describe_Logical_Organization"></a> 
+<p>
+    A menudo resulta útil organizar sus ideas desde el punto de vista de las distintas vistas de un sistema y de cómo los
+    servicios que desarrolla encajan en dichas vistas. Al definir las vistas de organización lógicas, es importante que la
+    asignación de un servicio a una vista no implique la propiedad desde un punto de vista de la contención o el Lenguaje
+    de modelado unificado (UML); es decir, que el mismo servicio podrá participar en varias vistas lógicas. Merece la pena
+    que las vistas organizativas se diseñen en el modelo antes del desarrollo de servicio o al menos de la primera
+    iteración de estas vistas, para que los servicios se puedan asignar a las vistas según se vayan identificando. En el
+    modelo de servicio, utilizamos un elemento de modelo <i><a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_svce_model_svce_partn_DC19AD3F.html" guid="{C302AF5A-1591-4F26-94E5-C412866553BF}">Partición de servicio</a></i> para representar un aspecto de una vista.
+    Estas particiones se pueden utilizar para representar todas las distintas perspectivas de la solución, pero no implican
+    la propiedad de los servicios a ellas asignados. Para obtener más información, consulte el concepto <i><a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/concepts/solution_partitioning_352116F8.html" guid="1.6501323286225543E-305">Particionamiento de soluciones</a>.</i>
+</p>
+<p>
+    También es posible que estas particiones, al menos aquellas que representan puntos de vista clave, residan en modelos
+    separados de los propios servicios, lo que permite que los modelos de partición evolucionen por separado.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Describir elementos de servicio</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Describe_Service_Elements" name="Describe_Service_Elements"></a> 
+<p class="MsoBodyTextIndent">
+    Como siempre es el caso cuando se observa el modelado de sistemas de software, existe un gran número de puntos de
+    entrada a dichos modelos, gran variedad de representaciones que podemos utilizar y, por supuesto, muchas metodologías
+    que se pueden aplicar. En la mayoría de los casos, estos puntos de entrada se deben a problemas específicos, en
+    dominios tanto tecnológicos como empresariales, que deben solucionarse. Estos problemas son lo suficientemente
+    importantes como para actuar de puntos de partida, porque entenderlos y la interacción entre ellos resulta fundamental
+    para obtener éxito.
+</p>
+<p class="MsoBodyTextIndent">
+    Observamos que había pocos problemas en el desarrollo de soluciones orientadas a servicios, el siguiente diagrama
+    representa estos problemas principales como tareas de diseño específicas. Aunque observemos que cada uno de estos
+    problemas puede actuar como punto de partida para el diseño de servicios, y que cada enfoque tiende a optimizarse bien
+    para una determinada clase de servicios, es muy probable que los proyectos grandes utilicen una combinación de enfoques
+    en la identificación y el diseño de servicios.
+</p>
+<p align="center">
+    <img height="115" alt="El diagrama se describe en el contenido textual." src="./../../soa.rup_soma/tasks/resources/co_soa_policy-02.gif"     width="241" border="0" />
+</p>
+<p>
+    Para obtener más información, consulte&nbsp;la <a class="elementLinkWithUserText" href="./../../soa.rup_soma/capabilitypatterns/existing_asset_analysis_4B247136.html" guid="_7ZObICxuEdupJ8eX04kqLQ">Actividad: Análisis de activos existentes</a>, que presenta un conjunto de técnicas
+    detalladas que dan soporte a estos enfoques.
+</p>
+<h4>
+    <a id="Message_Design" name="Message_Design">Diseño de mensajes</a>
+</h4>
+<p class="MsoBodyTextIndent">
+    En este enfoque, el enfoque es mucho mayor en el dominio de servicio. Técnicas como la ingeniería de dominios o el
+    análisis y el diseño orientados a objetos proporcionan un conocimiento más profundo del desarrollo de modelos de
+    dominio abstractos. Este foco normalmente produce modelos altamente reutilizables para el esquema de mensajes. El
+    diseño de servicio es normalmente una actividad secundaria aunque a veces se realiza en paralelo. En el Intercambio de
+    datos electrónicos (EDI), por ejemplo, no existe noción real de una interfaz de servicio porque los sistemas EDI
+    normalmente tienen una única bandeja de entrada y salida global para mensajes.
+</p>
+<p class="MsoBodyTextIndent">
+    Un ejemplo de tal enfoque podría estar en el campo tradicional de empresa a empresa, tipificado por la estandarización
+    EDI. En este caso, el foco de la actividad de diseño es el desarrollo del esquema de mensaje acordado en algún sector u
+    otro ámbito y se considera representativo del esquema de una clase de mensajes, por ejemplo, estándares de la industria
+    como ACORD, SWIFT y RosettaNet (consulte&nbsp;<a class="elementLinkWithUserText" href="./../../soa.rup_soma/tasks/soa_service_message_design_D1BA096D.html" guid="_ObqZoCwUEduKcvYAyaKSaA">Tarea:
+    Diseño de mensaje</a>).
+</p>
+<h4>
+    <a id="Service_Design" name="Service_Design">Diseño de servicio</a>
+</h4>
+<p class="MsoBodyTextIndent">
+    En este enfoque, el diseñador está preocupado de exponer, como servicio o conjunto de servicios, las funciones
+    esperadas de la empresa o la aplicación. En este caso, no conocemos necesariamente lo que el cliente de los servicios
+    decidirá hacer con nuestro servicio, pero sabemos los tipos de interacciones que dichos clientes esperan. Por tanto,
+    los mensajes tienden a ser secundarios y a desarrollarse en respuesta a los requisitos de una operación.
+</p>
+<p class="MsoBodyTextIndent">
+    Un ejemplo de este enfoque serían los servicios web presentados por empresas como <u>Amazon</u> y <u>eBay</u>. Tales
+    interfaces de servicio no imponen un proceso empresarial al cliente. En la mayoría de los casos ni siquiera imponen
+    interfaces necesarias al cliente, pero exponen las operaciones de sus respectivos proveedores de servicio de forma
+    clara e intuitiva a otros desarrolladores.
+</p>
+<p class="MsoBodyTextIndent">
+    Tal como mencionábamos antes, un modelado centrado en servicios a menudo se presta bien a un enfoque dirigido por
+    guiones de uso mediante la comprensión de la necesidad de los actores, los clientes externos del servicio y el
+    suministro de operaciones que dan soporte a estas necesidades, operaciones como el examen de catálogos, la adición de
+    elementos al carro de la compra, la extracción, etc.
+</p>
+<h4>
+    <a id="Collaboration_Design" name="Collaboration_Design">Diseño de colaboración</a>
+</h4>
+<p class="MsoBodyTextIndent">
+    En un diseño de colaboración, el foco está en la colaboración de dos o más servicios; se trata sobre todo de una vista
+    de proceso de los servicios y está relacionada con un modelado empresarial más tradicional que con una actividad de
+    desarrollo de software. En este enfoque, los servicios se ven como roles que cumplen en la colaboración y la
+    especificación de servicio es por tanto el conjunto de responsabilidades definido para el rol a través de una o más
+    colaboraciones.
+</p>
+<p class="MsoBodyTextIndent">
+    Dicho enfoque debería ser reconocible para aquellos que se han involucrado en el desarrollo de los procesos de
+    intercambio de socios (PIP) de RosettaNet o en el desarrollo de los estándares OAGIS, aunque las colaboraciones sean
+    menos que completas en tales casos. Tal enfoque sería común dentro de una empresa desde el punto de vista del diseño de
+    proceso empresarial o en actividades de integración empresarial en los que los componentes de un sistema de TI se
+    expongan como servicios.
+</p>
+<p class="MsoBodyTextIndent">
+    En este caso, se da normalmente el caso de que la especificación de servicio se pueda derivar directamente de la
+    colaboración, pero este enfoque tiende a centrarse menos en el contenido de mensaje que lleva a un requisito de enfoque
+    híbrido para su finalización.
+</p>
+<h4>
+    <a id="Policy_Identification" name="Policy_Identification">Identificación de política y captura</a>
+</h4>
+<p>
+    Política es un término amplio que utilizamos aquí para cubrir sentencias o restricciones que pueden considerarse
+    requisitos no funcionales. En el nivel de este modelo, debemos darnos cuenta de que no queremos que el modelo se
+    rellene con sentencias detalladas sobre información técnica sino que de forma más realista, capturamos el intento del
+    sistema respecto a estos requisitos. Por ejemplo, podemos saber que determinado mensaje debe transmitirse y mantenerse
+    en privado a medida que se incluyen los detalles personales sobre nuestros clientes; queremos capturar el intento de
+    que el mensaje sea privado, no que necesitemos cifrado de datos mediante cifrado de AES de 128 bits a través de un
+    conjunto de datos XML canónicos con cifrado clave, principalmente porque muy poca gente sabrá lo que esto significa,
+    podremos especificarlo en un modelo en este nivel de abstracción (consulte&nbsp;<a class="elementLinkWithUserText" href="./../../soa.rup_soma/tasks/sec_identify_security_patterns_1953748F.html" guid="_m8lcIDIyEduePY7oPsXsLA">Tarea:
+    Identificar patrones de seguridad</a>).
+</p>
+<p>
+    El siguiente diagrama muestra la asociación de políticas con los elementos del <i><a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_service_model_623494B9.html" guid="{E24679B7-19F1-483B-A1F1-578839C43888}">modelo de servicio</a></i>. Tenga en cuenta que la información sobre
+    políticas se puede adjuntar a información distinta de los componentes de especificación identificados a continuación,
+    aunque ésta es el área principal de interés.
+</p>
+<p align="center">
+    <img height="205" alt="El diagrama se describe en el contenido textual." src="./../../soa.rup_soma/tasks/resources/co_soa_policy-01.gif"     width="329" border="0" />
+</p>
+<p>
+    Para obtener información sobre modelado de políticas de seguridad, consulte la documentación técnica <i><a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/whitepapers/modeling_security_concerns_in_service-oriented_architectures_3961AE50.html" guid="1.328991553095394E-305">Modelado de problemas de seguridad en arquitectura orientada a servicios</a></i>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Dependencias de servicio del modelo</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Otro aspecto clave del <a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_service_model_623494B9.html" guid="{E24679B7-19F1-483B-A1F1-578839C43888}">Artefacto: Modelo de servicio</a> que debe desarrollarse durante la
+    especificación es la captura de las dependencias entre servicios. <a id="Describe_Dependencies" name="Describe_Dependencies"></a>Como parte del modelo de servicio, se capturan de forma natural una serie de
+    dependencias. Éstas pueden ser tan obvias como la relación entre un servicio y su especificación, o más complejas, como
+    la relación lógica entre dos servicios independientes ya que ambos implementan la misma especificación. Estas
+    dependencias (descritas en <a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_service_model_623494B9.html" guid="{E24679B7-19F1-483B-A1F1-578839C43888}">Artefacto: Modelo de servicio</a>&nbsp;e <a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/reports/service_dependencies_D8D49422.html" guid="1.2262765587812462E-305">Informe: Dependencias de servicio</a>) son importantes para entender la posibilidad de
+    desplegar un servicio como unidad autónoma y afectará a su evolución en el tiempo a medida que las dependencias se
+    vuelvan restricciones en posibilidad del servicio de cambiar.
+</p>
+<p>
+    Las dependencias de servicio describen las relaciones entre servicios que surgen en el contexto más amplio de cómo se
+    utilizarán. Cuando un servicio se forma a partir de una composición de otros servicios, el servicio componente depende
+    de los servicios compuestos. Cuando se utilizan servicios en el contexto de un proceso empresarial, existe una
+    dependencia relacionada con el proceso que surge de la secuencia inherente de pasos en el proceso empresarial que dicta
+    el orden en que se utilizarán los servicios.
+</p>
+<ul>
+    <li>
+        <b>Dependencia compuesta/dependencias funcionales</b> que surgen de la composición de varios servicios.
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <ul>
+            <li>
+                Ejemplo: Reservar vehículo dependerá de Comprobar tarifas y Realizar reserva para su funcionalidad
+            </li>
+        </ul>
+    </li>
+    <li>
+        <b>Dependencia temporal</b> en la que hay una condición previa o posterior o o un requisito de proceso que deberá
+        tenerse en cuenta en composiciones o coreografías.
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <ul>
+            <li>
+                <b>Dependencia de condición previa</b>: por ejemplo, otra invocación de servicio debe haberse ejecutado
+                correctamente antes de que la invocación actual pueda iniciar su ejecución.
+            </li>
+            <li>
+                <b>Dependencia de procesos</b>: por ejemplo, se necesita otra invocación de servicio para llevar a cabo la
+                ejecución correcta del servicio actual.
+            </li>
+            <li>
+                <b>Dependencia de condición posterior</b>: aparece en casos en los que un servicio necesita otra invocación
+                de servicio tras su ejecución.
+            </li>
+        </ul>
+    </li>
+</ul>
+<p>
+    Estas dependencias a menudo pueden formar parte del proceso de decisiones que un cliente de servicio debe atravesar en
+    la elección de reutilización de un servicio, particularmente si hay varias implementaciones entre las que elegir.
+</p>
+<p>
+    Los tipos de dependencias/asociaciones en el modelo de servicio que son importantes se enumeran a continuación.
+</p>
+<ul>
+    <li>
+        La relación entre un servicio y los proveedores de servicio que implementa.
+    </li>
+    <li>
+        La relación entre un servicio y la especificación de servicio que implementa.
+    </li>
+    <li>
+        La relación entre un servicio y las especificaciones de servicio que necesita.
+    </li>
+    <li>
+        La relación entre un servicio y cualquier canal de servicio que lo conecte con otros servicios y, por lo tanto, el
+        servicio en el otro extremo del canal.
+    </li>
+    <li>
+        La relación entre un servicio y cualquier partición de servicio en la que aparezca el servicio.
+    </li>
+</ul>
+<p>
+    Es por tanto importante que todas las especificaciones de servicio sean completas, no sólo con respecto a las
+    operaciones y los mensajes que proporciona sino también con dependencias como las interfaces necesarias para
+    operaciones de devolución de llamada. El informe <i><a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/reports/service_dependencies_D8D49422.html" guid="1.2262765587812462E-305">Dependencias de servicio</a></i> proporciona una visión general de las dependencias
+    importantes para el modelo de servicio.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Composici&oacute;n y flujos de servicios del modelo</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Los servicios a menudo se componen de otros servicios existentes y en algunos casos tecnología como la coreografía
+    pueden permitir que el servicio se desarrolle sin código explícito puramente como composición de servicios existentes.
+    Durante la especificación, los servicios que reutilizan elementos que ya están en la cartera de empresa, y han
+    documentado sus dependencias en estos servicios, pueden considerarse servicios compuestos si su funcionalidad depende
+    del funcionamiento de un servicio compuesto y si el compuesto no puede desplegarse sin acceso a los servicios
+    compuestos.
+</p>
+<p>
+    En algunas infraestructuras de arquitectura orientada a servicios, se piensa en una <em>capa de proceso
+    empresarial</em> para gestionar sólo los servicios compuestos coreografiados en los que se proporcionan procesos
+    complejos como coreografías gestionadas de servicios más detallados. En este caso, se puede utilizar el Lenguaje de
+    ejecución de procesos empresariales para servicios web (BPEL4WS) como herramienta para el desarrollo de servicios
+    compuestos, flujos de servicios y capas de proceso empresarial.
+</p>
+<p>
+    Por tanto, se pueden identificar dos tipos de servicios compuestos:
+</p>
+<ul>
+    <li>
+        <strong>Servicios compuestos conectados estrechamente</strong>: se caracterizan por una baja flexibilidad, debido a
+        un flujo y a un control de servicios predefinidos en los que no se externalicen el flujo y el control. Estos tipos
+        de servicios tienen atributos de calidades de servicio atractivos como el rendimiento.
+    </li>
+    <li>
+        <strong>Servicios compuestos conectados no estrechamente</strong>: se trata de servicios caracterizados por una
+        alta flexibilidad en los que la composición de servicios en procesos empresariales se lleva a cabo externalizando
+        el flujo y el control. La descripción de flujo de la composición se externaliza. Este tipo de composición explota
+        el modelado de herramientas, la variabilidad dinámica a través de reglas, y la variabilidad estática a través de
+        modelado. La composición que utiliza BPEL es un ejemplo.
+    </li>
+</ul>
+<p>
+    Para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/concepts/service_composition_and_choreography_41EDEECB.html" guid="7.723783423994501E-306">Concepto: Composición y coreografía de servicios</a> así como <a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/guidelines/service_realization_325D86D9.html" guid="_QNuHcEV1Edqpo8Lgp7-Wmg">Directriz: Realización de servicio - Servicios BPEL en una aplicación de arquitectura
+    orientada a servicios</a> para obtener un ejemplo específico de proyecto.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Documentar requisitos no funcionales</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    El uso de la arquitectura orientada a servicios ofrece la oportunidad de elegir un&nbsp;<a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_svce_model_svce_provider_C00D3410.html" guid="{8427751F-3C14-4CEB-9816-5112BDB91EED}">Artefacto: Proveedor de servicios</a> basado no sólo en la funcionalidad
+    que proporciona sino en las Calidades de servicio (QoS) que puede&nbsp;garantizar. Uno de los motivos para cambiar un
+    proveedor de servicio puede a menudo ser resultado de un cambio en los requisitos no funcionales, necesitándose un
+    nuevo nivel de QoS no actualmente soportado por un proveedor existente. También puede derivar de la degradación de la
+    QoS esperada por el cliente de servicio. Una arquitectura orientada a servicios permite esta agilidad a menor coste, en
+    general, que otros estilos arquitectónicos.
+</p>
+<p>
+    La calidad de servicio se puede observar desde dos perspectivas: la del proveedor y la del cliente.&nbsp;El proveedor
+    de servicios garantiza proporcionar y mantener una calidad de servicio para cada uno de sus servicios o grupo de
+    servicios. El cliente de servicio, por otro lado, "compara" las calidades de servicio deseadas y elige un proveedor
+    según éstas. También es importante observar que en valores comerciales en los que el cliente y el proveedor entran en
+    un contrato legal sobre el uso del servicio, estas garantías de calidad de servicio se ejemplifican en acuerdos de
+    nivel de servicio, frecuentemente con penas asociadas con el no cumplimiento de un proveedor de dichos acuerdos.
+</p>
+<p>
+    Por tanto, es muy importante especificar claramente los requisitos no funcionales necesarios para el cliente (por
+    ejemplo, coste de transacción, rendimiento, disponibilidad, seguridad, etc.) de un servicio o un conjunto de servicios.
+    En esta tarea de Especificación de servicio, identificamos requisitos no funcionales para la QoS deseada. Los
+    requisitos no funcionales se utilizarán para asignar recursos para componentes de servicio que ofrecen los servicios y
+    para financiar la realización y el mantenimiento de componentes de servicio que garanticen la entrega de la QoS a lo
+    largo del tiempo. Deberán tomarse decisiones clave sobre arquitectura para garantizar que se conseguirá la calidad de
+    servicio prometida basada en requisitos no funcionales.
+</p>
+<p>
+    La forma en que los requisitos no funcionales se relacionan con el <a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_svce_model_svce_spec_37E89A91.html" guid="{20F06B5E-95D5-422C-AB68-7C213D28533A}">Artefacto: Especificación de servicio</a>&nbsp;no se define en esta
+    directriz. No hay límites establecidos en lo que constituye dicho requisito, obviamente QoS, la seguridad se ha
+    mencionado anteriormente, entre los ejemplos están:
+</p>
+<ul>
+    <li>
+        Disponibilidad (por ejemplo, tiempo medio entre anomalías)
+    </li>
+    <li>
+        Ventana operativa (¿hay algún tiempo en el que no espere utilizar este servicio?)
+    </li>
+    <li>
+        Tiempo de respuesta (¿con qué rapidez responde el servicio a una solicitud?)
+    </li>
+    <li>
+        Rendimiento en hora punta (¿cuántas solicitudes de servicio pueden producirse por unidad de tiempo,&nbsp;por
+        ejemplo&nbsp;, por segundo, por minuto, por hora?)
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Documentar requisitos de gesti&oacute;n de estado</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Aunque los servicios individuales se consideran sin estado, las composiciones a menudo tienen requisitos para mantener
+    la información de estado a través de la invocación de los servicios compuestos. El coreógrafo de estos servicios es a
+    menudo responsable de la gestión del estado. De forma alternativa, un componente que implemente y ejecute varios
+    servicios u operaciones relacionados en los servicio puede necesitar mantener el estado entre invocaciones por motivos
+    de rendimiento.
+</p>
+<p>
+    La gestión de estado en un entorno de arquitectura orientada a servicios puede dividirse en tres categorías
+    principales:
+</p>
+<ul>
+    <li>
+        <strong>Estado de transacción</strong>: en el que un servicio tiene una transacción abierta durante una
+        conversación con un cliente.
+    </li>
+    <li>
+        <strong>Estado de seguridad</strong>: en el que se mantiene abierto un contexto de seguridad durante una
+        conversación con un cliente.
+    </li>
+    <li>
+        <strong>Estado funcional</strong>: en el que la conversación con un cliente implica un número de operaciones
+        relacionadas.
+    </li>
+</ul>
+<p>
+    Para obtener más información, consulte la <a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/guidelines/state_management_for_services_E4156B50.html" guid="4.2228409903513537E-306">Directriz: Gestión de estado para servicios</a>.
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Varias apariciones" abbr="Varias apariciones">Varias apariciones</th><td align="left" class="sectionTableCell" headers="property_Varias apariciones"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Condicionado por sucesos" abbr="Condicionado por sucesos">Condicionado por sucesos</th><td align="left" class="sectionTableCell" headers="property_Condicionado por sucesos"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Continuo" abbr="Continuo">Continuo</th><td align="left" class="sectionTableCell" headers="property_Continuo"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Se puede repetir" abbr="Se puede repetir">Se puede repetir</th><td align="left" class="sectionTableCell" headers="property_Se puede repetir"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Conceptos</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/guidances/concepts/service-oriented_architecture_8328ABAD.html" guid="8.613638237693525E-307">arquitectura orientada a servicios</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/guidances/concepts/service_composition_and_choreography_41EDEECB.html" guid="7.723783423994501E-306">Composición de servicio y coreografía</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/guidances/concepts/solution_partitioning_352116F8.html" guid="1.6501323286225543E-305">Particionamiento de soluciones</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/guidances/guidelines/service_realization_325D86D9.html" guid="_QNuHcEV1Edqpo8Lgp7-Wmg">Realización de servicio - Servicios de BPEL en una aplicación de SOA</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/guidances/toolmentors/creating_svce_model_using_rsa_FEA6D4E6.html" guid="{23A022B3-1564-406B-88B5-E8312C764A82}">Creación de un Modelo de Servicio utilizando RSA</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

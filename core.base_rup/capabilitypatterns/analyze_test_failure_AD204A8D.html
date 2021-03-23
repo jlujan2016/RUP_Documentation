@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de tareas: Analizar las anomal&iacute;as en la prueba</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="analyze_test_failure" name="uma.name">
+<meta content="Analizar las anomal&iacute;as en la prueba" name="uma.presentationName">
+<meta content="_tegJcEohEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="Verificador">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={35359DDF-6361-43E5-8B1B-18D204DA8CFF}&path={35359DDF-6361-43E5-8B1B-18D204DA8CFF},{0AE0042B-034C-4296-9FA0-D9DCC61FC7B4},_tegJcEohEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_C6jF0EdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_tegJcEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_dTvnIEdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_tegJcEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_zvv6IEdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_tegJcEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_C6jF0EdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_tegJcEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_dTvnIEdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_tegJcEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_zvv6IEdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_tegJcEohEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_C6jF0EdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_tegJcEohEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_dTvnIEdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_tegJcEohEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_zvv6IEdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA", "_6oxHwEdiEdqVZeSWHJlGyA", "_tegJcEohEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_tegJcEohEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Analizar las anomal&iacute;as en la prueba</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta tarea tiene como objeto localizar, aislar y diagnosticar anomalías de la prueba y documentarlas de forma eficaz.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    El objetivo de esta tarea es:
+</p>
+<ul>
+    <li>
+        Investigar los detalles del registro de prueba y analizar las anomalías que se han producido durante la
+        implementación y ejecución de la prueba
+    </li>
+    <li>
+        Corregir las anomalías producidas como consecuencia de los errores en el procedimiento de prueba
+    </li>
+    <li>
+        Registrar de forma apropiada los resultados importantes
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Principal:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_tester_E8F821D1.html" guid="_CSvwgRi2Edq_uI8xTPML6g">Verificador</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Adicional:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">Asistencia:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_suite_3D31FFB3.html" guid="_shwNUEohEdqrjq4i3fchvA">Conjunto de aplicaciones de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_log_1C3E1D2.html" guid="_shwNVEohEdqrjq4i3fchvA">Registro de prueba</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_case_36ADC82E.html" guid="_CSvwjRi2Edq_uI8xTPML6g">Caso de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_data_D79135E7.html" guid="_CSvwghi2Edq_uI8xTPML6g">Datos de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_project_specific_guidelines_677E05FF.html" guid="_CSvwiBi2Edq_uI8xTPML6g">Directrices espec&iacute;ficas del proyecto</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_strategy_A2EC23E0.html" guid="_CSvwhBi2Edq_uI8xTPML6g">Estrategia de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_tools_A6C0F816.html" guid="_CSvwhxi2Edq_uI8xTPML6g">Herramientas</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_workload_analysis_model_9C231806.html" guid="_CSvwhhi2Edq_uI8xTPML6g">Modelo de an&aacute;lisis de carga de trabajo</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_script_AD8A03F0.html" guid="_CSvwhRi2Edq_uI8xTPML6g">Script de prueba</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_change_request_B17B7D6C.html" guid="_temQEEohEdqrjq4i3fchvA">Solicitud de cambio</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> Examinar los registros de prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ExamineTestLogs" name="ExamineTestLogs"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Recopilar y entender la salida de las pruebas realizadas.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Empiece recopilando la salida de los registros de prueba durante la implementación y ejecución de las pruebas. Los
+    registros pertinentes pueden tener muchos orígenes: pueden capturarse mediante las herramientas utilizadas (tanto de
+    diagnóstico como de ejecución de pruebas), generarse mediante rutinas personalizadas que ha desarrollado el equipo,
+    obtenerse de los propios elementos del destino de la prueba, y registrarse manualmente por el verificador. Recopile
+    todos los orígenes de los registros de prueba disponibles y examine su contenido. Compruebe que todas las pruebas
+    planificadas se han ejecutado completamente y que todas las pruebas se habían planificado correctamente.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Capturar datos de incidencias no triviales</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="CaptureIncidentData" name="CaptureIncidentData"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Registrar la aparición de sucesos anómalos y no triviales para su posterior investigación. &nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Es importante capturar las apariciones anómalas; aunque ahora no pueda reproducirlas o explicarlas, las incidencias
+    subsiguientes con síntomas similares finalmente proporcionarán información suficiente que le ayudará a determinar cuál
+    es el error que las ha originado.
+</p>
+<p>
+    Registre todos los detalles que pueda en estos momentos pero indique que la incidencia todavía no se puede resolver.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar errores de procedimiento en la prueba</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="IdentifyProceduralErrors" name="IdentifyProceduralErrors"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Eliminar el error humano así como otros errores de proceso y procedimiento en el proceso de prueba a partir
+                del registro de incidencias. &nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Es bastante habitual que diversas anomalías sean el resultado de errores introducidos durante la implementación de la
+    prueba o en la gestión del entorno de prueba. Identifique y corrija estos errores.
+</p>
+<p>
+    Si la prueba ha finalizado anormalmente, impidiendo que se ejecuten otras pruebas, es posible que necesite recuperar la
+    prueba cerca del punto de la anomalía y continuar la ejecución de las pruebas restantes.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Localizar y aislar anomal&iacute;as</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="LocateIsolateFailures" name="LocateIsolateFailures"></a>
+<table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)" bordercolorlight="#808080" bordercolordark="#808080">
+    <tr>
+        <td width="5%">
+            <b>Objetivo:</b>&nbsp;
+        </td>
+        <td width="95%">
+            Identificar dónde se produce la anomalía, eliminando del análisis de la anomalía los elementos del destino de
+            la prueba que no son el origen de la anomalía. &nbsp;
+        </td>
+    </tr>
+</table>
+<div align="left">
+    <br />
+</div>
+<p>
+    Cuanto más diagnóstico de la anomalía realice, más probabilidades habrá que finalmente se identifique y entienda el
+    error.
+</p>
+<p>
+    Intente aislar la anomalía eliminando los elementos del destino de la prueba que probablemente no estén involucrados en
+    la anomalía y busque tendencias y características en los elementos restantes, estado del sistema, etc.
+</p>
+<p>
+    Lleve a cabo un análisis de la anomalía reproduciéndola bajo condiciones controladas, si la anomalía no puede
+    investigarse de forma satisfactoria sin reproducción. Utilice herramientas de diagnóstico y depuración cuando resulten
+    útiles.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Diagnosticar s&iacute;ntomas y caracter&iacute;sticas de la anomal&iacute;a</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="DiagnoseFailure" name="DiagnoseFailure"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Capturar un análisis útil de la anomalía para facilitar la identificación y resolución de errores. &nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Intente diagnosticar el error subyacente basándose en la experiencia de incidencias similares que se hayan producido.
+</p>
+<p>
+    Si es necesario y es posible, solicite ayuda a los desarrolladores para aprovechar los conocimientos internos que éstos
+    tienen del software para mejorar el análisis de la anomalía.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar las soluciones candidatas </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="IdentifyCandidateSolutions" name="IdentifyCandidateSolutions"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Proporcionar a la persona responsable de la resolución de la anomalía una mejor descripción de la
+                naturaleza e impacto de la anomalía y ayudar al desarrollador dándole ideas posibles que opcionalmente
+                pueden llevarse a cabo. &nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Consulte el apartado <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/determine_test_results_630C9EC9.html#CreateMaintainCRs" guid="{74E51E86-ECAB-4A61-9A88-FD358EE6F2B1}">Tarea: Determinar resultados de prueba - Crear y mantener solicitudes de
+    cambio</a> para obtener información sobre cómo escribir de forma eficaz informes de incidencias y solicitudes de
+    cambio.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Documentar los resultados de forma apropiada</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="DocumentFindings" name="DocumentFindings"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Presentar el análisis de la anomalía de manera apropiada a la persona responsable de resolver la anomalía.
+                &nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Consulte el apartado <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/determine_test_results_630C9EC9.html#CreateMaintainCRs" guid="{74E51E86-ECAB-4A61-9A88-FD358EE6F2B1}">Tarea: Determinar resultados de prueba - Crear y mantener solicitudes de
+    cambio</a> para obtener información sobre cómo escribir de forma eficaz informes de incidencias y solicitudes de
+    cambio.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Evaluar y verificar los resultados </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="EvaluateResults" name="EvaluateResults"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Verificar que la tarea se ha realizado correctamente y que los productos de trabajo resultantes son
+                aceptables.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Ahora que ha terminado el trabajo, se recomienda verificar que el trabajo tenía el valor suficiente y que no sólo ha
+    gastado una gran cantidad de papel. Debe evaluar si el trabajo tiene la calidad correcta y si es lo suficientemente
+    completo para que resulte útil a aquellos miembros del equipo que vayan a utilizarlo posteriormente como entrada de su
+    trabajo. Siempre que sea posible, utilice las listas de comprobación proporcionadas en RUP para verificar que la
+    calidad y la completitud son lo "suficientemente buenas".
+</p>
+<p>
+    Fomente la participación en la revisión del trabajo interno por parte de las personas que realizan tareas basadas en
+    los resultados de su trabajo. Hágalo mientras todavía tenga tiempo para realizar acciones para solucionar sus
+    problemas. También debe evaluar su trabajo en los productos de trabajo de entrada clave para asegurarse de que los ha
+    representado de forma precisa y suficiente. Para ello, podría resultar útil hacer que el autor del producto de trabajo
+    de entrada revise su trabajo.
+</p>
+<p>
+    Recuerde que RUP es un proceso de entrega iterativo y que en muchos casos los productos de trabajo evolucionan con el
+    tiempo. Como tal, no siempre es necesario (y a veces es contraproducente) formar completamente un producto de trabajo
+    que sólo se utilizará de forma parcial o que no se utilizará en absoluto en un trabajo inmediatamente posterior. Esto
+    se debe a que existe una alta probabilidad de que la situación alrededor del producto de trabajo cambie (y que las
+    suposiciones realizadas cuando se creó el producto de trabajo se demuestre que son incorrectas) antes de que se utilice
+    el producto, lo que da como resultado un esfuerzo inútil y una revisión costosa. Asimismo, evite la trampa de invertir
+    demasiados ciclos en la presentación en detrimento del valor del contenido. En entornos de proyecto en los que la
+    presentación tenga importancia y un gran valor económico como entregable del proyecto, puede utilizar un recurso
+    administrativo para ejecutar tareas de presentación.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Varias apariciones" abbr="Varias apariciones">Varias apariciones</th><td align="left" class="sectionTableCell" headers="property_Varias apariciones"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Condicionado por sucesos" abbr="Condicionado por sucesos">Condicionado por sucesos</th><td align="left" class="sectionTableCell" headers="property_Condicionado por sucesos"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Continuo" abbr="Continuo">Continuo</th><td align="left" class="sectionTableCell" headers="property_Continuo"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Se puede repetir" abbr="Se puede repetir">Se puede repetir</th><td align="left" class="sectionTableCell" headers="property_Se puede repetir"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/analyze_test_results_B5F84209.html" guid="{449954B7-E120-43B5-B9F3-B9673E4EF590}">Análisis de los resultados de la prueba utilizando Rational Test RealTime</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/eval_execution_of_suite_75D39B9.html" guid="{E4299918-C096-4CEE-A119-490B0DE11867}">Evaluación de los resultados de la ejecución de un conjunto de aplicaciones de prueba utilizando Rational TestFactory</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/evaluate_test_execution_result_7F4BCD38.html" guid="{037E5AB9-7DC1-4CDB-8395-A2647F5A7F24}">Análisis de anomalías de las pruebas utilizando Rational TestManager y TestFactory</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/eval_and_measure_code_based_coverage_32EF4DC6.html" guid="{F0ECC223-C6D1-46A9-802B-E4D86FD1572B}">Utilización de Rational TestFactory para medir y evaluar la cobertura de la prueba basada en código en scripts de prueba de Rational Robot</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/eval_test_coverage_8F1DEC44.html" guid="{D4C656B2-68B7-4C88-B999-FA80AA417C6C}">Evaluación de la cobertura de la prueba utilizando Rational TestFactory</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/submit_change_request_form_4C353A19.html" guid="{5B77C491-E5E9-4BE3-86BD-E4C8A82F8E32}">Envío de solicitudes de cambio utilizando Rational ClearQuest</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Archivado de requisitos utilizando Rational RequisitePro</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="archiving_requirements" name="uma.name">
+<meta content="Archivado de requisitos utilizando Rational RequisitePro" name="uma.presentationName">
+<meta content="Tool:rup_requisite_pro:Rational RequisitePro" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational RequisitePro" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{887DBA0C-5761-494D-862D-5956F1C51BF7}", "{1AA3B210-5979-4E05-8A08-A436B38997B0}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{887DBA0C-5761-494D-862D-5956F1C51BF7}", "{1AA3B210-5979-4E05-8A08-A436B38997B0}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{887DBA0C-5761-494D-862D-5956F1C51BF7}", "{1AA3B210-5979-4E05-8A08-A436B38997B0}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{1AA3B210-5979-4E05-8A08-A436B38997B0}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Archivado de requisitos utilizando Rational RequisitePro</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo archivar requisitos utilizando mandatos de archivado de Rational RequisitePro.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_requisite_pro_593FD397.html" guid="{887DBA0C-5761-494D-862D-5956F1C51BF7}">Rational RequisitePro</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/setup_cm_environment_78ABEDF9.html" guid="{FC91D0C9-759E-4D3D-86D8-22D7B26AA0F6}">Configurar el entorno de gestión de la configuración (CM)</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/support_development_1443EF07.html" guid="{35936CF9-4B04-402A-9482-07E5CFB45D99}">Dar soporte al desarrollo</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    Con fines de copia de seguridad, debe capturar requisitos del proyecto con objetivos distintos. Gracias a RequisitePro,
+    puede tomar una instantánea de los requisitos del proyecto y almacenarla en Rational ClearCase&reg; o, simplemente, como un
+    archivador de RequisitePro, que coloca una copia de los productos de trabajo del proyecto en el directorio del
+    archivador.
+</p>
+<p>
+    Puede utilizar varias herramientas de gestión de la configuración como, por ejemplo, Intersolv PVCS&reg; o Microsoft&reg;
+    Visual SourceSafe, para archivar los proyectos de RequisitePro. Si el proyecto utiliza una base de datos de Microsoft&reg;
+    Access, primero utilice el mandato Archivador de RequisitePro para crear un archivo archivador y, a continuación,
+    archive el archivo utilizando la herramienta de gestión de la configuración. Asegúrese de que incluye todos los
+    documentos del proyecto en el archivador. Cuando archive un proyecto que utilice rastreabilidad entre proyectos,
+    asegúrese de que archiva todos los proyectos asociados a la vez, a fin de que el proyecto archivado esté completo.
+</p>
+<p>
+    Un proyecto de RequisitePro consta de un proyecto de requisitos de Rational y un conjunto de documentos que contienen
+    requisitos. Los requisitos se pueden crear directamente en una vista del proyecto o en un documento de Microsoft&reg; Word
+    en RequisitePro. En el proyecto de RequisitePro asociado que mantiene los requisitos se hace referencia a todos los
+    documentos que contienen requisitos. Un archivador de proyectos de RequisitePro contiene el proyecto de requisitos de
+    Rational y todos los documentos que contienen requisitos.
+</p>
+<p>
+    <b>Nota:</b> para obtener información sobre la creación de una línea base de un proyecto de RequisitePro, consulte el
+    apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/baseline_requirements_C387B42A.html" guid="{CC4BC013-6917-468D-A3DC-0E696FB9DB7A}">Guía de la herramienta: Creación de una línea base de un proyecto de
+    Rational RequisitePro</a>.
+</p>
+<h3>
+    Pasos de la herramienta
+</h3>
+<p>
+    Para archivar un proyecto utilizando RequisitePro, elija una de las opciones siguientes:
+</p>
+<ol>
+    <li>
+        <a href="#Archive a RequisitePro project as a RequisitePro archive">Archivar un proyecto de
+        RequisitePro como un archivador de RequisitePro</a>
+    </li>
+    <li>
+        <a href="#Archive a RequisitePro project in ClearCase">Archivar un proyecto de RequisitePro en
+        ClearCase</a>
+    </li>
+    <li>
+        <a href="#VSS">Archivar un proyecto de RequisitePro utilizando una base de datos empresarial</a>
+    </li>
+</ol>
+<h4>
+    1. <a id="Archive a RequisitePro project as a RequisitePro archive" name="Archive a RequisitePro project as a RequisitePro archive">Archivar un proyecto de RequisitePro como un archivador
+    de RequisitePro</a>
+</h4>
+<p>
+    Cuando archiva un proyecto de RequisitePro como un archivador de RequisitePro, simplemente hace una copia de todos los
+    archivos del proyecto en un directorio definido por el usuario. Puede utilizar esta opción para archivar un proyecto de
+    RequisitePro utilizando sistemas de gestión de la configuración para los que RequisitePro no ofrece soporte
+    directamente.
+</p>
+<p>
+    Para archivar un proyecto de RequisitePro como un archivador de RequisitePro, siga los pasos que se indican a
+    continuación:
+</p>
+<ol>
+    <li>
+        Pulse <b>Archivo &gt; Administración de proyectos &gt; Archivador &gt; Archivador de RequisitePro</b>. Se muestra
+        el recuadro de diálogo Archivar proyecto.
+    </li>
+    <li>
+        Seleccione el directorio en el que desea almacenar la copia de seguridad. Pulse <b>Examinar</b> para abrir el
+        recuadro de diálogo Examinar para buscar carpeta. Navegue a un directorio, seleccione una carpeta y pulse
+        <b>Aceptar</b> para volver al recuadro de diálogo Archivar proyecto.
+    </li>
+    <li>
+        Para añadir un nuevo subdirectorio a una vía de acceso de directorio existente, pulse al final de un campo
+        <b>Directorio</b> y teclee una barra inclinada invertida (\) y el nombre del nuevo subdirectorio.
+    </li>
+    <li>
+        Para aplicar un número de revisión a los documentos de requisitos, seleccione el recuadro de selección <b>Propagar
+        a todos los documentos</b>.<br />
+         <b>Nota:</b> si se ha habilitado la seguridad, debe tener permiso de estructura de proyectos para propagar el
+        número de revisión. Y también, el proyecto se debe abrir con carácter exclusivo.
+    </li>
+    <li>
+        Pasos opcionales: Teclee un nuevo número de revisión para el proyecto y escriba un nombre para la versión archivada
+        en el recuadro <b>Etiqueta de versión</b> y una descripción para la misma en el recuadro <b>Descripción de
+        cambio</b>.
+    </li>
+    <li>
+        Pulse <b>Aceptar</b>.
+    </li>
+</ol>
+<p>
+    Para acceder a este archivador más tarde, simplemente, añada el proyecto archivado a la lista de proyectos de
+    RequisitePro:
+</p>
+<ol>
+    <li>
+        Pulse <b>Archivo &gt; Abrir proyecto</b>. Se muestra el recuadro de diálogo Abrir proyecto.
+    </li>
+    <li>
+        Pulse <b>Añadir</b>. Busque y seleccione el proyecto archivado en el directorio de archivador especificado.
+    </li>
+    <li>
+        Pulse <b>Abrir</b> y <b>Aceptar</b>. El proyecto archivado está disponible en RequisitePro.
+    </li>
+</ol>
+<h4>
+    Para obtener más información
+</h4>
+<p>
+    <b><img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/guidances/toolmentors/resources/helpbook.gif" width="16" /></b> Consulte el tema
+    de la ayuda en línea de RequisitePro que trata sobre el <i>archivado de proyectos con el mandato Archivador de
+    RequisitePro</i> (Índice: archivado&gt;utilización del mandato Archivador).
+</p>
+<h4>
+    2. <a id="Archive a RequisitePro project in ClearCase" name="Archive a RequisitePro project in ClearCase">Archivar un
+    proyecto de RequisitePro en ClearCase</a>
+</h4>
+<p>
+    Para archivar un proyecto de Rational RequisitePro en Rational ClearCase, siga los pasos que se indican a continuación:
+</p>
+<ol>
+    <li>
+        Pulse <b>Herramientas</b> &gt; <b>Opciones</b>.
+    </li>
+    <li>
+        En el recuadro <b>Vista de ClearCase</b>, teclee la ubicación VOB (base de objetos con versión) de destino (unidad,
+        nombre de vista, nombre de vob y directorio). La vía de acceso debe empezar por una letra de unidad. Utilice
+        nombres del convenio de denominación universal para una unidad compartida. Este paso define la vista en la que se
+        van a copiar los documentos y la base de datos de RequisitePro cuando se archive el proyecto.
+    </li>
+    <li>
+        Pulse <b>Aceptar</b> para guardar la entrada y cerrar el recuadro de diálogo Opciones.
+    </li>
+    <li>
+        Pulse <b>Archivo &gt; Administración de proyectos &gt; Archivador &gt; Rational ClearCase</b>. Se muestra el
+        recuadro de diálogo Archivar con ClearCase.
+    </li>
+    <li>
+        Seleccione el directorio en el que desea almacenar la copia de seguridad. Pulse <b>Examinar</b> para abrir el
+        recuadro de diálogo Examinar para buscar carpeta. Navegue a un directorio, seleccione una carpeta y pulse
+        <b>Aceptar</b>. Vuelve al recuadro de diálogo Archivar con ClearCase.
+    </li>
+    <li>
+        Para añadir un nuevo subdirectorio a una vía de acceso de directorio existente, pulse al final de un campo
+        <b>Directorio</b> y teclee una barra inclinada invertida (\) y el nombre del nuevo subdirectorio.
+    </li>
+    <li>
+        Los pasos siguientes son opcionales: 
+        <ul>
+            <li>
+                Teclee un nuevo número de revisión para el proyecto.
+            </li>
+            <li>
+                Aplique el número de revisión a los documentos de requisitos seleccionando el recuadro de selección
+                <b>Propagar a todos los documentos</b>. <b>Nota:</b> si se ha habilitado la seguridad, debe tener permiso
+                de estructura de proyectos para propagar el número de revisión. Y también, el proyecto se debe abrir con
+                carácter exclusivo.
+            </li>
+            <li>
+                Escriba un nombre para la versión archivada en el recuadro de texto <b>Etiqueta de versión</b> y una
+                descripción para la misma en <b>Descripción de cambio</b>.
+            </li>
+        </ul>
+    </li>
+</ol>
+<h4>
+    Para obtener más información
+</h4>
+<p>
+    <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/guidances/toolmentors/resources/helpbook.gif" width="16" /> Consulte el tema de la
+    ayuda en línea de RequisitePro que trata sobre el <i>archivado de proyectos con Rational ClearCase</i> (Índice:
+    archivado&gt;utilizando ClearCase).
+</p>
+<h4>
+    3. <a id="VSS" name="VSS">Archivar un proyecto de RequisitePro utilizando una base de datos empresarial</a>
+</h4>
+<p>
+    <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/guidances/toolmentors/resources/helpbook.gif" width="16" /> Para obtener
+    directrices completas sobre el archivado de proyectos de RequisitePro que utilicen una base de datos Oracle o Microsoft
+    SQL Server, consulte el tema de la ayuda en línea de RequisitePro que trata sobre el <i>archivado de un proyecto de
+    base de datos empresarial</i> (Índice: archivado&gt;bases de datos empresariales).
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

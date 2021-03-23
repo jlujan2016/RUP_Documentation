@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Gesti&oacute;n de guiones de uso mediante RSx y Rational RequisitePro</title>
+<meta content="Guideline" name="uma.type">
+<meta content="managing_use_cases_using_rational_software_architect_and_rational_requisitepro" name="uma.name">
+<meta content="Gesti&oacute;n de guiones de uso mediante RSx y Rational RequisitePro" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "3.857679223515255E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.857679223515255E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Gesti&oacute;n de guiones de uso mediante RSx y Rational RequisitePro</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta guía describe como gestionar guiones de uso mediante el entorno de modelado RSx y Rational Requisite Pro para un proyecto. RSx se refiere a RSA, RSD y RSM.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/prioritize_use_cases_E6E4D9A0.html" guid="{6E23D919-D149-43C2-9D37-8AF77B667CA8}">Priorizar los guiones de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    Los implementadores, los profesionales de pruebas y los gestores de proyectos gestionan guiones de uso a medida que los
+    desarrollan y perfeccionan a lo largo de las fases de inicio, elaboración, compilación y transición de un proyecto. La
+    gestión de guiones de uso eficaz requiere documentación integrada para registrar el estado actual del guión de uso, así
+    como para proporcionar descripciones detalladas del guión de uso. La integración de RSx RequisitePro permite gestionar
+    guiones de uso mediante <b>atributos</b> como, por ejemplo, prioridad, riesgo, estado e iteración, al asociar los
+    guiones de uso de RSx con requisitos de RequisitePro.
+</p>
+<p>
+    Las funciones principales de la integración de RSx RequisitePro son:
+</p>
+<ul>
+    <li>
+        <b>Abrir y examinar varios proyectos RequisitePro</b>; ello permite acceder a diferentes niveles de detalle o
+        perspectivas: requisitos, paquetes y vistas.
+    </li>
+    <li>
+        <b>Asociar requisitos con elementos de modelo</b>: crear asociaciones directas e indirectas mediante la operación
+        de arrastrar y soltar o los elementos de menú.
+    </li>
+    <li>
+        <b>Crear elementos de modelo a partir de requisitos</b> : arrastrar requisitos de guiones de uso a paquetes de
+        modelo
+    </li>
+    <li>
+        <b>Políticas de sincronización personalizable para nombre y texto</b> : ninguna, favorecimiento del modelo,
+        favorecimiento del requisito, bidireccional
+    </li>
+</ul>
+<p>
+    Aunque es posible que un gran número de desarrolladores prefieran desarrollar inicialmente guiones de uso en RSx,
+    muchos analistas prefieren empezar el desarrollo de requisitos de guiones de uso en RequisitePro. La integración de RSx
+    RequisitePro permite empezar con cualquier herramienta y, a continuación, crear requisitos de guiones de uso o guiones
+    de uso asociados en la otra herramienta.
+</p>
+<p>
+    La integración de RSx RequisitePro proporciona dos tipos de asociaciones: directa e indirecta, las cuales se pueden
+    utilizar para implementar la rastreabilidad. Las asociaciones directas deben utilizarse cuando el requisito y el
+    elemento de modelo asociado sean conceptualmente el mismo elemento. Por ejemplo, puede tener un requisito de guión de
+    uso y un elemento de modelo de guión de uso que sean conceptualmente el mismo guión de uso. Lo único diferente son las
+    dos formas de visualizarlo. La asociación directa es la mejor asociación para utilizar en estas circunstancias. Por
+    ejemplo, la asociación requisito de guión de uso / tipo de modelo de guión de uso hace que la herramienta se comporte
+    de la manera siguiente:
+</p>
+<ul>
+    <li>
+        Arrastrar un requisito de guión de uso a otros crear una asociación directa
+    </li>
+    <li>
+        Arrastrar un requisito de guión de uso a un paquete de modelo crear elementos de modelo de guión de uso
+    </li>
+    <li>
+        Arrastrar un requisito de guión de uso a otros elementos de modelo crea rastreos
+    </li>
+</ul>
+<p>
+    Una asociación indirecta se realiza a través de un requisito de diseño que actúa como proxy para el elemento de modelo.
+    En este caso, se crea un requisito en el proyecto RequisitePro para representar el elemento de modelo. A continuación,
+    se pueden utilizar los mecanismos de rastreabilidad RequisitePro estándares para rastrear requisitos a dicho elemento
+    de modelo, tal vez para indicar que el elemento de modelo contribuye al cumplimiento de dichos requisitos. Por ejemplo,
+    al arrastrar un requisito FEAT a un clase para crear rastreabilidad RequisitePro tiene las consecuencias siguientes:
+</p>
+<ul>
+    <li>
+        Se crea un requisito CLASS proxy si todavía no existe.
+    </li>
+    <li>
+        El requisito CLASS proxy se asocia directamente con el elemento de modelo de clase si no existía.
+    </li>
+    <li>
+        Se crea un rastreo a partir del requisito CLASS para el requisito FEAT
+    </li>
+    <li>
+        De este modo, se asocia indirectamente el requisito FEAT con el elemento de modelo de clase.
+    </li>
+</ul>
+<p>
+    Temas:
+</p>
+<ol>
+    <li>
+        <a href="#Opening a RequisitePro project in RSx">Apertura de un proyecto RequisitePro en RSx</a>
+    </li>
+    <li>
+        <a href="#Associate a Requirement with a Model Element">Asociar un requisito con un elemento de
+        modelo</a>
+    </li>
+    <li>
+        <a href="#Create Associated Model Elements and Requirements">Crear requisitos y elementos de modelo
+        asociados</a>
+    </li>
+    <li>
+        <a href="#Browsing Requirements Traceability">Examinar rastreabilidad de requisitos</a>
+    </li>
+</ol>
+<p>
+    <a href="#MoreInfo">Información adicional sobre la herramienta</a>
+</p>
+<h3>
+    <a id="Opening a RequisitePro project in RSx" href="#MoreInfo" name="Opening a RequisitePro project in RSx">Apertura de
+    un proyecto RequisitePro en RSx</a>
+</h3>
+<ol>
+    <li>
+        Abra el modelo RSx de Rational.
+    </li>
+    <li>
+        Seleccione Ventana &gt; Mostrar vista &gt; Otros &gt; Integración RequisitePro &gt; Explorador de requisitos o abra
+        la perspectiva de requisito.
+    </li>
+    <li>
+        Pulse el botón Abrir proyecto en la barra de herramientas de la vista.
+    </li>
+    <li>
+        Desplácese hasta un proyecto RequisitePro (.RQS)
+    </li>
+    <li>
+        Se muestra el proyecto, los paquetes, los requisitos y las vistas.
+    </li>
+</ol>
+<p>
+    Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />
+    <i>Apertura de proyectos RequisitePro</i> en la ayuda en línea.
+</p>
+<h3>
+    <a id="Associate a Requirement with a Model Element" href="#Top" name="Associate a Requirement with a Model Element">Asociar un requisito con un elemento de modelo</a>
+</h3>
+<ol>
+    <li>
+        Seleccione uno o varios requisitos en el explorador de requisitos.
+    </li>
+    <li>
+        Arrastre y suelte la selección en el elemento de modelo de destino del explorador de modelos.
+    </li>
+    <li>
+        Como resultado, los requisitos se asocian con el elemento de modelo.
+    </li>
+</ol>
+<p>
+    Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />
+    <i>Asociación de requisitos existentes y elementos de dominio</i> en la ayuda en línea.
+</p>
+<h3>
+    <a id="Create Associated Model Elements and Requirements" href="#Top" name="Create Associated Model Elements and Requirements">Crear requisitos y elementos de modelo asociados</a>
+</h3>
+<p>
+    Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />
+    <i>Creación de&nbsp;elementos de dominio a partir de requisitos</i> y <i>Creación de requisitos a partir
+    de&nbsp;elementos de dominio</i> en la ayuda en línea.
+</p>
+<h3>
+    <a id="Browsing Requirements Traceability" href="#Top" name="Browsing Requirements Traceability">Examinar
+    rastreabilidad de requisitos</a>
+</h3>
+<ol>
+    <li>
+        Pulse el botón derecho del ratón sobre un requisito del explorador de requisitos, seleccione "Abrir asociaciones de
+        requisitos".
+    </li>
+    <li>
+        El requisito se muestra en la vista de asociaciones de requisito
+    </li>
+    <li>
+        La vista muestra los elementos que rastrean el requisito.
+    </li>
+    <li>
+        Un botón puede activarse o desactivarse para mostrar los elementos que rastrean el requisito.
+    </li>
+</ol>
+<p>
+    Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />
+    <i>Rastreabilidad de requisitos</i> en la ayuda en línea.
+</p>
+<h3>
+    <a id="MoreInfo" href="#Top" name="MoreInfo">Información adicional sobre la herramienta</a>
+</h3>
+<p>
+    Tutoriales:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" />&nbsp;<i>Asociación de requisitos y elementos de modelo</i>&nbsp;<br />
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Establecimiento del control de versi&oacute;n utilizando Rational Rose RealTime con Rational ClearCase</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="setting_up_version_control_using_rose_realtime" name="uma.name">
+<meta content="Establecimiento del control de versi&oacute;n utilizando Rational Rose RealTime con Rational ClearCase" name="uma.presentationName">
+<meta content="Tool:rup_rose_rt:Rational Rose RealTime" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Rose RealTime" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B3026434-672D-4564-9106-A951C326EBF5}", "{67B13F47-BD65-4ABD-9F68-E8953008441E}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B3026434-672D-4564-9106-A951C326EBF5}", "{67B13F47-BD65-4ABD-9F68-E8953008441E}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B3026434-672D-4564-9106-A951C326EBF5}", "{67B13F47-BD65-4ABD-9F68-E8953008441E}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{67B13F47-BD65-4ABD-9F68-E8953008441E}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Establecimiento del control de versi&oacute;n utilizando Rational Rose RealTime con Rational ClearCase</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se explica cómo establecer el control de versión utilizando Rational Rose RealTime con Rational ClearCase.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_rose_rt_DDC0220E.html" guid="{B3026434-672D-4564-9106-A951C326EBF5}">Rational Rose RealTime</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/setup_tools_FBA37850.html" guid="{78C58888-2969-4A74-BF76-5F77AFA36F9C}">Configurar las herramientas</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/make_changes_to_configuration_items_9F1D8304.html" guid="{A56F93A6-DAD6-4453-936D-D7AE4A34D45D}">Realizar cambios</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    Rational ClearCase utiliza un modelo de vista combinado con un sistema de archivos virtual gracias al cual puede
+    especificar la composición de versiones de archivos con la que desea trabajar. A continuación, Rational Rose RealTime
+    ve los archivos de la vista actual del mismo modo que si se hubieran almacenado en un sistema de archivos normal (no de
+    ClearCase). Rose RealTime especifica el conjunto de archivos que componen el modelo, y ClearCase proporciona las
+    versiones de los archivos que determina la especificación de configuración de la vista.
+</p>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" />&nbsp;Para obtener información
+    detallada sobre la utilización de Rose RealTime con ClearCase, consulte el documento titulado <i>Guide to Team
+    Development, Rational Rose RealTime</i>.
+</p>
+<p>
+    Antes de utilizar ClearCase, debe establecer la estación de trabajo y todas las estaciones de trabajo en las que se va
+    a utilizar ClearCase.
+</p>
+<h4>
+    Requisitos previos: Establecimiento de ClearCase
+</h4>
+<h5>
+    Recomendaciones generales
+</h5>
+<p>
+    Si es un usuario de Microsoft Windows NT, no acceda a las vistas a través del punto de montaje MVFS, ni de la unidad
+    M:. En vez de ello, utilice las vistas a través de montajes de unidad explícitos como, por ejemplo, X:, Y: o Z:. De
+    este modo se mejora la tolerancia y se eliminan las dependencias en los nombres de las vistas.
+</p>
+<h5>
+    Integración de UCM
+</h5>
+<p>
+    Gracias a la integración de UCM, puede asignar actividades a revisiones desde conjuntos de herramientas, si trabaja en
+    una VOB de UCM. Además, puede cambiar la base, entregar e iniciar el explorador de proyectos desde Rose RealTime.
+</p>
+<h5>
+    Vistas de instantánea
+</h5>
+<p>
+    Con ClearCase, puede iniciar una actualización de vista de instantánea desde Rose RealTime. La vista de instantánea
+    contiene el árbol de directorios de los archivos de origen.
+</p>
+<p>
+    Es posible que desee utilizar vistas de instantánea si se aplica cualquiera de las condiciones siguientes:
+</p>
+<ul>
+    <li>
+        El sistema no admite vistas dinámicas.
+    </li>
+    <li>
+        Desea optimizar el rendimiento de compilación para lograr velocidades de compilación nativas.
+    </li>
+    <li>
+        Desea trabajar con archivos de origen bajo el control de ClearCase cuando se desconecta de la red que alberga las
+        VOB, o bien, se conecta a la red de modo intermitente.
+    </li>
+    <li>
+        Desea acceder a una vista desde un sistema que no es un sistema principal de ClearCase.
+    </li>
+    <li>
+        El proyecto no utiliza la evitación de compilación y auditoría de compilación de ClearCase.
+    </li>
+</ul>
+<h5>
+    Configuración de la estación de trabajo de Rational ClearCase
+</h5>
+<p>
+    Se deben configurar todas las estaciones de trabajo que van a acceder a una VOB o vista para utilizar ClearCase. Para
+    Windows NT/2000, incluye todas las estaciones de trabajo que se utilizan para el desarrollo. Para UNIX, incluye todas
+    las máquinas que son servidores de vistas.
+</p>
+<p>
+    Además, se deben establecer para ClearCase todas las máquinas que actúan como servidores de vistas para las vistas de
+    ClearCase que utiliza Rose RealTime. Si utiliza ClearCase MultiSite, debe hacerlo en todos los sitios en los que se
+    crean réplicas de las VOB que contienen elementos de Rose. Puede determinar las máquinas que son servidores de vistas
+    escribiendo lo siguiente en una ventana de mandatos:
+</p>
+<blockquote>
+<pre>
+ cleartool lsview
+</pre>
+</blockquote>
+<p>
+    El segundo elemento de cada línea de salida indica el nombre de la máquina en la que se ejecuta el servidor de vistas.
+    Por ejemplo, si ve la línea siguiente en la salida del mandato lsview:
+</p>
+<blockquote>
+<pre>
+ myview mymachinevwsmyview.vws
+</pre>
+</blockquote>
+<p>
+    "mymachine" es el nombre de la máquina en la que se encuentra el servidor de vistas para myview.
+</p>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" />&nbsp;Para obtener más
+    detalles, consulte al administrador de ClearCase o consulte la información de las herramientas de control de origen de
+    la publicación <i>Guide to Team Development, Rational Rose RealTime</i>.
+</p>
+<h5>
+    Configuración inicial
+</h5>
+<p>
+    Los pasos siguientes se aplican si se va a trabajar en un modelo que ya se encuentra bajo el control de origen en una
+    VOB. Para obtener información adicional, consulte la información de la administración del control de origen que se
+    facilita en la publicación <i>Guide to Team Development, Rational Rose RealTime</i>.
+</p>
+<ol>
+    <li>
+        Cree la vista de integrador de modo que la especificación de la configuración aparezca tal como se indica a
+        continuación:
+    </li>
+</ol>
+<blockquote>
+    <blockquote>
+<pre>
+ <b>
+element * CHECKEDOUT</b><br />
+
+ <b>
+element * /main/LATEST</b>
+</pre>
+    </blockquote>
+</blockquote>
+<ol start="2">
+    <li>
+        Cree etiquetas de proyecto para definir varias composiciones. Lo siguiente son algunos ejemplos de etiquetas
+        significativas:
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            TC_BASELINE_0 - para representar el estado inicial del proyecto
+        </li>
+        <li>
+            TC_BUILDFILES - para indicar las versiones de elementos que se deben incluir en la compilación automatizada
+            siguiente
+        </li>
+        <li>
+            TC_LATEST_STABLE - para identificar la composición estable más reciente de la ramificación de integración
+        </li>
+    </ul>
+</blockquote>
+<ol start="3">
+    <li>
+        Cree la composición inicial y aplique la etiqueta a la VOB. Lo siguiente es un ejemplo de una composición inicial:
+    </li>
+</ol>
+<blockquote>
+    <blockquote>
+<pre>
+ <b>
+[x:dev]cleartool mklabel -recurse TC_BASELINE_0 dev</b>
+</pre>
+    </blockquote>
+</blockquote>
+<ol start="4">
+    <li>
+        Cree la plantilla de vista del desarrollador con el objeto de asegurarse de que todas las especificaciones de la
+        configuración derivan de una base común. De este modo se proporciona acceso controlado y coherente al modelo,
+        además de simplificar el uso de composiciones y ramificaciones privadas.<br />
+        <br />
+         Hay dos funciones principales que realizan los desarrolladores: examen y desarrollo. Cada una de ellas requiere
+        una especificación de la configuración diferente.
+    </li>
+</ol>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" />&nbsp;Para obtener información
+    sobre las reglas de las plantillas, consulte la información de configuración inicial que se facilita en la publicación
+    <i>Guide to Team Development, Rational Rose RealTime</i>.
+</p>
+<h3>
+    Pasos de la herramienta
+</h3>
+<p>
+    Para utilizar ClearCase desde Rose RealTime, siga los pasos que se indican a continuación:
+</p>
+<ol>
+    <li>
+        <a href="#Control appropriate model elements as units">Controlar elementos de modelo adecuados como
+        unidades</a>
+    </li>
+    <li>
+        <a href="#Create a local work area">Crear un área de trabajo local</a>
+    </li>
+    <li>
+        <a href="#Save a model to the work area">Guardar un modelo en el área de trabajo</a>
+    </li>
+    <li>
+        <a href="#Configure the workspace source control options">Configurar las opciones de control de origen
+        del espacio de trabajo</a>
+    </li>
+    <li>
+        <a href="#Add the model to source control">Añadir el modelo al control de origen</a>
+    </li>
+    <li>
+        <a href="#Make the default workspace available to project members">Poner el espacio de trabajo por
+        omisión a disposición de todos los miembros del proyecto</a>
+    </li>
+    <li>
+        <a href="#Use view templates">Utilizar plantillas de vista</a>
+    </li>
+    <li>
+        <a href="#ClearCase entities">Entidades de ClearCase</a>
+    </li>
+    <li>
+        <a href="#Automate builds">Compilaciones automatizadas</a>
+    </li>
+    <li>
+        <a href="#Developer process">Proceso del desarrollador</a>
+    </li>
+    <li>
+        <a href="#Integration Process">Proceso de integración</a>
+    </li>
+</ol>
+<h3>
+    1. <a id="Control appropriate model elements as units" name="Control appropriate model elements as units">Controlar
+    elementos de modelo adecuados como unidades</a>
+</h3>
+<p>
+    Determine la granularidad que necesita para el proyecto y el entorno de equipo en la fase actual del desarrollo. Hágalo
+    en colaboración con el arquitecto del proyecto.
+</p>
+<h3>
+    2. <a id="Create a local work area" name="Create a local work area">Crear un área de trabajo local</a>
+</h3>
+<p>
+    Es posible que desee establecer un área de trabajo local para guardar modelos en ClearCase. Cada desarrollador que
+    accede a archivos de Rose RealTime de una VOB debe utilizar su propia vista dedicada.
+</p>
+<h3>
+    3. <a id="Save a model to the work area" name="Save a model to the work area">Guardar un modelo en el área de
+    trabajo</a>
+</h3>
+<p>
+    Antes de colocar el modelo en el control de origen, se debe haber guardado en el área de trabajo local. Guarde el
+    modelo en el directorio que ha asociado al depósito de control de origen.
+</p>
+<h3>
+    4. <a id="Configure the workspace source control options" name="Configure the workspace source control options">Configurar las opciones de control de origen del espacio de
+    trabajo</a>
+</h3>
+<p>
+    Para habilitar el control de origen, rellene los valores adecuados que se describen en los fundamentos de control de
+    origen de la publicación <i>Guide to Team Development, Rational Rose RealTime</i>.
+</p>
+<h3>
+    5. <a id="Add the model to source control" name="Add the model to source control">Añadir el modelo al control de
+    origen</a>
+</h3>
+<p>
+    El modo más sencillo de añadir todas las unidades aplicables al control de origen es utilizar la herramienta <b>Enviar
+    todos los cambios al control de origen</b>. Para obtener más información, consulte la información que se facilita en la
+    publicación <i>Guide to Team Development, Rational Rose RealTime</i> sobre la administración de control de origen.
+</p>
+<h3>
+    6. <a id="Make the default workspace available to project members" name="Make the default workspace available to project members">Poner el espacio de trabajo por omisión a disposición de
+    todos los miembros del proyecto</a>
+</h3>
+<p>
+    El archivo de espacio de trabajo (.rtwks) contiene información común para todos los usuarios que trabajan en el
+    proyecto. Rara vez, si llega a suceder, cambian los valores del espacio de trabajo después de la configuración inicial.
+    Todos los desarrolladores de un proyecto deben utilizar copias idénticas del archivo de espacio de trabajo. Por este
+    motivo, es posible que desee situar dicho archivo en el control de origen con el objeto de que haya una versión fija
+    disponible para todos los usuarios del proyecto. Rational Rose RealTime no proporciona soporte explícito para
+    incorporar o extraer este archivo.
+</p>
+<p>
+    Una vez que el gestor de control de origen añade el modelo al control de origen, el espacio de trabajo se debe añadir
+    manualmente por medio de la herramienta de control de origen. A continuación, los demás usuarios deben recuperar el
+    espacio de trabajo como parte de la actualización inicial de su área de trabajo local. De este modo se garantiza que
+    todos los miembros del equipo utilizan los mismos valores de control de origen para el proyecto.
+</p>
+<h3>
+    7. <a id="Use view templates" name="Use view templates">Utilizar plantillas de vista</a>
+</h3>
+<p>
+    Las plantillas de vista se utilizan para garantizar que los desarrolladores utilizan una base común para la
+    especificación de la configuración de la vista, y para simplificar el trabajo en ramificaciones privadas. Una plantilla
+    de vista especifica la ramificación de integración desde la que trabajar, lista puntos de control etiquetados que se
+    pueden utilizar para basar una ramificación privada e incluye una plantilla de especificación de la configuración que
+    se puede rellenar con reglas de especificación de la configuración adicionales.
+</p>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" />&nbsp;Para obtener más
+    información, consulte la información que se facilita en la publicación <i>Guide to Team Development, Rational Rose
+    RealTime</i> sobre el desarrollo paralelo de Rational ClearCase.
+</p>
+<h3>
+    8. <a id="ClearCase entities" name="ClearCase entities">Entidades de ClearCase</a>
+</h3>
+<p>
+    Se pueden crear vistas, plantillas de vista y etiquetas como ayuda para facilitar características de Rational
+    ClearCase. Para obtener más información, consulte la información que se facilita en la publicación <i>Guide to Team
+    Development, Rational Rose RealTime</i> sobre el desarrollo paralelo de ClearCase.
+</p>
+<h3>
+    9. <a id="Automate builds" name="Automate builds">Compilaciones automatizadas</a>
+</h3>
+<p>
+    A fin de ofrecer la posibilidad de elegir de modo selectivo las versiones de archivos que se van a incluir en la
+    compilación, el compilador selecciona todas las versiones que se etiquetan con la etiqueta de compilación
+    TC_BUILDFILES. Esto permite flexibilidad para cambiar las versiones exactas que se incluyen en la compilación, si
+    procede. Por ejemplo, si la versión más reciente de un archivo contiene código que no se compila, se puede etiquetar la
+    versión previa en su lugar.
+</p>
+<p>
+    La compilación implica los pasos siguientes:
+</p>
+<ol>
+    <li>
+        Etiquetar los archivos de compilación.
+    </li>
+    <li>
+        Realizar la compilación.
+    </li>
+    <li>
+        Una vez que la compilación se ha completado satisfactoriamente:
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <ul>
+            <li>
+                Crear una nueva etiqueta de composición y aplicarla para compilar versiones de archivo.
+            </li>
+            <li>
+                Aplicar TC_LATEST_STABLE para compilar versiones de archivo.
+            </li>
+            <li>
+                Poner la nueva composición a disposición de los desarrolladores.
+            </li>
+        </ul>
+    </li>
+</ol>
+<h3>
+    10. <a id="Developer process" name="Developer process">Proceso del desarrollador</a>
+</h3>
+<p>
+    Un solo desarrollador completa cada actividad de desarrollo, que se lleva a cabo en una ramificación privada específica
+    para dicha actividad. De nuevo, cada desarrollador requiere su propia vista. La vista se basa en un punto de
+    ramificación en la ramificación de integración que identifica una etiqueta de compilación.<br />
+    <br />
+     Se debe elegir un nombre de ramificación exclusivo que identifique el trabajo que se lleva a cabo como, por ejemplo:
+</p>
+<blockquote>
+<pre>
+ paulz_timing
+</pre>
+</blockquote>
+<p>
+    Las reglas de especificación de la configuración de la vista se establecen para extraer y ramificar automáticamente los
+    archivos del punto de ramificación a la ramificación privada. A la vez, los nuevos elementos que se crean durante la
+    actividad de desarrollo se ramifican de modo inmediato a la ramificación privada.
+</p>
+<p>
+    Puesto que la ramificación se oculta a los demás desarrolladores, el usuario puede incorporar cambios incrementales a
+    la ramificación. Cuando el desarrollador está satisfecho, ha completado los cambios y están listos para la integración,
+    el desarrollador informa al integrador que todos los cambios de la ramificación privada están preparados para la
+    integración.
+</p>
+<p>
+    Al basar las ramificaciones privadas del desarrollador fuera de las etiquetas que corresponden a las versiones que
+    utilizan las compilaciones automatizadas, cada desarrollador puede reutilizar gran parte de los resultados de la
+    compilación en forma de objetos derivados de tolerancia. De este modo se reduce considerablemente la compilación que
+    debe realizar cada desarrollador cuando se realizan cambios.
+</p>
+<h3>
+    11. <a id="Integration Process" name="Integration Process">Proceso de integración</a>
+</h3>
+<p>
+    A la larga, todas las actividades de desarrollo se deben fusionar en la ramificación de integración. ClearCase dispone
+    de varias herramientas para llevar a cabo dicha fusión. El mandato <b>cleartool findmerge</b> se puede utilizar para
+    fusionar todos los cambios de una ramificación en otra ramificación. Desde la vista de integrador, se puede utilizar la
+    sintaxis de mandato siguiente:
+</p>
+<blockquote>
+<pre>
+ cleartool findmerge dev -all -fversion .../paulz_timing/LATEST -merge
+</pre>
+</blockquote>
+<p>
+    De forma alternativa, los usuarios de Windows NT pueden utilizar el Gestor de fusiones de ClearCase para realizar la
+    misma fusión.
+</p>
+<p>
+    Ambos métodos fusionan versiones de directorio y también utilizan el integrador de modelos de Rose RealTime para
+    fusionar los cambios en los archivos de modelo. Una vez que se haya realizado la fusión, el integrador debe cargar el
+    modelo en Rose RealTime y verificar que no se haya producido ningún error de fusión. Si el modelo se carga
+    correctamente, los cambios se deben incorporar utilizando el elemento de menú <b>Herramientas -&gt; Control de origen
+    -&gt; Enviar todos los cambios al control de origen</b>.<br />
+</p>
+<p>
+    Para integrar una serie de actividades de desarrollo:
+</p>
+<ol>
+    <li>
+        Cargue el modelo de la vista del integrador.
+    </li>
+    <li>
+        Lleve a cabo la fusión, tal como se ha indicado más arriba.
+    </li>
+    <li>
+        Utilice <b>Herramientas -&gt; Control de origen -&gt; Sincronizar todo el modelo</b>. De este modo, se vuelven a
+        cargar todos los archivos que se han cambiado en la fusión.
+    </li>
+    <li>
+        Asegúrese de que las diferencias fusionadas son válidas.
+    </li>
+    <li>
+        Utilice <b>Herramientas -&gt; Control de origen -&gt; Enviar todos los cambios al control de origen</b> para
+        aceptar los cambios e incorporarlos al control de origen.
+    </li>
+    <li>
+        Repita los pasos 2 a 5 para cada actividad que se debe integrar.
+    </li>
+</ol><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

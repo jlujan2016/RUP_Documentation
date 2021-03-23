@@ -1,0 +1,441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Implementaci&oacute;n de scripts de prueba utilizando Rational Robot</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="record_test_scripts" name="uma.name">
+<meta content="Implementaci&oacute;n de scripts de prueba utilizando Rational Robot" name="uma.presentationName">
+<meta content="Tool:rup_robot:Rational Robot" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Robot" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{279B8DDC-F3D9-4087-87CE-AC8D718D8C8E}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{279B8DDC-F3D9-4087-87CE-AC8D718D8C8E}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{279B8DDC-F3D9-4087-87CE-AC8D718D8C8E}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{279B8DDC-F3D9-4087-87CE-AC8D718D8C8E}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Implementaci&oacute;n de scripts de prueba utilizando Rational Robot</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo utilizar Rational Robot para registrar o programar scripts de prueba, y cómo ampliarlos posteriormente editando los scripts de prueba.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_robot_26C85D92.html" guid="{1A26E508-8140-4241-865E-0A2A5BCAEFFF}">Rational Robot</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_developer_test_66FE6BEE.html" guid="{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}">Implementar la prueba de desarrollador</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_test_35C1B0AA.html" guid="{BC805E79-736B-42D5-BDC1-B95E7D002312}">Implementar la prueba</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_test_suite_94F58DEC.html" guid="{1C759E0D-B364-4095-A7CF-CD9E39301689}">Implementar el conjunto de aplicaciones de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    Visión general
+</h3>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Microsoft Windows 98/2000/NT 4.0.
+</p>
+<p>
+    Para registrar y ampliar un script utilizando Rational Robot, debe:
+</p>
+<ol>
+    <li>
+        <a href="#heading of tool step one">Registrar el script de prueba en Rational Robot</a>
+    </li>
+    <li>
+        <a href="#heading of tool step two">Insertar un punto de verificación</a>
+    </li>
+    <li>
+        <a href="#step three">Editar el script de prueba, si fuera necesario</a>
+    </li>
+</ol>
+<h3>
+    1. <a id="heading of tool step one" name="heading of tool step one">Registrar el script de prueba en Rational Robot</a>
+</h3>
+<p>
+    Cuando se registra un script de prueba, Rational Robot registra:
+</p>
+<ul>
+    <li>
+        Las acciones a medida que se interactúa con la aplicación que se somete a prueba. Las acciones del usuario incluyen
+        pulsaciones de teclas y pulsaciones del botón del ratón que ayudan a navegar por la aplicación.
+    </li>
+    <li>
+        Los puntos de verificación que se crean para capturar y comparar información sobre el estado de componentes del
+        sistema específicos. Un punto de verificación es un punto en un script de prueba en el que se determina la
+        confirmación del estado o el comportamiento de un elemento de los elementos del destino de la prueba a través de
+        compilaciones. Durante el registro de scripts de prueba, el punto de verificación captura información sobre el
+        estado del sistema y la almacena como una línea base de resultados esperados. Durante la reproducción del script de
+        prueba, el punto de verificación vuelve a capturar la misma información de estado del sistema y la compara con la
+        información almacenada en la línea base.
+    </li>
+</ul>
+<p>
+    El script de prueba registrado establece la línea base de comportamiento esperado para los elementos del destino de la
+    prueba. Cuando las compilaciones revisadas de los elementos del destino de la prueba están disponibles, se puede
+    ejecutar el script de prueba con respecto a las compilaciones subsiguientes y, por lo general, la comparación de la
+    información de estado del sistema del punto de verificación se lleva a cabo en una fracción de tiempo muy inferior a si
+    se realiza la comparación manualmente.
+</p>
+<p>
+    La tecnología de registro orientado a objetos de Rational Robot examina la información de estado del sistema en la capa
+    de Windows durante el registro del script de prueba inicial y en la reproducción posterior. En resultado es que, por lo
+    general, no es necesario que la reproducción de scripts de prueba satisfactoria dependa de coordenadas de pantalla
+    absolutas. El registro orientado a objetos aísla el script de prueba de cambios de interfaz de usuario menores y
+    simplifica el mantenimiento de los scripts de prueba.
+</p>
+<p>
+    Para registrar un nuevo script de prueba:
+</p>
+<div align="center">
+    <center>
+        <table height="1063" cellpadding="5" width="85%" summary="tabla de diseño" border="0">
+            <tbody>
+                <tr>
+                    <td valign="top" align="right" width="45" height="40">
+                        1.
+                    </td>
+                    <td width="729" height="40">
+                        Prepare el entorno de prueba estableciendo las opciones de registro. Consulte la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/setup_robot_3E2B9427.html" guid="{E717F672-A182-4A7C-85A6-51A86EB8A57F}">Guía de la herramienta: Establecimiento del entorno
+                        de prueba en Rational Robot</a>.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="59">
+                    </td>
+                    <td width="729" height="59">
+                        Inicie la aplicación que se somete a prueba. (Si lo desea, puede iniciar la aplicación que se
+                        somete a prueba después de iniciar el registro pulsando <b>Insertar &gt; Iniciar aplicación</b> en
+                        Robot).
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="21">
+                        2.
+                    </td>
+                    <td width="729" height="21">
+                        Pulse el botón <b>Registrar script de GUI</b> de la barra de herramientas de Robot.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="21">
+                        3.
+                    </td>
+                    <td width="729" height="21">
+                        Escriba un nombre (40 caracteres como máximo) o selecciónelo de la lista.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="21">
+                        4.
+                    </td>
+                    <td width="729" height="21">
+                        Para cambiar las opciones de registro, pulse <b>Opciones</b>. Cuando finalice, pulse
+                        <b>Aceptar</b>.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="40">
+                        5.
+                    </td>
+                    <td width="729" height="40">
+                        Si ha seleccionado un script definido o registrado previamente, puede cambiar las propiedades
+                        pulsando <b>Propiedades</b>. Cuando finalice, pulse <b>Aceptar</b>.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="21">
+                        6.
+                    </td>
+                    <td width="729" height="21">
+                        Pulse <b>Aceptar</b> para iniciar el registro. Se llevan a cabo los sucesos siguientes:
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="97">
+                    </td>
+                    <td width="729" height="97">
+                        <ul>
+                            <li>
+                                Si ha seleccionado un script que ya se ha registrado, Robot le pregunta si desea
+                                sobrescribirlo. Pulse <b>Sí</b>. (Si registra encima de un script de GUI existente, se
+                                sobrescribe el archivo de script, pero todas las propiedades existentes se aplican al nuevo
+                                script).
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="40">
+                    </td>
+                    <td width="729" height="40">
+                        <ul>
+                            <li>
+                                Robot se minimiza (comportamiento por omisión).
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="59">
+                    </td>
+                    <td width="729" height="59">
+                        <ul>
+                            <li>
+                                Se muestra la barra de herramientas Registro de GUI flotante. Puede utilizar la barra de
+                                herramientas para pausar o detener el registro, volver a visualizar Robot e insertar
+                                características en un script.
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="60">
+                        7.
+                    </td>
+                    <td width="729" height="60">
+                        Ejecute la prueba realizando las acciones identificadas en la prueba e inserte las características
+                        necesarias (como, por ejemplo, puntos de verificación, comentarios y temporizadores). Para obtener
+                        detalles, <img height="16" alt="icono de publicación de ayuda" hspace="0"                         src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> consulte la ayuda en línea de Robot.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="21">
+                        8.
+                    </td>
+                    <td width="729" height="21">
+                        Si fuera necesario, conmute del registro orientado a objetos al registro de bajo nivel.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="78">
+                    </td>
+                    <td width="729" height="78">
+                        El registro orientado a objetos examina objetos de GUI de Windows y otros objetos en la aplicación
+                        que se somete a prueba sin depender de coordenadas de pantalla ni de tiempo precisas. El registro
+                        de bajo nivel hace un seguimiento detallado de los movimientos del ratón y las acciones del teclado
+                        por medio de coordenadas de pantalla y de tiempo exacto.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="40">
+                        9.
+                    </td>
+                    <td width="729" height="40">
+                        Una vez que haya finalizado, pulse el botón <b>Detener registro</b> de la barra de herramientas
+                        Registro de GUI. Se llevan a cabo los sucesos siguientes:
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45">
+                    </td>
+                    <td width="729">
+                        <ul>
+                            <li>
+                                El script que se ha registrado aparece en una ventana Script en la ventana principal de
+                                Robot.
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="59">
+                    </td>
+                    <td width="729" height="59">
+                        <ul>
+                            <li>
+                                Los puntos de verificación del script (si hay alguno) aparecen en el panel Activo que se
+                                encuentra a la izquierda.
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="40">
+                    </td>
+                    <td width="729" height="40">
+                        <ul>
+                            <li>
+                                El texto del script aparece en el panel Script que se encuentra a la derecha.
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="59">
+                    </td>
+                    <td width="729" height="59">
+                        <ul>
+                            <li>
+                                Cuando se compila o reproduce el script, los resultados de la compilación se muestran en la
+                                pestaña Compilar de la ventana Salida.
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="21">
+                        10.
+                    </td>
+                    <td width="729" height="21">
+                        Si lo desea, establezca propiedades para el script pulsando <b>Archivo &gt; Propiedades</b>.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </center><br />
+</div>
+<h3>
+    2. <a id="heading of tool step two" name="heading of tool step two">Insertar un punto de verificación</a>
+</h3>
+<p>
+    Para insertar un punto de verificación mientras registra o edita un script de prueba:
+</p>
+<ol>
+    <li>
+        Realice una de las acciones siguientes:
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            Si va a registrar, pulse el botón <b>Visualizar barra de herramientas de inserción de GUI</b> de la barra de
+            herramientas Registro de GUI.
+        </li>
+        <li>
+            Si va a editar, sitúe el puntero en el script y pulse el botón <b>Visualizar barra de herramientas de inserción
+            de GUI</b> de la barra de herramientas Estándar.
+        </li>
+    </ul>
+</blockquote>
+<ol start="2">
+    <li>
+        Pulse un botón de punto de verificación de la barra de herramienta de Inserción de GUI.
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p>
+            El punto de verificación se denomina con el tipo de punto de verificación (y un número, si hay más de uno del
+            mismo tipo en el script).
+        </p>
+    </li>
+    <li>
+        Edite el nombre según proceda.
+    </li>
+    <li>
+        Si lo desea, establezca las opciones de estado de espera.
+    </li>
+    <li>
+        Si lo desea, establezca la opción de resultados esperados.
+    </li>
+    <li>
+        Pulse <b>Aceptar</b>.
+    </li>
+    <li>
+        Si se le solicita que seleccione un objeto, arrastre la herramienta del buscador de objetos sobre el objeto que
+        desea y libere el botón izquierdo del ratón para seleccionar el objeto. Opcionalmente, puede seleccionar el objeto
+        de la lista de objetos pulsando el botón <b>Examinar</b>. Una vez que haya seleccionado el objeto que desea, pulse
+        <b>Aceptar</b>.
+    </li>
+</ol>
+<p>
+    Para obtener información detallada, <img height="16" alt="icono de publicación de ayuda" hspace="0"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> consulte la ayuda en línea de Robot. <img height="15"     alt="icono de publicación" hspace="0" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> Consulte también el
+    capítulo que trata sobre la creación de puntos de verificación en scripts de GUI del manual <i>Using Rational
+    Robot</i>.
+</p>
+<h3>
+    3. <a id="step three" name="step three">Editar el script de prueba, si fuera necesario</a>
+</h3>
+<p>
+    Puede editar scripts de prueba existentes editando de modo manual el código fuente de un script de prueba, o bien,
+    insertando nuevos registros parciales. Por ejemplo, puede:
+</p>
+<ul>
+    <li>
+        Editar el texto de un script de prueba (suprimir una línea o mover texto, por ejemplo)
+    </li>
+    <li>
+        Insertar una nueva secuencia de acción del usuario en un script de prueba existente (seleccionar un mandato de menú
+        o pulsar un botón, por ejemplo)
+    </li>
+    <li>
+        Añadir una nueva característica a un script de prueba existente (añadir puntos de verificación o comentarios, entre
+        otros)
+    </li>
+    <li>
+        Ir a una línea con un error de compilador (ir a un número de línea específico o buscar el error siguiente, por
+        ejemplo)
+    </li>
+</ul>
+<p>
+    Para obtener detalles, <img height="16" alt="icono de publicación de ayuda" hspace="0"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> consulte la ayuda en línea de Rational Robot. <img     height="15" alt="icono de publicación" hspace="0" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> Consulte
+    también el capítulo que trata sobre la edición, la compilación y la depuración de scripts del manual <i>Using Rational
+    Robot</i>.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

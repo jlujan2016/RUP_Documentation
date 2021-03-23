@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Dise&ntilde;o del estado para aplicaciones J2EE</title>
+<meta content="Guideline" name="uma.type">
+<meta content="designing_state_for_j2ee_applications" name="uma.name">
+<meta content="Dise&ntilde;o del estado para aplicaciones J2EE" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "7.896195949843941E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="7.896195949843941E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Dise&ntilde;o del estado para aplicaciones J2EE</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se trata de los mecanismos diseñados para la gestión del estado de una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Análisis de la arquitectura</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}">Identificar mecanismo de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Introducción
+</h3>
+<p>
+    Una gestión efectiva del estado de la aplicación es un aspecto importante del diseño de las aplicaciones distribuidas.
+    En esta directriz se proporciona una visión general sobre algunas de las consideraciones de diseño y de los mecanismos
+    más comunes para la gestión del estado en una aplicación J2EE.
+</p>
+<p>
+    Las consideraciones de diseño en relación a la gestión del estado se deberían considerar en la fase de elaboración del
+    proyecto. El&nbsp;arquitecto de software debería examinar aproximaciones generales a la gestión del estado como parte
+    de las actividades asociadas con la disciplina de diseño y análisis de la <u><a href="./../../../core.base_rup/capabilitypatterns/define_a_candidate_architecture_A3651DA3.html" guid="{71ADFE9A-34A0-41BD-8A17-BEA3210E2BBD}" class="elementLinkWithUserText">Actividad: Definición de una arquitectura
+    candidata</a></u>. Durante&nbsp;la realización de la <u><a href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}" class="elementLinkWithUserText">Tarea: análisis de arquitectura</a></u>, el arquitecto de software debería tener en
+    cuenta los requisitos de escalabilidad y rendimiento de la aplicación para determinar las técnicas de gestión del
+    estado que se deberían utilizar para habilitar la aplicación de forma que cumpla los objetivos de rendimiento.
+    A&nbsp;medida que se perfila el diseño de la aplicación en la fase de elaboración, el arquitecto necesitará definir
+    mecanismos de implementación y diseño específico de&nbsp;J2EE para la gestión de la información de estado con la
+    aplicación en la <a href="./../../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}" class="elementLinkWithUserText">Tarea: identificación de mecanismos de
+    diseño</a>.
+</p>
+<p>
+    Tal como se describe en sección <a href="./../../../tech.j2ee/guidances/concepts/j2ee_deployment_configurations_C0F819AF.html" guid="7.671163061311939E-306" class="elementLinkWithUserText">Concepto: configuraciones de despliegue de J2EE</a>, las
+    aplicaciones J2EE pueden estar formadas de varias capas lógicas distribuidas en una o más capas físicas (máquinas).
+    Después&nbsp;de una breve visión general técnica sobre la gestión del estado, el resto de las secciones de esta
+    directriz tratarán sobre los distintos mecanismos de implementación y diseño de la gestión del estado que se pueden
+    utilizar en las distintas capas de aplicación.
+</p>
+<p>
+    Hay que tener en cuenta que el arquitecto de software debería documentar qué mecanismos se han seleccionado como parte
+    del <a href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}" class="elementLinkWithUserText">Producto de trabajo: documento de
+    arquitectura de software</a> y debería proporcionar directrices para utilizar dichos mecanismos como parte de las
+    directrices de diseño específicas del proyecto.
+</p>
+<h3>
+    <a name="Topic 1" id="Topic 1"></a>Visión general técnica
+</h3>
+<p>
+    Existe una tendencia creciente en crear aplicaciones distribuidas que interactúan con Internet de una forma u otra. Aun
+    así, los fundamentos de las aplicaciones de Internet son por naturaleza sin estado, y con frecuencia, hay la necesidad
+    de gestionar el estado para construir cualquier tipo de aplicación empresarial. Considere una aplicación de Internet en
+    que el usuario&nbsp;pulsa en un enlace en la página A para ir a la página B. La aplicación que procesa la solicitud
+    para la página B ya no tiene acceso a la información utilizada para procesar la página A. Este&nbsp;comportamiento
+    puede ser aceptable con páginas web estáticas, sin embargo, la mayoría de las aplicaciones empresariales se precisa
+    algún tipo de información sobre el proceso realizado con anterioridad. Es aquí donde aparecen en escena los mecanismos
+    de gestión del estado que J2EE proporciona.
+</p>
+<h4>
+    <a name="Topic 1a" id="Topic 1a"></a>Estado persistente frente a estado transitorio
+</h4>
+<p>
+    Antes de entrar en los detalles de estas directrices de gestión del estado es importante distinguir entre los tipos de
+    información de estado. La información de estado se puede clasificar en general en dos categorías:
+    transitoria&nbsp;(sólo existe mientras la aplicación está activa) y persistente (existe después de que la aplicación
+    haya terminado).
+</p>
+<p>
+    La información de estado transitorio existe en la medida que la entidad que mantiene esta información está activa. Por
+    ejemplo, la información de estado que se almacena como un campo en una clase Java normal. Si el contenedor que aloja
+    esta clase termina por cualquier razón, se perderá la información de estado, a no ser que se haya una réplica de los
+    datos en otro lugar como, por ejemplo, en un servidor de copia de seguridad.
+</p>
+<p>
+    El estado persistente existe en la medida en que existen los datos almacenados para mantener la información de estado.
+    La&nbsp;información de estado persistente normalmente se almacena en un archivo o base de datos, y se carga cuando la
+    aplicación la necesita. Todos&nbsp;los cambios en la información del estado persistente se deben volver a escribir en
+    la base de datos. Los&nbsp;aspectos relacionados con la recuperación e integridad del almacenamiento de los datos
+    persistentes deben ser coherente con aquellos de los datos a los que accede la aplicación. Un ejemplo de estado
+    persistente corresponde a la información que se almacena en un almacén de datos como una base de datos relacional.
+</p>
+<h4>
+    Estado de sesión
+</h4>
+<p>
+    A menudo los clientes precisan la capacidad de realizar varias solicitudes de navegador, navegando de una página a
+    otra, a la vez que retienen información específica del cliente como, por ejemplo, los artículos en un carro de la
+    compra. Las aplicaciones web manejan esta situación creando un ID de sesión y asociando datos de estado con este ID de
+    sesión. Al ID de sesión y a su estado asociado se les hace referencia como estado de sesión.
+</p>
+<p>
+    El estado de sesión corresponde a datos asociados con una interacción de cliente concreta con una aplicación web
+    durante un periodo corto de tiempo (minutos u horas, más que días). Por lo tanto, el estado de sesión corresponde a
+    datos de corta vida que habitualmente se suprimen después de que se exceda un periodo de tiempo de espera, para evitar
+    el consumo de recursos.
+</p>
+<p>
+    El estado de sesión se puede almacenar en el cliente o en el servidor, tal como se describe en las secciones
+    posteriores. La plataforma J2EE proporciona mecanismos especialmente diseñados para gestionar el estado de sesión, por
+    su importancia en las aplicaciones basadas en la web.
+</p>
+<h3>
+    Mecanismos básicos de persistencia
+</h3>
+<p>
+    A continuación se indican los mecanismos más habituales que utilizan las aplicaciones web para almacenar el estado.
+</p>
+<h4>
+    <a name="Topic 2a" id="Topic 2a"></a>Cookies
+</h4>
+<p>
+    Las cookies son pequeños archivos de texto que se almacenan en clientes basados en la web. Un servidor puede almacenar
+    cookies en el cliente. Posteriores peticiones del cliente envían la cookie al servidor, proporcionándole acceso a los
+    datos de estado almacenados en la cookie.
+</p>
+<p>
+    Algunos problemas que se dan con las cookies son:
+</p>
+<ul>
+    <li>
+        Muchos usuarios creen que las cookies comprometen su seguridad y/o su privacidad y, por lo tanto, las inhabilitan.
+    </li>
+    <li>
+        Existen limitaciones de tamaño en las cabeceras de las cookies y, por lo tanto, limitan la cantidad de datos que se
+        pueden almacenar.
+    </li>
+    <li>
+        Algunos protocolos, como por ejemplo WAP (Wireless Access Protocol), no dan soporte a las cookies.
+    </li>
+    <li>
+        Si un cliente inicia una sesión desde otra ubicación (como por ejemplo otra máquina), las cookies en la otra
+        ubicación no están disponibles.
+    </li>
+    <li>
+        Los datos de estado se deben representar con valores de tipo serie.
+    </li>
+</ul>
+<h4>
+    <a name="Topic 2a1" id="Topic 2a1"></a>Reescritura de URL
+</h4>
+<p>
+    La reescritura de URL es un mecanismo por el que se incrusta el estado de sesión en el URL al que se hace referencia en
+    cada página. Cuando un servidor web genera páginas para entregar al cliente, codifica el estado de sesión en los URL de
+    la página. A continuación, cuando el usuario pulsa en un URL, los datos de estado almacenados en el URL se envían de
+    nuevo al servidor, permitiendo volver a establecer el contexto de la sesión. Los campos HTML ocultos utilizan un
+    mecanismo similar. Los problemas que se presentan con estos mecanismos son:
+</p>
+<ul>
+    <li>
+        El servidor debe manejar todas las páginas en una sesión dada, de lo contrario el servidor puede perder el
+        seguimiento de la sesión.
+    </li>
+    <li>
+        La información de estado se pierde cuando el cliente cierra su navegador, o cuando enlaza a un URL específico
+        escribiéndolo o utilizando un marcador.
+    </li>
+    <li>
+        Como con las cookies, los datos del estado no están disponibles cuando el cliente inicia una sesión desde otra
+        ubicación.
+    </li>
+    <li>
+        Como con las cookies, los datos de estado se deben representar con valores de tipo serie.
+    </li>
+</ul>
+<h4>
+    <a name="Topic 2d1" id="Topic 2d1"></a>Archivo sin formato
+</h4>
+<p>
+    Un archivo sin formato es uno de los métodos más simples de mantener la información de estado persistente.
+    Después&nbsp;de la inicialización, el archivo sin formato se lee para establecer los valores iniciales de estado.
+    Cada&nbsp;vez que cambia el estado, se debe reescribir el archivo para guardar el estado. Algunos&nbsp;inconvenientes
+    de mantener el estado de la aplicación en un archivo sin formato son:
+</p>
+<ul>
+    <li>
+        La escalabilidad de la aplicación se ve afectada de forma adversa, puesto que la aplicación debe bloquear el objeto
+        aplicación para impedir el acceso a los datos globales mientras las variables de estado de la aplicación se
+        actualizan y reescriben en el archivo sin formato.
+    </li>
+    <li>
+        En la mayoría de casos, la actualización de datos supondrá la reescritura de todo el archivo.
+    </li>
+    <li>
+        Los archivos planos no siempre proporcionan la posibilidad de recuperación en el caso de un error.
+    </li>
+</ul>
+<h4>
+    <a name="Topic 2d2" id="Topic 2d2"></a>XML
+</h4>
+<p>
+    El mantenimiento de la información de estado persistente en un archivo XML es un paso adelante en relación con el
+    archivo sin formato. Algunas&nbsp;ventajas de mantener el estado de la aplicación en un archivo XML a un archivo sin
+    formato son:
+</p>
+<ul>
+    <li>
+        Un archivo XML proporciona una estructura que no está presente en un archivo sin formato.
+    </li>
+    <li>
+        Un archivo XML se puede analizar mediante API estándar.
+    </li>
+    <li>
+        En general, un archivo XML es más portable.
+    </li>
+</ul>
+<h4>
+    <a name="Topic 2d3" id="Topic 2d3"></a>Base de datos
+</h4>
+<p>
+    El mantener la información de estado persistente en una base de datos proporciona las máximas posibilidades de
+    recuperación. Algunas&nbsp;ventajas de mantener el estado de la aplicación en una base de datos son:
+</p>
+<ul>
+    <li>
+        El diseño de las tablas proporciona una estructura.
+    </li>
+    <li>
+        No es necesario volver a reescribir todo el estado de la aplicación al actualizar una variable de la aplicación.
+        Sólo&nbsp;se necesita reescribir la información actualizada.
+    </li>
+    <li>
+        Se puede mantener la coherencia coordinando la recuperación del estado de la aplicación con la recuperación de la
+        base de datos de producción.
+    </li>
+    <li>
+        En situaciones que se necesite una alta fiabilidad, el servidor de base de datos se puede disponer en forma de
+        clúster.
+    </li>
+</ul>
+<p>
+    A las bases de datos se puede acceder mediante la API JDBC (Java Database Connectivity). También se puede utilizar JDBC
+    para acceder a otros orígenes de datos tabulares tales como hojas de cálculo y archivos planos.
+</p>
+<h3>
+    <a name="J2EE Mechanisms" id="J2EE Mechanisms"></a>Mecanismos específicos de J2EE
+</h3>
+<p>
+    La plataforma J2EE proporciona mecanismos específicos para gestionar el estado. Se trata de mecanismos de alto nivel
+    que se pueden configurar para utilizar uno o más de los mecanismos básicos que se han descrito hasta ahora.
+</p>
+<h4>
+    Contexto de servlet
+</h4>
+<p>
+    El contexto de servlet sirve para que los servlets guarden datos que corresponden a varios clientes y sesiones de
+    cliente.
+</p>
+<p>
+    Los datos que se almacenan en un contexto de servlet son en esencia variables globales de la aplicación J2EE.
+    Como&nbsp;resultado, la utilización del estado de aplicación puede tener un impacto significativo en el diseño de la
+    aplicación. El&nbsp;arquitecto de software debe tener en cuenta los siguientes factores durante la <a href="./../../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}" class="elementLinkWithUserText">Tarea: identificación de mecanismos de diseño</a> para determinar si es adecuado el
+    utilizar el contexto de servlet:
+</p>
+<ul>
+    <li>
+        El contexto de servlet se puede mantener en un único proceso, por lo tanto sin compartir entre varios servidores
+        (clúster). Si&nbsp;esta aproximación no satisface las necesidades de escalabilidad de la aplicación, el arquitecto
+        necesita considerar el almacenar el estado como estado de sesión. &nbsp;&nbsp;
+    </li>
+    <li>
+        El contexto de servlet es parte de la memoria del proceso y, por lo tanto, habitualmente no se mantiene una vez que
+        termina el proceso.
+    </li>
+    <li>
+        Varias hebras tienen la posibilidad de acceder a los datos globales. El&nbsp;bloqueo y sincronización de los datos
+        globales puede afectar a la escalabilidad de la aplicación.
+    </li>
+</ul>
+<h4>
+    Objeto de sesión HTTP
+</h4>
+<p>
+    Los servlets y las JSP pueden almacenar datos asociados con una sesión de cliente concreta en el objeto de sesión HTTP.
+    Si se almacenan datos en objetos de sesión, puede haber problemas en relación a la forma en que los datos de sesión se
+    hacen disponibles entre varios servidores. Algunos proveedores proporcionan la posibilidad de direccionar las
+    peticiones de los clientes al mismo servidor, una práctica denominada "afinidad de servidor".
+</p>
+<p>
+    El objeto de sesión HTTP está disponible en el servidor cuando se procesan las peticiones de cliente, pero puede estar
+    o puede no estar almacenando en el servidor entre peticiones. Se podría configurar el servidor para que utilizase
+    cualquiera de los mecanismos básicos de persistencia descritos con anterioridad, incluido el almacenamiento del estado
+    de sesión en cookies en el cliente, en archivos o en una base de datos en el servidor. También podría proporcionar la
+    capacidad de crear réplicas entre servidores de datos de sesión en memoria.
+</p>
+<p>
+    El mecanismo se selecciona al configurar el servidor; los servlets y las JSP se codifican independientemente del
+    mecanismo seleccionado, accediendo al objeto de sesión mediante una API que especifica la especificación de servlet.
+</p>
+<h4>
+    Enterprise JavaBeans
+</h4>
+<p>
+    Los Enterprise JavaBeans incluyen mecanismos de alto nivel para almacenar el estado, que se basan en los mecanismos de
+    nivel inferior descritos con anterioridad como, por ejemplo, los de bases de datos y archivos. Los beans de sesión con
+    estado sirven para almacenar datos asociados con una sesión de cliente concreta, mientras que los beans de entidad
+    sirven para almacenar datos a largo plazo. Consulte la sección <a href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305" class="elementLinkWithUserText">Directriz: Enterprise JavaBean (EJB)</a> para obtener
+    más información sobre el estado que los EJB almacenan.
+</p>
+<h3>
+    Diseño del estado de sesión
+</h3>
+<p>
+    A menudo los clientes precisan la capacidad de realizar varias solicitudes de navegador, navegando de una página a
+    otra, a la vez que retienen información específica del cliente como, por ejemplo, los artículos en un carro de la
+    compra. Las aplicaciones web manejan esta situación creando un ID de sesión y asociando datos de estado con este ID de
+    sesión.
+</p>
+<p>
+    El ID de sesión en sí mismo se almacena en el cliente por uno o dos mecanismos:
+</p>
+<ul>
+    <li>
+        Cookie: el navegador del cliente envía esta&nbsp;cookie al servidor en cada solicitud permitiendo que el servidor
+        vuelva a establecer el estado de sesión.
+    </li>
+    <li>
+        Reescritura de URL: los URL en las páginas que el servidor entrega al cliente tienen el ID de sesión codificado.
+        Cuando el usuario pulsa en dicho URL, el ID de sesión se envía al servidor, permitiendo que el servidor vuelva a
+        establecer el estado de sesión.
+    </li>
+</ul>
+<p>
+    El servidor se configura para utilizar la aproximación seleccionada. Los servlets y las JSP se deberían codificar para
+    que funcionasen independientemente del método configurado. En concreto, utilice el método
+    HttpServletResponse.encodeURL() para codificar todos los URL. Este método verifica si la reescritura de URL está
+    habilitada y, si lo está, realiza la codificación.
+</p>
+<p>
+    Los datos asociados con un ID de sesión se pueden almacenar en el objeto se sesión HTTP, al que JSP, servlets y beans
+    de sesión pueden acceder.
+</p>
+<p>
+    Se debería establecer un tiempo de espera excedido tanto para el ID de sesión como para los datos asociados, de forma
+    que los datos de sesión no utilizados después de un intervalo de tiempo grande no consuman recursos de forma
+    indefinida. El arquitecto debería seleccionar un periodo de tiempo de espera excedido apropiado.
+</p>
+<h4>
+    <a name="Topic 2b2" id="Topic 2b2"></a>Selección del mecanismo correcto
+</h4>
+<p>
+    Los arquitectos deben considerar el almacenar el estado de sesión en el cliente por razones de simplicidad y
+    rendimiento. Cuando el estado se gestiona y almacena en el cliente, los servidores no consumen recursos para almacenar
+    la información de estado o para asegurar su coherencia. El inconveniente de almacenar información de estado en el
+    cliente es que hay que volver a enviar la información siempre que sea necesario, y por lo tanto, originando problemas
+    relacionados con el retardo de red. Es posible que también tenga que tener en cuenta la seguridad si no desea exponer
+    al cliente los datos de sesión. En este caso, una solución es utilizar el cifrado.
+</p>
+<p>
+    Si la aplicación tiene una gran cantidad de datos de estado de sesión, en general es preferible almacenar el estado en
+    el servidor, donde en general hay menos limitaciones de tamaño y tipos.
+</p>
+<p>
+    En general el estado de sesión relacionado con aspectos de la presentación se debería almacenar en el objeto de sesión
+    HTTP, mientras que los beans de sesión con estado deberían contener el estado necesario para implementar de forma
+    correcta la lógica empresarial. Se debería evitar la duplicación del estado, en lugar de ello, es mejor mover todos
+    puede haber problemas datos de estado duplicados a la sesión HTTP, y pasar estos datos en el bean de sesión como
+    parámetros en invocaciones de métodos de bean de sesión, según sea necesario.
+</p>
+<p>
+    Si los datos de sesión almacenados en el servidor deben sobrevivir a una anomalía de un nodo de servidor, entonces hay
+    que considerar la utilización un mecanismo para crear una réplica de los datos de sesión o hacer que éstos sean
+    persistentes.
+</p>
+<h3>
+    Diseño del estado de vida prolongada
+</h3>
+<p>
+    Los datos de sesión corresponden a datos de cliente con un tiempo de espera excedido breve. Puede que también exista la
+    necesidad que los datos sobrevivan durante periodos de tiempo mucho más prolongados.
+</p>
+<p>
+    El mecanismo correcto para estos datos depende de la naturaleza de los datos que hay que almacenar. Las cookies, los
+    archivos sin formato, los archivos XML y las bases de datos son todos opciones posibles. En general, para acceder a una
+    base de datos un bean de entidad es la mejor opción. Consulte la <a href="./../../../tech.j2ee/guidances/guidelines/entity_bean_E721D57E.html" guid="4.528918585369678E-307" class="elementLinkWithUserText">Directriz: beans de entidad</a> para obtener información más detallada.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

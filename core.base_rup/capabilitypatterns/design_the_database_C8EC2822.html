@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Actividad: Dise&ntilde;ar la base de datos</title>
+<meta content="Activity" name="uma.type">
+<meta content="design_the_database" name="uma.name">
+<meta content="Dise&ntilde;ar la base de datos" name="uma.presentationName">
+<meta name="element_type" content="workflow_detail">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc=_hdw4QSCcEdq3qtLcbHn6PQ&path=_hdw4QSCcEdq3qtLcbHn6PQ,_Sc_yUCCdEdq3qtLcbHn6PQ';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_XSr4YCFtEdqrX8YVzvtlIg", "_Sc_yUCCdEdq3qtLcbHn6PQ"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_J1u8gCGYEdqMcovRzkCQow", "_Sc_yUCCdEdq3qtLcbHn6PQ"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_vllcADIKEdqGgPtrSpB0vQ", "_Sc_yUCCdEdq3qtLcbHn6PQ"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_XSr4YCFtEdqrX8YVzvtlIg", "_Sc_yUCCdEdq3qtLcbHn6PQ"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_J1u8gCGYEdqMcovRzkCQow", "_Sc_yUCCdEdq3qtLcbHn6PQ"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_vllcADIKEdqGgPtrSpB0vQ", "_Sc_yUCCdEdq3qtLcbHn6PQ"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_XSr4YCFtEdqrX8YVzvtlIg", "_Sc_yUCCdEdq3qtLcbHn6PQ"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_J1u8gCGYEdqMcovRzkCQow", "_Sc_yUCCdEdq3qtLcbHn6PQ"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_vllcADIKEdqGgPtrSpB0vQ", "_Sc_yUCCdEdq3qtLcbHn6PQ"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  defaultQueryStr, false, true, true);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div autoWrap="true">
+<div id="page-guid" value="_Sc_yUCCdEdq3qtLcbHn6PQ"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Actividad: Dise&ntilde;ar la base de datos</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/process.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta actividad identifica las clases de diseño que deben permanecer en una base de datos y diseña las estructuras de base de datos correspondientes.</td>
+</tr>
+<tr>
+<td valign="top">Ampl&iacute;a: <a href="./../../core.base_rup/capabilitypatterns/design_the_database_2BE59DB0.html" guid="{FB3EB753-A979-4849-B57B-97F39271F82B}">Diseñar la base de datos</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign="middle">
+<td class="tab" width="10"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td><td class="tab" nowrap><a id="TAB_Description" class="tab" href="./../../core.base_rup/capabilitypatterns/design_the_database_C8EC2822.html_desc.html">Descripci&oacute;n</a></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_a.gif"></td><td class="activeTab" nowrap><span style="white-space:nowrap;">Estructura de desglose de trabajo</span></td><td width="1"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-a_i.gif"></td><td class="tab" nowrap><a id="TAB_TBS" class="tab" href="./../../core.base_rup/capabilitypatterns/design_the_database_C8EC2822.html_tbs.html"><span style="white-space:nowrap;">Asignaci&oacute;n de equipos</span></a></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_i.gif"></td><td class="tab" nowrap><a id="TAB_WPBS" class="tab" href="./../../core.base_rup/capabilitypatterns/design_the_database_C8EC2822.html_wpbs.html"><span style="white-space:nowrap;">Utilizaci&oacute;n del producto de trabajo</span></a></td><td width="21"><img title="" alt="" height="17" width="21" src="./../../images/tab_end-i.gif"></td><td width="50%"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td colspan="2"><img title="" alt="" height="2" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space_middle.gif"></td><td class="activeTab"><img title="" alt="" height="2" width="10" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space.gif"></td><td colspan="5"><img title="" alt="" height="2" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td class="activeTab" colspan="10"><img title="" alt="" height="5" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="sectionHeading">Flujo de trabajo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td align="left" colspan="2" class="sectionTableSingleCell">
+<p></p>
+<img diagramType="ActivityDetail" border="0" id="diagram_ActivityDetail" src="./../../core.base_rup/capabilitypatterns/resources/design_the_database_C8EC2822_ActivityDetail.jpeg" alt="Diagrama de detalle de la actividad: Dise&ntilde;ar la base de datos" title="Diagrama de detalle de la actividad: Dise&ntilde;ar la base de datos" usemap="#ActivityDetail_design_the_database"><map name="ActivityDetail_design_the_database">
+<area href="./../../core.base_rup/capabilitypatterns/rup_designer_D022ADCE.html" relpath=",_oAYVQTbYEdqdbfmtFQj8qA" alt="Dise&ntilde;ador" title="Dise&ntilde;ador" coords="40, 158, 92, 198" shape="rect" guid="_oAYVQTbYEdqdbfmtFQj8qA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/class_design_374819A6.html" relpath=",_xrlnMEocEdqrjq4i3fchvA" alt="Dise&ntilde;o de clase" title="Dise&ntilde;o de clase" coords="112, 158, 193, 198" shape="rect" guid="_xrlnMEocEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_designer_D022ADCE.html" relpath=",_oAYVQTbYEdqdbfmtFQj8qA" alt="Dise&ntilde;ador" title="Dise&ntilde;ador" coords="30, 148, 223, 208" shape="rect" guid="_oAYVQTbYEdqdbfmtFQj8qA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_analysis_class_B47A47A8.html" relpath=",_mju5QL9dEdqBwpaAk4N49g" alt="Clase de an&aacute;lisis" title="Clase de an&aacute;lisis" coords="125, 11, 179, 62" shape="rect" guid="_mju5QL9dEdqBwpaAk4N49g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_analysis_class_45E0F882.html" relpath=",_m-5LQL9dEdqBwpaAk4N49g" alt="Clase de an&aacute;lisis" title="Clase de an&aacute;lisis" coords="125, 67, 179, 118" shape="rect" guid="_m-5LQL9dEdqBwpaAk4N49g"></area>
+<area href="./../../core.base_rup/capabilitypatterns/class_design_374819A6.html" relpath=",_xrlnMEocEdqrjq4i3fchvA" alt="Dise&ntilde;o de clase" title="Dise&ntilde;o de clase" coords="110, 1, 194, 128" shape="rect" guid="_xrlnMEocEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_design_model_465A5F1.html" relpath=",_oAeb4zbYEdqdbfmtFQj8qA" alt="Modelo de dise&ntilde;o" title="Modelo de dise&ntilde;o" coords="127, 238, 177, 289" shape="rect" guid="_oAeb4zbYEdqdbfmtFQj8qA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/class_design_374819A6.html" relpath=",_xrlnMEocEdqrjq4i3fchvA" alt="Dise&ntilde;o de clase" title="Dise&ntilde;o de clase" coords="112, 228, 192, 299" shape="rect" guid="_xrlnMEocEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_database_designer_B5A44B1E.html" relpath=",_pOsigTbYEdqdbfmtFQj8qA" alt="Dise&ntilde;ador de base de datos" title="Dise&ntilde;ador de base de datos" coords="40, 453, 183, 493" shape="rect" guid="_pOsigTbYEdqdbfmtFQj8qA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/design_database_migration_B6C7BB67.html" relpath=",_1EYvAEocEdqrjq4i3fchvA" alt="Especificar la migraci&oacute;n de datos" title="Especificar la migraci&oacute;n de datos" coords="203, 441, 286, 506" shape="rect" guid="_1EYvAEocEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/database_design_5998D016.html" relpath=",_2Bsr0EocEdqrjq4i3fchvA" alt="Dise&ntilde;o de base de datos" title="Dise&ntilde;o de base de datos" coords="306, 448, 388, 499" shape="rect" guid="_2Bsr0EocEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_database_designer_B5A44B1E.html" relpath=",_pOsigTbYEdqdbfmtFQj8qA" alt="Dise&ntilde;ador de base de datos" title="Dise&ntilde;ador de base de datos" coords="30, 431, 428, 516" shape="rect" guid="_pOsigTbYEdqdbfmtFQj8qA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_software_requirement_EAAE7A9B.html" relpath=",_fyxwgDnfEdqxANP9kNH4WA" alt="Requisito de software" title="Requisito de software" coords="213, 350, 276, 401" shape="rect" guid="_fyxwgDnfEdqxANP9kNH4WA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/design_database_migration_B6C7BB67.html" relpath=",_1EYvAEocEdqrjq4i3fchvA" alt="Especificar la migraci&oacute;n de datos" title="Especificar la migraci&oacute;n de datos" coords="198, 340, 291, 411" shape="rect" guid="_1EYvAEocEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/database_migration_specification_F54C5AAB.html" relpath=",_fyxwgTnfEdqxANP9kNH4WA" alt="Especificaci&oacute;n de migraci&oacute;n de datos" title="Especificaci&oacute;n de migraci&oacute;n de datos" coords="206, 546, 283, 611" shape="rect" guid="_fyxwgTnfEdqxANP9kNH4WA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/design_database_migration_B6C7BB67.html" relpath=",_1EYvAEocEdqrjq4i3fchvA" alt="Especificar la migraci&oacute;n de datos" title="Especificar la migraci&oacute;n de datos" coords="191, 536, 298, 621" shape="rect" guid="_1EYvAEocEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_design_class_E1A6A499.html" relpath=",_Day3gL7XEdqboqO8QqaIwQ" alt="Clase de dise&ntilde;o" title="Clase de dise&ntilde;o" coords="322, 350, 372, 401" shape="rect" guid="_Day3gL7XEdqboqO8QqaIwQ"></area>
+<area href="./../../core.base_rup/capabilitypatterns/database_design_5998D016.html" relpath=",_2Bsr0EocEdqrjq4i3fchvA" alt="Dise&ntilde;o de base de datos" title="Dise&ntilde;o de base de datos" coords="307, 340, 387, 411" shape="rect" guid="_2Bsr0EocEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_data_model_A43D5F34.html" relpath=",_pOsigjbYEdqdbfmtFQj8qA" alt="Modelo de datos" title="Modelo de datos" coords="325, 546, 370, 597" shape="rect" guid="_pOsigjbYEdqdbfmtFQj8qA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/database_design_5998D016.html" relpath=",_2Bsr0EocEdqrjq4i3fchvA" alt="Dise&ntilde;o de base de datos" title="Dise&ntilde;o de base de datos" coords="310, 536, 385, 607" shape="rect" guid="_2Bsr0EocEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_technical_reviewer_F94F712A.html" relpath=",_iCzSYDnfEdqxANP9kNH4WA" alt="Revisor t&eacute;cnico" title="Revisor t&eacute;cnico" coords="40, 819, 119, 859" shape="rect" guid="_iCzSYDnfEdqxANP9kNH4WA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/review_the_design_56A6742A.html" relpath=",_3G8crkocEdqrjq4i3fchvA" alt="Revisar el dise&ntilde;o" title="Revisar el dise&ntilde;o" coords="139, 819, 234, 859" shape="rect" guid="_3G8crkocEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_technical_reviewer_F94F712A.html" relpath=",_iCzSYDnfEdqxANP9kNH4WA" alt="Revisor t&eacute;cnico" title="Revisor t&eacute;cnico" coords="30, 809, 264, 869" shape="rect" guid="_iCzSYDnfEdqxANP9kNH4WA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_design_model_465A5F1.html" relpath=",_oAeb4zbYEdqdbfmtFQj8qA" alt="Modelo de dise&ntilde;o" title="Modelo de dise&ntilde;o" coords="161, 672, 211, 723" shape="rect" guid="_oAeb4zbYEdqdbfmtFQj8qA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_navmap_B30A6B3E.html" relpath=",_iDLs4DnfEdqxANP9kNH4WA" alt="Mapa de navegaci&oacute;n" title="Mapa de navegaci&oacute;n" coords="149, 728, 224, 779" shape="rect" guid="_iDLs4DnfEdqxANP9kNH4WA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/review_the_design_56A6742A.html" relpath=",_3G8crkocEdqrjq4i3fchvA" alt="Revisar el dise&ntilde;o" title="Revisar el dise&ntilde;o" coords="134, 662, 239, 789" shape="rect" guid="_3G8crkocEdqrjq4i3fchvA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/rup_review_record_B6DF3F74.html" relpath=",_iDLs4znfEdqxANP9kNH4WA" alt="Registro de revisi&oacute;n" title="Registro de revisi&oacute;n" coords="158, 899, 214, 950" shape="rect" guid="_iDLs4znfEdqxANP9kNH4WA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/review_the_design_56A6742A.html" relpath=",_3G8crkocEdqrjq4i3fchvA" alt="Revisar el dise&ntilde;o" title="Revisar el dise&ntilde;o" coords="143, 889, 229, 960" shape="rect" guid="_3G8crkocEdqrjq4i3fchvA"></area>
+</map>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Anomal&iacute;a del trabajo</div>
+<div class="sectionContent">
+<div id="treeContent"></div>
+<script language="JavaScript">
+contentPage.processPage.treeTable.data = {
+title: "Anomalía del trabajo", summary: "Anomalía del trabajo", 
+columns: [
+["presentation_name", "Elemento de desglose"],
+["steps", "Pasos"],
+["id", "Índice"],
+["predecessors", "Predecesores"],
+["model_info", "Información del modelo"],
+["type", "Tipo"],
+["is_planned", "Planeado"],
+["is_repeatable", "Se puede repetir"],
+["has_multiple_occurrences", "Varias apariciones"],
+["is_ongoing", "Continuo"],
+["is_event_driven", "Condicionado por sucesos"],
+["is_optional", "Opcional"],
+["teams", "Equipo"]],
+rows: [
+{id: "917bc7fe", parentId: "", relPath: ",_xrlnMEocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "32", prefix: "", name: "class_design", title: "Diseño de clase", url: "./../../core.base_rup/capabilitypatterns/class_design_374819A6.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true,true,true,true,true,true]},
+
+{id: "c711cc42", parentId: "917bc7fe", relPath: ",_xrlnMEocEdqrjq4i3fchvA,_oAYVQTbYEdqdbfmtFQj8qA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_designer", title: "Diseñador", url: "./../../core.base_rup/capabilitypatterns/rup_designer_D022ADCE.html", 
+	predecessors: "", info: "Realizador principal", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "5db7374e", parentId: "917bc7fe", relPath: ",_xrlnMEocEdqrjq4i3fchvA,_mju5QL9dEdqBwpaAk4N49g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_analysis_class", title: "Clase de análisis", url: "./../../core.base_rup/capabilitypatterns/rup_analysis_class_B47A47A8.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "1bedeba2", parentId: "917bc7fe", relPath: ",_xrlnMEocEdqrjq4i3fchvA,_m-5LQL9dEdqBwpaAk4N49g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_analysis_class", title: "Clase de análisis", url: "./../../core.base_rup/capabilitypatterns/rup_analysis_class_45E0F882.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "d3bc97ea", parentId: "917bc7fe", relPath: ",_xrlnMEocEdqrjq4i3fchvA,_CPHNtxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_specific_guidelines", title: "Directrices específicas del proyecto", url: "./../../core.base_rup/capabilitypatterns/rup_project_specific_guidelines_286E840C.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "e485b29c", parentId: "917bc7fe", relPath: ",_xrlnMEocEdqrjq4i3fchvA,_oAeb4jbYEdqdbfmtFQj8qA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_supplementary_specification", title: "Especificaciones suplementarias", url: "./../../core.base_rup/capabilitypatterns/rup_supplementary_specification_F9C7C5E1.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "750a9f9e", parentId: "917bc7fe", relPath: ",_xrlnMEocEdqrjq4i3fchvA,_xrrt0EocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_storyboard", title: "Guión gráfico", url: "./../../core.base_rup/capabilitypatterns/rup_storyboard_328ACCE3.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "9b5bb60e", parentId: "917bc7fe", relPath: ",_xrlnMEocEdqrjq4i3fchvA,_oAeb4zbYEdqdbfmtFQj8qA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_model", title: "Modelo de diseño", url: "./../../core.base_rup/capabilitypatterns/rup_design_model_465A5F1.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "42c6d650", parentId: "917bc7fe", relPath: ",_xrlnMEocEdqrjq4i3fchvA,_CPBHEhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_user_interface_prototype", title: "Prototipo de interfaz de usuario", url: "./../../core.base_rup/capabilitypatterns/rup_user_interface_prototype_C73ECF8B.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "9d5f57de", parentId: "917bc7fe", relPath: ",_xrlnMEocEdqrjq4i3fchvA,_oAeb4zbYEdqdbfmtFQj8qA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_model", title: "Modelo de diseño", url: "./../../core.base_rup/capabilitypatterns/rup_design_model_465A5F1.html", 
+	predecessors: "", info: "Salida", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "ccf40b44", parentId: "", relPath: ",_1EYvAEocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "33", prefix: "", name: "design_database_migration", title: "Especificar la migración de datos", url: "./../../core.base_rup/capabilitypatterns/design_database_migration_B6C7BB67.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true]},
+
+{id: "9b027502", parentId: "ccf40b44", relPath: ",_1EYvAEocEdqrjq4i3fchvA,_pOsigTbYEdqdbfmtFQj8qA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_database_designer", title: "Diseñador de base de datos", url: "./../../core.base_rup/capabilitypatterns/rup_database_designer_B5A44B1E.html", 
+	predecessors: "", info: "Realizador principal", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "f0d33ada", parentId: "ccf40b44", relPath: ",_1EYvAEocEdqrjq4i3fchvA,_fyxwgDnfEdqxANP9kNH4WA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_software_requirement", title: "Requisito de software", url: "./../../core.base_rup/capabilitypatterns/rup_software_requirement_EAAE7A9B.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "9dc119ba", parentId: "ccf40b44", relPath: ",_1EYvAEocEdqrjq4i3fchvA,_CPHNtRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_use_case_realization", title: "Ejecución de casos de uso", url: "./../../core.base_rup/capabilitypatterns/rup_use_case_realization_2F378FE6.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "692c4818", parentId: "ccf40b44", relPath: ",_1EYvAEocEdqrjq4i3fchvA,_pOsigjbYEdqdbfmtFQj8qA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_data_model", title: "Modelo de datos", url: "./../../core.base_rup/capabilitypatterns/rup_data_model_A43D5F34.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "88d75d44", parentId: "ccf40b44", relPath: ",_1EYvAEocEdqrjq4i3fchvA,_fyxwgTnfEdqxANP9kNH4WA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "database_migration_specification", title: "Especificación de migración de datos", url: "./../../core.base_rup/capabilitypatterns/database_migration_specification_F54C5AAB.html", 
+	predecessors: "", info: "Salida", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "335931cc", parentId: "", relPath: ",_2Bsr0EocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "34", prefix: "", name: "database_design", title: "Diseño de base de datos", url: "./../../core.base_rup/capabilitypatterns/database_design_5998D016.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+
+{id: "3f372afa", parentId: "335931cc", relPath: ",_2Bsr0EocEdqrjq4i3fchvA,_pOsigTbYEdqdbfmtFQj8qA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_database_designer", title: "Diseñador de base de datos", url: "./../../core.base_rup/capabilitypatterns/rup_database_designer_B5A44B1E.html", 
+	predecessors: "", info: "Realizador principal", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "ac525876", parentId: "335931cc", relPath: ",_2Bsr0EocEdqrjq4i3fchvA,_Day3gL7XEdqboqO8QqaIwQ", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_class", title: "Clase de diseño", url: "./../../core.base_rup/capabilitypatterns/rup_design_class_E1A6A499.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "23a2c6ba", parentId: "335931cc", relPath: ",_2Bsr0EocEdqrjq4i3fchvA,_mju5QL9dEdqBwpaAk4N49g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_analysis_class", title: "Clase de análisis", url: "./../../core.base_rup/capabilitypatterns/rup_analysis_class_B47A47A8.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "75e20718", parentId: "335931cc", relPath: ",_2Bsr0EocEdqrjq4i3fchvA,_m-5LQL9dEdqBwpaAk4N49g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_analysis_class", title: "Clase de análisis", url: "./../../core.base_rup/capabilitypatterns/rup_analysis_class_45E0F882.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "728585ee", parentId: "335931cc", relPath: ",_2Bsr0EocEdqrjq4i3fchvA,_CPHNtxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_specific_guidelines", title: "Directrices específicas del proyecto", url: "./../../core.base_rup/capabilitypatterns/rup_project_specific_guidelines_286E840C.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "4a7da414", parentId: "335931cc", relPath: ",_2Bsr0EocEdqrjq4i3fchvA,_oAeb4jbYEdqdbfmtFQj8qA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_supplementary_specification", title: "Especificaciones suplementarias", url: "./../../core.base_rup/capabilitypatterns/rup_supplementary_specification_F9C7C5E1.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "11da538a", parentId: "335931cc", relPath: ",_2Bsr0EocEdqrjq4i3fchvA,_pOsigjbYEdqdbfmtFQj8qA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_data_model", title: "Modelo de datos", url: "./../../core.base_rup/capabilitypatterns/rup_data_model_A43D5F34.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "11bb04da", parentId: "335931cc", relPath: ",_2Bsr0EocEdqrjq4i3fchvA,_oAeb4zbYEdqdbfmtFQj8qA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_model", title: "Modelo de diseño", url: "./../../core.base_rup/capabilitypatterns/rup_design_model_465A5F1.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "89985e32", parentId: "335931cc", relPath: ",_2Bsr0EocEdqrjq4i3fchvA,_pOsigjbYEdqdbfmtFQj8qA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_data_model", title: "Modelo de datos", url: "./../../core.base_rup/capabilitypatterns/rup_data_model_A43D5F34.html", 
+	predecessors: "", info: "Salida", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "7becdfc4", parentId: "", relPath: ",_3G8crkocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "35", prefix: "", name: "review_the_design", title: "Revisar el diseño", url: "./../../core.base_rup/capabilitypatterns/review_the_design_56A6742A.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true]},
+
+{id: "6e776e5a", parentId: "7becdfc4", relPath: ",_3G8crkocEdqrjq4i3fchvA,_iCzSYDnfEdqxANP9kNH4WA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_technical_reviewer", title: "Revisor técnico", url: "./../../core.base_rup/capabilitypatterns/rup_technical_reviewer_F94F712A.html", 
+	predecessors: "", info: "Realizador principal", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "2b863504", parentId: "7becdfc4", relPath: ",_3G8crkocEdqrjq4i3fchvA,_iDLs4DnfEdqxANP9kNH4WA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_navmap", title: "Mapa de navegación", url: "./../../core.base_rup/capabilitypatterns/rup_navmap_B30A6B3E.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "a80988da", parentId: "7becdfc4", relPath: ",_3G8crkocEdqrjq4i3fchvA,_oAeb4zbYEdqdbfmtFQj8qA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_model", title: "Modelo de diseño", url: "./../../core.base_rup/capabilitypatterns/rup_design_model_465A5F1.html", 
+	predecessors: "", info: "Entrada obligatoria", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "76330d24", parentId: "7becdfc4", relPath: ",_3G8crkocEdqrjq4i3fchvA,_CPHNtxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_specific_guidelines", title: "Directrices específicas del proyecto", url: "./../../core.base_rup/capabilitypatterns/rup_project_specific_guidelines_286E840C.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "64825f46", parentId: "7becdfc4", relPath: ",_3G8crkocEdqrjq4i3fchvA,_oAeb4jbYEdqdbfmtFQj8qA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_supplementary_specification", title: "Especificaciones suplementarias", url: "./../../core.base_rup/capabilitypatterns/rup_supplementary_specification_F9C7C5E1.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "2cdcb5e0", parentId: "7becdfc4", relPath: ",_3G8crkocEdqrjq4i3fchvA,_iDLs4jnfEdqxANP9kNH4WA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "", prefix: "", name: "rup_analysis_model", title: "Modelo de análisis", url: "./../../core.base_rup/capabilitypatterns/rup_analysis_model_AC415F64.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "db539722", parentId: "2cdcb5e0", relPath: ",_3G8crkocEdqrjq4i3fchvA,_iDLs4jnfEdqxANP9kNH4WA,_mju5QL9dEdqBwpaAk4N49g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_analysis_class", title: "Clase de análisis", url: "./../../core.base_rup/capabilitypatterns/rup_analysis_class_B47A47A8.html", 
+	predecessors: "", info: "", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "c1d84004", parentId: "7becdfc4", relPath: ",_3G8crkocEdqrjq4i3fchvA,_iDLs4TnfEdqxANP9kNH4WA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_usecase_model", title: "Modelo de caso de uso", url: "./../../core.base_rup/capabilitypatterns/rup_usecase_model_BDA84B4E.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "81fc2b1e", parentId: "7becdfc4", relPath: ",_3G8crkocEdqrjq4i3fchvA,_pOsigjbYEdqdbfmtFQj8qA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_data_model", title: "Modelo de datos", url: "./../../core.base_rup/capabilitypatterns/rup_data_model_A43D5F34.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "513086de", parentId: "7becdfc4", relPath: ",_3G8crkocEdqrjq4i3fchvA,_oAeb4zbYEdqdbfmtFQj8qA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_model", title: "Modelo de diseño", url: "./../../core.base_rup/capabilitypatterns/rup_design_model_465A5F1.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "16024022", parentId: "7becdfc4", relPath: ",_3G8crkocEdqrjq4i3fchvA,_CPBHEhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_user_interface_prototype", title: "Prototipo de interfaz de usuario", url: "./../../core.base_rup/capabilitypatterns/rup_user_interface_prototype_C73ECF8B.html", 
+	predecessors: "", info: "Entrada opcional", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "ce1b3342", parentId: "7becdfc4", relPath: ",_3G8crkocEdqrjq4i3fchvA,_iDLs4znfEdqxANP9kNH4WA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_review_record", title: "Registro de revisión", url: "./../../core.base_rup/capabilitypatterns/rup_review_record_B6DF3F74.html", 
+	predecessors: "", info: "Salida", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+]};
+				</script>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

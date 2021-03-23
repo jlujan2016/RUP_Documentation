@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Realizaci&oacute;n del an&aacute;lisis de guiones de uso mediante Rational Software Architect</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="performing_use-case_analysis_using_rsa_ext" name="uma.name">
+<meta content="Realizaci&oacute;n del an&aacute;lisis de guiones de uso mediante Rational Software Architect" name="uma.presentationName">
+<meta content="Tool:rup_rational_software_architect:Rational Software Architect" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Software Architect" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "_T5H-cEUCEdqMr9-tA4TBpQ", "_VoY0QK4LEdqFg48R_ivTjA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "_T5H-cEUCEdqMr9-tA4TBpQ", "_VoY0QK4LEdqFg48R_ivTjA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "_T5H-cEUCEdqMr9-tA4TBpQ", "_VoY0QK4LEdqFg48R_ivTjA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_VoY0QK4LEdqFg48R_ivTjA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Realizaci&oacute;n del an&aacute;lisis de guiones de uso mediante Rational Software Architect</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta guía de la herramienta describe cómo realizar análisis de guión de uso mediante el entorno de modelado RSA.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_rational_software_architect_736B9F40.html" guid="_T5H-cEUCEdqMr9-tA4TBpQ">Rational Software Architect</a>
+<br>Ampl&iacute;a: <a href="./../../../tech.rsa/guidances/toolmentors/performing_use-case_analysis_using_rsa_C1DFB2D9.html" guid="{0505E61B-4D9C-455D-AB61-854EE8F69094}">Realización de análisis de guión de uso mediante la plataforma de desarrollo de software Rational</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">Análisis de caso de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    Esta guía de la herramienta da por supuesto que se han creado un modelo de diseño y un modelo de guión de caso según
+    las&nbsp;<a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a>. También se presupone que el modelo de
+    guión de uso se ha rellenado con actores y guiones de uso siguiendo <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/find_actors_and_use_cases_1ACB35F0.html" guid="{3CD5FA7E-160C-4A39-9DEB-C6D162D8AECD}">Búsqueda de actores y guiones de uso</a>.
+</p>
+<p>
+    En esta guía de la herramienta se llevan a cabo los pasos siguientes para cada guión de uso de la iteración actual:
+</p>
+<ul>
+    <li>
+        <a href="#Create Use-Case Realization">Crear la ejecución de guiones de uso</a>
+    </li>
+    <li>
+        <a href="#Supplement the use-case descriptions">Completar las descripciones de los guiones de uso</a>
+    </li>
+    <li>
+        <a href="#Find Classes from Use-Case Behavior">Buscar clases de análisis a partir del comportamiento del
+        guión de uso</a>
+    </li>
+    <li>
+        <a href="#Distribute behavior to analysis classes">Distribuir comportamiento a clases de análisis</a>
+    </li>
+    <li>
+        <a href="#Describe responsibilities">Describir responsabilidades</a>
+    </li>
+    <li>
+        <a href="#Describe attributes and associations">Describir atributos y asociaciones</a>
+    </li>
+</ul>
+<p>
+    Los pasos siguientes se llevan a cabo una vez para cada iteración:
+</p>
+<ul>
+    <li>
+        <a href="#Reconcile the Use-Case Realizations">Reconciliar las ejecuciones de guiones de uso</a>
+    </li>
+    <li>
+        <a href="#Qualify Analysis Mechanisms">Calificar los mecanismos de análisis</a>
+    </li>
+    <li>
+        <a href="#Establish Traceability">Establecer las rastreabilidad</a>
+    </li>
+    <li>
+        <a href="#Review the Results">Revisar los resultados</a>
+    </li>
+</ul>
+<p>
+    <a href="#MoreInfo">Información adicional sobre la herramienta</a>
+</p>
+<h3>
+    <a id="Create Use-Case Realization" name="Create Use-Case Realization">Crear una ejecución de guiones de uso</a>
+</h3>
+<p>
+    Para cada guión de uso que se va a analizar:
+</p>
+<ol>
+    <li>
+        Navegue al paquete de Modelo de diseño en el que se van a crear las ejecuciones de guiones de uso. Consulte <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a>.
+    </li>
+    <li>
+        Añada una colaboración UML al paquete para representar la ejecución de guiones de uso. Proporciónele el mismo
+        nombre que al guión de uso que está ejecutando. Como alternativa, asígnele la palabra clave UML "ejecución de
+        guiones de uso".
+    </li>
+    <li>
+        En el paquete en el que ha creado la ejecución de guión de uso, cree un diagrama de formato libre. Arrastre la
+        ejecución de guión de uso hasta el diagrama. Arrastre el guión de caso (desde el modelo de guión de uso) hasta el
+        diagrama. Añada una relación de ejecución de la ejecución de guiones de uso al guión de uso. En este punto, se ha
+        establecido la semántica de la rastreabilidad. Ahora puede descartar el diagrama de formato libre si lo desea. De
+        aquí en adelante, podrá utilizar las funciones Diagramas de tema y Análisis de rastreabilidad para examinar las
+        relaciones de derivación y perfeccionamiento de los modelos.
+    </li>
+</ol>
+<h3>
+    <a id="Supplement the use-case descriptions" name="Supplement the use-case descriptions">Completar las descripciones de
+    los guiones de uso</a>
+</h3>
+<p>
+    Si se debe completar la descripción de guión de uso con descripciones de comportamiento interno adicionales, lo puede
+    realizar añadiéndolas a una descripción de guión de uso existente que haya creado siguiendo los pasos que se indican en
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/detail_a_use_case_D9BECBF4.html" guid="{536BC669-A8FB-426D-88FF-CBEA806A9066}">Detallar un guión de uso</a>. Si el comportamiento interno del sistema
+    tiene algún parecido con el comportamiento externo, se puede garantizar una descripción completamente separada. En este
+    caso, adjunte un documento de especificación de guión de uso separado (consulte el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">Artefacto:
+    Guión de uso</a> para la plantilla) para la colaboración o si no desea utilizar un documento externo (enlazado) y la la
+    descripción puede ser concisa, captúrela en la documentación del modelo de la colaboración. &nbsp; Consulte <img     height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Enlace de elementos de
+    modelo a archivos externos</i>.
+</p>
+<h3>
+    <a id="Find Classes from Use-Case Behavior" name="Find Classes from Use-Case Behavior">Buscar clases de análisis a
+    partir del comportamiento del guión de uso</a>
+</h3>
+<ol>
+    <li>
+        Navegue al paquete que va a contener las clases de análisis. Consulte <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a>.
+    </li>
+    <li>
+        Cree uno o más diagramas de clase para capturar las clases de análisis. Consulte <img height="16"         alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adición de diagramas de clase
+        a elementos de modelo</i>.
+    </li>
+    <li>
+        Añada las clases de análisis. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adición de diagramas de clase a elementos de modelo</i>.
+    </li>
+    <li>
+        Asigne estereotipos de clase de análisis según proceda. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Aplicación de estereotipos a elementos de modelo</i>.
+    </li>
+    <li>
+        Añada una descripción breve a cada clase. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documentación de elementos de modelo</i>.
+    </li>
+    <li>
+        Si lo desea, asocie un documento a cada clase. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Enlace de elementos de modelo con archivos externos</i>.
+    </li>
+</ol>
+<p>
+    Para obtener más información, consulte el tema <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modelado de estructura estática con diagramas de clase</i> de
+    la ayuda en línea.
+</p>
+<h3>
+    <a id="Distribute behavior to analysis classes" name="Distribute behavior to analysis classes">Distribuir
+    comportamiento a clases de análisis</a>
+</h3>
+<ol>
+    <li>
+        Navegue hasta el paquete en el que se ha creado la ejecución de guiones de uso de nivel de análisis (una
+        colaboración UML).
+    </li>
+    <li>
+        Para cada subflujo independiente (escenario) del guión de uso, selección la ejecución de guiones de uso (p.ej. la
+        colaboración) y añádale un diagrama de secuencia. Esto también provocará que se añada una interacción UML a la
+        colaboración. Denomine el diagrama de interacción y de secuencia para que coincida con el nombre que ha asignado al
+        flujo del guión de uso en el modelo de guión de uso. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Creación de diagramas de secuencia UML.</i>
+    </li>
+    <li>
+        En la documentación del modelo para la interacción, escriba una breve descripción del escenario que se describe en
+        el diagrama de secuencia. Así mismo, copie y pegue esta descripción en la documentación del modelo del diagrama de
+        secuencia. Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Documentación de elementos de modelo</i>.
+    </li>
+    <li>
+        Arrastre y suelte actores (del modelo de guión de uso) y clases de análisis en el diagrama para crear objetos para
+        la interacción. Como alternativa y, según convenga, cree clases de análisis nuevas como participantes en la
+        interacción. Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Diagramas de secuencia</i>.
+    </li>
+    <li>
+        Añada mensajes entre los objetos. Por lo que se refiere al significado, estos mensajes son especificaciones de
+        instancia de operaciones, con lo cual deberá correlacionarlos con operaciones existentes o deberá crear operaciones
+        nuevas según convenga. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Diagramas de secuencia</i>.
+    </li>
+    <li>
+        Describa cada mensaje (el elemento de la interacción) en su campo de documentación de modelo. Consulte <img         height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documentación de
+        elementos de modelo</i>.
+    </li>
+    <li>
+        Para describir el comportamiento del objeto cuando recibe el mensaje, asigne una operación al mensaje. (Si la
+        operación no existe, añada una a la clase tal como se describe más abajo en el apartado <a href="#Describe responsibilities">Describir responsabilidades</a> y, a continuación, asigne la operación al
+        mensaje). Describa cada operación (el elemento de la clase de análisis) en su campo de documentación de modelo.
+    </li>
+    <li>
+        Defina las firmas de las operaciones recién creadas.
+    </li>
+</ol>
+<p>
+    Para obtener más información, consulte los temas siguientes en la ayuda en línea:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modelado de
+        estructura estática con diagramas de clase</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Diagramas de
+        secuencia</i>
+    </li>
+</ul>
+<h3>
+    <a id="Describe responsibilities" name="Describe responsibilities">Describir responsabilidades</a>
+</h3>
+<ol>
+    <li>
+        Describa responsabilidades de la clase añadiendo operaciones. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Gestión de atributos y operaciones en clasificadores</i>.
+    </li>
+    <li>
+        Añada una descripción a cada operación. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documentación de elementos de modelo</i>.
+    </li>
+</ol>
+<h3>
+    <a id="Describe attributes and associations" name="Describe attributes and associations">Describir atributos y
+    asociaciones</a>
+</h3>
+<p>
+    Siga los pasos que se indican a continuación para describir atributos y asociaciones.
+</p>
+<h4>
+    <a id="Define Attributes" name="Define Attributes">Definir atributos</a>
+</h4>
+<p>
+    El campo de documentación de modelo de cada atributo debería describir la información que debe almacenarse en el
+    atributo. Esto puede ser opcional cuando la naturaleza de la información puede mostrarse claramente proporcionando un
+    nombre descriptivo preciso para el atributo. Especifique la multiplicidad en cada atributo.
+</p>
+<p>
+    Consulte el tema <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Adición de atributos a clasificadores en diagramas</i> de la ayuda en líneat.<br />
+</p>
+<h4>
+    <a id="Establish associations between analysis classes" name="Establish associations between analysis classes">Establecer asociaciones entre clases de análisis</a>
+</h4>
+<ol>
+    <li>
+        Navegue a cada ejecución de guiones de uso y añada una clase de diagrama para que se muestren los participantes en
+        la ejecución de guiones de uso. Opcionalmente, puede denominarlas Participantes. Consulte <img height="16"         alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adición de diagramas de clase
+        a elementos de modelo</i>.
+    </li>
+    <li>
+        Rellene el diagrama con todas las clases que participan en la ejecución. Descubra las clases que son examinando las
+        líneas de vida en los diagramas de secuencia que ha creado anteriormente.
+    </li>
+    <li>
+        Con las clases colocadas en el diagrama, muestre las asociaciones existentes entre ellas. Consulte <img height="16"         alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Relaciones</i>.
+    </li>
+    <li>
+        Añada relaciones de asociación nuevas entre clases según convenga. La examinación de los diagramas de secuencia de
+        la ejecución de guión de uso revelará las clases que están conectadas entre sí y los tipos se pasan entre sí en
+        forma de parámetros de mensaje. Esta información sugerirá las asociaciones que deben existir y, en algunos casos,
+        sugerirá otras clases (nuevas o existentes) que deben añadirse al diagrama Participantes.
+    </li>
+    <li>
+        Especifique la multiplicidad en cada final de la asociación. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Establecimiento de la&nbsp;propiedad Multiplicidad</i>.
+    </li>
+    <li>
+        Especifique la navegabilidad en cada final de la asociación. Donde la multiplicidad sea mayor que 1 y usted
+        anticipa que se utilizará un tipo especializado de clase de contenedor para albergar la recopilación de instancias
+        de clase de origen, tome nota de ambos casos en el campo de la documentación del modelo de atributo o en una nota
+        en el diagrama Participantes. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Relaciones de asociación directas</i>.
+    </li>
+</ol>
+<h4>
+    <a id="Describe event dependencies between analysis classes" name="Describe event dependencies between analysis classes">Describir dependencias de sucesos entre clases de
+    análisis</a>
+</h4>
+<p>
+    Proporcione un nombre o estereotipo las asociaciones para indicar dependencias de sucesos. Consulte <img height="16"     alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Relaciones</i> y <img height="16"     alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Aplicación de estereotipos a
+    elementos de modelo</i>.
+</p>
+<h3>
+    <a id="Reconcile the Use-Case Realizations" name="Reconcile the Use-Case Realizations">Reconciliar las ejecuciones de
+    guiones de uso</a>
+</h3>
+<p>
+    Examine las clases de análisis y sus asociaciones. Identifique y resuelva las incoherencias y elimine los duplicados.
+</p>
+<h3>
+    <a id="Qualify Analysis Mechanisms" name="Qualify Analysis Mechanisms">Calificar mecanismos de análisis</a>
+</h3>
+<p>
+    No es necesario capturar de un modo formal los mecanismos de análisis que utiliza una clase y sus características
+    asociadas. Basta con adjuntar una nota a un diagrama o una ampliación a la descripción de la clase (consulte <img     height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documentación de
+    elementos de modelo</i> y <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Adición de notas a formas</i>) para transmitir la información.
+</p>
+<h3>
+    <a id="Establish Traceability" name="Establish Traceability">Establecer la rastreabilidad</a>
+</h3>
+<p>
+    Añada dependencias de rastreabilidad entre elementos de modelo de diseño/análisis y otros modelos, tal como se
+    especifica en las directrices del proyecto. Por ejemplo, puede haber un modelo empresarial separado, un modelo de datos
+    conceptual o un modelo de pantallas de interfaz de usuario en el que también se desea rastrear las clases de análisis.
+    Para ello:
+</p>
+<ol>
+    <li>
+        Cree un diagrama de rastreabilidad.
+    </li>
+    <li>
+        Arrastre y suelte los elementos que rastrear en el diagrama.
+    </li>
+    <li>
+        Añada dependencias de rastreabilidad (dependencias de abstracción que se pueden haber estereotipado como
+        &lt;&lt;rastreo&gt;&gt;). Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Relaciones de abstracción</i>
+    </li>
+    <li>
+        Genere un informe de rastreabilidad: los elementos de modelo que tienen relaciones de rastreo, incluidas relaciones
+        implícitas, con y desde implementaciones, se muestran en la vista de informe de modelo. Consulte <img height="16"         alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Relaciones de
+        rastreabilidad</i>
+    </li>
+</ol>
+<h3>
+    <a id="Review the Results" name="Review the Results">Revisar los resultados</a>
+</h3>
+<p>
+    Puede resultar útil publicar los modelos en formato html. Así mismo, tenga en cuenta que dichos diagramas pueden
+    copiarse en Microsoft Word y otros programas.
+</p>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Publicación de modelos</i> y el tutorial <img height="16"     alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Publicación de un modelo en un
+    sitio web</i>&nbsp; .
+</p>
+<h3>
+    <a id="MoreInfo" name="MoreInfo">Información adicional sobre la herramienta</a>
+</h3>
+<p>
+    Tutoriales:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Introducción
+        a la perspectiva de modelado</i>&nbsp;
+    </li>
+</ul>
+<p>
+    Ejemplos:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modelos UML:
+        Modelo UML simple</i>&nbsp;
+    </li>
+</ul><br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

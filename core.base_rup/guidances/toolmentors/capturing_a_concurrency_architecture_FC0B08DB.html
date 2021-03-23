@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Captura de una arquitectura de concurrencia utilizando Rational Rose RealTime</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="capturing_a_concurrency_architecture" name="uma.name">
+<meta content="Captura de una arquitectura de concurrencia utilizando Rational Rose RealTime" name="uma.presentationName">
+<meta content="Tool:rup_rose_rt:Rational Rose RealTime" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Rose RealTime" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B3026434-672D-4564-9106-A951C326EBF5}", "{693A3653-B92C-4342-B427-2BEA239BA15F}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B3026434-672D-4564-9106-A951C326EBF5}", "{693A3653-B92C-4342-B427-2BEA239BA15F}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B3026434-672D-4564-9106-A951C326EBF5}", "{693A3653-B92C-4342-B427-2BEA239BA15F}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{693A3653-B92C-4342-B427-2BEA239BA15F}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Captura de una arquitectura de concurrencia utilizando Rational Rose RealTime</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo distribuir cápsulas a través de hebras utilizando Rational Rose RealTime.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_rose_rt_DDC0220E.html" guid="{B3026434-672D-4564-9106-A951C326EBF5}">Rational Rose RealTime</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">Describir la arquitectura de tiempo de ejecución</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Microsoft Windows 98/NT 4.0.
+</p>
+<h4>
+    Pasos de la herramienta
+</h4>
+<p>
+    Para distribuir cápsulas a través de hebras en Rose RealTime debe:
+</p>
+<ol>
+    <li>
+        <a href="#Identify processes and threads">Identificar procesos y hebras</a>
+    </li>
+    <li>
+        <a href="#Design the structure">Diseñar la estructura</a>
+    </li>
+</ol>
+<h3>
+    1. <a id="Identify processes and threads" name="Identify processes and threads">Identificar procesos y hebras</a>
+</h3>
+<p>
+    Rose RealTime utiliza tres mecanismos para tratar la concurrencia:
+</p>
+<ul>
+    <li>
+        Procesos, que son objetos activos de gran peso con una sobrecarga de conmutación de alto contexto
+    </li>
+    <li>
+        Hebras y tareas, que son mecanismos de conmutación de contexto de poco peso
+    </li>
+    <li>
+        Cápsulas, que son objetos activos de poco peso con una sobrecarga de conmutación de muy poco contexto
+    </li>
+</ul>
+<p>
+    Con Rose RealTime, las cápsulas son objetos activos que se pueden asignar a hebras del sistema operativo. Estos objetos
+    activos se planifican utilizando un mecanismo de planificación de objetos que minimiza la sobrecarga de conmutación del
+    contexto. En algunos casos, es posible que sea necesario distribuir cápsulas a través de hebras y procesos.
+</p>
+<p>
+    Para obtener más información sobre cómo diseñar con objetos activos, consulte la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/designing_with_active_objects_E041AB4C.html" guid="{8A0A5BB3-5CBC-4A38-BFD2-4A21CA5FF833}">Guía de la herramienta: Diseño con objetos activos en Rational Rose
+    RealTime</a>.
+</p>
+<h3>
+    2. <a id="Design the structure" name="Design the structure">Diseñar la estructura</a>
+</h3>
+<p>
+    Los pasos para diseñar la estructura física y lógica varían en función del lenguaje que se utilice (C, C++ o Java).
+</p>
+<h4>
+    Diseñar la estructura utilizando C o C++
+</h4>
+<ol>
+    <li>
+        Añadir el puerto de servicio de trama a la cápsula del contenedor.
+    </li>
+    <li>
+        Definir la subcápsula.
+    </li>
+    <li>
+        Convertir la subcápsula en opcional.
+    </li>
+    <li>
+        Determinar la hebra lógica.
+    </li>
+    <li>
+        Definir la hebra física.
+    </li>
+    <li>
+        Correlacionar la hebra lógica con la hebra física.
+    </li>
+    <li>
+        Convertir la cápsula en una hebra lógica.
+    </li>
+</ol>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" /> Para obtener más información
+    sobre el diseño de la estructura con C o C++, consulte la guía <i>Rational Rose RealTime C Reference or C++
+    Reference</i>.
+</p>
+<h4>
+    Diseñar la estructura utilizando Java
+</h4>
+<ol>
+    <li>
+        Añadir el puerto de servicio de trama a la cápsula del contenedor. &nbsp;
+    </li>
+    <li>
+        Convertir la subcápsula en opcional. &nbsp;
+    </li>
+    <li>
+        Crear un nuevo controlador y hebra.&nbsp;
+    </li>
+    <li>
+        Convertir la cápsula en un nuevo controlador.&nbsp;
+    </li>
+</ol>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" /> Para obtener más información
+    sobre el diseño de la estructura con Java, consulte la guía <i>Rational Rose RealTime Java Reference</i>.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

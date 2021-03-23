@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Establecimiento del modelo de implementaci&oacute;n con UCM utilizando Rational ClearCase</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="setting_up_impl_model_with_ucm" name="uma.name">
+<meta content="Establecimiento del modelo de implementaci&oacute;n con UCM utilizando Rational ClearCase" name="uma.presentationName">
+<meta content="Tool:rup_clearcase:Rational ClearCase" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational ClearCase" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{10964F4E-39B2-4D34-9A75-3B6360B47C2B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{10964F4E-39B2-4D34-9A75-3B6360B47C2B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{10964F4E-39B2-4D34-9A75-3B6360B47C2B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_85i-sDIFEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{10964F4E-39B2-4D34-9A75-3B6360B47C2B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_XxCC0AIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{10964F4E-39B2-4D34-9A75-3B6360B47C2B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{10964F4E-39B2-4D34-9A75-3B6360B47C2B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{10964F4E-39B2-4D34-9A75-3B6360B47C2B}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{10964F4E-39B2-4D34-9A75-3B6360B47C2B}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Establecimiento del modelo de implementaci&oacute;n con UCM utilizando Rational ClearCase</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo establecer un entorno de gestión de la configuración con UCM (Gestión unificada de cambios) de Rational ClearCase.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_clearcase_9665C.html" guid="{B2D1373B-A826-4169-A38A-B53B2122DC7C}">Rational ClearCase</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/write_cm_plan_9BAE9ACA.html" guid="{63B1E843-8F9D-41E4-9A33-5E0F648F8159}">Escribir el plan de gestión de la configuración (CM)</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">Estructurar el modelo de implementación</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/setup_cm_environment_78ABEDF9.html" guid="{FC91D0C9-759E-4D3D-86D8-22D7B26AA0F6}">Configurar el entorno de gestión de la configuración (CM)</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    En el diagrama siguiente se ilustra el flujo de trabajo para la gestión de proyectos de UCM. En esta guía de la
+    herramienta se tratan las áreas sombreadas.
+</p>
+<p>
+    <img height="163" alt="Diagrama de flujo de trabajo de UCM" src="./../../../core.base_rup/guidances/toolmentors/resources/wflow_create_proj.gif" width="536"     border="0" />
+</p>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Microsoft Windows.&nbsp;Describe características disponibles en
+    ClearCase completo.
+</p>
+<h4>
+    Terminología
+</h4>
+<p>
+    Existen algunas diferencias entre la terminología de RUP y&nbsp; la que se utiliza en ClearCase. Las definiciones
+    siguientes de la terminología específica de la herramienta se proporcionan como ayuda para aclarar las diferencias.
+</p>
+<ul>
+    <li>
+        <b>Actividad</b>: Una actividad de ClearCase se correlaciona exactamente con un <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_work_order_CFBC805B.html" guid="{18DB40A1-6272-467A-AC68-B2C4BE1DCD6C}">Pedido de trabajo</a> de RUP.&nbsp;No se debe confundir con el
+        concepto de RUP de una <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/termdefinitions/activity_1D028230.html" guid="_yoVhMB_IEdq6CKKKq4D7YA">Definición de términos: actividad</a>.
+    </li>
+    <li>
+        <b>Gestión de la configuración</b>: El uso del término Gestión de la configuración de ClearCase hace referencia al
+        control de versión y a la gestión de compilaciones. RUP utiliza las definiciones IEEE e ISO de <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/configuration_management_ECFE6290.html" guid="_yEPD19nmEdmO6L4XMImrsA">Definición de términos: gestión de la configuración</a>&nbsp;(CM), que también
+        incluye Gestión de cambios como parte de CM.&nbsp;
+    </li>
+    <li>
+        <b>Gestión de cambios y de la configuración</b>: Tanto ClearCase como Rational ClearQuest hacen referencia a la
+        gestión de cambios y de la configuración, que es similar a la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/configuration_management_ECFE6290.html" guid="_yEPD19nmEdmO6L4XMImrsA">Definición de términos: gestión de la configuración</a>.&nbsp;RUP utiliza estos
+        términos con el mismo significado.
+    </li>
+    <li>
+        <b>Proyecto</b>: Un proyecto de ClearCase se correlaciona con el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_project_repository_E3932821.html" guid="{A99B1686-7BD7-43B3-9A7F-7DB18A10F4B2}">depósito de proyectos</a> de RUP.
+    </li>
+</ul>
+<h4>
+    Pasos de la herramienta
+</h4>
+<p>
+    Para establecer un proyecto de UCM, debe:
+</p>
+<ol>
+    <li>
+        <a href="#1">Crear un depósito para almacenar la información del proyecto</a>
+    </li>
+    <li>
+        <a href="#2">Crear componentes que contengan el conjunto de archivos en los que trabajan los desarrolladores</a>
+    </li>
+    <li>
+        <a href="#3">Crear líneas base que identifiquen las versiones de los archivos con las que los desarrolladores
+        inician el trabajo</a>
+    </li>
+    <li>
+        <a href="#4">Crear un proyecto de UCM</a><br />
+         &nbsp;
+    </li>
+</ol>
+<h3>
+    1.&nbsp;<a id="1" name="1">Crear un depósito para almacenar la información del proyecto</a>
+</h3>
+<p>
+    Los proyectos de ClearCase requieren una VOB de proyecto (PVOB), que se utiliza para almacenar objetos de UCM e
+    información relacionada.
+</p>
+<ol>
+    <li>
+        Para iniciar el asistente para la creación de VOB, en la barra de tareas de Windows pulse <b>Inicio &gt; Programas
+        &gt; Software Rational &gt; Rational ClearCase &gt; Administración &gt; Crear VOB</b>.
+    </li>
+    <li>
+        En la primera pantalla, asegúrese de que se ha seleccionado el recuadro de selección <b>Datos del proyecto de
+        UCM</b>.&nbsp;
+    </li>
+    <li>
+        Seleccione <b>Ayuda</b>, que proporciona la guía para completar el asistente.&nbsp;&nbsp;
+    </li>
+</ol>
+<p>
+    <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> Para obtener
+    información detallada, consulte el tema de la ayuda en línea de ClearCase que trata sobre el <i>asistente para la
+    creación de VOB</i>.&nbsp;&nbsp;
+</p>
+<h3>
+    2.&nbsp;<a id="2" name="2">Crear componentes</a> <a id="2" name="2">que contengan el conjunto de archivos en los que
+    trabajan las desarrolladores</a>
+</h3>
+<p>
+    Para agrupar un conjunto de elementos de archivo y directorio relacionados en un proyecto de UCM, se utilizan
+    componentes. Por lo general, los elementos que forman un componente se desarrollan, integran y liberan juntos. Un
+    proyecto debe contener, como mínimo, un componente y puede contener varios componentes. Los proyectos pueden compartir
+    componentes.
+</p>
+<p>
+    Puede crear un componente con el asistente para la creación de VOB:
+</p>
+<ol>
+    <li>
+        Pulse <b>Inicio &gt; Programas &gt; Administración de Rational ClearCase &gt; Crear VOB</b>.&nbsp;
+    </li>
+    <li>
+        En el primer paso del asistente, seleccione <b>Crear VOB como un componente de UCM</b>. Los proyectos de UCM pueden
+        utilizar la nueva VOB como un componente. &nbsp;
+    </li>
+</ol>
+<p>
+    También puede migrar datos existentes almacenados en VOB a proyectos de UCM al convertir VOB existentes en componentes:
+</p>
+<ol>
+    <li>
+        Navegue al Explorador de proyectos de ClearCase. En la barra de tareas de Windows, pulse <b>Inicio &gt; Programas
+        &gt; Software Rational &gt; Rational ClearCase &gt; Explorador de proyectos</b>.
+    </li>
+    <li>
+        Seleccione la carpeta raíz de la PVOB.&nbsp;
+    </li>
+    <li>
+        Pulse <b>Herramientas</b> &gt; <b>Importar VOB</b>. Se muestra el recuadro de diálogo Importar VOB. En la lista VOB
+        disponibles, seleccione la VOB que desea convertir en un componente.&nbsp;
+    </li>
+    <li>
+        Para mover la VOB a la lista <b>VOB para importar</b>, pulse <b>Añadir</b>.&nbsp;&nbsp;
+    </li>
+    <li>
+        Una vez que haya finalizado, pulse <b>Importar</b>.
+    </li>
+</ol>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" /> Consulte la sección que trata
+    sobre la "creación de componentes" del manual de ClearCase titulado <i>Managing Projects</i>.
+</p>
+<h3>
+    3.&nbsp;<a id="3" name="3">Crear líneas base&nbsp;</a>que identifiquen las versiones de los archivos con las que los
+    desarrolladores inician el trabajo
+</h3>
+<p>
+    Las líneas base identifican una versión de cada elemento de un componente, representando una configuración de origen
+    estable a partir de la cual iniciar el trabajo. El modelo de UCM necesita utilizarlas para acceder a archivos y
+    directorios de un componente.
+</p>
+<p>
+    Cuando se crean componentes de ClearCase partiendo de cero, se crean con una línea base inicial.
+</p>
+<p>
+    Si va a convertir una VOB de ClearCase básico en un componente, puede crear líneas base de versiones etiquetadas
+    existentes. Compruebe si las versiones estables más recientes se han etiquetado. Si no es así, debe crear un tipo de
+    etiqueta y aplicarlo a las versiones que prevé incluir en el proyecto.
+</p>
+<p>
+    <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> Para obtener
+    información detallada, consulte el tema de la ayuda en línea de ClearCase que trata sobre la <i>utilización del
+    asistente para aplicar etiquetas</i>.
+</p>
+<p>
+    Para crear una línea base a partir de un conjunto de versiones identificadas por un tipo de etiqueta:
+</p>
+<ol>
+    <li>
+        En el Explorador de proyectos de ClearCase, seleccione la carpeta raíz de la PVOB. Pulse <b>Herramientas</b> &gt;
+        <b>Importar etiqueta</b>. Se muestra el asistente para la importación de etiquetas.
+    </li>
+    <li>
+        En la lista <b>Componentes disponibles</b>, seleccione el componente que contiene la etiqueta a partir de la que
+        desea crear una línea base.
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            Para mover el componente a la lista <b>Componentes seleccionados</b>, pulse <b>Añadir</b>.
+        </li>
+        <li>
+            Cuando haya finalizado, pulse <b>Siguiente</b>.&nbsp;
+        </li>
+    </ul>
+</blockquote>
+<ol start="3">
+    <li>
+        En el Paso 2 del asistente para la importación de etiquetas, seleccione el tipo de etiqueta que desea importar.
+        Escriba el nombre de la línea base que desea crear para las versiones que identifica dicho tipo de etiqueta.
+        Seleccione el nivel de promoción de la línea base. Pulse <b>Finalizar</b>.
+    </li>
+</ol>
+<p>
+    Este procedimiento crea una de las líneas base de la base del proyecto, que identifica las versiones de archivos con
+    las que los desarrolladores inician el trabajo.
+</p>
+<p>
+    <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> Consulte los
+    temas de la ayuda en línea de ClearCase que tratan sobre la <i>creación y gestión de líneas base</i>.
+</p>
+<h3>
+    4.&nbsp;<a id="4" name="4">Crear un proyecto de UCM</a>
+</h3>
+<p>
+    Después de crear una VOB de proyecto y los componentes que va a utilizar, puede crear el proyecto de UCM. Para ello,
+    debe proporcionar un nombre de proyecto e identificar líneas base y componentes de proyecto para el proyecto. ClearCase
+    proporciona un asistente para la creación de nuevos proyectos que le guía a través de los pasos de este procedimiento.
+</p>
+<ol>
+    <li>
+        En el Explorador de proyectos de ClearCase, seleccione la carpeta raíz de la PVOB. Pulse <b>Crear nuevo
+        proyecto</b> en el menú emergente para iniciar el asistente.
+    </li>
+    <li>
+        Siga los pasos que le indica el asistente. Puede obtener ayuda para cada paso pulsando el botón <b>Ayuda</b> de
+        cada pantalla.
+    </li>
+    <li>
+        En el Paso 3 del asistente, Añadir las líneas base de componentes que utilizar en este proyecto, especifique las
+        líneas base que ha creado en el <a href="#3">procedimiento 3</a> anterior.
+    </li>
+    <li>
+        En los dos pasos siguientes del asistente se le solicita que especifique información de configuración detallada
+        para el proyecto, incluidas políticas de desarrollo y si desea habilitar el proyecto para trabajar con una base de
+        datos de solicitudes de cambio de Rational. La configuración se puede adaptar a fin de que satisfaga las
+        necesidades específicas del proyecto. Para obtener una descripción de todas las opciones disponibles, consulte la
+        ayuda en línea.
+    </li>
+</ol>
+<p>
+    <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> Puede obtener una
+    visión general de este procedimiento en los temas de la ayuda en línea de ClearCase que tratan sobre:
+</p>
+<ul>
+    <li>
+        <i>Flujo de trabajo para la creación de proyectos&nbsp;</i>
+    </li>
+    <li>
+        <i>Asistente para proyecto nuevo</i>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,2379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concepto: Visi&oacute;n general de Java 2 Platform Enterprise Edition (J2EE)</title>
+<meta content="Concept" name="uma.type">
+<meta content="java_2_platform_enterprise_edition_j2ee_overview" name="uma.name">
+<meta content="Visi&oacute;n general de Java 2 Platform Enterprise Edition (J2EE)" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "1.527482214591853E-307"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "1.527482214591853E-307"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "1.527482214591853E-307"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "1.527482214591853E-307"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.527482214591853E-307"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concepto: Visi&oacute;n general de Java 2 Platform Enterprise Edition (J2EE)</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se proporciona una visión general completa sobre la plataforma J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Arquitecto de software</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    En el complejo y rápido mundo de las aplicaciones distribuidas de hoy en día, es de gran importancia hacer que las
+    aplicaciones lleguen al mercado lo más rápidamente posible. Esto significa que los equipos de proyectos no pueden
+    permitirse el lujo de invertir tiempo en desarrollar servicios a nivel de sistema, como los relacionados con la
+    conectividad remota, la denominación de nombres, la persistencia, la seguridad o la gestión de transacciones. El equipo
+    de proyectos necesita desarrollar y utilizar componentes reutilizables y portables. Lo que no se desea es invertir
+    tiempo volviendo a inventar arquitecturas sólidas y reconocidas.
+</p>
+<p>
+    La plataforma Java&trade; Enterprise Edition (J2EE&trade;) satisface estas necesidades proporcionando una infraestructura basada en
+    estándares y bien documentada para desarrollar y ejecutar aplicaciones Java distribuidas, de múltiples capas y basadas
+    en componentes. Esta infraestructura maneja una gran parte de la complejidad de bajo nivel de las aplicaciones como,
+    por ejemplo, la relacionada con la conectividad remota, la denominación de nombres, la persistencia, la seguridad y la
+    gestión de transacciones, haciendo que los desarrollares sólo tengan que concentrase en la lógica empresarial de la
+    aplicación.
+</p>
+<p>
+    La plataforma J2EE está compuesta por:
+</p>
+<ul>
+    <li>
+        Un conjunto de estándares para los componentes J2EE y la plataforma J2EE en la que los componentes se ejecutan.
+    </li>
+    <li>
+        Un modelo de desarrollo de aplicaciones que describe la plataforma J2EE en detalle, que ofrece una gran robustez y
+        proporciona información sobre la mejor manera de desarrollar aplicaciones J2EE.
+    </li>
+    <li>
+        Una implementación de referencia de la plataforma J2EE, que Sun Microsystems Inc. proporciona como un estándar con
+        el que se pueden comparar los productos J2EE comerciales. Esta implementación de referencia incluye aplicaciones de
+        ejemplo totalmente desarrolladas.
+    </li>
+    <li>
+        Un conjunto de pruebas de compatibilidad para probar y evaluar implementaciones J2EE comerciales en relación con
+        los estándares J2EE.
+    </li>
+</ul>
+<p>
+    La plataforma J2EE es análoga a los servicios que proporcionan las herramientas de programación utilizadas por el
+    sistema operativo de su equipo, el sistema operativo proporciona servicios estándares sobre los que se desarrollan y
+    ejecutan aplicaciones, sin tener que preocuparse de la gestión a bajo nivel en relación con el acceso en disco,
+    memoria, salida de vídeo, red, etc. De esta forma es posible concentrarse en los detalles de la aplicación y no en los
+    detalles del sistema que subyace bajo ella. La plataforma J2EE proporciona un <i>sistema operativo</i> sofisticado para
+    aplicaciones empresariales.
+</p>
+<p>
+    Mediante la plataforma J2EE, se simplifica el esfuerzo de desarrollo de forma que el equipo de proyectos puede centrar
+    sus esfuerzos en la verdadera lógica empresarial de la aplicación, en lugar de invertir un tiempo crítico del
+    desarrollo en la resolución de problemas a nivel del sistema. Un equipo de proyectos que se puede centrar en lo que la
+    aplicación realiza, en lugar de centrarse en cómo ofrecer todos los servicios subyacentes que la aplicación necesita,
+    es mucho más probable que suministre un sistema sin errores y a tiempo que satisfaga las necesidades de sus usuarios.
+</p>
+<p>
+    Consulte la visión general de la plataforma J2EE de Sun en <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> para obtener más información. Siga los enlaces <b>Products & APIs &gt;
+    Java&trade; 2 Platform, Enterprise Edition (J2EE&trade;) &gt; Overview</b>.
+</p>
+<h4>
+    Desarrollo en esencia de J2EE
+</h4>
+<p>
+    Desde la perspectiva del desarrollador de aplicaciones:
+</p>
+<ul>
+    <li>
+        Compra una plataforma J2EE comercial, en forma de un servidor J2EE compatible. Un estándar J2EE especifica el
+        comportamiento del servidor J2EE.
+    </li>
+    <li>
+        Desarrolla o compra <a href="#J2EE_Components">componentes J2EE</a> disponibles comercialmente.
+    </li>
+    <li>
+        Despliega y ejecuta sus componentes J2EE en su <a href="#J2EE_Servers">servidor J2EE compatible</a>, que
+        proporciona todos los servicios que los componentes J2EE necesitan.
+    </li>
+</ul>
+<h4>
+    <a id="Example" name="Example">Ejemplo</a>
+</h4>
+<p>
+    Un ejemplo sencillo de una aplicación J2EE es un sitio de comercio electrónico, en que un cliente (usuario) utiliza un
+    navegador web para acceder de forma remota al servidor J2EE. El servidor J2EE proporciona servicios de <a href="#Web_Tier">capa web</a> y de <a href="#Business_Tier">capa empresarial</a>, e interactúa con una <a href="#EIS_Tier">capa EIS (Enterprise Information Systems) de fondo</a> que proporciona acceso a sistemas de gestión de
+    bases de datos relacionales.
+</p>
+<h3>
+    <a id="Why_Use_J2EE?" name="Why_Use_J2EE?"></a>Por qué utilizar J2EE
+</h3>
+<p>
+    Deseará utilizar una plataforma J2EE para desarrollar una aplicación empresarial o de comercio electrónico de Java si
+    si encuentra en alguno de estos casos:
+</p>
+<ul>
+    <li>
+        Desea utilizar una <a href="#Standardized,_Industry-Tested_Framework">infraestructura estándar y probada del
+        mercado</a> que proporcione soporte a la gestión de transacciones, denominación de nombres, seguridad, conectividad
+        remota y acceso a bases de datos.
+    </li>
+    <li>
+        Precisa <a href="#Portability">portabilidad</a>, es decir, la capacidad de desplegar los componentes en el servidor
+        J2EE compatible que desee.
+    </li>
+    <li>
+        Desea <a href="#Reusable_Components">reutilizar los componentes</a> o utilizar componentes disponibles
+        comercialmente.
+    </li>
+    <li>
+        Desea utilizar la experiencia de diseño funcional del desarrollador en la plataforma J2EE, mediante <a href="#Tried_and_True_Architecture_and_Design_Patterns">patrones de diseño y arquitectura sólida y reconocida</a>.
+    </li>
+    <li>
+        Su sistema ha de ser <a href="#Scalability">escalable</a> para satisfacer mayores cargas.
+    </li>
+    <li>
+        Desea reducir el tiempo de desarrollo con potentes <a href="#Development_and_Deployment_Tools">herramientas de
+        desarrollo y despliegue</a> de J2EE.
+    </li>
+    <li>
+        Desea una <a href="#Back_End_Integration">integración sencilla con sistemas de fondo</a>.
+    </li>
+    <li>
+        Desea beneficiarse de las características simples y potentes de <a href="#Security">seguridad</a>.
+    </li>
+</ul>
+<p>
+    Cada uno de estos puntos se tratará en más detalle en el resto de esta sección.
+</p>
+<h4>
+    <a id="Standardized,_Industry-Tested_Framework" name="Standardized,_Industry-Tested_Framework"></a>Estándar y probada
+    en el mercado
+</h4>
+<p>
+    Los <a href="#J2EE_Components">componentes J2EE</a> se ejecutan en <a href="#J2EE_Containers">contenedores</a> J2EE,
+    normalmente se proporcionan como parte de un servidor J2EE compatible. Estos contenedores proporcionan un conjunto de
+    servicios estándar (API) que utilizan los componentes J2EE. Estas API son:
+</p>
+<ul>
+    <li>
+        J2SE 1.4 
+        <ul>
+            <li>
+                JDBC
+            </li>
+            <li>
+                Java IDL
+            </li>
+            <li>
+                RMI-IIOP (Remote Method Invocation con el protocolo Internet Inter-ORB de CORBA)
+            </li>
+            <li>
+                JNDI (Java Naming and Directory Interface)
+            </li>
+            <li>
+                JAAS(Java Authentication and Authorization Service)
+            </li>
+        </ul>
+    </li>
+    <li>
+        JTA (Java Transaction API)
+    </li>
+    <li>
+        JavaMail
+    </li>
+    <li>
+        JMS (Java Message Service).<br />
+         Consulte <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_messaging_service_jms_84F49452.html" guid="9.950419951286216E-306">Concepto: Java Messaging Service (JMS)</a> para obtener más información sobre JMS.
+    </li>
+    <li>
+        JAF (JavaBeans Activation Framework)
+    </li>
+    <li>
+        EJB (Enterprise JavaBeans)
+    </li>
+    <li>
+        Servlet de Java
+    </li>
+    <li>
+        JAXP (Java API for XML Processing)
+    </li>
+    <li>
+        Java Connector (<b>Nota</b>: no soportado con anterioridad a J2EE 1.3).
+    </li>
+    <li>
+        JSP (JavaServer Pages)
+    </li>
+    <li>
+        Servicios web para J2EE (<b>Nota</b>: no soportado con anterioridad a J2EE 1.4).
+    </li>
+    <li>
+        JAX-RPC (Java API for XML-based RPC) (<b>Nota</b>: no soportado con anterioridad a J2EE 1.4).
+    </li>
+    <li>
+        SAAJ (SOAP with attachments API for Java) (<b>Nota</b>: no soportado con anterioridad a J2EE 1.4).
+    </li>
+    <li>
+        JAXR (Java API for XML Registries) (<b>Nota</b>: no soportado con anterioridad a J2EE 1.4).
+    </li>
+    <li>
+        J2EE Management (<b>Nota</b>: no soportado con anterioridad a J2EE 1.4).
+    </li>
+    <li>
+        JMX (Java Management Extensions) (<b>Nota</b>: no soportado con anterioridad a J2EE 1.4).
+    </li>
+    <li>
+        J2EE Deployment (<b>Nota</b>: no soportado con anterioridad a J2EE 1.4).
+    </li>
+    <li>
+        JACC (Java Authorization Service Provider Contract for Containers) (<b>Nota</b>: no soportado con anterioridad a
+        J2EE 1.4)
+    </li>
+</ul>
+<h4>
+    <a id="Portability" name="Portability">Portabilidad</a>
+</h4>
+<p>
+    Las aplicaciones y componentes J2EE son portables en relación con servidores J2EE compatibles, sin que sea necesario
+    modificar el código, de forma que es posible desplegar una aplicación en el servidor J2EE compatible que elija con tan
+    sólo actualizar la información de despliegue específica del servidor en los archivos de <a href="#Deployment_Descriptors">descriptor de despliegue</a> XML (eXtended Markup Language).
+</p>
+<p>
+    La estandarización de la especificación J2EE ha dado lugar a la competitividad del mercado, ahora existe la posibilidad
+    de elegir servidores J2EE compatibles de acuerdo a sus necesidades y presupuesto.
+</p>
+<h4>
+    <a id="Reusable_Components" name="Reusable_Components"></a>Componentes reutilizables
+</h4>
+<p>
+    Puesto que cumplen los estándares J2EE, los componentes J2EE se pueden comprar como paquetes disponibles comercialmente
+    y adjuntarlos a su aplicación J2EE según sea necesario, ahorrando esfuerzos de desarrollo (especialmente en la
+    depuración y las pruebas).
+</p>
+<p>
+    Si es usted quien desarrolla un componente, puede volver a utilizarlo en otra aplicación o desplegarlo en distintos
+    servidores J2EE compatibles, si así es necesario.
+</p>
+<h4>
+    <a id="Tried_and_True_Architecture_and_Design_Patterns" name="Tried_and_True_Architecture_and_Design_Patterns"></a>Patrones de diseño y arquitectura sólida y reconocida
+</h4>
+<p>
+    La plataforma J2EE define una <a href="#Multi-Tier_Architecture">arquitectura de aplicación de varias capas</a> bien
+    estructurada. Con el soporte de la arquitectura de J2EE, los desarrolladores pueden comenzar con rapidez el desarrollo
+    de la verdadera lógica empresarial de la aplicación.
+</p>
+<p>
+    La documentación J2EE incluye:
+</p>
+<ul>
+    <li>
+        Un modelo de desarrollo de aplicaciones que describe la plataforma J2EE en detalle y proporciona información sobre
+        la mejor manera de desarrollar aplicaciones J2EE.
+    </li>
+    <li>
+        Patrones J2EE bien documentados, las mejores recomendaciones del mercado, que describen soluciones a problemas
+        comunes de diseño y de arquitectura de J2EE.
+    </li>
+</ul>
+<p>
+    Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> para obtener más información
+    sobre la plataforma J2EE. Siga los enlaces <b>J2EE &gt; Blueprints</b>.
+</p>
+<h4>
+    <a id="Scalability" name="Scalability"></a>Escalabilidad
+</h4>
+<p>
+    J2EE da soporte a la escalabilidad para aumentar el rendimiento o para satisfacer mayores cargas de varias maneras:
+</p>
+<ul>
+    <li>
+        <b>Características mejoradas de rendimiento en el contenedor J2EE</b>: estas características incluyen la agrupación
+        de recursos (agrupación de conexiones de base de datos, agrupación de instancias de beans de sesión y agrupación de
+        hebras), paso de mensajes asíncronos y una gestión de ciclo de vida de componentes más eficiente. Por ejemplo, la
+        apertura de una conexión con una base de datos es lenta. Además, las conexiones con las bases de datos pueden ser
+        un recurso escaso debido, por ejemplo, a restricciones de licencia. La plataforma J2EE gestiona esta situación
+        utilizando una <a href="#Database_Connection_Pooling">agrupación de conexiones de base de datos</a> en que el
+        contenedor J2EE mantiene una agrupación de conexiones abiertas que se pueden asignar a un componente cuando es
+        necesario, dando lugar a conexiones más rápidas y eficientes.
+    </li>
+    <li>
+        <b>Mediante la agrupación en clúster se puede lograr el equilibrio de carga</b>: desplegando el mismo componente en
+        varios servidores en distintas máquinas. A continuación, se puede equilibrar la carga de cada uno de los servidores
+        según convenga como, por ejemplo, de acuerdo a un algoritmo cíclico de asignación fija de tiempo o de acuerdo a la
+        carga del servidor. La especificación de la plataforma J2EE no requiere la posibilidad de equilibrio de carga en un
+        servidor J2EE, pero sí sugiere que un servidor de gama alta debería tenerla. Los proveedores de servidores J2EE
+        ofrecen varias soluciones con posibilidad de equilibrio de carga.
+    </li>
+    <li>
+        <b>Particionamiento de aplicaciones</b>: partes distintas desde el punto de vista lógico de una aplicación se
+        pueden desplegar en distintos servidores, por ejemplo, desplegando un inventario de una aplicación de pedidos de
+        correo electrónico y los subsistemas de contabilidad en distintos servidores.
+    </li>
+</ul>
+<h4>
+    <a id="Development_and_Deployment_Tools" name="Development_and_Deployment_Tools"></a>Herramientas de desarrollo y
+    despliegue
+</h4>
+<p>
+    Los proveedores han respondido a las necesidades de herramientas J2EE proporcionando un soporte excelente para el
+    desarrollo de J2EE en sus entornos de desarrollo integrado (IDE) de Java entre las que se incluyen:
+</p>
+<ul>
+    <li>
+        Asistentes para la creación de servlets.
+    </li>
+    <li>
+        Asistentes y diálogos para el mantenimiento y creación de EJB.
+    </li>
+    <li>
+        Generación y mantenimiento de descriptores de despliegue.
+    </li>
+    <li>
+        Correlación entre bases de datos y objetos EJB (en la que se incluye la generación de información de descriptor de
+        despliegue de las relaciones gestionadas por contenedor).
+    </li>
+    <li>
+        Integración con un contenedor web para probar los servicios web.
+    </li>
+    <li>
+        Despliegue, depuración y pruebas de forma transparente en un entorno IDE de EJB mediante la integración con un
+        contenedor EJB de J2EE y sus herramientas de despliegue.
+    </li>
+    <li>
+        Generación automática de clientes de prueba J2EE.
+    </li>
+    <li>
+        Integración con herramientas de creación de modelos UML.
+    </li>
+</ul>
+<h4>
+    <a id="Back_End_Integration" name="Back_End_Integration"></a>Integración de fondo
+</h4>
+<p>
+    El término "de fondo" hace referencia a la capa del sistema de información de la empresa (EIS) de la aplicación. Los
+    sistemas de fondo pueden ser por ejemplo, sistemas de gestión de bases de datos relacionales, sistemas tradicionales o
+    sistemas de planificación de recursos de la empresa (ERP).
+</p>
+<p>
+    J2EE da soporte al acceso mediante transacciones a sistemas de gestión de bases de datos relacionales de EIS mediante
+    la utilización de las API JTA y JDBC. Además, los contenedores EJB dan soporte a la persistencia gestionada por
+    contenedor, en que la conexión y el acceso al sistema de gestión de bases de datos transaccionales la maneja de forma
+    automática el contenedor.
+</p>
+<p>
+    La SPI (Service Provider Interface) de la arquitectura de conector J2EE define un estándar para conectar recursos de un
+    EIS que no sea un sistema de gestión de bases de datos relacionales con un conector J2EE. Un adaptador de recursos
+    específicos de un EIS (que un proveedor de un EIS proporciona) se conecta con el contenedor J2EE, ampliando las
+    posibilidades del conector de forma que proporcione un soporte seguro y transaccional para dicho EIS. Los componentes
+    en un contenedor pueden entonces acceder a un EIS mediante la SPI de la arquitectura de conector J2EE.
+</p>
+<p>
+    <b>Nota</b>: en versiones anteriores a J2EE 1.3 no se da soporte a la SPI de la arquitectura de conector J2EE.
+</p>
+<h4>
+    <a id="Security" name="Security"></a>Seguridad
+</h4>
+<p>
+    J2EE proporciona unas potentes y simples características de seguridad. La información de seguridad para los componentes
+    J2EE se define en sus descriptores de despliegue. Esta información define qué <i>roles</i> de seguridad están
+    autorizados a acceder a métodos y/o URL concretos de un componente. Un rol de seguridad es simplemente un nombre lógico
+    que se da a un grupo de usuarios, por ejemplo, a todos los miembros de un equipo de gestión de una organización se les
+    podría asignar un rol denominado "gestores".
+</p>
+<p>
+    Puesto que la información de seguridad se declara en el descriptor de despliegue, el comportamiento de seguridad se
+    puede cambiar sin la necesidad de un costoso ciclo de actualización-depuración-prueba con el código.
+</p>
+<h3>
+    <a id="Multi-Tier_Architecture" name="Multi-Tier_Architecture"></a>Arquitectura de varias capas
+</h3>
+<p>
+    J2EE es una arquitectura de aplicaciones distribuidas de varias capas que está compuesta de una <a href="#Client_Tier">capa de cliente</a>, una <a href="#Middle_Tier">capa intermedia</a> y una <a href="#EIS_Tier">capa
+    EIS o de fondo</a>.
+</p>
+<p>
+    En la figura 1 se muestra la arquitectura de varias capas de la plataforma J2EE, así como los distintos contenedores
+    J2EE que dan soporte a los componentes J2EE.
+</p>
+<p align="center">
+    <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/concepts/resources/co_j2e4.jpg" border="0" />
+</p>
+<p style="TEXT-ALIGN: center" align="center">
+    <font size="2"><b>Figura 1: Arquitectura de varias capas de J2EE.</b></font>
+</p>
+<h4>
+    <a id="Client_Tier" name="Client_Tier"></a>Capa de cliente
+</h4>
+<p>
+    Los componentes de la capa de cliente se ejecutan en contenedores de cliente. La capa de cliente se puede implementar
+    de las siguientes maneras:
+</p>
+<ul>
+    <li>
+        <a href="#Application_Clients">Aplicaciones Java autónomas</a>: normalmente corresponde a una interfaz gráfica de
+        usuario (también recibe el nombre de "cliente pesado"). Una aplicación Java de este tipo se debe instalar en cada
+        máquina cliente. Una aplicación Java accede a la capa EIS o intermedia mediante una API como JDBC.
+    </li>
+    <li>
+        <a href="#HTML_Pages">Páginas HTML estáticas</a>: proporcionan a una aplicación una interfaz gráfica de usuario
+        limitada.
+    </li>
+    <li>
+        HTML dinámico: que generan las <a href="#Java_Server_Pages">páginas JSP</a> o los <a href="#Java_Servlets">servlets</a>.
+    </li>
+    <li>
+        <a href="#Applets">Applets</a>: se ejecutan en un navegador web. Los applets se incrustan en una página HTML y
+        normalmente se utilizan para proporcionar una interfaz gráfica de usuario.
+    </li>
+</ul>
+<h4>
+    <a id="Middle_Tier" name="Middle_Tier"></a>Capa intermedia
+</h4>
+<p>
+    La capa intermedia está compuesta de una <a href="#Web_Tier">capa web</a> y una <a href="#Business_Tier">capa
+    empresarial</a>. Los componentes de la capa web se ejecutan en un servidor web J2EE que proporciona un <a href="#Web_Container">contenedor web</a>. Los componentes de la capa empresarial se ejecutan en un <a href="#J2EE_Servers">servidor de aplicaciones J2EE</a> que proporciona un <a href="#EJB_Container">contenedor EJB</a>.
+</p>
+<h5>
+    <a id="Web_Tier" name="Web_Tier"></a>Capa web
+</h5>
+<p>
+    Los componentes web incluyen <a href="#Java_Servlets">servlets</a> y <a href="#Java_Server_Pages">páginas JSP</a>, que
+    se encargan de gestionar la interacción con la capa de cliente, aislando los clientes de la capa EIS y de la capa
+    empresarial. Los clientes realizan sus solicitudes a la capa web, que procesa las solicitudes y devuelve los resultados
+    a los clientes. Las solicitudes de cliente a los componentes en la capa web generalmente dan lugar a solicitudes de
+    capa web a componentes en la capa empresarial, que a su vez, podrían dar lugar a solicitudes en la capa EIS.
+</p>
+<h5>
+    <a id="Business_Tier" name="Business_Tier"></a>Capa empresarial
+</h5>
+<p>
+    Los componentes de la capa empresarial la forman los <a href="#Enterprise_JavaBeans">EJB</a>.
+</p>
+<ul>
+    <li>
+        Contienen la lógica empresarial de la aplicación.
+    </li>
+    <li>
+        Realizan solicitudes a la capa EIS de acuerdo a la lógica empresarial, normalmente como respuesta a las solicitudes
+        que provienen de la capa web.
+    </li>
+</ul>
+<h4>
+    <a id="EIS_Tier" name="EIS_Tier"></a>Capa EIS
+</h4>
+<p>
+    La capa EIS representa los datos almacenados de la aplicación, a menudo en forma de un sistema de gestión de bases de
+    datos relacionales. La capa EIS también podría estar formada por sistemas tradicionales o ERP, a los que se accede
+    mediante la API de arquitectura de conector J2EE.
+</p>
+<p>
+    Consulte la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> para obtener más información
+    sobre la API de arquitectura de conector J2EE. Siga los enlaces Products & Technologies &gt; J2EE &gt; J2EE
+    Connector Architecture.
+</p>
+<p>
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/j2ee_deployment_configurations_C0F819AF.html" guid="7.671163061311939E-306">Concepto: configuraciones de despliegue de J2EE</a> para obtener más información sobre
+    las configuraciones de despliegue estándar de J2EE.
+</p>
+<h3>
+    <a id="J2EE_Servers" name="J2EE_Servers"></a>Servidores J2EE
+</h3>
+<p>
+    Los servidores J2EE son productos comerciales que implementan la plataforma J2EE. Ejemplos de servidores comerciales de
+    J2EE son BEA WebLogic, Borland Enterprise Server, IBM WebSphere e iPlanet.
+</p>
+<p>
+    El término "servidor J2EE" se utiliza a veces de forma algo ambigua. Normalmente, quiere decir que se trata de "un
+    servidor J2EE que da soporte tanto a un contenedor web como a un contenedor EJB". Utilizando una terminología más
+    estricta, un servidor web J2EE (como el Tomcat de implementación de servidor web de referencia de J2EE) da soporte a un
+    contenedor Web; un servidor de aplicaciones (o EJB) J2EE que da soporte a un contenedor EJB.
+</p>
+<h3>
+    <a id="J2EE_Containers" name="J2EE_Containers"></a>Contenedores J2EE
+</h3>
+<p>
+    Los <a href="#J2EE_Components">componentes J2EE</a> se ejecutan en, o los alojan, los contenedores J2EE que normalmente
+    se proporcionan como parte de un servidor J2EE comercial. Los contenedores proporcionan un entorno de tiempo de
+    ejecución y un conjunto estándar de <a href="#Services_(APIs)_for_J2EE_Components">servicios (API)</a> a los
+    componentes que se ejecutan en el contenedor, además de dar soporte a las API J2SE estándar.
+</p>
+<p>
+    J2EE define los siguientes tipos de contenedores:
+</p>
+<ul>
+    <li>
+        <a href="#Application_Client_Container">Contenedor de cliente de aplicación</a>
+    </li>
+    <li>
+        <a href="#Applet_Container">Contenedor de applets</a>
+    </li>
+    <li>
+        <a href="#Web_Container">Contenedor web</a>
+    </li>
+    <li>
+        <a href="#EJB_Container">Contenedor de EJB</a>
+    </li>
+</ul>
+<h4>
+    <a id="Application_Client_Container" name="Application_Client_Container"></a>Contenedor de cliente de aplicación
+</h4>
+<p>
+    Un <a href="#Application_Clients">cliente de aplicación J2EE</a> se ejecuta en un contenedor de cliente de aplicación,
+    que da soporte a estas API J2EE: JDBC, JMS, JAXP, JAAS, JavaMail, JAF, JSR, JAX-RPC, SAAJ, J2EE Management y JMX.
+</p>
+<p>
+    Desde un punto de vista práctico, la instalación J2SE estándar comprende los contenedores de cliente de aplicación. El
+    contenedor de cliente de aplicación debe dar soporte a la interfaz del manejador de devolución de llamada JAAS para
+    satisfacer las restricciones de seguridad del resto de la aplicación empresarial en contenedores EJB y web.
+</p>
+<h4>
+    <a id="Applet_Container" name="Applet_Container"></a>Contenedor de applets
+</h4>
+<p>
+    Un <a href="#Applets">applet</a> se ejecuta en un contenedor de applets, que da soporte al modelo de programación de
+    applets y da soporte a las API J2SE estándar. Desde un punto de vista práctico, los contenedores de applets se
+    proporcionan como el plug-in de Java para un navegador web.
+</p>
+<h4>
+    <a id="Web_Container" name="Web_Container"></a>Contenedor web
+</h4>
+<p>
+    Los <a href="#Web_Components">componentes web</a> (<a href="#Java_Server_Pages">páginas JSP</a> y <a href="#Java_Servlets">servlets</a>) se ejecutan en un contenedor web que se proporciona como parte de un servidor J2EE
+    o que se proporciona como en un servidor web J2EE autónomo. Un contenedor web da soporte a los siguientes paquetes y
+    las siguientes API J2EE: JDBC, JMS, JAXP, JAX-RPC, JAXR, JAAS, Java Mail, JAF, arquitectura de conector J2EE, JTA, JSR,
+    SAAJ, J2EE Management, Java Servlet y JSP.
+</p>
+<h4>
+    <a id="EJB_Container" name="EJB_Container"></a>Contenedor de EJB
+</h4>
+<p>
+    Los <a href="#Enterprise_JavaBeans">componentes EJB</a> se ejecutan en un contenedor EJB, que se proporciona como parte
+    de un servidor J2EE.
+</p>
+<p>
+    Un contenedor EJB da soporte a las siguientes tecnologías y API J2EE: EJB, JDBC, JMS, JAXP, JAX-RPC, JAXR, JAAS, Java
+    Mail, JAF, JTA, JSR, SAAJ, J2EE Management y arquitectura de conector J2EE.
+</p>
+<p>
+    Las siguientes subsecciones resumen la funcionalidad básica a la que los contenedores EJB dan soporte:
+</p>
+<ul>
+    <li>
+        <a href="#Remote_Communications">Comunicaciones remotas</a>
+    </li>
+    <li>
+        <a href="#Concurrency">Concurrencia</a>
+    </li>
+    <li>
+        <a href="#Naming">Denominación de nombres</a>
+    </li>
+    <li>
+        <a href="#Persistence">Persistencia</a>
+    </li>
+    <li>
+        <a href="#Transaction_Management">Gestión de transacciones</a>
+    </li>
+    <li>
+        <a href="#Security_Management">Gestión de seguridad</a>
+    </li>
+    <li>
+        <a href="#Lifecycle_Management">Gestión de ciclo de vida</a>
+    </li>
+    <li>
+        <a href="#Database_Connection_Pooling">Agrupación de conexiones de base de datos</a>
+    </li>
+    <li>
+        <a href="#Messaging">Mensajería</a>
+    </li>
+</ul>
+<h5>
+    <a id="Remote_Communications" name="Remote_Communications"></a>Comunicaciones remotas
+</h5>
+<p>
+    Los contenedores EJB ocultan a los desarrolladores la complejidad de las comunicaciones remotas mediante la utilización
+    de clases proporcionadas de contenedor (que generan las herramientas de contenedor al compilar el EJB, junto con las
+    clases de apéndice RMI para que las utilicen los clientes) que implementan las interfaces EJB. Estas clases de
+    implementación son objetos Java remotos a los que un cliente accede mediante la RMI de Java. Desde la perspectiva del
+    cliente, el cliente simplemente llama a métodos en la interfaz EJB, sin ninguna consideración en relación con las
+    comunicaciones remotas.
+</p>
+<h5>
+    <a id="Concurrency" name="Concurrency"></a>Concurrencia
+</h5>
+<p>
+    Los contenedores EJB gestionan de forma transparente las solicitudes concurrentes de varios clientes. Los clientes
+    actúan como si tuviesen acceso exclusivo al EJB. Por ejemplo, si dos clientes solicitan la misma entidad EJB, el
+    contenedor la proporciona a cada una de ellas con su propia instancia y gestiona internamente la sincronización sin que
+    lo sepa el cliente.
+</p>
+<h5>
+    <a id="Naming" name="Naming"></a>Denominación de nombres
+</h5>
+<p>
+    El contenedor EJB proporciona un espacio de nombres JNDI para ubicar los EJB desplegados en el contenedor. Los clientes
+    EJB pueden buscar EJB para obtener una interfaz inicial. La interfaz inicial de un EJB proporciona los métodos para
+    encontrar y crear instancias de EJB. En la medida que el contexto de denominación de nombres JNDI esté disponible desde
+    su ubicación, los clientes pueden acceder a los EJB.
+</p>
+<h5>
+    <a id="Persistence" name="Persistence"></a>Persistencia
+</h5>
+<p>
+    Los desarrolladores de EJB tienen la posibilidad de elegir entre dos esquemas para almacenar los datos persistentes del
+    EJB de entidad: CMP (Container Managed Persistence) y BMP (Bean Managed Persistence). CMP delega la responsabilidad de
+    implementar el código de acceso de datos al contenedor, mientras que BMP deja al desarrollador de EJB la
+    responsabilidad de implementar dicho código. CMP permite que el desarrollador de EJB utilice una implementación
+    estándar para acceder al almacenamiento persistente simplemente con la declaración de unos campos gestionados por
+    contenedor en un descriptor de despliegue.
+</p>
+<h5>
+    <a id="Transaction_Management" name="Transaction_Management"></a>Gestión de transacciones
+</h5>
+<p>
+    Una transacción es una secuencia de operaciones indivisibles que finalizan con éxito o con errores, de forma que si
+    cualquier operación de la secuencia finaliza de forma errónea, no se efectúa cambio alguno en el estado del sistema.
+    Por ejemplo, imaginemos que hay que emitir billetes aéreos: se validaría la cuenta de la tarjeta de crédito del
+    cliente, se cargaría en dicha cuenta y, finalmente, se emitiría el billete. Esta secuencia de operaciones debería darse
+    en una única transacción, de forma que si cualquier operación finaliza con errores, no se debería realizar cargo alguno
+    en la cuenta de la tarjeta de crédito del cliente ni tampoco se deberían emitir los billetes.
+</p>
+<p>
+    Los EJB pueden utilizar la <a href="#Bean-Managed_Transaction_Demarcation">demarcación de transacciones gestionada por
+    bean</a> o la <a href="#Container-Managed_Transaction_Demarcation">demarcación de transacciones gestionada por
+    contenedor</a>, que se describen a continuación.
+</p>
+<h6>
+    <a id="Bean-Managed_Transaction_Demarcation" name="Bean-Managed_Transaction_Demarcation"></a>Demarcación de transacción
+    gestionada por bean
+</h6>
+<p>
+    En la demarcación de transacción gestionada por bean, se utiliza una API simple para demarcar los límites de la
+    transacción. Se trata de la JTA (Java Transaction API), que sirve para controlar mediante programación la demarcación
+    de una transacción; por ejemplo, llamando a los métodos <code>begin()</code>, <code>commit()</code> y
+    <code>rollback()</code> de la interfaz UserTransaction de JTA. Corresponde al desarrollador codificar la lógica de
+    retroacción en relación con las condiciones de excepción de la transacción, puesto que el contenedor no las maneja de
+    forma automática.
+</p>
+<p>
+    <b>Nota:</b> los EJB de entidad no pueden utilizar la demarcación de transacción gestionada por bean, sólo pueden
+    utilizar la demarcación de transacción gestionada por contenedor.
+</p>
+<h6>
+    <a id="Container-managed_Transaction_Demarcation" name="Container-managed_Transaction_Demarcation"></a>Demarcación de
+    transacción gestionada por contenedor
+</h6>
+<p>
+    En una demarcación de transacción gestionada por contenedor, no se proporciona el código para iniciar y finalizar las
+    transacciones. En lugar de esto, se proporciona información de atributo de transacción en el descriptor de despliegue
+    EJB para cada método del EJB. El atributo de transacción (uno entre Required, RequiresNew, NotSupported, Supports,
+    Mandatory o Never) indica al contenedor qué ámbito de transacción hay que utilizar para el método. Por ejemplo, si un
+    cliente está en ejecución dentro de una transacción y llama a un método del EJB en que el atributo de transacción está
+    establecido en Required, entonces se llamará al método dentro del ámbito de la transacción existente.
+</p>
+<p>
+    Siempre que sea posible, es mejor utilizar la demarcación de transacción gestionada por contenedor en lugar de la
+    demarcación de transacción gestionada por bean puesto que de esta forma no es necesario añadir, depurar y probar el
+    código de la demarcación de transacción en el componente. En lugar de ello, el comportamiento de cada uno de los
+    métodos EJB de la transacción se especifica en el momento del despliegue, en el descriptor de despliegue. Esto
+    significa que el comportamiento de la transacción se puede cambiar sin la necesidad de un costoso ciclo de
+    actualización-depuración-prueba con el código.
+</p>
+<h6>
+    <a id="Distributed_Transactions" name="Distributed_Transactions"></a>Transacciones distribuidas
+</h6>
+<p>
+    Una transacción distribuida es una transacción que se debe coordinar entre varias bases de datos y/o varias
+    aplicaciones. Esto las distingue de una transacción centralizada, como en el caso de un único servidor de aplicaciones
+    J2EE confirmando transacciones en una única base de datos.
+</p>
+<p>
+    En las transacciones distribuidas se necesita una <i>confirmación en dos fases</i> como, por ejemplo, cuando se está
+    actualizando más de una base de datos. Algunos contenedores EJB (como BEA WebLogic Server 6.0) sólo dan soporte a la
+    confirmación en dos fases mediante el protocolo XA de Open Group. El programador de la aplicación no necesita escribir
+    código alguno para manejar la confirmación en dos fases; el contenedor EJB se encarga de gestionarla.
+</p>
+<h5>
+    <a id="Security_Management" name="Security_Management"></a>Gestión de seguridad
+</h5>
+<p>
+    El contenedor EJB maneja la seguridad del EJB, con la información de seguridad que hay en el descriptor de despliegue.
+    En el descriptor de despliegue, se declara un conjunto de <i>roles</i> y, para cada método EJB, se declaran los roles
+    que están autorizados a llamar al método.
+</p>
+<p>
+    En tiempo de ejecución, se asigna un rol a cada cliente del EJB, y es el contenedor EJB quien gestiona el acceso a los
+    métodos del EJB comprobando que el rol del cliente está autorizado a llamar al método.
+</p>
+<p>
+    Puesto que la información de seguridad se declara en el descriptor de despliegue, el comportamiento de seguridad se
+    puede cambiar sin la necesidad de un costoso ciclo de actualización-depuración-prueba con el código.
+</p>
+<h5>
+    <a id="Lifecycle_Management" name="Lifecycle_Management"></a>Gestión de ciclo de vida
+</h5>
+<p>
+    Los EJB pasan por una serie de estados durante su ciclo de vida en respuesta a solicitudes del cliente. El contenedor
+    EJB es el responsable de gestionar este ciclo de vida.
+</p>
+<p>
+    Al iniciar el contenedor, el contenedor crea una agrupación de instancias de EJB en una agrupación de recursos (para
+    disminuir el tiempo de inicio cuando se necesita un recurso EJB). Cuando un cliente EJB solicita la creación de un EJB,
+    se asigna una instancia de la agrupación. El cliente puede hacer en ese momento solicitudes al EJB. Cuando un cliente
+    EJB solicita la eliminación de un EJB, se devuelve la instancia a la agrupación.
+</p>
+<p>
+    El contenedor notifica a una instancia EJB de distintos sucesos en el ciclo de vida del EJB, mediante un conjunto de
+    métodos de devolución de llamada estándar, como por ejemplo:
+</p>
+<ul>
+    <li>
+        <code>ejbCreate()</code>. El contenedor llama a este método después de crear la instancia EJB.
+    </li>
+    <li>
+        <code>ejbRemove()</code>. El contenedor llama a este método cuando se ha de suprimir la instancia EJB.
+    </li>
+    <li>
+        <code>ejbActivate()</code>. El contenedor llama a este método después de restaurar una instancia EJB desde un
+        estado pasivo.
+    </li>
+    <li>
+        <code>ejbPassivate()</code>. El contenedor llama a este método cuando la instancia EJB va a pasar a un estado
+        pasivo.
+    </li>
+    <li>
+        <code>ejbStore()</code>. El contenedor llama a este método cuando se va a escribir la instancia EJB en una base de
+        datos.
+    </li>
+    <li>
+        <code>ejbLoad()</code>. El contenedor llama a este método después de que se carguen de la base de datos los campos
+        de instancia EJB.
+    </li>
+</ul>
+<p>
+    Es necesario que cada EJB implemente estas devoluciones de llamadas a pesar de que a menudo la implementación EJB del
+    método de devolución de llamada está vacía. Por ejemplo, el contenedor llama al método <code>ejbRemove()</code> del EJB
+    para notificarle que está a punto de ser eliminado (ha habido una solicitud de cliente para que se elimine el EJB). En
+    el método <code>ejbRemove()</code> del EJB, se podrían codificar todas las operaciones necesarias antes de eliminar el
+    EJB como, por ejemplo, las operaciones de liberación de todos los recursos que retiene el EJB.
+</p>
+<p>
+    Los EJB pueden pasar a un estado pasivo, la información de estado se guarda y la instancia de EJB se libera para que la
+    utilice la agrupación de recursos, si así lo necesita el contenedor. El contenedor activará un EJB en un estado pasivo,
+    es decir que se restaurará la información de estado, si se recibe una solicitud de cliente para dicho objeto EJB en
+    concreto.
+</p>
+<h5>
+    <a id="Database_Connection_Pooling" name="Database_Connection_Pooling"></a>Agrupación de conexiones de base de datos
+</h5>
+<p>
+    El proceso de abrir una conexión de base de datos es un proceso lento. Además, las conexiones con las bases de datos
+    pueden ser un recurso escaso debido, por ejemplo, a restricciones de licencia. El contenedor EJB gestiona este gasto
+    mediante una agrupación de conexiones de base de datos, que mantiene abiertas y que se pueden asignar y desasignar a un
+    EJB según sea necesario, dando lugar a unas conexiones eficientes y rápidas.
+</p>
+<p>
+    Para los EJB de entidad que utilicen CMP, las conexiones de base de datos se manejan de forma automática. No es
+    necesario escribir código SQL o de conexión, simplemente se especifica el nombre JNDI del origen de datos JDBC en el
+    descriptor de despliegue EJB y se utilizan herramientas de despliegue específicas para generar las rutinas de conexión
+    en lugar de hacerlo el desarrollador. El contenedor gestiona la agrupación de conexiones de base de datos.
+</p>
+<p>
+    Para los EJB de entidad que utilicen BMP o para los EJB de sesión, es necesario escribir un código de conexión para
+    conectar con un origen de datos JDBC y escribir código SQL para acceder a la base de datos. Aún así, el contenedor
+    gestiona el origen de datos JDBC que en realidad utiliza una agrupación de conexiones de base de datos que el
+    contenedor mantiene.
+</p>
+<h5>
+    <a id="Messaging" name="Messaging"></a>Mensajería
+</h5>
+<p>
+    Los contenedores EJB necesitan proporcionar soporte de mensajería para el intercambio asíncrono de mensajes. Los
+    mensajes entregados por procesos EJB controlados por mensajes pueden utilizar JMS u otros tipos de mensajería. Debido a
+    la relación de JMS con EJB, deben dar soporte a acceso transaccional desde componentes de contenedores EJB y web como,
+    por ejemplo, servlets, páginas JSP y EJB.
+</p>
+<h3>
+    <a id="J2EE_Components" name="J2EE_Components"></a>Componentes J2EE
+</h3>
+<p>
+    La siguiente sección proporciona una breve explicación de todos los tipos de componentes J2EE. Los componentes J2EE
+    incluyen <a href="#Applets">applets</a>, <a href="#Application_Clients">clientes de aplicación</a>, <a href="#Web_Components">componentes web</a> y <a href="#Enterprise_JavaBeans">Enterprise JavaBeans (EJB)</a>. Los
+    componentes J2EE se ejecutan en contenedores J2EE.
+</p>
+<h4>
+    <a id="Applets" name="Applets"></a>Applets
+</h4>
+<p>
+    Los applets son pequeños programas que se pueden enviar junto con una página web y que se ejecutan en un navegador web.
+    También se pueden ejecutar en otros entornos que den soporte al modelo de programación de applets.
+</p>
+<p>
+    Los applets se utilizan fundamentalmente para implementar interfaces de usuario y pueden ampliar en gran medida las
+    posibilidades de las páginas HTML.
+</p>
+<h4>
+    <a id="Application_Clients" name="Application_Clients"></a>Clientes de aplicación
+</h4>
+<p>
+    Los clientes de aplicación son aplicaciones Java. Tienen acceso a los recursos de la capa intermedia y a la capa EIS de
+    J2EE. Normalmente son aplicaciones de escritorio que proporcionan una interfaz de usuario. Se pueden utilizar para
+    implementar un "cliente pesado" tal como se describe en la sección <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/distribution_patterns_5A01CAF5.html" guid="6.137181182978733E-305">Concepto:
+    patrones de distribución</a>.
+</p>
+<h4>
+    <a id="Web_Components" name="Web_Components"></a>Componentes web
+</h4>
+<h5>
+    <a id="Java_Servlets" name="Java_Servlets"></a>Servlets de Java
+</h5>
+<p>
+    La tecnología de servlets de Java permite que un servidor web maneje las solicitudes de un cliente web y que
+    proporcione respuestas con contenido dinámico. Un servlet de Java tiene la posibilidad de interactuar con otros
+    componentes EJB y web para crear este contenido dinámico. El contenido que se genera puede estar en cualquier formato
+    de documento basado en texto, incluidos HTML y XML. Los servlets de Java también se pueden utilizar como puntos finales
+    de servicios web con la ayuda de la API JAX-RPC.
+</p>
+<p>
+    <b>Nota:</b> la utilización de un servlet como un punto final de servicios web es una nueva característica de J2EE 1.4
+    (JAX-RPC 1.1) y, por lo tanto, versiones anteriores no dan soporte a esta funcionalidad.
+</p>
+<p>
+    Consulte la página web <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> para obtener más
+    información sobre los servlets J2EE. Siga los enlaces <b>J2EE &gt; Blueprints</b>.
+</p>
+<h5>
+    <a id="Java_Server_Pages" name="Java_Server_Pages"></a>Páginas JavaServer (JSP)
+</h5>
+<p>
+    La tecnología JSP (JavaServer Pages) se basa en los servlets de Java, pero se basa en texto en lugar de basarse en el
+    código. Una página JSP procesa solicitudes y genera respuestas como un servlet, sin embargo, su lógica está
+    fundamentalmente orientada a la presentación. Una página JSP contiene en su mayoría código HTML estático que define el
+    formato para presentar los datos que se obtienen de otros orígenes como, por ejemplo, EJB o JavaBeans. Un desarrollador
+    de componentes web tiene la posibilidad de crear bibliotecas de códigos personalizados para ampliar las JSP y añadir
+    nuevas posibilidades.
+</p>
+<p>
+    Consulte la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> para obtener más información
+    sobre JSP. Siga los enlaces J2EE &gt; Blueprints.
+</p>
+<h5>
+    <a id="HTML_Pages" name="HTML_Pages"></a>Páginas HTML
+</h5>
+<p>
+    Las páginas HTML sirven para dar soporte a interfaces de usuario. Pueden estar definidas como páginas web estáticas, o
+    bien servlets y páginas web las pueden generar. La especificación J2EE indica que los clientes web J2EE deben dar
+    soporte a la visualización de páginas HTML.
+</p>
+<h5>
+    <a id="JavaBeans" name="JavaBeans"></a>JavaBeans
+</h5>
+<p>
+    La API de JavaBeans define una arquitectura para crear componentes reutilizables simples. Estos componentes se pueden
+    editar y ensamblar mediante la utilización de herramientas de construcción de aplicaciones. Para implementar JavaBeans
+    se utiliza código Java normal, de forma que la implementación sigue siendo legible para los programadores, que podrían
+    querer utilizar estos componentes, así como a herramientas.
+</p>
+<p>
+    JavaBeans no es una tecnología J2EE, sin embargo, otras tecnologías de J2EE la utilizan. Por ejemplo, los EJB pueden
+    utilizar JavaBeans como objetos de valor. Consulte la sección denominada <a href="#Comparing_JavaBeans_and_EJBs"><i>Comparación entre JavaBeans y EJB</i></a> para conocer las diferencias entre
+    JavaBeans y Enterprise JavaBeans.
+</p>
+<p>
+    Consulte la sección <a class="elementlinkwithusertext" href="./../../../tech.j2ee/guidances/concepts/javabean_D488CF3B.html" guid="7.536447688812142E-306">Concepto:
+    JavaBeans</a> para obtener más información sobre JavaBeans.
+</p>
+<h4>
+    <a id="Enterprise_JavaBeans" name="Enterprise_JavaBeans"></a>Enterprise JavaBeans
+</h4>
+<p>
+    La especificación de Enterprise JavaBeans estipula una arquitectura para el desarrollo y despliegue de aplicaciones
+    empresariales distribuidas transaccionales y basadas en componentes.
+</p>
+<p>
+    Los componentes que define la especificación EJB se denominan Enterprise JavaBeans (EJB). Los EJB son componentes Java
+    del lado del servidor en que se implementan las reglas empresariales de la aplicación.
+</p>
+<p>
+    Los EJB se despliegan, y ejecutan, en un entorno denominado contenedor EJB, que se ha descrito con anterioridad en la
+    sección <i><a href="#EJB_Container">Contenedor de EJB</a></i>, que proporciona servicios como los de <a href="#Transaction_Management">gestión de transacciones</a>, <a href="#Database_Connection_Pooling">conectividad con
+    bases de datos</a> y <a href="#Security_Management">seguridad</a>. Ocultando estas complejidades, la arquitectura EJB
+    permite que los desarrolladores de componentes se centren en la lógica empresarial.
+</p>
+<p>
+    Un Enterprise JavaBean (EJB) es el resultado de la colaboración de interfaces de Java, una clase de implementación EJB
+    y un descriptor de despliegue XML. Las interfaces EJB y la clase de implementación deben cumplir las reglas que la
+    especificación EJB define, como las que obligan a implementar determinadas interfaces y proporcionar determinados
+    métodos de devolución de llamadas.
+</p>
+<p>
+    Las interfaces EJB incluyen interfaces iniciales que proporcionan métodos para buscar y crear instancias de EJB, así
+    como interfaces de componentes que proporcionan los métodos empresariales de una instancia EJB concreta. Se pueden
+    tratar como interfaces remotas, es decir, que se pueden invocar a lo largo de la red, o tratarse como interfaces
+    locales, lo que significa que el interlocutor debe estar en el mismo proceso (o de forma más precisa en la misma
+    máquina virtual Java). Las interfaces EJB las implementan clases de contenedor EJB que delegan métodos a la clase de
+    implementación EJB. Una excepción es un método de búsqueda de EJB de entidad gestionado por contenedor que una clase de
+    contenedor maneja.
+</p>
+<p>
+    Hay tres tipos de EJB: <a href="#Session_Beans">beans de sesión</a>, <a href="#Entity_Beans">beans de entidad</a> y <a href="#Message-Driven_Beans">beans controlados por mensajes</a>.
+</p>
+<p>
+    Consulte la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> para obtener más información
+    sobre EJB. Siga los enlaces J2EE &gt; Blueprints.
+</p>
+<h5>
+    <a id="Session_Beans" name="Session_Beans"></a>Beans de sesión
+</h5>
+<p>
+    Un componente de bean de sesión proporciona servicios que implementan lógica empresarial específica del cliente. Un
+    único cliente puede acceder a cada instancia de un bean de sesión mediante interfaces locales o remotas. Los beans de
+    sesión tienen la posibilidad de guardar datos en una base de datos, pero normalmente utilizan beans de entidad que
+    representan objetos empresariales para guardar datos. Las instancias de bean de sesión tienen la capacidad de mantener
+    un estado conversacional transitorio.
+</p>
+<p>
+    Un bean de sesión podría tener un método denominado <code>getAllCustomers()</code> que devuelve una recopilación de
+    todos los clientes en la base de datos. Este bean podría obtener su información del bean de entidad Cliente y entregar
+    los resultados al cliente.
+</p>
+<p>
+    Los beans de sesión sin estado se pueden utilizar como puntos finales de servicio tal como se define en la
+    especificación EJB y JSR.
+</p>
+<p>
+    <b>Nota:</b> la utilización de beans de sesión como servicios web es una nueva característica de J2EE 1.4 (JSR 109 y
+    EJB 2.1) y, por lo tanto, versiones anteriores no dan soporte a esta funcionalidad.
+</p>
+<p>
+    Consulte la versión 2.1 de la especificación de Enterprise JavaBeans en la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> para obtener más información sobre los beans de sesión. Siga los enlaces
+    <b>Products & Technologies &gt; J2EE &gt; Enterprise JavaBeans</b>.
+</p>
+<h5>
+    <a id="Entity_Beans" name="Entity_Beans"></a>Beans de entidad
+</h5>
+<p>
+    Un componente de bean de entidad proporciona servicios que implementan lógica específica del objeto empresarial. Varios
+    clientes pueden acceder a una instancia de un bean de entidad de forma concurrente mediante interfaces locales o
+    remotas. Los beans de entidad guardan datos de objetos empresariales en las bases de datos de forma que los datos de
+    persistencia pueden sobrevivir a cuelgues del cliente o el contenedor.
+</p>
+<p>
+    Un bean de entidad podría representar un cliente, que se podría almacenar como una fila en la tabla de clientes de una
+    base de datos relacional. Es el desarrollador de EJB quien decide el método de persistencia, en este caso una base de
+    datos relacional.
+</p>
+<p>
+    Hay dos tipos de persistencia para un bean de entidad: persistencia gestionada por bean (BMP) y persistencia gestionada
+    por contenedor (CMP). Los beans de entidad BMP deben implementar el código de acceso a los datos, mientras que en los
+    beans de entidad CMP es el contenedor quien tiene implementada esta capacidad. Las implementaciones de contenedor CMP
+    normalmente se proporcionan para persistencia en bases de datos relacionales, a pesar de que otros tipos de
+    persistencia son también posibles (como por ejemplo, persistencia basada en archivos, etc.).
+</p>
+<p>
+    Consulte la versión 2.1 de la especificación de Enterprise JavaBeans en la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> para obtener más información sobre los beans de entidad. Siga los enlaces
+    <b>Products & Technologies &gt; J2EE &gt; Enterprise JavaBeans</b>.
+</p>
+<h5>
+    <a id="Message-Driven_Beans" name="Message-Driven_Beans"></a>Bean controlado por mensajes
+</h5>
+<p>
+    Un componente de bean controlado por mensajes proporciona un servicio que implementa una lógica empresarial específica
+    del proceso de mensajes. Sólo el contenedor puede llamar a este servicio, el cliente no puede llamar directamente a
+    este servicio mediante interfaces locales o remotas. Por ello, cuando un mensaje llega a un destino o punto final al
+    que el bean da servicio, el contenedor llama a una instancia de bean controlado por mensajes asignado como
+    MessageListener para el destino. Las instancias de bean controladas por mensajes no mantienen un estado conversacional,
+    sin embargo, pueden mantener variables de instancia con referencias a recursos (por ejemplo, conexiones con bases de
+    datos entre llamadas de métodos).
+</p>
+<p>
+    <b>Nota:</b> las versiones anteriores a EJB 2.0 no dan soporte a beans controlados por mensajes. El soporte a tipos de
+    mensajería distintos de JMS es una nueva característica de la especificación EJB 2.1 y, por lo tanto, versiones
+    anteriores no les dan soporte.
+</p>
+<p>
+    Consulte la versión 2.0 de la especificación de Enterprise JavaBeans en la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> para obtener más información sobre los beans controlados por mensajes. Siga
+    los enlaces <b>Products & Technologies &gt; J2EE &gt; Enterprise JavaBeans</b>.
+</p>
+<h5>
+    <a id="Comparing_JavaBeans_and_EJBs" name="Comparing_JavaBeans_and_EJBs"></a>Comparación entre JavaBeans y EJB
+</h5>
+<p>
+    A pesar de que tienen un nombre similar, los EJB son mucho más complejos que los JavaBeans normales. Ambos definen
+    arquitecturas para componentes reutilizables, sin embargo, los EJB añaden el soporte necesario para la creación de
+    servicios distribuidos y para varios usuarios. Ambos tipos de componentes se pueden ensamblar con herramientas de
+    construcción de aplicaciones, sin embargo, los EJB necesitan desplegarse en un contenedor EJB para poder ejecutarse.
+</p>
+<h3>
+    <a id="Services_(APIs)_for_J2EE_Components" name="Services_(APIs)_for_J2EE_Components"></a>Servicios (API) para
+    componentes J2EE
+</h3>
+<p>
+    Los contenedores J2EE dan soporte a todas las API estándar de J2SE, así como a un subconjunto de las API de J2EE según
+    sea el tipo de contenedor. Los componentes que haya dentro de un contenedor pueden acceder a este subconjunto que está
+    disponible. En la tabla que aparece a continuación se muestra una breve descripción de cada API y se muestra una lista
+    de contenedores J2EE donde están disponibles.
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th width="12%">
+                    <div align="left">
+                        Nombre
+                    </div>
+                </th>
+                <th valign="top" width="67%">
+                    <div align="left">
+                        Descripción
+                    </div>
+                </th>
+                <th valign="top" width="21%">
+                    <div align="left">
+                        Contenedores J2EE donde<br />
+                         la API está disponible
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td valign="top" width="12%" height="128">
+                    <p>
+                        EJB 2.1
+                    </p>
+                </td>
+                <td valign="top" width="67%" height="128">
+                    <p>
+                        La especificación EJB define un modelo de componentes para EJB y para componentes de la capa
+                        empresarial que automáticamente da soporte a servicios como los de las comunicaciones remotas, la
+                        gestión de transacciones, la seguridad y la persistencia.
+                    </p>
+                    <p>
+                        Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga los
+                        enlaces <b>Products & Technologies &gt; J2EE &gt; Enterprise JavaBeans</b> para obtener más
+                        información sobre EJB.
+                    </p>
+                </td>
+                <td valign="top" width="21%" height="128">
+                    <ul class="noindent">
+                        <li>
+                            EJB<br />
+                        </li>
+                        <li>
+                            Cliente de aplicación*
+                        </li>
+                        <li>
+                            Web*
+                        </li>
+                    </ul>
+                    <p>
+                        * Sólo API de cliente
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        JAAS
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        JAAS (Java Authentication and Authorization Service) proporciona servicios para la autenticación y
+                        la autorización de usuarios con el fin de asegurarse que tienen permisos para realizar una acción.
+                    </p>
+                    <p>
+                        Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga los
+                        enlaces <b>Products & Technologies &gt; J2SE &gt; Core Java &gt; Java Authentication and
+                        Authorization Service (JAAS)</b> para obtener más información sobre JAAS.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                    <ul class="noindent">
+                        <li>
+                            Cliente de aplicación<br />
+                        </li>
+                        <li>
+                            Web
+                        </li>
+                        <li>
+                            EJB
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%" height="129">
+                    <p>
+                        JAF 1.0
+                    </p>
+                </td>
+                <td valign="top" width="67%" height="129">
+                    <p>
+                        JAF (JavaBeans Activation Framework) proporciona servicios para identificar datos y crear
+                        instancias de JavaBeans para manipular dichos datos.
+                    </p>
+                    <p>
+                        Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga los
+                        enlaces <b>Products & Technologies &gt; J2SE &gt; Desktop Java &gt; JavaBeans &gt; JavaBeans
+                        Activation Framework</b> para obtener más información sobre JAF.
+                    </p>
+                </td>
+                <td valign="top" width="21%" height="129">
+                    <ul class="noindent">
+                        <li>
+                            Cliente de aplicación
+                        </li>
+                        <li>
+                            Web
+                        </li>
+                        <li>
+                            EJB
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        JAXP 1.2
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        JAXP (Java API for XML Processing) proporciona una interfaz abstracta para el proceso de documentos
+                        XML que se puede utilizar con transformadores y analizadores compatibles que utilicen DOM SAX o
+                        XSLT.
+                    </p>
+                    <p>
+                        Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga los
+                        enlaces <b>Products & Technologies &gt; J2EE &gt; Java API for XML Processing (JAXP)</b> para
+                        obtener más información sobre JAXP.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                    <ul class="noindent">
+                        <li>
+                            Cliente de aplicación
+                        </li>
+                        <li>
+                            Web
+                        </li>
+                        <li>
+                            EJB
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        JAX-RPC 1.1
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        La especificación JAX-RPC define API de cliente para acceder a servicios web además de técnicas
+                        para implementar puntos finales de servicio web.
+                    </p>
+                    <p>
+                        Visite la página <a href="http://java.sun.com/webservices/jaxrpc/index.jsp" target="_blank">JAX-RPC</a>/font&gt; para obtener más información sobre JAX-RPC.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                    <ul class="noindent">
+                        <li>
+                            Cliente de aplicación
+                        </li>
+                        <li>
+                            Web
+                        </li>
+                        <li>
+                            EJB
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%" height="129">
+                    <p>
+                        Servicios web para J2EE 1.1
+                    </p>
+                </td>
+                <td valign="top" width="67%" height="129">
+                    <p>
+                        La especificación de servicios web para J2EE (JSR-109) define las funciones a las cuales un
+                        servidor de aplicaciones J2EE debe dar soporte para el despliegue de puntos finales de servicio
+                        web.<br />
+                    </p>
+                    <p>
+                        Visite la página <a href="http://jcp.org/aboutJava/communityprocess/final/jsr109/index.html" target="_blank">http://jcp.org/aboutJava/communityprocess/final/jsr109/index.html</a> para obtener
+                        más información sobre los servicios web para J2EE.
+                    </p>
+                </td>
+                <td valign="top" width="21%" height="129">
+                    <ul class="noindent">
+                        <li>
+                            Cliente de aplicación
+                        </li>
+                        <li>
+                            Web
+                        </li>
+                        <li>
+                            EJB
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        SAAJ 1.2
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        La API SAAJ proporciona la capacidad de manipular mensajes SOAP.
+                    </p>
+                    <p>
+                        Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga los
+                        enlaces <b>Products & Technologies &gt; J2EE &gt; SOAP with Attachments API for Java (SAAJ)</b>
+                        para obtener más información sobre SAAJ.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                    <ul class="noindent">
+                        <li>
+                            Cliente de aplicación
+                        </li>
+                        <li>
+                            Web
+                        </li>
+                        <li>
+                            EJB
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        JAXR 1.0
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        La especificación JAXR define API para acceso del cliente a registros basados en XML como, por
+                        ejemplo, registros WebXML y registros UDDI.
+                    </p>
+                    <p>
+                        Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga los
+                        enlaces <b>Products & Technologies &gt; J2EE &gt; Java API for XML Registries (JAXR)</b> para
+                        obtener más información sobre JAXR.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                    <ul class="noindent">
+                        <li>
+                            Cliente de aplicación
+                        </li>
+                        <li>
+                            Web
+                        </li>
+                        <li>
+                            EJB
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        JavaMail 1.3
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        La API JavaMail proporciona una infraestructura que se puede ampliar para construir aplicaciones de
+                        correo basadas en Java.
+                    </p>
+                    <p>
+                        Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga los
+                        enlaces <b>Products & Technologies &gt; J2EE &gt; JavaMail</b> para obtener más información
+                        sobre JavaMail.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                    <ul class="noindent">
+                        <li>
+                            Cliente de aplicación
+                        </li>
+                        <li>
+                            Web
+                        </li>
+                        <li>
+                            EJB
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        JDBC 3.0
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        JDBC (Java Database Connectivity) es una API para acceder a orígenes de datos tabulares como, por
+                        ejemplo, bases de datos SQL, hojas de cálculo y archivos sin formato.
+                    </p>
+                    <p>
+                        Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga los
+                        enlaces <b>Products & Technologies &gt; J2EE &gt; JDBC</b> para obtener más información sobre
+                        JDBC.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                    <ul class="noindent">
+                        <li>
+                            Cliente de aplicación
+                        </li>
+                        <li>
+                            Web
+                        </li>
+                        <li>
+                            EJB
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        JMS 1.1
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        JMS (Java Message Service) proporciona servicios de mensajería asíncrona para transferir datos y
+                        notificación de sucesos. Con JMS, es posible utilizar EJB controlados por mensajes para procesar de
+                        forma asíncrona los mensajes que se entregan a colas y temas JMS.
+                    </p>
+                    <p>
+                        Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga los
+                        enlaces <b>Products & Technologies &gt; J2EE &gt; Java Message Service</b> para obtener más
+                        información sobre JMS.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                    <ul class="noindent">
+                        <li>
+                            Cliente de aplicación
+                        </li>
+                        <li>
+                            Web
+                        </li>
+                        <li>
+                            EJB
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        JNDI
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        JNDI (Java Naming and Directory Interface Specification) proporciona servicios de directorio y
+                        denominación de nombres para poder registrar y realizar búsquedas de recursos y componentes
+                        distribuidos. Los clientes sólo necesitan saber el nombre JNDI registrado del componente o recurso
+                        y no necesitan saber su ubicación real en la red.
+                    </p>
+                    <p>
+                        Ejemplo: los EJB se registran en el directorio de la empresa en tiempo de despliegue, mediante el
+                        campo <code>ejb-name</code> del descriptor de despliegue. Los clientes J2EE buscan un EJB
+                        utilizando la búsqueda JNDI. Todo lo que necesitan saber los clientes es el nombre con el que se
+                        registró el EJB en el directorio. La búsqueda JNDI devuelve una referencia al objeto inicial del
+                        EJB.
+                    </p>
+                    <p>
+                        Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga los
+                        enlaces <b>Products & Technologies &gt; J2SE &gt; Core Java &gt; Java Naming and Directory
+                        Interface (JNDI)</b> para obtener más información sobre JNDI.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                    <ul class="noindent">
+                        <li>
+                            Cliente de aplicación
+                        </li>
+                        <li>
+                            Web
+                        </li>
+                        <li>
+                            EJB
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        JTA 1.0
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        JTA (Java Transaction API) define interfaces para la gestión de servicios de transacciones
+                        distribuidas entre el gestor de transacciones, el gestor de recursos, el servidor de aplicaciones y
+                        la aplicación.
+                    </p>
+                    <p>
+                        Visite la página <b><a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga
+                        los enlaces</b> Products & Technologies &gt; J2EE &gt; Transactions para obtener más
+                        información sobre JTA.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                    <ul class="noindent">
+                        <li>
+                            Web
+                        </li>
+                        <li>
+                            EJB
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        J2EE Connector 1.5
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        La SPI (Service Provider Interface) de la arquitectura de conector J2EE define un estándar para
+                        conectar recursos de un EIS con un contenedor J2EE. Un adaptador de recursos específicos de un EIS
+                        (que un proveedor de un EIS proporciona) se conecta con el contenedor J2EE, ampliando las
+                        posibilidades del conector de forma que proporcione un soporte seguro y transaccional para dicho
+                        EIS. Los componentes en un contenedor pueden entonces acceder a un EIS mediante la SPI de
+                        arquitectura de conector J2EE.
+                    </p>
+                    <p>
+                        Visite la página <b><a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga
+                        los enlaces</b> Products & Technologies &gt; J2EE &gt; J2EE Connector Architecture.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                    <ul class="noindent">
+                        <li>
+                            Web
+                        </li>
+                        <li>
+                            EJB
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        JSP 2.0
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        La tecnología JSP (JavaServer Pages) proporciona a los desarrolladores web la posibilidad de crear
+                        y mantener páginas web dinámicas. Las páginas JSP son páginas basadas en texto y utilizan códigos
+                        similares a los de XML para llevar a cabo la lógica empresarial y para generar contenido
+                        personalizado. La tecnología JSP permite delegar la lógica empresarial a otros componentes de forma
+                        que sólo es necesario incrustar la lógica de presentación en las páginas JSP.
+                    </p>
+                    <p>
+                        Visite <b><a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga los
+                        enlaces</b> Products & Technologies &gt; J2EE &gt; <b>JavaServer Pages</b> para obtener más
+                        información sobre JSP.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                    <p>
+                        Web
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        Servlet 2.4
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        Los servlets de Java amplían las posibilidades del servidor web para ayudar en la creación de
+                        aplicaciones basadas en la web. Los servlets a menudo se utilizan en aplicaciones web interactivas
+                        en las que el servidor web responde a solicitudes del usuario con contenido generado de forma
+                        dinámica que se obtiene a partir de sistemas empresariales que ya existen.
+                    </p>
+                    <p>
+                        Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga los
+                        enlaces <b>Products & Technologies &gt; J2EE</b> &gt; <b>Java Servlet</b> para obtener más
+                        información sobre los servlets de Java.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                    <p>
+                        Web
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        RMI-IIOP
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        RMI-IIOP (Remote Method Invocation technology run over Internet Inter-Orb Protocol) permite que los
+                        componentes Java se comuniquen con componentes CORBA existentes que se han escrito en otros
+                        lenguajes como, por ejemplo, C++ o Smalltalk.
+                    </p>
+                    <p>
+                        Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga los
+                        enlaces <b>Products and APIs &gt; RMI-IIOP</b> para obtener más información sobre RMI-IIOP.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                    <ul class="noindent">
+                        <li>
+                            Cliente de aplicación
+                        </li>
+                        <li>
+                            Web
+                        </li>
+                        <li>
+                            EJB
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        J2EE Management 1.0
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        La API J2EE Management proporciona a las API herramientas de gestión para realizar consultas a un
+                        servidor de aplicaciones J2EE con el fin de determinar su estado actual, las aplicaciones
+                        desplegadas, etc.
+                    </p>
+                    <p>
+                        Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga los
+                        enlaces <b>Products & Technologies &gt; J2EE &gt; J2EE Management Specification</b> para
+                        obtener más información sobre J2EE Management.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                    <ul class="noindent">
+                        <li>
+                            Cliente de aplicación
+                        </li>
+                        <li>
+                            Web
+                        </li>
+                        <li>
+                            EJB
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        JMX 1.2
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        La API JMX la utiliza la API J2EE Management para proporcionar parte del soporte necesario para la
+                        gestión de un producto J2EE.
+                    </p>
+                    <p>
+                        Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga los
+                        enlaces <b>Products & Technologies &gt; J2SE &gt; Core Java &gt; Java Management Extensions
+                        (JMX)</b> para obtener más información sobre JMX.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                    <ul class="noindent">
+                        <li>
+                            Cliente de aplicación
+                        </li>
+                        <li>
+                            Web
+                        </li>
+                        <li>
+                            EJB
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        J2EE Deployment 1.1
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        La API J2EE Deployment define las interfaces entre el entorno de tiempo de ejecución de una
+                        herramienta de despliegue y los componentes de plug-in que proporciona un servidor de aplicaciones
+                        J2EE.
+                    </p>
+                    <p>
+                        Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga los
+                        enlaces <b>Products & Technologies &gt; J2EE &gt; J2EE Deployment Specification</b> para
+                        obtener más información sobre J2EE Deployment.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="12%">
+                    <p>
+                        JACC 1.0
+                    </p>
+                </td>
+                <td valign="top" width="67%">
+                    <p>
+                        La especificación JACC define un contrato entre un servidor de aplicaciones J2EE y un proveedor de
+                        políticas de autorización.
+                    </p>
+                    <p>
+                        Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> y siga los
+                        enlaces <b>Products & Technologies &gt; J2EE &gt; Java Authorization Contract for
+                        Containers</b> para obtener más información sobre JACC.
+                    </p>
+                </td>
+                <td valign="top" width="21%">
+                    <ul class="noindent">
+                        <li>
+                            Cliente de aplicación
+                        </li>
+                        <li>
+                            Web
+                        </li>
+                        <li>
+                            EJB
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h3>
+    <a id="Assembly_and_Deployment" name="Assembly_and_Deployment"></a>Ensamblaje y despliegue
+</h3>
+<p>
+    Las aplicaciones J2EE están compuestas del descriptor de despliegue de aplicación (application.xml) y uno o más módulos
+    J2EE que forman la aplicación. Los módulos son componentes portables y reutilizables. Las aplicaciones J2EE se
+    empaquetan en archivadores .ear.
+</p>
+<h4>
+    <a id="Deployment_Descriptors" name="Deployment_Descriptors"></a>Descriptores de despliegue
+</h4>
+<p>
+    Los descriptores de despliegue son archivos XML que se utilizan en aplicaciones J2EE y módulos J2EE. Proporcionan
+    información de configuración que el servidor J2EE lee en el momento del despliegue. Esta información de configuración
+    permite que el servidor personalice mediante declaraciones el módulo o la aplicación J2EE sin tener que cambiar las
+    clases o el código fuente.
+</p>
+<p>
+    Para cada tipo de módulo o aplicación J2EE hay un tipo de descriptor de despliegue genérico. Los descriptores de
+    despliegue genéricos como, por ejemplo, el archivo ejb-jar.xml de un módulo EJB, definen información que se aplica al
+    EJB independientemente del servidor en el que esté desplegado. Los descriptores de despliegue específicos del servidor
+    ofrecen información que sólo es de utilidad a un determinado servidor. Los descriptores de despliegue específicos de
+    servidor tienen nombres que reflejan el servidor al que están dirigidos.
+</p>
+<h4>
+    <a id="J2EE_Modules" name="J2EE_Modules"></a>Módulos J2EE
+</h4>
+<p>
+    Un módulo J2EE está formado por un descriptor de despliegue para el módulo y una serie de elementos que forman el
+    módulo, entre los que se incluyen:
+</p>
+<ul>
+    <li>
+        Elementos no Java que se despliegan en el servidor web (páginas JSP, archivos de imágenes, páginas HTML estáticas),
+        en otras palabras, elementos de directorios virtuales.
+    </li>
+    <li>
+        Elementos Java desplegados en un servidor web (servlets, JavaBeans, clases Java).
+    </li>
+    <li>
+        Elementos desplegados en un servidor EJB (EJB y clases Java de soporte).
+    </li>
+</ul>
+<p>
+    Hay tres tipos de módulos J2EE:
+</p>
+<ul>
+    <li>
+        <a href="#J2EE_Application_Client">Cliente de aplicación J2EE</a>
+    </li>
+    <li>
+        <a href="#Web_Component">Componente web</a>
+    </li>
+    <li>
+        <a href="#Enterprise_JavaBean">Enterprise JavaBean</a>
+    </li>
+</ul>
+<h5>
+    <a id="J2EE_Application_Client" name="J2EE_Application_Client"></a>Cliente de aplicación J2EE
+</h5>
+<p>
+    Los módulos de cliente de aplicación J2EE se empaquetan en archivadores .jar y pueden estar formados por:
+</p>
+<ul>
+    <li>
+        Descriptor de despliegue application-client.xml.
+    </li>
+    <li>
+        Archivos .class de implementación de cliente de aplicación.
+    </li>
+</ul>
+<h5>
+    <a id="Web_Component" name="Web_Component"></a>Componente web
+</h5>
+<p>
+    Los módulos de componentes web se empaquetan en archivadores .war y pueden estar formados por:
+</p>
+<ul>
+    <li>
+        Descriptores de despliegue específicos del servidor y el descriptor de despliegue web.xml.
+    </li>
+    <li>
+        Páginas JSP.
+    </li>
+    <li>
+        Páginas HTML.
+    </li>
+    <li>
+        Imágenes (por ejemplo, .gif y .jpg).
+    </li>
+    <li>
+        Archivos de clase de servlet.
+    </li>
+</ul>
+<p>
+    Si el módulo es un servicio web, el archivador .war contiene:
+</p>
+<ul>
+    <li>
+        Descriptor de despliegue webservices.xml.
+    </li>
+    <li>
+        Archivos de clase de servlet.
+    </li>
+    <li>
+        Archivos WSDL.
+    </li>
+</ul>
+<h5>
+    <a id="Enterprise_JavaBean" name="Enterprise_JavaBean"></a>Enterprise JavaBean
+</h5>
+<p>
+    Un único archivador JAR de Enterprise JavaBean puede contener una serie de EJB, además, su información de despliegue se
+    almacena en un conjunto de descriptores de despliegue (el descriptor de despliegue ejb-jar.xml más cualquier otro
+    específico al servidor).
+</p>
+<p>
+    Un módulo Enterprise JavaBean estándar está formado por:
+</p>
+<ul>
+    <li>
+        Descriptor de despliegue ejb-jar.xml y descriptores de despliegue específicos del servidor.
+    </li>
+    <li>
+        Archivos de clase de implementación EJB.
+    </li>
+</ul>
+<p>
+    Un módulo de Enterprise JavaBeans de servicio web está formado por:
+</p>
+<ul>
+    <li>
+        Descriptores de despliegue webservices.xml.
+    </li>
+    <li>
+        Archivos de clase de implementación EJB.
+    </li>
+</ul>
+<p>
+    Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> para obtener más información
+    sobre el empaquetado y despliegue J2EE. Siga los enlaces <b>Docs & Training &gt; J2EE Platform, Enterprise Edition
+    &gt; Java Blueprints Program</b>.
+</p>
+<h3>
+    <a id="J2EE_Application_Development" name="J2EE_Application_Development"></a>Desarrollo de aplicaciones J2EE
+</h3>
+<p>
+    En el proceso de desarrollo de aplicaciones J2EE se definen varias etapas y roles. En las siguientes secciones se
+    explica cómo definir los <a href="#J2EE_Application_Development_Roles">roles de desarrollo</a> que la especificación
+    J2EE proporciona y las <a href="#J2EE_Application_Development_Stages">etapas de desarrollo</a> en la que estos roles
+    participan.
+</p>
+<h4>
+    <a id="J2EE_Application_Development_Roles" name="J2EE_Application_Development_Roles"></a>Roles en el desarrollo de
+    aplicaciones J2EE
+</h4>
+<p>
+    Los roles de desarrollo de aplicaciones se resumen en esta tabla.
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th valign="top" align="left">
+                    Nombre de rol
+                </th>
+                <th valign="top" align="left">
+                    Descripción
+                </th>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <p>
+                        Proveedor de productos J2EE
+                    </p>
+                </td>
+                <td valign="top">
+                    <p>
+                        Un proveedor de productos J2EE es el suministrador de una implementación de la plataforma J2EE, que
+                        también se denomina como un producto J2EE. Entre los proveedores de productos J2EE se incluyen BEA,
+                        IBM y Sun. Estas organizaciones normalmente se orientan en los aspectos que mejor dominan a la hora
+                        de proporcionar una implementación de la plataforma J2EE. Por ejemplo, la implementación BEA se
+                        basa en Tuxedo, su supervisor de proceso de transacciones, de gran éxito. Un proveedor de productos
+                        J2EE también proporciona las herramientas necesarias para dar soporte a la gestión y despliegue de
+                        aplicaciones.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <p>
+                        <a id="Application_Component_Provider" name="Application_Component_Provider"></a>Proveedor de
+                        componentes de aplicación
+                    </p>
+                </td>
+                <td valign="top">
+                    <p>
+                        Un proveedor de componentes de aplicación realmente abarca más de un rol, como por ejemplo el
+                        desarrollador EJB y el diseñador de documentos HTML. Estos roles son los responsables de producir
+                        los componentes de aplicación J2EE mediante las herramientas proporcionadas.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <p>
+                        <a id="Application_Assembler" name="Application_Assembler"></a>Ensamblador de aplicaciones
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        El ensamblador de aplicaciones crea una aplicación J2EE a partir de componentes de aplicación J2EE
+                        mediante las herramientas proporcionadas. La aplicación J2EE se entrega en forma de archivo EAR
+                        (Enterprise Archive). El ensamblador de aplicaciones también describe todas las dependencias
+                        externas de la aplicación J2EE. El desplegador resuelve estas dependencias en el momento de
+                        desplegar realmente la aplicación J2EE.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <p>
+                        <a id="Deployer" name="Deployer"></a>Desplegador
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        El desplegador es el responsable de desplegar una aplicación J2EE y los componentes de aplicación
+                        que la forman en el entorno operativo. La primera etapa en un despliegue corresponde a la
+                        instalación de los distintos componentes de aplicación con los contenedores J2EE que correspondan.
+                        En la segunda etapa del despliegue se configuran todas las dependencias externas que se han
+                        declarado de forma que se puedan resolver. Por ejemplo, los roles de seguridad que se hayan
+                        definido se correlacionan con cuentas y grupos de usuarios en el entorno operativo. En la tercera
+                        etapa del despliegue se ejecuta la nueva aplicación de forma que esté preparada para recibir
+                        solicitudes.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <p>
+                        Administrador del sistema
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        El administrador del sistema es el responsable de la infraestructura de tiempo de ejecución, que
+                        incluye todas las aplicaciones J2EE desplegadas. Este rol utiliza las herramientas apropiadas que
+                        proporcione el proveedor de productos J2EE para lograr este objetivo.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <p>
+                        Proveedor de herramientas
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        Un proveedor de herramientas proporciona las herramientas para dar soporte al desarrollo y
+                        empaquetado de componentes de aplicación. Estas herramientas a menudo corresponden a los distintos
+                        tipos de componentes de aplicación creados, e incluyen entornos de desarrollo integrado (IDE) como,
+                        por ejemplo, IBM VisualAge para Java y Borland JBuilder.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" height="70">
+                    <p>
+                        Proveedor de componentes de sistema
+                    </p>
+                </td>
+                <td height="70">
+                    <p>
+                        Un proveedor de componentes de sistema proporciona distintos componentes a nivel de sistema como,
+                        por ejemplo, adaptadores de recursos o proveedores de políticas de autorización.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Estos roles no son exclusivos entre sí y una única persona puede asumir más de uno, especialmente en equipos de
+    desarrollo pequeños o en una situación de creación de prototipos.
+</p>
+<h4>
+    <a id="J2EE_Application_Development_Stages" name="J2EE_Application_Development_Stages"></a>Etapas en el desarrollo de
+    aplicaciones J2EE
+</h4>
+<p>
+    Esta sección describe las distintas etapas del desarrollo de una aplicación J2EE, tal como se estipula en la
+    especificación J2EE. Las etapas del desarrollo son:
+</p>
+<ul>
+    <li>
+        Desarrollo de componentes
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <ul type="circle">
+            <li>
+                <a href="#J2EE_Application_Client_Creation">Creación de cliente de aplicación J2EE</a>
+            </li>
+            <li>
+                <a href="#Web_Component_Creation">Creación de componentes web</a>
+            </li>
+            <li>
+                <a href="#Enterprise_JavaBean_Creation">Creación de Enterprise JavaBeans</a>
+            </li>
+            <li>
+                <a href="#J2EE_Application_Assembly">Ensamblaje de aplicación J2EE</a>
+            </li>
+            <li>
+                <a href="#J2EE_Application_Deployment">Despliegue de aplicación J2EE</a>
+            </li>
+        </ul>
+        <p>
+            Una aplicación J2EE debe estar formada al menos por un módulo J2EE, de forma que al menos una de las etapas de
+            desarrollo de componentes es necesaria. Las dos etapas finales son siempre necesarias puesto que todas las
+            aplicaciones J2EE se deben ensamblar y desplegar.
+        </p>
+        <p>
+            En la tabla que aparece a continuación se resumen las etapas de desarrollo con las aplicaciones J2EE.
+        </p>
+        <div align="center">
+            <table             style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"              cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+                <tbody>
+                    <tr>
+                        <th valign="top" align="left">
+                            Etapa de desarrollo de J2EE
+                        </th>
+                        <th valign="top" align="left">
+                            Tareas
+                        </th>
+                        <th valign="top" align="left">
+                            Rol de J2EE que las realiza
+                        </th>
+                        <th valign="top" align="left">
+                            Resultado (objeto)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <p>
+                                <a id="J2EE_Application_Client_Creation" name="J2EE_Application_Client_Creation"></a>Creación de cliente de aplicación J2EE
+                            </p>
+                        </td>
+                        <td valign="top">
+                            <ul>
+                                <li>
+                                    Escribe código de cliente y compila clases.
+                                </li>
+                                <li>
+                                    Crea el descriptor de despliegue application-client.xml.
+                                </li>
+                                <li>
+                                    Crea un archivador de archivos JAR con los archivos XML y de clases.
+                                </li>
+                            </ul>
+                        </td>
+                        <td valign="top">
+                            <p>
+                                <a href="#Application_Component_Provider">Proveedor de componentes de aplicación</a>
+                                (desarrollador de software).
+                            </p>
+                        </td>
+                        <td valign="top">
+                            <p>
+                                Un archivo JAR con el cliente de aplicación J2EE.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <p>
+                                <a id="Web_Component_Creation" name="Web_Component_Creation"></a>Creación de componentes
+                                web
+                            </p>
+                        </td>
+                        <td valign="top">
+                            <ul>
+                                <li>
+                                    Escribe código de servlet y compila clases.
+                                </li>
+                                <li>
+                                    Escribe páginas HTML y JSP.
+                                </li>
+                                <li>
+                                    Crea el descriptor de despliegue web.xml.
+                                </li>
+                                <li>
+                                    Crea un archivador de archivo WAR (Web Application Archive) con los archivos de clases,
+                                    .jsp, .hmtl y XML.
+                                </li>
+                            </ul>
+                        </td>
+                        <td valign="top">
+                            <p>
+                                <a href="#Application_Component_Provider">Proveedor de componentes de aplicación</a>
+                                (desarrollador de software: servlets; diseñador web: páginas JSP y HTML).
+                            </p>
+                        </td>
+                        <td valign="top">
+                            <p>
+                                Un archivo WAR con el componente web.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <p>
+                                <a id="Enterprise_JavaBean_Creation" name="Enterprise_JavaBean_Creation"></a>Creación de
+                                Enterprise JavaBeans
+                            </p>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>
+                                    Escribe el código EJB y compila las clases.
+                                </li>
+                                <li>
+                                    Crear el descriptor de despliegue ejb-jar.xml y los descriptores de despliegue
+                                    específicos del servidor.
+                                </li>
+                                <li>
+                                    Crea un archivador de archivo JAR con los archivos XML y de clases.
+                                </li>
+                            </ul>
+                        </td>
+                        <td valign="top">
+                            <p>
+                                <a href="#Application_Component_Provider">Proveedor de componentes de aplicación</a>
+                                (desarrollador de software).
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Un archivo JAR con el Enterprise JavaBean.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <p>
+                                <a id="J2EE_Application_Assembly" name="J2EE_Application_Assembly"></a>Ensamblaje de
+                                aplicación J2EE
+                            </p>
+                        </td>
+                        <td valign="top">
+                            <ul>
+                                <li>
+                                    Crea el descriptor de despliegue application.xml.
+                                </li>
+                                <li>
+                                    Crea un archivador de archivo EAR con los archivos EJB (JAR), componentes web (WAR) y
+                                    XML.
+                                </li>
+                            </ul>
+                        </td>
+                        <td valign="top">
+                            <p>
+                                <a href="#Application_Assembler">Ensamblador de aplicaciones.</a>
+                            </p>
+                        </td>
+                        <td valign="top">
+                            <p>
+                                Un archivo EAR con la aplicación J2EE.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <p>
+                                <a id="J2EE_Application_Deployment" name="J2EE_Application_Deployment"></a>Despliegue de
+                                aplicación J2EE
+                            </p>
+                        </td>
+                        <td valign="top">
+                            <ul>
+                                <li>
+                                    Añade la aplicación J2EE (EAR) al entorno del servidor J2EE.
+                                </li>
+                                <li>
+                                    Edita el descriptor de despliegue application.xml con la configuración del entorno
+                                    local.
+                                </li>
+                                <li>
+                                    Despliega la aplicación J2EE en el servidor J2EE.
+                                </li>
+                            </ul>
+                        </td>
+                        <td valign="top">
+                            <p>
+                                <a href="#Deployer">Desplegador</a>
+                            </p>
+                        </td>
+                        <td valign="top">
+                            <p>
+                                Aplicación J2EE instalada y configurada.
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table><br />
+        </div>
+        <p>
+            Cada etapa del proceso de desarrollo produce un resultado que se utiliza en la siguiente etapa. Los componentes
+            que se crean en las etapas de desarrollo de componentes se utilizan en la etapa de ensamblaje para producir un
+            archivador EAR de aplicación J2EE. En la etapa de desarrollo de aplicación J2EE, el archivador EAR se despliega
+            en el servidor J2EE.
+        </p>
+        <p>
+            Los resultados de cada etapa son portables y no es necesario que los realicen las mismas personas o incluso en
+            el mismo entorno, siempre que el entorno satisfaga los requisitos de la plataforma J2EE.
+        </p>
+        <p>
+            Visite la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> para obtener más
+            información sobre el empaquetado y despliegue de J2EE. Siga los enlaces <b>J2EE &gt; Blueprints</b>.
+        </p>
+        <h3>
+            <a id="More_Information" name="More_Information"></a>Información adicional
+        </h3>
+        <p>
+            En los Blueprints de J2EE de Sun encontrará información adicional referente a J2EE. Podrá acceder a ellos en <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a>. Siga los enlaces <b>J2EE &gt; Blueprints
+            &gt; Guidelines: Designing Enterprise Applications with the J2EE Platform, Second Edition.</b>
+        </p>
+        <p>
+            Con RUP (Rational Unified Process) se incluye una copia de este documento.
+        </p>
+        <p>
+            Los capítulos dentro de los Blueprints de J2EE de Sun con información sobre temas específicos se resumen en
+            esta tabla.
+        </p>
+        <div align="center">
+            <table             style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"              cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+                <tbody>
+                    <tr>
+                        <th valign="top" align="left" width="45%">
+                            Concepto de J2EE
+                        </th>
+                        <th valign="top" align="left" width="55%">
+                            Capítulo en Blueprints de J2EE
+                        </th>
+                    </tr>
+                    <tr>
+                        <td valign="top" width="45%">
+                            <p>
+                                Tecnologías de la plataforma J2EE
+                            </p>
+                        </td>
+                        <td valign="top" width="55%">
+                            <p>
+                                Capítulo 2
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" width="45%">
+                            <p>
+                                Enterprise JavaBeans
+                            </p>
+                        </td>
+                        <td valign="top" width="55%">
+                            <p>
+                                Capítulo 5
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" width="45%">
+                            <p>
+                                Transacciones
+                            </p>
+                        </td>
+                        <td valign="top" width="55%">
+                            <p>
+                                Capítulo 8
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" width="45%">
+                            <p>
+                                Seguridad
+                            </p>
+                        </td>
+                        <td valign="top" width="55%">
+                            <p>
+                                Capítulo 9
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" width="45%">
+                            <p>
+                                Servlets
+                            </p>
+                        </td>
+                        <td valign="top" width="55%">
+                            <p>
+                                Capítulo 4
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" width="45%">
+                            <p>
+                                Páginas JavaServer
+                            </p>
+                        </td>
+                        <td valign="top" width="55%">
+                            <p>
+                                Capítulo 4
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" width="45%">
+                            <p>
+                                Empaquetamiento y despliegue
+                            </p>
+                        </td>
+                        <td valign="top" width="55%">
+                            <p>
+                                Capítulo 7
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><br />
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

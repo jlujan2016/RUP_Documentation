@@ -1,0 +1,711 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Dise&ntilde;o y modelado de bases de datos utilizando Rational Rose Data Modeler</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="modeling_and_designing_databases" name="uma.name">
+<meta content="Dise&ntilde;o y modelado de bases de datos utilizando Rational Rose Data Modeler" name="uma.presentationName">
+<meta content="Tool:rup_rose_classic:Rational Rose" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Rose" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{06FB737B-5D74-4C3B-98F4-36153CFB2E34}", "{C1A09291-4091-4300-AF91-B7715DE432F9}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{06FB737B-5D74-4C3B-98F4-36153CFB2E34}", "{C1A09291-4091-4300-AF91-B7715DE432F9}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{06FB737B-5D74-4C3B-98F4-36153CFB2E34}", "{C1A09291-4091-4300-AF91-B7715DE432F9}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{06FB737B-5D74-4C3B-98F4-36153CFB2E34}", "{C1A09291-4091-4300-AF91-B7715DE432F9}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{C1A09291-4091-4300-AF91-B7715DE432F9}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Dise&ntilde;o y modelado de bases de datos utilizando Rational Rose Data Modeler</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe la creación de un modelo de datos con Rational Rose Data Modeler. También se proporciona información sobre la generación de un nuevo esquema de base de datos o DDL a partir del modelo de datos de Rose y cómo revertir la ingeniería de una base de datos para crear un modelo de datos.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_rose_classic_20F2524D.html" guid="{06FB737B-5D74-4C3B-98F4-36153CFB2E34}">Rational Rose</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/database_design_8552DD3.html" guid="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}">Diseño de base de datos</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    Gracias a las características de Rational Rose Data Modeler, el diseñador de base de datos y el desarrollador de
+    software pueden desarrollar la aplicación y el diseño de bases de datos utilizando la misma herramienta. Como
+    desarrollador o diseñador de bases de datos, puede utilizar Rational Rose Data Modeler para modelar y diseñar bases de
+    dados, y para integrar la aplicación y la base de datos. &nbsp;
+</p>
+<p>
+    Rational Rose Data Modeler utiliza o crea tres tipos de modelos: un modelo de objeto, un modelo de datos y un modelo de
+    almacenamiento de datos opcional. Un modelo de objeto representa clases, sus comportamientos y las relaciones entre
+    clases. El modelo de "objeto" de Rational Rose Data Modeler corresponde, por lo general, al producto de trabajo <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">modelo de diseño</a> de RUP. El diagrama de clase de Rose representa una
+    vista del modelo de objeto. Un modelo de datos&nbsp;representa la estructura de la base de datos tal como la implementa
+    la empresa.&nbsp;El modelo de almacenamiento de datos opcional representa la estructura de almacenamiento físico de la
+    base de datos.&nbsp;El "modelo de datos" y el "modelo de almacenamiento de datos" de Rational Rose Data Modeler
+    corresponden, por lo general, al producto de trabajo <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">modelo de
+    datos</a> de RUP.
+</p>
+<p>
+    Puede crear un modelo del diseño físico de la base de datos transformando las clases permanentes del modelo de objeto
+    en tablas de un modelo de datos. &nbsp;Las clases permanentes se deben haber asignado a un componente y encontrarse en
+    el mismo paquete lógico.&nbsp;Otro modo de crear un modelo del diseño de la base de datos física consiste en revertir
+    la ingeniería de un script DDL o esquema de base de datos existente.
+</p>
+<p>
+    Por medio de las opciones de transformación de Rose Data Modeler, puede integrar diseños de bases de datos y
+    aplicaciones. Las opciones de transformación correlacionan elementos contenidos en un modelo de objeto para crear un
+    modelo de datos, o bien, transformar elementos de un modelo de datos para crear un modelo de objeto. Para crear el
+    modelo de objeto, debe comprender los conceptos OOAD (diseño y análisis orientado a objetos) y UML (Lenguaje unificado
+    de modelado). La creación de un modelo de datos requiere la comprensión del diseño de bases de datos relacionales. Rose
+    Data Modeler utiliza terminología de base de datos y estereotipos UML para representar elementos de base de
+    datos.<br />
+     &nbsp;
+</p>
+<h3>
+    Pasos de la herramienta
+</h3>
+<ol>
+    <li>
+        <a href="#Develop Logical Data Model (Optional)">Desarrollar el modelo de datos lógico (opcional)</a>
+    </li>
+    <li>
+        <a href="#Develop Physical Database Design">Desarrollar el diseño de la base de datos física</a> 
+        <ul>
+            <li>
+                <a href="#Create Domains">Crear dominios</a>
+            </li>
+            <li>
+                <a href="#Transforming Persistent Design Elements to Physical Data Model Elements">Crear
+                elementos diseño de la base de datos física inicial</a>
+            </li>
+            <li>
+                <a href="#Define Reference Tables">Definir tablas de referencia</a>
+            </li>
+            <li>
+                <a href="#Create Primary Key and Unique Key Constraints">Crear restricciones de clave principal
+                y clave exclusiva</a>
+            </li>
+            <li>
+                <a href="#Define Data and Referential Integrity Rules">Definir datos y reglas de imposición de
+                integridad referencial</a>
+            </li>
+            <li>
+                <a href="#Optimize Data Model for Performance">Desnormalizar el diseño de base de datos para
+                optimizar el rendimiento</a>
+            </li>
+            <li>
+                <a href="#Optimize Data Access">Optimizar el acceso a los datos</a>
+            </li>
+            <li>
+                <a href="#Define Storage Characteristics">Definir características de almacenamiento</a>
+            </li>
+            <li>
+                <a href="#Distribute Class Behavior to the Database">Diseñar procedimientos almacenados para
+                distribuir el comportamiento de clase a la base de datos</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#Review the Results">Revisar los resultados</a>
+    </li>
+</ol>
+<p>
+    Además de los pasos descritos más arriba, en esta guía de la herramienta también se proporciona información sobre los
+    <a href="#Additional Topics">temas adicionales</a> siguientes, relacionados con la compilación y la gestión del
+    modelo de datos en Rational Rose.
+</p>
+<ul>
+    <li>
+        <a href="#Forward Engineer the Data Model">Ingeniería directa del modelo de datos</a>
+    </li>
+    <li>
+        <a href="#Maintain the Data Model">Mantener el modelo de datos</a>
+    </li>
+    <li>
+        <a href="#Reverse Engineer DDL Script or Database Schema">Ingeniería inversa del modelo de datos de un
+        esquema de base de datos o script DDL</a>
+    </li>
+</ul>
+<p>
+    Consulte la sección&nbsp; <img height="16" alt="icono de publicación de ayuda" hspace="0"     src="./../../../core.base_rup/resources/helpbook.gif" width="17" border="0" /> <i>iniciación a</i> de los temas de la ayuda en línea de
+    Rose Data Modeler para obtener una visión general sobre cómo diseñar y modelar bases de datos utilizando Rational Rose
+    Data Modeler.&nbsp;
+</p>
+<h3>
+    <a id="Develop Logical Data Model (Optional)" name="Develop Logical Data Model (Optional)"></a>1. <a id="Develop Logical Data Model" name="Develop Logical Data Model">Desarrollar el modelo de datos lógico (opcional)</a>
+</h3>
+<p>
+    Es posible que algunos proyectos requieran la creación de un modelo "lógico" idealizado del diseño de la base de datos
+    que capture una vista independiente de la aplicación de las entidades de datos lógicas clave y sus relaciones.
+    &nbsp;Este modelo de datos lógico se puede considerar como un tipo de modelo de "análisis" similar al <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_model_76C3B70C.html" guid="{98EA224C-36F6-46E6-AB36-2999382B58B3}">Producto de trabajo: Modelo de análisis</a> opcional que se puede
+    utilizar en el desarrollo del diseño de la aplicación.&nbsp;&nbsp;Se debe tener en cuenta que el modelo de datos lógico
+    está incluido en el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Producto de trabajo: Modelo de datos</a>, y que no se considera como un
+    producto de trabajo de RUP separado. &nbsp;
+</p>
+<p>
+    El modelo de datos lógico se puede crear utilizando las características de Rational Rose Data Modeler para compilar un
+    nuevo modelo de datos utilizando diagramas de modelo de datos. En Rational Rose Data Modeler, el modelo de datos lógico
+    se engloba en un paquete de esquemas separado en la vista lógica de Rational Rose.&nbsp;Para obtener información sobre
+    la compilación de un modelo de datos, consulte los temas de la ayuda en línea siguientes:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Compilación de un modelo de datos</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Creación de un esquema</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Cómo trabajar con diagramas de modelo de datos</i>.
+    </li>
+</ul>
+<p>
+    El desarrollo de un modelo de datos lógico idealizado es opcional basado en necesidades de proyecto
+    específicas.&nbsp;En los proyectos se puede elegir el desarrollo del modelo de datos utilizando las posibilidades de
+    transformación de objetos en tablas de Rational Rose Data Modeler, en lugar de compilar el modelo de modo
+    independiente. &nbsp;
+</p>
+<h3>
+    2. <a id="Develop Physical Database Design" name="Develop Physical Database Design">Desarrollar el diseño de la base de
+    datos física</a>
+</h3>
+<p>
+    El diseño de la base de datos física son los diseños de tabla detallados de la base de datos que se crean utilizando
+    diagramas de modelo de datos en la vista lógica. &nbsp;El diseño de la base de datos física se puede representar como
+    un "Modelo de datos físico",&nbsp;que también incluye elementos de modelo para las vistas de base de datos, los
+    índices, las restricciones, los procedimientos almacenados y otros elementos que se describen en el tema de la ayuda en
+    línea <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"     border="0" /> <i>Elementos de modelo de datos</i>.&nbsp;Este modelo de datos físico no se considera como un producto de
+    trabajo separado, sino que forma parte del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Producto
+    de trabajo: Modelo de datos</a>, y puede estar contenido en uno o más paquetes de esquemas en la vista lógica de
+    Rational Rose.&nbsp;
+</p>
+<p>
+    Los elementos de modelo de diseño de la base de datos física inicial se pueden crear, inicialmente, utilizando uno de
+    los procedimientos siguientes:
+</p>
+<ul>
+    <li>
+        Utilizar las características de transformación de objetos en tablas de Rational Rose Data Modeler para crear un
+        conjunto de tablas inicial.
+    </li>
+    <li>
+        Ingeniería inversa de un script DDL o esquema de base de datos existente (consulte el apartado&nbsp;<img         height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Ingeniería inversa de un archivo DDL o base de datos</i>)
+    </li>
+    <li>
+        Desarrollar un modelo de datos físico inicial a través de la evolución del diseño de la base de datos lógica
+        contenido en un modelo de datos lógico.
+    </li>
+</ul>
+<p>
+    En los pasos restantes de esta guía de la herramienta se trata la propuesta de iniciar el diseño de la base de datos
+    física utilizando el proceso de transformación de objetos en tablas. Consulte el tema de la ayuda en línea <img     height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />
+    <i>Transformación de un modelo de objeto en un modelo de datos</i> para obtener información sobre los requisitos para
+    la utilización de la característica de transformación de objetos en tablas.
+</p>
+<h4>
+    <a id="Create Domains" name="Create Domains">Crear dominios</a>
+</h4>
+<p>
+    Cree dominios para implementar tipos de datos definidos por el usuario que se puedan utilizar a través del modelo de
+    datos para imponer estándares de diseño de base de datos. Consulte el tema de la ayuda en línea siguiente,&nbsp;<img     height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />
+    <i>Cómo trabajar con dominios</i>, donde se proporciona una visión general sobre lo que son los dominios y cómo se
+    utilizan.&nbsp;Cuando se crea un paquete de esquemas en el modelo de datos por primera vez, Rational Rose Data Modeler
+    también crea un paquete <b>Tipos de datos globales</b> en la vista lógica que se utiliza para almacenar dominios y
+    paquetes de dominios. Para obtener más detalles sobre la creación de dominios, consulte los temas de la ayuda en línea
+    de Rational Rose Data Modeler que tratan sobre:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Dominios</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Creación de un paquete de dominio</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Creación de un dominio</i>
+    </li>
+</ul>
+<h4>
+    <a id="Transforming Persistent Design Elements to Physical Data Model Elements" name="Transforming Persistent Design Elements to Physical Data Model Elements">Crear elementos de diseño de la base de
+    datos física inicial</a>
+</h4>
+<p>
+    Gracias a Rational Rose Data Modeler, puede transformar clases y sus relaciones en el modelo de objeto para crear
+    tablas y relaciones de modelo de datos en el modelo de datos. Consulte el tema de la ayuda en línea de Rational Rose
+    Data Modeler que trata sobre <img height="16" alt="icono de publicación de ayuda" hspace="0"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Transformación de la correlación de elementos de modelo
+    de objeto</i>, para obtener una descripción detallada sobre cómo transformar elementos de modelo de objeto en elementos
+    de modelo de datos.
+</p>
+<p>
+    &nbsp;Antes de transformar un modelo de objeto en un modelo de datos:
+</p>
+<ul>
+    <li>
+        Establezca el estado de las clases en permanente.
+    </li>
+    <li>
+        Asigne clases a un componente que utilice los lenguajes Java, Visual Basic o Analysis.
+    </li>
+    <li>
+        Agrupe las clases en el mismo paquete lógico.
+    </li>
+</ul>
+<p>
+    Los pasos de transformación específicos se describen en el tema de la ayuda en línea de Rational Rose Data Modeler que
+    trata sobre <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" border="0" /> <i>transformación de un modelo de objeto en un modelo de datos</i>. Los elementos de modelo de
+    objeto se transforman en elementos de modelo de datos utilizando correlaciones de tipo de datos específicos del DBMS
+    seleccionado. Una vez que se ha completado la transformación, se pueden crear diagramas de modelo de datos para empezar
+    a trabajar en el desarrollo del diseño de la base de datos física detallada.&nbsp;Para obtener más información,
+    consulte el apartado <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" border="0" /> <i>Creación del diagramas de modelo de datos</i>.
+</p>
+<p>
+    Puede modificar tablas o crear otras tablas y relaciones en el modelo de datos. Para obtener más información sobre la
+    creación de tablas y relaciones, consulte los temas siguientes:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Tablas</i> y <img height="16" alt="icono de publicación de ayuda" hspace="0"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Creación de tablas</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Columnas</i> y <img height="16" alt="icono de publicación de ayuda" hspace="0"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Creación de una columna</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Relaciones</i> y <img height="16" alt="icono de publicación de ayuda" hspace="0"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Creación de relaciones</i>
+    </li>
+</ul>
+<h4>
+    <a id="Define Reference Tables" name="Define Reference Tables">Definir tablas de referencia</a>
+</h4>
+<p>
+    Cree tablas de referencia según sea necesario para gestionar los elementos de datos estáticos de la base de
+    datos.&nbsp;Consulte la lista de temas sobre las tablas y las relaciones que se indican en el paso anterior de esta
+    guía de la herramienta para obtener información sobre la creación de tablas y relaciones.
+</p>
+<h4>
+    <a id="Create Primary Key and Unique Key Constraints" name="Create Primary Key and Unique Key Constraints">Crear
+    restricciones de clave principal y clave exclusiva</a>
+</h4>
+<p>
+    Defina las restricciones de clave principal y clave exclusiva para identificar filas de información en una
+    tabla.&nbsp;Para obtener información sobre cómo crear y utilizar restricciones de clave principal y clave exclusiva,
+    consulte los temas de la ayuda en línea de Rose Data Modeler que tratan sobre:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Restricciones de clave</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Creación de una restricción de clave</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Creación de claves (principales y exclusivas)</i>
+    </li>
+</ul>
+<h4>
+    <a id="Define Data and Referential Integrity Rules" name="Define Data and Referential Integrity Rules">Definir datos y
+    reglas de imposición de integridad referencial</a>
+</h4>
+<p>
+    Defina reglas de integridad referencial para garantizar que las actualizaciones de base de datos se gestionan
+    correctamente.&nbsp; Rational Rose Data Modeler admite desencadenantes DRI (integridad referencial declarativa) y RI
+    (integridad referencial generada por el sistema).&nbsp;Para obtener más información, consulte los temas de la ayuda en
+    línea siguientes:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Integridad referencial</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Definición de la integridad referencial</i>
+    </li>
+</ul>
+<p>
+    Aplique restricciones de comprobación para reforzar las reglas empresariales en el modelo de datos.&nbsp;Rational Rose
+    Data Modeler permite asignar restricciones de comprobación a una columna, dominio o tabla.&nbsp;Para obtener más
+    información sobre la creación y utilización de restricciones de comprobación, consulte los temas de la ayuda en línea
+    siguientes:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Restricciones de comprobación</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Creación de restricciones de comprobación</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Aplicación de reglas empresariales</i>
+    </li>
+</ul>
+<p>
+    Las restricciones de clave externa son otro aspecto importante de la imposición de la integridad referencial y de
+    datos.&nbsp;Las restricciones de clave externa son obtienen creando una relación entre tablas.&nbsp;Cuando se crea una
+    relación, la clave principal de la tabla padre migra a la tabla hijo como clave externa. Para obtener más información
+    sobre la creación de restricciones de clave externa, consulte los temas de la ayuda en línea que tratan sobre <img     height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />
+    <i>restricciones de clave</i> y <img height="16" alt="icono de publicación de ayuda" hspace="0"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>migración de claves</i>.
+</p>
+<h4>
+    <a id="Optimize Data Model for Performance" name="Optimize Data Model for Performance">Desnormalizar el diseño de base
+    de datos para optimizar el rendimiento</a>
+</h4>
+<p>
+    A veces, para mejorar el rendimiento es posible que sea más adecuado almacenar en la misma tabla los objetos que se
+    recuperan juntos.&nbsp;Esta técnica se denomina desnormalización.&nbsp;Para representarlo en el modelo de datos,
+    combine las columnas exclusivas de ambas tablas en una y elimine la segunda tabla.&nbsp;Para obtener más información
+    sobre la desnormalización y la optimización, consulte los temas de la ayuda en línea de Rational Rose Data Modeler que
+    tratan sobre:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Desnormalización del modelo de datos</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Optimización del modelo de datos</i>
+    </li>
+</ul>
+<h4>
+    <a id="Optimize Data Access" name="Optimize Data Access">Optimizar el acceso a los datos</a>
+</h4>
+<p>
+    Una técnica de optimización adicional consiste en utilizar el indexado de columnas para acceder a los datos de las
+    tablas de modo más eficaz. Para obtener más información sobré la creación de índices en el modelo de datos, consulte
+    los temas siguientes:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Índices</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Creación de un índice</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Optimización del modelo de datos</i>
+    </li>
+</ul>
+<p>
+    Además, se pueden definir vistas para mejorar el acceso a los datos.&nbsp;Las vistas se pueden utilizar para crear una
+    tabla virtual que conste de columnas de una o más tablas y otras vistas a las que la aplicación acceda con frecuencia.
+    Puede obtener información detallada sobre la creación de vistas y relaciones entre vistas y tablas en el modelo en los
+    temas de la ayuda en línea de Rational Rose Data Modeler que tratan sobre:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Vistas</i> y <img height="16" alt="icono de publicación de ayuda" hspace="0"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Creación de vistas</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Cómo trabajar con vistas</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Dependencias&nbsp; y</i> <img height="16" alt="icono de publicación de ayuda" hspace="0"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Cómo trabajar con dependencias de vistas</i>
+    </li>
+</ul>
+<h4>
+    <a id="Define Storage Characteristics" name="Define Storage Characteristics">Definir características de
+    almacenamiento</a>
+</h4>
+<p>
+    Al crear un modelo de almacenamiento de datos modela el almacenamiento físico de los datos. Un modelo de almacenamiento
+    de datos consta de una base de datos que contiene uno o más espacios de tablas.&nbsp;Este "modelo de almacenamiento de
+    datos" se considera parte del modelo de datos físico, que se incluye en el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Producto
+    de trabajo: Modelo de datos</a> en RUP, y no es producto de trabajo separado.&nbsp;El modelo de almacenamiento de datos
+    está contenido en la Vista de componentes del Modelo de Rose global.
+</p>
+<p>
+    Un espacio de tablas es el elemento de almacenamiento lógico que almacena los datos de las tablas. Puede asignar una o
+    más tablas al espacio de tablas y distribuir datos de tablas a través de uno o más contenedores. Un contenedor es un
+    dispositivo de almacenamiento físico como, por ejemplo, un disco, archivo o directorio. Cada contenedor está segmentado
+    en extensiones o páginas y se mide en kilobytes.&nbsp;Para obtener más información sobre las bases de datos y los
+    espacios de tablas, consulte la lista de temas de los apartados de la ayuda en línea de Rose Data Modeler que tratan
+    sobre:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Modelado del almacenamiento de datos</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Compilación de un modelo de almacenamiento de datos</i>
+    </li>
+</ul>
+<p>
+    Estos apartados también incluyen temas en los que se facilita información sobre la definición de elementos de modelo de
+    almacenamiento de datos que son específicos de los DBMS (sistemas de gestión de bases de datos) para los que Rational
+    Rose Data Modeler ofrece soporte.
+</p>
+<h4>
+    <a id="Distribute Class Behavior to the Database" name="Distribute Class Behavior to the Database">Diseño de
+    procedimientos almacenados para distribuir el comportamiento de clase a la base de datos</a>
+</h4>
+<p>
+    Defina procedimientos almacenados según sea necesario para dar soporte al almacenamiento y la recuperación eficaz de
+    información de la base de datos. Examine las operaciones de las clases de diseño que se han utilizado para crear las
+    tablas iniciales para procedimientos almacenados candidatos.&nbsp;Los procedimientos almacenados se pueden implementar
+    como procedimientos o funciones.&nbsp;Para obtener más información sobre cómo crear procedimientos almacenados en el
+    modelo de datos, consulte los temas de la ayuda en línea de Rational Rose Data Modeler que tratan sobre:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Procedimientos almacenados</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Creación de procedimientos almacenados</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Cómo trabajar con procedimientos almacenados</i>
+    </li>
+</ul>
+<p>
+    Además, puede definir desencadenantes según se requiera para controlar y gestionar las modificaciones efectuadas en la
+    información de las tablas. Para obtener más información sobre la creación de desencadenantes en el modelo de datos,
+    consulte los temas de la ayuda en línea siguientes:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Desencadenantes personalizados</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Creación de desencadenantes personalizados</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Cómo trabajar con desencadenantes personalizados</i>
+    </li>
+</ul>
+<h3>
+    <a id="Review the Results" name="Review the Results">3. Revisar los resultados</a>
+</h3>
+<p>
+    Revise los resultados del diseño de la base de datos del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">modelo de
+    datos</a> de modo que haya coherencia con el diseño de aplicación del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">modelo
+    de diseño</a> y con la estructura global de la arquitectura de la aplicación.&nbsp;Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/checklists/data_model_D22985A5.html" guid="2.800761632096845E-305">Lista de comprobación: Modelo de datos</a> para algunos elementos específicos que
+    revisar.
+</p>
+<h3>
+    <a id="Additional Topics" name="Additional Topics">Temas adicionales</a>
+</h3>
+<p>
+    En este apartado de la guía de la herramienta se describen algunos elementos adicionales relacionados con la ingeniería
+    directa e inversa y el mantenimiento del modelo de datos y la base de datos.
+</p>
+<h4>
+    <a id="Forward Engineer the Data Model" name="Forward Engineer the Data Model">Ingeniería directa del modelo de
+    datos</a>
+</h4>
+<p>
+    Una vez que se ha desarrollado suficientemente el diseño de la base de datos detallada (incluido el diseño del
+    almacenamiento de datos) en el modelo de datos, se puede utilizar el asistente para ingeniería directa de Rose Data
+    Modeler para generar un esquema de base de datos o DDL del diagrama del modelo de datos. El asistente para ingeniería
+    directa lee el esquema del modelo de datos y genera un script DDL para el DBMS que se ha especificado en el asistente.
+    En el asistente, puede elegir que se ejecute el script DDL para generar un esquema de base de datos.
+</p>
+<p>
+    En el asistente para ingeniería directa, puede seleccionar opciones para generar:
+</p>
+<ul class="plus">
+    <li>
+        Tablas
+    </li>
+    <li>
+        Índices
+    </li>
+    <li>
+        Desencadenantes
+    </li>
+    <li>
+        Procedimientos almacenados
+    </li>
+    <li>
+        Vistas
+    </li>
+    <li>
+        Espacios de tablas
+    </li>
+    <li>
+        Nombres completos. Se utilizan como prefijo del nombre de esquema para los nombres de tablas.
+    </li>
+    <li>
+        Identificadores entrecomillados para tablas, columnas y esquemas que se necesitan para la localización utilizando
+        DBCS (conjuntos de códigos de doble byte).
+    </li>
+    <li>
+        Sentencias drop de SQL para sobrescribir comentarios, elementos de base de datos o scripts DDL existentes
+    </li>
+</ul>
+<p>
+    Se debe asegurar de que se ha establecido la conectividad de base de datos adecuada para permitir que el proceso de
+    ingeniería directa funcione.&nbsp;Para obtener más información sobre la ingeniería directa, consulte los temas de la
+    ayuda en línea de Rational Rose Data Modeler que tratan sobre:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Ingeniería directa de una base de datos o DDL</i> (información del proceso de ingeniería directa)
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Ingeniería directa de una base de datos o DDL</i> (pasos específicos para ejecutar el asistente
+        para ingeniería directa)
+    </li>
+</ul>
+<p>
+    Consulte la lista de temas de DBMS (sistema de gestión de bases de datos) que se indican en la sección <img height="16"     alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />
+    <i>Referencia</i> de la ayuda en línea de Rational Rose Data Modeler para obtener información específica sobre la
+    correlación de tipos de datos, las conexiones de base de datos y otros temas relacionados con la ingeniería directa del
+    modelo de datos a un DBMS destino específico.&nbsp;
+</p>
+<h4>
+    <a id="Maintain the Data Model" name="Maintain the Data Model">Mantener el modelo de datos</a>
+</h4>
+<p>
+    Después de aplicar la ingeniería a un modelo de datos para crear una base de datos, puede utilizar el asistente para la
+    comparación y la sincronización de Rational Rose Data Modeler para mantener la coherencia del modelo de datos con la
+    base de datos implementada. &nbsp;
+</p>
+<p>
+    Al sincronizar el modelo de datos con una base de datos implementada, debe asegurarse de que se ha establecido la
+    conectividad de base de datos adecuada para permitir que el proceso de comparación y sincronización funcione.&nbsp;Para
+    obtener más información sobre la comparación y sincronización del modelo de datos, consulte los temas de la ayuda en
+    línea de Rational Rose Data Modeler que tratan sobre:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Comparación y sincronización del modelo de datos&nbsp;</i> (información del proceso de comparación
+        y sincronización)
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Comparación de un esquema de base de datos o archivo DDL con una base de datos o archivo DDL</i>
+        (pasos específicos para ejecutar el asistente para la comparación y la sincronización)
+    </li>
+</ul>
+<p>
+    Consulte la lista de temas de DBMS (sistema de gestión de bases de datos) que se indican en la sección <img height="16"     alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />
+    <i>Referencia</i> de la ayuda en línea de Rational Rose Data Modeler para obtener información específica sobre la
+    correlación de tipos de datos, las conexiones de base de datos y otros temas relacionados con la comparación y
+    sincronización del modelo de datos con un DBMS destino específico.&nbsp;
+</p>
+<p>
+    Consulte también el tema de la ayuda en línea de Rational Rose Data Modeler que trata sobre <img height="16"     alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />
+    <i>modificación de modelos de datos</i> para obtener información sobre reglas específicas para realizar modificaciones
+    en los elementos del modelo de datos.
+</p>
+<h4>
+    <a id="Reverse Engineer DDL Script or Database Schema" name="Reverse Engineer DDL Script or Database Schema"></a>Ingeniería inversa del modelo de datos de un esquema de base
+    de datos o script DDL
+</h4>
+<p>
+    Utilice el asistente para ingeniería inversa de Rational Rose Data Modeler para generar un modelo de datos de un
+    archivo DDL o esquema de base de datos.&nbsp; El asistente para ingeniería inversa lee el archivo DDL o esquema de base
+    de datos y crea un diagrama de modelo de datos que incluye los nombres de todas las entidades de identificador que
+    están entre comillas. Dependiendo del DBMS, el asistente para ingeniería inversa de Rose Data Modeler modela
+    tablas,&nbsp;relaciones entre tablas, procedimientos almacenados, índices y desencadenantes en el diagrama de modelo de
+    datos.
+</p>
+<p>
+    Se debe asegurar de que ha establecido la conectividad de base de datos adecuada para permitir que el proceso de
+    ingeniería inversa funcione.&nbsp;Para obtener más información sobre la ingeniería inversa, consulte los temas de la
+    ayuda en línea de Rational Rose Data Modeler que tratan sobre:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Ingeniería inversa de una base de datos o DDL</i> (información del proceso de ingeniería inversa)
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Ingeniería inversa de una base de datos o archivo DDL</i> (pasos específicos para ejecutar el
+        asistente para ingeniería inversa)
+    </li>
+</ul>
+<p>
+    Consulte la lista de temas de DBMS (sistema de gestión de bases de datos) de la sección <img height="16"     alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />
+    <i>Referencia</i> de la ayuda en línea de Rational Rose Data Modeler para obtener información específica sobre la
+    correlación de tipos de datos, las conexiones de base de datos y otros temas relacionados con la ingeniería inversa del
+    modelo de datos de un DBMS específico.&nbsp;
+</p>
+<p>
+    Después de revertir la ingeniería de la base de datos o DDL, si lo desea, puede transformar las tablas del modelo de
+    datos generado a partir del proceso de ingeniería inversa en clases del modelo de objeto (diseño). Para obtener más
+    información sobre el proceso de transformación de tablas en objetos, consulte los temas siguientes:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Transformación de un modelo de datos en un modelo de objeto</i> (información del proceso de
+        transformación)
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Transformación de un modelo de datos en un modelo de objeto</i> (paso específicos para realizar la
+        transformación)
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Transformación de la correlación de elementos del modelo de datos</i> (correlación de elementos
+        del modelo de datos en elementos del modelo de objeto)
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.appliedis.com" target="_blank"><img alt="Icono de Applied Information Sciences"                 src="./../../../core.base_rup/guidances/supportingmaterials/resources/appliedis.gif" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Contenido desarrollado o parcialmente desarrollado por <a href="http://www.appliedis.com" target="_blank">Applied Information Sciences</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

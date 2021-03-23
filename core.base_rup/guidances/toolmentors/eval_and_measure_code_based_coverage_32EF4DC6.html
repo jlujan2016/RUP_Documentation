@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Utilizaci&oacute;n de Rational TestFactory para medir y evaluar la cobertura de la prueba basada en c&oacute;digo en scripts de prueba de Rational Robot</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="eval_and_measure_code_based_coverage" name="uma.name">
+<meta content="Utilizaci&oacute;n de Rational TestFactory para medir y evaluar la cobertura de la prueba basada en c&oacute;digo en scripts de prueba de Rational Robot" name="uma.presentationName">
+<meta content="Tool:rup_test_factory:Rational TestFactory" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational TestFactory" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{F0ECC223-C6D1-46A9-802B-E4D86FD1572B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{F0ECC223-C6D1-46A9-802B-E4D86FD1572B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{F0ECC223-C6D1-46A9-802B-E4D86FD1572B}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{F0ECC223-C6D1-46A9-802B-E4D86FD1572B}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Utilizaci&oacute;n de Rational TestFactory para medir y evaluar la cobertura de la prueba basada en c&oacute;digo en scripts de prueba de Rational Robot</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo utilizar Rational TestFactory para medir y evaluar la cobertura de la prueba basada en código para scripts de prueba de Rational Robot que prueban una aplicación escrita en C++, Java o Visual Basic, o que prueban un applet Java.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_test_factory_3EDA2115.html" guid="{FBA5098E-2CA8-483D-814D-DE3E876426B1}">Rational TestFactory</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/analyze_runtime_behavior_B2DD7652.html" guid="{5131A5BB-5B95-499E-A68B-788A2F0957C3}">Analizar el comportamiento en tiempo de ejecución</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/analyze_test_failure_7E42EE55.html" guid="{EA0E3D2C-F87E-49CA-8832-F791886D5741}">Analizar las anomalías en la prueba</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/execute_test_suite_492795DE.html" guid="{6B420194-5EB7-4A12-A061-09FAA5DC18DE}">Ejecutar el conjunto de aplicaciones de prueba</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/determine_test_results_630C9EC9.html" guid="{74E51E86-ECAB-4A61-9A88-FD358EE6F2B1}">Determinar resultados de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    Visión general
+</h3>
+<p>
+    Puede utilizar Rational Robot para implementar scripts de prueba y, a continuación, ejecutar los scripts de prueba
+    resultantes como parte de un conjunto de aplicaciones de prueba. Mientras que Robot no tiene ninguna característica
+    incorporada para recopilar y analizar la cobertura de la prueba basada en código, al ejecutar los scripts de prueba de
+    Robot utilizando Rational TestFactory, TestFactory ofrece la posibilidad de calcular la métrica de la cobertura de la
+    prueba basada en código para los scripts de prueba de Robot.
+</p>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Windows 98/2000/NT 4.0.
+</p>
+<p>
+    Para utilizar Rational TestFactory para evaluar la cobertura de la prueba basada en código para scripts de prueba de
+    Rational Robot, debe:
+</p>
+<ol>
+    <li>
+        <a href="#Implement test procedures">Registrar o programar scripts de prueba en Rational Robot</a>
+    </li>
+    <li>
+        <a href="#Play back script">Ejecutar los scripts de prueba de Rational Robot en Rational TestFactory</a>
+    </li>
+    <li>
+        <a href="#Review code coverage values">Revisar los datos de la cobertura basada en código para cada script de
+        prueba</a>
+    </li>
+</ol>
+<h3>
+    1.&nbsp;&nbsp;<a id="Implement test procedures" name="Implement test procedures">Registrar o programar scripts de
+    prueba en Rational Robot</a>
+</h3>
+<p>
+    Para registrar o programar scripts de prueba en Rational Robot, consulte la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/record_test_scripts_7A61D605.html" guid="{279B8DDC-F3D9-4087-87CE-AC8D718D8C8E}">Guía de la herramienta: Implementación de scripts de prueba utilizando
+    Rational Robot</a>.
+</p>
+<p>
+    <b>Nota:</b> para que Rational TestFactory calcule satisfactoriamente los datos de la cobertura basada en código para
+    scripts de prueba de Rational Robot, cada script de prueba debe iniciar y detener la aplicación que se somete a prueba.
+</p>
+<p>
+    <img height="16" alt="icono de Ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte el tema de
+    la ayuda en línea de Rational TestFactory que trata sobre la <i>visualización de la cobertura de código para un script
+    de Robot</i>.
+</p>
+<h3>
+    2.&nbsp;&nbsp;<a id="Play back script" name="Play back script">Ejecutar los scripts de prueba de Rational Robot en
+    Rational TestFactory</a>
+</h3>
+<p>
+    Para medir la cobertura basada en código de un script de prueba ejecutado, el código de la aplicación que se somete a
+    prueba (AUT) debe contener puntos de instrumentación. Los puntos de instrumentación son contadores que hacen cuadrar
+    las partes del código que ejecuta un script de prueba. En Rational TestFactory, puede instrumentar el código objeto o
+    el código fuente de AUT. Independientemente del método de instrumentación que utilice, TestFactory mantiene la
+    integridad del archivo ejecutable o de los archivos de origen originales.
+</p>
+<p>
+    Al ejecutar scripts de prueba en Rational TestFactory, se producen dos acciones:
+</p>
+<ul>
+    <li>
+        TestFactory pasa cada script de prueba a Rational Robot para que lo ejecute.
+    </li>
+    <li>
+        Mientras se ejecuta un script de prueba, TestFactory supervisa los puntos de instrumentación del código para hacer
+        cuadrar la información de la cobertura basada en código.
+    </li>
+</ul>
+<p>
+    <img height="16" alt="icono de Ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte los temas
+    de la ayuda en línea de Rational TestFactory que tratan sobre:
+</p>
+<ul>
+    <li>
+        <i>Especificación de la información para un nuevo proyecto</i>
+    </li>
+    <li>
+        <i>Instrumentación de la aplicación que se somete a prueba</i>
+    </li>
+    <li>
+        <i>Ejecución de un único script de prueba</i>
+    </li>
+</ul>
+<h3>
+    3.&nbsp;&nbsp;<a id="Review code coverage values" name="Review code coverage values">Revisar los datos de la cobertura
+    basada en código para cada script</a>
+</h3>
+<p>
+    Después de ejecutar los scripts de prueba de Rational Robot en Rational TestFactory, los datos de la cobertura basada
+    en código están disponibles para su revisión. Para cada script de prueba, TestFactory muestra un valor de cobertura
+    basada en código global, tanto para la aplicación (o applet) como para todos los archivos instrumentados adicionales a
+    los que llama la aplicación (o applet). TestFactory también muestra información de cobertura para cada archivo y
+    subrutina de la aplicación.
+</p>
+<p>
+    Rational TestFactory calcula el valor de la cobertura de la prueba basada en código como el porcentaje del código
+    fuente al que afecta un script de prueba, relativo a <i>todo</i> el código fuente de la aplicación que se somete a
+    prueba. Si tiene acceso a los archivos de origen para la aplicación que se somete a prueba, puede utilizar el navegador
+    de cobertura de TestFactory para revisar las líneas de código fuente que ha cubierto cada script de prueba, examinando
+    los sentencias de origen que se han ejecutado y las que no.
+</p>
+<p>
+    También puede revisar los datos de la cobertura basada en código combinados para dos o más scripts de prueba de
+    Rational Robot.
+</p>
+<p>
+    <img height="16" alt="icono de Ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; Consulte los temas
+    de la ayuda en línea de Rational TestFactory que tratan sobre:
+</p>
+<ul>
+    <li>
+        <i>Revisión de los resultados de la cobertura para un script</i>
+    </li>
+    <li>
+        <i>Visualización de la cobertura de código combinada para varios scripts</i>
+    </li>
+    <li>
+        <i>Cobertura de código para scripts en un applet o aplicación Java</i>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

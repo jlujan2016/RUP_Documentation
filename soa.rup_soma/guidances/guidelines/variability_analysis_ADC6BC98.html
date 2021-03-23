@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: An&aacute;lisis de variabilidad</title>
+<meta content="Guideline" name="uma.type">
+<meta content="variability_analysis" name="uma.name">
+<meta content="An&aacute;lisis de variabilidad" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "_dyVEgDJdEduxsZm92FKuLw"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_TraT8FHPEdumTu7t35vA-A", "_dyVEgDJdEduxsZm92FKuLw"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_d5dewE7OEduvcvbnLvkXhA", "_dyVEgDJdEduxsZm92FKuLw"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_dyVEgDJdEduxsZm92FKuLw"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: An&aacute;lisis de variabilidad</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Análisis de variabilidad crea un modelo que separa los cambios a partir de los aspectos más estables del modelo de dominio. Esto permite la externalización de tipos anticipados de cambios y sus correspondientes reglas, permitiendo la futura introducción no intrusiva de cambios en el diseño existente.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../soa.rup_soma/tasks/identify_commonality_and_variability_A1570EDC.html" guid="_TraT8FHPEdumTu7t35vA-A">Identificar factores comunes y variabilidad</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3 align="left">
+    Introducción
+</h3>
+<p>
+    El diseñador de servicio debe ser consciente de que en la formación de un <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_svce_model_svce_spec_37E89A91.html" guid="{20F06B5E-95D5-422C-AB68-7C213D28533A}">Artefacto: Especificación de servicio</a>&nbsp;debe equilibrar dos
+    fuerzas que compiten;
+</p>
+<ul>
+    <li>
+        <strong>Especialización</strong>; la necesidad de garantizar que un servicio hace lo que se necesita de él,
+        rellenando la función identificada durante la <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/capabilitypatterns/existing_asset_analysis_4B247136.html" guid="_7ZObICxuEdupJ8eX04kqLQ">Actividad: análisis de activos existentes</a>.
+    </li>
+    <li>
+        <strong>Generalización</strong>; la necesidad de garantizar que un servicio es tan reutilizable como sea posible,
+        en tales requisitos futuros no necesita el rediseño importante de los servicios existentes.
+    </li>
+</ul>
+<p>
+    Para esta finalidad, el diseñador puede emplear técnicas denominadas comúnmente análisis de "factores comunes y
+    variabilidad". Estas técnicas se conocen y se han documentado durante algún tiempo, sobre todo en el área de la
+    formulación de patrones [Coplien, Gabriel] y la ingeniería de la línea de productos de software [GBS, JGBS01, JB02,
+    MRR04, Parnas, SBM01]. Se trata de áreas en las que el diseñador también equilibra estas mismas fuerzas en patrones
+    (&nbsp;la necesidad de capturar la variabilidad como parámetros para el patrón, permitiendo así la aplicabilidad del
+    patrón en distintas situaciones).
+</p>
+<p>
+    En la literatura de patrones [Coplien] describe factores comunes como "<em>la esencia de una abstracción"</em> y
+    variabilidad como "<em>el condimento de la vida</em>", mientras [Gabriel] describe de forma más concreta la relación
+    entre los factores comunes y la abstracción: &nbsp;una buena abstracción necesita capturar los aspectos <i>comunes</i>
+    de la solución al tiempo que especifica las <i>variabilidades</i> de los elementos individuales.
+</p>
+<blockquote>
+    <em>Abstracción en programación es el proceso de identificar patrones comunes que tienen variaciones sistemáticas; una
+    abstracción representa el patrón común y proporciona un medio para especificar qué variación utilizar.</em>
+</blockquote>
+<p>
+    En&nbsp;un sentido similar&nbsp;[Parnas] define una <em>familia</em> de programas (lo describiríamos en términos de
+    línea de productos de software hoy en día) basados en las propiedades comunes del conjunto y las propiedades especiales
+    de los miembros individuales:
+</p>
+<blockquote>
+    <em>Consideramos que un conjunto de programas constituye una</em> familia<em>, aunque siempre merece la pena estudiar
+    los programas del conjunto evaluando primero las propiedades comunes del conjunto y determinando posteriormente las
+    propiedades especiales de los miembros individuales de la familia</em>
+</blockquote>
+<h3>
+    Captura de la variabilidad
+</h3>
+<p>
+    Muchos sistemas se crean con muy poca previsión para incorporar los cambios resultantes de nuevos requisitos. El
+    análisis de factores comunes y variabilidad crea un diseño elástico que es mucho más adaptable al cambio. Esto se lleva
+    a cabo evitando la codificación y el diseño duros de aspectos del dominio que se anticipan al cambio a través del
+    proceso de <i>externalización</i>: separando los aspectos más rápidamente cambiantes de los aspectos funcionales y
+    estructurales del dominio de los aspectos más estables y no cambiantes. Esta técnica permite que el diseño del sistema
+    evoluciones y crezca en razón de los nuevos requisitos sin alteraciones intrusivas. Durante el análisis, los factores
+    comunes y las variabilidades se modelan en términos de jerarquías de tipo. Cada punto de variabilidad se identifica y
+    externaliza. Por ejemplo, instancias de variación como <em>Cliente de organización</em> y <em>Cliente individual</em>
+    se pueden modelar como dos realizaciones de un <em>Tipo de cliente</em> que puede posteriormente expandirse cuando sea
+    necesario. El tipo externalizado (caso de Tipo de cliente) está asociado con las reglas del cliente que incluyen a
+    todos los clientes y permiten que se realicen ajustes y extensiones en tipos de regla específicos y en cada tipo de
+    cliente.
+</p>
+<p>
+    El primer paso en el análisis es la identificación de dependencias en el tipo tanto desde la perspectiva funcional
+    (estáticas) como desde la de proceso (dinámica). La identificación de tipos de procesos que depende de tipos de
+    entidades (funcional) es una buena heurística para la refactorización del diseño:
+</p>
+<ul>
+    <li>
+        Identificar elementos comunes de función y proceso (por ejemplo, Proceso empresarial de reserva).
+    </li>
+    <li>
+        Separar aspectos cambiantes de aspectos menos cambiantes. Identificar tipos clave relacionados con función y
+        proceso que se anticipen al cambio o que sean dependientes (el Tipo de reserva varía según el tipo de
+        cliente;&nbsp;si el tipo de cliente cambia, el Tipo de reserva puede cambiar en consecuencia).
+    </li>
+    <li>
+        Externalizar las variaciones y crear jerarquías de tipo con instancias conocidas (el Tipo de frecuencia es
+        Preferido o Regular, la Parte es Organizativa o Individual).
+    </li>
+</ul>
+<p>
+    Estos puntos de variabilidad son un componente clave de los sistemas de compilación flexibles y adaptables. Al
+    externalizar los puntos de variabilidad, podemos modificarlos sin que ello tenga impacto en el resto del diseño. Por
+    tanto, el efecto onda del cambio queda contenido y limitado por los puntos de variabilidad. Un diagrama de clase UML
+    que muestra esta jerarquía ofrece una guía básica para un diseño detallado y, en última instancia, para la
+    implementación.
+</p>Los principios básicos de&nbsp;diseño de factores comunes y variabilidad son por lo tanto: <br />
+<br />
+<ol style="MARGIN-TOP: 0in" type="1">
+    <li>
+        Separar los aspectos cambiantes de los menos cambiantes de un dominio
+    </li>
+    <li>
+        Separar la interfaz de la implementación
+    </li>
+    <li>
+        Concretar lo que cambia. Si algún elemento del dominio está en constante flujo, entonces podríamos garantizar la
+        materialización de dicho elemento en una clase (o en una capa más alta de reutilización).
+    </li>
+    <li>
+        Crear activos en cada nivel de reutilización. Los niveles de reutilización son los siguientes: clase base,
+        jerarquía de herencia, jerarquía de agregación, clúster, infraestructura, componente, patrón, arquitectura
+        genérica.
+    </li>
+    <li>
+        Cada elemento de reutilización tiene sus propias reglas de comportamiento, además de los metadatos necesarios para
+        autodescribir de forma reflexiva y adaptable el elemento de reutilización para las consultas de tiempo de ejecución
+        de las funciones de servicio
+    </li>
+</ol>
+<h3>
+    Referencias
+</h3>
+<p>
+    [Arsanjani]&nbsp;&nbsp;&nbsp; A. Arsanjani. <em>Rule Object: A Pattern Language for Flexible Modeling and Construction
+    of Business Rules.</em> Washington University Technical Report number:&nbsp; wucs-00-29, Proceedings of the Pattern
+    Languages of Program Design, 2000.
+</p>
+<p>
+    [Coplien]&nbsp;&nbsp;&nbsp; J. O. Coplien. <em>Multi-Paradigm Design for C++.</em> Addison-Wesley Professional; primera
+    edición, 1998.
+</p>
+<p>
+    [Gabriel]&nbsp;&nbsp;&nbsp; R. P. Gabriel. <em>Patterns of Software: Tales from the Software Community</em>. Oxford
+    University Press, 1998.
+</p>
+<p>
+    [GBS]&nbsp;&nbsp;&nbsp; J. van Gurp, J. Bosch and M. Svahnberg. <em>Managing Variability in Software Product
+    Lines</em>. <a href="http://citeseer.ist.psu.edu/568368.html">http://citeseer.ist.psu.edu/568368.html</a>
+</p>
+<p>
+    [GHJV]&nbsp;&nbsp;&nbsp; E. Gamma, R. Helm, R. Johnson, J. Vlissides. <em>Design Patterns</em>. Addision-Wesley 1994.
+</p>
+<p>
+    [JGBS01]&nbsp;&nbsp;&nbsp; J. van Gurp, J. Bosch, and M. Svahnberg. <em>On the notion of variability in&nbsp;software
+    product lines</em>. In Proceedings 2nd Working IEEE / IFIP Conference on Software Architecture (WICSA), páginas 45--54.
+    IEEE Computer Society, 2001. <a href="http://citeseer.ist.psu.edu/vangurp01notion.html">http://citeseer.ist.psu.edu/vangurp01notion.html</a>
+</p>
+<p>
+    [JB02]&nbsp;&nbsp;&nbsp; M. Jaring, J. Bosch, <em>Representing Variability in Software Product Lines: A Case
+    Study</em>, de aparición en la Second Product Line Conference (SPLC-2), San Diego CA, 19-22 de agosto de 2002. <a href="http://citeseer.ist.psu.edu/jaring02representing.html">http://citeseer.ist.psu.edu/jaring02representing.html</a>
+</p>
+<p>
+    [MRR04]&nbsp;&nbsp;&nbsp; Jurgen Meister, Ralf Reussner, and Martin Rohde. <em>Managing Product Line Variability by
+    Patterns</em>. <a href="http://se.informatik.uni-oldenburg.de/pubdb_files/pdf/ManagingProductLineVariabilityByPatterns-Final.pdf">http://se.informatik.uni-oldenburg.de/pubdb_files/pdf/ManagingProductLineVariabilityByPatterns-Final.pdf</a>
+</p>
+<p>
+    [Parnas]&nbsp;&nbsp;&nbsp; <span class="m"><span class="h">D. L. Parnas. <em>On the Design and Development of Program
+    Families</em>. IEEE Transactions on Software Engineering, SE-2(1):1--9, 1976.</span></span>
+</p>
+<p>
+    [SBM01]&nbsp;&nbsp;&nbsp; A. Stephenson, D. Buttle and J. McDermid. <em>Extending Commonality Analysis for Embedded
+    Control System Families</em>. Lecture Notes in Computer Science, Volume 1951, 2001. <a href="http://citeseer.ist.psu.edu/stephenson51extending.html">http://citeseer.ist.psu.edu/stephenson51extending.html</a>
+</p>
+<p>
+    [SGB01]&nbsp;&nbsp;&nbsp; M. Svahnberg, J. van Gurp, J. Bosch, <em>A Taxonomy of Variability Realization
+    Techniques</em>, submitted June 2001. <a href="http://citeseer.ist.psu.edu/svahnberg01taxonomy.html">http://citeseer.ist.psu.edu/svahnberg01taxonomy.html</a>
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

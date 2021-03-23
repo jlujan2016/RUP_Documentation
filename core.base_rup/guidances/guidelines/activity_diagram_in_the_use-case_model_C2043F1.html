@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Diagrama de actividad en el modelo de gui&oacute;n de uso</title>
+<meta content="Guideline" name="uma.type">
+<meta content="activity_diagram_in_the_use-case_model" name="uma.name">
+<meta content="Diagrama de actividad en el modelo de gui&oacute;n de uso" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{B1526BC5-E346-42CB-A08A-3C0D7F382407}", "7.230899877161861E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "7.230899877161861E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="7.230899877161861E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Diagrama de actividad en el modelo de gui&oacute;n de uso</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Un diagrama de actividad puede representar un flujo en un guión de uso. Estas directrices describen cómo utilizar un diagrama de actividad en esta situación.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/detail_a_use_case_D9BECBF4.html" guid="{536BC669-A8FB-426D-88FF-CBEA806A9066}">Detallar un guión de uso</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">Caso de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<p>
+    El flujo de sucesos de un guión de uso describe qué debe hacer el sistema para proporcionar valor a un actor. Consta de
+    una secuencia de tareas que en conjunto produce algo para el actor. El flujo de sucesos consta de un flujo básico, y
+    uno o varios flujos alternativos.
+</p>
+<p>
+    El flujo de sucesos de un guión de uso se puede describir gráficamente con la ayuda de un diagrama de actividad. Este
+    diagrama muestra:
+</p>
+<ul>
+    <li>
+        <b>Estados de actividad</b>, que representan el rendimiento de una tarea o paso en el flujo de sucesos.
+    </li>
+    <li>
+        <a id="XE_transition_(in_activity_diagrams)__in_business_use-case_model" name="XE_transition_(in_activity_diagrams)__in_business_use-case_model" class="index" key="transition (in activity diagrams)" text="in business use-case model"></a><b>Transiciones</b> que muestran qué
+        estado de actividad sigue al anterior. A veces se hace referencia a este tipo de transición como transición de
+        terminación, ya que difiere de una transición en que no requiere un suceso desencadenante explícito, se desencadena
+        con la terminación de la tarea que representa el estado de actividad.
+    </li>
+    <li>
+        <a id="XE_decision_(in_activity_diagrams)__business_use-case_model" name="XE_decision_(in_activity_diagrams)__business_use-case_model" class="index" key="decision (in activity diagrams)" text="business use-case model"></a><b>Decisiones</b> para las que se define
+        un conjunto de <b>condiciones de vigilancia</b>. Estas condiciones de vigilancia controlan qué transición (de un
+        conjunto de transiciones alternativas) sigue una vez se ha completado la tarea. Las decisiones y las condiciones de
+        vigilancia le permiten mostrar <b>hebras alternativas</b> en el flujo de sucesos de un guión de uso.
+    </li>
+    <li>
+        <b>Barras de sincronización</b> que puede utilizar para mostrar subflujos paralelos. Las barras de sincronización
+        le permiten mostrar <b>hebras concurrentes</b> en el flujo de sucesos de un guión de uso.
+    </li>
+</ul>
+<p align="center">
+    <img height="495" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_act.gif" width="510" />
+</p>
+<p class="picturetext">
+    Un diagrama de actividad simplificado para el guión de uso Retirar dinero en el modelo de guión de uso de un cajero
+    automático.
+</p>
+<p>
+    Un diagrama de actividad es un caso especial de diagrama de gráfico de estados donde todos o la mayoría de los estados
+    son estados de actividad y donde todas o la mayoría de las transiciones están desencadenadas por la terminación de
+    acciones en los estados de origen.<br />
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

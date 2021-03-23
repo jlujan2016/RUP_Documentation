@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Ideas de prueba para diagramas de gr&aacute;fico y diagramas de flujo</title>
+<meta content="Guideline" name="uma.type">
+<meta content="test_ideas_for_statechart_and_flow_diagrams" name="uma.name">
+<meta content="Ideas de prueba para diagramas de gr&aacute;fico y diagramas de flujo" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "3.794638918140148E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3lZjkCxqEdqYV4MWf8PiCw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "3.794638918140148E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "3.794638918140148E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "3.794638918140148E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.794638918140148E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Ideas de prueba para diagramas de gr&aacute;fico y diagramas de flujo</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Ideas de prueba basadas en anomalías de software plausibles y en cómo descubrir dichas anomalías. En esta directriz se muestra cómo identificar ideas de prueba de diagramas de gráfico y otras estructuras de diseño similares a gráficos.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_test_ideas_list_2A0F8E03.html" guid="{45219F27-0F84-4FD5-A7BC-73C19226303B}">Lista de ideas de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="máquina de estado" text="probar ideas para" name="XE_state_machine__test_ideas_for" id="XE_state_machine__test_ideas_for" class="index"></a><a key="idea de prueba" text="para máquina de estado" name="XE_test_idea__for_state_machine" id="XE_test_idea__for_state_machine" class="index"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">Introducción</a>
+</h3>
+<p>
+    En esta directriz se muestra cómo identificar <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/test-ideas_list_A6CEF011.html#TestIdeas" guid="6.149711039531016E-305">ideas de
+    prueba</a> de diagramas de gráfico y otras estructuras de diseño que constan, básicamente, de nodos conectados por
+    medio de arcos, y muestran parte de los flujos de control posibles de un programa. El objetivo principal de esta prueba
+    es cruzar todos los arcos en una prueba determinada. Si nunca ha ejecutado un arco, ¿por qué piensa que va a funcionar
+    cuando lo ejecute un cliente?
+</p>
+<h3>
+    <a id="Implementation" name="Implementation">Prueba de la implementación</a>
+</h3>
+<p>
+    Considere este diagrama de estado:
+</p>
+<p align="center">
+    <img height="253" alt="Diagrama descrito en el título."     src="./../../../core.base_rup/guidances/concepts/resources/tstfrsdsg-img3.gif" width="567" />
+</p>
+<p class="picturetext">
+    Figura 1: Diagrama de estado de HVAC
+</p>
+<p>
+    Esta es la primera lista de ideas de prueba:
+</p>
+<ul>
+    <li>
+        El estado Desocupado recibe el suceso Demasiado caliente
+    </li>
+    <li>
+        El estado Desocupado recibe el suceso Demasiado frío
+    </li>
+    <li>
+        El estado Enfriando/Arranque recibe el suceso Compresor en ejecución
+    </li>
+    <li>
+        El estado Enfriando/Preparado recibe el suceso Ventilador en ejecución
+    </li>
+    <li>
+        El estado Enfriando/En ejecución recibe el suceso Aceptar
+    </li>
+    <li>
+        El estado Enfriando/En ejecución recibe el suceso Anomalía
+    </li>
+    <li>
+        El estado Anomalía recibe el suceso Anomalía resuelta
+    </li>
+    <li>
+        El estado Calentando recibe el suceso Aceptar
+    </li>
+    <li>
+        El estado Calentando recibe el suceso Anomalía
+    </li>
+</ul>
+<p>
+    Todas estas ideas se pueden ejecutar en una sola prueba, o bien, se pueden crear varias pruebas y que cada una ejecute
+    unas cuantas. Como todo el diseño de prueba, procure conseguir un equilibrio entre la facilidad de implementación de
+    varias pruebas simples y la posibilidad de búsqueda de defectos adicionales de las pruebas complejas. (Consulte el
+    apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/test-ideas_list_A6CEF011.html#TestDesignUsingTheList" guid="6.149711039531016E-305">"diseño de pruebas utilizando la lista"</a> de la página <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/test-ideas_list_A6CEF011.html" guid="6.149711039531016E-305">Concepto: Lista de ideas de prueba</a>). Si tiene casos de ejemplo de guiones de uso que
+    describan vías de acceso determinadas a través del diagrama de estado, debe privilegiar las pruebas que tomen dichas
+    vías de acceso.
+</p>
+<p>
+    En cualquier caso, las pruebas deben comprobar que todas las acciones que necesita el diagrama de estado se llevan a
+    cabo realmente. Por ejemplo, ¿se inicia la alarma al entrar en el estado Anomalía y se detiene al salir?
+</p>
+<p>
+    La prueba también debe comprobar que la transacción conduzca al siguiente estado correcto. Puede ser un problema
+    difícil cuando los estados son invisibles desde fuera. El único modo de detectar un estado incorrecto es inyectar
+    alguna secuencia de sucesos que conduzca a la salida incorrecta. Con mayor precisión, debe construir una secuencia de
+    seguimiento de los sucesos cuyos resultados visibles externamente para el estado <i>correcto</i> difieran de los que
+    provoca la misma secuencia a partir de cada estado <i>incorrecto</i> posible.
+</p>
+<p>
+    En el ejemplo anterior, ¿cómo podría saber que el suceso Anomalía resuelta del estado Anomalía conduce correctamente al
+    estado Desocupado, en lugar de permanecer en el estado Anomalía? Puede confiar en que al detener la Alarma, la
+    transición se ha llevado a cabo, pero quizá sería mejor comprobarlo bajando la temperatura lo suficiente como para que
+    se encienda el calentador o subirla lo bastante como para que se active el enfriamiento. En este caso, estaría más
+    seguro de que la transición es correcta. Si no sucede nada, es probable que el dispositivo se mantenga en el estado
+    Anomalía.
+</p>
+<p>
+    Determinar si el estado resultante es correcto complica, por lo menos, el diseño de la prueba. Con frecuencia, es mejor
+    explicitar la máquina de estado y convertir sus estados en visibles para los verificadores.
+</p>
+<h4>
+    Otras construcciones de diagramas de estado
+</h4>
+<p>
+    Los diagramas de estado constan de algo más que arcos y flechas. A continuación se incluye una lista de las
+    construcciones de diagramas de estado y el efecto que tienen en la lista de ideas de prueba.
+</p>
+<h5>
+    Acciones de sucesos, acciones de entrar y acciones de salir
+</h5>
+<p>
+    Estas acciones no generan ideas de prueba en sí mismas. En vez de ello, las pruebas deben comprobar que las acciones se
+    comporten tal como se ha especificado. Si las acciones representan programas importantes, dichos programas se deben
+    probar. Las ideas de prueba para los programas se pueden combinar con ideas de prueba del diagrama de estado pero,
+    probablemente, sea más gestionable separarlos. Tome la decisión en base al esfuerzo implicado, y en la sospecha de que
+    puede haber interacciones entre los sucesos. Es decir, si una acción determinada en un arco no puede compartir datos
+    con una acción de otro arco, no hay motivo para ejecutar ambas acciones en la misma prueba (como sí la habría si fueran
+    parte de la misma vía de acceso a través de una prueba del diagrama de estado).
+</p>
+<h5>
+    Condiciones de vigilancia
+</h5>
+<p>
+    Las condiciones de vigilancia son expresiones booleanas. Las ideas de prueba para las condiciones de vigilancia derivan
+    de las que se describen en el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_ideas_for_booleans_and_boundaries_74AE938C.html" guid="1.8659406802663404E-305">Directriz de Producto de trabajo: Ideas de prueba para booleanos y límites</a>.
+</p>
+<p>
+    En el ejemplo anterior, la transición Demasiado frío del estado Desocupado se vigila con [tiempo de reinicio &gt;= 5
+    minutos]. Esto conduce a dos ideas de prueba separadas:
+</p>
+<ul>
+    <li>
+        El estado Desocupado recibe el suceso Demasiado frío cuando el tiempo de reinicio es de cinco minutos (transición
+        adoptada)
+    </li>
+    <li>
+        El estado Desocupado recibe el suceso Demasiado frío cuando el tiempo de reinicio es inferior a cinco minutos
+        (transición bloqueada)
+    </li>
+</ul>
+<p>
+    En ambos casos, cualquier prueba que utilice la idea de prueba debe comprobar que se alcance el estado correcto.
+</p>
+<h5>
+    Transiciones internas
+</h5>
+<p>
+    Una transición interna añade el mismo tipo de ideas a una idea de prueba que una transición externa. Se trata,
+    simplemente, de que el estado siguiente sea el mismo que el estado original. Sería prudente establecer la prueba de
+    modo que las acciones de entrar y salir del estado causaran un efecto visible si se desencadenaran de modo incorrecto.
+</p>
+<h5>
+    Estados anidados
+</h5>
+<p>
+    Cuando construya pruebas, establézcalas de modo que los sucesos de entrada y salida del estado compuesto tengan efectos
+    visibles. Lo que se desea es observar si se saltan.
+</p>
+<h5>
+    Subestados concurrentes
+</h5>
+<p>
+    La prueba de concurrencia se sitúa fuera del ámbito de prueba del desarrollador.
+</p>
+<h5>
+    Sucesos diferidos
+</h5>
+<p>
+    Si sospecha que un suceso se puede manejar de modo diferente en función de si se ha diferido y puesto en cola, en lugar
+    de generarse mientras el programa se encuentra, en realidad, en el estado receptor, puede probar ambos casos.
+</p>
+<p>
+    Si el suceso del estado receptor tiene una condición de vigilancia, considere las ramificaciones de cambios a las
+    variables de la condición entre el tiempo en el que se ha generado el suceso y el tiempo en el que se ha recibido.
+</p>
+<p>
+    Si más de un estado puede manejar un suceso diferido, puede probar la condición de diferido para cada uno de los
+    estados receptores posibles. Es posible que la implementación dé por supuesto que el estado "obvio" va a manejar el
+    suceso.
+</p>
+<h5>
+    Estados de historial
+</h5>
+<p>
+    A continuación, se incluye un ejemplo de un estado de historial:
+</p>
+<p align="center">
+    <img height="211" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/md_state3.gif" width="412" />
+</p>
+<p class="picturetext">
+    Figura 2: Ejemplo de estado de historial
+</p>
+<p>
+    La transición al estado de historial representa tres transiciones reales y, por lo tanto, tres ideas de prueba:
+</p>
+<ul>
+    <li>
+        El suceso Copia de seguridad del estado Mandato conduce al estado Recopilando
+    </li>
+    <li>
+        El suceso Copia de seguridad del estado Mandato conduce al estado Copiando
+    </li>
+    <li>
+        El suceso Copia de seguridad del estado Mandato conduce al estado Limpiando
+    </li>
+</ul>
+<h5>
+    Estados de cadena
+</h5>
+<p>
+    Los estados de cadena parecen no tener implicaciones en el diseño de prueba, excepto que presentan más acciones que se
+    deben comprobar.
+</p>
+<h3>
+    <a id="Design" name="Design">Prueba del diseño</a>
+</h3>
+<p>
+    El tema anterior se centra en comprobar si la implementación coincide con el diseño. Pero el diseño también puede ser
+    incorrecto. Cuando examine el diseño para buscar ideas de prueba, compruebe también dos tipos de problemas:
+</p>
+<p>
+    <b>Sucesos que faltan</b>. El diagrama de estado muestra la respuesta de un estado a sucesos <i>que el diseñador ha
+    previsto que podían llegar a dicho estado</i>. No se debe ignorar que los diseñadores pueden pasar suceso por alto. Por
+    ejemplo, en este diagrama de estado (repetido desde la parte superior de la página), es posible que el diseñador se
+    haya olvidado de que se puede producir una anomalía en el subestado Preparado de Enfriando, no sólo cuando el
+    ventilador está en ejecución.
+</p>
+<p align="center">
+    <img height="253" alt="Diagrama descrito en el título."     src="./../../../core.base_rup/guidances/concepts/resources/tstfrsdsg-img3.gif" width="567" />
+</p>
+<p class="picturetext">
+    Figura 3: Diagrama de estado de HVAC
+</p>
+<p>
+    Por este motivo, es aconsejable preguntar, para cada estado, si alguno de los elementos que se aplica a otros estados
+    se puede aplicar también a este. Si descubre alguno que sí se aplique, corrija el diseño.
+</p>
+<p>
+    <b>Faltan condiciones de vigilancia o están incompletas</b>. De forma similar, es posible que las condiciones de
+    vigilancia de una transición sugieran condiciones de vigilancia en otras transiciones. Por ejemplo, en el diagrama de
+    estado anterior se procura no reiniciar el calentador con demasiada frecuencia, pero no existe tal restricción en el
+    sistema de enfriamiento. ¿Debería estar?
+</p>
+<p>
+    También es posible que las variables utilizadas en una condición de vigilancia sugieran que otras condiciones de
+    vigilancia son demasiado simples.
+</p>
+<h3>
+    <a id="Interactions" name="Interactions">Prueba de interacciones</a>
+</h3>
+<p>
+    La prueba de cada arco de un gráfico no es, en modo alguno, una prueba completa. Por ejemplo, suponga que el estado de
+    arranque inicializa una variable 0, el estado Especificador la establece en 5, y el estado Divisor la divide por 100
+    (variable/100). Si hay una vía de acceso del estado de arranque al Divisor que no pasa a través de Especificador, tiene
+    una excepción de dividir por cero. Si el diagrama de estado tiene varios estados, al ejecutar sólo cada arco es posible
+    que falte dicha vía de acceso.
+</p>
+<p>
+    Excepto en el caso de los diagramas de estado muy sencillos, es poco viable probar cada vía de acceso. En la práctica,
+    las pruebas complejas que corresponden a casos de ejemplo de guiones de uso suelen ser suficientes. Si desea pruebas
+    más completas, considere la necesidad de una vía de acceso de cada estado donde los datos tengan un valor para cada
+    estado que los utilice.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

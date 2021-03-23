@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Dependencia de importaci&oacute;n de dise&ntilde;o</title>
+<meta content="Guideline" name="uma.type">
+<meta content="import_dependency_in_design" name="uma.name">
+<meta content="Dependencia de importaci&oacute;n de dise&ntilde;o" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "5.099920218485599E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "5.099920218485599E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "5.099920218485599E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "5.099920218485599E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="5.099920218485599E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Dependencia de importaci&oacute;n de dise&ntilde;o</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">La dependencia de importación es una relación entre paquetes. En esta directriz se explica esta relación.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Modelo de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="dependencia de importación en el diseño" text="directrices para" name="XE_import-dependency_in_design__guidelines_for" id="XE_import-dependency_in_design__guidelines_for" class="index"></a><a key="paquete de diseños" text="organizar el uso de la dependencia de importación" name="XE_design_package__organizing_using_import-dependency" id="XE_design_package__organizing_using_import-dependency" class="index"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">Explicación</a>
+</h3>
+<p>
+    Manejar las dependencias de importación es un aspecto importante de la estructuración de un modelo de objeto. Un
+    paquete depende de otro si cualquiera de sus clases tiene relaciones que son navegables a clases del otro paquete. Para
+    expresar tales dependencias, utilice la dependencia de importación de un paquete al paquete del que depende.
+</p>
+<p class="picturecenter" align="center">
+    <img height="284"     alt="Diagrama que muestra las relaciones entre un componente y un operador, una alarma y la impresora, un cliente y un elemento de depósito."      src="./../../../core.base_rup/guidances/guidelines/resources/md_andi2.gif" width="385" />
+</p>
+<p class="picturetext">
+    Las dependencias entre paquetes se expresan con dependencia de importación.
+</p>
+<h3>
+    <a key="capas" text="organizar paquetes de diseño utilizando la dependencia de importación" name="XE_layering__organizing_design_packages_using_import_dependency" id="XE_layering__organizing_design_packages_using_import_dependency" class="index"></a><a key="dependencia de importación en el diseño" text="organizar los paquetes con" name="XE_import-dependency_in_design__organizing_packages_with" id="XE_import-dependency_in_design__organizing_packages_with" class="index"></a><a id="Use" name="Use">Utilización</a>
+</h3>
+<p>
+    Las dependencias de importación se evolucionan del modo siguiente:
+</p>
+<ul>
+    <li>
+        Antes de empezar a trabajar con el modelo de objeto, realice esquematizaciones de las dependencias para utilizarlas
+        como modelo de objeto durante el trabajo.
+    </li>
+    <li>
+        Cuando se completa el modelo, utilícelo para mostrar las dependencias reales. Esto conlleva la actualización de las
+        dependencias de importación en el modelo de objeto.
+    </li>
+    <li>
+        Si ha dividido el modelo en paquetes anteriormente, utilice las dependencias de importación para mostrar dónde se
+        permiten las dependencias.
+    </li>
+    <li>
+        El modo en que los paquetes dependen de otros afecta a la tolerancia del sistema a los cambios. Un modelo de objeto
+        será más fácil de cambiar si:
+    </li>
+    <li>
+        Hace referencia a un número mínimo de clases contenidas a partir del exterior de cada paquete. Si hace referencia a
+        muchas clases, el paquete puede tener demasiadas responsabilidades diferentes y debe dividirse en dos.
+    </li>
+    <li>
+        Haga que cada paquete dependa de otros paquetes.
+    </li>
+    <li>
+        Pruebe cada paquete por separado. Esto significa que debe poder probar un paquete simulando el paquete del que
+        depende. No debe necesitar otros paquetes para estar completamente o casi totalmente implementado. Si puede probar
+        un paquete por separado, el desarrollo del sistema y el mantenimiento de cada paquete será más sencillo.
+    </li>
+    <li>
+        Coloque los componentes generales del modelo de objeto en paquetes separados de que dependen otros paquetes. Si
+        existe tal paquete, preste mucha atención al manejo del release, ya que muchos componentes del sistema pueden verse
+        afectados por los cambios del paquete.
+    </li>
+</ul>
+<p class="exampleheading">
+    Ejemplo
+</p>
+<p class="example">
+    Imagine que encuentra algo en común entre las clases <b>Panel de cliente</b> y <b>Panel de operador</b> en la máquina
+    de reciclaje. Asigna estos servicios generales a una nueva clase, <b>Panel</b> que coloca en un nuevo paquete,
+    <b>Paneles</b>. Las otras dos clases pueden hacer referencia a esta clase para utilizar servicios generales. Como las
+    clases pertenecen a dos paquetes separados, los dos paquetes dependerán del nuevo paquete. Esta eliminación de
+    redundancia implica que los cambios en la funcionalidad común sólo necesitan realizarse en un lugar.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

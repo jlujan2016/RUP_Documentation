@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Interfaces para aplicaciones J2EE</title>
+<meta content="Guideline" name="uma.type">
+<meta content="interfaces_for_j2ee_applications" name="uma.name">
+<meta content="Interfaces para aplicaciones J2EE" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{C6938487-1DAA-4F6A-B3BC-CB99165F0680}", "4.292643163694118E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.292643163694118E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.292643163694118E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Interfaces para aplicaciones J2EE</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata el diseño de interfaces para aplicaciones J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_interface_9816B54F.html" guid="{C6938487-1DAA-4F6A-B3BC-CB99165F0680}">Interfaz</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    Una interfaz de Java, tal como se define en la sintaxis del lenguaje Java, no se limita a tener operaciones; también
+    puede tener campos Java, clases o miembros de interfaz. Por esta razón, las interfaces de Java se modelan como clases
+    con un estereotipo &lt;&lt;JavaInterface&gt;&gt;.
+</p>
+<p>
+    La interfaz UML no posee una correlación directa con un constructor de lenguaje en el desarrollo de J2EE o Java.
+</p>
+<h3>
+    <a id="Interfaces in Preliminary Design" name="Interfaces in Preliminary Design"></a>Interfaces en el diseño Java
+</h3>
+<p>
+    A pesar de que las interfaces UML no se correlacionan con un constructor de lenguaje en Java o J2EE, hay situaciones en
+    las que el diseñador podría querer utilizarlas. Algunas posibles razones son:
+</p>
+<ul>
+    <li>
+        Dirigirse potencialmente a otros lenguajes y tecnologías.
+    </li>
+    <li>
+        Expresar la idea de una interfaz sin decidirse en principio si se utilizará una interfaz Java o bien algún tipo de
+        clase de acceso o de delegado.
+    </li>
+</ul>
+<p>
+    Si la implementación del lenguaje es Java, se podría decidir utilizar clases con el estereotipo
+    &lt;&lt;JavaInterface&gt;&gt; en el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">modelo
+    de diseño</a> en lugar de las interfaces UML. Esto permite que el modelo de diseño evolucione con más facilidad y que
+    permanezca coherente con el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">modelo de implementación</a> (consulte la sección <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/mapping_from_design_to_code_D1454680.html" guid="1.424219730601675E-305">Concepto: Correlación desde el diseño al código</a> para obtener más información).
+</p>
+<p>
+    Observe que las clases con el estereotipo &lt;&lt;JavaInterface&gt;&gt; no se pueden representar como <i>lollipops</i>
+    en el exterior de componentes o subsistemas UML. En vez de ello, las interfaces expuestas se muestran como elementos
+    visibles públicamente que un subsistema posee o como elementos visibles públicamente que residen en un componente UML.
+</p>
+<h3>
+    <a id="Interfaces in EJB Design" name="Interfaces in EJB Design"></a>Interfaces en el diseño de EJB
+</h3>
+<p>
+    Las interfaces EJB son especializaciones de las interfaces Java. Sus estereotipos se describen en la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_enterprise_javabeans_ejbs_2581AEE5.html" guid="9.931732120190802E-307">Directriz: identificación de Enterprise JavaBeans (EJB)</a>.
+</p>
+<p>
+    El diseñador podría querer utilizar interfaces UML, clases con el estereotipo &lt;&lt;JavaInterface&gt;&gt; o bien
+    clases con estereotipos específicos de EJB para modelar interfaces dependiendo de lo estrecha que desee el diseñador
+    que sea la correlación con una implementación particular.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

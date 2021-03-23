@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Comparaci&oacute;n de l&iacute;neas base utilizando Rational ClearCase</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="comparing_baselines" name="uma.name">
+<meta content="Comparaci&oacute;n de l&iacute;neas base utilizando Rational ClearCase" name="uma.presentationName">
+<meta content="Tool:rup_clearcase:Rational ClearCase" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational ClearCase" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{8707215B-CA9D-4C5D-B08C-AECB4DF1DBA5}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{8707215B-CA9D-4C5D-B08C-AECB4DF1DBA5}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{8707215B-CA9D-4C5D-B08C-AECB4DF1DBA5}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_hsuoEDIFEdqwaNnSEheSAg", "{D6FFB987-F032-4B65-9290-2A501FBB9FF8}", "{8707215B-CA9D-4C5D-B08C-AECB4DF1DBA5}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_85i-sDIFEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{8707215B-CA9D-4C5D-B08C-AECB4DF1DBA5}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_XxCC0AIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{8707215B-CA9D-4C5D-B08C-AECB4DF1DBA5}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{8707215B-CA9D-4C5D-B08C-AECB4DF1DBA5}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{8707215B-CA9D-4C5D-B08C-AECB4DF1DBA5}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{8707215B-CA9D-4C5D-B08C-AECB4DF1DBA5}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Comparaci&oacute;n de l&iacute;neas base utilizando Rational ClearCase</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo comparar dos líneas base de un componente UCM con el navegador del árbol de componentes de Rational ClearCase.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_clearcase_9665C.html" guid="{B2D1373B-A826-4169-A38A-B53B2122DC7C}">Rational ClearCase</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/update_workspace_59C1448.html" guid="{D6FFB987-F032-4B65-9290-2A501FBB9FF8}">Actualizar el espacio de trabajo</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/report_on_configuration_status_9ECFA6E8.html" guid="{500A96BD-80F5-4E04-BCAB-CCE48F98639C}">Informar del estado de la configuración</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <b>Visión general</b>
+</h3>
+<p>
+    En ClearCase, una línea base UCM representa, generalmente, una configuración estable para un componente. &nbsp;Una
+    línea base identifica actividades y una versión de cada elemento visible en uno o más componentes. &nbsp;El navegador
+    del árbol de componentes de ClearCase es una GUI que muestra el historial de líneas bases de un componente. Lo puede
+    utilizar para comparar el contenido de dos líneas base.
+</p>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Microsoft Windows.
+</p>
+<h3>
+    Pasos de la herramienta
+</h3>
+<p>
+    Para comparar dos líneas base de un proyecto de UCM debe:
+</p>
+<div align="left">
+    <ol>
+        <li>
+            <a href="#StartClearCaseExplorer">Iniciar el Explorador de ClearCase</a>
+        </li>
+        <li>
+            <a href="#OpenTheTreeBrowserForSpecifiedComponent">Abrir el navegador del árbol de componentes para un
+            componente especificado</a>
+        </li>
+        <li>
+            <a href="#SelectBaselineAndComparisonParameters">Seleccionar una línea base y elegir parámetros de
+            comparación</a>
+        </li>
+    </ol>
+    <p>
+        Para obtener más información, consulte el manual de ClearCase <i>Managing Software Projects</i>.
+    </p>
+</div>
+<h3>
+    1.&nbsp;<a id="StartClearCaseExplorer" name="StartClearCaseExplorer">Iniciar el Explorador de ClearCase</a>
+</h3>
+<p>
+    Para localizar el componente cuyo historial de líneas base desea ver, lleve a cabo este paso:
+</p>
+<ul>
+    <li>
+        Desde la barra de tareas de Windows, pulse <b>Inicio &gt; Programas &gt; Software Rational &gt; Rational ClearCase
+        &gt; Explorador de ClearCase</b>.
+    </li>
+</ul>
+<h3 align="left">
+    2.&nbsp;<a id="OpenTheTreeBrowserForSpecifiedComponent" name="OpenTheTreeBrowserForSpecifiedComponent">Abrir el
+    navegador del árbol de componentes para un documento especificado</a>
+</h3>
+<ul>
+    <li>
+        Pulse <b>Buscar líneas base</b> en el menú emergente del componente para iniciar el navegador del árbol de
+        componentes de ClearCase.
+    </li>
+    <li>
+        Pulse la carpeta Componentes del proyecto para que se muestre una lista de componentes.
+    </li>
+    <li>
+        Pulse el botón derecho del ratón sobre un componente para visualizar un menú emergente.
+    </li>
+    <li>
+        Pulse <b>Buscar líneas base</b> para iniciar el navegador del árbol de componentes.
+    </li>
+</ul>
+<p>
+    <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> Consulte el tema
+    que trata sobre el <i>navegador del árbol de componentes de ClearCase</i> de la ayuda en línea de ClearCase.
+</p>
+<h3>
+    3. <a id="SelectBaselineAndComparisonParameters" name="SelectBaselineAndComparisonParameters">Seleccionar una línea
+    base y elegir parámetros de comparación</a>
+</h3>
+<ul>
+    <li>
+        Seleccione una de las líneas base visualizadas como base de la comparación.
+    </li>
+    <li>
+        En el menú <b>Herramientas</b>, elija uno de los elementos de menú <b>Comparar...</b>. Se le solicita que
+        proporcione una segunda línea base para utilizarla en la comparación.
+    </li>
+    <li>
+        Puede ver diferencias en términos de actividades o de versiones. Pulse la pestaña adecuada para elegir lo que
+        desea.
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

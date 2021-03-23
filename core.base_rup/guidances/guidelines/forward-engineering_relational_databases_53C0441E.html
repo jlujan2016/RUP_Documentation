@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Aplicaci&oacute;n de ingenier&iacute;a en bases de datos relacionales</title>
+<meta content="Guideline" name="uma.type">
+<meta content="forward-engineering_relational_databases" name="uma.name">
+<meta content="Aplicaci&oacute;n de ingenier&iacute;a en bases de datos relacionales" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "5.250868507423771E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "5.250868507423771E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "5.250868507423771E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "5.250868507423771E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="5.250868507423771E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Aplicaci&oacute;n de ingenier&iacute;a en bases de datos relacionales</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se describen los métodos para correlacionar clases de diseño persistentes en el modelo de diseño en tablas del modelo de datos.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/database_design_8552DD3.html" guid="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}">Diseño de base de datos</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Modelo de datos</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="Guidelines: Forward-Engineering Relational Databases" name="Guidelines: Forward-Engineering Relational Databases"></a> 
+<h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    En esta directriz se describen los métodos para correlacionar las <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">clases
+    de diseño</a> persistentes en el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">modelo
+    de diseño</a> en tablas del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">modelo de
+    datos</a>.&nbsp;
+</p>
+<h3>
+    <a id="Transform Design Model Elements to Data Model Elements" name="Transform Design Model Elements to Data Model Elements"></a>Transformación de los elementos del modelo de diseño
+    en elementos del modelo de datos
+</h3>
+<p>
+    Las clases persistentes del modelo de diseño se pueden transformar en tablas en el modelo de datos. &nbsp;En la tabla
+    siguiente se muestra un resumen de la correlación entre los elementos del modelo de diseño y los elementos del modelo
+    de datos.
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="50%">
+                    <p class="Text">
+                        <b>Elemento del modelo de diseño</b>
+                    </p>
+                </th>
+                <th scope="col" width="50%">
+                    <p class="Text">
+                        <b>Elemento del modelo de datos correspondiente</b>
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="50%">
+                    Clase
+                </td>
+                <td width="50%">
+                    Tabla
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    Atributo
+                </td>
+                <td width="50%">
+                    Columna
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        Asociación
+                    </p>
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        Relación de no identificación
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        Clase de asociación
+                    </p>
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        Tabla de intersección
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        Agregación de compuestos
+                    </p>
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        Relación de identificación
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        Asociación varios a varios
+                    </p>
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        Tabla de intersección
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        Multiplicidad
+                    </p>
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        Cardinalidad
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        Asociación calificada
+                    </p>
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        Tabla de intersección
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    Generalización (herencia)
+                </td>
+                <td width="50%">
+                    Tabla separada
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h4>
+    <a id="Mapping Persistent Classes to Tables" name="Mapping Persistent Classes to Tables"></a>Correlación de clases
+    persistentes con tablas
+</h4>
+<p>
+    Las clases persistentes del modelo de diseño representan la información que debe almacenar el sistema. Conceptualmente,
+    dichas clases puede parecer un diseño relacional. (Por ejemplo, las clases del modelo de diseño se pueden reflejar de
+    algún modo como entidades en el esquema relacional). Sin embargo, a medida que el proyecto pasa de la elaboración a la
+    construcción, los objetivos del modelo de diseño y el modelo de datos relacional divergen. La causa de la divergencia
+    se debe a que el objetivo del desarrollo de la base de datos relacional es normalizar datos, mientras que el propósito
+    del modelo de diseño es encapsular en comportamiento cada vez más complejo. La divergencia de ambas perspectivas, datos
+    y comportamiento, conduce a la necesidad de correlacionar entre elementos relacionados de los dos modelos.
+</p>
+<p>
+    En una base de datos relacional escrita en tercera forma normal, cada fila de las tablas, cada "tuple", se considera
+    como un objeto. Una columna de la tabla equivale a un atributo persistente de una clase. (Recuerde que una clase
+    persistente puede tener atributos transitorios). Por este motivo, en el caso simple en el que no existan asociaciones a
+    otras clases, la correlación entre ambos mundos resulta sencilla. El tipo de datos del atributo corresponde a uno de
+    los tipos permitidos para las columnas.
+</p>
+<p class="exampleheading">
+    Ejemplo
+</p>
+<p class="example">
+    La clase Cliente siguiente:
+</p>
+<p align="center">
+    <img height="87" alt="Clase Cliente" src="./../../../core.base_rup/guidances/guidelines/resources/md_rdb1.gif" width="130" />
+</p>
+<p class="example">
+    cuando se modela en RDBMS, convierte para una tabla llamada Cliente, con las columnas ID_Cliente, Nombre y Dirección.
+</p>
+<p>
+    Una instancia de esta tabla se puede visualizar como:
+</p>
+<p align="center">
+    <img height="118" alt="El diagrama muestra parte de la tabla Nuevo objeto de cliente" src="./../../../core.base_rup/guidances/guidelines/resources/md_rdb2.gif"     width="428" />
+</p>
+<h4>
+    <a id="Persistent Attributes and Keys" name="Persistent Attributes and Keys">Claves y atributos persistentes</a>
+</h4>
+<p>
+    Para cada atributo persistente, se pueden plantear preguntas con el objeto de extraer información adicional, que se va
+    a utilizar para modelar correctamente el objeto persistente en un modelo de datos relacional. Por ejemplo:
+</p>
+<ul>
+    <li>
+        ¿Este atributo persistente puede servir como clave o como parte de una clave? Ejemplo: "Atributo X, junto con el
+        atributo Z, identifica únicamente el objeto". En la tabla del cliente, ID_Cliente representa una clave principal.
+    </li>
+    <li>
+        ¿Cuáles son los valores mínimos y máximos del atributo?
+    </li>
+    <li>
+        ¿Será posible buscar utilizando este atributo como clave? Podría formar parte de un filtro en una sentencia de
+        selección como, por ejemplo, "Es común buscar todas las instancias donde Y &gt; 1000."
+    </li>
+    <li>
+        ¿El atributo tiene una descripción, por ejemplo, "el atributo X es el número de retransmisiones por cada 100 000
+        caracteres transmitidos"?
+    </li>
+    <li>
+        ¿El atributo tiene valores numéricos posibles y conversiones deseadas entre valores numéricos diferentes?
+    </li>
+    <li>
+        ¿Quién puede actualizar el atributo? Ejemplo: "Sólo pueden cambiar T las personas que tengan la clase de
+        autorización nn."
+    </li>
+    <li>
+        ¿Quién puede leer el atributo? Ejemplo: "Pueden leer P las personas que tengan las clases de autorización yy y zz",
+        o bien, ""P está incluido en las vistas Vi y Vj".
+    </li>
+    <li>
+        ¿Existe información adecuada sobre volúmenes y frecuencias? Ejemplos: "Existen hasta un máximo de 50 000
+        apariciones de A", o bien, "Cada día se cambian 2000 A de promedio".
+    </li>
+    <li>
+        ¿El atributo es exclusivo? Ejemplo: Sólo una persona puede tener el mismo número de permiso de conducir.
+    </li>
+</ul>
+<h4>
+    <a id="Mapping Associations between Persistent Objects to the Data Model" name="Mapping Associations between Persistent Objects to the Data Model">Correlación de asociaciones entre objetos
+    persistentes y el modelo de datos</a>
+</h4>
+<p>
+    Las asociaciones entre dos objetos persistentes se realizan como claves externas a los objetos asociados. Una clave
+    externa es una columna de una tabla que contiene el valor de la clave principal del objeto asociado.
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    Suponga que existe la asociación siguiente entre Pedido y Cliente:
+</p>
+<p align="center">
+    <img height="211" alt="El diagrama UML muestra la asociación entre Pedido y Cliente." src="./../../../core.base_rup/guidances/guidelines/resources/md_rdb4.gif"     width="135" />
+</p>
+<p class="example">
+    Cuando se correlacionan en tablas relacionales, el resultado es una tabla Pedido y una tabla Cliente. La tabla Pedido
+    tiene columnas para los atributos listados, además de una columna adicional denominada ID_Cliente que contiene
+    referencias de claves externas a la clave principal de la fila asociada a la tabla Cliente. Para un Pedido determinado,
+    la columna ID_Cliente contiene el identificador del cliente al que se ha asociado el pedido. Las claves externas
+    permiten que RDBMS una la información relacionada.
+</p>
+<h4>
+    <a id="Mapping Aggregation Associations to the Data Model" name="Mapping Aggregation Associations to the Data Model">Correlación de asociaciones de agregación con el modelo de
+    datos</a>
+</h4>
+<p>
+    La agregación también se modela utilizando relaciones de clave externa.
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    Suponga que existe la asociación siguiente entre Pedido y Elemento de línea:
+</p>
+<p align="center">
+    <img height="74" alt="Clases Pedido y Elemento de línea" src="./../../../core.base_rup/guidances/guidelines/resources/md_rdb3.gif" width="343" />
+</p>
+<p class="example">
+    Cuando se correlacionan en tablas relacionales, el resultado es una tabla Pedido y una tabla Elemento de línea. La
+    tabla Elemento_Línea tiene columnas para los atributos listados, además de una columna adicional denominada ID_Pedido
+    que contiene una referencia de clave externa a la columna asociada en la tabla Pedido. Para un elemento de línea
+    concreto, la columna ID_Pedido contiene el ID_Pedido del pedido al que se ha asociado el elemento de línea. Las claves
+    externas permiten que RDBMS optimice las operaciones de unión.
+</p>
+<p>
+    Además, es importante implementar una restricción de supresión en cascada que proporcione la integridad referencial al
+    modelo de datos. Una vez que se haya llevado a cabo, siempre que se elimine el Pedido, también se suprimirán todos sus
+    Elementos de línea.
+</p>
+<h4>
+    <a id="Modeling Inheritance" name="Modeling Inheritance">Modelado de las relaciones de generalización</a> en el modelo
+    de datos
+</h4>
+<p>
+    El modelo de datos relacional estándar no admite el modelado directo de la herencia. Para modelar la herencia se pueden
+    utilizar varias estrategias, que se pueden resumir del modo siguiente:
+</p>
+<ul>
+    <li>
+        Utilizar tablas separadas para representar la superclase y la subclase. La tabla de subclase debe incluir una
+        referencia de clave externa a una tabla de superclase. Con el objeto de crear instancias de un objeto de subclase,
+        se deben unir ambas tablas. Esta propuesta es, conceptualmente, más sencilla y simplifica los cambios en el modelo
+        pero, con frecuencia, su ejecución no es la adecuada debido al trabajo adicional.
+    </li>
+    <li>
+        Duplicar todas las asociaciones y los atributos heredados como columnas separadas en la tabla de subclase. Es
+        similar a la desnormalización en el modelo de datos relacional estándar.
+    </li>
+</ul>
+<h4>
+    <a id="Modeling Many-to-Many Associations" name="Modeling Many-to-Many Associations">Modelado de las asociaciones de
+    varios a varios</a> en el modelo de datos
+</h4>
+<p>
+    Una técnica estándar del modelado relacional consiste en utilizar una entidad de intersección para representar
+    asociaciones de varios a varios. Aquí se puede aplicar la misma propuesta: se utiliza una tabla de intersección para
+    representar la asociación.
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    Si los Proveedores pueden suministrar varios Productos, y varios Proveedores pueden suministrar un Producto, la
+    solución es crear una tabla Proveedores/Productos. Dicha tabla sólo puede contener las claves externas de las tablas de
+    Proveedor y Producto, y sirven para enlazar las Proveedores y sus Productos relacionados. El modelo de objeto no tiene
+    análogo para esta tabla; se utiliza, estrictamente, para representar las asociaciones del modelo de datos relacional.
+</p>
+<h3>
+    <a id="Refine the Data Model" name="Refine the Data Model"></a>Perfeccionamiento del modelo de datos
+</h3>
+<p>
+    Una vez que se hayan transformado las clases de diseño en tablas y las relaciones adecuadas del modelo de datos, se
+    perfecciona el modelo según sea necesario a fin de implementar la integridad referencial y optimizar el acceso a los
+    datos a través de vistas y procedimientos almacenados. Para obtener más información, consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/data_model_80FB2539.html" guid="3.4196799396281445E-306">Directriz: Modelo de datos</a>.
+</p>
+<h3>
+    <b><a id="Forward-Engineering the Data Model" name="Forward-Engineering the Data Model">Aplicación de ingeniería en el
+    modelo de datos</a></b>
+</h3>
+<p>
+    La mayoría de herramientas de diseño de aplicaciones admiten la generación de scripts DDL (Lenguaje de definición de
+    datos) de modelos de datos o la generación de las bases de datos a partir del modelo de datos. &nbsp;La aplicación de
+    la ingeniería a las bases de datos se debe planificar como parte de las tareas de desarrollo e integración global de
+    las aplicaciones.&nbsp;El tiempo y la frecuencia para aplicar ingeniería a la base de datos a partir del modelo de
+    datos depende de la situación del proyecto específico. &nbsp;Para proyectos de desarrollo de aplicaciones que crean una
+    nueva base de datos, es posible que la aplicación de ingeniería inicial se deba llevar a cabo como parte del trabajo de
+    implementar una versión arquitectónica estable de la aplicación al final de la fase de elaboración. &nbsp;En otros
+    casos, la aplicación de ingeniería inicial se puede realizar en las primeras iteraciones de la fase de
+    construcción.&nbsp;
+</p>
+<p>
+    Los tipos de elementos de modelo del modelo de datos a los que se puede aplicar ingeniería varían en función de las
+    herramientas de diseño específicas y del RDBMS utilizados en el proyecto. &nbsp;Por lo general, se puede aplicar
+    ingeniería a los elementos estructurales principales del modelo de datos, incluidas las tablas, las vistas, los
+    procedimientos almacenados y los índices, de la base de datos.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.appliedis.com" target="_blank"><img alt="Icono de Applied Information Sciences"                 src="./../../../core.base_rup/guidances/supportingmaterials/resources/appliedis.gif" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Contenido desarrollado o parcialmente desarrollado por <a href="http://www.appliedis.com" target="_blank">Applied Information Sciences</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

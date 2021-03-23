@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Promoci&oacute;n de l&iacute;neas base de proyectos utilizando Rational ClearCase</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="promoting_project_baselines" name="uma.name">
+<meta content="Promoci&oacute;n de l&iacute;neas base de proyectos utilizando Rational ClearCase" name="uma.presentationName">
+<meta content="Tool:rup_clearcase:Rational ClearCase" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational ClearCase" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{BCD4B9BC-9799-4B27-A010-4D82F2CAE82B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{BCD4B9BC-9799-4B27-A010-4D82F2CAE82B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{BCD4B9BC-9799-4B27-A010-4D82F2CAE82B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_85i-sDIFEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{BCD4B9BC-9799-4B27-A010-4D82F2CAE82B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_XxCC0AIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{BCD4B9BC-9799-4B27-A010-4D82F2CAE82B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{BCD4B9BC-9799-4B27-A010-4D82F2CAE82B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{BCD4B9BC-9799-4B27-A010-4D82F2CAE82B}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{BCD4B9BC-9799-4B27-A010-4D82F2CAE82B}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Promoci&oacute;n de l&iacute;neas base de proyectos utilizando Rational ClearCase</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo asignar niveles de promoción a líneas base utilizando UCM (Gestión unificada de cambios) de Rational ClearCase.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_clearcase_9665C.html" guid="{B2D1373B-A826-4169-A38A-B53B2122DC7C}">Rational ClearCase</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/promote_baseline_623F1B0E.html" guid="{9139A97B-D458-490D-A9D5-CDBB86968475}">Promocionar las líneas base</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    En ClearCase, generalmente, las líneas base de UCM representan una configuración estable para un componente.
+</p>
+<p>
+    Las líneas base se asignan a niveles de promoción que se puede utilizar para indicar la calidad o el grado de
+    completitud del trabajo que representa una línea base. Por lo general, el nivel de promoción indica un nivel de prueba.
+    UCM proporciona un conjunto ordenado de niveles de promoción por omisión, y también ofrece soporte para niveles de
+    promoción definidos por el usuario. La acción de cambiar el nivel de promoción de una línea base se denomina promoción
+    o degradación de la línea base.
+</p>
+<p>
+    Una línea base recomendada es aquella que se ha aprobado para uso general. Las líneas base recomendadas se utilizan en
+    operaciones de cambio de base. Cuando se cambia la base de una corriente de datos, se reconfigura con las líneas base
+    recomendadas de la corriente de datos de destino. Uno de los usos de los niveles de promoción consiste en asignar un
+    conjunto de líneas base con el mismo nivel de promoción como líneas base recomendadas para una corriente de datos
+    determinada.
+</p>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Microsoft Windows.
+</p>
+<h3>
+    Pasos de la herramienta
+</h3>
+<p>
+    En estos procedimientos se describe cómo cambiar el nivel de promoción de una línea base y cómo convertir líneas base
+    con un nivel de promoción determinado en líneas base para la corriente de datos:
+</p>
+<ol>
+    <li>
+        <a href="#ChangeBaselinePromotionLevel">Cambiar el nivel de promoción de una línea base</a>
+    </li>
+    <li>
+        <a href="#SetRecommendedBaselineForStream">Basado en el nivel de promoción, establecer una línea base como línea
+        base recomendada para la corriente de datos</a>
+    </li>
+</ol>
+<p>
+    <img height="15" alt="icono de publicación" src="./../../../core.base_rup/resources/book.gif" width="16" /> Para obtener más información,
+    consulte la publicación <i>IBM Rational ClearCase Guide to Managing Software Projects</i>.
+</p>
+<h3>
+    1. <a id="ChangeBaselinePromotionLevel" name="ChangeBaselinePromotionLevel">Cambiar el nivel de promoción de una línea
+    base</a>
+</h3>
+<ol>
+    <li>
+        En el Explorador de proyectos de ClearCase, seleccione una corriente de datos. Pulse <b>Archivo &gt;
+        Propiedades</b> para que se muestre la hoja de propiedades de la corriente de datos.
+    </li>
+    <li>
+        Pulse la pestaña <b>Líneas base</b>.
+    </li>
+    <li>
+        En el recuadro <b>Componentes</b>, seleccione el componente cuya línea base desea promocionar. Las líneas base del
+        componente se muestran en el recuadro <b>Líneas base</b>. Seleccione la línea base y pulse <b>Propiedades</b> para
+        que se muestre la hoja de propiedades de la línea base.
+    </li>
+    <li>
+        En la pestaña <b>General</b>, pulse la flecha abajo de la lista Nivel de promoción para visualizar todos los
+        niveles de promoción disponibles. Seleccione el nuevo nivel de promoción y, a continuación, pulse <b>Aceptar</b>.
+    </li>
+</ol>
+<h3>
+    2. <a id="SetRecommendedBaselineForStream" name="SetRecommendedBaselineForStream">Basado en el nivel de promoción,
+    establecer una línea base como línea base recomendada para la corriente de datos</a>
+</h3>
+<ul>
+    <li>
+        Pulse <b>Inicio</b> &gt; <b>Programas</b> &gt; <b>Software Rational</b> &gt; <b>Rational ClearCase</b> &gt;
+        <b>Explorador de proyectos</b>.
+    </li>
+    <li>
+        Seleccione una corriente de datos.
+    </li>
+    <li>
+        Pulse <b>Herramientas &gt; Líneas base recomendadas</b> para que se muestre una lista de las líneas base
+        recomendadas actuales para la corriente de datos.
+    </li>
+    <li>
+        En el área <b>Generar lista</b>, seleccione un nivel de promoción de la lista desplegable.
+    </li>
+    <li>
+        Pulse <b>Generar lista</b> para convertir las líneas base más recientes del o por encima del nivel de promoción en
+        líneas base recomendadas. &nbsp;&nbsp;
+    </li>
+    <li>
+        Pulse <b>Aceptar</b>.
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Conceptos</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/guidances/concepts/promotion_method_400446FD.html" guid="1.720995905987093E-305">Método de promoción</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,628 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Clase de an&aacute;lisis</title>
+<meta content="Guideline" name="uma.type">
+<meta content="analysis_class" name="uma.name">
+<meta content="Clase de an&aacute;lisis" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}", "2.2738948033145062E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.2738948033145062E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.2738948033145062E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Clase de an&aacute;lisis</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Existen tres estereotipos de clase de análisis: Límite, Control y Entidad. En esta directriz se explica su significado y uso.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">Clase de análisis</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">Análisis de caso de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a id="Analysis Class Stereotypes" name="Analysis Class Stereotypes">Estereotipos de clase de análisis</a>
+</h3>
+<p>
+    Las clases de análisis se pueden estereotipar como una de las siguientes:
+</p>
+<ul>
+    <li>
+        Clases de límite
+    </li>
+    <li>
+        Clases de control
+    </li>
+    <li>
+        Clases de entidad
+    </li>
+</ul>
+<p>
+    A parte de proporcionarle una orientación más específica del proceso para encontrar las clases, estos estereotipos
+    producen un modelo de objeto robusto porque los cambios del modelo tienden a afectar sólo a un área específica. Los
+    cambios en la interfaz de usuario, por ejemplo, afectarán sólo a las clases de límite. Los cambios en el flujo de
+    control afectarán sólo a las clases de control. Los cambios de la información a largo plazo afectarán sólo a las clases
+    de entidad. Sin embargo, estos estereotipos resultan especialmente útiles para ayudar a identificar clases en análisis
+    y en diseño temprano. Probablemente debe considerar la utilización de un conjunto de estereotipos ligeramente diferente
+    en fases posteriores del diseño para mejorar la correlación con el entorno de implementación, el tipo de aplicación,
+    etc.
+</p>
+<h4>
+    <a id="Boundary Class Def" name="Boundary Class Def">Clase de límite</a> <font size="2"><img height="31"     alt="Icono de clase de límite" src="./../../../core.base_rup/guidances/guidelines/resources/bcls.jpg" width="47" /></font>
+</h4>
+<p>
+    Una <b>clase de límite</b> es una clase que se utiliza para modelar la interacción entre el entorno del sistema y los
+    trabajos internos. Tal interacción implica la transformación y la traducción de sucesos y cambios de notación en la
+    presentación del sistema (como la interfaz).
+</p>
+<p>
+    Las clases de límite modelan los componentes del sistema que dependen del entorno. Las clases de entidad y las de
+    control modelan los componentes que son independientes del entorno del sistema. Por lo tanto, cambiar la GUI o el
+    protocolo de comunicación debe significar cambiar sólo las clases de límite, no las clases de control y de entidad.
+</p>
+<p>
+    Las clases de límite también facilitan la compresión del sistema porque aclaran los límites del sistema. Ayudan en el
+    diseño proporcionando un buen punto de partida para identificar los servicios relacionados. Por ejemplo, si identifica
+    una interfaz de la impresora pronto en el diseño, podrá ver que también debe modelar el formato de las salidas
+    impresas.
+</p>
+<p>
+    Las clases de límites comunes incluyen ventanas, protocolos de comunicación, interfaces de impresoras, sensores y
+    terminales. No tiene que modelar componentes de interfaces de rutinas, como botones, como clases de límites separados.
+    Generalmente, toda la ventana es el objeto de límite más pequeño. Las clases de límite también resultan útiles para
+    capturar interfaces para posibilitar las API no orientadas a objetos, como por ejemplo código heredado.
+</p>
+<p>
+    Debe modelar las clases de límite de acuerdo con el tipo de límite que representan. La comunicación con otro sistema y
+    la comunicación con un actor humano (mediante una interfaz de usuario) tienen diferentes objetivos. Para comunicar con
+    un actor humano, la preocupación más importante es cómo se presentará la interfaz al usuario. Para comunicar con otro
+    sistema, la preocupación más importante es el protocolo de comunicación.
+</p>
+<p>
+    Un objeto de límite (una instancia de clase de límite) puede sobrevivir a una instancia de guión de uso si, por
+    ejemplo, debe aparecer en una pantalla entre el rendimiento de dos guiones de uso. Normalmente, sin embargo, los
+    objetos de límite viven sólo durante la instancia de guión de uso.
+</p>
+<h5>
+    Encontrar las clases de límite
+</h5>
+<p>
+    Una clase de límite hace de intermediario entre la interfaz y algo fuera del sistema. Los objetos de límite aíslan el
+    sistema de los cambios del entorno (los cambios en las interfaces a otros sistemas, cambios en los requisitos del
+    usuario, etc.), evitando que estos cambios afecten al resto del sistema.
+</p>
+<p>
+    Un sistema puede tener diferentes tipos de clases de límite:
+</p>
+<ul>
+    <li>
+        <b>Clases de interfaz de usuario</b> - clases que hacen de intermediario en la comunicación con usuarios humanos
+        del sistema.
+    </li>
+    <li>
+        <b>Clases de interfaz de sistema</b> - clases que hacen de intermediario en la comunicación con otros sistemas
+    </li>
+    <li>
+        <b>Clases de interfaz de dispositivo</b> - clases que proporcionan la interfaz a los dispositivos (como sensores),
+        que detectan sucesos externos
+    </li>
+</ul>
+<h5>
+    Encontrar las clases de interfaz de usuario
+</h5>
+<p>
+    Defina una clase de límite para cada par de actores de guión de uso. Esta clase se puede visualizar si tiene la
+    responsabilidad de coordinar la interacción con el actor. También puede definir clases de límite adicionales para
+    representar clases <b>subsidiarias</b> a las que las clases de límite principales delegan algunas de estas
+    responsabilidades. Esto es especialmente cierto para aplicaciones GUI basadas en ventanas, donde puede modelar un
+    objeto de límite para cada ventana, o uno para cada forma. Modele sólo las abstracciones de claves del sistema; no
+    modele todos los botones, las listas y los objetos gráficos de la GUI. El objetivo del análisis es formar una buena
+    imagen de cómo está compuesto el sistema, no diseñar hasta el último detalle. En otras palabras, identificar las clases
+    de límite sólo para los fenómenos del sistema o para lo que se menciona en el <b>flujo de sucesos</b> de la ejecución
+    de guión de uso.
+</p>
+<p>
+    Haga esbozos, o utilice volcados de pantalla desde un <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_user_interface_prototype_7237E5AA.html" guid="{3DF10D00-8C80-4429-92B8-C6A221F0F90C}">Prototipo de interfaz de usuario</a>, que ilustra el comportamiento y la
+    apariencia de las clases de límite.
+</p>
+<h5>
+    Encontrar las clases de interfaz de sistema
+</h5>
+<p>
+    Una clase de límite que comunica con un sistema externo es responsable de gestionar el diálogo con el sistema externo;
+    proporciona la interfaz de ese sistema para el sistema que se está construyendo.
+</p>
+<p class="exampleheading">
+    Ejemplo
+</p>
+<p class="example">
+    En un cajero automático, la retirada de dinero debe verificarse a través de la red de cajeros automáticos, un actor
+    (que a su vez verifica la retirada con el sistema de cuentas del banco). Se puede identificar un objeto denominado
+    Interfaz de la red de cajeros automáticos para proporcionar comunicación con la red de cajeros automáticos.
+</p>
+<p>
+    Es posible que la interfaz a un sistema existente ya esté bien definida; si lo está, las responsabilidades deben
+    derivarse directamente desde la definición de interfaz. Si existe una definición de interfaz formal, se puede revertir
+    la ingeniería y no es necesario definirla formalmente aquí; simplemente, tenga en cuenta el hecho que la interfaz
+    existente se reutilizará durante el diseño.
+</p>
+<h5>
+    Encontrar las clases de interfaz de dispositivo
+</h5>
+<p>
+    El sistema puede contener elementos que actúan como si fueran externos (cambian de valor espontáneamente sin que les
+    afecte ningún objeto del sistema), como equipamiento sensor. Aunque es posible representar este tipo de dispositivo
+    externo mediante actores, los usuarios del sistema pueden encontrarlo confuso, ya que tiende a colocar los dispositivos
+    y los actores humanos en el mismo nivel. Cuando nos apartamos de la recopilación de requisitos, sin embargo, debemos
+    tener en cuenta el origen de todos los sucesos externos y asegurarnos de que disponemos del modo para que el sistema
+    detecte estos sucesos.
+</p>
+<p>
+    Si el dispositivo está representado como actor en el modelo de guión de uso, es fácil de justificar mediante una clase
+    de límite para que haga de intermediario entre la comunicación entre el dispositivo y el sistema. Si el modelo de guión
+    de uso no incluye estos "dispositivos-actores", ahora es el momento apropiado para añadirlos, actualizando las
+    Descripciones suplementarias de los guiones de uso cuando sea apropiado.
+</p>
+<p>
+    Para cada "dispositivo-actor", cree una clase de límite para capturar las responsabilidades del dispositivo o sensor.
+    Si ya existe una interfaz bien definida para el dispositivo, téngala en cuenta para una posterior referencia durante el
+    diseño.
+</p>
+<h4>
+    <a id="Control Class Def" name="Control Class Def">Clase de control</a> <font size="2"><img height="37"     alt="icono de clase de control" src="./../../../core.base_rup/guidances/guidelines/resources/control.jpg" width="36" /></font>
+</h4>
+<p>
+    Una <b>clase de control</b> es una clase que se utiliza para modelar el comportamiento de control específico a uno o a
+    varios guiones de uso. Los objetos de control (instancias de clases de control) a menudo controlan otros objetos, para
+    que el comportamiento sea de tipo de coordinación. Las clases de control resumen el comportamiento de guión de uso
+    específico.
+</p>
+<p>
+    El comportamiento de un objeto de control está estrechamente relacionado con la ejecución de un guión de uso
+    específico. En muchos casos de ejemplo, incluso puede decir que los objetos de control "ejecutan" las ejecuciones de
+    guión de uso de análisis. Sin embargo, algunos objetos de control pueden participar en más de una ejecución de guiones
+    de uso de análisis si las tareas de guión de uso están fuertemente relacionadas. Además, varios objetos de control de
+    diferentes clases de control pueden participar en un guión de uso. No todos los guiones de uso requieren un objeto de
+    control. Por ejemplo, si el flujo de sucesos en un guión de uso está relacionado con un objeto de entidad, un objeto de
+    límite puede realizar el guión de uso en colaboración con el objeto de entidad. Puede empezar identificando una clase
+    de control por ejecución de guiones de uso de análisis y, a continuación, perfeccionando esto a medida que se
+    identifican más ejecuciones de guiones de uso de análisis y se descubren más similitudes.
+</p>
+<p>
+    Las clases de control pueden contribuir en la comprensión del sistema porque representan las dinámicas del sistema,
+    gestionando las tareas principales y los flujos de control.
+</p>
+<p>
+    Cuando el sistema efectúa el guión de uso, se crea un objeto de control. Los objetos de control habitualmente mueren
+    cuando el guión de uso correspondiente se ha llevado a cabo.
+</p>
+<p>
+    Tenga en cuenta que una clase de control no maneja <b>todo</b> lo necesario en un guión de uso. En cambio, coordina las
+    tareas de otros objetos que implementan la funcionalidad. La clase de control delega trabajo a los objetos que se han
+    asignado a la responsabilidad de la funcionalidad.
+</p>
+<h5>
+    Encontrar las clases de control
+</h5>
+<p>
+    Las clases de control proporcionan un comportamiento de coordinación en el sistema. El sistema puede efectuar algunos
+    guiones de uso sin objetos de control (utilizando sólo objetos de entidad y de límite); especialmente los guiones de
+    uso que implican sólo la simple manipulación de información almacenada.
+</p>
+<p>
+    Los guiones de uso más complejos generalmente requieren una o más clases de control para coordinar el comportamiento de
+    los otros objetos del sistema. Los ejemplos de objetos de control incluyen programas como gestores de transacciones,
+    coordinadores de recursos y manejadores de errores.
+</p>
+<p>
+    Las clases de control desacoplan de forma efectiva los objetos de entidad y de límite entre ellos, haciendo que el
+    sistema sea más tolerante a cambios en el límite del sistema. También desacoplan el comportamiento específico de guión
+    de uso de los objetos de entidad, haciéndolos más reutilizables en los guiones de uso y los sistemas.
+</p>
+<p>
+    Las clases de control proporcionan un comportamiento que:
+</p>
+<ul>
+    <li>
+        Es independiente del entorno (no cambia cuando el entorno cambia),
+    </li>
+    <li>
+        Define la lógica de control (orden entre sucesos) y transacciones en un guión de uso.
+    </li>
+    <li>
+        Cambia poco si la estructura interna o el comportamiento de las clases de entidad cambian,
+    </li>
+    <li>
+        Utiliza o establece el contenido de diferentes clases de entidad y, por lo tanto, necesita coordinar el
+        comportamiento de estas clases de entidad.
+    </li>
+    <li>
+        No se realiza del mismo modo cada vez que se activa (el flujo de sucesos pasa por diferentes estados).
+    </li>
+</ul>
+<h5>
+    Determine si es necesaria una clase de control
+</h5>
+<p>
+    El flujo de sucesos de un guión de uso define el orden en que se efectúan las diferentes tareas. Empiece investigando
+    si el flujo de puede gestionar con el límite que ya está identificado y por las clases de entidad. Para <b>flujos de
+    sucesos</b> simples que principalmente entran, recuperan y muestran, o modifican información, no está justificada una
+    clase de control separada; las clases de límite serán responsables de coordinar el guión de uso.
+</p>
+<p>
+    Los <b>flujos de sucesos</b> deben estar resumidos en una clase de control separada cuando es complejo y consta de
+    comportamiento dinámico que puede cambiar independientemente de las interfaces (clases de límite) o los almacenes de
+    información (clases de entidad) del sistema. Resumiendo los <b>flujos de sucesos</b>, la misma clase de control puede
+    reutilizarse de forma potencial para una serie de sistemas que pueden tener diferentes interfaces y diferentes
+    almacenes de información (o, como mínimo, las estructuras de datos subyacentes).
+</p>
+<p class="example">
+    <b>Ejemplo: gestión de una cola de tareas</b>
+</p>
+<p class="example">
+    Puede identificar una clase de control a partir del guión de uso Realizar tarea en el Sistema de manipulación de
+    almacén. Esta clase de control gestiona una cola de Tareas, asegurando que las tareas se efectúan en el orden correcto.
+    Efectúa la tarea siguiente en la cola cuando el equipamiento de transporte adecuado está asignado. El sistema puede,
+    por lo tanto, llevar a cabo varias tareas al mismo tiempo.
+</p>
+<p class="example">
+    El comportamiento definido por el objeto de control correspondiente es más fácil de describir si lo divide en dos
+    clases de control, Realizador de tareas y Manejador de colas. Un objeto Manejador de colas manejará sólo el orden de la
+    cola y la asignación de equipamiento de transporte. Un objeto Manejador de colas es necesario para toda la cola. Cuando
+    el sistema efectúe una tarea, creará un nuevo objeto Realizador de tareas, que llevará a cabo la Tarea. Por lo tanto,
+    necesitamos un objeto Realizador de tareas para cada tarea que el sistema lleva a cabo.
+</p>
+<p align="center">
+    <img height="164"     alt='Las clases demasiado complejas deben dividirse en clases con un conjunto coherente y relacionado de responsabilidades.'      src="./../../../core.base_rup/guidances/guidelines/resources/splitclass.gif" width="403" />
+</p>
+<p class="picturetext" align="center">
+    Las clases complejas deben dividirse en líneas de responsabilidades similares
+</p>
+<p class="example">
+    El beneficio principal de esta división es que disponemos de responsabilidades de manejo de colas separadas (algo
+    genérico para muchos guiones de uso) desde las tareas específicas de la gestión de tareas, que son específicas para
+    este guión de uso. Esto facilita la comprensión de las clases y las hace más fáciles de adaptar a medida que el diseño
+    madura. También tiene beneficios en el equilibrio de la carga del sistema, ya que muchos Realizadores de tareas se
+    pueden crear cuando sea necesario para manejar la carga de trabajo.
+</p>
+<h5>
+    Resumir el flujo principal de sucesos y los flujos alternativos/excepcionales de sucesos en clases de control separadas
+</h5>
+<p>
+    Para simplificar los cambios, se resume el flujo principal de sucesos y los flujos alternativos de sucesos en
+    diferentes clases de control. Si los flujos alternativos y de excepción son totalmente independientes, sepárelos
+    también. Esto facilitará que el sistema se amplíe y se mantenga a lo largo del tiempo.
+</p>
+<h5>
+    Dividir las clases de control donde dos actores comparten la misma clase de control
+</h5>
+<p>
+    También puede ser necesario dividir las clases de control cuando varios actores utilizan la misma clase de control. De
+    este modo, aislamos los cambios de los requisitos de un actor del resto del sistema. En los casos en que el coste del
+    cambio es elevado o las consecuencias son problemáticas, debe identificar todas las clases de control relacionadas con
+    más de un actor y dividirlas. En el caso ideal, cada clase de control debe interactuar (a través de algún objeto de
+    límite) con un actor, o ninguno.
+</p>
+<p class="exampleheading">
+    Ejemplo: gestión de llamadas
+</p>
+<p class="example">
+    Considere el guión de uso <b>LLamada local</b>. Inicialmente, podemos identificar una clase de control para gestionar
+    la misma llamada.
+</p>
+<p class="example" align="center">
+    <img height="295"     alt="Los diferentes actores implicados en un guión de uso suelen requerir clases de control separadas"     src="./../../../core.base_rup/guidances/guidelines/resources/ac_ucan2.gif" width="362" />
+</p>
+<p class="picturetext">
+    La clase de control que gestiona las llamadas telefónicas locales en un sistema telefónico se pueden dividir
+    rápidamente en dos clases de control, <b>Comportamiento-A</b> y <b>Comportamiento-B</b>, una para cada actor implicado.
+</p>
+<p class="example">
+    En una llamada local, hay dos actores: el <b>Suscriptor-A</b> que inicia la llamada, y el <b>Suscriptor-B</b> que la
+    recibe. El <b>Suscriptor-A</b> levanta el receptor, oye el tono de línea, y marca una serie de dígitos, que el sistema
+    almacena y analiza. Cuando el sistema ha recibido todos los dígitos, envía el tono de marcado al <b>Suscriptor-A</b>, y
+    la señal de llamada al <b>Suscriptor-B</b>. Cuando el <b>Suscriptor-B</b> responde, el tono y la señal se detienen, y
+    puede empezar la conversación entre los suscriptores. La llamada finaliza cuando ambos suscriptores cuelgan.
+</p>
+<p class="example">
+    Deben controlarse dos comportamientos: Qué sucede en el lugar del Suscriptor-A y qué sucede en el lugar del
+    Suscriptor-B. Por este motivo, el objeto de control original se divide en dos objetos de control,
+    <b>Comportamiento-A</b> y <b>Comportamiento-B</b>.
+</p>
+<p>
+    No tiene que dividir una clase de control si:
+</p>
+<ul>
+    <li>
+        Puede asegurar de forma razonable que el comportamiento de los actores relacionado con los objetos de la clase de
+        control nunca cambiarán, o que cambiarán muy poco.
+    </li>
+    <li>
+        El comportamiento de un objeto de clase de control hacia un actor es insignificante en comparación con el
+        comportamiento hacia otro actor, un único objeto puede mantener todo el comportamiento. Combinar los
+        comportamientos de este modo tendrá un efecto insignificante en la capacidad de cambio.
+    </li>
+</ul>
+<h4>
+    <a id="Entity Class Def" name="Entity Class Def">Clase de entidad</a> <font size="2"><img height="37"     alt="Icono de clase de entidad" src="./../../../core.base_rup/guidances/guidelines/resources/entity.jpg" width="37" /></font>
+</h4>
+<p>
+    Una <b>clase de entidad</b> es una clase que se utiliza para modelar información y el comportamiento asociado que debe
+    almacenarse. Los objetos de entidad (instancias de clases de entidad) se utilizan para mantener y actualizar la
+    información sobre algún fenómeno, como un suceso, una persona, o algún objeto real. Habitualmente son persistentes,
+    teniendo atributos y relaciones necesarias durante un periodo prolongado, a veces para toda la vida del sistema.
+</p>
+<p>
+    Un objeto de entidad no suele ser específico para una ejecución de guiones de uso de análisis; a veces, un objeto de
+    entidad no es ni siquiera específico del mismo sistema. Los valores de los atributos y relaciones suelen venir de un
+    actor. Un objeto de entidad también puede ser necesario para ayudar a realizar tareas internas del sistema. Los objetos
+    de entidad pueden tener un comportamiento tan complicado como el de otros estereotipos de objeto. Sin embargo, a
+    diferencia de otros objetos, este comportamiento está fuertemente relacionado con el fenómeno que representa el objeto
+    de entidad. Los objetos de entidad son independientes del entorno (los actores).
+</p>
+<p>
+    Los objetos de entidad representan conceptos clave del sistema que se está desarrollando. Ejemplos típicos de las
+    clases de entidad en un sistema bancario son <b>Cuenta</b> y <b>Cliente</b>. En un sistema de manejo de red, los
+    ejemplos son <b>Nodo</b> y <b>Enlace</b>.
+</p>
+<p>
+    Si ninguna otra clase utiliza el fenómeno que desea modelar, puede modelarlo como un atributo de una clase de entidad,
+    o incluso como una relación entre clases de entidad. Por otra parte, si otra clase utiliza el fenómeno en el modelo de
+    diseño, debe modelarlo como clase.
+</p>
+<p>
+    Las clases de entidad proporcionan otro punto de vista desde el cual se comprende el sistema porque muestran la
+    estructura de datos lógica, que puede ayudarle a comprender qué se supone que ofrece el sistema a los usuarios.
+</p>
+<h5>
+    Encontrar las clases de entidad
+</h5>
+<p>
+    Las clases de entidad representan almacenes de información en el sistema; se utilizan habitualmente para representar
+    los conceptos clave que gestiona el sistema. Los objetos de entidad suelen ser pasivos y persistentes. Sus principales
+    responsabilidades son almacenar y gestionar información en el sistema.
+</p>
+<p>
+    Una fuente de inspiración frecuente para las clases de entidad son el Glosario (desarrollado durante los requisitos) y
+    un modelo de dominio empresarial (desarrollado durante el modelado empresarial, si se efectúa modelado empresarial).
+</p>
+<h3>
+    <a id="Recommended Restrictions on the Use of Association" name="Recommended Restrictions on the Use of Association">Restricciones de uso de los estereotipos de asociación</a>
+</h3>
+<h4>
+    <b><a id="Restrictions for Boundary Classes" name="Restrictions for Boundary Classes">Restricciones para clases de
+    límite</a></b>
+</h4>
+<p>
+    Se permite lo siguiente:
+</p>
+<ul>
+    <li>
+        Comunicar asociaciones entre dos clases de límite, por ejemplo, para describir como una ventana específica está
+        relacionada con otros objetos de límite.
+    </li>
+    <li>
+        Comunicar o suscribir asociaciones de una clase de límite a una clase de entidad, porque los objetos de límite
+        pueden necesitar el seguimiento de ciertos objetos de entidad entre acciones en el objeto de límite, o estar
+        informados de los cambios de estado en el objeto de entidad.
+    </li>
+    <li>
+        Comunicar asociaciones de una clase de límite a una clase de control, para que el objeto de límite pueda
+        desencadenar un comportamiento concreto.
+    </li>
+</ul>
+<h4>
+    <b><a id="Restrictions for Control Classes" name="Restrictions for Control Classes">Restricciones para clases de
+    control</a></b>
+</h4>
+<p>
+    Se permite lo siguiente:
+</p>
+<ul>
+    <li>
+        Comunicar o suscribir asociaciones entre clases de control y clases de entidad, porque los objetos de control
+        pueden necesitar el seguimiento de ciertos objetos de entidad entre acciones en el objeto de control, o estar
+        informados de los cambios de estado en el objeto de entidad.
+    </li>
+    <li>
+        Comunicar asociaciones entre clases de control y de límite, permitiendo que los resultados del comportamiento
+        invocado se comuniquen al entorno.
+    </li>
+    <li>
+        Comunicar asociaciones entre clase de control, permitiendo la construcción de patrones de comportamiento más
+        complejos.
+    </li>
+</ul>
+<h4>
+    <b><a id="Restrictions Entity Classes" name="Restrictions Entity Classes">Restricciones para clases de entidad</a></b>
+</h4>
+<p>
+    Las clases de entidad sólo deben ser el origen de las asociaciones (comunicar o suscribir) a otras clases de entidad.
+    Los objetos de clase de entidad tienden a durar mucho; los objetos de clase de control y de límite tienden a tener una
+    vida más corta. Es coherente desde el punto de vista arquitectónico limitar la visibilidad que un objeto de entidad
+    tiene de su entorno; de este modo el sistema es más sencillo de cambiar.
+</p>
+<h4>
+    <b><a id="Summary of Restrictions" name="Summary of Restrictions">Resumen de restricciones</a></b>
+</h4>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%"     summary="Combinaciones de estereotipos de asociación válidos" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="20%">
+                    FromTo<br />
+                     (navegabilidad)
+                </th>
+                <th scope="col" align="middle" width="26%">
+                    <p class="tableheading">
+                        Límite
+                    </p>
+                </th>
+                <th scope="col" align="middle" width="27%">
+                    <b>Entidad</b>
+                </th>
+                <th scope="col" align="middle" width="27%">
+                    <p class="tableheading">
+                        Control
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <th width="20%">
+                    <p class="tableheading">
+                        Límite
+                    </p>
+                </th>
+                <td align="middle" width="26%">
+                    <p align="center">
+                        comunica
+                    </p>
+                </td>
+                <td align="middle" width="27%">
+                    comunica 
+                    <p>
+                        suscribe
+                    </p>
+                </td>
+                <td align="middle" width="27%">
+                    comunica
+                </td>
+            </tr>
+            <tr>
+                <th width="20%">
+                    <p class="tableheading">
+                        Entidad
+                    </p>
+                </th>
+                <td align="middle" width="26%">
+                </td>
+                <td align="middle" width="27%">
+                    comunica 
+                    <p>
+                        suscribe
+                    </p>
+                </td>
+                <td align="middle" width="27%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th width="20%">
+                    <p class="tableheading">
+                        Control
+                    </p>
+                </th>
+                <td align="middle" width="26%">
+                    <p align="center">
+                        comunica
+                    </p>
+                </td>
+                <td align="middle" width="27%">
+                    comunica 
+                    <p>
+                        suscribe
+                    </p>
+                </td>
+                <td align="middle" width="27%">
+                    comunica
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p class="picturetext">
+    Combinaciones de estereotipos de asociación válidos
+</p>
+<h3>
+    <a id="Enforcing Consistency" name="Enforcing Consistency">Reforzar la coherencia</a>
+</h3>
+<ul>
+    <li>
+        Cuando se identifica un nuevo comportamiento, compruebe si existe alguna clase que tenga unas responsabilidades
+        similares, reutilizando las clases donde sea posible. Sólo cuando esté seguro de que no hay ningún objeto existente
+        que puede efectuar el comportamiento, deberá crear las nuevas clases.
+    </li>
+    <li>
+        Cuando las clases se hayan identificado, examínelas para asegurarse de que tienen responsabilidades coherentes.
+        Cuando las responsabilidades de las clases se desconecten, divida el objeto en dos o más clases. Actualice el
+        diagrama de interacción según corresponda.
+    </li>
+    <li>
+        Si la clase se divide porque se descubren las responsabilidades desconectadas, examine las colaboraciones en que la
+        clase tiene un rol para ver si la colaboración necesita una actualización. Actualice la colaboración si fuera
+        necesario.
+    </li>
+    <li>
+        Una clase con sólo una responsabilidad no es un problema, per se, pero puede generar preguntas sobre porqué es
+        necesaria. Esté preparado para solicitudes de identificación y para justificar la existencia de todas las clases.
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

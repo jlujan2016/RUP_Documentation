@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Dise&ntilde;o de guiones de uso mediante la plataforma de desarrollo de software Rational</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="designing_use_cases_using_rsa_ext" name="uma.name">
+<meta content="Dise&ntilde;o de guiones de uso mediante la plataforma de desarrollo de software Rational" name="uma.presentationName">
+<meta content="Tool:rup_rational_software_architect:Rational Software Architect" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Software Architect" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "_T5H-cEUCEdqMr9-tA4TBpQ", "_zBVoEK4HEdqFg48R_ivTjA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "_T5H-cEUCEdqMr9-tA4TBpQ", "_zBVoEK4HEdqFg48R_ivTjA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "_T5H-cEUCEdqMr9-tA4TBpQ", "_zBVoEK4HEdqFg48R_ivTjA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_zBVoEK4HEdqFg48R_ivTjA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Dise&ntilde;o de guiones de uso mediante la plataforma de desarrollo de software Rational</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta guía de la herramienta describe cómo diseñar guiones de uso mediante el entorno de modelado RSA.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_rational_software_architect_736B9F40.html" guid="_T5H-cEUCEdqMr9-tA4TBpQ">Rational Software Architect</a>
+<br>Ampl&iacute;a: <a href="./../../../tech.rsa/guidances/toolmentors/designing_use_cases_using_rsa_F046BEBE.html" guid="{DBB7A429-CE66-4322-8167-BF896BF33E26}">Diseño de guiones de uso mediante la plataforma de desarrollo de software Rational</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">Diseño de caso de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    En esta guía de la herramienta se llevan a cabo los pasos siguientes:<br />
+</p>
+<ul>
+    <li>
+        <a href="#Create Use-Case Realizations">Crear ejecuciones de guiones de uso</a>
+    </li>
+    <li>
+        <a href="#Describe Interactions Between Design Objects">Describir interacciones entre objetos de diseño</a>
+    </li>
+    <li>
+        <a href="#Simplify Sequence Diagrams Using Subsystems (optional)">Simplificar diagramas de secuencia
+        utilizando subsistemas</a> (opcional)
+    </li>
+    <li>
+        <a href="#Describe Persistence-Related Behavior">Describir comportamiento relacionado con la permanencia</a>
+    </li>
+    <li>
+        <a href="#Refine the Flow of Events Description">Perfeccionar la descripción del flujo de sucesos</a>
+    </li>
+    <li>
+        <a href="#Unify Classes and Subsystems">Unificar subsistemas y clases de diseño</a>
+    </li>
+    <li>
+        <a href="#Evaluate Your Results">Evaluar los resultados</a>
+    </li>
+</ul>
+<p>
+    <a href="#MoreInfo">Información adicional sobre la herramienta</a>
+</p>
+<h3>
+    <a id="Create Use-Case Realizations" name="Create Use-Case Realizations"><b>Crear realizaciones de guión de uso</b></a>
+</h3>
+<p>
+    Las realizaciones de guiones de uso en sí se pueden organizar en un conjunto de paquetes que refleja el conjunto de
+    paquetes que ha utilizado para organizar los guiones de uso dentro del modelo de guión de uso. Este conjunto también
+    debería reflejar la organización de las realizaciones de guión de uso de nivel de análisis dentro del modelo de
+    análisis en el caso en el que anteriormente ha creado un modelo de análisis diferente, durante la<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">Tarea: Análisis de guión de uso</a>.
+</p>
+<ol>
+    <li>
+        Crear elemento de ejecución de guiones de uso a nivel de diseño: 
+        <p>
+            Añada una colaboración UML al modelo para representar la ejecución de guiones de uso. Proporciónele el mismo
+            nombre que al guión de uso. Como alternativa, asígnele la palabra clave UML "ejecución de guión de caso". Si ha
+            creado anteriormente ejecuciones de nivel de análisis y ahora tiene la intención de dejarlas evolucionar hacia
+            diseño en lugar de conservarlas como artefactos de análisis de referencia, sólo tendrá que utilizar la
+            colaboración de nivel de análisis.
+        </p>
+    </li>
+    <li>
+        Capture la derivación de la ejecución de guión de uso: 
+        <p>
+            En el paquete en el que ha creado la ejecución de guión de uso, cree un diagrama de formato libre. Arrastre la
+            ejecución de guión de uso hasta el diagrama. Arrastre el guión de caso (desde el modelo de guión de uso) hasta
+            el diagrama. Añada una relación de ejecución de la ejecución de guiones de uso al guión de uso. Si ha creado
+            anteriormente una ejecución de guión de uso de nivel de análisis para este guión de uso y tiene la intención de
+            conservarlo una vez se haya definido la ejecución de nivel de diseño, arrastre la ejecución de guión de uso de
+            nivel de análisis (también una colaboración UML) al diagrama también y dibuje una relación de dependencia
+            &lt;&lt;refine&gt;&gt; desde la ejecución de guión de uso de nivel de uso hasta la ejecución de guión de uso de
+            nivel de análisis.
+        </p>
+        <p>
+            En este punto, se ha establecido la semántica de la rastreabilidad. Ahora puede descartar el diagrama de
+            formato libre si lo desea. De aquí en adelante, podrá utilizar las funciones Diagramas de tema y Análisis de
+            rastreabilidad para examinar las relaciones de derivación y perfeccionamiento de los modelos.
+        </p>
+    </li>
+</ol>
+<p>
+    Para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a>.
+</p>
+<h3>
+    <a id="Describe Interactions Between Design Objects" name="Describe Interactions Between Design Objects">Describir
+    interacciones entre objetos de diseño</a>
+</h3>
+<p>
+    Para cada ejecución de guiones de uso, debe ilustrar las interacciones entre sus objetos de diseño participantes
+    creando uno o más diagramas de secuencia. Es posible que haya creado versiones anteriores de estos diagramas, las
+    ejecuciones de guiones de uso de análisis, durante la <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">Tarea:
+    Análisis de guión de uso</a>. Las ejecuciones de guiones de uso de análisis describen interacciones entre <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">clases de análisis</a>. Se deben desarrollar para describir interacciones
+    entre elementos de diseño.
+</p>
+<ol>
+    <li>
+        Navegue hasta el paquete en el que se han creado las ejecuciones de guión de uso de nivel de diseño. Consulte <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a>.
+    </li>
+    <li>
+        Para cada subflujo independiente (escenario) del guión de uso, selección la ejecución de guiones de uso (p.ej. la
+        colaboración) y añádale un diagrama de secuencia. Esto también provocará que se añada una interacción UML a la
+        colaboración. Denomine el diagrama de interacción y de secuencia para que coincida con el nombre que ha asignado al
+        flujo del guión de uso en el modelo de guión de uso. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Creación de diagramas de secuencia UML</i> .
+    </li>
+    <li>
+        En la documentación del modelo para la interacción, escriba una breve descripción del escenario que se describe en
+        el diagrama de secuencia. Así mismo, copie y pegue la descripción en la documentación del modelo del diagrama de
+        secuencia. Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Documentación de elementos de modelo</i>.
+    </li>
+    <li>
+        Arrastre y suelte actores, clases, interfaces, componentes y &lt;&lt;servicios&gt;&gt; en el diagrama para crear
+        objetos para la interacción. Como alternativa y, según convenga, cree elementos de nivel de diseño como
+        participantes en la interacción.
+    </li>
+    <li>
+        Añada mensajes entre los objetos. Correlaciones dichos objetos con las operaciones existentes o cree nuevas
+        operaciones según convenga. Defina las firmas de las operaciones nuevas. Describe cada mensaje en su campo de
+        documentación de modelo. Describa cada operación en su campo de documentación de modelo. Consulte <img height="16"         alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Diagramas de secuencia</i> y
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documentación
+        de elementos de modelo</i> .&nbsp;
+    </li>
+</ol>
+<p>
+    De forma alternativa, si no mantiene un modelo de análisis separado, puede decidir modificar los diagramas de secuencia
+    existentes de modo que reflejen la evolución de los elementos de diseño.
+</p>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Diagramas de secuencia</i>.
+</p>
+<h3>
+    <a id="Simplify Sequence Diagrams Using Subsystems (optional)" name="Simplify Sequence Diagrams Using Subsystems (optional)">Simplificar diagramas de secuencia utilizando subsistemas
+    (opcional)</a>
+</h3>
+<p>
+    Consulte el paso anterior como guía para trabajar con diagramas de secuencia.
+</p>
+<h3>
+    <a id="Describe Persistence-Related Behavior" name="Describe Persistence-Related Behavior">Describir comportamiento
+    relacionado con la permanencia</a>
+</h3>
+<p>
+    Los mecanismos de permanencia se describen de modo óptimo utilizando patrones. Consulte los temas siguientes de la
+    ayuda en línea:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Patrones de
+        diseño de IBM Rational</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Aplicación de
+        patrones</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Montaje de
+        patrones</i>
+    </li>
+</ul>
+<h3>
+    <a id="Refine the Flow of Events Description" name="Refine the Flow of Events Description">Perfeccionar la descripción
+    del flujo de sucesos</a>
+</h3>
+<p>
+    A fin de que resulte más claro, se puede añadir una descripción a los diagramas de secuencia. Se puede añadir texto en
+    cualquier lugar del diagrama. También se pueden añadir notas y adjuntar a formas del diagrama. Considere la utilización
+    de la plantilla que proporciona RUP para el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">Producto de trabajo: Ejecución de guiones de uso</a>.
+</p>
+<p>
+    Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Documentación de elementos de modelo</i> y <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Enlace de elementos de modelo con archivos
+    externos</i>&nbsp;en la ayuda en línea.
+</p>
+<h3>
+    <a id="Unify Classes and Subsystems" name="Unify Classes and Subsystems">Unificar subsistemas y clases de diseño</a>
+</h3>
+<p>
+    Cuando se ejecutan los guiones de uso, debe unificar los subsistemas y las clases de diseño identificadas a fin de
+    garantizar la homogeneidad y coherencia en el modelo de diseño.
+</p>
+<p>
+    El descubrimiento de elementos de diseño nuevos y la necesidad de refactorizar el diseño general por lo que se refiere
+    a componentes y servicios (y, por tanto, la estructura de empaquetado de los elementos de diseño) son los resultados
+    previstos del proceso de ejecución de guiones de uso de nivel de diseño. Otra actividad de refactorización que debe
+    realizarse es la revisión de interacciones para identificar cualquier patrón recurrente que implique el mismo conjunto
+    de elementos de diseño.
+</p>
+<p>
+    Cada vez que se identifique un patrón recurrente de estas características, se debe crear una interacción "común"
+    diferente para capturar dicha secuencia. A continuación, en cada diagrama de secuencia en el que ha aparecido dicho
+    patrón, suprima la secuencia de mensaje común y reemplácela por una ocurrencia de interacción que sea una instancia de
+    la interacción "común". De este modo, podrá navegar desde cada uno de los diagramas de secuencia que utiliza la
+    secuencia común hasta el diagrama de secuencia que define la secuencia común.
+</p>
+<p>
+    Consulte los temas siguientes de la ayuda en línea:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Montaje de
+        patrones</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Aplicación de
+        patrones</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Ventajas de
+        utilizar patrones</i>
+    </li>
+</ul>
+<h3>
+    <a id="Evaluate Your Results" name="Evaluate Your Results"><b>Evaluar los resultados</b></a>
+</h3>
+<p>
+    Puede resultar útil publicar los modelos en formato html. Asimismo, tenga en cuenta que dichos diagramas pueden
+    copiarse en Microsoft Word y otros programas.
+</p>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Publicación de modelos</i> y el tutorial &nbsp;<img     height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><em>Publicación de un
+    modelo en un sitio web&nbsp;</em> . &nbsp;
+</p>
+<h3>
+    <a id="MoreInfo" name="MoreInfo">Información adicional sobre la herramienta</a>
+</h3>
+<p>
+    Tutoriales:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Aplicar
+        un&nbsp;patrón</i>
+    </li>
+</ul>
+<p>
+    Ejemplos:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Patrones:
+        -&nbsp;Modelo UML simple</i>&nbsp;
+    </li>
+</ul><br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

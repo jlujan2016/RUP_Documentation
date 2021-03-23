@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: M&oacute;dulo J2EE</title>
+<meta content="Guideline" name="uma.type">
+<meta content="j2ee_module" name="uma.name">
+<meta content="M&oacute;dulo J2EE" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_OKm3oN7UEdmjRZts2c4ZjQ", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "1.5663580058239784E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.5663580058239784E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.5663580058239784E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: M&oacute;dulo J2EE</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata los módulos J2EE, la unidad de despliegue independiente más pequeña en una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Elemento de implementación</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Introducción
+</h3>
+<p>
+    Un módulo J2EE es la unidad de despliegue independiente más pequeña en una aplicación J2EE. Tal como se describe en la
+    sección <a href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307" class="elementLinkWithUserText">Concepto: visión general de J2EE</a> hay distintos tipos
+    de módulos J2EE.
+</p>
+<p>
+    El número y tamaño de los módulos J2EE afectan a la facilidad con la que se despliega y prueba una aplicación J2EE.
+    También&nbsp;afecta a&nbsp;la facilidad con la que se pueden reutilizar los componentes en otras aplicaciones y la
+    facilidad con la que el sistema se puede adaptar a otras configuraciones de despliegue.
+</p>
+<p>
+    Consulte la sección <a href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_modules_17925A58.html" guid="3.7932077950837037E-305" class="elementLinkWithUserText">Directriz: ensamblaje de módulos J2EE</a> para obtener
+    información sobre la forma en que ensamblar módulos J2EE.
+</p>
+<p>
+    Consulte la sección <a href="./../../../tech.j2ee/guidances/guidelines/deploying_j2ee_modules_and_applications_62A4A967.html" guid="5.3908533897796765E-306" class="elementLinkWithUserText">Directriz: despliegue de módulos y aplicaciones J2EE</a>
+    para obtener información sobre la forma en que desplegar módulos J2EE.
+</p>
+<h3>
+    Identificación de módulos J2EE
+</h3>
+<p>
+    Los módulos J2EE se crean durante la integración, sin embargo, reflejan decisiones realizadas en la implementación (y
+    de hecho en el diseño). Los módulos J2EE habitualmente se utilizan para empaquetar <a href="./../../../core.base_rup/workproducts/rup_implementation_subsystem_118747E9.html" guid="{0F629848-C19E-49AB-A6C1-C8D6A094898A}" class="elementLinkWithUserText">Subsistemas de implementación</a>, que
+    habitualmente se correlacionan con <a href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}" class="elementLinkWithUserText">Producto de trabajo: subsistemas de
+    diseño</a>.
+</p>
+<p>
+    Los módulos J2EE deberían contener EJB y clases de ayudante estrechamente relacionadas que únicamente dichos EJB las
+    utilicen. En general, este tipo de relaciones se identifican en el diseño y dichas clases se deberían agrupar en un
+    subsistema de diseño. En la identificación de subsistemas de diseño ya se debería haber considerado los aspectos de
+    reutilización, sustitución y soporte a más de una configuración de despliegue. Sin embargo, cuando se asignan módulos
+    para desplegar en nodos específicos, la debilidad del diseño puede hacerse evidente, y puede ser necesario realizar
+    cambios a los subsistemas de diseño (y/o subsistemas de implementación).
+</p>
+<p>
+    Identificar módulos J2EE para que contengan componentes destinados a un único contenedor. Los componentes web se
+    empaquetan en módulos web, los componentes EJB se empaquetan en módulos EJB y los componentes de cliente de aplicación
+    se empaquetan en módulos de cliente de aplicación.
+</p>
+<p>
+    Las clases Java regulares que distintos módulos utilicen se deben empaquetar en módulos J2EE distintos. Los archivos
+    JAR que se creen aparecerán en las referencias de vía de acceso a las clases en los módulos que las necesitan (o las
+    comunes de dichas referencias de vía de acceso).
+</p>
+<p>
+    En resumen, al identificar módulos J2EE, hay que empezar identificando un módulo para cada subsistema de
+    implementación, a no ser que el subsistema contenga componentes que haya que desplegar en distintos contenedores y, a
+    continuación, definir módulos distintos para cada uno de los contenedores.
+</p>
+<h3>
+    Modelado de módulos J2EE
+</h3>
+<p>
+    Los módulos J2EE se representan en <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">modelos de implementación</a> como artefactos UML con un estereotipo que
+    identifica su tipo: &lt;&lt;EJB-JAR&gt;&gt;, &lt;&lt;JAR&gt;&gt; o &lt;&lt;WAR&gt;&gt;.
+</p>
+<p>
+    La agregación los componentes (como servlets o EJB) en un módulo J2EE se puede mostrar de forma gráfica dibujando una
+    dependencia &lt;&lt;implements&gt;&gt; desde el componente del contenedor al módulo en el que se empaqueta, tal como se
+    muestra en el siguiente diagrama. También se pueden dibujar las dependencias &lt;&lt;JARInclude&gt;&gt; para mostrar la
+    inclusión de todo un paquete Java en el archivador.
+</p>
+<p>
+    <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/auction_manager_ejb_jar.gif" />
+</p>
+<p>
+    Otra opción es representar el archivador como un paquete y mostrar los componentes que lo contienen dentro del paquete
+    tal como se muestra en el siguiente diagrama.
+</p>
+<p>
+    <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/auction_manager_ejb_jar_package.gif" />
+</p>
+<p>
+    Además, para modelar qué componentes se empaquetan en el archivador, también es posible modelar propiedades de los
+    componentes, que en última instancia están documentadas en el descriptor de despliegue del archivador.
+</p>
+<p>
+    A continuación se muestra un ejemplo de cómo modelar algunas propiedades de componente EJB.
+</p>
+<p>
+    <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/ejb_jar_example.gif" />
+</p>
+<p>
+    En el diagrama anterior se muestra el ensamblaje de los EJB, BankEJB, LoanEJB, CustomerEJB, y LoanManagerEJB en el
+    mismo módulo, EJBJARArchive1. Observe el modelado de las propiedades del método EJB, los roles de seguridad y las
+    transacciones. En este ejemplo, CustomerEJB se ejecuta bajo el tipo de transacción que CustomerTrans especifica (como
+    por ejemplo, "Required"). El código fuente utiliza el rol denominado "user", que está correlacionado con el rol de
+    usuario "Customer" en el descriptor de despliegue. Además, todos los métodos en LoanEJB y CustomerEJB se ejecutan con
+    las credenciales "Customer", incluso si el usuario que los invoca pertenece a un rol distinto. De forma parecida, los
+    métodos LoanManagerEJB se ejecutan como "Admin". Por último, los usuarios no pueden acceder a métodos en BankEJB.
+</p>
+<p>
+    A continuación se muestra un ejemplo de cómo modelar algunas propiedades de componentes web.
+</p>
+<p>
+    <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/war_example.gif" />
+</p>
+<p>
+    En el diagrama anterior se muestra el ensamblaje de un servlet en un módulo web. Observe el modelado de los roles de
+    seguridad y las restricciones, donde los usuarios de tipo "Customer" ejecutan métodos en el servlet de mostrar
+    resultados como sí mismos, sujetos a las restricciones de seguridad que definen las propiedades de
+    WebSecurityContraint1.
+</p>
+<p>
+    En el Modelo de despliegue se puede mostrar el despliegue de un módulo J2EE en un nodo. Consulte la sección <a href="./../../../tech.j2ee/guidances/guidelines/describing_distribution_for_j2ee_applications_93B5A232.html" guid="2.0306406686133254E-306" class="elementLinkWithUserText">Directriz: descripción de la distribución para
+    aplicaciones J2EE</a> para tratar en más detalle sobre la modelación de la correlación entre módulos y nodos de
+    despliegue.
+</p>
+<h3>
+    Descriptores de despliegue
+</h3>
+<p>
+    Cada módulo J2EE contiene un descriptor de despliegue estándar de J2EE y de forma opcional podría tener descriptores
+    específicos del proveedor. En la sección <a href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307" class="elementLinkWithUserText">Concepto: visión general de J2EE</a> se describen los
+    distintos tipos de descriptores de despliegue. En general, los descriptores de despliegue estándar de J2EE recogen el
+    diseño primario y las decisiones de implementación. Decisiones a las que RUP hace referencia como "decisiones de
+    despliegue" como en qué nodos se ejecuta un componente y cómo está configurado un componente para un nodo en concreto,
+    se recoge en los descriptores de despliegue específicos del proveedor.
+</p>
+<p>
+    Los descriptores de despliegue sirven para dos propósitos distintos:
+</p>
+<ul>
+    <li>
+        Un medio de comunicar decisiones de diseño al contenedor. Por ejemplo, el descriptor de despliegue de una sesión
+        EJB tiene una propiedad "session-type" que especifica si el EJB de sesión es con estado o sin estado. Estos valores
+        deben ser coherentes con el diseño y el código; estos valores no se pueden cambiar sin más en el descriptor de
+        despliegue.
+    </li>
+    <li>
+        Un medio de personalizar el comportamiento sin tener que recompilar el código. Por ejemplo, se podría utilizar el
+        descriptor de despliegue para definir los roles que estarán autorizados a llamar a métodos específicos Estos
+        valores se PUEDEN cambiar sin cambiar el código de los EJB.
+    </li>
+</ul>
+<p>
+    El contenido del descriptor de despliegue se establece cuando se crear el módulo J2EE y cuando se ensambla en una
+    aplicación J2EE. Consulte la sección <a href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_modules_17925A58.html" guid="3.7932077950837037E-305" class="elementLinkWithUserText">Directriz: ensamblaje de módulos J2EE</a> para obtener
+    más información sobre la forma en que ensamblar módulos J2EE. Consulte la sección <a href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_applications_38E5D5D5.html" guid="3.347498143656868E-305" class="elementLinkWithUserText">Directriz: ensamblaje de aplicaciones J2EE</a> para
+    obtener más información sobre la forma en que ensamblar aplicaciones J2EE.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

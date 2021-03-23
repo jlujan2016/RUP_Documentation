@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: An&aacute;lisis del rendimiento de tiempo de ejecuci&oacute;n utilizando las herramientas de Rational PurifyPlus (Windows y UNIX)</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="analyzing_runtime_behavior_using_purifyplus" name="uma.name">
+<meta content="An&aacute;lisis del rendimiento de tiempo de ejecuci&oacute;n utilizando las herramientas de Rational PurifyPlus (Windows y UNIX)" name="uma.presentationName">
+<meta content="Tool:rup_purifyplus:Rational PurifyPlus" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational PurifyPlus" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{F86573D5-C2E6-4E4F-9B29-23CC99B2BB8D}", "{63F53632-61E3-40E9-BA84-3DCE7903F99D}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{F86573D5-C2E6-4E4F-9B29-23CC99B2BB8D}", "{63F53632-61E3-40E9-BA84-3DCE7903F99D}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{F86573D5-C2E6-4E4F-9B29-23CC99B2BB8D}", "{63F53632-61E3-40E9-BA84-3DCE7903F99D}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{F86573D5-C2E6-4E4F-9B29-23CC99B2BB8D}", "{63F53632-61E3-40E9-BA84-3DCE7903F99D}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{63F53632-61E3-40E9-BA84-3DCE7903F99D}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: An&aacute;lisis del rendimiento de tiempo de ejecuci&oacute;n utilizando las herramientas de Rational PurifyPlus (Windows y UNIX)</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe la utilización de las herramientas de Rational PurifyPlus para conseguir código libre de fugas y errores de memoria, además de permitir la utilización eficaz de la memoria y facilitar un rendimiento óptimo.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_purifyplus_CABB5CD4.html" guid="{F86573D5-C2E6-4E4F-9B29-23CC99B2BB8D}">Rational PurifyPlus</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/analyze_runtime_behavior_B2DD7652.html" guid="{5131A5BB-5B95-499E-A68B-788A2F0957C3}">Analizar el comportamiento en tiempo de ejecución</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<p>
+    Esta guía de la herramienta se aplica para su utilización tanto en sistemas Microsoft Windows como con sistemas UNIX.
+</p>
+<p>
+    Las herramientas de PurifyPlus incluyen Rational Purify, Rational PureCoverage y Rational Quantify.
+</p>
+<p>
+    <img height="15" alt="icono Publicación" hspace="0" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> Si desea
+    obtener más información sobre las herramientas de PurifyPlus, consulte el manual de <i>Iniciación a</i> de PurifyPlus
+    (versión Windows o versión UNIX).
+</p>
+<p>
+    <img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"     border="0" /> Para obtener información paso a paso sobre la utilización de las herramientas de PurifyPlus, consulte la
+    ayuda en línea de la herramienta.
+</p>
+<h2>
+    Análisis del rendimiento de tiempo de ejecución&nbsp;
+</h2>
+<p>
+    El análisis del rendimiento de tiempo de ejecución incluye lo siguiente:
+</p>
+<ul>
+    <li>
+        <b>Detección de fugas y errores de memoria (programas C/C++ en Windows y UNIX).</b> 
+        <ul>
+            <li>
+                Utilice Purify para determinar estos problemas, tanto en el código como en los componentes que utiliza el
+                software, aunque no disponga del origen.
+            </li>
+            <li>
+                Utilice PureCoverage para garantizar la cobertura de todo el código. (También puede utilizar PureCoverage,
+                independientemente de Purify, para recopilar datos de cobertura para código gestionado .NET, Java y C/C++).
+            </li>
+        </ul>
+    </li>
+    <li>
+        <b>Perfilado del uso de memoria (código gestionado .NET y Java en Windows).</b> Gracias a Purify puede ver dónde se
+        utiliza la memoria de modo ineficaz.
+    </li>
+    <li>
+        <b>Perfilado del rendimiento (Windows y UNIX).</b> Gracias a Quantify puede ver dónde tarda más tiempo el programa,
+        lo que le permite eliminar cuellos de botella de rendimiento importantes.
+    </li>
+</ul>
+<p>
+    El resultado de analizar el tiempo de ejecución con herramientas de PurifyPlus es código sin errores que se ejecuta con
+    la máxima eficacia.
+</p>
+<h4>
+    Pasos de la herramienta
+</h4>
+<p>
+    Para llevar a cabo el análisis de tiempo de ejecución utilizando las herramientas de PurifyPlus debe:
+</p>
+<div style="MARGIN-LEFT: 2em">
+    <ol>
+        <li>
+            <a href="#Step1">Ejecutar el programa en Purify para recopilar errores, fugas y datos de cobertura (programas
+            C/C++ en Windows y UNIX)</a>
+        </li>
+        <li>
+            <a href="#Step2">Ejecutar el programa en Purify para detectar el uso ineficaz de memoria (código gestionado
+            .NET y Java en Windows)</a>
+        </li>
+        <li>
+            <a href="#Step3">Ejecutar el programa en Quantify para localizar cuellos de botella de rendimiento (Windows y
+            UNIX)</a>
+        </li>
+    </ol>
+</div>
+<h3>
+    1. <a id="Step1" name="Step1"></a><b>Ejecutar el programa en Purify para recopilar errores, fugas y datos de cobertura
+    (programas C/C++ en Windows y UNIX)&nbsp;</b>
+</h3>
+<p>
+    Purify detecta errores de tiempo de ejecución difíciles de localizar, incluidas fugas de memoria en el código y en los
+    componentes que utiliza el software. Informa de errores de memoria como, por ejemplo, errores de límites de matriz,
+    acceso a través de punteros pendientes, lecturas de memoria no inicializadas, errores de asignación de memoria y fugas
+    de memoria, lo que le permite resolverlos antes de que produzcan posibles daños. Si tiene Rational PureCoverage en el
+    sistema, también puede ver las partes del código que ha probado, y las que no. &nbsp;
+</p>
+<p>
+    Empiece ejecutando el programa en Purify:
+</p>
+<ul>
+    <li>
+        En un sistema Windows: 
+        <ul>
+            <li>
+                Si trabaja en Microsoft Visual Studio 6, en primer lugar seleccione el elemento de menú <b>Purify&nbsp;&gt;
+                Engage Purify Integration</b> de Visual Studio. Si tiene PureCoverage en el sistema, seleccione también
+                <b>Purify&nbsp;&gt; Collect Coverage Data</b>, indicando a Purify que supervise la cobertura de código. A
+                continuación, ejecute el programa en Visual Studio tal como lo hace normalmente.
+            </li>
+            <li>
+                Si utiliza Purify como un programa autónomo, no integrado con Visual Studio, seleccione <b>Archivo &gt;
+                Ejecutar</b>. En el diálogo Ejecutar programa, seleccione <b>Recopilar errores, fugas y datos de
+                cobertura</b> (o bien, <b>Recopilar errores y datos de fuga</b> si no tiene PureCoverage en el sistema) y
+                ejecute el programa.
+            </li>
+        </ul>
+    </li>
+    <li>
+        En un sistema UNIX, añada la palabra <font face="Courier New" size="2">purify</font>. Póngalo al principio de la
+        línea de compilación/enlace. Si tiene PureCoverage en el sistema, añada también <font face="Courier New"         size="2">purecov</font> . Por ejemplo:<br />
+         <font face="Courier New,Courier" size="-1">% purify purecov cc -g hello_world.c</font><br />
+         A continuación, ejecute el programa tal como lo hace normalmente.
+    </li>
+</ul>Cuando utiliza el programa, Purify lista errores de tiempo de ejecución en el visor de Purify. Al salir del programa,
+Purify informa sobre las fugas de memoria. 
+<p>
+    Explore las cabeceras de los mensajes para identificar los errores críticos. Amplíe los mensajes para ver información
+    de diagnóstico detallada, incluido el código que ha generado el error. Desde el visor puede abrir el código fuente en
+    el editor, en la línea en la que se ha producido el error y corregirlo directamente.
+</p>
+<p>
+    Una vez que haya corregido los errores y vuelto a compilar el programa, verifique las correcciones ejecutando de nuevo
+    el programa actualizado y comparando los nuevos resultados con los de la ejecución anterior. Repita el ciclo de
+    instrumentación y ejecución, análisis y corrección hasta que el programa se ejecute sin errores.
+</p>
+<p>
+    Si ha recopilado datos de cobertura para las ejecuciones del programa, también puede ver las partes del código en las
+    que no ha comprobado si hay errores. Utilice esta información para ajustar el ámbito del análisis de tiempo de
+    ejecución a fin de localizar todos los errores del programa, dondequiera que se produzcan.
+</p>
+<p>
+    <b><img height="16" alt="icono de publicación de ayuda" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"     border="0" /></b> Para obtener más información, busque los temas del índice de la ayuda en línea de Purify que tratan
+    sobre:
+</p>
+<ul>
+    <li>
+        <i>ejecución de programas</i>
+    </li>
+    <li>
+        <i>mensajes de Purify</i>
+    </li>
+    <li>
+        <i>código fuente</i>
+    </li>
+    <li>
+        <i>datos de cobertura</i>
+    </li>
+</ul>
+<h3>
+    2. <a id="Step2" name="Step2"></a><b>Ejecutar el programa en Purify para detectar el uso ineficaz de la memoria (código
+    gestionado .NET y Java en Windows)&nbsp;</b>
+</h3>
+<p>
+    Gracias a Purify, puede identificar problemas de memoria de código gestionado .NET y Java. Utilizando Purify, puede
+    determinar:
+</p>
+<ul>
+    <li>
+        cuánta memoria está utilizando el programa
+    </li>
+    <li>
+        cuánta memoria nueva consume el programa para un conjunto de acciones determinado&nbsp;
+    </li>
+    <li>
+        qué métodos y proyectos del programa consumen cuánta memoria&nbsp;
+    </li>
+    <li>
+        qué objetos impiden la recopilación de basura de objetos no necesarios&nbsp;
+    </li>
+    <li>
+        dónde sería aconsejable forzar una recopilación de basura para mejorar el rendimiento
+    </li>
+</ul>Empiece ejecutando el programa en Purify. 
+<ul>
+    <li>
+        Si trabaja en Microsoft Visual Studio .NET, IBM WSWB, o IBM WSS AD, en primer lugar seleccione el elemento de menú
+        <b>PurifyPlus&nbsp;&gt; Purify&nbsp;&gt; Engage Purify Integration</b> y, a continuación, ejecute el programa tal
+        como lo hace normalmente.
+    </li>
+    <li>
+        Si utiliza Purify como un programa autónomo, no integrado con Visual Studio .NET o WSWB/WSS AD, seleccione
+        <b>Archivo &gt; Ejecutar</b> en la interfaz de usuario de Purify. En el diálogo Ejecutar programa, seleccione
+        <b>Recopilar datos de perfilado de la memoria</b> y ejecute el programa.
+    </li>
+</ul>Una vez que el programa haya finalizado los procedimientos de inicialización, utilice el mandato de instantánea de
+Purify para establecer los <b>puntos de referencia</b> del uso de la memoria en ese momento. La instantánea es la base para
+investigar el modo en el que el programa utiliza la memoria cuando se ejecuta.&nbsp;&nbsp; 
+<p>
+    Cuando tenga la instantánea, puede capturar un registro de la memoria que utiliza el programa cuando se ejecuta.
+    Ejecute las partes del programa que sospecha que tienen fugas de memoria. Purify muestra un gráfico de asignación de
+    memoria en el que se visualizan las variaciones en tiempo real del uso de memoria actual. Cuando observe un aumento de
+    la memoria asignada, tome otra instantánea.
+</p>
+<p>
+    Compare ambas instantáneas para identificar métodos que puedan tener fugas de memoria. Salga del programa y compare (o
+    "diff") las dos instantáneas. Purify visualiza un gráfico de llamada en el que se muestran los métodos que son
+    responsables de la mayor cantidad de memoria asignada durante la ejecución del programa, entre el tiempo en el que ha
+    tomado la primera y la segunda instantánea. Se puede centrar en métodos específicos del gráfico de llamada para
+    investigarlas con más detalle.
+</p>
+<p>
+    Si la memoria asignada a un método no se esperaba que fuera tan importante, examine el código fuente y revíselo, si
+    fuera necesario, para liberar memoria cuando ya no la necesite.
+</p>
+<p>
+    Una vez que haya identificado métodos que parecen tener problemas de memoria, analícelos a nivel de objeto. Busque los
+    objetos que se deberían, pero no se han liberado y recopilado como basura, quizá debido a que otros objetos retienen
+    una referencia innecesaria a estos. &nbsp;
+</p>
+<p>
+    <img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> Para obtener más
+    información, busque lo siguiente en el índice de la ayuda en línea de Purify:&nbsp;
+</p>
+<ul>
+    <li>
+        <i>ejecución de programas</i>
+    </li>
+    <li>
+        <i>comparación de ejecuciones</i>
+    </li>
+    <li>
+        <i>navegador de datos</i>
+    </li>
+</ul>
+<h3>
+    3. <a id="Step3" name="Step3"><b>Ejecutar el programa en Quantify para localizar cuellos de botella de rendimiento
+    (Windows y UNIX).</b></a>
+</h3>
+<p>
+    Quantify proporciona un conjunto de datos de rendimiento fácil de interpretar, preciso y completo para el programa y
+    sus componentes, que le permite identificar y eliminar cuellos de botella de rendimiento del código.
+</p>
+<p>
+    Empiece a ejecutar el programa en Quantify para recopilar datos de rendimiento:
+</p>
+<ul>
+    <li>
+        En un sistema Windows: 
+        <ul>
+            <li>
+                Si trabaja en Microsoft Visual Studio 6, en primer lugar seleccione el elemento de menú de Visual Studio
+                <b>Quantify&nbsp;&gt; Engage Quantify Integration</b>. A continuación, ejecute el programa en Visual Studio
+                tal como lo hace normalmente.
+            </li>
+            <li>
+                Si trabaja en Microsoft Visual Studio .NET, IBM WSWB o IBM WSS AD, seleccione el elemento de menú
+                <b>PurifyPlus&nbsp;&gt; Quantify&nbsp;&gt; Engage Quantify Integration</b> y, a continuación, ejecute el
+                programa tal como lo hace normalmente.
+            </li>
+            <li>
+                Si utiliza Quantify como un programa autónomo, no integrado con Visual Studio o WSWB/WSS AD, seleccione
+                <b>Archivo&nbsp;&gt;&nbsp;Ejecutar</b> para ejecutar el programa en la interfaz de usuario de Quantify.
+            </li>
+        </ul>
+    </li>
+    <li>
+        En un sistema UNIX, añada la palabra <i>quantify</i> al principio de la línea de compilación/enlace. Por
+        ejemplo:<br />
+<pre>
+     % quantify cc -g hello_world.c
+</pre>
+        A continuación, ejecute el programa tal como lo hace normalmente.
+    </li>
+</ul>
+<p>
+    Cuando utiliza el código, Quantify registra datos sobre el rendimiento del sistema y muestra la actividad de sus hebras
+    y fibras. Al salir del programa, Quantify tiene un perfil preciso sobre el rendimiento que se puede utilizar para
+    buscar y diagnosticar cuellos de botella.
+</p>
+<p>
+    La visualización de los datos de Quantify incluye:
+</p>
+<ul>
+    <li>
+        una ventana Gráfico de llamada, en la que se representa gráficamente el rendimiento y la estructura de llamada de
+        las funciones en el programa
+    </li>
+    <li>
+        una ventana Lista de funciones clasificable, en la que se listan todas las funciones con datos de rendimiento
+    </li>
+    <li>
+        una ventana Detalles de función, en la que se muestran datos de una función específica, sus llamadores y sus
+        descendientes
+    </li>
+    <li>
+        una ventana Origen anotado, en la que se muestran datos de rendimiento línea a línea en una copia del código fuente
+    </li>
+</ul>
+<p>
+    Los datos que ha recopilado le permiten identificar cuellos de botella de rendimiento como, por ejemplo, cálculos y
+    nuevos cálculos innecesarios, cálculos prematuros o llamadas a bibliotecas excesivas o costosas.
+</p>
+<p>
+    Después de modificar el código para eliminar o minimizar los cuellos de botella, vuelva a ejecutar el programa
+    actualizado en Quantify y compare los nuevos resultados con los de la ejecución anterior creando un conjunto de datos
+    "diff", en el que se proporcionen indicaciones claras de las mejoras y regresiones del rendimiento.
+</p>
+<p>
+    Para obtener más información, busque los temas del índice de la ayuda en línea de Quantify que tratan sobre:
+</p>
+<ul>
+    <li>
+        <i>ejecución de programas</i>
+    </li>
+    <li>
+        <i>comparación de ejecuciones</i>
+    </li>
+    <li>
+        <i>ventana de gráfico de llamada</i>
+    </li>
+    <li>
+        <i>ventana de origen anotado</i>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

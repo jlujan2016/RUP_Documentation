@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Defining a Vision for Legacy Evolution</title>
+<meta content="Guideline" name="uma.type">
+<meta content="defining_a_vision_for_legacy_evolution" name="uma.name">
+<meta content="Defining a Vision for Legacy Evolution" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.3529621571877724E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.3529621571877724E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Defining a Vision for Legacy Evolution</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This guideline explains how to create a vision document for evolving a legacy system.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/develop_vision_D9584F04.html" guid="{7069CFB7-77C3-4B44-B8A2-9CCA752BDDDA}">Desarrollar la visión</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Assessing_Value" name="Assessing_Value">Assessing the Value of a Legacy System</a>
+</h3>
+<p>
+    As stated in <a class="elementLinkWithUserText" href="./../../../modernize.legacy_evol/guidances/concepts/legacy_evolution_CDF2C18F.html" guid="7.179899387270789E-307">Concept: Legacy Evolution</a>, when we talk about legacy systems, we suppose two things:
+</p>
+<ul>
+    <li>
+        The system is large and old.
+    </li>
+    <li>
+        The system original development was not done with the RUP.
+    </li>
+</ul>
+<p>
+    This last point usually means that the development work products, when they exist, do not carry the usual RUP names or
+    are not in the form we expect them in the RUP. Very often, they are just missing or obsolete or so old that nobody can
+    trust them to still be relevant to the system. We can assume that other techniques were used: the design was not done
+    using object-oriented technology, the requirements did not employ use cases, and so on.
+</p>
+<p>
+    We also assume that the legacy system represents a significant asset (a "legacy") that is really worth reusing in some
+    form or another as opposed to scrapping it altogether. So the value of the current asset must be assessed: Is its value
+    in the code? The design? The requirements? Some of the algorithms or data? Or just the market share that the product
+    commands? Unfortunately, the older the system, the harder it is to grasp and use the existing assets. The software
+    documentation is very often obsolete, and the design must be reverse engineered (i.e., it requires "design recovery"),
+    sometimes from the code itself.
+</p>
+<p>
+    Having to deal with a legacy system is usually considered a negative, but the existence of a "precedent" system to
+    establish a point of comparison and use as a source of information is, in fact, very valuable. Unprecedented systems
+    are much harder and riskier to define and develop.
+</p>
+<p>
+    In particular, your legacy system will enable you to easily identify:
+</p>
+<ul>
+    <li>
+        Requirements and business rules
+    </li>
+    <li>
+        What is architecturally significant
+    </li>
+    <li>
+        Primary use cases
+    </li>
+    <li>
+        Users' priorities, wishes, and behaviors<br />
+    </li>
+</ul>
+<p>
+    The only danger is that the legacy system can be an anchor, stifling the examination and consideration of fresher
+    approaches.
+</p>
+<p>
+    Once you have assessed the value of your legacy system, you can define an approach for evolving it.
+</p>
+<h3>
+    <a id="Approaches_Evolving_Legacy" name="Approaches_Evolving_Legacy">Approaches for Evolving a Legacy System</a>
+</h3>
+<p>
+    There is a broad range of evolutionary changes that we might want to undertake, from simple functionality extension to
+    a radical architectural change, to complete redesign and reimplementation. For each, different technical solutions and
+    levels of process formality will apply. Here are examples of legacy system evolutions:
+</p>
+<ul>
+    <li>
+        <a href="#Extension">Extension</a>
+    </li>
+    <li>
+        <a href="#Cosmetic">Cosmetic makeover</a>
+    </li>
+    <li>
+        <a href="#Migration">Migration</a>
+    </li>
+    <li>
+        <a href="#Redevelopment">Redevelopment</a>
+    </li>
+    <li>
+        <a href="#Integration">Integration</a>
+    </li>
+    <li>
+        <a href="#All">"All of the above"</a><br />
+    </li>
+</ul>
+<h4>
+    <a id="Extension" name="Extension"></a>Extension
+</h4>
+<p>
+    In simple cases, you just need to add some functionality or feature. Drivers, such as regulation changes, emerging
+    business needs, or new features made available by the competition, require a corresponding evolution of the existing
+    system. With many legacy systems, the older they are, the more difficult even simple additions become. The cumulative
+    effect of years of extension leads to a degradation of the system's architectural integrity, thus increasing the
+    difficulty of extending that system.
+</p>
+<h4>
+    <a id="Cosmetic" name="Cosmetic"></a>Cosmetic makeover
+</h4>
+<p>
+    Often you do not need to scrap the whole system, but only to give it a new look or perhaps take advantage of a new user
+    interface or inter-system interface technology. A solution based on wrapping certain components of your system to give
+    them a new interface or allow their reimplementation can lead to an acceptable result with minimal development. This is
+    the case for many applications that need to be rapidly "Web-enabled," for example.
+</p>
+<h4>
+    <a id="Migration" name="Migration"></a>Migration
+</h4>
+<p>
+    The system may have exceeded the useful life of its underlying hardware, operating system, or middleware. It relies on
+    technologies that are either no longer maintained or are very costly to keep alive. The solution is to migrate the
+    legacy system to a new platform (hardware or software), preserving much of the existing software. For example, an
+    application developed for a DEC VAX VMS environment must rapidly be deployed on a wide range of Unix- and Linux-based
+    platforms. This was the case when we migrated the Rational Environment (a product with two million lines of code) from
+    our own proprietary platform to a range of Unix-based platforms, which led to the product known today as Rational Apex.
+    Whereas extension means adding new domain-specific behavior, migration means adapting the legacy system to a different
+    technology platform. Migration has less tangible domain-specific value, but failing to do it in a timely and efficient
+    way can lead to serious consequences.
+</p>
+<h4>
+    <a id="Redevelopment" name="Redevelopment"></a>Redevelopment
+</h4>
+<p>
+    If the legacy system is a mission-critical system that has become extremely hard to evolve, that cannot scale up, and
+    that relies on obsolete hardware or software technologies, then you may have to redevelop it. Usually, you have to do
+    this gradually as you cannot afford to lose your existing customer base. This was the case for the Canadian Automated
+    Air Traffic System, which was running on very old hardware and an operating system more than twenty years old. You may
+    object that this option does not belong here; but even if you plan to rebuild a system from scratch, you should exploit
+    your legacy system to understand key aspects of the new system. It contains a wealth of both positive and negative
+    experience and knowledge.
+</p>
+<h4>
+    <a id="Integration" name="Integration"></a>Integration
+</h4>
+<p>
+    Because redeveloping a legacy system from scratch is not a financially viable option for many large companies, they
+    usually prefer to develop new features using new technologies and integrating these new applications with their legacy
+    system. This approach, called Enterprise Application Integration (EAI), enables them to move to new technologies while
+    leveraging existing legacy assets. For more on this approach, see <a class="elementLinkWithUserText" href="./../../../modernize.legacy_evol/guidances/concepts/enterprise_application_integration_3CEC2399.html" guid="3.047769946860121E-305">Concept: Enterprise Application Integration (EAI)</a> and <a class="elementLinkWithUserText" href="./../../../modernize.legacy_evol/guidances/guidelines/integrating_legacy_applications_into_modern_584F495E.html" guid="2.4617992790518683E-308">Technique: Integrating Legacy Applications Into Modern Architectures.</a>
+</p>
+<h4>
+    <a id="All" name="All"></a>"All of the above"
+</h4>
+<p>
+    Finally, there are circumstances under which a company may need to do a migration, cosmetic makeover, and redevelopment
+    or integration in succession. They may need to rapidly move a legacy system to a new platform and give the system a
+    brand new look to satisfy market demands, then redesign the system and gradually replace the old code base,
+    chunk-by-chunk, using new technology -- software components, new language, and middleware -- in order to be able to
+    move forward. This is the most challenging and risky approach, but it can be done.
+</p>
+<p>
+    For example, a company with a large MIS application containing several million lines of RPG (Report Program Generator)
+    code developed on an IBM AS/400 platform had to convert this code to Java and be capable of running it on the Web and a
+    wide range of Windows and Unix systems. They successfully redesigned and implemented the application in Java over a
+    period of two to three years with only minor disruption to users.
+</p>
+<h3>
+    <a id="Evaluating_Business_Case" name="Evaluating_Business_Case">Evaluating the Business Case</a>
+</h3>
+<p>
+    The Vision needs to reflect an approach that makes good business sense. You do not evolve a legacy system just because
+    it is there. In general, it really is reasonable to keep legacy systems around: their development or acquisition is
+    typically a sunk cost, and most likely there is no business justification for scrapping them. However, resources spent
+    maintaining a legacy system could alternatively be spent on new opportunities. If you find that you are simply engaging
+    in preservation -- injecting resources into a system for emotional or historical reasons rather than for meaningful
+    business reasons or because you have not examined any alternatives -- then it is probably time to examine the business
+    case.
+</p>
+<p>
+    A good business case needs to take in account the short term and long term impacts of the various alternatives, from
+    retaining the legacy system as is to the various options for evolution. The recommendations of the business case should
+    balance the short-term tactical business objectives and long-term strategic objectives of the organization.<br />
+    <br />
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

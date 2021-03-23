@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de tareas: Implementar el conjunto de aplicaciones de prueba</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="implement_test_suite" name="uma.name">
+<meta content="Implementar el conjunto de aplicaciones de prueba" name="uma.presentationName">
+<meta content="_q4_fwEohEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="Verificador">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={35359DDF-6361-43E5-8B1B-18D204DA8CFF}&path={35359DDF-6361-43E5-8B1B-18D204DA8CFF},{7BD514AF-19F9-408F-8279-309BD153C157},_q4_fwEohEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_C6jF0EdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_q4_fwEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_dTvnIEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_q4_fwEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_zvv6IEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_q4_fwEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_C6jF0EdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_q4_fwEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_dTvnIEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_q4_fwEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_zvv6IEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_q4_fwEohEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_C6jF0EdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_q4_fwEohEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_dTvnIEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_q4_fwEohEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_zvv6IEdlEdqVZeSWHJlGyA", "_ZqWJ0EetEdq_lfJYt-Zj8A", "_q4_fwEohEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_q4_fwEohEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Implementar el conjunto de aplicaciones de prueba</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta tarea se describe cómo identificar qué pruebas se deben ejecutar conjuntamente.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="prueba de sistema" text="implementar un conjunto de aplicaciones de prueba" name="XE_system_test__implementing_a_test_suite" id="XE_system_test__implementing_a_test_suite" class="index"></a> 
+<p>
+    El objetivo de esta tarea es:
+</p>
+<ul>
+    <li>
+        Ensamblar colecciones de pruebas que se van a ejecutar conjuntamente para capturar registros de prueba útiles
+    </li>
+    <li>
+        Facilitar la amplitud adecuada de cobertura de prueba mediante la ejecución de combinaciones interesantes de
+        pruebas
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Principal:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_tester_1F053E21.html" guid="_CT5ACRi2Edq_uI8xTPML6g">Verificador</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Adicional:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">Asistencia:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_build_E3972040.html" guid="_CT5ADRi2Edq_uI8xTPML6g">Compilaci&oacute;n</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_strategy_7FB79B6B.html" guid="_CTmsIhi2Edq_uI8xTPML6g">Estrategia de prueba</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_automation_architecture_55B06974.html" guid="_CTmsJRi2Edq_uI8xTPML6g">Arquitectura de automatizaci&oacute;n de pruebas</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_environment_configuration_4B128964.html" guid="_CTmsJBi2Edq_uI8xTPML6g">Configuraci&oacute;n de entorno de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_suite_F1637807.html" guid="_q5LtAEohEdqrjq4i3fchvA">Conjunto de aplicaciones de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_data_FA46B83.html" guid="_CTmsKBi2Edq_uI8xTPML6g">Datos de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_project_specific_guidelines_D5281D11.html" guid="_CTy5Yhi2Edq_uI8xTPML6g">Directrices espec&iacute;ficas del proyecto</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_tools_588D43E1.html" guid="_9scCsERnEdy-ZPxrRfshCQ">Herramientas</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_development_infrastructure_183C3247.html" guid="_CT5ACxi2Edq_uI8xTPML6g">Infraestructura de desarrollo</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_implementation_model_D80B21D8.html" guid="_CTmsLxi2Edq_uI8xTPML6g">Modelo de implementaci&oacute;n</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_script_53AA5028.html" guid="_CT5ABxi2Edq_uI8xTPML6g">Script de prueba</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_suite_F1637807.html" guid="_q5LtAEohEdqrjq4i3fchvA">Conjunto de aplicaciones de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> Examinar los conjuntos de aplicaciones de prueba candidatos </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ExamineTestSuiteOutlines" name="ExamineTestSuiteOutlines"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:&nbsp;</b>
+            </td>
+            <td width="95%">
+                Entender los conjuntos de aplicaciones de prueba y seleccionar qué candidatos se implementarán
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Empiece por revisar las esquematizaciones de conjuntos de aplicaciones de prueba existentes y determine qué conjuntos
+    de aplicaciones de prueba son buenos candidatos para la implementación actualmente. Utilice el plan de prueba de
+    iteración, la lista de ideas de prueba y los productos de trabajo adicionales de definición de pruebas como base en la
+    toma de decisiones.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Examinar las pruebas relacionadas y los elementos de prueba de destino </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ExamineTests+Targets" name="ExamineTests+Targets"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:&nbsp;</b>
+            </td>
+            <td width="95%">
+                Entender las relaciones entre las pruebas planificadas y los elementos de prueba de destino
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Para cada conjunto de aplicaciones de prueba seleccionado para su implementación, identifique los elementos de prueba
+    de destino y las pruebas asociadas que son candidatos para incluirse en el ámbito del conjunto de aplicaciones de
+    prueba.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar las dependencias de las pruebas </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="IdentifyDependencies" name="IdentifyDependencies"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:&nbsp;</b>
+            </td>
+            <td width="95%">
+                Identificar las dependencias que tienen las pruebas en términos de otras pruebas y, en general, en relación
+                con el estado del sistema
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Empiece por considerar la configuración del entorno de prueba y el estado específico de inicio del sistema. Considere
+    cuáles serán los requisitos de configuración específicos como, por ejemplo, el conjunto de datos de inicio para las
+    bases de datos dependientes. Si se va a utilizar una configuración de entorno de destino para varios conjuntos de
+    aplicaciones de prueba, identifique los valores de configuración que se deberán gestionar para cada conjunto de
+    aplicaciones de prueba como, por ejemplo, la resolución de las pantallas de vídeo o los valores regionales del sistema
+    operativo.
+</p>
+<p>
+    A continuación, determine las relaciones específicas entre las pruebas. Busque dependencias donde la ejecución de una
+    prueba incluida en el conjunto de aplicaciones de prueba provoque un cambio de estado del sistema necesario como
+    condición previa de otra prueba.
+</p>
+<p>
+    Una vez identificadas las dependencias relevantes, determine la secuencia correcta de ejecución de las pruebas
+    dependientes.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar oportunidades de reutilizaci&oacute;n </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="IdentifyReuse" name="IdentifyReuse"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:&nbsp;</b>
+            </td>
+            <td width="95%">
+                Mejorar la capacidad de mantenimiento del conjunto de aplicaciones de prueba, mediante la reutilización de
+                los activos existentes y la consolidación de nuevos activos&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Uno de los principales retos en el mantenimiento de un conjunto de aplicaciones de prueba (especialmente de uno
+    automatizado) es garantizar que los cambios en curso sean fáciles de realizar. Siempre que sea posible y útil, se
+    recomienda mantener un punto central de modificación de elementos que se utilizan en varias partes. Esto es
+    especialmente útil si esos mismos elementos pueden cambiar.
+</p>
+<p>
+    Aunque las propias pruebas forman unidades naturales de modularidad, el ensamblaje de las pruebas en un conjunto de
+    aplicaciones de prueba identifica a menudo elementos de procedimiento duplicados en varias pruebas que se pueden
+    mantener mejor si se consolidan. Identifique si es posible los mecanismos generales de las pruebas que se puedan
+    refactorizar en una rutina estándar para ayudar al mantenimiento en curso.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Aplicar los programas de utilidad de infraestructura necesarios </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ApplyInfrastructure" name="ApplyInfrastructure"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:&nbsp;</b>
+            </td>
+            <td width="95%">
+                Descomponer en factores los detalles de implementación complejos necesarios para dar soporte a las pruebas
+                como funciones de programas de utilidad simplificadas&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    La mayoría de esfuerzos de prueba requieren el uso de uno o más "programas de utilidad" que generan, recopilan,
+    diagnostican, convierten y comparan la información utilizada durante la ejecución de la prueba. Estos programas de
+    utilidad permiten simplificar las tareas complejas y laboriosas que normalmente darían errores si se ejecutaran de
+    forma manual. Este paso está relacionado con la aplicación de funciones de programas de utilidad existentes dentro del
+    conjunto de aplicaciones de prueba y con la identificación de los nuevos programas de utilidad necesarios.
+</p>
+<p>
+    Se recomienda simplificar las interfaces a estos programas de utilidad y encapsular la máxima complejidad posible
+    dentro de la implementación privada del programa de utilidad. También es una buena idea desarrollar el programa de
+    utilidad de forma que se pueda reutilizar cuando sea necesario para los esfuerzos de prueba manuales y automáticos.
+</p>
+<p>
+    Se recomienda no ocultar la información que caracteriza a una prueba individual dentro de estos programas de utilidad;
+    en su lugar, limite el programa de utilidad a la mecánica compleja de recopilar información o de comparar los valores
+    reales con los resultados esperados, etc.; no obstante, siempre que sea posible, pase las características específicas
+    de cada prueba individual como entrada de (y devuelva los resultados reales individuales como salida a) una prueba o un
+    conjunto de aplicaciones de prueba de control.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Determinar los requisitos de recuperaci&oacute;n </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="DetermineRecovery" name="DetermineRecovery"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:&nbsp;</b>
+            </td>
+            <td width="95%">
+                Habilitar los conjuntos de aplicaciones de prueba para que se puedan recuperar sin necesidad de volver a
+                ejecutar completamente el conjunto de aplicaciones de prueba&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Determine los puntos adecuados dentro del conjunto de aplicaciones de prueba para proporcionar la recuperación si el
+    conjunto de aplicaciones de prueba falla durante la ejecución. Este paso gana en importancia cuando el conjunto de
+    aplicaciones de prueba está previsto que contenga un gran número de pruebas o que se ejecute un periodo prolongado de
+    tiempo, a menudo desatendido. Aunque casi siempre se identifican como un requisito para los conjuntos de aplicaciones
+    de prueba automatizados, también es importante considerar los puntos de recuperación en los conjuntos de aplicaciones
+    de prueba ejecutados manualmente.
+</p>
+<p>
+    Además de los puntos de recuperación o reinicio, puede considerar (en el caso de los conjuntos de aplicaciones de
+    prueba automatizados) la recuperación automatizada de conjuntos de aplicaciones de prueba. Los dos enfoques de la
+    recuperación automática son: 1) la recuperación básica, donde el conjunto de aplicaciones de prueba existente puede
+    recuperarse de un error menor ocurrido en una de sus pruebas, normalmente recuperando la ejecución en la siguiente
+    prueba del conjunto de aplicaciones de prueba; 2) la recuperación sofisticada, que realiza una limpieza después de la
+    prueba anómala y restablece el estado del sistema correspondiente, incluido el reinicio del sistema operativo y la
+    restauración de los datos si es necesario. Como en el primer enfoque, el conjunto de aplicaciones de prueba determina
+    la prueba que ha fallado y selecciona la siguiente prueba que debe ejecutarse.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Implementar los requisitos de recuperaci&oacute;n </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ImplementRecovery" name="ImplementRecovery"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:&nbsp;</b>
+            </td>
+            <td width="95%">
+                Implementar y verificar que el proceso de recuperación funciona según lo esperado&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Dependiendo del nivel de sofisticación necesario, requerirá un esfuerzo adicional para implementar y estabilizar el
+    proceso de recuperación. Deberá dedicar algún tiempo a simular una serie de anomalías probables (y algunas menos
+    probables) para probar que el proceso de recuperación funciona.
+</p>
+<p>
+    En el caso de la recuperación automatizada, los dos enfoques descritos en el paso anterior tienen puntos débiles y
+    fuertes. Considere atentamente el coste de la sofisticada recuperación automatizada, en términos de desarrollo inicial
+    y de esfuerzo de mantenimiento constante. A veces, la recuperación manual es suficiente.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Estabilizar conjunto de aplicaciones de prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="StabilizeTestSuite" name="StabilizeTestSuite"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:&nbsp;</b>
+            </td>
+            <td width="95%">
+                Resolver los problemas de dependencia en términos de estado del sistema y secuencias de ejecución de
+                prueba&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Dedique tiempo a estabilizar el conjunto de aplicaciones de prueba mediante una o varias ejecuciones de prueba
+    experimentales, siempre que sea posible. La dificultad de alcanzar la estabilidad aumenta proporcionalmente con la
+    complejidad del conjunto de aplicaciones de prueba, y allí donde existe un acoplamiento excesivo entre pruebas no
+    relacionadas y una cohesión débil ente pruebas relacionadas.
+</p>
+<p>
+    Existe la posibilidad de que se produzcan errores cuando se ejecutan pruebas conjuntamente dentro de un determinado
+    conjunto de aplicaciones de prueba que no se producen cuando las pruebas individuales se ejecutan independientemente.
+    Estos errores son a menudo los más difíciles de rastrear y diagnosticar, especialmente cuando se encuentran a medio
+    camino en una ejecución de prueba automatizada de larga duración. Se recomienda, siempre que resulte práctico, volver a
+    ejecutar el conjunto de aplicaciones de prueba regularmente a medida que se añadan pruebas adicionales. Esto permitirá
+    aislar un número menor de posibles pruebas candidatas que se diagnosticarán para identificar el problema.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Mantener relaciones de rastreabilidad </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Traceability" name="Traceability"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:&nbsp;</b>
+            </td>
+            <td width="95%">
+                Permitir ejecutar el análisis de impactos y el informe de valoración en los elementos rastreados&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Utilizando los requisitos de rastreabilidad descritos en el plan de prueba, actualice las relaciones de rastreabilidad
+    según sea necesario. Los conjuntos de aplicaciones de prueba se pueden rastrear hasta guiones de prueba definidos o
+    hasta ideas de prueba. De manera opcional, se pueden rastrear hasta casos de uso , elementos de la especificación de
+    software, elementos del modelo de implementación y hasta una o varias medidas de cobertura de la prueba.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Evaluar y verificar los resultados </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="EvaluateResults" name="EvaluateResults"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:&nbsp;</b>
+            </td>
+            <td width="95%">
+                Verificar que la tarea se ha realizado correctamente y que los productos de trabajo resultantes son
+                aceptables&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Ahora que ha terminado el trabajo, se recomienda verificar que el trabajo tenía el valor suficiente y que no sólo ha
+    gastado una gran cantidad de papel. Debe evaluar si el trabajo tiene la calidad correcta y si es lo suficientemente
+    completo para que resulte útil a aquellos miembros del equipo que vayan a utilizarlo posteriormente como entrada de su
+    trabajo. Siempre que sea posible, utilice las listas de comprobación proporcionadas en RUP para verificar que la
+    calidad y la completitud son lo "suficientemente buenas".
+</p>
+<p>
+    Fomente la participación en la revisión del trabajo interno de las personas que realizan tareas basadas en los
+    resultados de su trabajo. Hágalo mientras todavía tenga tiempo para realizar acciones para solucionar sus problemas.
+    También debe evaluar su trabajo en los productos de trabajo de entrada clave para asegurarse de que los ha representado
+    de forma precisa y suficiente. Para ello, es muy útil hacer que el autor del producto de trabajo de entrada revise su
+    trabajo.
+</p>
+<p>
+    Recuerde que RUP es un proceso de entrega iterativo y que en muchos casos los productos de trabajo evolucionan con el
+    tiempo. Como tal, no siempre es necesario (y a veces es contraproducente) formar completamente un producto de trabajo
+    que sólo se utilizará de forma parcial o que no se utilizará en absoluto en un trabajo inmediatamente posterior. Esto
+    se debe a que existe una alta probabilidad de que la situación alrededor del producto de trabajo cambie (y que las
+    suposiciones realizadas cuando se creó el producto de trabajo se demuestre que son incorrectas) antes de que se utilice
+    el producto, lo que da como resultado un esfuerzo inútil y una revisión costosa. Asimismo, evite la trampa de invertir
+    demasiados ciclos en la presentación en detrimento del valor del contenido. En entornos de proyecto en los que la
+    presentación tenga importancia y un gran valor económico como entregable del proyecto, puede utilizar un recurso
+    administrativo para ejecutar tareas de presentación.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Varias apariciones" abbr="Varias apariciones">Varias apariciones</th><td align="left" class="sectionTableCell" headers="property_Varias apariciones"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Condicionado por sucesos" abbr="Condicionado por sucesos">Condicionado por sucesos</th><td align="left" class="sectionTableCell" headers="property_Condicionado por sucesos"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Continuo" abbr="Continuo">Continuo</th><td align="left" class="sectionTableCell" headers="property_Continuo"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Se puede repetir" abbr="Se puede repetir">Se puede repetir</th><td align="left" class="sectionTableCell" headers="property_Se puede repetir"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/record_test_scripts_7A61D605.html" guid="{279B8DDC-F3D9-4087-87CE-AC8D718D8C8E}">Implementación de scripts de prueba utilizando Rational Robot</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/implement_developer_tests_23B4C147.html" guid="{FD49B4B3-FA09-4475-A99A-DA8EBBEA220E}">Implementación de pruebas de desarrollador utilizando Rational Test RealTime</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/generate_test_scripts_71EF254E.html" guid="{19F8AE86-E40A-42F5-8B81-673C306F5C35}">Implementación de scripts de prueba generados utilizando Rational TestFactory</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/performance_test_suites_A780E70C.html" guid="{FC006EA3-BFB8-4B16-B23A-753A15126A67}">Creación de conjuntos de aplicaciones de pruebas de rendimiento con Rational TestManager</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/implementing_test_suite_AE114A0D.html" guid="{803E510B-B96F-481B-92A9-EEF6CF6AAA24}">Implementación de un conjunto de aplicaciones de prueba automatizado utilizando Rational TestManager</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/execute_suite_of_test_scripts_EAA12F07.html" guid="{ED7B74BA-112A-4A6A-9E2A-9B8958AF7293}">Ejecución de un conjunto de aplicaciones de prueba utilizando Rational TestFactory</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

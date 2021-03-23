@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Dise&ntilde;o de beans de entidad</title>
+<meta content="Guideline" name="uma.type">
+<meta content="designing_entity_beans" name="uma.name">
+<meta content="Dise&ntilde;o de beans de entidad" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "5.953653009453999E-307"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="5.953653009453999E-307"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Dise&ntilde;o de beans de entidad</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la forma en que diseñar beans de entidad para una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Diseño de clase</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    Esta directriz se centra en el diseño de beans de entidad. En la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/entity_bean_E721D57E.html" guid="4.528918585369678E-307">Directriz de producto de trabajo: beans de entidad</a> encontrará ayuda adicional sobre
+    los beans de entidad como, por ejemplo, para conocer la forma de identificarlos y modelarlos. En la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305">Directriz de producto de trabajo: Enterprise JavaBeans (EJB)</a> encontrará ayuda
+    general sobre los EJB.
+</p>
+<h3>
+    <a id="Persistent_Attributes_and_Primary_Key" name="Persistent_Attributes_and_Primary_Key"></a>Atributos persistentes y
+    clave primaria
+</h3>
+<p>
+    Identificar los atributos persistentes y la clave primaria del bean de entidad.
+</p>
+<h3>
+    <a id="Bean_managed_vs_Container_managed_Persistence" name="Bean_managed_vs_Container_managed_Persistence"></a>BMP
+    (Bean-managed Persistence) frente a CMP (Container-managed Persistence)
+</h3>
+<p>
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307">Concepto: visión general de la plataforma J2EE</a> para obtener una descripción de estas
+    dos aproximaciones en relaciona a la persistencia.
+</p>
+<p>
+    Habitualmente, la persistencia gestionada por contenedor (CMP) requiere menos código y éste es más simple que en la
+    persistencia gestionada por bean (BMP). Sin embargo, si el rendimiento es un aspecto crítico o si se necesita más
+    control sobre la lógica para la correlación con la base de datos, entonces es posible que se necesite utilizar
+    persistencia gestionada por bean.
+</p>
+<p>
+    Si el contenedor EJB no tiene el nivel de soporte requerido, se debería considerar el utilizar una herramienta de
+    correlación relacional de objetos de un tercero, ya sea con persistencia gestionada por bean o bien, si la herramienta
+    está integrada con el contenedor, con persistencia gestionada por contenedor.
+</p>
+<p>
+    Si se decide utilizar la persistencia gestionada por contenedor y hay un <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">modelo de
+    datos</a>, se puede correlacionar el EJB de entidad CMP con las tablas de la base de datos en el modelo de datos. Esta
+    correlación será en última instancia la que se verá reflejada en el descriptor de despliegue de los módulos EJB.
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_modules_17925A58.html" guid="3.7932077950837037E-305">Técnica: ensamblado de módulos J2EE</a> para obtener más información.
+</p>
+<p>
+    Si se decide utilizar la persistencia gestionada por bean, hay que encapsular todo el acceso a la base de datos dentro
+    de una clase DAO (Data Access Object). Tan sólo se trata de una clase Java que oculta y encapsula el mecanismo de
+    almacenamiento que subyace detrás ella y que aísla de los cambios en la interfaz al origen de datos, si es que cambia.
+    Incluso si siempre se espera que el origen de datos sea un sistema de gestión de bases de datos relacionales, podría
+    haber diferencias sutiles en el formato y sintaxis SQL y el aislamiento en una clase DAO le beneficiaría. Consulte
+    <i>Core J2EE Patterns - Data Access Object Pattern</i> ([<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/supportingmaterials/java_references_110189E3.html#ALU01" guid="1.4494927535802764E-304">ALU01</a>]) para obtener más información.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

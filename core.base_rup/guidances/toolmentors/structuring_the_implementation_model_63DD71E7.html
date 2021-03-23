@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Estructuraci&oacute;n del modelo de implementaci&oacute;n utilizando Rational XDE Developer</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="structuring_the_implementation_model" name="uma.name">
+<meta content="Estructuraci&oacute;n del modelo de implementaci&oacute;n utilizando Rational XDE Developer" name="uma.presentationName">
+<meta content="Tool:rup_xde:Rational XDE Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational XDE Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{ED12F411-0BE2-4A9D-AF41-07329966116F}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{ED12F411-0BE2-4A9D-AF41-07329966116F}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{ED12F411-0BE2-4A9D-AF41-07329966116F}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{ED12F411-0BE2-4A9D-AF41-07329966116F}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{ED12F411-0BE2-4A9D-AF41-07329966116F}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Estructuraci&oacute;n del modelo de implementaci&oacute;n utilizando Rational XDE Developer</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo estructurar el modelo de implementación con Rational XDE Developer.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_xde_D81FFA70.html" guid="{303A82D2-E3AB-4501-8563-0D4D43782AF9}">Rational XDE Developer</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">Estructurar el modelo de implementación</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    Visión general
+</h3>
+<p>
+    Los pasos de esta guía de la herramienta coinciden con los de la tarea.&nbsp;Las referencias a los temas de ayuda en
+    línea de Rational XDE&trade; están marcados con <img height="16" alt="icono de la publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" />.
+</p>
+<p>
+    En esta guía de la herramienta se da por supuesto que se ha definido la estructura de nivel superior del modelo de
+    implementación tal como se describe en las <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/model_structure_guidelines_for_rational_xde_developer_6D2FD64A.html" guid="2.67081400527339E-306">directrices de la estructura de modelo de Rational XDE</a>. Los pasos que se indican en de
+    esta guía de la herramienta permiten perfeccionar la estructura inicial.
+</p>
+<p>
+    En esta guía de la herramienta se llevan a cabo los pasos siguientes:
+</p>
+<ul>
+    <li>
+        <a href="#Establish the Implementation Model Structure">Establecer la estructura del modelo de
+        implementación</a>
+    </li>
+    <li>
+        <a href="#Adjust Subsystems">Ajustar subsistemas de implementación</a>
+    </li>
+    <li>
+        <a href="#Define Imports for Each Subsystem">Definir importaciones para cada subsistema de
+        implementación</a>
+    </li>
+    <li>
+        <a href="#Decide how to treat executable programs (and other derived objects)">Decidir cómo
+        tratar ejecutables (y otros objetos derivados)</a>
+    </li>
+    <li>
+        <a href="#Decide how to treat test assets">Decidir cómo tratar activos de prueba</a>
+    </li>
+    <li>
+        <a href="#Update the Implementation View">Actualizar la vista de implementación</a>
+    </li>
+    <li>
+        <a href="#Evaluate the implementation model">Evaluar el modelo de implementación</a>
+    </li>
+</ul>
+<h3>
+    <a id="Establish the Implementation Model Structure" name="Establish the Implementation Model Structure">Establecer la
+    estructura del modelo de implementación</a>
+</h3>
+<p>
+    A medida que se identifican los subsistemas de implementación, se pueden modelar como paquetes en diagramas de
+    componentes para mostrar dependencias entre los subsistemas. Estos diagramas definen la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/implementation_view_E373E3B6.html" guid="4.693519701160983E-305">Vista de implementación</a>. Para crearla, siga los pasos que se indican a continuación:
+</p>
+<ol>
+    <li>
+        Navegue al modelo y al paquete que va a contener los subsistemas de implementación. (En las <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/model_structure_guidelines_for_rational_xde_developer_6D2FD64A.html" guid="2.67081400527339E-306">Directrices de la estructura de modelo de Rational XDE</a> recomendadas, es el modelo
+        de soporte de integración.)
+    </li>
+    <li>
+        Cree un diagrama de componentes que proporcione una visión general de los subsistemas de implementación. Consulte
+        el apartado <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /> <i>Adición de
+        diagramas.</i> 
+        <!--<script language=javascript>ReferenceHelpTopic("Adding Diagrams","rs","rs_t_add_dgm");</script>   -->
+    </li>
+    <li>
+        Cree un paquete para cada subsistema de implementación. (Consulte el apartado <img         alt="icono de la publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /> <i>Adición de formas a
+        diagramas.)</i> &nbsp; 
+        <!--<script language=javascript>ReferenceHelpTopic(topicTitle,"rs","rs_t_add_shp_dgm"); </script>   -->Tenga en
+        cuenta que en Rational XDE no existe soporte específico para los subsistemas de implementación, por lo que este
+        diagrama sólo es una imagen.
+    </li>
+    <li>
+        (opcional) Si la relación de los subsistemas de implementación a proyectos o elementos de los distintos modelos de
+        código no resulta obvia, se puede crear una rastreabilidad a elementos de diseño. Consulte el apartado <img         alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /> <i>Adición de diagramas.</i> 
+        <!--<script language=javascript>ReferenceHelpTopic(topicTitle,"rs","rs_t_add_dgm");  </script>     -->
+    </li>
+</ol>
+<p>
+    Todos los modelos de código del proyecto se deben estructurar conforme a las <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/model_structure_guidelines_for_rational_xde_developer_6D2FD64A.html" guid="2.67081400527339E-306">directrices de estructura de modelo de Rational XDE</a>. Consulte el apartado <img     alt="icono de la publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /> <i>Agrupación de elementos de
+    modelo en paquetes.&nbsp;</i> &nbsp; 
+    <!--<script language=javascript>ReferenceHelpTopic(topicTitle,"rs","rs_t_group_mod_ele_package"); </script>          -->De
+    forma alternativa, cree directorios en el sistema de archivos y paquetes en el código, y sincronícelos para crear los
+    paquetes correspondientes en el modelo. <!-- end - vsnet -->
+</p>
+<h3>
+    <a id="Adjust Subsystems" name="Adjust Subsystems">Ajustar subsistemas de implementación</a>
+</h3>
+<p>
+    No existe ninguna guía específica de Rational XDE para este paso.
+</p>
+<h3>
+    <a id="Define Imports for Each Subsystem" name="Define Imports for Each Subsystem">Definir importaciones para cada
+    subsistema de implementación</a>
+</h3>
+<p>
+    Capture dependencias de importación en el diagrama de componentes de la vista de implementación creada previamente.
+    Consulte el apartado&nbsp;<img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" />
+    <i>Adición de relaciones de dependencia.</i> &nbsp; 
+    <!--<script language=javascript>ReferenceHelpTopic(topicTitle,"rs","rs_t_add_depend_relshp");</script>           -->Tenga
+    en cuenta que estas dependencias sólo proporcionan una guía para los desarrolladores. Rational XDE no realiza ninguna
+    imposición ni comprobación.
+</p>
+<p>
+    Las importaciones de proyectos debe coincidir con estas dependencias.
+</p><!-- begin - wsw -->
+<p>
+    Para definir o modificar las importaciones de JAR externas al proyecto, pulse <b>Ventana</b> en la barra de
+    herramientas, pulse <b>Preferencias</b> y, a continuación, pulse <b>Java, Organizar importaciones</b>.
+</p>Se hace referencia a las importaciones externas al proyecto como Modelos de referencia. Consulte el apartado <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /> <i>Modelos de referencia.</i> 
+<!--<script language=javascript>ReferenceHelpTopic(topicTitle,"vs/modeling_code","vs_c_ref_models"); </script>      -->
+<!-- end - vsnet -->
+<h3>
+    <a id="Decide how to treat executable programs (and other derived objects)" name="Decide how to treat executable programs (and other derived objects)">Decidir cómo tratar ejecutables (y otros
+    objetos derivados)</a>
+</h3>
+<p>
+    Los ejecutables y otros archivos desplegables se pueden modelar como componentes UML. Consulte el modelo de soporte de
+    despliegue en las <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/model_structure_guidelines_for_rational_xde_developer_6D2FD64A.html" guid="2.67081400527339E-306">Directrices de la estructura de modelo de Rational XDE</a>. Si decide modelar estos
+    archivos, se aplican los pasos siguientes:
+</p>
+<ol>
+    <li>
+        Navegue al modelo y al paquete que va a contener los archivos. (En las <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/model_structure_guidelines_for_rational_xde_developer_6D2FD64A.html" guid="2.67081400527339E-306">Directrices de la estructura de modelo de Rational XDE</a> recomendadas, es el modelo
+        de soporte de despliegue.)
+    </li>
+    <li>
+        Cree un diagrama de componentes. Consulte el apartado &nbsp;<img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /> <i>Adición de diagramas.</i> 
+        <!--<script language=javascript>ReferenceHelpTopic(topicTitle,"rs","rs_t_add_dgm"); </script>      -->
+    </li>
+    <li>
+        Añada cada uno de los programas ejecutables y otros archivos desplegables (modelados como componentes UML).&nbsp;
+        Consulte el apartado <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" />
+        <i>Adición de formas a diagramas.</i> 
+        <!--//ReferenceHelpTopic(topicTitle,"rs","rs_t_add_shp_dgm");               -->
+    </li>
+    <li>
+        Organícelos en paquetes (tal como se describe en las <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/model_structure_guidelines_for_rational_xde_developer_6D2FD64A.html" guid="2.67081400527339E-306">directrices de la estructura de modelo de Rational XDE</a>). Consulte el apartado <img         alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /> <i>Agrupación de elementos de
+        modelo en paquetes.</i> 
+        <!--<script language=javascript>ReferenceHelpTopic(topicTitle,"rs","rs_t_group_mod_ele_package");</script>  -->
+    </li>
+</ol>
+<p>
+    Tenga en cuenta que no existe soporte de ingeniería directa e inversa para programas ejecutables, por lo que este
+    modelo se debe mantener de modo manual.
+</p>
+<h3>
+    <a id="Decide how to treat test assets" name="Decide how to treat test assets">Decidir cómo tratar activos de
+    prueba</a>
+</h3>
+<p>
+    No existe ninguna guía específica de Rational XDE para este paso.
+</p>
+<h3>
+    <a id="Update the Implementation View" name="Update the Implementation View">Actualizar la vista de implementación</a>
+</h3>
+<p>
+    Si existe una vista lógica separada, se debe mantener. Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/model_structure_guidelines_for_rational_xde_developer_6D2FD64A.html" guid="2.67081400527339E-306">Directrices de la estructura de modelo de Rational XDE</a>.
+</p>
+<h3>
+    <a id="Evaluate the implementation model" name="Evaluate the implementation model">Evaluar el modelo de
+    implementación</a><br />
+</h3>
+<p>
+    No existe ninguna guía específica de Rational XDE para este paso.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

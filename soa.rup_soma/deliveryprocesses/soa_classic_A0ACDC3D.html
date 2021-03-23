@@ -1,0 +1,602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Proceso de entrega: Arquitectura y modelado orientado a servicios de RUP</title>
+<meta content="DeliveryProcess" name="uma.type">
+<meta content="soa_classic" name="uma.name">
+<meta content="Arquitectura y modelado orientado a servicios de RUP" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc=_ilyyoSv-EduYBoDegGQopA&path=_ilyyoSv-EduYBoDegGQopA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_ilyyoSv-EduYBoDegGQopA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_ilyyoSv-EduYBoDegGQopA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_fX-WEE7MEduvcvbnLvkXhA", "_ilyyoSv-EduYBoDegGQopA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  defaultQueryStr, false, true, true);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div autoWrap="true">
+<div id="page-guid" value="_ilyyoSv-EduYBoDegGQopA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Proceso de entrega: Arquitectura y modelado orientado a servicios de RUP</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/process.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Este proceso de entrega representa las actividades clave en RUP/SOMA, el método de desarrollo de SOA integrado.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign="middle">
+<td class="tab" width="10"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td><td class="tab" nowrap><a id="TAB_Description" class="tab" href="./../../soa.rup_soma/deliveryprocesses/soa_classic_A0ACDC3D.html_desc.html">Descripci&oacute;n</a></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_a.gif"></td><td class="activeTab" nowrap><span style="white-space:nowrap;">Estructura de desglose de trabajo</span></td><td width="1"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-a_i.gif"></td><td class="tab" nowrap><a id="TAB_TBS" class="tab" href="./../../soa.rup_soma/deliveryprocesses/soa_classic_A0ACDC3D.html_tbs.html"><span style="white-space:nowrap;">Asignaci&oacute;n de equipos</span></a></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_i.gif"></td><td class="tab" nowrap><a id="TAB_WPBS" class="tab" href="./../../soa.rup_soma/deliveryprocesses/soa_classic_A0ACDC3D.html_wpbs.html"><span style="white-space:nowrap;">Utilizaci&oacute;n del producto de trabajo</span></a></td><td width="21"><img title="" alt="" height="17" width="21" src="./../../images/tab_end-i.gif"></td><td width="50%"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td colspan="2"><img title="" alt="" height="2" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space_middle.gif"></td><td class="activeTab"><img title="" alt="" height="2" width="10" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space.gif"></td><td colspan="5"><img title="" alt="" height="2" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td class="activeTab" colspan="10"><img title="" alt="" height="5" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="sectionHeading">Flujo de trabajo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td align="left" colspan="2" class="sectionTableSingleCell">
+<p></p>
+<img diagramType="Activity" border="0" id="diagram_Activity" src="./../../soa.rup_soma/deliveryprocesses/resources/soa_classic_A0ACDC3D_Activity.jpeg" alt="Diagrama de la actividad: Arquitectura y modelado orientado a servicios de RUP" title="Diagrama de la actividad: Arquitectura y modelado orientado a servicios de RUP" usemap="#Activity_soa_classic"><map name="Activity_soa_classic">
+<area href="./../../soa.rup_soma/deliveryprocesses/soa_business_transformation_analysis_1B71B5E5.html" relpath=",__UtlMEn6EduC74V7YHXTOQ" alt="An&aacute;lisis de transformaci&oacute;n empresarial" title="An&aacute;lisis de transformaci&oacute;n empresarial" coords="177, 39, 343, 106" shape="rect" guid="__UtlMEn6EduC74V7YHXTOQ"></area>
+<area href="./../../soa.rup_soma/deliveryprocesses/identification_A866B1BE.html" relpath=",_JPlS4En7EduC74V7YHXTOQ" alt="Identificaci&oacute;n" title="Identificaci&oacute;n" coords="332, 131, 405, 184" shape="rect" guid="_JPlS4En7EduC74V7YHXTOQ"></area>
+<area href="./../../soa.rup_soma/deliveryprocesses/specification_B2BFB5FC.html" relpath=",_VCMlUEn7EduC74V7YHXTOQ" alt="Especificaci&oacute;n" title="Especificaci&oacute;n" coords="330, 274, 406, 327" shape="rect" guid="_VCMlUEn7EduC74V7YHXTOQ"></area>
+<area href="./../../soa.rup_soma/deliveryprocesses/realization_B26A499B.html" relpath=",_o0lxwEn7EduC74V7YHXTOQ" alt="Realizaci&oacute;n" title="Realizaci&oacute;n" coords="497, 174, 561, 227" shape="rect" guid="_o0lxwEn7EduC74V7YHXTOQ"></area>
+</map>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Anomal&iacute;a del trabajo</div>
+<div class="sectionContent">
+<div id="treeContent"></div>
+<script language="JavaScript">
+contentPage.processPage.treeTable.data = {
+title: "Anomalía del trabajo", summary: "Anomalía del trabajo", 
+columns: [
+["presentation_name", "Elemento de desglose"],
+["steps", "Pasos"],
+["id", "Índice"],
+["predecessors", "Predecesores"],
+["model_info", "Información del modelo"],
+["type", "Tipo"],
+["is_planned", "Planeado"],
+["is_repeatable", "Se puede repetir"],
+["has_multiple_occurrences", "Varias apariciones"],
+["is_ongoing", "Continuo"],
+["is_event_driven", "Condicionado por sucesos"],
+["is_optional", "Opcional"],
+["teams", "Equipo"]],
+rows: [
+{id: "5abbe7e2", parentId: "", relPath: ",__UtlMEn6EduC74V7YHXTOQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "1", prefix: "", name: "soa_business_transformation_analysis", title: "Análisis de transformación empresarial", url: "./../../soa.rup_soma/deliveryprocesses/soa_business_transformation_analysis_1B71B5E5.html", 
+	predecessors: "", info: "", type: "Fase", 
+	repeatable: "false", multiOccurences: "false", optional: "true", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "53018ea0", parentId: "5abbe7e2", relPath: ",__UtlMEn6EduC74V7YHXTOQ,_0B7z8Un7EduC74V7YHXTOQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "2", prefix: "", name: "describe_current_business", title: "Describe Current Business", url: "./../../soa.rup_soma/deliveryprocesses/describe_current_business_CBCD3BD2.html", 
+	predecessors: "", info: "amplía \'describe_current_business, extend.bus_model/business_modeling_discipline\'; amplía \'describe_current_business, extend.bus_model\'", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+
+{id: "b49cbc78", parentId: "53018ea0", relPath: ",__UtlMEn6EduC74V7YHXTOQ,_0B7z8Un7EduC74V7YHXTOQ,_9pSp8EoJEdqJ3YriPA4Mmg", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "3", prefix: "", name: "assess_target_org", title: "Assess Target Organization", url: "./../../extend.bus_model/capabilitypatterns/assess_target_org_CB47C394.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true,true,true]},
+
+{id: "8f348a80", parentId: "53018ea0", relPath: ",__UtlMEn6EduC74V7YHXTOQ,_0B7z8Un7EduC74V7YHXTOQ,_-1f-YEoJEdqJ3YriPA4Mmg", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "4", prefix: "", name: "set_and_adjust_goals", title: "Set and Adjust Objectives", url: "./../../extend.bus_model/capabilitypatterns/set_and_adjust_goals_179812EA.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+
+{id: "2b3d02a4", parentId: "53018ea0", relPath: ",__UtlMEn6EduC74V7YHXTOQ,_0B7z8Un7EduC74V7YHXTOQ,__1rpAEoJEdqJ3YriPA4Mmg", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "5", prefix: "", name: "identify_business_goals", title: "Identify Business Goals and KPIs", url: "./../../extend.bus_model/capabilitypatterns/identify_business_goals_9F36F507.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+
+{id: "1ebeaa3a", parentId: "53018ea0", relPath: ",__UtlMEn6EduC74V7YHXTOQ,_0B7z8Un7EduC74V7YHXTOQ,_BZAc8EoKEdqJ3YriPA4Mmg", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "6", prefix: "", name: "find_business_actors_and_use_cases", title: "Find Business Actors and Use Cases", url: "./../../extend.bus_model/capabilitypatterns/find_business_actors_and_use_cases_FA99ADB.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true]},
+
+{id: "3d0f3c2c", parentId: "53018ea0", relPath: ",__UtlMEn6EduC74V7YHXTOQ,_0B7z8Un7EduC74V7YHXTOQ,_Cnaw0EoKEdqJ3YriPA4Mmg", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "7", prefix: "", name: "bm_architectural_analysis", title: "Business Architectural Analysis", url: "./../../extend.bus_model/capabilitypatterns/bm_architectural_analysis_731DE18A.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true]},
+
+{id: "2ff626fc", parentId: "53018ea0", relPath: ",__UtlMEn6EduC74V7YHXTOQ,_0B7z8Un7EduC74V7YHXTOQ,_DdSB0EoKEdqJ3YriPA4Mmg", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "8", prefix: "", name: "capture_common_biz_vocabulary", title: "Capture a Common Business Vocabulary", url: "./../../extend.bus_model/capabilitypatterns/capture_common_biz_vocabulary_3C8A0EF8.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+
+{id: "60e503c2", parentId: "53018ea0", relPath: ",__UtlMEn6EduC74V7YHXTOQ,_0B7z8Un7EduC74V7YHXTOQ,_EZ7QQEoKEdqJ3YriPA4Mmg", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "9", prefix: "", name: "maintain_business_rules", title: "Maintain Business Rules", url: "./../../extend.bus_model/capabilitypatterns/maintain_business_rules_532CA077.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+
+{id: "1a40e690", parentId: "53018ea0", relPath: ",__UtlMEn6EduC74V7YHXTOQ,_0B7z8Un7EduC74V7YHXTOQ,_MF_n4EyDEdugTvBtC2ApIg", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "10", prefix: "", name: "functional_area_analysis", title: "Functional Area Analysis", url: "./../../extend.bus_model/capabilitypatterns/functional_area_analysis_19C12524.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+
+{id: "fc634da8", parentId: "", relPath: ",_JPlS4En7EduC74V7YHXTOQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "11", prefix: "", name: "identification", title: "Identificación", url: "./../../soa.rup_soma/deliveryprocesses/identification_A866B1BE.html", 
+	predecessors: "1,56", info: "", type: "Fase", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "36a5ee98", parentId: "fc634da8", relPath: ",_JPlS4En7EduC74V7YHXTOQ,_bj7qMU9wEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "12", prefix: "", name: "domain_decomposition", title: "Descomposición de dominios", url: "./../../soa.rup_soma/deliveryprocesses/domain_decomposition_CBEF8180.html", 
+	predecessors: "", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "51d3e17a", parentId: "36a5ee98", relPath: ",_JPlS4En7EduC74V7YHXTOQ,_bj7qMU9wEdu0EMZ-3o0kDQ,_m9398E9wEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "13", prefix: "", name: "functional_area_analysis", title: "Análisis de área funcional", url: "./../../soa.rup_soma/deliveryprocesses/functional_area_analysis_64056055.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+
+{id: "f5eab714", parentId: "36a5ee98", relPath: ",_JPlS4En7EduC74V7YHXTOQ,_bj7qMU9wEdu0EMZ-3o0kDQ,_sMf-8E9wEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "14", prefix: "", name: "refine_business_use_case", title: "Descomposición de proceso", url: "./../../soa.rup_soma/deliveryprocesses/refine_business_use_case_85C0E04.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+
+{id: "c591ca8c", parentId: "36a5ee98", relPath: ",_JPlS4En7EduC74V7YHXTOQ,_bj7qMU9wEdu0EMZ-3o0kDQ,_8U_sgE9wEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "15", prefix: "", name: "soa_service_identification_bp", title: "Análisis del proceso empresarial", url: "./../../soa.rup_soma/deliveryprocesses/soa_service_identification_bp_6A441945.html", 
+	predecessors: "14", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true]},
+
+{id: "d13d5f3a", parentId: "36a5ee98", relPath: ",_JPlS4En7EduC74V7YHXTOQ,_bj7qMU9wEdu0EMZ-3o0kDQ,_ARL1QE9xEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "16", prefix: "", name: "soa_service_identification_uc", title: "Análisis de guiones de uso empresariales (SOA)", url: "./../../soa.rup_soma/deliveryprocesses/soa_service_identification_uc_3D8EA721.html", 
+	predecessors: "14", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+
+{id: "cc30567c", parentId: "36a5ee98", relPath: ",_JPlS4En7EduC74V7YHXTOQ,_bj7qMU9wEdu0EMZ-3o0kDQ,_fmWs4FHYEdumTu7t35vA-A", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "17", prefix: "", name: "identify_commonality_and_variability", title: "Realizar análisis orientado a variaciones", url: "./../../soa.rup_soma/deliveryprocesses/identify_commonality_and_variability_C9800CFB.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+
+{id: "4a1f4c32", parentId: "fc634da8", relPath: ",_JPlS4En7EduC74V7YHXTOQ,_Q9SmMU9xEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "18", prefix: "", name: "goal_service_modeling", title: "Modelado de servicio de objetivos", url: "./../../soa.rup_soma/deliveryprocesses/goal_service_modeling_ECAC74E1.html", 
+	predecessors: "", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "c0073842", parentId: "4a1f4c32", relPath: ",_JPlS4En7EduC74V7YHXTOQ,_Q9SmMU9xEdu0EMZ-3o0kDQ,_-5LrEE9xEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "19", prefix: "", name: "identify_business_goals", title: "Identificar objetivos empresariales y KPI", url: "./../../soa.rup_soma/deliveryprocesses/identify_business_goals_4F347BA5.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+
+{id: "87065582", parentId: "4a1f4c32", relPath: ",_JPlS4En7EduC74V7YHXTOQ,_Q9SmMU9xEdu0EMZ-3o0kDQ,_Fn1UYE9yEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "20", prefix: "", name: "soa_goal_service_assignment", title: "Identificar y asociar servicios con objetivos", url: "./../../soa.rup_soma/deliveryprocesses/soa_goal_service_assignment_3B34C4B0.html", 
+	predecessors: "19", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true]},
+
+{id: "de861796", parentId: "fc634da8", relPath: ",_JPlS4En7EduC74V7YHXTOQ,_cTTmwU9yEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "21", prefix: "", name: "existing_asset_analysis", title: "Análisis de activos existentes", url: "./../../soa.rup_soma/deliveryprocesses/existing_asset_analysis_37A1D260.html", 
+	predecessors: "", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "e103591c", parentId: "de861796", relPath: ",_JPlS4En7EduC74V7YHXTOQ,_cTTmwU9yEdu0EMZ-3o0kDQ,_nPSMIE9yEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "22", prefix: "", name: "soa_service_identification_legacy", title: "Análisis de activos existentes", url: "./../../soa.rup_soma/deliveryprocesses/soa_service_identification_legacy_D33A7110.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+
+{id: "b139b1a8", parentId: "de861796", relPath: ",_JPlS4En7EduC74V7YHXTOQ,_cTTmwU9yEdu0EMZ-3o0kDQ,_sryREE9yEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "23", prefix: "", name: "soa_construct_arch_proof", title: "Realizar exploración de viabilidad técnica", url: "./../../soa.rup_soma/deliveryprocesses/soa_construct_arch_proof_7439E3B0.html", 
+	predecessors: "22", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+
+{id: "16950c36", parentId: "", relPath: ",_VCMlUEn7EduC74V7YHXTOQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "24", prefix: "", name: "specification", title: "Especificación", url: "./../../soa.rup_soma/deliveryprocesses/specification_B2BFB5FC.html", 
+	predecessors: "11,56", info: "", type: "Fase", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "b295495a", parentId: "16950c36", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_jx0KQU9zEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "25", prefix: "", name: "perform_service_specification", title: "Realizar especificación de servicio", url: "./../../soa.rup_soma/deliveryprocesses/perform_service_specification_F39D2B86.html", 
+	predecessors: "", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "c371699a", parentId: "b295495a", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_jx0KQU9zEdu0EMZ-3o0kDQ,_0eaDYE9zEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "26", prefix: "", name: "soa_service_qualification", title: "Aplicar pruebas decisivas de servicio", url: "./../../soa.rup_soma/deliveryprocesses/soa_service_qualification_5A3937BD.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+
+{id: "ebc6b1f8", parentId: "b295495a", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_jx0KQU9zEdu0EMZ-3o0kDQ,_7yvP1E93Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "27", prefix: "", name: "model_service_dependencies", title: "Dependencias de servicio del modelo", url: "./../../soa.rup_soma/deliveryprocesses/model_service_dependencies_571DE22.html", 
+	predecessors: "26", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "81796938", parentId: "ebc6b1f8", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_jx0KQU9zEdu0EMZ-3o0kDQ,_7yvP1E93Edu0EMZ-3o0kDQ,_7yvP1k93Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "28", prefix: "", name: "soa_service_specification", title: "Dependencias de servicio del modelo", url: "./../../soa.rup_soma/deliveryprocesses/soa_service_specification_FEA8D248.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [false,false,false,false,true,false,false,false]},
+
+{id: "fa12a82a", parentId: "b295495a", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_jx0KQU9zEdu0EMZ-3o0kDQ,_-iVClU93Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "29", prefix: "", name: "model_service_composition_flows", title: "Composición y flujos de servicios del modelo", url: "./../../soa.rup_soma/deliveryprocesses/model_service_composition_flows_ED047664.html", 
+	predecessors: "26", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "3e125cfc", parentId: "fa12a82a", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_jx0KQU9zEdu0EMZ-3o0kDQ,_-iVClU93Edu0EMZ-3o0kDQ,_-iVCkE93Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "30", prefix: "", name: "soa_service_specification", title: "Composición y flujos de servicios del modelo", url: "./../../soa.rup_soma/deliveryprocesses/soa_service_specification_1DD4B435.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [false,false,false,false,false,true,false,false]},
+
+{id: "a0a1398", parentId: "b295495a", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_jx0KQU9zEdu0EMZ-3o0kDQ,_APw0xk94Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "31", prefix: "", name: "document_service_non_functional_requirements", title: "Requisitos no funcionales de servicio de documentos", url: "./../../soa.rup_soma/deliveryprocesses/document_service_non_functional_requirements_4C0989EE.html", 
+	predecessors: "26", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "781dd162", parentId: "a0a1398", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_jx0KQU9zEdu0EMZ-3o0kDQ,_APw0xk94Edu0EMZ-3o0kDQ,_APw0xU94Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "32", prefix: "", name: "soa_service_specification", title: "Requisitos no funcionales de servicio de documentos", url: "./../../soa.rup_soma/deliveryprocesses/soa_service_specification_5D7075D8.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [false,false,false,false,false,false,true,false]},
+
+{id: "fd30031c", parentId: "a0a1398", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_jx0KQU9zEdu0EMZ-3o0kDQ,_APw0xk94Edu0EMZ-3o0kDQ,_APw0xE94Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "33", prefix: "", name: "sec_identify_security_patterns", title: "Identificar patrones de seguridad", url: "./../../soa.rup_soma/deliveryprocesses/sec_identify_security_patterns_52D295C8.html", 
+	predecessors: "32", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+
+{id: "c696185c", parentId: "b295495a", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_jx0KQU9zEdu0EMZ-3o0kDQ,_Ba05sE94Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "34", prefix: "", name: "soa_service_message_design", title: "Especificar mensajes de servicio", url: "./../../soa.rup_soma/deliveryprocesses/soa_service_message_design_9F18A7C9.html", 
+	predecessors: "26", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+
+{id: "7f0b095e", parentId: "b295495a", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_jx0KQU9zEdu0EMZ-3o0kDQ,_DFMw0094Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "35", prefix: "", name: "document_service_state_management_decisions", title: "Decisiones de gestión de estado de servicio de documentos", url: "./../../soa.rup_soma/deliveryprocesses/document_service_state_management_decisions_8B2750BF.html", 
+	predecessors: "26", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "a78ca7f4", parentId: "7f0b095e", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_jx0KQU9zEdu0EMZ-3o0kDQ,_DFMw0094Edu0EMZ-3o0kDQ,_DFMw2k94Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "36", prefix: "", name: "soa_service_specification", title: "Decisiones de gestión de estado de servicio de documentos", url: "./../../soa.rup_soma/deliveryprocesses/soa_service_specification_AB713F38.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [false,false,false,false,false,false,false,true]},
+
+{id: "64d0210", parentId: "16950c36", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_mnSJQU94Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "37", prefix: "", name: "soa_subsystem_analysis", title: "Realizar análisis de subsistema", url: "./../../soa.rup_soma/deliveryprocesses/soa_subsystem_analysis_54ABA3CF.html", 
+	predecessors: "25", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "f5b2590c", parentId: "64d0210", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_mnSJQU94Edu0EMZ-3o0kDQ,_yBx2oU94Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "38", prefix: "", name: "model_subsystem_dependencies", title: "Dependencias del subsistema de modelo", url: "./../../soa.rup_soma/deliveryprocesses/model_subsystem_dependencies_B429825C.html", 
+	predecessors: "", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "878b7168", parentId: "f5b2590c", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_mnSJQU94Edu0EMZ-3o0kDQ,_yBx2oU94Edu0EMZ-3o0kDQ,_ZhKyIE95Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "39", prefix: "", name: "soa_subsystem_design", title: "Dependencias del subsistema de modelo", url: "./../../soa.rup_soma/deliveryprocesses/soa_subsystem_design_BD10C1AC.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [false,false,false,false,false,false,false,true]},
+
+{id: "9b5e100e", parentId: "64d0210", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_mnSJQU94Edu0EMZ-3o0kDQ,_zB0-YU94Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "40", prefix: "", name: "identify_service_component", title: "Identificar componente de servicio", url: "./../../soa.rup_soma/deliveryprocesses/identify_service_component_2C4D9AD4.html", 
+	predecessors: "38", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "9c1a6e4", parentId: "9b5e100e", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_mnSJQU94Edu0EMZ-3o0kDQ,_zB0-YU94Edu0EMZ-3o0kDQ,_cafvsE95Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "41", prefix: "", name: "soa_subsystem_design", title: "Identificar componente de servicio", url: "./../../soa.rup_soma/deliveryprocesses/soa_subsystem_design_64972A94.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [false,false,true,false,false,false,false,false]},
+
+{id: "c96c551e", parentId: "64d0210", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_mnSJQU94Edu0EMZ-3o0kDQ,_zsJGsU94Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "42", prefix: "", name: "identify_functional_components", title: "Identificar componentes funcionales", url: "./../../soa.rup_soma/deliveryprocesses/identify_functional_components_F62342EB.html", 
+	predecessors: "40", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "fd325d1c", parentId: "c96c551e", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_mnSJQU94Edu0EMZ-3o0kDQ,_zsJGsU94Edu0EMZ-3o0kDQ,_c4ALEE95Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "43", prefix: "", name: "soa_subsystem_design", title: "Identificar componentes funcionales", url: "./../../soa.rup_soma/deliveryprocesses/soa_subsystem_design_A3255BF0.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [false,false,false,true,false,false,false,false]},
+
+{id: "16f49118", parentId: "64d0210", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_mnSJQU94Edu0EMZ-3o0kDQ,_0Zf78U94Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "44", prefix: "", name: "identify_technical_components", title: "Identificar componentes técnicos", url: "./../../soa.rup_soma/deliveryprocesses/identify_technical_components_5F9908B.html", 
+	predecessors: "42", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "dc28a49c", parentId: "16f49118", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_mnSJQU94Edu0EMZ-3o0kDQ,_0Zf78U94Edu0EMZ-3o0kDQ,_dPrrQE95Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "45", prefix: "", name: "soa_subsystem_design", title: "Identificar componentes técnicos", url: "./../../soa.rup_soma/deliveryprocesses/soa_subsystem_design_9E8114F4.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [false,false,false,false,true,false,false,false]},
+
+{id: "b80413f4", parentId: "16950c36", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_uaWAcU95Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "46", prefix: "", name: "perform_component_specification", title: "Realizar especificación de componentes", url: "./../../soa.rup_soma/deliveryprocesses/perform_component_specification_74BC3B5C.html", 
+	predecessors: "37", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "3a3599ee", parentId: "b80413f4", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_uaWAcU95Edu0EMZ-3o0kDQ,_4SB3QU95Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "47", prefix: "", name: "specify_component_attributes", title: "Especificar atributos de componentes", url: "./../../soa.rup_soma/deliveryprocesses/specify_component_attributes_8A909768.html", 
+	predecessors: "", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "ca5bc7ba", parentId: "3a3599ee", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_uaWAcU95Edu0EMZ-3o0kDQ,_4SB3QU95Edu0EMZ-3o0kDQ,_os8jUE96Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "48", prefix: "", name: "soa_component_specification", title: "Especificar atributos de componentes", url: "./../../soa.rup_soma/deliveryprocesses/soa_component_specification_A34EFD9B.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [false,true,false,false,false,false]},
+
+{id: "4d39ea4e", parentId: "b80413f4", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_uaWAcU95Edu0EMZ-3o0kDQ,_5agiQU95Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "49", prefix: "", name: "identify_events_messages", title: "Identificar sucesos y mensajes", url: "./../../soa.rup_soma/deliveryprocesses/identify_events_messages_9DC85986.html", 
+	predecessors: "", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "620777c0", parentId: "4d39ea4e", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_uaWAcU95Edu0EMZ-3o0kDQ,_5agiQU95Edu0EMZ-3o0kDQ,_qZC4wE96Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "50", prefix: "", name: "soa_component_specification", title: "Identificar sucesos y mensajes", url: "./../../soa.rup_soma/deliveryprocesses/soa_component_specification_22CE18BD.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [false,false,true,false,false,false]},
+
+{id: "49e0477e", parentId: "b80413f4", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_uaWAcU95Edu0EMZ-3o0kDQ,_7Di8oU95Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "51", prefix: "", name: "model_component_flow", title: "Flujo de componentes de modelo", url: "./../../soa.rup_soma/deliveryprocesses/model_component_flow_B83F7596.html", 
+	predecessors: "", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "49177762", parentId: "49e0477e", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_uaWAcU95Edu0EMZ-3o0kDQ,_7Di8oU95Edu0EMZ-3o0kDQ,_rPqXsE96Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "52", prefix: "", name: "soa_component_specification", title: "Flujo de componentes de modelo", url: "./../../soa.rup_soma/deliveryprocesses/soa_component_specification_A41CF80C.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [false,false,false,false,true,false]},
+
+{id: "4daaaadc", parentId: "b80413f4", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_uaWAcU95Edu0EMZ-3o0kDQ,_8N1lgU95Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "53", prefix: "", name: "create_component_class_diagram", title: "Crear diagrama de clases de componentes", url: "./../../soa.rup_soma/deliveryprocesses/create_component_class_diagram_B364ACB3.html", 
+	predecessors: "", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "235fd3b2", parentId: "4daaaadc", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_uaWAcU95Edu0EMZ-3o0kDQ,_8N1lgU95Edu0EMZ-3o0kDQ,_r2DCQE96Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "54", prefix: "", name: "soa_component_specification", title: "Crear diagrama de clases de componentes", url: "./../../soa.rup_soma/deliveryprocesses/soa_component_specification_78637748.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [false,false,false,true,false,false]},
+
+{id: "60fe131a", parentId: "b80413f4", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_uaWAcU95Edu0EMZ-3o0kDQ,_BjKJkFHZEdumTu7t35vA-A", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "55", prefix: "", name: "identify_commonality_and_variability", title: "Realizar diseño orientado a variaciones", url: "./../../soa.rup_soma/deliveryprocesses/identify_commonality_and_variability_823A38A9.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+
+{id: "58233d04", parentId: "16950c36", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_HNppYE93Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "", prefix: "", name: "rup_designer", title: "Diseñador", url: "./../../soa.rup_soma/deliveryprocesses/rup_designer_D4EE8CC4.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "3b90b32", parentId: "58233d04", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_HNppYE93Edu0EMZ-3o0kDQ,_HN12oE93Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_model", title: "Modelo de servicio", url: "./../../soa.rup_soma/deliveryprocesses/soa_service_model_E9608D4F.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "1247889a", parentId: "16950c36", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_HNppYU93Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "", prefix: "", name: "rup_software_architect", title: "Arquitecto de software", url: "./../../soa.rup_soma/deliveryprocesses/rup_software_architect_DF8C6CD4.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "e73db0a8", parentId: "1247889a", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_HNppYU93Edu0EMZ-3o0kDQ,_HN12oU93Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_analysis_model", title: "Modelo de análisis", url: "./../../soa.rup_soma/deliveryprocesses/rup_analysis_model_F3FE6D5F.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "a8400cbe", parentId: "16950c36", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_HNppYk93Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "", prefix: "", name: "rup_database_designer", title: "Diseñador de base de datos", url: "./../../soa.rup_soma/deliveryprocesses/rup_database_designer_CE2580EA.html", 
+	predecessors: "", info: "", type: "Rol", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "704a22f8", parentId: "a8400cbe", relPath: ",_VCMlUEn7EduC74V7YHXTOQ,_HNppYk93Edu0EMZ-3o0kDQ,_HN12ok93Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_data_model", title: "Modelo de datos", url: "./../../soa.rup_soma/deliveryprocesses/rup_data_model_E2978175.html", 
+	predecessors: "", info: "Responsable de", type: "Producto de trabajo", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "8a670652", parentId: "", relPath: ",_o0lxwEn7EduC74V7YHXTOQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "56", prefix: "", name: "realization", title: "Realización", url: "./../../soa.rup_soma/deliveryprocesses/realization_B26A499B.html", 
+	predecessors: "11,24", info: "", type: "Fase", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "a1fc34aa", parentId: "8a670652", relPath: ",_o0lxwEn7EduC74V7YHXTOQ,_abmvMU97Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "57", prefix: "", name: "realization_decisions", title: "Decisiones de realización", url: "./../../soa.rup_soma/deliveryprocesses/realization_decisions_4A3EAB68.html", 
+	predecessors: "", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "91483afc", parentId: "a1fc34aa", relPath: ",_o0lxwEn7EduC74V7YHXTOQ,_abmvMU97Edu0EMZ-3o0kDQ,_r5uy8E97Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "58", prefix: "", name: "soa_service_realization", title: "Decisiones de realización de servicio de documentos", url: "./../../soa.rup_soma/deliveryprocesses/soa_service_realization_7DB553EA.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+
+{id: "fde2e80a", parentId: "a1fc34aa", relPath: ",_o0lxwEn7EduC74V7YHXTOQ,_abmvMU97Edu0EMZ-3o0kDQ,_2__8wU97Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "59", prefix: "", name: "allocate_service_components_layers", title: "Asignar componentes de servicio a capas", url: "./../../soa.rup_soma/deliveryprocesses/allocate_service_components_layers_37B83ADA.html", 
+	predecessors: "58", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "2cb2d6ae", parentId: "fde2e80a", relPath: ",_o0lxwEn7EduC74V7YHXTOQ,_abmvMU97Edu0EMZ-3o0kDQ,_2__8wU97Edu0EMZ-3o0kDQ,_RbvbwE98Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "60", prefix: "", name: "soa_component_specification", title: "Asignar componentes de servicio a capas", url: "./../../soa.rup_soma/deliveryprocesses/soa_component_specification_AF645A1.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [false,false,false,false,false,true]},
+
+{id: "6b1fc20", parentId: "a1fc34aa", relPath: ",_o0lxwEn7EduC74V7YHXTOQ,_abmvMU97Edu0EMZ-3o0kDQ,_fxVBQU98Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "61", prefix: "", name: "allocate_components_layers", title: "Asignar componentes a capas", url: "./../../soa.rup_soma/deliveryprocesses/allocate_components_layers_D5FD3E99.html", 
+	predecessors: "59", info: "", type: "Actividad", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+
+{id: "1a91ec9c", parentId: "6b1fc20", relPath: ",_o0lxwEn7EduC74V7YHXTOQ,_abmvMU97Edu0EMZ-3o0kDQ,_fxVBQU98Edu0EMZ-3o0kDQ,_k4Gt0E98Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "62", prefix: "", name: "soa_component_specification", title: "Asignar componentes a capas", url: "./../../soa.rup_soma/deliveryprocesses/soa_component_specification_55582F82.html", 
+	predecessors: "", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [false,false,false,false,false,true]},
+
+{id: "3b47b4f2", parentId: "a1fc34aa", relPath: ",_o0lxwEn7EduC74V7YHXTOQ,_abmvMU97Edu0EMZ-3o0kDQ,_7nB80E98Edu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "63", prefix: "", name: "soa_construct_arch_proof", title: "Realizar exploración de viabilidad técnica detallada", url: "./../../soa.rup_soma/deliveryprocesses/soa_construct_arch_proof_22BDCD59.html", 
+	predecessors: "61", info: "", type: "Tarea", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+
+]};
+				</script>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

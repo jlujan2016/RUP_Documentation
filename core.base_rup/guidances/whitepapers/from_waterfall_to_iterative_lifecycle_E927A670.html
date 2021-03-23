@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Documentaci&oacute;n: De cascada a ciclo vital iterativo</title>
+<meta content="Whitepaper" name="uma.type">
+<meta content="from_waterfall_to_iterative_lifecycle" name="uma.name">
+<meta content="De cascada a ciclo vital iterativo" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qIh6UABuEdqrKcHWz1HoWw", "{EE97A8CD-66CA-4A9B-9871-E3B94CCED528}", "1.749998588331248E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_EiiR4DIdEdqDs_9ORT1Rig", "1.749998588331248E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_qIh6UABuEdqrKcHWz1HoWw", "{EE97A8CD-66CA-4A9B-9871-E3B94CCED528}", "1.749998588331248E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.749998588331248E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Documentaci&oacute;n: De cascada a ciclo vital iterativo</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/whitepaper.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En este documento técnico se discuten algunos de los retos y las trampas del desarrollo iterativo desde la perspectiva de un gestor de proyectos.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/roles/rup_project_manager_363CE680.html" guid="{EE97A8CD-66CA-4A9B-9871-E3B94CCED528}">Gestor de proyectos</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Descripci&oacute;n principal</th><td class="sectionTableCell"><a id="Top" name="Top"></a><a key="cascada" text="transición a iterativo" name="XE_Waterfall__Transition_to_Iterative" id="XE_Waterfall__Transition_to_Iterative" class="index"></a><a key="iterativo" text="transición de cascada" name="XE_Iterative__Transition_from_Waterfall" id="XE_Iterative__Transition_from_Waterfall" class="index"></a> 
+<p>
+    Philippe Kruchten<br />
+     Rational Software Corp. Reservados todos los derechos.
+</p>
+<p>
+    Existe una <a href="./../../../core.base_rup/guidances/whitepapers/resources/tp173a.pdf" target="_blank">versión en PDF</a> de
+    este artículo; para verlo, debe tener instalado <a href="http://www.adobe.com/products/acrobat/alternate.html" target="_blank">Adobe Acrobat</a>. Puede bajar otros documentos técnicos de Rational Unified Process (RUP) del <a href="http://www-306.ibm.com/software/rational/info/literature/whitepapers.jsp" target="_blank">sitio web de IBM</a>.
+</p>
+<h3>
+    Resumen
+</h3>
+<p>
+    En este documento técnico, algunos de los retos del desarrollo iterativo se describen desde la perspectiva de un gestor
+    de proyectos. En este documento también se discuten algunas de las "trampas" u obstáculos que hemos visto a través de
+    nuestra experiencia en consultoría, e informes y batallas que nos han contado nuestros compañeros.
+</p>
+<p>
+    El modelo de cascada resulta fácil para el gestor y difícil para el equipo de ingeniería. El desarrollo iterativo está
+    mucho más alineado con la forma de trabajar de los ingenieros de software, pero con algunos costes en la complejidad de
+    gestión.
+</p>
+<p>
+    Aunque el desarrollo iterativo es más complejo que los enfoques tradicionales la primera vez que se lleva a cabo,
+    produce beneficios reales a largo plazo. Cuando comprenda como hacerlo bien, descubrirá que se ha convertido en un
+    gestor más capaz, y le parecerá más fácil gestionar proyectos más grandes y más complejos. Y cuando cuente con un
+    equipo completo para comprender y pensar de forma iterativa, las escalas de método serán mucho mejores que los enfoques
+    tradicionales.
+</p>
+<br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

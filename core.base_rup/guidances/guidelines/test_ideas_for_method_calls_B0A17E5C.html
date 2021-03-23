@@ -1,0 +1,669 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Ideas de pruebas para llamadas a m&eacute;todo</title>
+<meta content="Guideline" name="uma.type">
+<meta content="test_ideas_for_method_calls" name="uma.name">
+<meta content="Ideas de pruebas para llamadas a m&eacute;todo" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "4.418859682485385E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3lZjkCxqEdqYV4MWf8PiCw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "4.418859682485385E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.418859682485385E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "4.418859682485385E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.418859682485385E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Ideas de pruebas para llamadas a m&eacute;todo</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Ideas de prueba basadas en anomalías de software plausibles y en cómo descubrir dichas anomalías. En esta directriz se describe un método para detectar casos en que el código no gestiona el resultado de la llamada a método.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_test_ideas_list_2A0F8E03.html" guid="{45219F27-0F84-4FD5-A7BC-73C19226303B}">Lista de ideas de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="prueba" text="para llamadas a métodos" name="XE_test__developer_testing__test_ideas__for_method_calls" id="XE_test__developer_testing__test_ideas__for_method_calls" class="index"></a><a key="diseño" text="para llamadas a métodos" name="XE_design__developer_testing__test_ideas__for_method_calls" id="XE_design__developer_testing__test_ideas__for_method_calls" class="index"></a><a key="ideas de prueba" text="para llamadas a métodos" name="XE_test-ideas__for_method_calls" id="XE_test-ideas__for_method_calls" class="index"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">Introducción</a>
+</h3>
+<p>
+    A continuación se muestra un ejemplo del código defectuoso:
+</p>
+<blockquote>
+<pre>
+File file = new File(stringName);
+file.delete();
+</pre>
+</blockquote>
+<p>
+    El defecto es que <font size="+0">File.delete</font> puede fallar, pero el código no lo comprueba. Solucionarlo
+    requiere la adición del código resaltado que se muestra a continuación:
+</p>
+<blockquote>
+<pre>
+File file = new File(stringName);
+<font color="#ff0000">
+<i>
+<b>
+if (</b></i></font>file.delete()<font color="#ff0000">
+<i>
+<b>
+== false) {...}</b></i></font>
+</pre>
+</blockquote>
+<p>
+    En esta directriz se describe un método para detectar casos en que el código no gestiona el resultado de la llamada a
+    método. (Tenga en cuenta que presupone que el método que se llama produce el resultado correcto para cualquier entrada
+    que proporcione. Es algo que se debe probar, pero crear ideas de prueba para el método llamado es una tarea aparte. Es
+    decir, no es su responsabilidad probar <font size="+0">File.delete</font>.)
+</p>
+<p>
+    La noción clave es que debe crear una idea de prueba para cada <i>resultado relevante no gestionado distinto</i> de una
+    llamada a método. Para definir este término, miremos primero el <i>resultado</i>. Cuando se ejecuta un método, cambia
+    el estado del mundo. Estos son algunos ejemplos:
+</p>
+<ul>
+    <li>
+        Puede forzar la devolución de valores en la pila de tiempo de ejecución.
+    </li>
+    <li>
+        Puede lanzar una excepción.
+    </li>
+    <li>
+        Puede cambiar una variable global.
+    </li>
+    <li>
+        Puede actualizar un registro en una base de datos.
+    </li>
+    <li>
+        Puede enviar datos por la red.
+    </li>
+    <li>
+        Puede imprimir un mensaje en la salida estándar.
+    </li>
+</ul>
+<p>
+    Miremos ahora lo <i>relevante</i>, utilizando de nuevo algunos ejemplos.
+</p>
+<ul>
+    <li>
+        Imaginemos que el método que se llama imprime un mensaje en la salida estándar. Esto "cambia el estado del mundo",
+        pero no puede afectar al proceso posterior del programa. No importa lo que se imprima, aunque no se imprima nada,
+        no puede afectar a la ejecución del código.
+    </li>
+    <li>
+        Si el método devuelve true para correcto y false para anomalía, el programa probablemente debería ramificar según
+        el resultado. Así que el valor de retorno es relevante.
+    </li>
+    <li>
+        Si el método que se llama actualiza un registro de base de datos que el código lee y utiliza posteriormente, el
+        resultado (actualizar el registro) es relevante.
+    </li>
+</ul>
+<p>
+    (No hay ninguna línea absoluta entre relevante e irrelevante. Si llama <font size="+0">imprimir</font>, el método puede
+    provocar la asignación de los almacenamientos intermedios, y esta asignación puede ser relevante. Es concebible que un
+    defecto pueda depender de si se asignan, y qué almacenamientos intermedios se asignaron. Es concebible, ¿pero es
+    plausible?)
+</p>
+<p>
+    Un método puede tener un gran número de resultados, pero sólo algunos de ellos serán <i>distintos</i>. Por ejemplo,
+    imagine un método que escriba bytes en un disco. Puede devolver un número inferior a cero para indicar la anomalía; si
+    no, devuelve el número de bytes escritos (pueden ser menos que el número solicitado). El gran número de posibilidades
+    se puede agrupar en tres resultados distintos:
+</p>
+<ul>
+    <li>
+        un número inferior a cero.
+    </li>
+    <li>
+        el número escrito equivale al número solicitado
+    </li>
+    <li>
+        algunos bytes se han escrito, pero menos que el número solicitado.
+    </li>
+</ul>
+<p>
+    Todos los valores inferiores a cero se agrupan en un resultado porque ningún programa razonable hará distinciones entre
+    ellos. Todos ellos (si, en realidad, es posible más de uno) debe tratarse como un error. Del mismo modo, si el código
+    solicitó que se escribieran 500 bytes, no importa si en realidad se escribieron 34, o 340: probablemente se hará lo
+    mismo con los bytes que no se han escrito. (Si se debe hacer algo diferente para algún valor, como 0, esto formará un
+    resultado distinto nuevo).
+</p>
+<p>
+    Hay una última palabras en el término definitorio que se debe explicar. Esta técnica de prueba concreta no se preocupa
+    de los diferentes resultados que ya se han <i>entregado</i>. Imagine, de nuevo, este código:
+</p>
+<blockquote>
+<pre>
+File file = new File(stringName);
+if (file.delete() == false) {...}
+</pre>
+</blockquote>
+<p>
+    Hay dos resultados distintos (true y false). El código los gestiona. Puede gestionarlos incorrectamente, pero las ideas
+    de prueba de la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_ideas_for_booleans_and_boundaries_74AE938C.html" guid="1.8659406802663404E-305">Directriz de producto de trabajo: Ideas de prueba para booleanos y límites</a> lo
+    comprobará. Esta técnica de prueba se preocupa de los diferentes resultados que no se manejan específicamente con
+    códigos distintos. Esto puede suceder por dos motivos: pensó que la distinción era irrelevante, o simplemente la ha
+    pasado por alto. A continuación se muestra un ejemplo del primer caso:
+</p>
+<blockquote>
+<pre>
+result = m.method();
+switch (result) {
+    case FAIL:
+    case CRASH:
+       ...
+       break;
+    case DEFER:
+       ...
+       break;
+    default:
+       ...
+       break;
+}
+</pre>
+</blockquote>
+<p>
+    <font size="+0">FAIL</font> <font size="+0">CRASH</font> se gestionan con el mismo código. Sería inteligente comprobar
+    que realmente es adecuado. A continuación se muestra un ejemplo de una distinción que se ha pasado por alto:
+</p>
+<blockquote>
+<pre>
+result = s.shutdown();
+if (result == PANIC) {
+   ...
+} else {
+   // success! Shut down the reactor.
+   ...
+} 
+</pre>
+</blockquote>
+<p>
+    Resulta que la conclusión puede devolver un resultado distinto adicional: <font size="+0">RETRY</font>. El código
+    escrito trata el caso igual que el caso correcto, que es incorrecto casi siempre.
+</p>
+<h3>
+    <a id="FindingTestIdeas" name="FindingTestIdeas">Encontrar ideas de prueba</a>
+</h3>
+<p>
+    Su objetivo es pensar en los resultados relevantes distintos que antes había pasado por alto. Parece imposible: ¿Por
+    qué debería darse cuenta de que son relevantes ahora si no lo vio antes?
+</p>
+<p>
+    La respuesta es que un repaso sistemático del código, en una trama de prueba y no de programación, puede producir
+    nuevas impresiones. <i>Puede</i> cuestionar sus propias suposiciones revisando metódicamente el código, mirando los
+    métodos que llama, volviendo a comprobar la documentación, y pensando. A continuación se indican algunos casos que hay
+    que revisar.
+</p>
+<h4>
+    Casos "imposibles"
+</h4>
+<p>
+    A menudo, parecerá que la devolución de errores es imposible. Vuelva a comprobar sus suposiciones.
+</p>
+<p>
+    El ejemplo siguiente muestra una implementación de Java de un giro común de Unix para manejar archivos temporales.
+</p>
+<blockquote>
+<pre>
+File file = new File("tempfile");
+FileOutputStream s;
+try {
+    // open the temp file.
+    s = new FileOutputStream(file);
+} catch (IOException e) {...}
+// Make sure temp file will be deleted
+file.delete();
+</pre>
+</blockquote>
+<p>
+    El objetivo es garantizar que el archivo temporal siempre se elimina, independientemente de cómo salga el programa.
+    Esto se lleva a cabo creando el archivo temporal, y suprimiéndolo inmediatamente. En Unix, puede seguir trabajando con
+    el archivo suprimido, y el sistema operativo se encarga de la limpieza cuando el proceso sale. Un programador de Unix
+    poco esmerado puede no escribir el código para comprobar una eliminación fallida. Como acaba de crear
+    satisfactoriamente el archivo, debe poder suprimirlo.
+</p>
+<p>
+    Este truco no funciona en Windows. La eliminación fallará porque el archivo está abierto. Descubrir esto es complicado:
+    en agosto del 2000, la documentación de Java no enumeraba las situaciones en que <font size="+0">delete</font> podía
+    fallar; sólo indicaba que podía suceder. Pero -quizás- en "modalidad de prueba", el programador podía cuestionar las
+    suposiciones. Como el código se suponía que se "escribía una vez y se ejecutaba en todas partes", podía solicitar a un
+    programador de Windows cuando <font size="+0">File.delete</font> falla en Windows para descubrir la terrible verdad.
+</p>
+<h4>
+    Casos "irrelevantes"
+</h4>
+<p>
+    Otra fuerza contraria a la identificación de un valor relevante distinto es estar convencido de que no importa. Un
+    método <font size="+0">Comparator</font> de <font size="+0">compare</font> de Java devuelve un número &lt;0, 0, o un
+    número &gt;0. Estos son tres casos distintos que se pueden probar. Este código une dos de ellos:
+</p>
+<blockquote>
+<pre>
+void allCheck(Comparator c) {
+   ...
+   if (c.compare(o1, o2) &lt;= 0) {
+      ...
+   } else {
+      ...
+   } 
+</pre>
+</blockquote>
+<p>
+    Pero esto puede ser incorrecto. El modo de descubrir si lo es o no es intentar los dos casos por separado, incluso si
+    cree realmente que no habrá diferencias. (Lo que está probando realmente son sus opiniones). Tenga en cuenta que puede
+    estar ejecutando el caso <font size="+0">then</font> de la sentencia <font size="+0">if</font> más de una vez por otros
+    motivos. ¿Por qué no intentar uno con el resultado inferior a 0 y uno con el resultado exactamente igual a cero?
+</p>
+<h4>
+    Excepciones no detectadas
+</h4>
+<p>
+    Los excepciones son un tipo de resultado diferente. Por ejemplo, imagine este código:
+</p>
+<blockquote>
+<pre>
+void process(Reader r) {
+   ...
+   try {
+      ...
+      int c = r.read();
+      ...
+   } catch (IOException e) {
+      ...
+   }
+}
+</pre>
+</blockquote>
+<p>
+    Esperaría comprobar si el código manejador realmente hace lo correcto con una anomalía leída. Pero imagine que una
+    excepción no se maneja explícitamente. En cambio, se permite que se propague hacia arriba a través del código que se
+    está probando. En Java, sería similar a:
+</p>
+<blockquote>
+<pre>
+void process(Reader r) <font color="#ff0000">
+<i>
+<b>
+throws IOException</b></i></font> {
+    ...
+    int c = r.read();
+    ...
+}
+</pre>
+</blockquote>
+<p>
+    Esta técnica le pide que pruebe este caso <i>aunque</i> el código explícitamente no lo maneja. ¿Por qué? Por este tipo
+    de error:
+</p>
+<blockquote>
+<pre>
+void process(Reader r) throws IOException {
+    ...
+    <font color="#ff0000">
+<i>
+<b>
+Tracker.hold(this);</b></i></font>
+    ...
+    int c = r.read();
+    ...
+    <font color="#ff0000">
+<i>
+<b>
+Tracker.release(this);</b></i></font>
+    ...
+}
+</pre>
+</blockquote>
+<p>
+    Aquí, el código afecta al estado global (a través de <font size="+0">Tracker.hold</font>). Si la excepción se lanza,
+    <font size="+0">Tracker.release</font> nunca se llamará.
+</p>
+<p>
+    (Tenga en cuenta que si no se puede lanzar, probablemente no tendrá consecuencias obvias inmediatas. El problema
+    probablemente no será visible hasta que el <font size="+0">proceso</font> se vuelva a llamar, donde el intento de <font     size="+0">mantener</font> el objeto por segunda vez fallará. Un buen artículo sobre estos defectos es <a href="http://www.testingcraft.com/stobie-exceptions.pdf" target="_blank">"Testing for Exceptions"</a> de Keith Stobi.
+    &nbsp;(<a href="http://www.adobe.com/products/acrobat/alternate.html" target="_blank">Obtener Adobe Reader</a>))
+</p>
+<h3>
+    <a id="UndiscoveredFaults" name="UndiscoveredFaults">Anomalías no descubiertas</a>
+</h3>
+<p>
+    Esta técnica concreta no se dirige a todos los defectos asociados con las llamadas a método. Mostramos dos tipos que es
+    poco probable que se detecten.
+</p>
+<h4>
+    Argumentos incorrectos
+</h4>
+<p>
+    Imagine estas dos líneas de código C, donde la primera línea es incorrecta y la segunda línea es correcta.
+</p>
+<blockquote>
+<pre>
+... strncmp(s1, s2, strlen(s1)) ...
+... strncmp(s1, s2, strlen(<font color="#ff0000">
+<i>
+<b>
+s2</b></i></font>)) ...
+</pre>
+</blockquote>
+<p>
+    <font size="+0">strncmp</font> compara dos cadenas de caracteres y devuelve un número inferior a 0 si la primera es
+    lexicográficamente menos que la segunda (aparecería antes en un diccionario). Devuelve un "0" si son iguales. Devuelve
+    un número superior a 0 si la primera es lexicográficamente superior. Sin embargo, sólo compara el número de caracteres
+    determinados por el tercer argumento. El problema es que la longitud de la primera cadena de caracteres se utiliza para
+    limitar la comparación, donde debería ser la longitud de la segunda.
+</p>
+<p>
+    Esta técnica requeriría tres pruebas, una para cada valor devuelto distinto. Estas son las tres que se podrían
+    utilizar:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    s1
+                </th>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    s2
+                </th>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    resultado esperado
+                </th>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    resultado real
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" width="25%">
+                    "a"
+                </td>
+                <td align="middle" width="25%">
+                    "bbb"
+                </td>
+                <td align="middle" width="25%">
+                    &lt;0
+                </td>
+                <td align="middle" width="25%">
+                    &lt;0
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="25%">
+                    "bbb"
+                </td>
+                <td align="middle" width="25%">
+                    "a"
+                </td>
+                <td align="middle" width="25%">
+                    &gt;0
+                </td>
+                <td align="middle" width="25%">
+                    &gt;0
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="25%">
+                    "foo"
+                </td>
+                <td align="middle" width="25%">
+                    "foo"
+                </td>
+                <td align="middle" width="25%">
+                    =0
+                </td>
+                <td align="middle" width="25%">
+                    =0
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    El defecto no se descubre porque nada en esta técnica <i>fuerza</i> que el tercer argumento tenga un valor concreto. Lo
+    que necesita es un guión de prueba como el siguiente:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    <b>s1</b>
+                </th>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    <b>s2</b>
+                </th>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    <b>resultado esperado</b>
+                </th>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    <b>resultado real</b>
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" width="25%">
+                    "foo"
+                </td>
+                <td align="middle" width="25%">
+                    "foo<font color="#ff0000"><i><b>d</b></i></font>"
+                </td>
+                <td align="middle" width="25%">
+                    <font color="#ff0000"><i><b>&lt;0</b></i></font>
+                </td>
+                <td align="middle" width="25%">
+                    =0
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Mientras que existen técnicas adecuadas para capturar tales defectos, casi nunca se utilizan a la práctica. El esfuerzo
+    de prueba se gasta mejor, probablemente, en un conjunto completo de pruebas que destina muchos tipos de defectos (y que
+    usted espera que detecte este tipo como efecto secundario).
+</p>
+<h4>
+    Resultado indistinto
+</h4>
+<p>
+    Existe un peligro que surge cuando está codificando - y probando - método a método. A continuación se muestra un
+    ejemplo. Hay dos métodos. El primero, <font size="+0">connect</font>, quiere establecer una conexión de red:
+</p>
+<blockquote>
+<pre>
+void connect() {
+   ...
+   Integer portNumber = serverPortFromUser();
+   if (portNumber == null) {
+      // pop up message about invalid port number
+      return;
+   }
+</pre>
+</blockquote>
+<p>
+    Cuando necesita un número de puerto, llama <code>serverPortFromUser</code>. Este método devuelve dos valores distintos.
+    Devuelve un número de puerto escogido por el usuario si el número escogido es válido (1000 o superior). Si no, se
+    devuelve nulo. Si se devuelve nulo, el código que se está probando produce un mensaje de error y abandona.
+</p>
+<p>
+    Cuando <font size="+0">connect</font> se probó, funcionó como estaba previsto: un número de puerto válido produjo el
+    establecimiento de una conexión, y uno no válido produjo un mensaje emergente.
+</p>
+<p>
+    El código para <font size="+0">serverPortFromUser</font> es un poco más complicado. Primero abre una ventana que pide
+    una cadena de caracteres que tiene los botones Aceptar y Cancelar estándares. Basándose en lo que hace el usuario,
+    existen cuatro casos:
+</p>
+<ol>
+    <li>
+        Si el usuario escribe un número válido, ese número se devuelve.
+    </li>
+    <li>
+        Si el número es demasiado pequeño (inferior a 1000), se devuelve nulo (se mostrará el mensaje sobre el número de
+        puerto no válido).
+    </li>
+    <li>
+        Si el número no tiene el formato correcto, se devuelve de nuevo nulo (y el mismo mensaje es apropiado).
+    </li>
+    <li>
+        Si el usuario pulsa CANCELAR, se devuelve nulo.
+    </li>
+</ol>
+<p>
+    Este código también funciona como estaba previsto.
+</p>
+<p>
+    La combinación de las dos partes de código, sin embargo, tiene una consecuencia negativa: el usuario pulsa CANCELAR y
+    obtiene un mensaje sobre un número de puerto no válido. Todo el código funciona según lo previsto, pero el efecto
+    global sigue siendo incorrecto. Se probó de forma razonable, pero faltaba un defecto.
+</p>
+<p>
+    El problema aquí es que <font size="+0">nulo</font> es un resultado que representa dos <i>significados</i> distintos
+    ("valor erróneo" y "cancelado por el usuario"). Nada en esta técnica le obliga a darse cuenta del problema con el
+    diseño de <font size="+0">serverPortFromUser</font>.
+</p>
+<p>
+    No obstante, las pruebas pueden ayudar. Cuando <font size="+0">serverPortFromUser</font> se prueba aisladamente - sólo
+    para ver si devuelve el valor previsto en cada uno de los cuatro casos - el contexto de uso se pierde. En su lugar,
+    imagine que se probara mediante <font size="+0">connect</font>. Existirían cuatro pruebas que ejercerían ambos métodos
+    simultáneamente:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    entrada
+                </th>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    resultado esperado
+                </th>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    proceso pensado
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" width="25%">
+                    tipos de usuario "1000"
+                </td>
+                <td align="middle" width="25%">
+                    la conexión del puerto 1000 está abierta
+                </td>
+                <td align="middle" width="25%">
+                    <font size="+0">serverPortFromUser</font> devuelve un número, que se utiliza.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p align="center">
+                        tipos de usuario "999"
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        aviso emergente sobre número de puerto no válido
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        <font size="+0">serverPortFromUser</font> devuelve un valor nulo, que provoca el aviso emergente
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="25%">
+                    <p align="center">
+                        tipos de usuario "i99"
+                    </p>
+                </td>
+                <td align="middle" width="25%">
+                    aviso emergente sobre número de puerto no válido
+                </td>
+                <td align="middle" width="25%">
+                    <font size="+0">serverPortFromUser</font> devuelve un valor nulo, que provoca el aviso emergente
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="25%">
+                    usuarios pulsan CANCELAR
+                </td>
+                <td align="middle" width="25%">
+                    todo el proceso de conexión debe cancelarse
+                </td>
+                <td align="middle" width="25%">
+                    <font size="+0"><i>serverPortFromUser</i></font> <i>devuelve un valor nulo, espera un momento que esto
+                    no tiene sentido...</i>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Como suele ocurrir, las pruebas en grandes contextos revelan problemas de integración que escapan a las pruebas de
+    pequeña escala. Y, como también suele ocurrir, la precisión durante el diseño de la prueba revela el problema antes de
+    ejecutar la prueba. (Pero si el defecto no se captura entonces, se capturará cuando se ejecute la prueba).
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

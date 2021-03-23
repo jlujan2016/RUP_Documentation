@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Identificaci&oacute;n de beans de identidad</title>
+<meta content="Guideline" name="uma.type">
+<meta content="identifying_entity_beans" name="uma.name">
+<meta content="Identificaci&oacute;n de beans de identidad" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.3141371110020564E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.3141371110020564E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Identificaci&oacute;n de beans de identidad</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la forma en que identificar y modelar beans de entidad que se necesitan para una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identificar elementos de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h2>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h2>
+<p>
+    Esta directriz se centra en identificar los beans de entidad. En la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/entity_bean_E721D57E.html" guid="4.528918585369678E-307">Directriz: beans de entidad</a> se proporciona ayuda adicional sobre beans de entidad. En
+    la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305">Directriz: Enterprise JavaBeans (EJB)</a> se proporciona ayuda adicional sobre EJB.
+</p>
+<h2>
+    <a id="Guidelines" name="Guidelines"></a>Identificación de beans de entidad
+</h2>
+<p>
+    A menudo las clases de entidad (consulte la sección <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">Producto de trabajo: clases de análisis</a>) son buenas candidatas como
+    beans de entidad, puesto que los beans de entidad se utilizan para los datos persistentes. Los beans de entidad
+    corresponden a entidades empresariales con un estado persistente. Proporcionan servicios que implementan lógica
+    específica de la entidad empresarial. Otra característica de los beans de entidad es que pueden proporcionar sus
+    servicios a muchos clientes a la vez. El contenedor EJB maneja la coordinación con estos clientes y con sus
+    transacciones.
+</p>
+<p>
+    Los beans de entidad se utilizan para proporcionar persistencia, pero también pueden encapsular lógica empresarial. En
+    general, un bean de entidad sólo debería contener lógica empresarial relacionada con el bean de entidad y todos los
+    objetos de datos dependientes. En general, se debería quitar la lógica de bean entre entidades y colocarla en beans de
+    sesión para minimizar el acoplamiento entre los beans de entidad.
+</p>
+<h2>
+    <a id="Modeling" name="Modeling"></a>Modelado de beans de entidad
+</h2>
+<p>
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_enterprise_javabeans_ejbs_2581AEE5.html" guid="9.931732120190802E-307">Directriz: identificación de Enterprise JavaBeans (EJB)</a> para obtener más información.
+</p>
+<h2>
+    <a id="Granularity" name="Granularity"></a>Granularidad
+</h2>
+<p>
+    La granularidad hace referencia al tamaño de los datos que un EJB de entidad representa. La granularidad apropiada
+    puede depender de la versión de la especificación EJB que se esté utilizando.
+</p>
+<p>
+    Con anterioridad a EJB 2.0, se recomendaba que los EJB de entidad siempre tuviesen una granularidad grande; típicamente
+    representando grandes grupos de datos agrupados de varias tablas de bases de datos. Esto se debe a que cada entidad EJB
+    da lugar a sobrecargas; en particular sobrecargas relacionas por el tratar con elementos remotos. Por ejemplo, los
+    artículos de una línea de detalle en una factura o las celdas en una hoja de cálculo tienen una granularidad demasiado
+    fina y no se debería acceder a los mismos con frecuencia por la red. En contraste, agrupaciones lógicas de las entradas
+    de una factura, o un subconjunto de celdas en una hoja de cálculo se pueden modelar como una entidad EJB si se requiere
+    lógica empresarial para los datos.
+</p>
+<p>
+    Esto ha cambiado de alguna manera con EJB 2.0: la introducción de interfaces locales reduce parte de estas sobrecargas
+    y permite modelar objetos con una granularidad más fina como EJB. En la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307">Concepto: visión general de Java 2 Platform Enterprise Edition (J2EE)</a> se describen
+    las interfaces locales y remotas. Un interfaz local no tiene la sobrecarga asociada con una interfaz remota,
+    permitiendo que beans fuertemente acoplados interactúen más eficientemente. Las interfaces locales son particularmente
+    útiles para entidades con una granularidad fina que se utilizan para formar una entidad mayor, siendo la entidad mayor
+    responsable de la creación y destrucción de las partes. Los clientes utilizan la interfaz remota de la entidad mayor,
+    que a su vez, utiliza las interfaces locales para interactuar con sus partes.
+</p>
+<p>
+    De cualquier manera, si un bean de entidad tiene una relación de composición con otra clase, se puede elegir modelar
+    esta otra clase como una clase Java normal en lugar de un bean de entidad. Si se está utilizando la persistencia
+    gestionada por contenedor, se hace referencia a esta clase Java como una "clase de valor dependiente". Las clases de
+    valor dependiente son más sencillas y se desarrollan y prueban con más rapidez que los beans de entidad, y son una
+    buena opción, suponiendo que la clase compuesta no requiera características de bean de entidad. Algunas de las
+    limitaciones de las clases de valor dependiente son:
+</p>
+<ul>
+    <li>
+        No pueden contener referencias de bean de entidad.
+    </li>
+    <li>
+        Son "get" y "set" por valor, lo que tiene algún coste de rendimiento, pero que habilita el acceso desde interfaces
+        remotas.
+    </li>
+</ul>
+<h2>
+    <a id="Encapsulation" name="Encapsulation"></a>Encapsulación
+</h2>
+<p>
+    Hay que considerar el agrupar un conjunto de beans de entidad relacionados en una fachada de bean de sesión para
+    proporcionar una interfaz lógica para la manipulación de entidades empresariales que corresponden a los EJB de entidad.
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_session_beans_5E45D5DA.html" guid="6.241144674389355E-307">Directriz: identificación de beans de sesión</a> para obtener más información.
+</p>
+<p>
+    Una aproximación similar se da con un bean de entidad para que encapsule un conjunto de otros, generalmente
+    dependientes, beans de entidad locales. Los clientes remotos acceden a todos los datos a través del bean de entidad
+    "principal". En <i>Core J2EE Patterns - Composite Entity Pattern</i> ([<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/supportingmaterials/java_references_110189E3.html" guid="1.4494927535802764E-304">ALU01</a>]) se discute esta alternativa; sin embargo, se recomienda una fachada de bean
+    de sesión como un método más fácil para gestionar las relaciones de beans de entidad.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

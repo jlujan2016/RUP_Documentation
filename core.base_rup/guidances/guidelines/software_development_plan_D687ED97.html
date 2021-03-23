@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Plan de desarrollo de software</title>
+<meta content="Guideline" name="uma.type">
+<meta content="software_development_plan" name="uma.name">
+<meta content="Plan de desarrollo de software" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_C49xgP_UEdmVCcs_BRqacA", "{D77D6716-B167-4643-A4B6-6F76C7769A80}", "1.6567134597638413E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3SWfwN7OEdmjRZts2c4ZjQ", "{D77D6716-B167-4643-A4B6-6F76C7769A80}", "1.6567134597638413E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.6567134597638413E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_U8LVkAIUEdqEutyfYo0quQ", "_C49xgP_UEdmVCcs_BRqacA", "{D77D6716-B167-4643-A4B6-6F76C7769A80}", "1.6567134597638413E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.6567134597638413E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Plan de desarrollo de software</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz proporciona ayuda para crear un plan de desarrollo de software para un ciclo de desarrollo iterativo. También discute como una secuencia de revisión de cascada tradicional se alinea con el enfoque iterativo.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/develop_measurement_plan_16772623.html" guid="{C2E90714-D99F-40B5-BAF3-7E884CE01406}">Desarrollar el plan de medidas</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/compile_software_development_plan_FADDE6C8.html" guid="{7B3D4BD7-93D5-4240-A449-47742FBB40A7}">Compilar el plan de desarrollo de software</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_project_plan_D89CA030.html" guid="{D77D6716-B167-4643-A4B6-6F76C7769A80}">Plan de desarrollo de software</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a key="iteración" text="directrices para" name="XE_iteration__length_of_iterations__guidelines_for" id="XE_iteration__length_of_iterations__guidelines_for" class="index"></a><a id="Length" name="Length">Determinación de
+    la longitud de cada iteración</a>
+</h3>
+<p>
+    Hemos definido una iteración como un miniproyecto bastante completo, que pasa por todas las disciplinas principales y
+    resulta en la mayoría de casos en un sistema ejecutable, aunque incompleto: un release. Aunque el ciclo [editar,
+    compilar, probar, depurar] suena como una iteración, no es lo que queremos decir aquí. Las compilaciones diarias o
+    semanales que integran cada vez más, y prueban más y más elementos del sistema, también pueden parecer una iteración,
+    pero sólo es una porción de una iteración, tal como se utiliza aquí este término.
+</p>
+<p>
+    Una iteración empieza con la planificación y los requisitos, y acaba con un release, interno o externo.
+</p>
+<p>
+    La rapidez de la iteración depende principalmente del <b>tamaño</b> de la organización de desarrollo.
+</p>
+<p>
+    Por ejemplo:
+</p>
+<ul>
+    <li>
+        Cinco personas pueden realizar la planificación el lunes por la mañana, comer juntos cada día para supervisar el
+        progreso, reasignar las tareas, empezar una compilación el jueves, y completar la iteración el viernes por la
+        tarde.
+    </li>
+    <li>
+        Pero esto será difícil de alcanzar con 20 personas. Se tardará más tiempo distribuyendo el trabajo, sincronizando
+        los subgrupos, integrando, etc. Una iteración puede tardar tres o cuatro semanas.
+    </li>
+    <li>
+        Con 40 personas, ya se tarda una semana para que el "influjo nervioso vaya del cerebro a las extremidades". Tiene
+        niveles intermediarios de gestión, la comprensión común del objetivo requerirá documentación más formal, más
+        ceremonia. Tres meses es una duración de iteración más razonable.
+    </li>
+</ul>
+<p>
+    Otros factores entran en juego: el grado de familiaridad de la organización con el enfoque iterativo, incluyendo el
+    hecho de disponer de una organización estable y madura, el nivel de automatización que utiliza el equipo para gestionar
+    el código (por ejemplo, CM distribuida), distribuir información (por ejemplo, web interna), pruebas automatizadas, etc.
+</p>
+<p>
+    Tenga en cuenta que también hay unos ciertos gastos generales fijados en una iteración, en la planificación,
+    sincronización, análisis de los resultados, etc.
+</p>
+<p>
+    Así que, por un lado, convencido de las tremendas ventajas del enfoque repetitivo, puede que esté tentado de repetir
+    furiosamente, aunque los límites humanos de la organización ralentizarán su fervor.
+</p>
+<p>
+    Algunos datos empíricos:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="18%">
+                    <b>SLOC</b>
+                </th>
+                <th scope="col" align="middle" width="41%">
+                    <b>Número de desarrolladores</b>
+                </th>
+                <th scope="col" align="middle" width="41%">
+                    <b>Duración de una iteración</b>
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" width="18%">
+                    10.000
+                </td>
+                <td align="middle" width="41%">
+                    5
+                </td>
+                <td align="middle" width="41%">
+                    1 semana
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="18%">
+                    50.000
+                </td>
+                <td align="middle" width="41%">
+                    15
+                </td>
+                <td align="middle" width="41%">
+                    1 mes
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="18%">
+                    500.000
+                </td>
+                <td align="middle" width="41%">
+                    45
+                </td>
+                <td align="middle" width="41%">
+                    6 meses
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="18%">
+                    1.000.000
+                </td>
+                <td align="middle" width="41%">
+                    100
+                </td>
+                <td align="middle" width="41%">
+                    1 año
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<ul>
+    <li>
+        <b>Iteraciones de más de 6 meses</b> probablemente necesitan tener hitos intermedios incorporados para mantener el
+        proyecto al día. Considere reducir el ámbito de la iteración para reducir la longitud y garantizar un enfoque
+        claro.
+    </li>
+    <li>
+        <b>Iteraciones de más de 12 meses</b> crean su propio riesgo, ya que la iteración expande el ciclo económico anual.
+        Un proyecto que no ha producido nada visible en los últimos 12 meses corre el riesgo de perder sus fondos.
+    </li>
+    <li>
+        <b>Iteraciones de menos de 1 mes</b> deben tener un ámbito definido cuidadosamente. Habitualmente, las iteraciones
+        breves son más adecuadas para la fase de construcción, donde el grado de nueva funcionalidad que se debe incluir y
+        el grado de novedad son bajos. Las iteraciones breves pueden tener poco o no tener análisis formal, y pueden
+        simplemente mejorar incrementalmente una funcionalidad bien comprendida.
+    </li>
+    <li>
+        <b>Todas las iteraciones no deben tener la misma longitud</b>: su longitud variará de acuerdo con sus objetivos.
+        Habitualmente, las iteraciones de elaboración serán más largas que las iteraciones de construcción. Dentro de una
+        fase, las iteraciones tienen generalmente la misma longitud (simplifica la planificación).
+    </li>
+</ul>
+<p>
+    Una vez que tenga una idea del número de iteraciones del plan sin detallar, deberá definir el contenido de cada
+    iteración. También es una buena idea encontrar un nombre o un título para calificar el producto que tiene al final de
+    cada iteración, para ayudar a obtener un enfoque más claro.
+</p>
+<blockquote>
+    <p class="exampleheading">
+        <a id="Example" name="Example">Ejemplo</a> Iteraciones para una conmutación de teléfono privado
+    </p>
+</blockquote>
+<blockquote>
+    <ul>
+        <li>
+            Iteración 1: llamada local.
+        </li>
+        <li>
+            Iteración 2: añadir llamadas externas y gestión del suscriptor.
+        </li>
+        <li>
+            Iteración 3: añadir correo por voz y teleconferencias.
+        </li>
+    </ul>
+</blockquote>
+<h3>
+    <a key="iteración" text="número de iteraciones, directrices para" name="XE_iteration__number_of_iterations_guidelines_for" id="XE_iteration__number_of_iterations_guidelines_for" class="index"></a><a id="Number" name="Number">Determinación del número de iteraciones</a>
+</h3>
+<p>
+    Un proyecto muy simple puede tener sólo una iteración por fase:
+</p>
+<ul>
+    <li>
+        Una iteración en la fase inicial, produce quizás un prototipo de prueba de concepto o una maqueta de la interfaz de
+        usuario o ninguna iteración, en los casos para el ejemplo de un ciclo de evolución.
+    </li>
+    <li>
+        Una iteración en la fase de elaboración para producir un prototipo arquitectónico.
+    </li>
+    <li>
+        Una iteración en la fase de construcción para compilar el producto (a un release "beta").
+    </li>
+    <li>
+        Una iteración en transición para finalizar el producto (release completo del producto).
+    </li>
+</ul>
+<p>
+    Para un proyecto más sustancial, en el ciclo de desarrollo inicial la norma sería:
+</p>
+<ul>
+    <li>
+        Una iteración en la fase inicial (posiblemente produciendo un prototipo).
+    </li>
+    <li>
+        Dos iteraciones en la fase de elaboración; una para un prototipo arquitectónico, y uno para la línea base de la
+        arquitectura.
+    </li>
+    <li>
+        Dos iteraciones en la fase de construcción para exponer un sistema parcial y madurarlo.
+    </li>
+    <li>
+        Una iteración en la fase de transición para ir de las capacidades operativas iniciales al release completo del
+        producto.
+    </li>
+</ul>
+<p>
+    Para un proyecto grande, con muchos aspectos desconocidos, nuevas tecnologías, etc., se puede producir:
+</p>
+<ul>
+    <li>
+        una iteración adicional en la fase inicial, para permitir la creación de más prototipos.
+    </li>
+    <li>
+        una iteración adicional en la fase de elaboración, para permitir la exploración de diferentes tecnologías.
+    </li>
+    <li>
+        una iteración adicional en la fase de construcción debido al tamaño total del producto.
+    </li>
+    <li>
+        una iteración adicional en la fase de transición, para permitir la información de retorno operativo.
+    </li>
+</ul>
+<p>
+    Durante el ciclo de desarrollo, tenemos:
+</p>
+<blockquote>
+    <blockquote>
+        <ul>
+            <li>
+                Baja: 3 iteraciones [0,1,1,1]
+            </li>
+            <li>
+                Típica: 6 [1, 2, 2, 1]
+            </li>
+            <li>
+                Alta: 9 [1, 3, 3, 2]
+            </li>
+            <li>
+                Muy alta: 10 [2, 3, 3, 2]
+            </li>
+        </ul>
+    </blockquote>
+</blockquote>
+<p>
+    Así pues, en general, planee tener <b>entre tres y diez</b> iteraciones. Tenga en cuenta, sin embargo, que los límites
+    superior e inferior connotan circunstancias inusuales, así que la mayoría de desarrollos utilizarán entre <b>seis y
+    ocho</b> iteraciones.
+</p>
+<p>
+    Son posibles muchas variaciones dependiendo de los riesgos, el tamaño y la complejidad:
+</p>
+<ul>
+    <li>
+        <b>Si el producto está previsto para un dominio totalmente nuevo</b>, puede ser necesario añadir algunas
+        iteraciones en la fase inicial para consolidar los conceptos, mostrar varias maquetas a una sección cruzada de
+        clientes o usuarios, o construir una respuesta sólida para solicitar una propuesta.
+    </li>
+    <li>
+        <b>Si se debe desarrollar una nueva arquitectura</b>, o hay una gran cantidad de modelado de caso de uso, o
+        aparecen riesgos apremiantes, debe planear tener dos o tres iteraciones en la fase de elaboración.
+    </li>
+    <li>
+        <b>Si el producto es grande y complejo</b>, y se desarrolla durante un largo periodo, debe planear tener tres o más
+        iteraciones en la fase de construcción.
+    </li>
+    <li>
+        Debe planear tener varias iteraciones en la fase de transición si, al tener que minimizar el tiempo de
+        comercialización, debe proporcionar el producto con un conjunto reducido de funcionalidades, o si considera que
+        necesitará más adaptaciones pequeñas para la base del usuario final tras un periodo de uso.
+    </li>
+</ul>
+<h3>
+    <a key="plan de desarrollo de software" text="directrices para correlación" name="XE_software_development_plan__traditional_reviews__guidelines_for_mapping" id="XE_software_development_plan__traditional_reviews__guidelines_for_mapping" class="index"></a><a id="TraditionalReviewsAndTheIterativeApproach" name="TraditionalReviewsAndTheIterativeApproach">Alineación de la
+    secuencia de revisión de cascada tradicional con el enfoque iterativo</a>
+</h3>
+<p>
+    La secuencia de revisión por omisión para un proyecto de ciclo de vida en cascada tiene una revisión única principal de
+    productos de trabajo importantes, por ejemplo:
+</p>
+<ul>
+    <li>
+        <b>Revisión de requisitos del sistema (SRR)</b>, a la terminación de la especificación del sistema;
+    </li>
+    <li>
+        <b>Revisión de especificación de software (SSR)</b>, a la terminación de la especificación de requisitos de
+        software;
+    </li>
+    <li>
+        <b>revisión de diseño preliminar (PDR)</b>, a la terminación de las secciones de diseño arquitectónico de la
+        descripción de diseño de software;
+    </li>
+    <li>
+        <b>Revisión de diseño importante (CDR)</b>, a la terminación de las secciones de diseño detalladas de la
+        descripción de diseño de software.
+    </li>
+</ul>
+<p>
+    En Rational Unified Process, las partes de los productos de trabajo equivalentes se revisan a medida que se completan
+    en cada iteración, pero los hitos principales (y, por lo tanto, las revisiones) se alinean con la terminación de las
+    fases, el inicio, la elaboración, la construcción y la transición. Un gestor de proyectos que desee adoptar RUP tendrá
+    que encontrar un modo de reconciliar este conflicto aparente, debido a obligaciones contractuales. Idealmente, el
+    gestor de proyectos debe convencer al cliente de que el enfoque basado en fases e iteración en realidad proporciona una
+    visibilidad real superior en el progreso del proyecto, reduce riesgos, para que no exista necesidad de SRR, SSR, etc.
+    Sin embargo, esto no siempre es posible, y el gestor de proyectos debe planificar estas revisiones en los puntos
+    apropiados. Es posible, en RUP, ubicar los puntos en que estos productos de trabajo importantes (en realidad, sus
+    equivalentes en RUP) están prácticamente completados, aunque esto no siempre se alinea a la perfección con fases o
+    iteraciones.
+</p>
+<p>
+    Esto se realiza considerando que el esfuerzo relativo que se gastará en requisitos, diseño, y similares será
+    aproximadamente el mismo en RUP que en el ciclo de vida de cascada (ideal) - pero que el esfuerzo se distribuirá
+    diferentemente. El resultado es el siguiente:
+</p>
+<ul>
+    <li>
+        el SRR (que se ocupa principalmente de la <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_vision_2D6D6F1.html" guid="{417F089F-6636-451A-A8AB-AB4EAC7AC4F1}">Visión</a>) se puede planificar al final de la fase inicial;
+    </li>
+    <li>
+        el SSR ((que se ocupa principalmente de la <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_software_requirements_specification_934E66F.html" guid="{BE8165DC-BAF2-4237-B27D-F2A037023364}">especificación de requisitos de software</a>) sobre 1/3 del camino a
+        través de la fase de elaboración;
+    </li>
+    <li>
+        el PDR ((que se ocupa principalmente del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">documento de arquitectura de software</a>) al final de la fase de
+        elaboración;
+    </li>
+    <li>
+        el CDR ((que se ocupa principalmente del <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">modelo de diseño</a>) sobre 1/3 del camino a través de la fase de
+        construcción.
+    </li>
+</ul>
+<p>
+    Para eficacia, el gestor de proyectos, consultando con el cliente, debe intentar combinar estas tres revisiones con las
+    revisiones RUP prescritas. Esto es claramente posible para SRR y PDR, se pueden combinar con <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/lifecycle_objectives_9E53DCF8.html" guid="_piIfsCVwEdqSZ9OimJ-AzA">Objetivos del ciclo de vida</a>&nbsp;Revisar y <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/lifecycle_architecture_34313398.html" guid="_7z-fYCVwEdqSZ9OimJ-AzA">Arquitectura del ciclo de vida</a>&nbsp;Revisar, respectivamente. 
+    <!--!RPQ COMMAND! name="VariantContent" tag="rup_project_control"    class="process_component" !RPQ COMMAND! It is not so obvious for the SSR and CDR. However, observing    that almost all projects will have at least two iterations in elaboration and    at least two in construction, it is recommended that SSR be combined with the    <a href="./../../../core.base_rup/tasks/iteration_acceptance_review_2F196C3B.html" class="elementLinkWithUserText" guid="{D3706FBF-E3EA-42E7-8D2E-7C9112506703}">Iteration Acceptance Review</a>        for the first iteration in the elaboration phase, and CDR be combined with the        Iteration Acceptance Review for the first iteration in construction. In both        cases, there is then good visibility of mature work products, with enough time        remaining for correction - although the iterative approach should cope with        this as a matter of course. !RPQ COMMAND! </p> -->
+</p>
+<h3>
+    <a id="ProjectOrganization" name="ProjectOrganization">Organización de proyecto</a>
+</h3>
+<p>
+    Al igual que el proceso de software recibe influencias de las características del proyecto, la organización del
+    proyecto también las recibe. La estructura por omisión presentada aquí (consulte la figura siguiente) tiene que
+    adaptarse para que refleje los efectos o factores como los que se listan:
+</p>
+<ul>
+    <li>
+        El contexto empresarial
+    </li>
+    <li>
+        El tamaño de la tarea de desarrollo de software
+    </li>
+    <li>
+        El grado de novedad
+    </li>
+    <li>
+        Tipo de aplicación
+    </li>
+    <li>
+        El proceso de desarrollo actual
+    </li>
+    <li>
+        Factores organizativos
+    </li>
+    <li>
+        Complejidad técnica y de gestión
+    </li>
+</ul>
+<p>
+    Estos son factores distintivos clave al analizar cómo, en conjunto, la organización debe adoptar un nuevo proceso de
+    desarrollo. Aquí examinaremos su efecto en la elección de la estructura del proyecto. La figura siguiente presenta una
+    organización de proyecto por omisión, mostrando como se asignan las responsabilidades a la estructura del equipo.
+</p>
+<p align="center">
+    <img height="500"     alt="Diagrama sensible al contexto que muestra como se asignan las responsabilidades a los miembros del equipo."     hspace="30" src="./../../../core.base_rup/guidances/guidelines/resources/md_prp1.gif" width="515" border="0" />
+</p>
+<p class="picturetext">
+    Figura que muestra la organización por omisión del proyecto. Tenga en cuenta que la antigüedad o la autoridad no son
+    significativas en la ordenación de los roles.
+</p>
+<p>
+    Esta figura es un punto de partida para considerar cómo se deben correlacionar los roles de nivel de proyecto y las
+    responsabilidades con una estructura de equipos. La figura también sirve para enfatizar qué roles (mostrados en los
+    recuadros amarillos) no son personas, sino "sombreros" que una persona (o equipo) se puede poner en el proyecto. Por
+    este motivo, varios roles (el gestor de proyectos, por ejemplo) aparecen más de una vez. Esto indica que, en algún
+    momento, el comportamiento del gestor de proyectos, tal como se define en RUP, puede aparecer en más de un equipo. Por
+    ejemplo, en un proyecto más grande, la tarea de preparar un informe de estado basado en una estructura detallada de
+    trabajo se puede delegar a una <b>persona</b> del equipo de administración. Sin embargo, esta es una responsabilidad
+    que RUP asigna al <b>rol</b> denominado gestor de proyectos.
+</p>
+<p>
+    En un proyecto pequeño, es probable que una <b>persona</b> nombrada gestor de proyectos efectúe todas las tareas del
+    <i>rol</i> denominado gestor de proyectos, en cuyo caso el equipo de administración se combina con el equipo de gestión
+    de software. La selección de la estructura del equipo estará influenciada por la naturaleza y el tamaño del proyecto,
+    pero debería matizarse con algunas normas de sentido común:
+</p>
+<ul>
+    <li>
+        los equipos pequeños suelen ser más productivos; sin embargo, en grandes proyectos, esto debe equilibrarse contra
+        la cantidad de interacción cruzada dentro del equipo
+    </li>
+    <li>
+        Las jerarquías profundas deben evitarse
+    </li>
+    <li>
+        el intervalo del control de cualquier gestor o líder de equipo debe limitarse a siete más o menos dos
+    </li>
+    <li>
+        la <b><a id="team structure" name="team structure">estructura de equipo</a></b> del desarrollo de software debe
+        dirigirla la arquitectura de software; una buena arquitectura, con cohesión elevada y bajo acoplamiento entre
+        subsistemas, permitirá que los equipos trabajen con más eficacia en paralelo
+    </li>
+    <li>
+        las pruebas, diferentes de las pruebas de unidad, debe efectuarlas de forma ideal un equipo aparte del equipo de
+        desarrollo. Tenga en cuenta, sin embargo, que esto no tendrá sentido económicamente en proyectos muy pequeños
+    </li>
+    <li>
+        la estructura debe permitir que todos los equipos y personas reciban autorizaciones y responsabilidades claramente
+        definidas. Esto es especialmente importante si la jerarquía supera tres niveles. Los gestores y líderes de equipo
+        en el medio de tales estructuras deben comprender qué se requiere de ellos para equilibrar las tareas técnicas y de
+        gestión.
+    </li>
+    <li>
+        la estructura debe dar soporte a las capacidades, experiencia y motivaciones del personal: por ejemplo, si un único
+        equipo debe efectuar el análisis, diseño e implementación, sin intermediarios, necesitarán todas las competencias
+        necesarias. Los analistas capacitados no son necesariamente buenos implementadores;
+    </li>
+    <li>
+        las estructuras del equipo no deben ser rígidas: las personas migrarán entre equipos durante el tiempo del vida del
+        proyecto y las responsabilidades de los equipos cambiarán a medida que el énfasis del proyecto cambie de fase a
+        fase.
+    </li>
+</ul>
+<p>
+    Los fundamentos de la organización por omisión se discuten largamente en [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">ROY98</a>].
+    Concretamente, la asignación de todas las responsabilidades de despliegue para el equipo de valoración de software
+    reconoce que, de todos los equipos del proyecto de desarrollo, el equipo de valoración de software está más expuesto al
+    software tal como lo verá el usuario.
+</p>
+<p>
+    Durante la vida de un proyecto, la organización evolucionará para proporcionar soporte a la estructura detallada de
+    trabajo en el plan del proyecto. Esto se muestra en la figura siguiente, que se toma de [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">ROY98</a>].
+</p>
+<p align="center">
+    <img height="405" alt="Diagrama que muestra la evolución del equipo durante el ciclo de vida del proyecto." hspace="50"     src="./../../../core.base_rup/guidances/guidelines/resources/md_prp2.gif" width="478" vspace="10" />
+</p>
+<p>
+    Esta evolución enfatiza un conjunto diferente de tareas en cada fase:
+</p>
+<ul>
+    <li>
+        el equipo inicial: una organización centrada en la planificación, con soporte suficiente de los otros equipos para
+        garantizar que los planes representan un consenso de todas las perspectivas;
+    </li>
+    <li>
+        el equipo de elaboración: una organización centrada en la arquitectura en que la orientación fuerza que el proyecto
+        resida en el equipo de arquitectura de software y reciben soporte de los equipos de desarrollo de software y de
+        valoración de software según sea necesario para alcanzar una línea base de arquitectura estable;
+    </li>
+    <li>
+        el equipo de construcción: una organización equilibrada en que la mayoría de tareas residen en los equipos de
+        desarrollo de software y de valoración de software;
+    </li>
+    <li>
+        el equipo de transición: una organización centrada en el cliente en que la información de retorno de utilización
+        orienta las tareas de despliegue.
+    </li>
+</ul>
+<p>
+    La migración entre equipos durante esta evolución garantizará que el conocimiento y las capacidades se mantienen
+    durante el proyecto. Por ejemplo, cuando la elaboración se ha completado, algunos miembros del equipo de arquitectura
+    pueden dispersarse en los equipos de desarrollo, quizás para actuar como líderes de los equipos, o para desarrollar la
+    'visión' arquitectónica en el desarrollo. Más adelante, hacia el final de la fase de construcción, el enfoque cambia al
+    equipo de valoración, y se desplaza personal del equipo de desarrollo al equipo de valoración. También es importante en
+    este estadio, para evitar la pérdida de integridad arquitectónica en la base de la construcción, que la influencia del
+    equipo de arquitectura no decaiga cuando se mueva el "centro de gravedad" de proyecto. Mover algunos miembros del
+    equipo de arquitectura al equipo de valoración es un modo de hacerlo.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

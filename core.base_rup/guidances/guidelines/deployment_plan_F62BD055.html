@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Plan de despliegue</title>
+<meta content="Guideline" name="uma.type">
+<meta content="deployment_plan" name="uma.name">
+<meta content="Plan de despliegue" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_C49xgP_UEdmVCcs_BRqacA", "{993ED293-A529-4B3F-82CB-2BF289D9E4E4}", "4.775830552473531E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3SWfwN7OEdmjRZts2c4ZjQ", "{993ED293-A529-4B3F-82CB-2BF289D9E4E4}", "4.775830552473531E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.775830552473531E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_U8LVkAIUEdqEutyfYo0quQ", "_C49xgP_UEdmVCcs_BRqacA", "{993ED293-A529-4B3F-82CB-2BF289D9E4E4}", "4.775830552473531E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.775830552473531E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Plan de despliegue</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz proporciona orientación adicional sobre el desarrollo de un plan de despliegue.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_deployment_plan_93F2F60B.html" guid="{993ED293-A529-4B3F-82CB-2BF289D9E4E4}">Plan de despliegue</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="plan de despliegue" text="directrices para" name="XE_deployment_plan__guidelines_for" id="XE_deployment_plan__guidelines_for" class="index"></a> 
+<h3>
+    <a id="Identifying compatibility, conversion and migration strategies" name="Identifying compatibility, conversion and migration strategies">Identificación de la compatibilidad, la
+    conversión y las estrategias de migración</a>
+</h3>
+<p>
+    Si el sistema reemplazará un sistema existente, las cuestiones de compatibilidad, conversión y migración deben tenerse
+    en cuenta.&nbsp; Específicamente:
+</p>
+<ul>
+    <li>
+        Los datos de un sistema existente deben avanzar (y posiblemente, debe convertirse su formato) para el nuevo
+        sistema.
+    </li>
+    <li>
+        Las interfaces de usuario existentes (formatos de pantalla, mandatos, etc.) deben recibir soporte en el nuevo
+        sistema.
+    </li>
+    <li>
+        Todas las interfaces de programación de aplicaciones (API) existentes deben mantenerse.
+    </li>
+    <li>
+        La migración del sistema existente al nuevo no debe interrumpir el servicio de usuario durante una cantidad de
+        tiempo determinada previamente (varía dependiendo de la empresa).
+    </li>
+    <li>
+        El nuevo sistema debe ser capaz de operar en paralelo con el antiguo durante el periodo de migración.
+    </li>
+    <li>
+        Debe disponer de la posibilidad de volver al sistema antiguo, si fuera necesario, durante las dos primeras semanas
+        de funcionamiento.
+    </li>
+    <li>
+        Es posible que deban procesarse los datos de archivo antiguos en el nuevo sistema. Si está protegido por cifrado,
+        las claves de cifrado necesitarán una consideración especial en la migración.
+    </li>
+</ul>
+<p>
+    Las estrategias elegidas para tratar este tema requerirán el soporte apropiado en la arquitectura y el diseño de
+    sistema
+</p>
+<h3>
+    <b><a id="Determining the deployment schedule" name="Determining the deployment schedule">Determinación de la
+    planificación de despliegue</a></b>
+</h3>
+<p>
+    La transición de un sistema a un entorno de producción requiere planificación y preparación.&nbsp;Los factores técnicos
+    que deben tenerse en cuenta incluyen:
+</p>
+<ul>
+    <li>
+        Los usuarios del sistema necesitarán formación.
+    </li>
+    <li>
+        El entorno de soporte de producción debe estar preparado y el personal de soporte de producción debe estar formado
+        y listo para dar soporte al sistema.
+    </li>
+    <li>
+        Deben establecerse los procedimientos de soporte de producción, que incluyen copia de seguridad, recuperación y
+        resolución de problemas.
+    </li>
+</ul>
+<p>
+    Los factores empresariales que afectan a la planificación de despliegue incluyen:
+</p>
+<ul>
+    <li>
+        Deben existir objetivos empresariales específicos que requieran el despliegue del sistema en una fecha específica;
+        si no se puede cumplir esta fecha, se reducirá significativamente el valor del sistema. &nbsp; (Nota: la existencia
+        de este tipo de requisitos introduce riesgos que deben identificarse en el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_risk_list_B87674CA.html" guid="{32D7C484-2FAF-4442-8DA0-6D474B91A9DD}">Producto de trabajo: Lista de riesgos</a> y que deben mitigarse en el
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_risk_management_plan_20A20D4E.html" guid="{D6752789-E49F-412A-8E56-BF1709A50E88}">Producto de trabajo: Plan de gestión de riesgos</a> si se está
+        desarrollando. Los cambios potenciales de los costes y los beneficios del sistema deben anotarse en el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_business_case_56F408EB.html" guid="{9B13F235-E8E9-4CDC-9ACE-216124C8C5EC}">Producto de trabajo: Caso de negocio</a>).
+    </li>
+    <li>
+        Es posible que en ciertos periodos de tiempo el despliegue del sistema sea imposible, debido a condiciones
+        empresariales o operativas, incluyendo, pero sin limitarse a, el final de periodos financieros, o periodos durante
+        los cuales el sistema no se puede apagar.&nbsp; 
+        <p>
+            Las puntas de carga de trabajo y otros factores de los sistemas y procesos existentes pueden evitar el
+            despliegue del sistema en ciertas ocasiones. Por ejemplo:
+        </p>
+        <ul>
+            <li>
+                Volúmenes de proceso mayores: puntas semanales, mensuales o anuales
+            </li>
+            <li>
+                Mantenimiento regular de los ciclos de hardware o software - impacta en la disponibilidad de los sistemas y
+                el personal
+            </li>
+            <li>
+                Puntas en periodos vacacionales
+            </li>
+            <li>
+                Interrupciones excepcionales planificadas a causa de actualizaciones de hardware o por la introducción de
+                nuevos sistemas
+            </li>
+            <li>
+                Reorganizaciones planificadas
+            </li>
+            <li>
+                Cambios de sede.
+            </li>
+        </ul>
+    </li>
+    <li>
+        Algunos sistemas no se pueden apagar nunca (conmutadores de red y telefonía, por ejemplo); estos sistemas pueden
+        requerir el despliegue de nuevas versiones del sistema mientras la versión anterior todavía se está
+        ejecutando.&nbsp; La actualización a un sistema de alta disponibilidad requiere consideraciones arquitectónicas
+        especiales, que deben documentarse en el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">Producto de trabajo: Documento de arquitectura de software</a>.
+    </li>
+</ul>
+<h3>
+    <b><a id="Determining the deployment sequence" name="Determining the deployment sequence">Determinación de la secuencia
+    de despliegue</a></b>
+</h3>
+<p>
+    Algunos sistemas deben desplegarse progresivamente, por partes, debido a cuestiones de tiempo o de disponibilidad.
+    &nbsp; Si el sistema no se puede desplegar de una sola vez, debe determinarse el orden en que deben instalarse los
+    componentes, y los nodos donde se instalan.&nbsp; Los patrones de planificación de despliegue común incluyen:
+</p>
+<ul>
+    <li>
+        Geográficamente - por área
+    </li>
+    <li>
+        Funcionalmente- por aplicación
+    </li>
+    <li>
+        Organizativamente - por departamento o por función
+    </li>
+</ul>
+<p>
+    Cuando una aplicación se despliega durante un periodo de tiempo, las cuestiones que deben resolverse incluyen:
+</p>
+<ul>
+    <li>
+        el software debe poder ejecutarse en una configuración parcial
+    </li>
+    <li>
+        las versiones diferentes del software deben poder coexistir
+    </li>
+    <li>
+        debe ser posible volver a una versión anterior del sistema en el caso de que se detecten problemas con el nuevo
+        sistema
+    </li>
+</ul>
+<p>
+    Estas posibilidades no se pueden alcanzar sin centrarse en el esfuerzo arquitectónico y deben documentarse en el
+    apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">Producto de trabajo: Documento de arquitectura de software</a>.
+</p>
+<h3>
+    <a id="Determining user training needs" name="Determining user training needs">Determinación de las necesidades de
+    formación del usuario</a>
+</h3>
+<p>
+    Para cada categoría de usuario, incluyendo administración, operadores y usuarios, identifique:
+</p>
+<ul>
+    <li>
+        Qué tipos de sistemas de &nbsp;tecnología de la información&nbsp; utilizan actualmente. Si este sistema aportará el
+        primer uso de tecnología de la información a cualquier usuario, dentro o fuera de la empresa, señale esto como un
+        requisito especial que merecerá atención especial.
+    </li>
+    <li>
+        Qué nuevas funciones aportará este sistema.
+    </li>
+    <li>
+        A grandes rasgos, cuáles serán las necesidades de formación.
+    </li>
+    <li>
+        Qué requisitos existen para Soporte del idioma nacional (NLS)
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

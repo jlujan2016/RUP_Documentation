@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Dise&ntilde;o de subsistemas mediante la plataforma de desarrollo de software Rational</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="designing_subsystems_using_rsa" name="uma.name">
+<meta content="Dise&ntilde;o de subsistemas mediante la plataforma de desarrollo de software Rational" name="uma.presentationName">
+<meta name="element_type" content="tool_mentor">
+<meta content="" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{B9B6B61B-A17A-482B-AC3A-0AFCA9719758}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Dise&ntilde;o de subsistemas mediante la plataforma de desarrollo de software Rational</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta guía de la herramienta describe como diseñar subsistemas mediante el entorno de modelado SDP.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    En esta guía de la herramienta se llevan a cabo los pasos siguientes:<br />
+</p>
+<ul>
+    <li>
+        <a href="#Distribute Subsystem behavior">Distribuir el comportamiento de subsistema a elementos de
+        subsistema</a>
+    </li>
+    <li>
+        <a href="#Document Subsystem Elements">Documentar elementos de subsistema</a>
+    </li>
+    <li>
+        <a href="#Describe Subsystem Dependencies">Describir dependencias de subsistema</a>
+    </li>
+</ul>
+<p>
+    <a href="#MoreInfo">Información adicional sobre la herramienta</a>
+</p>
+<h3>
+    <a id="Distribute Subsystem behavior" name="Distribute Subsystem behavior">Distribuir el comportamiento del subsistema
+    a elementos de subsistema</a>
+</h3>
+<p>
+    Se añaden clases y otros subsistemas al subsistema para realizar las interfaces del subsistema.
+</p>
+<p>
+    Las colaboraciones de elementos de modelo del subsistema se deben documentar utilizando diagramas de secuencia que
+    muestren cómo se realiza el comportamiento del subsistema. Cada operación que se lleva a cabo en una interfaz que
+    realiza el subsistema debe tener uno o más diagramas de secuencia documentados. Este diagrama, que es propiedad del
+    subsistema, se utiliza para diseñar el comportamiento interno del subsistema.
+</p>
+<ol>
+    <li>
+        Cree diagramas de clase según sea necesario. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Creación y modificación de diagramas de clase</i> .
+    </li>
+    <li>
+        Añada subsistemas y clases. Consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identificar elementos de diseño</a> para obtener una guía sobre la
+        adición de subsistemas y clases nuevos.
+    </li>
+    <li>
+        Documente cómo se lleva a cabo cada operación de interfaz, tal como se indica a continuación:
+    </li>
+    <li style="list-style: none">
+        <ul>
+            <li>
+                Añada una instancia de colaboración para cada operación de interfaz. Denomínela después de la operación. En
+                el explorador de modelos, pulse el botón derecho del ratón sobre el subsistema y, a continuación, pulse
+                <b>Añadir UML</b> <b>&gt; Colaboración</b>. &nbsp;
+            </li>
+            <li>
+                Cree una interacción con el mismo nombre. En el explorador de modelos, pulse el botón derecho del ratón
+                sobre la colaboración y, a continuación, pulse en <b>Añadir diagrama &gt; Diagrama de secuencia</b>.
+                Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"                 width="16" /><i>Diagramas de secuencia</i> .
+            </li>
+            <li>
+                Arrastre y suelte clases e interfaces en el diagrama para crear objetos para la interacción.
+            </li>
+            <li>
+                Añada mensaje o estímulos entre objetos. Consulte <img height="16" alt="icono de publicación"                 src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Diagramas de secuencia</i> . &nbsp;
+            </li>
+            <li>
+                Asigne operaciones a los mensajes. Consulte <img height="16" alt="icono de publicación"                 src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Diagramas de secuencia</i> . &nbsp;
+            </li>
+        </ul>
+    </li>
+</ol>
+<p>
+    Para obtener más información, consulte los temas siguientes de la ayuda en línea:&nbsp;
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modelado de
+        la estructura estática&nbsp;mediante&nbsp;diagramas de clase</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Diagramas de
+        secuencia</i>
+    </li>
+</ul>
+<h3>
+    <a id="Document Subsystem Elements" name="Document Subsystem Elements">Documentar elementos de subsistema</a>
+</h3>
+<p>
+    Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Documentación de elementos de modelo</i> en la ayuda en línea.
+</p>
+<h3>
+    <a id="Describe Subsystem Dependencies" name="Describe Subsystem Dependencies">Describir dependencias de subsistema</a>
+</h3>
+<p>
+    Cuando un elemento contenido en un subsistema utiliza algo del comportamiento de un elemento contenido en otro
+    subsistema, se crea una dependencia entre los subsistemas incluidos. Para mejorar la reutilización y reducción de las
+    dependencias de mantenimiento, exprese esta situación en términos de una dependencia de una interfaz concreta del
+    subsistema, no en el subsistema en sí mismo ni en el elemento contenido en el subsistema.
+</p>
+<p>
+    Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Relaciones de dependencia</i> en la ayuda en línea.
+</p>
+<h3>
+    <a id="MoreInfo" name="MoreInfo">Información adicional sobre la herramienta</a>
+</h3>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Gestión de
+    diagramas UML</i>
+</p><br /></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../tech.rsa/guidances/toolmentors/designing_subsystems_using_rsa_ext_DD1E3EB4.html" guid="_W0h0EK4HEdqFg48R_ivTjA">Diseño de subsistemas mediante Rational Software Architect</a>
+</li>
+<li>
+<a href="./../../../tech.rsa/guidances/toolmentors/designing_subsystems_using_rsd_71287DD3.html" guid="_Tg78YK4HEdqFg48R_ivTjA">Diseño de subsistemas utilizando Rational Systems Developer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

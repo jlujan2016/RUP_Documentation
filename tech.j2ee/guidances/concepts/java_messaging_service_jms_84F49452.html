@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concepto: Java Messaging Service (JMS)</title>
+<meta content="Concept" name="uma.type">
+<meta content="java_messaging_service_jms" name="uma.name">
+<meta content="Java Messaging Service (JMS)" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "9.950419951286216E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "9.950419951286216E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "9.950419951286216E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "9.950419951286216E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="9.950419951286216E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concepto: Java Messaging Service (JMS)</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se proporciona una visión general sobre JMS (Java Messaging System). </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Arquitecto de software</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    JMS (Java Messaging System), el sistema de mensajería de Java, proporciona un estándar entre plataformas para la
+    comunicación asíncrona de sucesos y de datos empresariales en toda la empresa. Habitualmente, la comunicación se
+    realiza entre procesos y máquinas. Los objetos de aplicaciones que normalmente se ejecutan en máquinas distintas se
+    comunican accediendo a los servicios del middleware orientado a mensajes (MOM) mediante un conjunto estándar de
+    interfaces que JMS define.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/concepts/resources/mom_example.gif" />
+    </p>
+</blockquote>
+<p>
+    JMS proporciona un conjunto de interfaces que aíslan al programador de Java (aumentando los productores y consumidores
+    de mensajes) de los proveedores de MOM.
+</p>
+<p>
+    Esta página de contenido describe los conceptos más importantes y la utilización típica de JMS.
+</p>
+<h3>
+    <a id="Messages" name="Messages"></a>Mensajes
+</h3>
+<p>
+    Un mensaje es un paquete autosuficiente de datos empresariales. Se divide en tres partes:
+</p>
+<ul>
+    <li>
+        <b>Cabecera</b>: contiene información de direccionamiento de red e identificadores de mensaje.
+    </li>
+    <li>
+        <b>Propiedades</b>: contiene metadatos del mensaje. JMS indica cuales han de ser algunas de estas propiedades, sin
+        embargo, los programadores de aplicaciones pueden añadir sus propias propiedades.
+    </li>
+    <li>
+        <b>Carga</b>: contiene los verdaderos datos empresariales. El programador de aplicaciones es quien controla en su
+        totalidad la carga.
+    </li>
+</ul>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/concepts/resources/message_example.gif" />
+    </p>
+</blockquote>
+<p>
+    En JMS, el mensaje se encapsula en un objeto que implementa la interfaz <i>javax.jms.Message</i>. Un programa Java
+    puede acceder a los compartimentos a través de esta interfaz, tal como se muestra en el diagrama que aparece a
+    continuación. La carga puede presentarse de varias maneras, que se tratarán más adelante.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/concepts/resources/message_expanded_example.gif" />
+    </p>
+</blockquote>
+<p>
+    La <b>cabecera</b> contiene propiedades del mensaje que siempre deben existir. En la cabecera hay disponibles las
+    siguientes propiedades:
+</p>
+<ul>
+    <li>
+        MessageID
+    </li>
+    <li>
+        Timestamp
+    </li>
+    <li>
+        CorrelationID
+    </li>
+    <li>
+        ReplyTo
+    </li>
+    <li>
+        Destination
+    </li>
+    <li>
+        DeliveryMode
+    </li>
+    <li>
+        Redelivered
+    </li>
+    <li>
+        Type
+    </li>
+    <li>
+        Expiration
+    </li>
+    <li>
+        Priority
+    </li>
+</ul>
+<p>
+    El programador de aplicaciones puede utilizar las <b>propiedades</b> para proporcionar metadatos para el mensaje. Las
+    propiedades están formadas por un conjunto arbitrario de parejas nombre/valor.
+</p>
+<p>
+    JMS da soporte a seis tipos de <b>cargas</b>:
+</p>
+<ul>
+    <li>
+        Mensajes de texto
+    </li>
+    <li>
+        Mensajes de objetos
+    </li>
+    <li>
+        Mensajes de bytes
+    </li>
+    <li>
+        Mensajes de correlación
+    </li>
+    <li>
+        Mensajes de corriente de datos
+    </li>
+    <li>
+        Mensaje (sin que haya un cuerpo de mensaje)
+    </li>
+</ul>
+<p>
+    Los tipos de carga se ven reflejados en la jerarquía de clases donde las interfaces amplían <i>javax.jms.Message</i>.
+    En el siguiente diagrama de clases, se muestran los mensajes de bytes, objetos y texto habitualmente utilizados. Los
+    mensajes de texto son los portadores habituales de datos XML.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/concepts/resources/message_hierarchy.gif" />
+    </p>
+</blockquote>
+<h3>
+    <a id="Destinations" name="Destinations"></a>Destinos
+</h3>
+<p>
+    JMS define el concepto de un destino. Los mensajes se envían a los destinos y de allí se reciben. Hay dos formatos de
+    destinos:
+</p>
+<ul>
+    <li>
+        Colas
+    </li>
+    <li>
+        Temas
+    </li>
+</ul>
+<p>
+    Las <b>colas</b> son destinos de mensajes que se utilizan cuando los mensajes únicamente los maneja un receptor. Si
+    imaginamos una semejanza entre los mensajes y el correo ordinario, las colas son buzones de correos que posee un
+    destinatario en particular. La comunicación con colas se denomina comunicación de <i>punto a punto</i>.
+</p>
+<p>
+    Los <b>temas</b> son destinos de mensajes que se utilizan cuando varios destinatarios necesitan recibir los mensajes,
+    cada uno de ellos expresando un interés en recibir un tipo concreto de mensaje. Siguiendo de nuevo con la analogía del
+    correo ordinario, podríamos imaginar en este caso la publicación de un artículo en un periódico en el que un único
+    mensaje es leído por varios receptores. A menudo se hace referencia a este tipo de diseño como un modelo de
+    <i>publicación y suscripción</i>.
+</p>
+<h3>
+    <a id="Message_Delivery" name="Message_Delivery"></a>Entrega de mensajes
+</h3>
+<p>
+    La entrega de mensajes se puede realizar de dos formas:
+</p>
+<ul>
+    <li>
+        Persistente
+    </li>
+    <li>
+        No persistente
+    </li>
+</ul>
+<p>
+    En la entrega persistente se almacena el mensaje en un archivo o base de datos, lo que garantiza la entrega. En la
+    entrega no persistente se mejora el rendimiento y se reduce la sobrecarga por el almacenamiento, sin embargo, no se
+    garantiza la entrega del mensaje. En la mayoría de aplicaciones que utilizan JMS, la elección habitual es la entrega
+    persistente.
+</p>
+<h3>
+    <a id="JMS_Clients" name="JMS_Clients"></a>Clientes JMS
+</h3>
+<p>
+    Los clientes JMS son los objetos Java que utilizan JMS. Hay definidos dos roles:
+</p>
+<ul>
+    <li>
+        <b>Productores de mensajes</b>: programas Java que crean y envían mensajes.
+    </li>
+    <li>
+        <b>Consumidores de mensajes</b>: programas Java que reciben mensajes.
+    </li>
+</ul>
+<p>
+    En el siguiente diagrama se proporciona una visión general de la forma en que colaboran productores, consumidores y <a href="#JMS_Providers">proveedores JMS</a>.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/concepts/resources/jms_roles_collab.gif" />
+    </p>
+</blockquote>
+<p>
+    Un productor de mensajes puede ser cualquier clase Java que tenga acceso a la implementación JMS. Los productores de
+    mensajes crean y envían mensajes.
+</p>
+<p>
+    Un consumidor de mensajes puede ser cualquier clase Java que tenga acceso a la implementación JMS. Los consumidores de
+    mensajes reciben y manejan mensajes.
+</p>
+<p>
+    Un cliente JMS utiliza un conjunto de interfaces para acceder a JMS. Los objetos que implementan las interfaces JMS se
+    crean mediante un conjunto de fábricas. La fábrica inicial es <i>ConnectionFactory</i>. La fábrica de conexiones se
+    busca mediante JNDI. El cliente JMS utiliza la fábrica de conexiones para crear un objeto de conexión. El objeto de
+    conexión sirve para crear un objeto de sesión, que se utiliza como una fábrica para otros objetos JMS. La siguiente
+    figura ilustra las relaciones conceptuales clave entre las fábricas, prescindiendo los detalles de colas y temas.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/concepts/resources/connection_factory.gif" />
+    </p>
+</blockquote>
+<p>
+    Las fábricas de conexiones, las conexiones y las sesiones se presentan en dos formatos: uno para las colas y otro para
+    los temas. En el diagrama de clases que aparece a continuación se muestra la jerarquía de interfaces para los conceptos
+    JMS más importantes.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/concepts/resources/iface_hierarchy.gif" />
+    </p>
+</blockquote>
+<h3>
+    <a id="JMS_Providers" name="JMS_Providers"></a>Proveedores JMS
+</h3>
+<p>
+    Un proveedor JMS es una implementación que cumple la especificación JMS. El proveedor JMS es el responsable de recibir
+    y enviar mensajes además de encargarse de su persistencia.
+</p>
+<h3>
+    <a id="More_Information" name="More_Information"></a>Información adicional
+</h3>
+<p>
+    Visite la página <a href="http://java.sun.com/products/jms/" target="blank">http://java.sun.com/products/jms/</a> para
+    obtener más información sobre JMS.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.inferdata.com" target="_blank"><img alt="logotipo de Inferdata"                 src="./../../../tech.j2ee/guidances/supportingmaterials/resources/inferdata.gif" width="100" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Contenido desarrollado o parcialmente desarrollado por <a href="http://www.inferdata.com/" target="_blank">Inferdata Corporation</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; Copyright&nbsp;IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

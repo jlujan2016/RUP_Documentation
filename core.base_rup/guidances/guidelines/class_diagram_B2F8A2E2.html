@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Diagrama de clase</title>
+<meta content="Guideline" name="uma.type">
+<meta content="class_diagram" name="uma.name">
+<meta content="Diagrama de clase" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "4.2570304587974485E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "4.2570304587974485E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "4.2570304587974485E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "4.2570304587974485E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.2570304587974485E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "4.2570304587974485E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "4.2570304587974485E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "4.2570304587974485E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "4.2570304587974485E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.2570304587974485E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Diagrama de clase</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Los diagramas de clase incluyen clases y sus relaciones con otras clases para ilustrar la estructura estática de un modelo de objeto. En esta directriz se identifican las situaciones donde producir un diagrama de clase es beneficioso.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Diseñador</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_capsule_designer_F3E66EDF.html" guid="{86253FE7-0036-4D14-8BD7-C18CE86A5E14}">Diseñador de cápsulas</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Diseño de clase</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Modelo de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="diagrama de clase" text="directrices para" name="XE_class_diagram__guidelines_for" id="XE_class_diagram__guidelines_for" class="index"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">Explicación</a>
+</h3>
+<p>
+    Los diagramas de clase muestran la estructura estática del modelo, especialmente, lo que existe como clases, su
+    estructura interna, y sus relaciones con otras clases. Los diagramas de clase no muestran información temporal.
+</p>
+<p>
+    Un diagrama de clase se presenta como una recopilación de elementos de modelo declarativo (estático), como clases,
+    paquetes y sus relaciones, conectados como gráficos entre si y a su contenido. Los diagramas de clase se pueden
+    organizar en (y ser propiedad de) paquetes, mostrando sólo lo que es relevante en un paquete concreto.<br />
+</p>
+<h3>
+    <a id="Use" name="Use">Utilización</a>
+</h3>
+<p>
+    Las estructuras de clase siguientes son adecuadas para la ilustración en diagramas de clase, pero no las utilizará
+    todas en todas las situaciones.
+</p>
+<ul>
+    <li>
+        Los subsistemas de diseño más importantes, clases, interfaces y sus relaciones. Los diagramas de este tipo pueden
+        funcionar como resumen de modelo de diseño y resultan de gran ayuda al revisar el modelo. Estos diagramas se pueden
+        incluir en la vista lógica de la arquitectura.
+    </li>
+    <li>
+        Clases funcionalmente relacionadas o coherentes.
+    </li>
+    <li>
+        Clases que pertenecen al mismo paquete.
+    </li>
+    <li>
+        Jerarquías de agregación y generalización importantes.
+    </li>
+    <li>
+        Las estructuras importantes de clases de entidad, incluidas las estructuras de clase con relaciones de asociación,
+        agregación y generalización. Si es posible, debería crear un diagrama de clase que contenga todas las clases de
+        objetos de larga vida y sus relaciones. Este tipo de diagrama es especialmente útil para revisar qué se almacena en
+        el sistema y las estructuras de almacenamiento.
+    </li>
+    <li>
+        Los paquetes y sus dependencias, posiblemente ilustrando sus capas.
+    </li>
+    <li>
+        Las clases que participan en una ejecución de guiones de uso específica.
+    </li>
+    <li>
+        Una única clase, sus atributos, operaciones y relaciones con otras clases.
+    </li>
+</ul>
+<p>
+    Debe presentar cada clase en, como mínimo, un diagrama. A veces, se comprende mejor el modelo si una clase aparece
+    varias veces en la misma vista, por ejemplo, si desea discriminar entre diferentes objetos de la clase.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

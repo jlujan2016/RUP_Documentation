@@ -1,0 +1,461 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Tarea: Analizar el comportamiento en tiempo de ejecuci&oacute;n</title>
+<meta content="Task" name="uma.type">
+<meta content="analyze_runtime_behavior" name="uma.name">
+<meta content="Analizar el comportamiento en tiempo de ejecuci&oacute;n" name="uma.presentationName">
+<meta content="Discipline:rup_implementation_discipline:Implementaci&oacute;n" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="Implementador">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "{5131A5BB-5B95-499E-A68B-788A2F0957C3}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_yd3ExNnmEdmO6L4XMImrsA", "{5131A5BB-5B95-499E-A68B-788A2F0957C3}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "{5131A5BB-5B95-499E-A68B-788A2F0957C3}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_IY0NkAISEdqTna4sZVFRow", "_yd3ExNnmEdmO6L4XMImrsA", "{5131A5BB-5B95-499E-A68B-788A2F0957C3}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "{5131A5BB-5B95-499E-A68B-788A2F0957C3}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', true, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="{5131A5BB-5B95-499E-A68B-788A2F0957C3}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Analizar el comportamiento en tiempo de ejecuci&oacute;n</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta tarea se describe cómo analizar el comportamiento de un componente durante su ejecución para identificar las mejoras que se pueden realizar.</td>
+</tr>
+<tr>
+<td>Disciplinas: <a href="./../../core.base_rup/disciplines/rup_implementation_discipline_263E22DB.html" guid="_yd3ExNnmEdmO6L4XMImrsA">Implementación</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="prueba de desarrollador" text="análisis de tiempo de ejecución" name="XE_developer_testing__runtime_analysis" id="XE_developer_testing__runtime_analysis" class="index"></a> 
+<ul>
+    <li>
+        Entender el comportamiento de un componente durante su ejecución.
+    </li>
+    <li>
+        Identificar el comportamiento anómalo y las acciones correctivas necesarias.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Realizador principal:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_implementer_D145E819.html" guid="{75501BAA-0CCE-4852-A7B2-B10CA71C002A}">Implementador</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Otras actividades adicionales que realiza:
+								</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Elemento de implementaci&oacute;n</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_log_50821860.html" guid="{528F34BA-0118-40F3-8D29-DE60EF4183A6}">Registro de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_results_189F0BEF.html" guid="{87374880-B351-4822-8C1E-819ECA9F51D4}">Resultados de la prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Uso del proceso</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/implementation_8FF0AAD4.html" guid="{F2AD342D-0F3B-4E19-A351-75ECDCB806F5}">Implementación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/implement_components_AFD1799D.html" guid="{4DC6F53E-1FE1-44EE-812B-003D3BD1ACEA}">Implementar componentes</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/analyze_runtime_behavior_14736AAC.html" guid="_GJ1iIEofEdqrjq4i3fchvA">Analizar el comportamiento en tiempo de ejecución</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableSingleCell">
+<div class="stepHeading"> Determinar el caso de ejemplo de ejecuci&oacute;n necesario </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="DetermineScenario" name="DetermineScenario"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      bordercolor="#808080" cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%"     bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%" colspan="2">
+                    <b>Objetivo:&#160;</b>
+                </td>
+                <td width="95%" colspan="2">
+                    Identificar la vía de acceso de ejecución que estimulará el comportamiento de tiempo de ejecución
+                    deseado
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Si la observación y el análisis del comportamiento de tiempo de ejecución están destinados a proporcionar la
+    perspectiva deseada sobre el comportamiento del software, deberá considerar qué vías de acceso de ejecución es
+    importante explorar en toda la aplicación, y de éstas, cuáles ofrecerán más oportunidades de entender el comportamiento
+    de tiempo de ejecución del software.
+</p>
+<p>
+    En general, los casos de ejemplo más útiles de explorar tienden a reflejar todos o una parte de los que utilizará
+    normalmente el usuario. Por lo tanto, siempre que sea posible, se recomienda identificar los casos de ejemplo haciendo
+    preguntas o consultando de otra forma a un experto del dominio como, por ejemplo, un usuario representativo del
+    software que se está desarrollando.
+</p>
+<p>
+    Los casos de uso ofrecen un conjunto valioso de artefactos a partir de los cuales se pueden identificar y explorar
+    casos de ejemplo útiles. Como desarrollador, los artefactos más familiares serán las realizaciones de caso de uso , por
+    las que deberá empezar si están disponibles. En la ausencia de realizaciones de caso de uso , identifique los casos de
+    ejemplo disponibles que ofrezcan una explicación textual de la vía por la que navegará el usuario a través de los
+    distintos flujos de sucesos en el caso de uso . Por último, se pueden consultar los flujos de sucesos del caso de uso
+    para proporcionar información a partir de la cual identificar los casos de ejemplo candidatos. El éxito de este último
+    enfoque mejora si se consulta a un representante quién es el actor de los casos de uso o otro experto en el dominio.
+</p>
+<p>
+    Los verificadores constituyen otro recurso útil que consultar cuando se intentan identificar los casos de ejemplo
+    útiles para el análisis de tiempo de ejecución. Los verificadores a menudo tienen conocimientos y experiencia con el
+    dominio gracias a los esfuerzos de prueba que los convierte en pseudoexpertos en el dominio. En muchos casos, el
+    estímulo de observar el comportamiento del tiempo de ejecución provendrá de los resultados del mismo esfuerzo de
+    prueba.
+</p>
+<p>
+    Si esta tarea está dirigida por un defecto notificado, el objetivo principal será reproducirlo en un entorno
+    controlado. Según la información registrada al ocurrir el problema, se deben identificar varios guiones de prueba como
+    candidatos posibles para que se produzca el defecto de forma fiable. Puede que tenga que ajustar algunas de las pruebas
+    o escribir otras nuevas, pero recuerde que reproducir el defecto es un paso fundamental y que, en los casos más
+    difíciles, se necesitará más tiempo para estabilizar el defecto que para solucionarlo.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Preparar el componente de implementaci&oacute;n para la observaci&oacute;n de tiempo de ejecuci&oacute;n </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="PrepareComponent" name="PrepareComponent"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      bordercolor="#808080" cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%"     bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%" colspan="2">
+                    <b>Objetivo:</b>
+                </td>
+                <td width="95%" colspan="2">
+                    Garantizar que el componente está preparado en un estado adecuado para habilitar la ejecución del
+                    tiempo de ejecución
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Para que la ejecución del tiempo de ejecución del componente dé resultados precisos, debe preparar atentamente el
+    componente para que no se produzcan resultados anómalos debidos a errores en la implementación, la compilación o el
+    enlace.
+</p>
+<p>
+    A menudo, es necesario utilizar <i><a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/stub_A0899BD4.html" target="_blank" guid="_yWtT6dnmEdmO6L4XMImrsA">componentes fragmentados</a></i> para que la observación del tiempo de ejecución se
+    pueda completar en el tiempo estipulado, o para que se pueda llevar a cabo en situaciones en las que el componente
+    depende de otros componentes que no se han implementado todavía.
+</p>
+<p>
+    También deberá preparar la infraestructura o dar soporte a las herramientas necesarias para ejecutar el componente. En
+    algunos casos, esto significará crear controladores o código de banco de pruebas para dar soporte a la ejecución del
+    componente; en otros casos, significará instrumentar el componente para que las herramientas de soporte externas puedan
+    observar e incluso controlar el comportamiento de los componentes.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Preparar el entorno para la ejecuci&oacute;n </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="PrepareEnvironment" name="PrepareEnvironment"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>Objetivo:</b>
+            </td>
+            <td colspan="2" width="95%">
+                Garantizar que la configuración de requisitos previos del entorno de destino ha finalizado
+                satisfactoriamente.
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Es importante tener en cuenta los requisitos y las restricciones que se deben considerar para el entorno de destino en
+    el que se realizará el análisis del tiempo de ejecución. En algunos casos, será necesario simular uno o varios de los
+    entornos de despliegue previstos en los que se deberá ejecutar el componente en última instancia. En otros casos,
+    bastará con ejecutar y observar el comportamiento del tiempo de ejecución en la máquina de los desarrolladores.
+</p>
+<p>
+    En cualquier caso, es importante configurar correctamente el entorno de destino para la observación del tiempo de
+    ejecución, para que el ejercicio no se malgaste por la inclusión de "contaminantes" que puedan invalidar los análisis
+    posteriores.
+</p>
+<p>
+    Otra consideración a tener en cuenta es el uso de herramientas que generan restricciones de entorno o condiciones de
+    excepción que son difíciles de reproducir de otra forma. Estas herramientas son muy útiles para aislar anomalías o
+    errores que se producen en el comportamiento del tiempo de ejecución en estas condiciones.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Ejecutar el componente y capturar observaciones del comportamiento </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ObserveBehavior" name="ObserveBehavior"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>Objetivo:</b>
+            </td>
+            <td colspan="2" width="95%">
+                Observar y capturar el comportamiento del tiempo de ejecución del componente.
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Una vez preparados el componente y el entorno en el que se observará, puede empezar a ejecutar el componente en el caso
+    de ejemplo seleccionado. Dependiendo de las técnicas y las herramientas empleadas, este paso se puede ejecutar en su
+    gran parte de forma desatendida o puede ofrecer (o incluso necesitar) atención continua a medida que progresa el caso
+    de ejemplo.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Revisar las observaciones de comportamiento y aislar los resultados iniciales </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ReviewObservations" name="ReviewObservations"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>Objetivo:</b>
+            </td>
+            <td colspan="2" width="95%">
+                Identificar las anomalías y los errores en el comportamiento del tiempo de ejecución de los componentes
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Ya sea durante cada paso o al final del caso de ejemplo que está observando, busque anomalías o errores en el
+    comportamiento esperado. Tome nota de todas las observaciones que haga o de las impresiones que tenga que crea que
+    puedan estar relacionadas con el comportamiento anómalo.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Analizar los resultados para entender la causa ra&iacute;z </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="AnalyzeFindings" name="AnalyzeFindings"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>Objetivo:</b>
+            </td>
+            <td colspan="2" width="95%">
+                Entender la causa raíz de todo error y anomalía
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    A partir de los resultados, empiece a investigar la anomalía subyacente o la causa raíz de cada anomalía.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar y comunicar las acciones de seguimiento </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="CommunicateActions" name="CommunicateActions"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>Objetivo:</b>
+            </td>
+            <td colspan="2" width="95%">
+                Sugerir investigaciones adicionales o acciones correctivas
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Una vez revisados todos los resultados, tendrá una lista de ideas o intuiciones que necesitarán una investigación
+    adicional y, probablemente, acciones correctas específicas. Si no va a realizar ninguna acción inmediata en estos
+    elementos, registre las propuestas con el formato adecuado y comuníquelas a los miembros del equipo, que pueden aprobar
+    o incluso llevar a cabo las propuestas.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Evaluar los resultados </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="EvaluateResults" name="EvaluateResults"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      bordercolor="#808080" cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%"     bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%" colspan="2">
+                    <b>Objetivo:</b>
+                </td>
+                <td width="95%" colspan="2">
+                    Verificar que la tarea se ha realizado correctamente y que los productos de trabajo resultantes son
+                    aceptables.
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Ahora que ha terminado el trabajo, se recomienda verificar que el trabajo tenía el valor suficiente. Debe evaluar si el
+    trabajo tiene la calidad correcta y si es lo suficientemente completo para que resulte útil a aquellos miembros del
+    equipo que vayan a utilizarlo posteriormente como entrada de su trabajo. Siempre que sea posible, utilice las listas de
+    comprobación proporcionadas en RUP para verificar que la calidad y la completitud son lo "suficientemente buenas".
+</p>
+<p>
+    Intente que las personas que utilizarán el producto como entrada para realizar tareas en sentido descendente formen
+    parte de la revisión del trabajo interno. Hágalo mientras todavía tenga tiempo para realizar acciones para solucionar
+    sus problemas. También debe evaluar su trabajo en los productos de trabajo de entrada clave para asegurarse de que los
+    ha representado o considerado de forma precisa y suficiente. Para ello, es muy útil hacer que el autor del producto de
+    trabajo de entrada revise su trabajo.
+</p>
+<p>
+    Recuerde que RUP es un proceso de entrega iterativo y que en muchos casos los productos de trabajo evolucionan con el
+    tiempo. Como tal, no siempre es necesario (y en muchos casos es contraproducente) formar completamente un producto de
+    trabajo que sólo se utilizará de forma parcial o que no se utilizará en absoluto en los trabajos en sentido descendente
+    inmediatamente posteriores. Esto se debe a que existe una alta probabilidad de que la situación alrededor del producto
+    de trabajo cambie (y que las suposiciones realizadas cuando se creó el producto de trabajo se demuestre que son
+    incorrectas) antes de que se utilice el producto, lo que da como resultado un esfuerzo inútil y la necesidad de
+    revisión.
+</p>
+<p>
+    Asimismo, evite la trampa de invertir un exceso de ciclos en la presentación en detrimento del valor del propio
+    contenido. En entornos de proyecto en los que la presentación tenga importancia y un gran valor económico como
+    entregable del proyecto, puede utilizar un recurso administrativo o secundario para ejecutar trabajo en un producto de
+    trabajo y mejorar de esta forma su presentación.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/analyzing_runtime_behavior_using_purifyplus_99687F12.html" guid="{63F53632-61E3-40E9-BA84-3DCE7903F99D}">Análisis del rendimiento de tiempo de ejecución utilizando las herramientas de Rational PurifyPlus (Windows y UNIX)</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/analyzing_runtime_behaviour_41EA9EA.html" guid="{A332EA83-E8A5-4C58-AC64-2D7DEBBF36CE}">Análisis del comportamiento de tiempo de ejecución utilizando Rational XDE Developer</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/evaluate_test_execution_result_7F4BCD38.html" guid="{037E5AB9-7DC1-4CDB-8395-A2647F5A7F24}">Análisis de anomalías de las pruebas utilizando Rational TestManager y TestFactory</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/eval_and_measure_code_based_coverage_32EF4DC6.html" guid="{F0ECC223-C6D1-46A9-802B-E4D86FD1572B}">Utilización de Rational TestFactory para medir y evaluar la cobertura de la prueba basada en código en scripts de prueba de Rational Robot</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/eval_test_coverage_8F1DEC44.html" guid="{D4C656B2-68B7-4C88-B999-FA80AA417C6C}">Evaluación de la cobertura de la prueba utilizando Rational TestFactory</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

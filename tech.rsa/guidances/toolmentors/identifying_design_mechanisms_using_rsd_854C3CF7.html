@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Identificaci&oacute;n de mecanismos de dise&ntilde;o mediante Rational Systems Developer</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="identifying_design_mechanisms_using_rsd" name="uma.name">
+<meta content="Identificaci&oacute;n de mecanismos de dise&ntilde;o mediante Rational Systems Developer" name="uma.presentationName">
+<meta content="Tool:rsa_rational_systems_developer:Rational Systems Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Systems Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "_JU13oK4OEdqFg48R_ivTjA", "_BAG-IK4KEdqFg48R_ivTjA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "_JU13oK4OEdqFg48R_ivTjA", "_BAG-IK4KEdqFg48R_ivTjA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "_JU13oK4OEdqFg48R_ivTjA", "_BAG-IK4KEdqFg48R_ivTjA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_BAG-IK4KEdqFg48R_ivTjA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Identificaci&oacute;n de mecanismos de dise&ntilde;o mediante Rational Systems Developer</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta guía de la herramienta describe cómo identificar mecanismos de diseño mediante el entorno de modelado RSD.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../tech.rsa/tools/rsa_rational_systems_developer_349857FD.html" guid="_JU13oK4OEdqFg48R_ivTjA">Rational Systems Developer</a>
+<br>Ampl&iacute;a: <a href="./../../../tech.rsa/guidances/toolmentors/identifying_design_mechanisms_using_rsa_A20740FF.html" guid="{98A3AB18-452B-4287-A38E-D5ED71F2A6A3}">Identificación de mecanismos de diseño mediante la plataforma de desarrollo de software Rational</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}">Identificar mecanismo de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    En esta guía de la herramienta se llevan a cabo los pasos siguientes:<br />
+</p>
+<ul>
+    <li>
+        <a href="#categorize clients">Categorizar clientes de mecanismos de análisis</a>
+    </li>
+    <li>
+        <a href="#inventory impl mechanisms">Inventariar los mecanismos de implementación</a>
+    </li>
+    <li>
+        <a href="#Map Design Mechanisms to Implementation Mechanisms">Correlacionar mecanismos de diseño con
+        mecanismos de implementación</a>
+    </li>
+    <li>
+        <a href="#document mechanisms">Documentar mecanismos de la arquitectura</a>
+    </li>
+</ul>
+<p>
+    <a href="#MoreInfo">Información adicional sobre la herramienta</a>
+</p>
+<h3>
+    <a id="categorize clients" name="categorize clients">Categorizar clientes de mecanismos de análisis</a>
+</h3>
+<p>
+    Como parte del soporte para <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/concepts/mdd_and_mda_8F9B3685.html" guid="4.227832989444728E-303">Desarrollo
+    controlado por modelos y Arquitectura controlada por modelo</a>, la herramienta proporciona las funciones para pasar de
+    modelo a código a través del uso de transformaciones. El enfoque principal se basa en una combinación de correlaciones
+    de tipo (clases de modelo de origen, sus atributos, operaciones y relaciones) y el marcado de modelo de origen,
+    definido en los perfiles. La razón de que se utilice este método combinado es que, en la mayoría de los casos, el
+    modelo de origen no contiene información suficiente para controlar la transformación. El arquitecto tiene que añadir
+    "marcas" específicas que permiten llevar a cabo la transformación. Para obtener más información, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/analysis_mechanisms_36135B43.html" guid="9.76539014099254E-305">Mecanismos de análisis</a>.
+</p>
+<p>
+    En función de los perfiles aplicados, los mecanismos de cliente de análisis deberá marcarse según corresponda, mediante
+    los estereotipos correctos. Para obtener más información, consulte: <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Aplicación de transformaciones.</i>
+</p>
+<p>
+    Nota: aunque no tenga planeado utilizar transformaciones automáticas, encontrará útil la utilización de perfiles para
+    "marcar" el modelo. Basándose en el perfil definido, esta información adicional añadida al modelo puede incluir
+    estereotipos, propiedades y restricciones. Al definir los perfiles adecuados, utilizarlos de la forma adecuada y
+    comunicando el significado de éstos, puede añadir una gran nivel de precisión a los modelos. En consecuencia, puede
+    mejorar la efectividad de las transformaciones (independientemente de que la transformación se realice de forma
+    automática o manual).
+</p>
+<p>
+    Los pasos clave que deben seguirse a la hora de crear un perfil incluyen:
+</p>
+<ol>
+    <li>
+        Crear un proyecto de perfil
+    </li>
+    <li>
+        Añadir estereotipos
+    </li>
+    <li>
+        Utilizar ampliaciones para conectar estereotipos con elementos UML
+    </li>
+    <li>
+        Realizar pruebas aplicando el perfil a un proyecto
+    </li>
+    <li>
+        Documento
+    </li>
+    <li>
+        Paquete en forma de plug-in
+    </li>
+    <li>
+        Distribuir a través de RAS
+    </li>
+</ol>
+<p>
+    La herramienta&gt;&nbsp;puede ayudarle a encontrar los clientes de cada mecanismo y a documentar esta información:
+</p>
+<ol>
+    <li>
+        Encuentre clientes pulsando el botón derecho del ratón sobre el mecanismo y utilice Filtros &gt; Mostrar elementos
+        relacionados.
+    </li>
+    <li>
+        Utilice un diagrama de tema. Consulte: <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Diagramas de tema</i>
+    </li>
+    <li>
+        Utilice un diagrama de exploración. Consulte: <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Diagramas de exploración</i>
+    </li>
+    <li>
+        Utilice paquetes de &lt;&lt;perspectiva&gt;&gt; para proporcionar una vista de los mecanismos que se utilizan.
+    </li>
+    <li>
+        Utilice paquetes de &lt;&lt;infraestructura&gt;&gt; para proporcionar una vista del funcionamiento interno de los
+        mecanismos.&nbsp;
+    </li>
+</ol>
+<p>
+    Dentro del paquete de infraestructura del mecanismo de análisis, los clientes se muestran en un diagrama de utilización
+    de cliente, donde los clientes tiene una dependencia respecto a la clase del mecanismo de análisis.&nbsp;Como parte del
+    mismo paquete de infraestructura, cree un componente de perfil para cada perfil característico necesario. Utilice la
+    pestaña Documentación en la vista Propiedades de la clase para documentar los perfiles de utilización. Agrupe los
+    clientes según su utilización de los perfiles característicos y muestre las relaciones entre las clases de cliente y de
+    perfil en un diagrama de utilización del perfil.
+</p>
+<h3>
+    <a id="inventory impl mechanisms" name="inventory impl mechanisms">Inventariar los mecanismos de implementación</a>
+</h3>
+<p>
+    El depósito es un buen lugar para recopilar todos los candidatos potenciales para la reutilización, especialmente
+    patrones. Además, un activo RAS puede ser un modelo, el cual puede proporcionar una representación del mecanismo de
+    implementación. En tal caso, sería posible restaurar las representaciones del modelo de los mecanismos de
+    implementación en un depósito RAS compartido y hacer que el equipo realizara consultas en este depósito según
+    conviniera.
+</p>
+<p>
+    Consulte: <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Activos
+    RAS</i>&nbsp;y <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Activos de patrón RAS</i>.
+</p>
+<h3>
+    <a id="Map Design Mechanisms to Implementation Mechanisms" name="Map Design Mechanisms to Implementation Mechanisms">Correlacionar mecanismos de diseño con mecanismos de
+    implementación</a>
+</h3>
+<p>
+    Nota: algunas de las capacidades de la herramienta mencionadas en esta sección no se soportan en RSM.
+</p>
+<p>
+    Si se utiliza un enfoque de desarrollo controlado por modelos, este paso se realizará con la ayuda de las funciones de
+    transformación. Existen dos clases de transformación: transformaciones y patrones. Una transformación es "una
+    transformación optimizada para el proceso por lotes, principalmente en metamodelos, modelos y niveles de
+    abstracción".&nbsp;Un patrón es una clase especial de transformación, "optimizada para la elaboración interactiva y por
+    partes principalmente en un solo metamodelo y dentro del mismo nivel de abstracción, y a menudo dentro del mismo
+    modelo". Consulte los conceptos <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/concepts/mdd_and_mda_8F9B3685.html" guid="4.227832989444728E-303">Desarrollo
+    controlado por modelos y Arquitectura controlada por modelo</a> y <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/analysis_mechanisms_36135B43.html" guid="9.76539014099254E-305">Mecanismos de
+    análisis</a>.
+</p>Puede darse el caso de que exista un número de mecanismos de implementación que sea adecuado para ejecutar el mecanismo
+de diseño. Un factor adicional que debe tenerse en cuenta a medida que se realiza la selección es si el mecanismo de
+implementación puede ejecutarse mediante una transformación. Así mismo, revise los mecanismos de implementación que se
+reutilizan con frecuencia en los proyectos de desarrollo. Estos son buenos candidatos para la automatización a través de
+patrones y transformaciones. Como parte del análisis sobre si se debe automatizar la correlación entre el mecanismo de
+diseño y de implementación, deberá calcular el rendimiento de la inversión que debe automatizarse. 
+<p>
+    En función de los perfiles aplicados al modelo, existe un número de transformaciones fuera de lo común disponibles.
+    Para el usuario más avanzado,,&nbsp;la herramienta&nbsp;proporciona una infraestructura para la creación de
+    transformaciones personalizadas. Consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Aplicación de patrones</i> y <img height="16"     alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Aplicación de
+    transformaciones</i>. &nbsp;
+</p>
+<p>
+    En un entorno de desarrollo centrado en el código, se pueden descubrir algunas de las correlaciones empezando con el
+    código existente y utilizando las funciones de detección de patrón y antipatrón que forman parte del soporte del
+    análisis de arquitectura. Consulte las directrices <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/guidelines/architectural_discovery,_analysis_and_control_2153BFC.html" guid="2.843707701997842E-305">Descubrimiento, análisis y control de arquitectura</a>.
+</p>
+<p>
+    Una vez que se hayan identificado los mecanismos, cree un diagrama de correlación de mecanismos de arquitectura que
+    contenga los mecanismos de análisis, diseño e implementación, así como las relaciones de ejecución existentes entre
+    estos.
+</p>
+<h3>
+    <a id="document mechanisms" name="document mechanisms">Documentar mecanismos de la arquitectura</a>
+</h3>
+<p>
+    Los mecanismos son, en sí mismos, elementos de modelo de diseño (como, por ejemplo, el paquete de diseños y el
+    subsistema de diseño) que se pueden representar en el modelo de diseño: Modelo de diseño como parte de sus tareas de
+    diseño respectivas. Consulte la <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identificar elementos de diseño: Identificación de elementos de
+    diseño</a>, en la que se proporcionan directrices para la creación de elementos de modelo de diseño. Tenga en cuenta
+    que un patrón está especialmente bien adaptado para documentar un mecanismo de diseño e implementación, puesto que
+    permite que los clientes del mecanismo amplíen el patrón y generen gran parte del código y diseño necesario. Consulte:
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Montaje de
+    patrones</i> y <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Empaquetado de activos para la reutilización</i> .
+</p>
+<p>
+    Otras opciones para la documentación de los mecanismos incluyen:
+</p>
+<ul>
+    <li>
+        Utilización de notas en diagramas
+    </li>
+    <li>
+        Diagramas adicionales que especifican los aspectos estático y dinámico del mecanismo
+    </li>
+    <li>
+        Utilización de restricciones
+    </li>
+    <li>
+        Utilización de perfiles
+    </li>
+    <li>
+        Despliegue de modelos de mecanismos en forma de activos RAS (utilice el mecanismo de empaquetado RAS para recopilar
+        documentación sobre el activo, así el activo en sí)
+    </li>
+</ul>
+<p>
+    Un aspecto adicional que debe considerarse al documentar es la definición de reglas de código que pueden utilizarse
+    para hacer cumplir el modo de utilización del mecanismo. Una vez que se hayan definido las directrices, utilice
+    Revisión de código para automatizar la aplicación de directrices para garantizar la adherencia al modelo de utilización
+    especificado.
+</p>
+<h3>
+    <a id="MoreInfo" name="MoreInfo">Información adicional sobre la herramienta</a>
+</h3>
+<p>
+    Tutoriales:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Aplicación
+        de&nbsp;un patrón</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Crear un
+        patrón&nbsp;</i>
+    </li>
+</ul>
+<p>
+    Ejemplos:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Activos RAS:
+        Activo RAS por importar/exportar</i>
+    </li>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Patrones:
+        Modelo UML simple</i>&nbsp;
+    </li>
+</ul><br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

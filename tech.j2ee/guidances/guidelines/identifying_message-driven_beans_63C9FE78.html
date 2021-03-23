@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Identificaci&oacute;n de beans controlados por mensajes</title>
+<meta content="Guideline" name="uma.type">
+<meta content="identifying_message-driven_beans" name="uma.name">
+<meta content="Identificaci&oacute;n de beans controlados por mensajes" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.4428031829474456E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.4428031829474456E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Identificaci&oacute;n de beans controlados por mensajes</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la forma en que identificar y modelar beans controlados por mensajes que se necesitan para una aplicación J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identificar elementos de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    Esta directriz se centra en identificar los beans controlados por mensajes. En la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/message-driven_bean_12D6102.html" guid="3.616542707987638E-305">Directriz de producto de trabajo: beans controlados por mensajes</a> encontrará
+    directrices adicionales sobre los beans controlados por mensajes. En la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305">Directriz de producto de trabajo: Enterprise JavaBeans</a> encontrará ayuda general
+    sobre los EJB.
+</p>
+<p>
+    Algunas de las características de los beans controlados por mensajes son:
+</p>
+<ul>
+    <li>
+        No tienen estado.
+    </li>
+    <li>
+        No devuelven valores o excepciones a los clientes.
+    </li>
+    <li>
+        No tienen interfaces, puesto que los clientes no acceden directamente a los beans controlados por mensajes, sino
+        que lo hacen de forma indirecta enviando mensajes al destino (o punto final) al que el bean dé servicio. Hay un
+        método de escucha ("onMessage()" en el caso de beans controlados por mensajes JMS) que maneja de forma genérica
+        todos los mensajes. Esto significa que en tiempo de ejecución hay que realizar una comprobación de tipo, mediante
+        la operación "instanceOf()", para determinar el tipo de mensaje recibido.
+    </li>
+</ul>
+<p>
+    Los mensajes se pueden enviar al contenedor desde cualquier lugar, incluidos otros EJB, componentes web y clientes de
+    aplicación. El contenedor invoca a EJB controlados por mensajes, tal como necesite, para manejar los sucesos de
+    mensajes que se reciben. Los EJB controlados por mensajes pueden acceder a otros EJB de entidad o sesión, o a la capa
+    EIS directamente para procesar mensajes.
+</p>
+<h3>
+    <a id="Guidelines" name="Guidelines"></a>Identificación de beans controlados por mensajes
+</h3>
+<p>
+    Los beans controlados por mensajes proporcionan una manera de manejar mensajes de forma asíncrona. Sólo es posible
+    invocar de forma síncrona a los beans de entidad y de sesión. Los beans controlados por mensajes se identifican como
+    parte de la definición de concurrencia del conjunto del sistema. Consulte la sección <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/concurrency_3E796647.html" guid="1.5676516174458592E-304">Directriz:
+    concurrencia</a> para conocer directrices generales sobre la concurrencia, como por ejemplo para diseñar patrones para
+    desacoplar el código del que llama y el código del que recibe la llamada. Normalmente los beans controlados por
+    mensajes se identifican como parte de la <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">Tarea: descripción de la arquitectura de tiempo de ejecución</a> como un
+    medio para proporcionar concurrencia dentro del contenedor EJB. Como tal, en general no son identificados directamente
+    de las clases de análisis, sino de que son identificados para resolver problemas específicos de diseño, como los de
+    rendimiento y acoplamiento.
+</p>
+<p>
+    Algunas razones por las que utilizar beans controlados por mensajes son:
+</p>
+<ul>
+    <li>
+        Separar elementos de áreas diferentes de software: se puede enviar un mensaje a una cola sin que haya acoplamiento
+        con el consumidor de esos mensajes. También puede dar soporte a varios remitentes y destinatarios.
+    </li>
+    <li>
+        Incrementar el rendimiento permitiendo que el remitente del mensaje siga su proceso en lugar de quedarse bloqueado
+        en una llamada asíncrona (como ocurre en una invocación de un bean de sesión o de entidad).
+    </li>
+    <li>
+        Incrementar la fiabilidad permitiendo que el remitente del mensaje continúe su función incluso si los consumidores
+        del mensaje está fuera de línea.
+    </li>
+    <li>
+        El middleware orientado a mensajes (MOM) que hay detrás de la interfaz de <font color="#000000">mensajería</font>
+        puede ofrecer otras ventajas: como la entrega de mensajes garantizada.
+    </li>
+    <li>
+        Existe un elemento de diseño (como un sistema tradicional) que utiliza la mensajería para comunicarse.<br />
+    </li>
+</ul>
+<h3>
+    <a id="Modeling" name="Modeling"></a>Modelado de beans controlados por mensajes
+</h3>
+<p>
+    Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_enterprise_javabeans_ejbs_2581AEE5.html" guid="9.931732120190802E-307">Directriz: identificación de Enterprise JavaBeans (EJB)</a> para obtener ayuda general
+    sobre el modelado de EJB. Observe, sin embargo, que los beans controlados por mensajes normalmente se modelan como
+    parte de la Vista de proceso. Consulte la sección <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/describing_the_run-time_architecture_for_j2ee_applications_58C0C0A2.html" guid="1.7390519818410197E-305">Directriz: descripción de la arquitectura de tiempo de ejecución para aplicaciones
+    J2EE</a> para obtener ayuda específica sobre el modelado de beans controlados por mensajes en la Vista de proceso.
+</p>
+<h3>
+    <a id="Returning" name="Returning"></a>Devolución de resultados a los remitentes de mensajes
+</h3>
+<p>
+    Los beans controlados por mensajes no pueden enviar directamente respuestas a los remitentes de los mensajes.
+</p>
+<p>
+    Una estrategia habitual para enviar una respuesta es introducir otro destino o punto final para las respuestas.
+    Consulte [<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/supportingmaterials/java_references_110189E3.html" guid="1.4494927535802764E-304">ROM02</a>] para obtener más detalles sobre esta estrategia.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

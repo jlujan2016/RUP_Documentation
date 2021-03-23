@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Artefacto: Data Migration Specification</title>
+<meta content="Artifact" name="uma.type">
+<meta content="database_migration_specification" name="uma.name">
+<meta content="Data Migration Specification" name="uma.presentationName">
+<meta content="@Type:@Name:@DisplayName" name="uma.category">
+<meta content="WorkProductType:specification:Especificaci&oacute;n" name="uma.category">
+<meta content="Artifact" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{87EE3BF5-17CA-4211-BD3D-32F361E58550}", "{24309CAC-2A58-4011-B0F0-0A7D2FD58AEA}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{24309CAC-2A58-4011-B0F0-0A7D2FD58AEA}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3aJCcN7REdmjRZts2c4ZjQ", "{24309CAC-2A58-4011-B0F0-0A7D2FD58AEA}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{87EE3BF5-17CA-4211-BD3D-32F361E58550}", "{24309CAC-2A58-4011-B0F0-0A7D2FD58AEA}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{24309CAC-2A58-4011-B0F0-0A7D2FD58AEA}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{87EE3BF5-17CA-4211-BD3D-32F361E58550}", "{24309CAC-2A58-4011-B0F0-0A7D2FD58AEA}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{24309CAC-2A58-4011-B0F0-0A7D2FD58AEA}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Artefacto: Data Migration Specification</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../modernize.legacy_evol/workproducts/resources/doc_artf.jpg"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top"> This artifact contains the data profile of the data sources that will be migrated and the mapping between the data sources and the target database. </td>
+</tr>
+<tr>
+<td>Dominios: <a href="./../../core.base_rup/domains/analysis_and_design_BD3BBB1D.html" guid="_kjFBYN7HEdm8G6yT7-Wdqw">Análisis y diseño</a>
+<br>Clases de producto de trabajo: <a href="./../../core.base_rup/workproducttypes/specification_435F570D.html" guid="_3aJCcN7REdmjRZts2c4ZjQ">Especificación</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="Purpose" name="Purpose"></a> 
+<p>
+    The main purpose of this artifact is to describe data sources to be migrated and to specify the mapping between the
+    source data and the target data. It will be used by the <a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Designer</a> to
+    design any automated data migration software components.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Responsable:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">Diseñador de base de datos</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Modificado por:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">Dise&ntilde;ador de base de datos</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Tareas</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Entrada a:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}">Dise&ntilde;o del subsistema</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_subsystem_design_B9BB36BD.html" guid="{FACE1697-1CB6-4F57-8B39-ED507BE7006F}">Dise&ntilde;o de subsistema (SOA)</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Salida de:
+								</span>
+<ul>
+<li>
+<a href="./../../modernize.legacy_evol/tasks/design_database_migration_FAFCAC6F.html" guid="{AFE73E86-AD34-4A5C-8DF3-FCD28DBE2F22}">Specify Data Migration</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Uso del proceso</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">Análisis y diseño</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/design_the_database_2BE59DB0.html" guid="{FB3EB753-A979-4849-B57B-97F39271F82B}">Diseñar la base de datos</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/database_migration_specification_F54C5AAB.html" guid="_fyxwgTnfEdqxANP9kNH4WA">Especificación de migración de datos</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">Análisis y diseño</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/design_components_13B33BFC.html" guid="{9C683674-97C1-4AEE-8DB0-9514AEFF698E}">Componentes de diseño</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/database_migration_specification_92B29A60.html" guid="_nNPZAEocEdqrjq4i3fchvA">Especificación de migración de datos</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/specify_services_45CC7C36.html" guid="_6Jd70DtdEdqPaeZADstHAA">Especificación de servicios</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/capabilitypatterns/soa_subsystem_analysis_40CEBC0B.html" guid="_WjrjAEn3EduC74V7YHXTOQ">Realizar análisis de subsistema</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/capabilitypatterns/database_migration_specification_FE14B4EF.html" guid="_Whs3xkxBEduGSMz-5zscXg">Especificación de migración de datos</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/soa_classic_A0ACDC3D.html" guid="_ilyyoSv-EduYBoDegGQopA">Arquitectura y modelado orientado a servicios de RUP</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/specification_B2BFB5FC.html" guid="_VCMlUEn7EduC74V7YHXTOQ">Especificación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/soa_subsystem_analysis_54ABA3CF.html" guid="_mnSJQU94Edu0EMZ-3o0kDQ">Realizar análisis de subsistema</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/model_subsystem_dependencies_B429825C.html" guid="_yBx2oU94Edu0EMZ-3o0kDQ">Dependencias del subsistema de modelo</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/database_migration_specification_BC3FD8BB.html" guid="_ZhW_Zk95Edu0EMZ-3o0kDQ">Especificación de migración de datos</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/soa_classic_A0ACDC3D.html" guid="_ilyyoSv-EduYBoDegGQopA">Arquitectura y modelado orientado a servicios de RUP</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/specification_B2BFB5FC.html" guid="_VCMlUEn7EduC74V7YHXTOQ">Especificación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/soa_subsystem_analysis_54ABA3CF.html" guid="_mnSJQU94Edu0EMZ-3o0kDQ">Realizar análisis de subsistema</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/identify_service_component_2C4D9AD4.html" guid="_zB0-YU94Edu0EMZ-3o0kDQ">Identificar componente de servicio</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/database_migration_specification_F7E5BDE6.html" guid="_gj8kR1HdEdumTu7t35vA-A">Especificación de migración de datos</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/soa_classic_A0ACDC3D.html" guid="_ilyyoSv-EduYBoDegGQopA">Arquitectura y modelado orientado a servicios de RUP</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/specification_B2BFB5FC.html" guid="_VCMlUEn7EduC74V7YHXTOQ">Especificación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/soa_subsystem_analysis_54ABA3CF.html" guid="_mnSJQU94Edu0EMZ-3o0kDQ">Realizar análisis de subsistema</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/identify_functional_components_F62342EB.html" guid="_zsJGsU94Edu0EMZ-3o0kDQ">Identificar componentes funcionales</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/database_migration_specification_BDA465FE.html" guid="_j_675lHdEdumTu7t35vA-A">Especificación de migración de datos</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/soa_classic_A0ACDC3D.html" guid="_ilyyoSv-EduYBoDegGQopA">Arquitectura y modelado orientado a servicios de RUP</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/specification_B2BFB5FC.html" guid="_VCMlUEn7EduC74V7YHXTOQ">Especificación</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/soa_subsystem_analysis_54ABA3CF.html" guid="_mnSJQU94Edu0EMZ-3o0kDQ">Realizar análisis de subsistema</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/identify_technical_components_5F9908B.html" guid="_0Zf78U94Edu0EMZ-3o0kDQ">Identificar componentes técnicos</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../soa.rup_soma/deliveryprocesses/database_migration_specification_E2BFA7E5.html" guid="_nkdZp1HdEdumTu7t35vA-A">Especificación de migración de datos</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Esquematizaci&oacute;n breve</th><td class="sectionTableCell"><a id="BriefOutline" name="BriefOutline"></a> 
+<h4>
+    1. Introduction
+</h4>
+<div style="margin-left: 2em">
+    <ul>
+        <li>
+            <p>
+                Scope of the migration
+            </p>
+        </li>
+    </ul>
+</div>
+<h4>
+    2. Data Profile
+</h4>
+<div style="margin-left: 2em">
+    <ul>
+        <li>
+            <p>
+                Data Systems
+            </p>
+        </li>
+        <li>
+            <p>
+                Data Attributes Profile
+            </p>
+        </li>
+        <li>
+            <p>
+                Data Attribute Dependencies
+            </p>
+        </li>
+    </ul>
+</div>
+<h4>
+    3. Data Mapping Table
+</h4></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Personalizaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Opciones de representaci&oacute;n</th><td class="sectionTableCell">UML Representation: Not Applicable. 
+<p>
+    <a id="Tailoring" name="Tailoring"></a>
+</p>
+<p>
+    The Data Profile can include or reference a <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Data
+    Model</a>, if a Data Model exists. Manually created/maintained data models may need to be updated to correctly reflect
+    the current data. It may also be helpful to create a data model by reverse engineering. For more information<font     color="#ff0000">,</font> see <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/reverse-engineering_relational_databases_902803B8.html" guid="1.338740134620651E-305">Guideline: Reverse-engineering Relational Databases</a>.<br />
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

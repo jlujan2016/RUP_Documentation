@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Ingenier&iacute;a directa de bases de datos utilizando Rational XDE</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="forward_engineering_db" name="uma.name">
+<meta content="Ingenier&iacute;a directa de bases de datos utilizando Rational XDE" name="uma.presentationName">
+<meta content="Tool:rup_xde:Rational XDE Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational XDE Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{F55D370E-F820-4646-A0B8-C2242A07A83F}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{F55D370E-F820-4646-A0B8-C2242A07A83F}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{F55D370E-F820-4646-A0B8-C2242A07A83F}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{F55D370E-F820-4646-A0B8-C2242A07A83F}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{F55D370E-F820-4646-A0B8-C2242A07A83F}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Ingenier&iacute;a directa de bases de datos utilizando Rational XDE</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe el uso de la ingeniería directa en la herramienta de software de Rational XDE Developer para generar un archivo de script DDL o esquema de base de datos a partir de un modelo de datos de Rational XDE existente.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_xde_D81FFA70.html" guid="{303A82D2-E3AB-4501-8563-0D4D43782AF9}">Rational XDE Developer</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/database_design_8552DD3.html" guid="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}">Diseño de base de datos</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    En esta guía de la herramienta se llevan a cabo los pasos siguientes:
+</p>
+<ul>
+    <li>
+        <a href="#Set Model Properties">Establecer propiedades de modelo</a>
+    </li>
+    <li>
+        <a href="#Forward Engineer Database">Ingeniería directa de modelo de datos para una base de datos</a>
+    </li>
+    <li>
+        <a href="#MoreInfo">Gestionar cambios en el modelo y la base de datos</a>
+    </li>
+</ul>
+<h3>
+    <a id="Set Model Properties" name="Set Model Properties">Establecer propiedades de modelo</a>
+</h3>
+<p>
+    Se deben establecer dos tipos de propiedades de modelo para permitir la ingeniería directa del modelo de datos para
+    crear una base de datos o archivo DDL (lenguaje de definición de datos).&nbsp;Las propiedades son las siguientes:
+</p>
+<ul>
+    <li>
+        DBMS (sistema de gestión de bases de datos) por omisión (consulte el apartado <img         alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Establecimiento del destino de base de
+        datos por omisión</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_set_default_db_target"); -->)
+    </li>
+    <li>
+        Asignación de base de datos por omisión (consulte el apartado <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Establecimiento de la asignación de base de datos por omisión</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_set_default_db_assign"); -->)
+    </li>
+</ul>
+<p>
+    Rational XDE ofrece soporte de ingeniería directa para el estándar ANSI SQL 92 y para los DBMS (sistemas de gestión de
+    base de datos) listados en el tema de la ayuda en línea de Rational XDE que trata sobre las <img     alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /> <i>bases de datos soportadas en Rational
+    XDE</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_r_db_support"); -->.
+</p>
+<p>
+    Referencia: <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Establecimiento de
+    opciones de modelado de datos</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_data_pref"); -->.
+</p>
+<h3>
+    <a id="Forward Engineer Database" name="Forward Engineer Database">Ingeniería directa de modelo de datos para una base
+    de datos</a>&nbsp;
+</h3>
+<p>
+    Rational XDE se puede utilizar para aplicar la ingeniería de un modelo de datos a un nuevo esquema de base de datos o
+    un nuevo archivo DDL. Puede aplicar la ingeniería a tablas individuales o a un modelo de datos completo. Referencia:
+    <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Generación de base de datos y DDL</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_fe_overview"); -->El proceso de
+    ingeniería directa se inicia utilizando el <b>asistente para ingeniería directa</b> de modelado de datos que
+    proporciona Rational XDE. (Consulte el apartado <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Generación de bases de datos o DDL</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_fe_db_ddl"); -->.) &nbsp;
+</p>
+<p>
+    Tanto si decide generar sólo un DDL, como si decide ejecutar el DDL para crear una base de datos, Rational XDE crea,
+    automáticamente, un archivo DDL en el directorio que se especifica en el asistente. Los elementos que incluye Rational
+    XDE en el proceso de ingeniería directa dependen de las opciones que se seleccionan en el <b>Asistente para ingeniería
+    directa</b>. Todos los elementos o scripts DDL se generan conforme al DBMS especificado. Consulte los temas de la ayuda
+    en línea de Rational XDE que tratan sobre los detalles de los distintos tipos de DBMS para los que se ofrece soporte:
+</p>
+<ul>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Base de datos DB2 y generación de
+        DDL</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_fe_db2_db"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Base de datos Oracle y generación
+        de DDL</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_fe_oracle_db"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Base de datos SQL Server y
+        generación de DDL</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_fe_sqlsrv_db"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Base de datos Sybase y generación
+        de DDL</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_fe_sybase_db"); -->
+    </li>
+</ul>
+<p>
+    Si aplica la ingeniería a un modelo de datos ANSI SQL 92, Rational XDE genera un DDL independiente de DBMS. Puede
+    utilizar la herramienta de base de datos que prefiera para ejecutar el DDL.
+</p>
+<p>
+    Con el objeto de realizar la ingeniería directa de la base de datos, Rational XDE debe establecer una conexión para los
+    DBMS adecuados. Consulte el apartado <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Conexión a sistemas de gestión de base de datos</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_connect_dbms"); -->&nbsp;para obtener
+    más información sobre el establecimiento de conexiones de base de datos. Consulte los temas de la ayuda en línea de
+    Rational XDE que tratan sobre el establecimiento de conexiones para un tipo de DBMS específico:
+</p>
+<ul>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Conexiones de base de datos
+        Oracle</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_oracle_db_connect"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Conexiones de base de datos SQL
+        Server</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_sqlsrv_db_connect"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Conexiones de base de datos
+        Sybase</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_sybase_db_connect"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Conexiones de base de datos
+        DB2</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_db2_db_connect"); -->
+    </li>
+</ul>
+<h3>
+    <a id="MoreInfo" name="MoreInfo">Gestionar cambios en el modelo y la base de datos</a>
+</h3>
+<p>
+    Después de crear la base de datos o DDL, se deben gestionar y controlar los cambios del modelo de datos y la base de
+    datos generada.&nbsp;Rational XDE proporciona una característica de Comparar y sincronizar para ayudar al diseñador de
+    la base de datos a gestionar el cambio. Referencia: <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Comparación y sincronización en el modelado de datos</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_gen_dm_cmpsync"); -->, <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/managing_db_ACA9AB6E.html" guid="{3B09E5BE-4AC8-4206-B9D8-4F85D36B9C75}">Guía de la herramienta: Gestión de bases de datos en Rational XDE</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.appliedis.com" target="_blank"><img alt="Icono de Applied Information Sciences"                 src="./../../../core.base_rup/guidances/supportingmaterials/resources/appliedis.gif" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Contenido desarrollado o parcialmente desarrollado por <a href="http://www.appliedis.com" target="_blank">Applied Information Sciences</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: B&uacute;squeda de actores y guiones de uso mediante Rational Systems Developer</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="finding_actors_and_use_cases_using_rsd" name="uma.name">
+<meta content="B&uacute;squeda de actores y guiones de uso mediante Rational Systems Developer" name="uma.presentationName">
+<meta content="Tool:rsa_rational_systems_developer:Rational Systems Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Systems Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "_JU13oK4OEdqFg48R_ivTjA", "_Dt52kK4JEdqFg48R_ivTjA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "_JU13oK4OEdqFg48R_ivTjA", "_Dt52kK4JEdqFg48R_ivTjA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "_JU13oK4OEdqFg48R_ivTjA", "_Dt52kK4JEdqFg48R_ivTjA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_Dt52kK4JEdqFg48R_ivTjA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: B&uacute;squeda de actores y guiones de uso mediante Rational Systems Developer</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta guía de la herramienta describe cómo encontrar actores y guiones de uso mediante el entorno de modelado RSD.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../tech.rsa/tools/rsa_rational_systems_developer_349857FD.html" guid="_JU13oK4OEdqFg48R_ivTjA">Rational Systems Developer</a>
+<br>Ampl&iacute;a: <a href="./../../../tech.rsa/guidances/toolmentors/finding_actors_and_use_cases_using_rsa_A51555DD.html" guid="{06320FBA-D447-485E-97F5-24791C8E032C}">Búsqueda de actores y guiones de uso mediante la plataforma de desarrollo de software Rational</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/find_actors_and_use_cases_1ACB35F0.html" guid="{3CD5FA7E-160C-4A39-9DEB-C6D162D8AECD}">Buscar actores y guiones de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    En esta guía de la herramienta se da por supuesto que el modelo de guión de uso ya se ha creado según las <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructurad de modelo para RSx</a>.
+</p>
+<p>
+    En esta guía de la herramienta se llevan a cabo los pasos siguientes:
+</p>
+<ul>
+    <li>
+        <a href="#Find Actors">Buscar actores</a>
+    </li>
+    <li>
+        <a href="#Find Use Cases">Buscar guiones de uso</a>
+    </li>
+    <li>
+        <a href="#Describe how Actors and Use Cases Interact">Describir cómo interactúan los actores y los
+        guiones de uso</a>
+    </li>
+    <li>
+        <a href="#Package Use Cases and Actors">Empaquetar guiones de uso y actores</a>
+    </li>
+    <li>
+        <a href="#Present the Use-Case Model in Diagrams">Presentar el modelo de guión de uso en diagramas de
+        guión de uso</a>
+    </li>
+    <li>
+        <a href="#Develop a Survey of the Use-Case Model">Desarrollar una inspección del modelo de guión de
+        uso</a>
+    </li>
+    <li>
+        <a href="#Evaluate Your Results">Evaluar los resultados</a>
+    </li>
+</ul>
+<p>
+    <a href="#MoreInfo">Información adicional sobre la herramienta</a>
+</p>
+<h3>
+    <a id="Find Actors" name="Find Actors">Buscar actores</a>
+</h3>
+<p>
+    Una vez que haya buscado los actores, registre los resultados tal como se indica a continuación:
+</p>
+<ol>
+    <li>
+        Abra el modelo de guión de uso.
+    </li>
+    <li>
+        Navegue a un paquete del que se van a capturar actores. Consulte <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a>.
+    </li>
+    <li>
+        Cree un diagrama para capturar actores, seleccionando el diagrama de guión de uso como tipo de diagrama. Consulte
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adición de
+        diagramas de guión de uso a modelos</i> en la ayuda en línea.
+    </li>
+    <li>
+        Añada actores al diagrama.
+    </li>
+    <li>
+        Anote cada actor con una descripción breve. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documentación de elementos de modelo</i>.
+    </li>
+</ol>
+<p>
+    <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> Para obtener más
+    información, consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Modelado del comportamiento de un sistema&nbsp;mediante&nbsp;diagramas de guión de uso</i> en la ayuda
+    en línea.
+</p>
+<h3>
+    <a id="Find Use Cases" name="Find Use Cases">Buscar guiones de uso</a>
+</h3>
+<p>
+    Una vez que haya buscado los guiones de uso, registre los resultados tal como se indica a continuación:
+</p>
+<ol>
+    <li>
+        Navegue a un paquete del que se van a capturar guiones de uso. Consulte <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Directrices de estructura de modelo para RSx</a>.
+    </li>
+    <li>
+        Cree un diagrama de guión de uso para capturar guiones de uso. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Creación de diagramas de guión de uso</i> en la ayuda en
+        línea.
+    </li>
+    <li>
+        Añada guiones de uso al diagrama. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adición de diagramas de guión de uso a modelos.</i>
+    </li>
+    <li>
+        Proporcione una descripción breve y el flujo de sucesos esquematizado. Inicialmente, se puede anotar en el elemento
+        de modelo. (Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Documentación de elementos de modelo</i>.) De forma alternativa, puede utilizar la plantilla que
+        proporciona RUP para el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">Artefacto: Guión de uso</a> y adjuntarla al guión de uso del modelo.
+        Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Enlace de elementos de modelo con archivos externos</i>.
+    </li>
+</ol>
+<h3>
+    <a id="Describe how Actors and Use Cases Interact" name="Describe how Actors and Use Cases Interact">Describir cómo
+    interactúan los actores y los guiones de uso</a>
+</h3>
+<p>
+    Para describir la interacción entre los actores y los guiones de uso, siga los pasos que se indican a continuación:
+</p>
+<ol>
+    <li>
+        Añada los actores creados previamente al diagrama de guión de uso que contiene los guiones de uso. Consulte <img         height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adición de
+        elementos de diagrama a diagramas&nbsp;de modelado</i>.
+    </li>
+    <li>
+        Añada asociaciones de comunicados entre actores y guiones de uso. Consulte <img height="16"         alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Especificación de relaciones
+        en&nbsp;diagramas UML.</i> Si una asociación sólo es navegable en una dirección, seleccione una asociación
+        dirigida, en primer lugar pulse la forma de cliente y, a continuación, pulse la forma de proveedor.
+    </li>
+    <li>
+        Si lo desea, describa la asociación. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documentación de elementos de modelo</i>.
+    </li>
+    <li>
+        Si lo desea, añada multiplicidad de un rol. Consulte <img height="16" alt="icono de publicación"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Especificación de la propiedad Multiplicidad</i>.
+    </li>
+</ol>
+<h3>
+    <a id="Package Use Cases and Actors" name="Package Use Cases and Actors">Empaquetar guiones de uso y actores</a>
+</h3>
+<p>
+    Organice actores y guiones de uso en paquetes.
+</p>
+<p>
+    Consulte <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Organización de elementos de modelo en paquetes</i> en la ayuda en línea.
+</p>
+<h3>
+    <a id="Present the Use-Case Model in Diagrams" name="Present the Use-Case Model in Diagrams">Presentar el modelo de
+    guión de uso en diagramas de guión de uso</a>
+</h3>
+<p>
+    Para el objetivo de esta guía de la herramienta, se presupone que se han creado los diagramas al identificar los
+    actores y los guiones de uso. Consulte los pasos que se han indicado más arriba como guía para la creación de diagramas
+    de guión de uso.
+</p>
+<h3>
+    <a id="Develop a Survey of the Use-Case Model" name="Develop a Survey of the Use-Case Model">Desarrollar una inspección
+    del modelo de guión de uso</a>
+</h3>
+<p>
+    La herramienta&nbsp;proporciona informes de modelo de guión de uso. Puede resultar útil publicar los modelos en formato
+    HTML. Así mismo, tenga en cuenta que dichos diagramas pueden copiarse en Microsoft Word y otros programas.
+</p>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Publicación de modelos</i>.
+</p>
+<h3>
+    <a id="Evaluate Your Results" name="Evaluate Your Results">Evaluar los resultados</a>
+</h3>
+<p>
+    Los informes (consulte el paso anterior) y los modelos publicados pueden resultar de utilidad para revisar el modelo.
+</p>
+<p>
+    Para obtener más información, consulte <img height="16" alt="icono de publicación"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Publicación de modelos</i> y el tutorial <img height="16"     alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Publicación de un modelo en un
+    sitio web</i> .
+</p>
+<h3>
+    <a id="MoreInfo" name="MoreInfo">Información adicional sobre la herramienta</a>
+</h3>
+<p>
+    Ejemplos:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="icono de publicación" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>&nbsp;Modelos
+        UML: Modelo UML simple</i>&nbsp;
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

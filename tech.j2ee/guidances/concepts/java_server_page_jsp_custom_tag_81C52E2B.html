@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concepto: C&oacute;digos personalizados de JSP (Java Server Page)</title>
+<meta content="Concept" name="uma.type">
+<meta content="java_server_page_jsp_custom_tag" name="uma.name">
+<meta content="C&oacute;digos personalizados de JSP (Java Server Page)" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "4.4600116920171025E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "4.4600116920171025E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.4600116920171025E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concepto: C&oacute;digos personalizados de JSP (Java Server Page)</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se proporciona una visión general técnica sobre los códigos personalizados, un mecanismo para ampliar la API de JSP.  </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Clase de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    Los códigos personalizados son el mecanismo para ampliar la API de JSP. Los códigos personalizados permiten
+    ampliaciones mediante declaraciones de páginas JSP. Los códigos JSP se implementan en Java, pero se activan en las JSP
+    mediante códigos similares a los códigos HTML. Sin embargo, a diferencia de los códigos HTML, los códigos JSP los
+    procesa el servidor y no el navegador del cliente.
+</p>
+<p>
+    Los códigos personalizados proporcionan una clara separación de responsabilidades entre los diseñadores web
+    (desarrolladores de JSP) y los programadores de Java. Los programadores de Java son los encargados de implementar
+    códigos JSP personalizados. Los diseñadores seleccionan estos códigos mediante declaraciones para activar la
+    implementación Java.
+</p>
+<p>
+    El diseñador de JSP "invoca" al código Java declarando códigos y el desarrollador de Java desarrolla el código en
+    manejadores de códigos, tal como se muestra en el siguiente diagrama.
+</p>
+<blockquote>
+    <p>
+        <img height="363" alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/concepts/resources/intro.gif" width="389" />
+    </p>
+</blockquote>
+<p>
+    Para proporcionar un código personalizado, el desarrollador de Java tiene que proporcionar dos elementos:
+</p>
+<ul>
+    <li>
+        Un <a href="#Tag_Handler">manejador de códigos</a>
+    </li>
+    <li>
+        Un <a href="#Tag_Library_Descriptor">descriptor de biblioteca de códigos</a>.
+    </li>
+</ul>
+<h3>
+    <a id="Tag_Handler" name="Tag_Handler"></a>Manejador de códigos
+</h3>
+<p>
+    Un manejador de códigos es una clase que implementa la interfaz <i>Tag</i>. Dos clases de bibliotecas permiten
+    proporcionar manejadores de códigos. Las dos clases son <i>javax.servlet.jsp.TagSupport</i> y
+    <i>javax.servlet.jsp.BodyTagSupport</i>. La clase <i>TagSupport</i> se utiliza para códigos que no tienen cuerpo,
+    mientras que <i>BodyTagSupport</i> se utiliza para códigos con un cuerpo.
+</p>
+<p>
+    A continuación se presenta un ejemplo de una implementación de un manejador de códigos lo más simple posible.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/concepts/resources/simple_tag_example.gif" />
+    </p>
+</blockquote>
+<h3>
+    <a id="Tag_Library_Descriptor" name="Tag_Library_Descriptor"></a>Descriptor de biblioteca de códigos
+</h3>
+<p>
+    Para que una JSP pueda utilizar códigos personalizados JSP, hay que crear un descriptor de biblioteca de códigos. Un
+    descriptor de biblioteca de códigos es un archivo XML que se despliega en el servidor web junto con los manejadores de
+    códigos.
+</p>
+<p>
+    A continuación se muestra un archivo de biblioteca de códigos simple con el descriptor de biblioteca de códigos
+    HelloWorld.
+</p>
+<blockquote>
+    <p>
+        <code>&lt;?xml version="1.0" encoding="ISO-8859-1" ?&gt;<br />
+         &lt;taglib xmlns="http://java.sun.com/xml/ns/j2ee"<br />
+         xmlns:xsi="http://www.w3.org/2001/XMLScheme-instance"<br />
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd"<br />
+         version="2.0"&gt;<br />
+         &lt;tlib-version&gt;1.0&lt;/tlib-version&gt;<br />
+         &lt;short-name&gt;simp&lt;/short-name&gt;<br />
+         &lt;uri&gt; http://www.inferdata.com/taglib/hello-world&lt;/uri&gt;<br />
+         &lt;description&gt;Ejemplo simple de un código JSP personalizado&lt;/description&gt;<br />
+         &lt;tag&gt;<br />
+         &lt;name&gt;hello&lt;/name&gt;<br />
+         &lt;tag-class&gt;com.inferdata.taglib.HelloWorld&lt;/tag-class&gt;<br />
+         &lt;body-content&gt;empty&lt;/body-content&gt;<br />
+         &lt;description&gt;Código hello world simple&lt;/description&gt;<br />
+         &lt;/tag&gt;<br />
+         &lt;/taglib&gt;</code>
+    </p>
+</blockquote></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.inferdata.com" target="_blank"><img alt="logotipo de Inferdata"                 src="./../../../tech.j2ee/guidances/supportingmaterials/resources/inferdata.gif" width="100" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Contenido desarrollado o parcialmente desarrollado por <a href="http://www.inferdata.com/" target="_blank">Inferdata Corporation</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; Copyright&nbsp;IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

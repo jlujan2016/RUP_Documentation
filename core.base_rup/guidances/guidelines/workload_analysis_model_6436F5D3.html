@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Modelo de an&aacute;lisis de carga de trabajo</title>
+<meta content="Guideline" name="uma.type">
+<meta content="workload_analysis_model" name="uma.name">
+<meta content="Modelo de an&aacute;lisis de carga de trabajo" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{008164B1-3AC3-47E8-9F93-EE4C36B58A97}", "2.7672246217039647E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{008164B1-3AC3-47E8-9F93-EE4C36B58A97}", "2.7672246217039647E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.7672246217039647E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{008164B1-3AC3-47E8-9F93-EE4C36B58A97}", "2.7672246217039647E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.7672246217039647E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Modelo de an&aacute;lisis de carga de trabajo</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">El modelo de análisis de carga de trabajo identifica las variables que afectan al rendimiento del sistema y cómo medir su efecto. En esta directriz se explica cómo desarrollar uno.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_workload_analysis_model_E86A32FF.html" guid="{008164B1-3AC3-47E8-9F93-EE4C36B58A97}">Modelo de análisis de carga de trabajo</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    La calidad del software se valora junto con diferentes dimensiones que incluyen la fiabilidad, la función y el
+    rendimiento (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/quality_dimensions_19CC5BD2.html" guid="1.0990958932232138E-305">Concepto:
+    Dimensiones de calidad</a>). El modelo de análisis de carga de trabajo (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_workload_analysis_model_E86A32FF.html" guid="{008164B1-3AC3-47E8-9F93-EE4C36B58A97}">Producto de trabajo: modelo de análisis de carga de trabajo</a>) se crea
+    para identificar y definir las diferentes variables que afectan o influencian el rendimiento de una aplicación o
+    sistema y las medidas necesarias para valorar el rendimiento. Los perfiles de carga de trabajo que componen el modelo
+    representan las condiciones candidatas que deben simularse contra los elementos del destino de la prueba debajo de una
+    o más configuraciones de entorno de prueba. El modelo de análisis de carga de trabajo lo utilizan los roles siguientes:
+</p>
+<ul>
+    <li>
+        el <b>analista de pruebas</b> (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_test_analyst_4637F9F0.html" guid="{8728060F-9DAD-42AD-B0B6-668C9AEA531D}">Rol:
+        Analista de pruebas</a>) utiliza el modelo de análisis de carga de trabajo para identificar las ideas de prueba y
+        definir los casos de prueba para diferentes pruebas
+    </li>
+    <li>
+        el <b>diseñador de pruebas</b> (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_test_designer_5F59E64F.html" guid="{84F723B5-288F-4AC4-B6C1-C75A07BFEEED}">Rol:
+        Diseñador de pruebas</a>) utiliza el modelo de análisis de carga de trabajo para definir un enfoque de prueba
+        apropiado e identificar las necesidades de comprobabilidad para las diferentes pruebas
+    </li>
+    <li>
+        el <b>verificador</b> (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_tester_8ADFF3FA.html" guid="{A719CEAE-35FB-42F6-A076-F501B83E5B85}">Rol:
+        Verificador</a>) utiliza el modelo de análisis de carga de trabajo para comprender mejor los objetivos de la prueba
+        a implementar, ejecutar y analizar su ejecución adecuadamente
+    </li>
+    <li>
+        el <b>representante del usuario</b> (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_stakeholder_1011D446.html" guid="{7A4262EA-AB5B-431E-BB4A-3822FBF7F239}">Rol:
+        Interesado</a>) utiliza el modelo de análisis de carga de trabajo para valorar la adecuación de la carga de
+        trabajo, y las pruebas necesarias para valorar con eficacia el comportamiento de los sistemas contra el modelo de
+        análisis de carga de trabajo
+    </li>
+</ul>
+<p>
+    La información que se incluye en el modelo de análisis de carga de trabajo se centra en las características y los
+    atributos de las áreas principales siguientes:
+</p>
+<ul>
+    <li>
+        Casos de ejemplo de caso de uso (o instancias, consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">Producto
+        de trabajo: Caso de uso</a>) que se ejecutarán durante las pruebas
+    </li>
+    <li>
+        Actores (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_actor_1F9CE9.html" guid="{0EEBBA43-F5C6-4594-9F06-65D99F7556DF}">Producto de
+        trabajo: Actor</a>) que se simulará / emulará durante las pruebas
+    </li>
+    <li>
+        Perfil de carga de trabajo - representa el número y el tipo de instancias de actor simultáneas, casos de ejemplo de
+        caso de uso ejecutados por estas instancias de actor y las respuestas en línea o asociadas con cada caso de ejemplo
+        de caso de uso.
+    </li>
+    <li>
+        La configuración de entorno de prueba (real, simulada o emulada) que se utilizará para ejecutar y evaluar las
+        pruebas (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_environment_configuration_B6BBDD6.html" guid="{DB50EF75-2B05-4487-8299-D82D2A0AD45C}">Producto de trabajo: Configuración de entorno de prueba</a>. Consulte
+        también <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">Producto de trabajo: Documento de arquitectura de software</a>, la
+        vista de despliegue, que debería formar la base de la Configuración de entorno de prueba)
+    </li>
+</ul>
+<p>
+    Las pruebas deben considerarse para medir y evaluar las características y los comportamientos del destino de la prueba
+    cuando funcionen bajo diferentes cargas de trabajo. El diseño satisfactorio, la implementación y la ejecución de estas
+    pruebas requiere la identificación de los datos realistas y excepcionales de estos perfiles de carga de trabajo.
+</p>
+<h3>
+    <a id="Use Cases and Use Case Attributes" name="Use Cases and Use Case Attributes">Guiones de uso y atributos de caso
+    de uso</a>
+</h3>
+<p>
+    Dos aspectos de los casos de uso que se consideran para la selección de casos de ejemplo para este tipo de pruebas:
+</p>
+<ul>
+    <li>
+        Los <a href="#Critical Use Cases">casos de uso críticos</a> contienen los casos de ejemplo del caso de uso que
+        se medirán y evaluarán en las pruebas
+    </li>
+    <li>
+        Los <a href="#Significant Use Cases">casos de uso significativos</a> contienen casos de ejemplo de caso de uso
+        que pueden afectar al comportamiento de los casos de ejemplo de caso de uso críticos
+    </li>
+</ul>
+<h4>
+    <a id="Critical Use Cases" name="Critical Use Cases">Guiones de uso críticos</a>
+</h4>
+<p>
+    No todos los casos de ejemplo de caso de uso que se implementan en el destino de la prueba son necesarios para estas
+    pruebas. Los casos de uso críticos contienen los casos de ejemplo de caso de uso que serán el centro de la prueba - es
+    decir, se medirán y evaluarán sus comportamientos.
+</p>
+<p>
+    Para identificar los casos de uso críticos, identifique los casos de ejemplo de caso de uso que cumplen uno o más de
+    los criterios siguientes:
+</p>
+<ul>
+    <li>
+        requieren las medidas y la valoración basadas en el perfil de carga de trabajo
+    </li>
+    <li>
+        lo ejecutan con frecuencia uno o más usuarios finales (instancias de actor)
+    </li>
+    <li>
+        que represente un elevado porcentaje de utilización del sistema
+    </li>
+    <li>
+        que consuma recursos del sistema significativos
+    </li>
+</ul>
+<p>
+    Liste los escáner de caso de uso críticos para incluirlos en la prueba. Como se están identificando, el flujo de
+    sucesos de caso de uso debe revisarse. Empiece identificando la secuencia específica de sucesos entre el actor (tipo) y
+    el sistema cuando se ejecuta el caso de ejemplo de caso de uso.
+</p>
+<p>
+    Además, identifique (o compruebe) la información siguiente:
+</p>
+<ul>
+    <li>
+        Las condiciones previas de estos casos de uso, como el estado de los datos (qué datos deben / no deben existir) y
+        el estado del destino de la prueba
+    </li>
+    <li>
+        Los datos que pueden ser constantes (lo mismo) o que deben diferir de un caso de ejemplo al siguiente
+    </li>
+    <li>
+        La relación entre el caso de uso y otros casos de uso, como la secuencia en que los casos de uso deben efectuarse.
+    </li>
+    <li>
+        La frecuencia de ejecución del caso de ejemplo de caso de uso, que incluye características como el número de
+        instancias simultáneas del caso de uso y el porcentaje de la carga total que cada caso de ejemplo coloca en el
+        sistema.
+    </li>
+</ul>
+<h4>
+    <a id="Significant Use Cases" name="Significant Use Cases">Guiones de uso significativos</a>
+</h4>
+<p>
+    A diferencia de los casos de ejemplo de caso de uso críticos, que son el centro principal de la prueba, los casos de
+    ejemplo de caso de uso significativos son los que pueden afectar a los comportamientos de rendimiento de los casos de
+    ejemplo de caso de uso críticos. Los casos de ejemplo de caso de uso críticos incluyen los que cumplen uno o más de los
+    criterios siguientes:
+</p>
+<ul>
+    <li>
+        deben ejecutarse antes o después de ejecutar un caso de uso crítico (una condición previa o posterior dependiente)
+    </li>
+    <li>
+        lo ejecutan con frecuencia una o más instancias de actor
+    </li>
+    <li>
+        representan un elevado porcentaje de utilización del sistema
+    </li>
+    <li>
+        requieren recursos del sistema significativos
+    </li>
+    <li>
+        se ejecutarán de forma rutinaria en el sistema desplegado mientras se ejecutan los casos de ejemplo de caso de uso
+        críticos, como el correo electrónico o la impresión de fondo
+    </li>
+</ul>
+<p>
+    A medida que se listan los casos de ejemplo de los casos de uso significativos, revise el flujo de sucesos del caso de
+    uso y la información adicional tal como se ha hecho anteriormente para los casos de ejemplo de caso de uso críticos.
+</p>
+<h3>
+    <a id="Actors and Actor Attributes" name="Actors and Actor Attributes">Actores y atributos de actores</a>
+</h3>
+<p>
+    Las pruebas de rendimiento satisfactorias requieren la identificación no sólo de los actores que ejecutan los casos de
+    ejemplo de caso de uso críticos y significativos, y también deben simular / emular el comportamiento del actor. Es
+    decir, una instancia de un actor puede interactuar con el destino de la prueba diferentemente (tardar más en responder
+    a las solicitudes, entrar diferentes valores de datos, etc.) mientras ejecuta el mismo caso de ejemplo de caso de uso
+    que otra instancia de ese actor. Considere los casos de uso sencillos siguientes:
+</p>
+<p align="center">
+    <img height="226" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/tstcs002.gif" width="354" />
+</p>
+<p class="picturetext">
+    Actores y casos de uso en una máquina cajero automático.
+</p>
+<p>
+    La primera instancia del actor "Cliente" que ejecuta un caso de ejemplo de caso de uso puede ser un usuario
+    experimentado de cajero automático, mientras que otra instancia del actor "Cliente" puede ser un usuario sin
+    experiencia de cajero automático. El cliente experimentado rápidamente navega a través de la interfaz de usuario del
+    cajero automático y pierde poco tiempo leyendo cada solicitud, y en su lugar, pulsando los botones por rutina. El
+    cliente sin experiencia, sin embargo, lee todas las solicitudes y dedica un tiempo adicional a la interpretación de la
+    información antes de responder. Los perfiles de carga de trabajo realistas reflejan esta diferencia para asegurar una
+    valoración precisa de los comportamientos del destino de la prueba.
+</p>
+<p>
+    Empiece identificando los actores para cada caso de ejemplo de caso de uso identificado anteriormente. A continuación,
+    identifique los diferentes perfiles de actor que pueden ejecutar cada caso de ejemplo de caso de uso. En el ejemplo del
+    cajero automático anterior, podemos tener los estereotipos de actor siguientes:
+</p>
+<ul>
+    <li>
+        Usuario de cajero automático con experiencia
+    </li>
+    <li>
+        Usuario de cajero automático sin experiencia
+    </li>
+    <li>
+        La cuenta del usuario del cajero está "dentro" de la red bancaria de cajeros (la cuenta del usuario está en el
+        banco propietario del cajero)
+    </li>
+    <li>
+        La cuenta del usuario de cajero automático está fuera de la red del banco de cajeros automáticos (banco de la
+        competencia)
+    </li>
+</ul>
+<p>
+    Para cada perfil de actor, identifique los diferentes atributos y sus valores como por ejemplo:
+</p>
+<ul>
+    <li>
+        Tiempo de pensamiento - el periodo de tiempo que un actor tarda en responder a las solicitudes individuales del
+        destino de la prueba
+    </li>
+    <li>
+        Velocidad de escritura - la velocidad a la que el actor interactúa con la interfaz
+    </li>
+    <li>
+        Ritmo de solicitud - la velocidad a la que el actor realiza solicitudes al destino de la prueba
+    </li>
+    <li>
+        Factor de repetición - el número de veces que un caso de uso o una solicitud se repite en una secuencia
+    </li>
+    <li>
+        Método de interacción - el método de interacción utilizado por el actor, como la utilización del teclado para
+        entrar valores, pulsar el tabulador hasta un campo, utilizar las teclas de aceleración, etc., o utilizar el ratón
+        para "apuntar y pulsar", "cortar y pegar", etc.
+    </li>
+</ul>
+<p>
+    Además, para cada perfil de actor identifique el perfil de carga de trabajo, especificando todos los casos de ejemplo
+    de caso de uso que ejecutan, y el porcentaje de tiempo o la proporción de esfuerzo gastado por el actor que ejecuta
+    estos casos de ejemplo. La identificación de esta información se utiliza para identificar y crear una carga realista
+    (ver Carga y Atributos de la carga a continuación).
+</p>
+<h3>
+    <a id="System Attributes and Variables" name="System Attributes and Variables">Atributos del sistema y variables</a> <a href="#Top"><img height="20" alt="Ir a la parte superior de la página" src="./../../../core.base_rup/resources/top.gif"     width="26" border="0" /></a>
+</h3>
+<p>
+    Los atributos específicos y las variables de la Configuración de entorno de prueba que identifican exclusivamente el
+    entorno también se deben identificar, ya que estos atributos también impactan en la medida y la evaluación del
+    comportamiento. Estos atributos incluyen:
+</p>
+<ul>
+    <li>
+        El hardware físico (velocidad de la CPU, memoria, caché de disco, etc.)
+    </li>
+    <li>
+        La arquitectura de despliegue (número de servidores, distribución del proceso, etc.)
+    </li>
+    <li>
+        Los atributos de la red
+    </li>
+    <li>
+        Otro software (y casos de uso) que se puede instalar y ejecutar simultáneamente con el destino de la prueba
+    </li>
+</ul>
+<p>
+    Identifique y liste los atributos del sistema y las variables que se deben considerar para su inclusión en las pruebas.
+    Esta información se puede obtener de varias fuentes, que incluyen:
+</p>
+<ul>
+    <li>
+        El documento de arquitectura de software (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">Producto de trabajo: Documento de arquitectura de software</a>, vista
+        de despliegue)
+    </li>
+    <li>
+        El documento Visión (consulte el apartado <a class="elementlinkwithusertext" href="./../../../core.base_rup/workproducts/rup_vision_2D6D6F1.html" guid="{417F089F-6636-451A-A8AB-AB4EAC7AC4F1}">Producto
+        de trabajo: Documento Visión</a>)
+    </li>
+    <li>
+        Las solicitudes del interesado (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_stakeholder_requests_A89D2BF9.html" guid="{75F38765-E25B-4459-907E-77F429652C0F}">Producto de trabajo: Solicitud del interesado</a>)
+    </li>
+</ul>
+<h3>
+    <a id="Workload Profiles" name="Workload Profiles">Perfiles de carga de trabajo</a> <a href="#Top"><img height="20"     alt="Ir a la parte superior de la página" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    Como se ha indicado anteriormente, la carga de trabajo es un factor importante que afecta al comportamiento de un
+    destino de la prueba. Identificar con precisión el perfil de carga de trabajo que se utilizará para evaluar el
+    comportamiento de los destinos es crítico. Habitualmente, las pruebas que implican la carga de trabajo se ejecutan
+    varias veces utilizando diferentes perfiles de carga de trabajo, representando una variación de los atributos que se
+    describen a continuación:
+</p>
+<ul>
+    <li>
+        El número de instancias de actor simultáneas que interactúan con el destino de la prueba
+    </li>
+    <li>
+        El perfil de los actores que interactúan con el destino de la prueba
+    </li>
+    <li>
+        Los casos de ejemplo de caso de uso ejecutados por cada instancia de actor
+    </li>
+    <li>
+        La frecuencia de cada caso de ejemplo de caso de uso ejecutado y con qué frecuencia se repite
+    </li>
+</ul>
+<p>
+    Para cada perfil de carga de trabajo que se utiliza para evaluar el rendimiento del destino de la prueba, identifique
+    los valores de cada una de las variables anteriores. Los valores que se utilizan para cada variable en las diferentes
+    cargas se puede derivar observando o entrevistando actores o, desde el modelo de caso de uso empresarial &nbsp; si uno
+    está disponible. Es común que se defina uno o más de los perfiles de carga de trabajo siguientes:
+</p>
+<ul>
+    <li>
+        Óptimo - un perfil de carga de trabajo que refleja las mejores condiciones de despliegue posibles, como un número
+        mínimo de instancias de actor interactuando con el sistema, ejecutando sólo los casos de ejemplo de caso de uso,
+        con software adicional mínimo y una carga de trabajo que se ejecute durante la prueba.
+    </li>
+    <li>
+        Medio (Normal AKA) - un perfil de carga de trabajo que refleja las condiciones de utilización medias anticipadas o
+        reales.
+    </li>
+    <li>
+        Hora punta instantánea - un perfil de carga de trabajo que refleja condiciones de utilización fuertes instantáneas
+        anticipadas o reales, que ocurren en periodos breves durante el funcionamiento normal.
+    </li>
+    <li>
+        Hora punta - un perfil de carga de trabajo que refleja condiciones de utilización fuertes anticipadas o reales,
+        como un número máximo de instancias de actor, ejecutando volúmenes elevados de casos de ejemplo de caso de uso, con
+        mucho software adicional y una carga de trabajo que se ejecuta durante la prueba.
+    </li>
+</ul>
+<p>
+    Cuando las pruebas de carga de trabajo incluyen la prueba de tensión (consulte el apartado <a class="elementlinkwithusertext" href="./../../../core.base_rup/guidances/concepts/performance_testing_37A31809.html" guid="8.027577129450698E-306">Concepto: Prueba de rendimiento</a> y <a class="elementlinkwithusertext" href="./../../../core.base_rup/guidances/concepts/types_of_test_8AB94831.html" guid="1.6037730846300355E-307">Técnica: Tipos de
+    pruebas</a>), se deben identificar varias cargas adicionales, y cada una debe indicar aspectos específicos del sistema
+    en estados anormales o inesperados más allá de la capacidad normal esperada del sistema desplegado.
+</p>
+<h3>
+    <a id="Performance Measurements and Criteria" name="Performance Measurements and Criteria">Medidas y criterios de
+    rendimiento</a> <a href="#Top"><img height="20" alt="Ir a la parte superior de la página"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    Las pruebas de carga de trabajo satisfactorias sólo se pueden alcanzar si las pruebas se miden y se evalúan los
+    comportamientos de carga de trabajo. Al identificar las medidas y criterios de carga de trabajo, deben considerarse los
+    factores siguientes:
+</p>
+<ul>
+    <li>
+        ¿Qué medidas deben realizarse?
+    </li>
+    <li>
+        Dónde están / cuáles son los puntos de medida críticos en el destino de la prueba / ejecución del caso de uso.
+    </li>
+    <li>
+        ¿Cuáles son los criterios que se deben utilizar para determinar un comportamiento de rendimiento aceptable?
+    </li>
+</ul>
+<h4>
+    Medidas de rendimiento
+</h4>
+<p>
+    Existen muchas medidas diferentes que se pueden efectuar durante la ejecución de la prueba. Identifique las medidas
+    significativas que se deben efectuar y justifique porqué son las medidas más significativas.
+</p>
+<p>
+    A continuación se listan los comportamientos de rendimiento más comunes controlados o capturados:
+</p>
+<ul>
+    <li>
+        Estado de los scripts de prueba - una representación gráfica del estado actual, o del progreso de la ejecución de
+        la prueba
+    </li>
+    <li>
+        Tiempo de respuesta / rendimiento - medida (o cálculo) de los tiempos de respuesta o del rendimiento (habitualmente
+        indicado como transacciones por segundo).
+    </li>
+    <li>
+        <font color="#000000">Rastreos - capturar los mensajes / conversaciones entre el actor (script de prueba) y el
+        destino de la prueba, o el flujo de datos y/ o el flujo de proceso durante la ejecución.</font>
+    </li>
+</ul>
+<p>
+    Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/key_measures_of_test_62253EE4.html" guid="5.312818155786224E-305">Técnica:
+    Medidas clave de la prueba</a> para obtener información adicional
+</p>
+<h4>
+    Puntos de medida de rendimiento críticos
+</h4>
+<p>
+    En las secciones Guiones de uso y Atributos de caso de uso anteriores, se indicó que no todos los casos de uso y sus
+    casos de ejemplo se ejecutan para la prueba de rendimiento. Del mismo modo, no todas las medidas de rendimiento se
+    realizan para cada caso de ejemplo de caso de uso ejecutado. Habitualmente, sólo los casos de ejemplo de caso de uso
+    específicos reciben medidas, o puede haber una secuencia específica de sucesos dentro de un caso de ejemplo de caso de
+    uso específico que se medirá para valorar el comportamiento de rendimiento. Hay que tener cuidado de seleccionar los
+    puntos de inicio y de final más significativos para medir los comportamientos de rendimiento. Los más significativos
+    son las secuencias más visibles de sucesos o las que pueden afectar directamente a través de cambios en el software o
+    el hardware.
+</p>
+<p align="left">
+    Por ejemplo, en el cajero automático, en el caso de uso Retirar dinero que se ha identificado anteriormente, podemos
+    medir las características de rendimiento de toda la instancia de caso de uso, desde el punto donde el Actor inicia la
+    retirada, hasta el punto en que el caso de uso termina - es decir, el actor recibe la tarjeta bancaria y el cajero
+    automático está listo para aceptar otra tarjeta, tal como se muestra en la línea negra "Tiempo total transcurrido" del
+    diagrama siguiente:
+</p>
+<p align="center">
+    <img height="514" alt="Diagrama descrito en el contenido." src="./../../../core.base_rup/guidances/guidelines/resources/md_wlmd1.gif" width="384" />
+</p>
+<p align="left">
+    Tenga en cuenta, sin embargo, que existen muchas secuencias de sucesos que contribuyen en el tiempo total transcurrido,
+    algunas de las cales podemos controlar (como leer la información de la tarjeta, verificar el tipo de tarjeta, iniciar
+    la comunicación con el sistema bancario, etc., elementos B, D y E anteriores), pero en otras secuencias, no tenemos
+    control (como el actor que entra su PIN o que lee las solicitudes antes de entrar la cantidad retirada, elementos A, C
+    y F). En el ejemplo anterior, además de medir el tiempo total transcurrido, mediremos los tiempos de respuesta de las
+    secuencias B, D y E, ya que estos sucesos son los tiempos de respuesta más visibles para el actor (y podemos afectarlos
+    a través del software / hardware para su despliegue).
+</p>
+<h4>
+    Criterios de medida de rendimiento
+</h4>
+<p>
+    Una vez que se han identificado las medidas de rendimiento críticas y los puntos de medida, revise los criterios de
+    rendimiento. Los criterios de rendimiento se indican en las especificaciones suplementarias (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">Producto de trabajo: Especificaciones suplementarias</a>). Si fuera
+    necesario, revise los criterios.
+</p>
+<p>
+    A continuación se muestran algunos criterios que se suelen utilizar para la medida del rendimiento:
+</p>
+<ul>
+    <li>
+        tiempo de respuesta (respuesta en línea AKA)
+    </li>
+    <li>
+        índice de rendimiento
+    </li>
+    <li>
+        percentiles de respuesta
+    </li>
+</ul>
+<p>
+    El tiempo de respuesta en línea, medido en segundos, o el índice de rendimiento de transacción, medido por el número de
+    transacciones (o mensajes) procesados es el criterio principal.
+</p>
+<p>
+    Por ejemplo, utilizando el caso de uso Retirar dinero, el criterio se indica como "sucesos B, D y E (consulte el
+    diagrama anterior) deben ocurrir en menos de 3 segundos (para un total combinado de 9 segundos)". Si durante las
+    pruebas, notamos que cualquiera de los sucesos identificados como B, D o E tardan más que el criterio indicado de 3
+    segundos, registraríamos una anomalía.
+</p>
+<p>
+    Las medidas de percentil se combinan con los tiempos de respuesta y/o los índices de rendimiento y se utilizan para
+    "omitir estadísticamente" las medidas que están fuera de los criterios indicados. Por ejemplo, el criterio de
+    rendimiento para el caso de uso ahora indica "para el 90º percentil, los sucesos B, D y E deben ocurrir en menos de 3
+    segundos ...". Durante la ejecución de la prueba, si medimos el 90 por ciento de todas las medidas de rendimiento
+    ocurren dentro de los criterios indicados, no se registran anomalías.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

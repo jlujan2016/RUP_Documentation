@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: An&aacute;lisis de anomal&iacute;as de las pruebas utilizando Rational TestManager y TestFactory</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="evaluate_test_execution_result" name="uma.name">
+<meta content="An&aacute;lisis de anomal&iacute;as de las pruebas utilizando Rational TestManager y TestFactory" name="uma.presentationName">
+<meta content="Tool:rup_test_factory:Rational TestFactory" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational TestFactory" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{037E5AB9-7DC1-4CDB-8395-A2647F5A7F24}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{037E5AB9-7DC1-4CDB-8395-A2647F5A7F24}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{037E5AB9-7DC1-4CDB-8395-A2647F5A7F24}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{037E5AB9-7DC1-4CDB-8395-A2647F5A7F24}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: An&aacute;lisis de anomal&iacute;as de las pruebas utilizando Rational TestManager y TestFactory</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo utilizar Rational TestManager, Rational Robot y Rational TestFactory para analizar scripts de prueba generados automáticamente en los que se revelan errores.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_test_factory_3EDA2115.html" guid="{FBA5098E-2CA8-483D-814D-DE3E876426B1}">Rational TestFactory</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/analyze_runtime_behavior_B2DD7652.html" guid="{5131A5BB-5B95-499E-A68B-788A2F0957C3}">Analizar el comportamiento en tiempo de ejecución</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/analyze_test_failure_7E42EE55.html" guid="{EA0E3D2C-F87E-49CA-8832-F791886D5741}">Analizar las anomalías en la prueba</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/determine_test_results_630C9EC9.html" guid="{74E51E86-ECAB-4A61-9A88-FD358EE6F2B1}">Determinar resultados de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    Visión general
+</h3>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Windows 98/2000/NT 4.0.
+</p>
+<p>
+    Para utilizar Rational TestFactory, Rational Robot y Rational TestManager a fin de analizar los scripts de prueba
+    generados automáticamente, lleve a cabo una o ambas de las acciones siguientes:
+</p>
+<ul>
+    <li>
+        <a href="#Analyze defect script">Analizar un script de prueba que revela un defecto</a>
+    </li>
+    <li>
+        <a href="#Analyze UAW script">Analizar un script de prueba que revela una ventana activa inesperada</a>
+    </li>
+</ul>
+<h3>
+    1.&nbsp;<a id="Analyze defect script" name="Analyze defect script">Analizar un script de prueba que revela un
+    defecto</a>
+</h3>
+<p>
+    Tal como se ha descrito en la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/generate_test_scripts_71EF254E.html" guid="{19F8AE86-E40A-42F5-8B81-673C306F5C35}">Guía de la herramienta: Implementación de scripts de prueba que se han
+    generado utilizando Rational Test Factory</a>, un piloto es la herramienta de Rational TestFactory que genera el script
+    de prueba automáticamente. Para cada defecto que encuentra mientras se ejecuta, un piloto genera un "script de
+    defecto", que contiene las sentencias del script de prueba que causan que se produzca el defecto.
+</p>
+<p>
+    Cuando un piloto encuentra defectos durante la ejecución, el script de prueba que descubre los defectos se sitúa en una
+    subcarpeta "Defectos encontrados" separada en la carpeta de la ejecución. Puede utilizar Rational TestManager para ver
+    el registro de ejecución correspondiente al script de prueba que ha descubierto defectos.
+</p>
+<p>
+    <img height="16" alt="icono de Ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;Consulte el tema de la
+    ayuda en línea de Rational TestFactory que trata sobre la <i>visualización del registro para una ejecución de
+    script</i>.
+</p>
+<h3>
+    2.&nbsp;<a id="Analyze UAW script" name="Analyze UAW script">Analizar un script de prueba que revela una ventana activa
+    inesperada&nbsp;</a>
+</h3>
+<p>
+    Durante la generación del script de prueba, un piloto puede encontrar una "ventana activa inesperada" (UAW), es decir,
+    una ventana que refleja una incoherencia entre los objetos UI de la correlación de aplicaciones y los controles de la
+    aplicación que se somete a prueba (AUT). El piloto puede encontrar una ventana activa inesperada debido a una de las
+    dos condiciones siguientes:
+</p>
+<ul>
+    <li>
+        La AUT contiene una ventana para la que no existe ningún objeto UI correspondiente en la correlación de
+        aplicaciones. Un ejemplo típico de esta condición es una ventana de mensaje que no se descubre durante la
+        correlación.
+    </li>
+    <li>
+        Un objeto UI de la correlación de aplicaciones representa una ventana que ya no es la AUT.
+    </li>
+</ul>
+<p>
+    Cada vez que encuentra una ventana activa inesperada, el piloto genera un "script UAW" y lo coloca en la carpeta de
+    ejecución del piloto. Puede reproducir un script UAW en Rational Robot y, a continuación, utilizar Robot y Rational
+    TestManager para determinar la causa de la ventana activa inesperada. Después de resolver la causa en Rational
+    TestFactory, las ejecuciones subsiguientes del piloto no encuentran la ventana activa inesperada.
+</p>
+<p>
+    <img height="16" alt="icono de Ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp; Consulte los temas de la
+    ayuda en línea de Rational TestFactory que tratan sobre:
+</p>
+<ul>
+    <li>
+        <i>Búsqueda de la causa de una ventana activa inesperada</i>
+    </li>
+    <li>
+        <i>Resolución de una ventana activa inesperada</i>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

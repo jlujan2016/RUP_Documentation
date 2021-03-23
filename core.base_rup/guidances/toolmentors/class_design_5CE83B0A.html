@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Dise&ntilde;o de clases utilizando Rational XDE Developer</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="class_design" name="uma.name">
+<meta content="Dise&ntilde;o de clases utilizando Rational XDE Developer" name="uma.presentationName">
+<meta content="Tool:rup_xde:Rational XDE Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational XDE Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{D1C3F9B8-8EE3-4AF6-8E7B-0653AF1F2936}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{D1C3F9B8-8EE3-4AF6-8E7B-0653AF1F2936}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{D1C3F9B8-8EE3-4AF6-8E7B-0653AF1F2936}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{D1C3F9B8-8EE3-4AF6-8E7B-0653AF1F2936}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{D1C3F9B8-8EE3-4AF6-8E7B-0653AF1F2936}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Dise&ntilde;o de clases utilizando Rational XDE Developer</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo realizar el diseño de clases con Rational XDE Developer.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_xde_D81FFA70.html" guid="{303A82D2-E3AB-4501-8563-0D4D43782AF9}">Rational XDE Developer</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Diseño de clase</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    Visión general
+</h3>
+<p>
+    Esta guía de la herramienta ofrece soporte para el diseño de clases con Rational XDE Developer - Java Platform Edition.
+</p>
+<p>
+    En esta guía de la herramienta se da por supuesto que se ha creado un <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">modelo
+    de diseño</a> estructurado como parte de la <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Tarea:
+    Análisis de la arquitectura</a> siguiendo los pasos que se indican en la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/performing_architectural_analysis_65CE30FC.html" guid="{08B5477D-97F9-4EEB-AA59-A109128B5CA1}">Guía de la herramienta: Realización del análisis de la arquitectura
+    utilizando Rational XDE</a>.
+</p>
+<ul>
+    <li>
+        Los pasos que se indican en esta guía de la herramienta coinciden con los de la tarea correspondiente.
+    </li>
+    <li>
+        Los enlaces a los temas de la ayuda en línea de XDE están marcados con <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" />.
+    </li>
+    <li>
+        En esta guía de la herramienta se llevan a cabo los pasos siguientes:
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <ul>
+            <li>
+                <a href="#Use Design Patterns and Mechanisms">Utilizar mecanismos y patrones de diseño</a>
+            </li>
+            <li>
+                <a href="#Create Initial Design Classes">Crear clases de diseño inicial</a>
+            </li>
+            <li>
+                <a href="#Define Persistent Classes">Identificar clases permanentes</a>
+            </li>
+            <li>
+                <a href="#Define Class Visibility">Definir la visibilidad de clase</a>
+            </li>
+            <li>
+                <a href="#Define Operations">Definir operaciones</a>
+            </li>
+            <li>
+                <a href="#Define Methods">Definir métodos</a>
+            </li>
+            <li>
+                <a href="#Define States">Definir estados</a>
+            </li>
+            <li>
+                <a href="#Define Attributes">Definir atributos</a>
+            </li>
+            <li>
+                <a href="#Define Dependencies">Definir dependencias</a>
+            </li>
+            <li>
+                <a href="#Define Associations">Definir asociaciones</a>
+            </li>
+            <li>
+                <a href="#Define Generalizations">Definir generalizaciones</a>
+            </li>
+            <li>
+                <a href="#Resolve Use-Case Collisions">Resolver colisiones de guiones de uso</a>
+            </li>
+            <li>
+                <a href="#Handle Non-Functional Requirements">Manejar requisitos no funcionales en general</a>
+            </li>
+            <li>
+                <a href="#Evaluate Your Results">Evaluar los resultados</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+<h3>
+    <a id="Use Design Patterns and Mechanisms" name="Use Design Patterns and Mechanisms">Utilizar mecanismos y patrones de
+    diseño</a>
+</h3>
+<p>
+    En realidad, incorporar un patrón o mecanismo es llevar a cabo varios pasos consecutivos en esta guía de la herramienta
+    (añadir nuevas clases, operaciones, atributos y relaciones), pero conforme a las reglas que define el patrón o
+    mecanismo.
+</p>
+<p>
+    Información adicional sobre la utilización de patrones:<!-- end - wsw -->
+</p>
+<ul>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Aplicación de patrones</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"ea","ea_o_apply_pttrn"); -->
+    </li>
+</ul>
+<h3>
+    <a id="Create Initial Design Classes" name="Create Initial Design Classes"></a>Crear clases de diseño inicial
+</h3>
+<ol>
+    <li>
+        Añada un diagrama de clase al modelo. Consulte el apartado <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Adición de diagramas</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_t_add_dgm"); -->.
+    </li>
+    <li>
+        Añada clases de diseño al diagrama de clase. Consulte el apartado <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Adición de formas a diagramas</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_t_add_shp_dgm"); -->.
+    </li>
+    <li>
+        Documente cada clase. Consulte el apartado <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Documentación de elementos de modelo</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_t_doc_model_elem"); -->.
+    </li>
+</ol>
+<p>
+    Referencia: <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Cómo trabajar con
+    diagramas de clase</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_o_work_w_class_dgms"); -->.
+</p>
+<h3>
+    <a id="Define Persistent Classes" name="Define Persistent Classes">Identificar clases permanentes</a>
+</h3>
+<p>
+    Una clase se puede marcar como permanente. Referencia: <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Especificación de permanencia</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_t_spec_persistence"); -->.
+</p><!-- begin - wsw -->
+<p>
+    En el desarrollo de J2EE, normalmente, la permanencia se implementa utilizando EJB de entidad. Consulte la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/identifying_design_elements_F8D68BA1.html" guid="{E6727D13-BE7B-4025-AD39-ECD6FA074D73}">Guía de la herramienta: Identificación de elementos de diseño utilizando
+    Rational XDE</a> para obtener información detallada.
+</p>
+<h3>
+    <a id="Define Class Visibility" name="Define Class Visibility">Definir la visibilidad de clase</a>
+</h3>
+<p>
+    Para cada clase, define la visibilidad de clase en el paquete en el que reside.
+</p>
+<p>
+    Referencia: <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Especificación de la
+    visibilidad</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_t_spec_visibility"); -->.
+</p>
+<h3>
+    <a id="Define Operations" name="Define Operations">Definir operaciones</a>
+</h3>
+<ol>
+    <li>
+        Añada operaciones a cada clase. Consulte el apartado <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Adición de operaciones a clasificadores</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_t_add_oper_clssfr"); -->.
+    </li>
+    <li>
+        Añada parámetros a las operaciones. Consulte el apartado <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Adición de parámetros a operaciones</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_t_add_param_op"); -->.
+    </li>
+    <li>
+        Especifique la visibilidad de las operaciones. Consulte el apartado <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Especificación de la visibilidad</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_t_spec_visibility"); -->.
+    </li>
+</ol>
+<p>
+    Referencia: <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Adición y modificación de
+    atributos y operaciones en clasificadores</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_o_add_mod_atts_ops"); -->.
+</p>
+<h3>
+    <a id="Define Methods" name="Define Methods"></a>Definir métodos
+</h3>
+<p>
+    Se puede añadir una descripción sobre el modo en el que se puede implementar una operación a la descripción de la
+    operación.
+</p>
+<p>
+    Si se desea, se puede utilizar un diagrama de secuencia para describir un método. Consulte el tema de la ayuda en línea
+    de XDE que trata sobre la <img alt="icono de publicación de ayuda"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>documentación de elementos de modelo</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_t_doc_model_elem"); -->.
+</p>
+<p>
+    Referencia: <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Cómo trabajar con
+    diagramas de interacción (secuencia)</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_o_work_inter_dgm"); -->.
+</p>
+<h3>
+    Definir estados<a id="Define States" name="Define States"></a>
+</h3>
+<p>
+    Si se desea, se puede utilizar una máquina de estado.
+</p>
+<p>
+    Referencia: <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Cómo trabajar con
+    diagramas de gráfico de estados</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_o_work_statechart_dgms"); -->.
+</p>
+<h3>
+    <a id="Define Attributes" name="Define Attributes">Definir atributos</a><a id="Define Attributes and Relationships" name="Define Attributes and Relationships"></a>
+</h3>
+<ol>
+    <li>
+        Defina atributos. Consulte <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Atributos</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_c_attibutes"); -->.
+    </li>
+    <li>
+        Añada atributos a los clasificadores. Consulte el apartado <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Adición de atributos a clasificadores</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_t_add_attributes_clssfr"); -->.
+    </li>
+    <li>
+        Especifique la visibilidad. Consulte el apartado <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Especificación de la visibilidad</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_t_spec_visibility"); -->.
+    </li>
+</ol>
+<h3>
+    <a id="Define Dependencies" name="Define Dependencies">Definir dependencias</a>
+</h3>
+<p>
+    Referencia: <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Adición de relaciones de
+    dependencia</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_t_add_depend_relshp"); -->.
+</p>
+<h3>
+    <a id="Define Associations" name="Define Associations">Definir asociaciones</a>
+</h3>
+<ol>
+    <li>
+        Añada relaciones de asociación. Consulte el apartado <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Adición de relaciones de asociación</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_t_add_assoc_rels"); -->.
+    </li>
+    <li>
+        Especifique el tipo de cada asociación. Consulte el apartado <img alt="icono de publicación de ayuda"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Especificación de tipos de relaciones de asociación</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_t_spec_kinds_assoc"); -->.
+    </li>
+</ol>
+<h3>
+    <a id="Define Generalizations" name="Define Generalizations">Definir generalizaciones</a>
+</h3>
+<p>
+    Referencia: <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Adición de relaciones de
+    generalización</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_t_add_genrlztn_relshp"); -->.
+</p>
+<h3>
+    <a id="Resolve Use-Case Collisions" name="Resolve Use-Case Collisions">Resolver colisiones de guiones de uso</a>
+</h3>
+<p>
+    Referencia: <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Especificación del tipo de
+    concurrencia para las operaciones</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"rs","rs_t_spec_type_cncrrncy_op"); -->.
+</p>
+<h3>
+    <a id="Handle Non-Functional Requirements" name="Handle Non-Functional Requirements">Manejar requisitos no funcionales
+    en general</a>
+</h3>
+<p>
+    Con frecuencia, los requisitos no funcionales llevan a que una clase incorpore mecanismos de diseño específicos
+    utilizando colaboraciones y patrones. El uso de un componente de infraestructura suele bastar para satisfacer un
+    requisito no funcional. (Consulte la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/identifying_design_elements_F8D68BA1.html" guid="{E6727D13-BE7B-4025-AD39-ECD6FA074D73}">Guía de la herramienta: Identificación de elementos de diseño utilizando
+    Rational XDE</a>).
+</p>
+<p>
+    Referencia:
+</p>
+<ul>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Desarrollo dirigido por patrones
+        J2EE</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"j","jee_c_j2ee_pattrns"); -->
+    </li>
+    <li>
+        <img alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Aplicación de patrones</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"ea","ea_o_apply_pttrn"); -->
+    </li>
+</ul>
+<h3>
+    <a id="Evaluate Your Results" name="Evaluate Your Results"></a>Evaluar los resultados
+</h3>
+<p>
+    No existe ninguna guía específica de Rational XDE para este paso.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

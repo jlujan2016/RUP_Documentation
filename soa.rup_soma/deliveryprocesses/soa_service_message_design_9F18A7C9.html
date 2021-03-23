@@ -1,0 +1,680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de tareas: Especificar mensajes de servicio</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="soa_service_message_design" name="uma.name">
+<meta content="Especificar mensajes de servicio" name="uma.presentationName">
+<meta content="_Ba05sE94Edu0EMZ-3o0kDQ" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="Dise&ntilde;ador">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc=_ilyyoSv-EduYBoDegGQopA&path=_ilyyoSv-EduYBoDegGQopA,_VCMlUEn7EduC74V7YHXTOQ,_jx0KQU9zEdu0EMZ-3o0kDQ,_Ba05sE94Edu0EMZ-3o0kDQ';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_ilyyoSv-EduYBoDegGQopA", "_VCMlUEn7EduC74V7YHXTOQ", "_jx0KQU9zEdu0EMZ-3o0kDQ", "_Ba05sE94Edu0EMZ-3o0kDQ"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_ilyyoSv-EduYBoDegGQopA", "_VCMlUEn7EduC74V7YHXTOQ", "_jx0KQU9zEdu0EMZ-3o0kDQ", "_Ba05sE94Edu0EMZ-3o0kDQ"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_fX-WEE7MEduvcvbnLvkXhA", "_ilyyoSv-EduYBoDegGQopA", "_VCMlUEn7EduC74V7YHXTOQ", "_jx0KQU9zEdu0EMZ-3o0kDQ", "_Ba05sE94Edu0EMZ-3o0kDQ"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_Ba05sE94Edu0EMZ-3o0kDQ"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Especificar mensajes de servicio</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta tarea describe las acciones necesarias para un modelo de diseño de mensajes completo (catálogo). Trata, como antecedente, los patrones de intercambio de mensajes y la relación del modelo de dominio con el modelo de mensaje. También se describen consideraciones de diseño para la granularidad y el rendimiento de los mensajes.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Principal:
+							</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/rup_designer_49D9766.html" guid="_0egKAU9zEdu0EMZ-3o0kDQ">Dise&ntilde;ador</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Adicional:
+							</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/rup_software_architect_F9FFB756.html" guid="_0egKAE9zEdu0EMZ-3o0kDQ">Arquitecto de software</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/rup_database_designer_FC24736C.html" guid="_Su1OkFHdEdumTu7t35vA-A">Dise&ntilde;ador de base de datos</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Asistencia:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/soa_service_model_8BFFA9A8.html" guid="_0emQoE9zEdu0EMZ-3o0kDQ">Modelo de servicio</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/rup_analysis_model_D20F91F2.html" guid="_SvA0wFHdEdumTu7t35vA-A">Modelo de an&aacute;lisis</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/rup_data_model_DCAD7202.html" guid="_SvA0wVHdEdumTu7t35vA-A">Modelo de datos</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/soa_service_model_8BFFA9A8.html" guid="_0emQoE9zEdu0EMZ-3o0kDQ">Modelo de servicio</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell">Los mensajes entre los servicios de comunicación y los componentes son un componente importante de la arquitectura
+orientada a servicios.Incluyen no sólo mensajes de entrada y salida de una determinada invocación de servicio sino también
+el formato de mensaje interno que se utilizará dentro de la empresa a medida que el flujo de información pase a través de
+las capas de la arquitectura de la aplicación.<span style="mso-spacerun: yes">&nbsp;</span>En muchos casos, es recomendable
+utilizar un formato de mensaje común. 
+<p>
+    Como los servicios incluyen mensajes de entrada y salida, esta tarea se centra en:
+</p>
+<ul>
+    <li>
+        la identificación y especificación del formato y el contenido de los mensajes de entrada y salida de un servicio,
+    </li>
+    <li>
+        su relación con los modelos de datos subyacentes,
+    </li>
+    <li>
+        las consideraciones y el formato de mensaje común, y
+    </li>
+    <li>
+        las decisiones sobre cómo correlacionar uno y otro de estos mensajes.
+    </li>
+</ul>
+<p>
+    La especificación de mensajes para el modelo de servicio debería tener en cuenta perspectivas de la arquitectura de
+    aplicación/arquitectura de empresa, la arquitectura de datos y la arquitectura de integración. Esto incluye:
+</p>
+<ul>
+    <li>
+        Los estándares de mensaje definidos en un nivel de empresa o de aplicación
+    </li>
+    <li>
+        El modelo de datos o metadatos adecuado que formen parte de una arquitectura de datos
+    </li>
+    <li>
+        Los estándares de transformación de mensajes que forman parte de una arquitectura de integración.
+    </li>
+</ul>
+<p>
+    Durante la especificación, es importante entender los estándares de la organización, si están disponibles, en cada una
+    de las 3 áreas de arquitectura. Las especificaciones de mensaje y los modelos de datos están estrechamente unidos. El
+    modelo de datos se compone de entidades subyacentes y sus relaciones, un conjunto de las cuales se puede enviar como
+    parte de un mensaje de salida y ser recibida como entrada de un mensaje entrante. Por tanto, la correlación entre los
+    formatos de mensaje y la arquitectura de datos o el modelo de datos subyacentes es una consideración arquitectónica
+    clave. En algunos casos, los patrones y su implementación, caso del Bus de servicio de empresa, pueden manejar la
+    transformación (y direccionamiento) de mensajes. En muchos casos, puede que necesitemos un manejador explícito para
+    transformar los mensajes de y a modelos de datos.
+</p>
+<p>
+    En la mayoría de los lenguajes de programación orientada a objetos, la invocación de comportamiento se basa en llamadas
+    de método o en paradigmas de transporte de mensajes. C++, por ejemplo, utiliza tablas de punteros de función para
+    invocar el método correcto. Smalltalk, por otro lado, pasa mensajes cuyo destinatario es evaluado en el tiempo de
+    ejecución. Las soluciones orientadas a servicios están de forma inherente basadas en mensajes y aunque los enlaces a
+    lenguajes de programación pueden presentar interfaces basadas en el método para los clientes, no es la realidad de la
+    comunicación con o entre servicios. Otra faceta de la mensajería de servicio es que cada vez más servicios se están
+    desarrollando con interfaces asíncronas, por contraposición a la naturaleza fundamentalmente síncrona de las llamadas
+    de método.
+</p>
+<p>
+    En el área de integración de empresa, se ha utilizado con éxito una clase de tecnología durante un número de años: el
+    Middleware orientado a mensajes (o MOM). Este conjunto de tecnologías está presente en productos como los gestores de
+    colas y los intermediarios de mensajes. Ha proporcionado a las organizaciones de TI un método flexible, escalable y
+    sólido para aplicaciones de conexión no estrecha.
+</p>
+<p>
+    Se ha observado que la arquitectura orientada a servicios es una evolución del desarrollo basado en componentes. En
+    algunos aspectos, esta evolución tiene en cuenta muchas de las lecciones aprendidas a partir del éxito de MOM: cómo
+    unir no estrechamente sistemas de forma efectiva. La infraestructura de MOM ofrece las siguientes características que
+    permiten comunicar sistemas para que evolucionen por separado.
+</p>
+<ul>
+    <li>
+        <b>Cola de mensajes,</b> para entrega fiable de mensajes incluso en el caso de anomalías en la red o el sistema.
+    </li>
+    <li>
+        <b>Direccionamiento de mensajes,</b> tanto desde el punto de vista del direccionamiento en la red, para rendimiento
+        y fiabilidad, como desde el punto de vista del direccinamiento basado en el contenido del mensaje.
+    </li>
+    <li>
+        <b>Transformación de mensajes,</b> de modo que un servicio de llamada pueda enviar una solicitud de un "producto"
+        cuando el servicio de recepción pueda aceptar solicitudes de "elementos".
+    </li>
+    <li>
+        <b>Adaptadores de mensajes,</b> para permitir que los sistemas que no se desarrollaron originalmente con interfaces
+        de MOM sean tratados por servicios compatibles con MOM.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading">Utilizar est&aacute;ndares de mensaje</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td>Cuando se definen especificaciones de mensaje para los servicios identificados, es importante tener en cuenta los
+estándares de mensaje de una empresa, si existen.<span style="mso-spacerun: yes">&nbsp;</span> Allí donde no se definan
+estándares de mensaje, resulta aconsejable desarrollarlos. Allí donde existan esquemas de mensaje industriales, se
+recomienda aprovecharlos.<span style="mso-spacerun: yes">&nbsp;</span> Por ejemplo, se han definido especificaciones de
+mensajería XML para sectores relacionados con las finanzas, la dirección, los viajes (OTA XML [Open Travel Alliance, <a href="http://www.opentravel.org/online_schema.cfm">http://www.opentravel.org/online_schema.cfm</a>]) y las
+comunicaciones.<span style="mso-spacerun: yes">&nbsp;</span> Además, existen esquemas específicos no industriales
+disponibles en OAGIS [Open Applications Group, <a href="http://www.openapplications.org/index.htm">http://www.openapplications.org/index.htm</a>]. 
+<h3 style="MARGIN: 6pt 0in">
+    <span     style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US; mso-ansi-language: EN-US; mso-bidi-language: AR-SA">Formato
+    de mensaje común</span>
+</h3>
+<p class="MsoNormal" style="MARGIN: 6pt 0in; mso-element: endnote-list">
+    Los mensajes comunes hacen referencia a mensajes que se han transferido por los niveles de una arquitectura de nivel n.
+    <span style="mso-spacerun: yes">&nbsp;</span>Normalmente, se captura la información de la interfaz de usuario, enviada
+    a través de un nivel del controlador, procesada en las capas empresariales o de aplicación y, a continuación, pasadas a
+    una capa de persistencia o un sistema heredado de fondo.<span style="mso-spacerun: yes">&nbsp;</span>Durante cada una
+    de estas transferencias, se intercambia un mensaje entre los niveles en que cada uno puede tener un formato diferente.
+    <span style="mso-spacerun: yes">&nbsp;</span>La cuestión clave es acordar un estándar para un formato de mensaje común
+    dentro de la empresa, de modo que se pueda superar cualquier sobrecarga de traducción de formato allí donde no se
+    utiliza un bus de servicio de empresa (ESB) o si su uso se considera caro desde el punto de vista de la traducción de
+    formato.<span style="mso-spacerun: yes">&nbsp;</span>El uso de un ESB cuidará de muchas de estas mediaciones,
+    transformaciones y direccionamiento. <span style="mso-spacerun: yes">&nbsp;</span>Ésta es la capa de integración tal
+    como se describe en el modelo de capas de la arquitectura orientada a servicios.
+</p>
+<p class="MsoNormal" style="MARGIN: 6pt 0in; mso-element: endnote-list">
+    En algunos casos, puede bastar acordar los formatos de mensaje de entrada y salida.<span     style="mso-spacerun: yes">&nbsp;</span>El asunto de un formato de mensaje común es una decisión arquitectónica clave:
+    puede decidir "hacer el suyo propio" tal como se especifica aquí, adoptar modelos de la industria como el XML OTA del
+    sector de los viajes o adoptar modelos específicos que no sean de la industria como aquellos definidos por OAGIS.<span     style="mso-spacerun: yes">&nbsp;</span>En algunos casos, la decisión será utilizar un formato de mensaje de empresa
+    común que actualice campos del mensaje y lo pase al siguiente nivel para un posterior proceso.<span     style="mso-spacerun: yes">&nbsp;</span> Si dicho esquema común no se puede alcanzar debido a factores políticos,
+    entonces podrán designarse adaptadores que traduzcan los mensajes a un formato de mensaje común.<span     style="mso-spacerun: yes">&nbsp;</span>También se pueden aprovechar como parte de un ESB.
+</p>
+<div style="mso-element: endnote-list">
+    <b style="mso-bidi-font-weight: normal"><span     style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US; mso-ansi-language: EN-US; mso-bidi-language: AR-SA">Consideraciones
+    sobre ISV</span></b> <span     style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US; mso-ansi-language: EN-US; mso-bidi-language: AR-SA">:
+    Los mensajes que invocan servicios realizados dentro de paquetes de ISV puede que deban aumentarse con atributos de
+    datos para satisfacer restricciones dentro del modelo de datos de paquete de ISV. <span     style="mso-spacerun: yes">&nbsp;</span>Dichos elementos de datos se pueden identificar a través del análisis del
+    servicio realizado dentro del componente de paquete de ISV o pueden también identificase a través del análisis de
+    servicio de abajo a arriba de paquetes de ISV. <span style="mso-spacerun: yes">&nbsp;</span>Como puede que estos
+    atributos no se identifiquen hasta la realización de servicio, puede que deban retroajustarse al mensaje común una vez
+    identificados.</span>
+</div>
+<h4 style="MARGIN: 6pt 0in 6pt 0.5in; TEXT-INDENT: -0.5in; mso-element: endnote-list; mso-list: l0 level4 lfo1; tab-stops: list blank 0in blank .5in left .7in">
+    Formato de mensaje común y arquitectura de datos
+</h4>
+<p class="MsoNormal" style="MARGIN: 6pt 0in; mso-element: endnote-list">
+    <span style="mso-bookmark: _Toc83012232">En general, los servicios no deberían indicar nada sobre los modelos de datos
+    subyacentes. <span style="mso-spacerun: yes">&nbsp;</span>Más bien, deberían utilizarse para encapsular los modelos de
+    datos subyacentes cuyos almacenes de datos sean aprovechados por los componentes de servicio que realizan los
+    servicios.<span style="mso-spacerun: yes">&nbsp;</span>Por tanto, los servicios que sean ver, editar, suprimir, añadir
+    búsqueda y otras operaciones de una base de datos pueden no ser buenos candidatos pero podrían utilizarse como
+    operaciones de componente subyacente tal como se utilizan hoy en día.</span>
+</p>
+<p class="MsoNormal" style="MARGIN: 6pt 0in; mso-element: endnote-list">
+    <span style="mso-bookmark: _Toc77069206"><span style="mso-bookmark: _Toc83012232">Las arquitecturas de datos existentes
+    que definen modelos de datos conceptuales, lógicos o físicos son orígenes necesarios en la definición de formatos de
+    mensaje comunes.<span style="mso-spacerun: yes">&nbsp;</span> Las definiciones de formatos de mensaje común deberían
+    coordinarse con esfuerzos de arquitectura de datos y modelos de datos.<span style="mso-spacerun: yes">&nbsp;</span>
+    Este análisis garantizará la disponibilidad de los almacenes de datos y los esquemas adecuados para los componentes de
+    servicio que ejecutarán nuevos servicios. <span style="mso-spacerun: yes">&nbsp;</span>La arquitectura de datos
+    existente será mejorada para que contenga nuevos servicios si es necesario añadir nuevos datos a los sistemas
+    subyacentes.</span></span>
+</p>
+<p class="MsoNormal" style="MARGIN: 6pt 0in; mso-element: endnote-list">
+    <span style="mso-bookmark: _Toc77069206"><span style="mso-bookmark: _Toc83012232">En muchas empresas, los sistemas
+    existentes a menudo reflejan la existencia de silos e islas de datos que colaboran a través de los procesos de
+    lote.<span style="mso-spacerun: yes">&nbsp;</span> La migración desde almacenes de datos aislados es posible a través
+    de los servicios.<span style="mso-spacerun: yes">&nbsp;</span> La identificación de orígenes de datos de un proveedor
+    de servicios se realiza durante la realización de servicio.</span></span>
+</p>
+<p class="MsoNormal" style="MARGIN: 6pt 0in; mso-element: endnote-list">
+    <span style="mso-bookmark: _Toc77069206"><span style="mso-bookmark: _Toc83012232"><b     style="mso-bidi-font-weight: normal">Consideraciones sobre ISV</b>: El modelo de datos lógico necesita contener los
+    modelos de datos predefinidos, a menudo implícitos, incorporados en los paquetes de ISV. <span     style="mso-spacerun: yes">&nbsp;</span>Por tanto, debe producirse la transferencia de mensajes entre aplicaciones
+    empaquetadas y los modelos de datos existentes. <span style="mso-spacerun: yes">&nbsp;</span>Esto se lleva a cabo a
+    menudo a través de API ofrecidas por los ISV.<span style="mso-spacerun: yes">&nbsp;</span>En una arquitectura orientada
+    a servicios, los adaptadores de estos modelos de datos de ISV se convierten en algo importante, especialmente si el ISV
+    no expone sus datos y funciones subyacentes a través de servicios.</span></span>
+</p>
+<p class="MsoNormal" style="MARGIN: 6pt 0in; mso-element: endnote-list">
+    <span style="mso-bookmark: _Toc77069206"><span style="mso-bookmark: _Toc83012232">Tenga en cuenta que en algunos casos
+    en los que el modelo de datos de ISV es accesible, se puede personalizar el modelo para que contenga los mensajes
+    necesarios para dar soporte a los servicios identificados. <span style="mso-spacerun: yes">&nbsp;</span>A la inversa,
+    si el modelo de datos no es accesible, la mensajería de servicios puede estar limitada por el modelo de datos contenido
+    dentro del ISV.<span style="mso-spacerun: yes">&nbsp;</span> Se puede emplear también un mecanismo de mediación para
+    atajar el problema.<span style="mso-spacerun: yes">&nbsp;</span> La mediación, como es el caso de la suministrada por
+    un ESB, se puede utilizar en este contexto para dar soporte a la comunicación con paquetes de ISV. <span     style="mso-spacerun: yes">&nbsp;</span>El modelo de datos de ISV también puede dictar atributos adicionales que sean
+    necesarios más allá de los requeridos para implementar el servicio.</span></span>
+</p>
+<h4 style="MARGIN: 6pt 0in 6pt 0.5in; TEXT-INDENT: -0.5in; mso-element: endnote-list; mso-list: l0 level4 lfo1; tab-stops: list blank 0in blank .5in left .7in">
+    <span style="mso-bookmark: _Toc77069206"><span style="mso-bookmark: _Toc83012232">Formato de mensaje común con todos
+    los servicios relevantes</span></span>
+</h4>
+<div style="mso-element: endnote-list">
+    <span     style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US; mso-ansi-language: EN-US; mso-bidi-language: AR-SA">Los
+    formatos de mensaje común deben estar reconciliados con los mensajes de entrada/salida de los servicios individuales,
+    de modo que estén relacionados y asignados para permitir que los servicios adecuados los utilicen y actualicen cuando
+    sea necesario.<span style="mso-spacerun: yes">&nbsp;</span>Puede que los servicios necesiten extraer información o
+    esperar resultados del formato de mensaje de empresa. <span style="mso-spacerun: yes">&nbsp;</span>Éstos se documentan
+    en la plantilla Formato de mensaje común de servicio.</span>
+</div></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Reutilizaci&oacute;n del modelo de dominio</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    En el concepto <a class="elementLinkWithUserText" href="./../../extend.bus_model/guidances/concepts/domain_design_846FF5B2.html" guid="_qr6IQE6nEduhs-ki98mFFw">Concepto: Diseño de dominio</a>, se describió la noción de modelado de dominio, parecida
+    a la noción de modelo de análisis o modelo de análisis empresarial en la representación de conceptos centrales del
+    dominio empresarial sin dependencia de la tecnología. Resulta claro que los mensajes utilizados por los servicios son
+    conscientes de la tecnología (si no específicos de tecnología en el caso del esquema XML utilizado para servicios web),
+    de la misma forma que el esquema de base de datos utilizado para almacenar los datos de dominio es tecnología
+    específica del servicio. De hecho, podemos tener en cuenta la siguiente relación.
+</p>
+<p align="center">
+    <img height="106" alt="El diagrama se describe en el contenido textual." src="./../../soa.rup_soma/tasks/resources/co_soa_msg_design-01.gif"     width="246" border="0" />
+</p>
+<p>
+    Esto muestra la relación entre el modelo de dominio usado para el descubrimiento de elementos de dominio clave y el
+    modelo de mensaje como realización del modelo de dominio como conjunto de elementos transferido a los servicios y
+    devuelto por ellos.
+</p>
+<p align="center">
+    <img height="206" alt="El diagrama se describe en el contenido textual." src="./../../soa.rup_soma/tasks/resources/co_soa_msg_design-02.gif"     width="435" border="0" />
+</p>
+<p>
+    A continuación se muestra un típico modelo de componente/Java en el que podemos observar la separación de la interfaz
+    de la clase y la inclusión de funciones de "objeto usuario" para obtener y establecer el valor de las variables de
+    estado. Se trata de un enfoque muy común, pero cuenta con la desventaja de que, si el cliente y el componente están en
+    espacios de dirección diferentes o en una máquina distinta, el coste de comunicar cada llamada es alto en términos de
+    acceso al estado global de cualquier componente.
+</p>
+<p align="center">
+    <img height="266" alt="El diagrama se describe en el contenido textual." src="./../../soa.rup_soma/tasks/resources/co_soa_msg_design-03.gif"     width="737" border="0" />
+</p>
+<p>
+    Otro problema es la relación entre componentes, la noción de que una cuenta tiene un conjunto de clientes es difícil de
+    desarrollar en este estilo y normalmente concluye con la gestión de listas de identificadores utilizados para recuperar
+    objetos individuales.
+</p>
+<p>
+    Al desarrollar un modelo de servicio podemos utilizar un enfoque de <a class="elementLinkWithUserText" href="./../../soa.rup_soma/tasks/soa_service_identification_data_1AFDAC0A.html" guid="_mJtYwCwTEduKcvYAyaKSaA"><em>identificación de servicio controlada por datos</em></a> que nos lleve a la
+    especificación de un servicio AccountMgr y un servicio MeetingMgr. La primera especificación de servicio actúa como
+    ubicación central para gestionar cuentas y contactos. De hecho, el modelo de datos central para las soluciones de
+    Gestión de relaciones con los clientes (CRM) se creó utilizando éste y otros servicios. El segundo servicio se ha
+    separado porque puede ser utilizado por las soluciones de CRM y otras soluciones para reservar reuniones y relacionarse
+    con las aplicaciones Groupware de la empresa.
+</p>
+<p>
+    A continuación se muestra un ejemplo del modelo; enseña las especificaciones de servicio, los mensajes se pueden asumir
+    a partir del modelo de dominio anterior.
+</p>
+<p align="center">
+    <img height="134" alt="El diagrama se describe en el contenido textual." src="./../../soa.rup_soma/tasks/resources/co_soa_msg_design-04.gif"     width="338" border="0" />
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Comprender los patrones de intercambio de mensajes</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Cuando se piensa en los mensajes, existe una tendencia natural a considerarlos simplemente parámetros de las
+    operaciones. Esto se hace probablemente porque la representación de UML de servicios utiliza operaciones con parámetros
+    y el Lenguaje de descripción de servicios web (WSDL 1.1) utiliza un enfoque parecido. No obstante, cuando se piensa en
+    términos de <a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_svce_model_service_1EE4C96C.html" guid="{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}"><i>servicios</i></a> y <a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_svce_model_svce_spec_37E89A91.html" guid="{20F06B5E-95D5-422C-AB68-7C213D28533A}"><i>especificaciones de servicio</i></a>, resulta más útil pensar que los
+    mensajes son elementos reutilizables producidos o utilizados/consumidos por una operación de servicio. En el habla de
+    los servicios, la operación simplemente se convierte en un <i>intercambio de mensajes</i>, si bien es cierto que un
+    intercambio con nombre de un servicio es distinguible de otro intercambio que pueda utilizar los mismos mensajes de
+    entrada y salida.
+</p>
+<p>
+    La noción de <i>patrón de intercambio de mensajes</i> ha sido de interés en el mundo de los estándares de servicios
+    web, como parte de un análisis del uso de servicios en el desarrollo de estándares para dar soporte a su
+    especificación.Un patrón de intercambio de mensajes nombra una combinación particular de mensajes producidos, usados o
+    consumidos entre dos servicios (o entre un servicio y un cliente) y proporciona un vocabulario a diseñadores de
+    servicios para describir operaciones en especificaciones de servicio.
+</p>
+<p>
+    A continuación se muestran patrones de intercambio comunes que se pueden utilizar en la definición de especificaciones
+    de servicio. Dichos patrones se encuentran normalmente durante el modelado de <i><a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_svce_model_svce_collab_76358B24.html" guid="{9BBBE5B0-4D39-4555-9E20-0ADBD8327D29}">colaboraciones de servicio</a></i>.
+</p>
+<p>
+    <b>Solicitud/Respuesta síncrona:</b> Se trata en efecto de una invocación de método tradicional en la que el cliente de
+    servicio envía un mensaje a un servicio y, a continuación, bloquea la espera hasta que se recibe una respuesta del
+    servicio.
+</p>
+<p align="center">
+    <img height="91" alt="El diagrama se describe en el contenido textual." src="./../../soa.rup_soma/tasks/resources/co_soa_choreography-01.gif"     width="262" border="0" />
+</p>
+<p>
+    <b>Mensaje de una dirección:</b> En este caso, el cliente simplemente envía un mensaje al servicio, no esperando una
+    respuesta. Este patrón se puede considerar una llamada de método asíncrona sin tipo de respuesta, lo que significa que
+    el cliente de servicio continúa la ejecución después de que el mensaje se haya enviado, en lugar de esperar que el
+    servicio procese el mensaje.
+</p>
+<p align="center">
+    <img height="91" alt="El diagrama se describe en el contenido textual." src="./../../soa.rup_soma/tasks/resources/co_soa_choreography-02.gif"     width="250" border="0" />
+</p>
+<p>
+    <b>Notificación:</b> En este caso, el servicio es responsable de devolver mensajes al cliente (normalmente otro
+    servicio). Para conseguirlo, el cliente debe estar de alguna forma registrado en el servicio, de modo que el servicio
+    sepa dónde enviar los mensajes de notificación.
+</p>
+<p align="center">
+    <img height="91" alt="El diagrama se describe en el contenido textual." src="./../../soa.rup_soma/tasks/resources/co_soa_choreography-03.gif"     width="253" border="0" />
+</p>
+<p>
+    <b>Solicitud/Respuesta asíncrona:</b> Se trata de una combinación del mensaje de una dirección y la notificación. El
+    cliente del servicio envía un mensaje, incluyendo una dirección a la que responder. Cuando el servicio completa su
+    proceso, vuelve a llamar al originador. El hecho de que los clientes de servicio envíen el primer mensaje de forma
+    asíncrona los obliga a realizar un seguimiento de todas las solicitudes enviadas, de modo que las respuestas, cuando se
+    reciben del servicio, puedan correlacionarse con la solicitud original.
+</p>
+<p align="center">
+    <img height="110" alt="El diagrama se describe en el contenido textual." src="./../../soa.rup_soma/tasks/resources/co_soa_choreography-04.gif"     width="262" border="0" />
+</p>
+<p>
+    <b>Publicar/suscribir</b>: Se trata de nuevo de una combinación. Un cliente de servicio registra interés en un "tema"
+    con un servicio de publicación. Otros servicios o clientes de servicio publican mensajes (envían mensajes) al servicio
+    de publicación identificando el tema asociado con el mensaje. Si el tema coincide con clientes anteriormente
+    registrados, se les notificará el nuevo mensaje. En este caso es posible acoplar no estrechamente los servicios que
+    participan. Cualquier cliente o publicador sólo necesita conocer la ubicación del servicio de publicación y se pueden
+    añadir nuevos clientes a la solución sin realizar un esfuerzo importante.
+</p>
+<p align="center">
+    <img height="130" alt="El diagrama se describe en el contenido textual." src="./../../soa.rup_soma/tasks/resources/co_soa_choreography-05.gif"     width="346" border="0" />
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Gestionar granularidad de mensajes</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Los servicios tienen como objetivo proporcionar operaciones de gran granularidad. De esta forma, los mensajes que
+    fluyen dentro y fuera de tales operaciones tienden también a tener mayor granularidad. Este problema se resaltó
+    originalmente pronto en el desarrollo de soluciones de servicio web en las que el uso de HTTP como transporte, SOAP
+    como protocolo y XML como formato de conexión tendía a producir respuestas relativamente lentas y requisitos de banda
+    ancha altos. Por ejemplo, consideremos una solicitud para una oferta de acción de un servicio. Una oferta de acción
+    simple se mostró a menudo en los primeros días de los servicios web. El símbolo de denominación abreviada es cuatro
+    caracteres y la respuesta es un número decimal. En un estilo RPC, protocolo binario, podemos esperar que el
+    identificador de mensaje añada alguna carga, digamos 8 bytes, y por tanto podemos esperar en algún sitio de la región
+    de 8+4 para la solicitud y 8+8 (para un decimal de precisión alta) de respuesta. Con HTTP/SOAP, podemos esperar algo de
+    la siguiente forma:
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <th width="50%">
+                Solicitud
+            </th>
+            <th width="50%">
+                Respuesta
+            </th>
+        </tr>
+        <tr>
+            <td valign="top" align="left" width="50%">
+<pre>
+  SOAPAction: "http://www.webservicex.net/Quote"<br />
+
+  User-Agent: MyAgent 1.0<br />
+
+  Content-Type: text/xml; charset=UTF-8<br />
+
+  &lt;?xml version="1.0" encoding="UTF-8"?&gt;<br />
+
+  &lt;soap:Envelope<br />
+
+   xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"<br />
+
+   xmlns:tns="http://www.webservicex.net/"&gt;<br />
+
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;<br />
+
+   &lt;soap:Body&gt;<br />
+
+    &lt;tns:Quote&gt;<br />
+
+     &lt;tns:Symbol&gt;IBM&lt;/tns:Symbol&gt;<br />
+
+    &lt;/tns:Quote&gt;<br />
+
+   &lt;/soap:Body&gt;<br />
+
+  &lt;/soap:Envelope&gt;
+</pre>
+            </td>
+            <td valign="top" align="left" width="50%">
+<pre>
+  HTTP/1.1 200 OK<br />
+
+  X-Powered-By: ASP.NET<br />
+
+  Connection: close<br />
+
+  Content-Length: 522<br />
+
+  X-AspNet-Version: 1.1.4322<br />
+
+  Date: Mon, 21 Mar 2005 00:34:21 GMT<br />
+
+  Content-Type : text/xml; charset=utf-8<br />
+
+  Server : Microsoft-IIS/6.0Cache-Control: private, max-age=0<br />
+
+  &lt;?xml version="1.0" encoding="utf-8"?&gt;<br />
+
+  &lt;soap:Envelope<br />
+
+   xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;<br />
+
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;<br />
+
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;<br />
+
+   &lt;soap:Body&gt;<br />
+
+    &lt;QuoteResponse xmlns="http://www.webservicex.net/"&gt;<br />
+
+      &lt;Quote&gt;&lt;Last&gt;89.28&lt;/Last&gt;<br />
+
+      &lt;/Quote&gt;<br />
+
+    &lt;/QuoteResponse&gt;<br />
+
+   &lt;/soap:Body&gt;<br />
+
+  &lt;/soap:Envelope&gt;
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    Las personas que pronto adoptaron tecnología de servicio web llegaron a dos conclusiones. Primero, los servicios se
+    optimizarón en un pequeño número de operaciones que suministraban datos como documentos en lugar del estilo más
+    complejo de modelos de componente tradicionales. Esto tiene la ventaja de amortizar la carga de los protocolos de una
+    carga útil de datos reales más grande. Igualmente, entre servicios de una empresa, al menos entre servicios de la misma
+    solución, se eligieron enlaces de protocolo más pequeños y simples y se reservó HTTP/SOAP para situaciones en las que
+    era necesario, caso de conexiones con servicios externos a la empresa.
+</p>
+<p>
+    Esta noción no es enteramente nueva. Incluso en el mundo de los componentes, el patrón Objeto de valor, o la Fachada de
+    servicio J2EE son enfoques para reducir el número de comunicaciones directas e inversas entre cliente y servidor. Ambos
+    utilizan la noción de enviar una copia completa del estado de componente al cliente en lugar de utilizar las funciones
+    de objeto usuario tradicionales. Para los servicios, también podemos considerar el hecho de que los que se están
+    desarrollando están más estrechamente alineados con los modelos de empresa, en especial con los modelos de proceso
+    empresarial. De esta forma, los mensajes vienen a reflejar documentos de empresa comunes de la misma forma que los
+    conjuntos de transacciones EDI (intercambio de datos electrónico) representan documentos empresariales como pedidos,
+    facturas, avisos de envío, etc.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Gestionar el rendimiento del intercambio de mensajes</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    En general, el uso de mensajes grandes es válido en la superación del rendimiento de las comunicaciones, aunque en
+    algunos casos los mensajes de datos grandes pueden ser un problema. Por ejemplo, en los mensajes de SOAP anteriores,
+    vimos cómo el tamaño de mensaje, utilizando HTTP, SOAP y XML aumentó considerablemente el tamaño de los datos. Se trata
+    de una queja frecuente en los sistemas anteriores creados con tecnologías de servicios web. Por otro lado, estos
+    problemas nos han permitido aprender algunas lecciones interesantes como la consideración del rendimiento desde el
+    punto de vista del rendimiento de código, el diseño de mensajes y la opción de protocolo como una actividad de diseño
+    temprana.
+</p>
+<p>
+    Un aspecto importante que debe tenerse en cuenta es que cuando movemos grandes trozos de estado de servicio a cliente o
+    de cliente a servicio, estos mensajes representan realmente instantáneas obsoletas del estado de servicio. Por tanto,
+    una de las consideraciones es gestionar explícitamente esta condición de "obsoleto" identificando el tiempo que los
+    datos se pueden considerar fiables o darlo en "usufructo" al cliente de modo que caduque después de un determinado
+    tiempo. Para obtener más información, consulte la documentación técnica <i><a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/whitepapers/soa_cbd_paper_5703509E.html" guid="2.48704851646278E-307">Uso de
+    arquitectura orientada a servicios y desarrollo basado en componentes para crear aplicaciones de servicio web</a></i>.
+</p>
+<p>
+    Otro tema que debe tenerse en cuenta es el almacenamiento en caché del contenido. El almacenamiento en caché es
+    normalmente un problema que se soluciona con una optimización del rendimiento de las aplicaciones, pero en una solución
+    orientada a servicios, la naturaleza distribuida y la comunicación basada en mensajes se presta bien a la inserción de
+    cachés entre clientes y servicios. Estas memorias caché no son las típicas memorias caché de base de datos utilizadas
+    para optimizar consultas sino más bien cachés utilizadas en servidores web y proxies web. De hecho, en el caso de los
+    servicios web que utilizan HTTP y SOAP, estos proxies se pueden utilizar como memorias caché para ofrecer respuestas de
+    servicio en determinadas situaciones.
+</p>
+<p>
+    No obstante, el problema, en relación con el uso de alguna memoria caché, es realmente cómo entiende la memoria caché
+    las políticas utilizadas para ofrecer contenido de la caché y cómo un servicio puede invalidar la memoria caché. La
+    infraestructura técnica utilizada para alojar y gestionar servicios desplegados debería proporcionar funciones de
+    almacenamiento en caché. Un área de política de servicio que esperamos ver en el futuro es el suministro de información
+    sobre gestión de memoria caché.
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Predecesor</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/deliveryprocesses/soa_service_qualification_5A3937BD.html" guid="_0eaDYE9zEdu0EMZ-3o0kDQ">Aplicar pruebas decisivas de servicio</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Varias apariciones" abbr="Varias apariciones">Varias apariciones</th><td align="left" class="sectionTableCell" headers="property_Varias apariciones"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Condicionado por sucesos" abbr="Condicionado por sucesos">Condicionado por sucesos</th><td align="left" class="sectionTableCell" headers="property_Condicionado por sucesos"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Continuo" abbr="Continuo">Continuo</th><td align="left" class="sectionTableCell" headers="property_Continuo"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Se puede repetir" abbr="Se puede repetir">Se puede repetir</th><td align="left" class="sectionTableCell" headers="property_Se puede repetir"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/guidances/guidelines/message_attachments_AE665E63.html" guid="7.676056734461877E-306">Archivo de datos adjuntos del mensaje</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/guidances/guidelines/service_data_encapsulation_F424F20E.html" guid="1.6727924656888407E-305">Encapsulación de datos de servicio</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

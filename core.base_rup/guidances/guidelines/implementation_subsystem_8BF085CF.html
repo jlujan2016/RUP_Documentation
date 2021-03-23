@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Subsistema de implementaci&oacute;n</title>
+<meta content="Guideline" name="uma.type">
+<meta content="implementation_subsystem" name="uma.name">
+<meta content="Subsistema de implementaci&oacute;n" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "9.455380296721554E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="9.455380296721554E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Subsistema de implementaci&oacute;n</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">El subsistema de implementación ayuda a organizar un modelo de implementación y, por lo tanto, a reducir su complejidad. En esta directriz se discuten algunas opciones a tener en cuenta cuando se diseñe el subsistema de implementación.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_implementation_subsystem_118747E9.html" guid="{0F629848-C19E-49AB-A6C1-C8D6A094898A}">Subsistema de implementación</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="subsistema de implementación" text="directrices para" name="XE_implementation_subsystem__guidelines_for" id="XE_implementation_subsystem__guidelines_for" class="index"></a> 
+<h3>
+    <a id="Explanation" name="Explanation"></a>Explicación
+</h3>
+<p>
+    Una forma básica de reducir la complejidad en un modelo de implementación que contiene cientos de elementos es utilizar
+    subsistemas de implementación.
+</p>
+<p>
+    Los subsistemas habitualmente adoptan la forma de directorios, con información estructural o de gestión adicional. Por
+    ejemplo, un subsistema se puede crear como un directorio o una carpeta en un sistema de archivos, o un subsistema en
+    Rational Apex para C++ o Ada, o paquetes que utilizan Java. En los desarrollos de Rational XDE, un subsistema es un
+    "proyecto" según se define en el entorno de desarrollo integrado (IDE).
+</p>
+<p>
+    El subsistema de implementación es la implementación análoga de <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/design_package_74F2CD5B.html" guid="_yF4CmdnmEdmO6L4XMImrsA">paquete de
+    diseño</a> <i>(o <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">subsistema de diseño</a> grandes y granulados ).</i> El modelo de
+    implementación y los subsistemas de implementación son el destino de la <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/implementation_view_CC9CEB3B.html" guid="_yKpN1tnmEdmO6L4XMImrsA">vista
+    de implementación</a> y, por lo tanto, son de vital importancia en el momento del desarrollo.
+</p>
+<h4>
+    <a key="subsistema de implementación" text="exportar elementos" name="XE_implementation_subsystem__exporting_elements" id="XE_implementation_subsystem__exporting_elements" class="index"></a><a key="elemento" text="exportar desde los subsistemas de implementación" name="XE_element__exporting_from_implementation_subsystems" id="XE_element__exporting_from_implementation_subsystems" class="index"></a>Exportación de elementos
+</h4>
+<p>
+    Un subsistema de implementación controla la visibilidad externa de su contenido. Se puede hacer referencia a un
+    elemento con los elementos externos del subsistema, si se hace visible ("exportado") por el subsistema declarante.
+</p>
+<p>
+    Todos los elementos (y subsistemas contenidos) en un subsistema suelen estar visibles fuera de un subsistema por
+    omisión. Esto significa que cualquier elemento fuera de este subsistema puede hacer referencia a todos los elementos.
+    Por ejemplo, en C++ esto significa que los elementos externos pueden #incluir todos los elementos dentro del
+    subsistema.
+</p>
+<h3>
+    <a id="Use" name="Use"></a>Utilización
+</h3>
+<p>
+    El modelo de implementación puede ser más o menos cercano al modelo de diseño, dependiendo de como correlacione los
+    paquetes de diseño a los subsistemas de implementación en el modelo de implementación.
+</p>
+<p>
+    Se recomienda mantener la correlación uno a uno, es decir, un paquete de diseño debe correlacionarse con un subsistema
+    de implementación. El motivo principal es tener una rastreabilidad transparente del diseño al código.
+</p>
+<p>
+    Existen situaciones en que necesita que los subsistemas en implementación difieran de los paquetes y los subsistemas de
+    diseño. Para obtener más información, consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">Tarea: Estructurar el modelo de implementación</a>. Si y cómo representar
+    esta correlación debe cubrirse en el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_project_specific_guidelines_8DC8DA32.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">Producto de trabajo: Directrices específicas del proyecto</a>.
+</p>
+<p>
+    Puede partir un sistema en subsistemas por muchos motivos. Los mismos criterios que en diseño se aplican en la
+    implementación. Para obtener más información, consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/design_package_8CF100B8.html" guid="3.3691722315666536E-305">Directriz:
+    Paquete de diseño</a>.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

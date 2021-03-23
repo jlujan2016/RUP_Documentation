@@ -1,0 +1,750 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Descriptor de tareas: Definir los elementos de comprobabilidad</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="define_testability_elements" name="uma.name">
+<meta content="Definir los elementos de comprobabilidad" name="uma.presentationName">
+<meta content="_r5BysEocEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="Dise&ntilde;ador de pruebas">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={002674F9-6511-4D15-8623-B761D8C48986}&path={002674F9-6511-4D15-8623-B761D8C48986},{9C683674-97C1-4AEE-8DB0-9514AEFF698E},_r5BysEocEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_XSr4YCFtEdqrX8YVzvtlIg", "_RP00kCCdEdq3qtLcbHn6PQ", "_r5BysEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_J1u8gCGYEdqMcovRzkCQow", "_RP00kCCdEdq3qtLcbHn6PQ", "_r5BysEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_vllcADIKEdqGgPtrSpB0vQ", "_RP00kCCdEdq3qtLcbHn6PQ", "_r5BysEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_XSr4YCFtEdqrX8YVzvtlIg", "_RP00kCCdEdq3qtLcbHn6PQ", "_r5BysEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_J1u8gCGYEdqMcovRzkCQow", "_RP00kCCdEdq3qtLcbHn6PQ", "_r5BysEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_vllcADIKEdqGgPtrSpB0vQ", "_RP00kCCdEdq3qtLcbHn6PQ", "_r5BysEocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEpjmTEdqBe965knBZig", "_OwdUETmUEdqBe965knBZig", "_XSr4YCFtEdqrX8YVzvtlIg", "_RP00kCCdEdq3qtLcbHn6PQ", "_r5BysEocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEqzmTEdqBe965knBZig", "_Seu8oTmUEdqBe965knBZig", "_J1u8gCGYEdqMcovRzkCQow", "_RP00kCCdEdq3qtLcbHn6PQ", "_r5BysEocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_Jd38oTYREdqQ8Lb12XU1pw", "_4GgEsjmTEdqBe965knBZig", "_VOFe0TmUEdqBe965knBZig", "_vllcADIKEdqGgPtrSpB0vQ", "_RP00kCCdEdq3qtLcbHn6PQ", "_r5BysEocEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_r5BysEocEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Definir los elementos de comprobabilidad</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta tarea se describe cómo identificar los elementos que darán soporte y habilitarán las pruebas.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="arquitectura de automatización de pruebas" text="elementos de" name="XE_test_automation_architecture__elements_of" id="XE_test_automation_architecture__elements_of" class="index"></a><a key="prueba" text="elementos de" name="XE_test__testability__elements_of" id="XE_test__testability__elements_of" class="index"></a><a id="XE_test__infrastructure__elements_of" name="XE_test__infrastructure__elements_of" class="index" key="test" text="elements of"></a><a key="especificación de la interfaz de prueba" text="definición de" name="XE_test_interface_specification__definition_of" id="XE_test_interface_specification__definition_of" class="index"></a> 
+<p>
+    El objetivo de esta tarea es:
+</p>
+<ul>
+    <li>
+        Identificar los elementos necesarios para dar soporte a los elementos del destino de la prueba
+    </li>
+    <li>
+        Identificar los elementos físicos de la infraestructura de implementación de la prueba necesaria para habilitar las
+        pruebas en cada Configuración de entorno de prueba
+    </li>
+    <li>
+        Definir los requisitos de diseño de software que serán necesarios para permitir que el software se pueda probar
+        físicamente
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Principal:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_designer_BDC8D433.html" guid="_r5N_8EocEdqrjq4i3fchvA">Dise&ntilde;ador de pruebas</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Adicional:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">Asistencia:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_strategy_61B57F37.html" guid="_r5gT0EocEdqrjq4i3fchvA">Estrategia de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_7D6F5DFE.html" guid="_CQ7yohi2Edq_uI8xTPML6g">Modelo de dise&ntilde;o</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_automation_architecture_6C535F47.html" guid="_r5gT0UocEdqrjq4i3fchvA">Arquitectura de automatizaci&oacute;n de pruebas</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_case_5AEC735D.html" guid="_r5gT0kocEdqrjq4i3fchvA">Caso de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_data_C3C64922.html" guid="_r5gT00ocEdqrjq4i3fchvA">Datos de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_use_case_realization_74932FEA.html" guid="_CQ1sChi2Edq_uI8xTPML6g">Ejecuci&oacute;n de casos de uso</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_interface_specification_626F908.html" guid="_RZJ_kjnfEdqxANP9kNH4WA">Especificaci&oacute;n de interfaz de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_interface_39251209.html" guid="_CQ1sDhi2Edq_uI8xTPML6g">Interfaz</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_workload_analysis_model_26476156.html" guid="_r5gT1EocEdqrjq4i3fchvA">Modelo de an&aacute;lisis de carga de trabajo</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_deployment_model_114B37C1.html" guid="_RZQGMDnfEdqxANP9kNH4WA">Modelo de despliegue</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_implementation_model_D5DD19E0.html" guid="_RZQGNDnfEdqxANP9kNH4WA">Modelo de implementaci&oacute;n</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Externa:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_automation_architecture_6C535F47.html" guid="_r5gT0UocEdqrjq4i3fchvA">Arquitectura de automatizaci&oacute;n de pruebas</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_design_E07AF9F0.html" guid="_RZQGNTnfEdqxANP9kNH4WA">Dise&ntilde;o de prueba</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_interface_specification_626F908.html" guid="_RZJ_kjnfEdqxANP9kNH4WA">Especificaci&oacute;n de interfaz de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> Para cada elemento del destino de la prueba necesario, identifique relaciones con los mecanismos de prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="IdentifyTargetMechanismItems" name="IdentifyTargetMechanismItems"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Conseguir que los elementos del destino de la prueba conozcan mejor el soporte de los mecanismos de prueba
+                necesarios.
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Para cada elemento de prueba, revisar la lista de mecanismos de prueba e identificar los que pueden proporcionar
+    soporte. Analizar la distancia a la que se encuentran los mecanismos de prueba seleccionados para proporciona una
+    solución de prueba completa y cómo pueden adaptarse mejor. Si no se encuentra ningún candidato o el esfuerzo de
+    adaptación es significativo, defina nuevos mecanismos de prueba e intente buscar un equilibrio entre especificidad y
+    reutilización.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar elementos din&aacute;micos y sucesos del sistema </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="IdentifyDynamicElementsEvents" name="IdentifyDynamicElementsEvents"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Conocer mejor los aspectos del tiempo de ejecución y la dinámica del sistema.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+     Utilice la información de diseño y los requisitos de software disponibles para identificar los sucesos y los elementos
+    dinámicos del sistema. Mediante los modelos de despliegue, implementación, diseño y caso de uso, puede identificar
+    elementos relevantes como clases de control, procesos, hebras y sucesos. Algunos lugares para iniciar la investigación
+    son las clases estereotipadas como &lt;&lt;control&gt;&gt;, las ejecuciones de casos de uso y los elementos que se
+    describen en la vista de la arquitectura del proceso o el modelo de implementación estereotipado como
+    &lt;&lt;proceso&gt;&gt; o &lt;&lt;hebra&gt;&gt;.
+</div>
+<p>
+    En cuanto las restricciones impuestas por el entorno de prueba, defina los requisitos físicos
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar los l&iacute;mites del sistema y las interfaces </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="IdentifyBoundariesAndInterfaces" name="IdentifyBoundariesAndInterfaces"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Conocer las responsabilidades del sistema como proveedor de servicios y las dependencias del sistema como
+                cliente.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Otro grupo de elementos que resulta útil examinar son las Interfaces del sistema, especialmente las que se relacionan
+    con actores externos a los límites del sistema. Utilice los modelos de implementación y diseño para buscar elementos
+    definidos con el estereotipo &lt;&lt;interfaz&gt;&gt;. Busque también clases estereotipadas como
+    &lt;&lt;límite&gt;&gt;.
+</p>
+<p>
+    Como verificador, resulta útil explorar más allá de los límites del sistema para conocer las expectativas de los
+    sistemas relacionados, tanto los proveedores de servicios como el cliente. De esta manera, tendrá un conocimiento más
+    profundo de las necesidades para la validación de interfaces y para la infraestructura de la prueba necesaria para
+    probar y, posiblemente, simular estas interfaces.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar elementos de infraestructura de la prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="IdentifyTestInfrastructure" name="IdentifyTestInfrastructure"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%">
+                    <b>Objetivo:</b>&nbsp;
+                </td>
+                <td width="95%">
+                    Identificar los elementos esenciales del esfuerzo de prueba que permitirá la ejecución de la prueba
+                    necesaria.&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Para que un esfuerzo de prueba iterativo sea satisfactorio, es importante identificar y mantener una infraestructura
+    adecuada. Si no dispone de una infraestructura que lo sostenga, el esfuerzo de prueba puede convertirse en insostenible
+    e inutilizable rápidamente. La infraestructura de la prueba, aunque es más importante para el esfuerzo de prueba
+    automatizado, también es importante para el esfuerzo de prueba manual.
+</p>
+<p>
+    Reflexiones sobre los sucesos y los elementos dinámicos del sistema, ¿qué dependencias crearán en la implementación de
+    pruebas individuales? Busque oportunidades para desparejar las dependencias entre pruebas individuales y gestionarlas
+    mediante puntos de control comunes que proporcionen una capa de direccionamiento indirecto. Las áreas comunes que debe
+    explorar para las dependencias son la navegación de pruebas, la utilización de datos de prueba y los cambios de estado
+    del sistema.
+</p>
+<p>
+    Utilice la información que ha reunido y reflexione sobre los requisitos que regirán la infraestructura de la prueba y
+    los recursos que necesitará para ofrecer un enfoque de prueba satisfactorio.
+</p>
+<p>
+    <b>Subtemas:</b>
+</p>
+<ul>
+    <li>
+        <a href="#FacilitateCommonScenarios">Facilitar casos de ejemplo de prueba comunes</a>
+    </li>
+    <li>
+        <a href="#FacilitateTestDataDependencies">Facilitar dependencias de datos de la prueba</a>
+    </li>
+    <li>
+        <a href="#FacilitateTestStateDependencies">Facilitar dependencias de estado de la prueba</a>
+    </li>
+    <li>
+        <a href="#FacilitateDerivedTestDataValues">Facilitar valores de datos de la prueba derivados</a>
+    </li>
+    <li>
+        <a href="#FacilitateCommonNavigationPaths">Facilitar vías de navegación de pruebas comunes</a>
+    </li>
+</ul>
+<h4>
+    <a id="FacilitateCommonScenarios" name="FacilitateCommonScenarios">Facilitar casos de ejemplo de prueba comunes</a> <a href="#IdentifyTestInfrastructure"><img height="20" alt="Ir a la parte superior de la página"     src="./../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    Algunas pruebas tienen una estructura común con el caso de ejemplo o el procedimiento que se siguió en su ejecución,
+    pero es necesario realizar el mismo procedimiento muchas veces en elementos de destino de la prueba diferentes. En el
+    caso de la automatización de pruebas, puede resultar útil crear funciones de programa de utilidad o scripts de prueba
+    comunes que se puedan volver a utilizar en muchos contextos diferentes para llevar a cabo los casos de ejemplo de
+    prueba comunes de manera eficaz. Esto proporciona un punto central de modificación si es necesario modificar el caso de
+    ejemplo de prueba. Por ejemplo, ejecutar pruebas de límite estándar en clases adecuadas de elementos de interfaz y
+    comprobar si los elementos de UI cumplen los estándares de diseño de UI.
+</p>
+<h4>
+    <a id="FacilitateTestDataDependencies" name="FacilitateTestDataDependencies">Facilitar dependencias de datos de la
+    prueba</a> <a href="#IdentifyTestInfrastructure"><img height="20" alt="Ir a la parte superior de la página"     src="./../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    Cuando se ejecutan las pruebas en una configuración del entorno de prueba dada, existe la posibilidad de que se
+    produzcan conflictos en los valores de los datos de la prueba que se utilicen. Este problema se agrava cuando el
+    entorno lo comparten varios miembros del equipo de prueba. Considere la posibilidad utilizar un enfoque controlado por
+    datos que separe los valores de los datos de la prueba de los scripts de prueba que los utilizan y proporcione un punto
+    central de recopilación y modificación de datos de la prueba. Esto supone dos ventajas clave: posibilita que todos los
+    miembros del equipo de prueba puedan ver los datos de la prueba, lo que les permite evitar conflictos potenciales en la
+    utilización de datos de la prueba y proporciona un punto central de modificación para los datos de la prueba cuando
+    deban actualizarse.
+</p>
+<h4>
+    <a id="FacilitateTestStateDependencies" name="FacilitateTestStateDependencies">Facilitar dependencias de estado de la
+    prueba</a> <a href="#IdentifyTestInfrastructure"><img height="20" alt="Ir a la parte superior de la página"     src="./../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    La mayoría de las pruebas requieren que el sistema esté en un estado específico antes de ejecutarse, y devuelven al
+    sistema a un estado conocido específico cuando finalizan. Las dependencias comunes incluyen derechos de seguridad
+    (función o datos), datos sensibles al contenido o dinámicos (por ejemplo: datos del sistema, números de pedido,
+    preferencias de ID de usuario, etc.), ciclo de caducidad de datos (por ejemplo, contraseñas de seguridad, caducidad del
+    producto, etc.). Algunas pruebas son muy dependientes entre sí; por ejemplo, una prueba puede crear un número de pedido
+    exclusivo y es posible que una prueba posterior tenga que enviar el mismo número de pedido.
+</p>
+<p>
+    Una solución común es utilizar los conjuntos de aplicaciones de prueba para ordenar las pruebas dependientes en el
+    orden de estados del sistema correcto. Los conjuntos de aplicaciones de prueba pueden unirse con programas de utilidad
+    de configuración y recuperación del sistema adecuados. En el caso de los esfuerzos de prueba automatizada, algunas
+    soluciones implican el uso de almacenamiento centralizado de datos dinámicos del sistema y la utilización de variables
+    en los scripts de prueba que hacen referencia a la información centralizada.
+</p>
+<h4>
+    <a id="FacilitateDerivedTestDataValues" name="FacilitateDerivedTestDataValues">Facilitar valores de datos de la prueba
+    derivados</a> <a href="#IdentifyTestInfrastructure"><img height="20" alt="Ir a la parte superior de la página"     src="./../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    A veces, las pruebas tienen que calcular o derivar valores de datos adecuados de uno o más aspectos del estado del
+    sistema de tiempo de ejecución. Esto se aplica a valores de datos de la prueba para los resultados esperados y la
+    entrada. Tenga en cuenta la posibilidad de desarrollar programas de utilidad que calculen los valores de los datos
+    derivados y, de esta manera, simplificar la ejecución de la prueba y la eliminación de las imprecisiones potenciales
+    debidas a errores humanos. Cuando sea posible, desarrolle estos programas de utilidad de manera que se puedan utilizar
+    para los esfuerzos de prueba automatizada y manual.
+</p>
+<h4>
+    <a id="FacilitateCommonNavigationPaths" name="FacilitateCommonNavigationPaths">Facilitar vías de navegación de pruebas
+    comunes</a> <a href="#IdentifyTestInfrastructure"><img height="20" alt="Ir a la parte superior de la página"     src="./../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    Para la automatización de pruebas, debería aislar secuencias de navegación comunes e implementarlas con funciones de
+    programa de utilidad centralizadas o scripts de prueba. Estas secuencias de navegación comunes se pueden volver a
+    utilizar en muchos sitios, y proporcionan un punto central de modificación en el caso de que la navegación cambie.
+    Estas ayudas comunes para la navegación se limitan a desplazarse por la aplicación de un punto a otro; normalmente, no
+    realizan pruebas, excepto verificar los estados de inicio y fin.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Identificar necesidades de dise&ntilde;o espec&iacute;ficas de la prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="IdentifyTestDesignNeeds" name="IdentifyTestDesignNeeds"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Identificar la necesidades de la disciplina de prueba que supondrán restricciones potenciales en el proceso
+                de ingeniería de software, la arquitectura de software y el diseño y la implementación
+                correspondientes.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Sobre todo en lo que se refiere a la automatización de pruebas, es probable que las necesidades de evaluación e
+    implementación de pruebas limiten la manera de activar el proceso de software del equipo de desarrollo y la
+    arquitectura y el diseño del software. Es importante que el equipo de desarrollo de software no se vea entorpecido
+    indebidamente en el trabajo de desarrollo central y tenga la capacidad para efectuar las pruebas necesarias. Consulte
+    el apartado <a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/obtain_testability_commitment_90A71C20.html" guid="{4052BFA5-036E-4BBE-B344-4BF5D81A4DD6}">Tarea: Obtener confirmación de comprobabilidad</a> para obtener
+    información sobre la presentación de las necesidades del equipo de prueba al equipo de desarrollo y la búsqueda de
+    soluciones ejecutables que satisfagan las necesidades de todas las disciplinas.
+</p>
+<p>
+    Con la información que ha reunido, reflexione sobre qué requisitos colocará el esfuerzo de prueba para la tarea de
+    desarrollo.
+</p>
+<p>
+    <b>Subtemas:</b>
+</p>
+<ul>
+    <li>
+        <a href="#IdentifyDesignTestInterfaces">Identificar interfaces de prueba</a>
+    </li>
+    <li>
+        <a href="#IdentifyDesignInbuiltTests">Identificar funciones de prueba incorporadas</a>
+    </li>
+    <li>
+        <a href="#IdentifyDesignTestConstraints">Identificar restricciones de diseño de pruebas</a>
+    </li>
+</ul>
+<h4>
+    <a id="IdentifyDesignTestInterfaces" name="IdentifyDesignTestInterfaces">Identificar interfaces de prueba</a> <a href="#IdentifyTestDesignNeeds"><img src="./../../core.base_rup/resources/top.gif" alt="Ir a la parte superior de la página"     border="0" width="26" height="20" /></a>
+</h4>
+<p>
+    Considere las interfaces identificadas, ¿hay requisitos adicionales que el esfuerzo de prueba necesite incluir en el
+    diseño de software y, posteriormente, exponer en la implementación? En algunos casos, son necesarias interfaces
+    adicionales específicamente para dar soporte al esfuerzo de prueba, o interfaces existentes requieren modalidades
+    operativas o firmas modificadas del mensaje (cambios en los parámetros de entrada y de retorno).
+</p>
+<p>
+    En cuando a los entornos de despliegue de destino (tal como se capturan en las configuraciones del entorno de prueba) y
+    la propia planificación de desarrollo, identifique las restricciones y las dependencias del esfuerzo de prueba. Estas
+    dependencias pueden necesitar la provisión de fragmentos para la simulación de elementos del entorno que no estarán
+    disponibles o que requieren demasiados recursos para realizar pruebas, o para proporcionar la oportunidad de realizar
+    pruebas de componentes desde el principio del sistema terminado parcialmente.
+</p>
+<h4>
+    <a id="IdentifyDesignInbuiltTests" name="IdentifyDesignInbuiltTests">Identificar funciones de prueba incorporadas</a>
+    <a href="#IdentifyTestDesignNeeds"><img src="./../../core.base_rup/resources/top.gif" alt="Ir a la parte superior de la página"     border="0" width="26" height="20" /></a>
+</h4>
+<p>
+    Algunas pruebas tienen un valor potencial, pero son demasiado caras para implementarse como pruebas de caja negra
+    reales. Además, en entornos muy fiables, es importante poder realizar pruebas y aislar los errores lo más rápido
+    posible para conseguir una resolución rápida. En estos casos, puede resultar útil crear pruebas directamente en el
+    software ejecutable.
+</p>
+<p>
+    Para conseguir esto se pueden adoptar diferentes enfoques; dos de los más comunes son las pruebas automáticas
+    incorporadas, en las que el software utiliza ciclos de proceso redundantes para efectuar las pruebas de integridad
+    automática, y las rutinas de diagnóstico, que se pueden llevar a cabo cuando se le envía al software un mensaje de
+    suceso de diagnóstico, o cuando el sistema está configurado para ejecutarse con las rutinas de diagnóstico habilitadas.
+</p>
+<h4>
+    <a id="IdentifyDesignTestConstraints" name="IdentifyDesignTestConstraints">Identificar restricciones de diseño de
+    pruebas</a> <a href="#IdentifyTestDesignNeeds"><img src="./../../core.base_rup/resources/top.gif"     alt="Ir a la parte superior de la página" border="0" width="26" height="20" /></a>
+</h4>
+<p>
+    Algunas de las opciones de implementación y diseño del equipo de desarrollo habilitarán o inhibirán el esfuerzo de
+    prueba. Muchas de estas pruebas son necesarias, pero hay muchas decisiones más pequeñas (sobre todo en el área de
+    implementación) que tienen un impacto mínimo en el equipo de desarrollo y un gran impacto en el equipo de prueba.
+</p>
+<p>
+    Las áreas que debe tener en cuenta son: Utilización de protocolos de comunicación estándar reconocidos; Utilización de
+    componentes de implementación de UI que puedan reconocer las herramientas de automatización de pruebas; Adhesión a las
+    reglas de diseño de UI, incluida la denominación de elementos de UI; Utilización coherente de las convenciones de
+    navegación de UI.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Definir los requisitos de comprobabilidad de software </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="DefineSoftwareTestability" name="DefineSoftwareTestability"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Especificar los requisitos de las funciones de software necesarias para dar soporte a la implementación y
+                la ejecución de pruebas.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Utilice el trabajo realizado anteriormente en la tarea para definir las restricciones y los requisitos específicos de
+    la prueba que se deberían tener en cuenta en el diseño y la implementación de software.<br />
+    <br />
+     Es importante explicar con claridad los motivos por los que es necesario integrar características específicas de la
+    prueba en el software al equipo de desarrollo. Los motivos principales suelen encontrarse en una de las áreas
+    siguientes:
+</p>
+<ul>
+    <li>
+        Permitir que las pruebas se implementen (manual o automáticamente) mediante una interfaz entre el elemento del
+        destino de la prueba y la prueba manual o automatizada. Esto suele ser más importante como un aspecto de la
+        automatización de pruebas para superar los límites de las herramientas de automatización de pruebas a la hora de
+        acceder a la aplicación de software para la entrada y la salida de información.
+    </li>
+    <li>
+        Permitir que las pruebas automáticas incorporadas las lleve a cabo el software desarrollado.
+    </li>
+    <li>
+        Permitir que los elementos del destino de la prueba se puedan aislar del resto del sistema desarrollado y probado.
+    </li>
+</ul>
+<p>
+    Las características específicas de la prueba se incorporan en el software para alcanzar un equilibrio entre el valor de
+    una característica incorporada de la prueba y el esfuerzo necesario para implementarla y probarla. Algunos ejemplos de
+    características incorporadas de la prueba son la producción de registros de auditoría, funciones de diagnóstico
+    automático e interfaces para preguntar el valor de las variables internas.
+</p>
+<p>
+    Otro uso común de la función específica de la prueba es durante el trabajo de integración, donde es necesario
+    proporcionar fragmentos para simulación para los componentes o subsistemas que todavía no se han implementado o
+    incorporado. Existen dos estilos de implementación principales para los fragmentos para simulación:
+</p>
+<ul>
+    <li>
+        Los fragmentos para simulación y los controladores que son simples "elementos ficticios" cuya única función es
+        proporcionar un valor (o valores) predefinido específico como valor de retorno o como entrada.
+    </li>
+    <li>
+        Los fragmentos para simulación y los controladores que son más inteligentes y pueden "simular" o aproximarse a un
+        comportamiento más complejo.
+    </li>
+</ul>
+<p>
+    Este segundo estilo de fragmento para simulación también proporciona un potente medio para aislar componentes o grupos
+    de componentes del resto del sistema y, de esta manera, proporcionar flexibilidad a la implementación y la ejecución de
+    pruebas. Al igual que en el caso de las características específicas de la prueba, es aconsejable alcanzar un equilibrio
+    entre el valor de un fragmento para simulación complejo y el esfuerzo necesario para implementar y probar el fragmento
+    para simulación. El segundo estilo debe utilizarse con prudencia por dos motivos: en primer lugar, necesita más
+    recursos para implementarse y, en segundo lugar, es más fácil pasar por alto la existencia del fragmento para
+    simulación y olvidarse de eliminarlo después.
+</p>
+<p>
+    Registre los resultados de los requisitos específicos de la prueba directamente en modelos de diseño e implementación,
+    o utilizando una o más especificaciones de la interfaz de prueba.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Definir la infraestructura de prueba </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="DefineSoftwareTestability" name="DefineSoftwareTestability"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Especificar los requisitos de la infraestructura de la prueba necesaria para dar soporte a la
+                implementación y la ejecución de pruebas.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Utilice el trabajo realizado anteriormente en la tarea para definir la infraestructura de la prueba necesaria para dar
+    soporte a la implementación y la ejecución de la prueba.
+</p>
+<p>
+    Recuerde que está definiendo las características de implementación de la infraestructura; el objetivo principal es
+    definir las diferentes partes de la solución que implementará la infraestructura.
+</p>
+<p>
+    <b>Subtemas:</b>
+</p>
+<ul>
+    <li>
+        <a href="#AutomationInfrastructureElements">Elementos de automatización de pruebas</a>
+    </li>
+    <li>
+        <a href="#ManualInfrastructureElements">Elementos de prueba manual</a>
+    </li>
+</ul>
+<h4>
+    <a id="AutomationInfrastructureElements" name="AutomationInfrastructureElements">Elementos de automatización de
+    pruebas</a> <a href="#DefineSoftwareTestability"><img src="./../../core.base_rup/resources/top.gif"     alt="Ir a la parte superior de la página" border="0" width="26" height="20" /></a>
+</h4>
+<p>
+    Los requisitos o características clave de la infraestructura de automatización de pruebas incluyen:
+</p>
+<ul>
+    <li>
+        Modelo de navegación: los enfoques comunes son el directo e inverso, el segmentado o el híbrido. Otras alternativas
+        pueden ser la utilización de un marco de acción-palabra o tablas de navegación en pantalla.
+    </li>
+    <li>
+        Acceso externo a datos: método para acceder a los datos externamente desde las instrucciones de la prueba
+    </li>
+    <li>
+        Recuperación y notificación de errores: rutinas comunes de manejo de errores y derivadores de ejecución de la
+        recuperación del conjunto de aplicaciones de prueba
+    </li>
+    <li>
+        Perfiles de acceso y seguridad: ID de usuario de ejecución de pruebas automatizadas
+    </li>
+    <li>
+        Capacidad del software para realizar pruebas automáticas
+    </li>
+</ul>
+<p>
+    Registre las decisiones como definiciones en las secciones de implementación de la Arquitectura de automatización de
+    pruebas, la orientación del proceso en una o más directrices de prueba o como scripts de prueba, conjuntos de
+    aplicaciones de prueba o rutinas del programa de utilidad de la biblioteca de pruebas. Consulte el apartado <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_test_automation_architecture_650DD06A.html" guid="{B5B77528-E14B-43CA-BC73-D64A90A17E2D}">Producto de trabajo: Arquitectura de automatización de pruebas</a> para
+    ver más sugerencias.
+</p>
+<h4>
+    <a id="ManualInfrastructureElements" name="ManualInfrastructureElements">Elementos de prueba manual</a> <a href="#DefineSoftwareTestability"><img src="./../../core.base_rup/resources/top.gif" alt="Ir a la parte superior de la página"     border="0" width="26" height="20" /></a>
+</h4>
+<p>
+    Los requisitos o características clave de la infraestructura de prueba manual incluyen:
+</p>
+<ul>
+    <li>
+        Repositorio de datos de prueba: un repositorio común para la definición de datos de prueba.
+    </li>
+    <li>
+        Restauración y recuperación: un método para restaurar o recuperar la configuración del entorno de prueba para un
+        estado conocido.
+    </li>
+    <li>
+        Permitir que los elementos del destino de la prueba se puedan aislar del resto del sistema desarrollado y probado.
+    </li>
+</ul>
+<p>
+    Registrar las decisiones como orientación del proceso en uno o más <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_project_specific_guidelines_8DC8DA32.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">Producto de trabajo: Directrices específicas del proyecto</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> Evaluar y verificar los resultados </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="EvaluateResults" name="EvaluateResults"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>Objetivo:</b>&nbsp;
+            </td>
+            <td width="95%">
+                Verificar que la tarea se ha realizado correctamente y que los productos de trabajo resultantes son
+                aceptables.&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    Ahora que ha terminado el trabajo, se recomienda verificar que el trabajo tenía el valor suficiente y que no sólo ha
+    gastado una gran cantidad de papel. Debe evaluar si el trabajo tiene la calidad correcta y si es lo suficientemente
+    completo para que resulte útil a aquellos miembros del equipo que vayan a utilizarlo posteriormente como entrada de su
+    trabajo. Siempre que sea posible, utilice las listas de comprobación proporcionadas en RUP para verificar que la
+    calidad y la completitud son lo "suficientemente buenas".
+</p>
+<p>
+    Fomente la participación en la revisión del trabajo interno por parte de las personas que realizan tareas basadas en
+    los resultados de su trabajo. Hágalo mientras todavía tenga tiempo para realizar acciones para solucionar sus
+    problemas. También debe evaluar su trabajo en los productos de trabajo de entrada clave para asegurarse de que los ha
+    representado de forma precisa y suficiente. Para ello, es muy útil hacer que el autor del producto de trabajo de
+    entrada revise su trabajo.
+</p>
+<p>
+    Recuerde que RUP es un proceso de entrega iterativo y que en muchos casos los productos de trabajo evolucionan con el
+    tiempo. Como tal, no siempre es necesario (y a veces es contraproducente) formar completamente un producto de trabajo
+    que sólo se utilizará de forma parcial o que no se utilizará en absoluto en un trabajo inmediatamente posterior. Esto
+    se debe a que existe una alta probabilidad de que la situación alrededor del producto de trabajo cambie (y que las
+    suposiciones realizadas cuando se creó el producto de trabajo se demuestre que son incorrectas) antes de que se utilice
+    el producto, lo que da como resultado un esfuerzo inútil y una revisión costosa. Asimismo, evite la trampa de invertir
+    demasiados ciclos en la presentación en detrimento del valor del contenido. En entornos de proyecto en los que la
+    presentación tenga importancia y un gran valor económico como entregable del proyecto, puede utilizar un recurso
+    administrativo para ejecutar tareas de presentación.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Propiedades</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Varias apariciones" abbr="Varias apariciones">Varias apariciones</th><td align="left" class="sectionTableCell" headers="property_Varias apariciones"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Condicionado por sucesos" abbr="Condicionado por sucesos">Condicionado por sucesos</th><td align="left" class="sectionTableCell" headers="property_Condicionado por sucesos"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Continuo" abbr="Continuo">Continuo</th><td align="left" class="sectionTableCell" headers="property_Continuo"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Opcional" abbr="Opcional">Opcional</th><td align="left" class="sectionTableCell" headers="property_Opcional"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Planeado" abbr="Planeado">Planeado</th><td align="left" class="sectionTableCell" headers="property_Planeado"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Se puede repetir" abbr="Se puede repetir">Se puede repetir</th><td align="left" class="sectionTableCell" headers="property_Se puede repetir"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/setup_testfactory_C77C34F4.html" guid="{FAC387D8-BA1A-4056-A53B-E1C43571D1DC}">Establecimiento del entorno de prueba en Rational TestFactory</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

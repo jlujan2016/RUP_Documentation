@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gu&iacute;a de la herramienta: Creaci&oacute;n de l&iacute;neas base utilizando Rational ClearCase</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="creating_baselines" name="uma.name">
+<meta content="Creaci&oacute;n de l&iacute;neas base utilizando Rational ClearCase" name="uma.presentationName">
+<meta content="Tool:rup_clearcase:Rational ClearCase" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational ClearCase" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{2BF31AC7-E278-4558-B8D2-83C5C646B7E9}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{2BF31AC7-E278-4558-B8D2-83C5C646B7E9}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{2BF31AC7-E278-4558-B8D2-83C5C646B7E9}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_85i-sDIFEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{2BF31AC7-E278-4558-B8D2-83C5C646B7E9}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_XxCC0AIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{2BF31AC7-E278-4558-B8D2-83C5C646B7E9}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{2BF31AC7-E278-4558-B8D2-83C5C646B7E9}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{2BF31AC7-E278-4558-B8D2-83C5C646B7E9}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{2BF31AC7-E278-4558-B8D2-83C5C646B7E9}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Instrucciones de la herramienta: Creaci&oacute;n de l&iacute;neas base utilizando Rational ClearCase</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta guía de la herramienta se describe cómo asegurarse de que los activos del proyecto están protegidos y se pueden recrear, según sea necesario, a través de prácticas de creación de líneas base adecuadas.</td>
+</tr>
+<tr>
+<td>Herramienta: <a href="./../../../core.base_rup/tools/rup_clearcase_9665C.html" guid="{B2D1373B-A826-4169-A38A-B53B2122DC7C}">Rational ClearCase</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/establish_project_cm_policies_6B9785AC.html" guid="{E45B1CBF-29EB-431E-9417-F40E45BBAFD1}">Establecer políticas de gestión de la configuración (CM)</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/create_baseline_30FA138.html" guid="{F8256B31-5CE3-49C0-9DC2-ECB57DD48867}">Crear las líneas base</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Visión general
+</h3>
+<p>
+    En el diagrama siguiente se ilustra el flujo de trabajo para la gestión de proyectos de UCM. En esta guía de la
+    herramienta se tratan las áreas sombreadas.
+</p>
+<p>
+    <img height="103" alt="Diagrama de flujo de trabajo de UCM" src="./../../../core.base_rup/guidances/toolmentors/resources/wflow_mkbl.gif" width="463" border="0" />
+</p>
+<p>
+    En UCM de Rational ClearCase, una línea base es un objeto que, por lo general, representa una configuración estable de
+    un componente. Una línea base identifica actividades y una versión de cada elemento de un componente que actúa como una
+    versión de un componente.
+</p>
+<p>
+    A medida que los desarrolladores entregan trabajo a la corriente de datos de integración, los gestores de proyectos
+    crean nuevas líneas base para el área de trabajo compartida o de integración del proyecto, que incorpora los cambios. A
+    continuación, los desarrolladores pueden cambiar la base a las nuevas líneas base y estar al día con los cambios del
+    proyecto.
+</p>
+<p>
+    Esta guía de la herramienta se aplica al ejecutar Microsoft Windows.
+</p>
+<h4>
+    Terminología
+</h4>
+<h5>
+    Tipos de líneas base
+</h5>
+<blockquote>
+    <p>
+        Una <b><i>línea base incremental</i></b> es una línea base que crea ClearCase registrando la última línea base
+        completa y las versiones que han cambiado desde la creación de la última línea base completa.
+    </p>
+    <p>
+        Una <b><i>línea base completa</i></b> es una línea base que crea ClearCase registrando todas las versiones que se
+        encuentran bajo el directorio raíz del componente. Por lo general, se tarda menos tiempo en crear una línea base
+        incremental. Sin embargo, ClearCase tarda menos tiempo en buscar el contenido de una línea base completa.
+    </p>
+</blockquote>
+<h3>
+    <a id="ToolSteps" name="ToolSteps">Pasos de la herramienta</a>
+</h3>
+<p>
+    Para crear líneas base, siga los pasos que se indican a continuación:
+</p>
+<ul>
+    <li>
+        <a href="#LockProjectIntegrationStream">Bloquear la corriente de datos de integración del proyecto</a>
+    </li>
+    <li>
+        <a href="#StartMakeBaseline">Iniciar el diálogo Crear línea base</a>
+    </li>
+    <li>
+        <a href="#DescribeTheBaselineInformation">Especificar información descriptiva para la línea base</a>
+    </li>
+    <li>
+        <a href="#UnlockProjectIntegrationStream">Desbloquear la corriente de datos de integración</a>
+    </li>
+</ul>
+<h3>
+    1.&nbsp;<a id="LockProjectIntegrationStream" name="LockProjectIntegrationStream">Bloquear la corriente de datos de
+    integración del proyecto</a> <a href="#ToolSteps"><img height="20" alt="Ir a los pasos de la herramienta"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    Mientras está bloqueada, no se puede entregar ningún nuevo trabajo a la corriente de datos de integración, lo que
+    garantiza una configuración estable de la que crear la línea base.
+</p>
+<ol>
+    <li>
+        Desde la barra de tareas de Windows, seleccione <b>Inicio &gt; Programas &gt; Software Rational &gt; Rational
+        ClearCase &gt; Explorador de proyectos</b>.
+    </li>
+    <li>
+        En el Explorador de proyectos, localice y seleccione la corriente de datos de integración del proyecto.
+    </li>
+    <li>
+        Pulse <b>Archivo &gt; Propiedades</b> para visualizar la hoja de propiedades de la corriente de datos de
+        integración.
+    </li>
+    <li>
+        Pulse la pestaña <b>Bloquear</b>.
+    </li>
+    <li>
+        Pulse <b>Bloqueada</b> y, a continuación, pulse <b>Aceptar</b>.&nbsp;&nbsp;
+    </li>
+</ol>
+<h3>
+    2.&nbsp;<a id="StartMakeBaseline" name="StartMakeBaseline">Iniciar el diálogo Crear línea base</a> <a href="#ToolSteps"><img height="20" alt="Ir a los pasos de la herramienta" src="./../../../core.base_rup/resources/top.gif" width="26"     border="0" /></a>
+</h3>
+<ol>
+    <li>
+        En el Explorador de proyectos, localice y seleccione la corriente de datos de integración del proyecto.
+    </li>
+    <li>
+        Pulse <b>Herramientas &gt; Crear línea base</b>.&nbsp;Se muestra el recuadro de diálogo Crear línea base.
+    </li>
+</ol>
+<h3>
+    3.&nbsp;<a id="DescribeTheBaselineInformation" name="DescribeTheBaselineInformation">Especificar información
+    descriptiva para la línea base</a> <a href="#ToolSteps"><img height="20" alt="Ir a los pasos de la herramienta"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    La información descriptiva incluye el nombre de la línea base, el tipo de línea base que se va a crear, los componentes
+    para los que se va a crear una línea base y la información de corriente de datos y vista que se va a utilizar.
+</p>
+<ol>
+    <li>
+        Entre el nombre en el recuadro <b>Nombre de línea base</b>. Por omisión, ClearCase denomina la línea base
+        añadiéndole la fecha al nombre del proyecto.
+    </li>
+    <li>
+        Seleccione <b>incremental</b> o <b>completa</b> como tipo de línea base que crear.
+    </li>
+    <li>
+        Seleccione un contexto de vista para la línea base especificando una de las vistas de integración del proyecto, una
+        vista unida a la corriente de datos de integración del proyecto.
+    </li>
+    <li>
+        Especifique los componentes para los que va a crear líneas base. ClearCase añade, automáticamente, un identificador
+        exclusivo a cada línea base como ayuda para diferenciar líneas base asociadas a componentes individuales.
+    </li>
+</ol>
+<p>
+    &nbsp;<img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;Para
+    obtener más información, consulte el tema referente al <i>navegador del árbol de componentes de ClearCase</i> de la
+    ayuda en línea de ClearCase.
+</p>
+<h3>
+    4.&nbsp;<a id="UnlockProjectIntegrationStream" name="UnlockProjectIntegrationStream">Desbloquear la corriente de datos
+    de integración</a> <a href="#ToolSteps"><img height="20" alt="Ir a los pasos de la herramienta"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<ol>
+    <li>
+        En el Explorador de proyectos, localice y seleccione la corriente de datos de integración del proyecto.
+    </li>
+    <li>
+        Pulse <b>Archivo &gt; Propiedades</b> para visualizar la hoja de propiedades de la corriente de datos de
+        integración.
+    </li>
+    <li>
+        Pulse la pestaña <b>Bloquear</b>.
+    </li>
+    <li>
+        Pulse <b>Desbloqueada</b> y, a continuación, pulse <b>Aceptar</b>.
+    </li>
+</ol>
+<p>
+    &nbsp;<img height="16" alt="icono de publicación de ayuda" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;Para
+    obtener más información, consulte los temas de la ayuda en línea de ClearCase que tratan sobre:
+</p>
+<ul>
+    <li>
+        &nbsp;<i>Acerca de las líneas base</i>
+    </li>
+    <li>
+        &nbsp;<i>Creación de una línea base</i>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Conceptos</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/guidances/concepts/baselining_88B2C018.html" guid="4.4540149642001026E-305">Creación de líneas base</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Aplicaci&oacute;n J2EE</title>
+<meta content="Guideline" name="uma.type">
+<meta content="j2ee_application" name="uma.name">
+<meta content="Aplicaci&oacute;n J2EE" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_OKm3oN7UEdmjRZts2c4ZjQ", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "1.6057780853529704E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.6057780853529704E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.6057780853529704E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Aplicaci&oacute;n J2EE</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Esta directriz trata la aplicación J2EE, la unidad de despliegue independiente más grande en un sistema J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Elemento de implementación</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Introducción
+</h3>
+<p>
+    Una aplicación J2EE es la unidad de despliegue independiente más grande en un sistema J2EE. Consulte la sección <a href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307" class="elementLinkWithUserText">Concepto: visión general de Java 2 Platform Enterprise
+    Edition (J2EE)</a> para obtener información general sobre las aplicaciones J2EE.
+</p>
+<p>
+    Consulte la sección <a href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_applications_38E5D5D5.html" guid="3.347498143656868E-305" class="elementLinkWithUserText">Directriz: ensamblaje de aplicaciones J2EE</a> para
+    obtener más información sobre la forma en que ensamblar las aplicaciones J2EE.
+</p>
+<p>
+    Consulte la sección <a href="./../../../tech.j2ee/guidances/guidelines/deploying_j2ee_modules_and_applications_62A4A967.html" guid="5.3908533897796765E-306" class="elementLinkWithUserText">Directriz: despliegue de módulos y aplicaciones J2EE</a>
+    para obtener más información sobre la forma en que desplegar aplicaciones J2EE.
+</p>
+<h3>
+    Modelado de aplicaciones J2EE
+</h3>
+<p>
+    En el <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">modelo de implementación</a> las aplicaciones J2EE se representan como
+    artefactos UML con un estereotipo &lt;&lt;EAR&gt;&gt;.
+</p>
+<p>
+    La formación de archivadores de módulos J2EE en un archivador de aplicación J2EE se puede mostrar de forma gráfica
+    dibujando una dependencia &lt;&lt;EJBModule&gt;&gt; desde los JAR de EJB contenidos hasta el EAR y dibujando una
+    dependencia &lt;&lt;WebModule&gt;&gt; desde los WAR contenidos hasta el EAR.
+</p>
+<p>
+    <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/ear_contents.gif" />
+</p>
+<p>
+    La correlación de una aplicación J2EE con un nodo específico (esto es, un servidor de aplicaciones) se puede mostrar de
+    forma gráfica dibujando una dependencia &lt;&lt;deploy&gt;&gt; desde el EAR hasta el nodo servidor de aplicaciones, tal
+    como se muestra en el siguiente diagrama.
+</p>
+<p>
+    <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/ear_to_app_server.gif" />
+</p>
+<p>
+    Además de modelar qué archivadores de módulos se empaquetan en el archivador de aplicación, también existe la
+    posibilidad de modelar propiedades, que en última instancia se documentan en los descriptores de despliegue de los
+    archivadores de aplicación y módulos.
+</p>
+<p>
+    A continuación se muestra un ejemplo de cómo modelar algunas de estas propiedades:
+</p>
+<p>
+    <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/guidelines/resources/extended_ear_example.gif" />
+</p>
+<p>
+    En el diagrama anterior se muestra el ensamblaje de un archivador EJB y web en un EAR. Observe el modelado de los roles
+    de seguridad, que la aplicación utiliza para determinar qué tipos de usuarios pueden acceder a determinadas partes del
+    sistema, o hasta de forma más detallada, a nivel de acceso a métodos.
+</p>
+<h3>
+    Descriptores de despliegue de aplicaciones J2EE
+</h3>
+<p>
+    Una aplicación J2EE contiene un descriptor de despliegue de aplicación J2EE en forma de un archivo que se denomina
+    "application.xml" El descriptor de despliegue se debe colocar en el directorio META-INF/.
+</p>
+<p>
+    El descriptor de despliegue indica en una lista los módulos que se empaquetan en la aplicación, así como instrucciones
+    para personalizar la aplicación.
+</p>
+<p>
+    El contenido del descriptor de despliegue se establece al ensamblar la aplicación J2EE. Consulte la sección <a href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_applications_38E5D5D5.html" guid="3.347498143656868E-305" class="elementLinkWithUserText">Directriz: ensamblaje de aplicaciones J2EE</a> para
+    obtener más información sobre la forma en que ensamblar aplicaciones J2EE.
+</p>
+<p>
+    Consulte la sección <a href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307" class="elementLinkWithUserText">Concepto: visión general de Java 2 Platform Enterprise
+    Edition (J2EE)</a> para obtener información general sobre los descriptores de despliegue.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

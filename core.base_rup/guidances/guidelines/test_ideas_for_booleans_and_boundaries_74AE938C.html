@@ -1,0 +1,1774 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Ideas de pruebas para booleanos y l&iacute;mites</title>
+<meta content="Guideline" name="uma.type">
+<meta content="test_ideas_for_booleans_and_boundaries" name="uma.name">
+<meta content="Ideas de pruebas para booleanos y l&iacute;mites" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "1.8659406802663404E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3lZjkCxqEdqYV4MWf8PiCw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "1.8659406802663404E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.8659406802663404E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "1.8659406802663404E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.8659406802663404E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Ideas de pruebas para booleanos y l&iacute;mites</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Ideas de prueba basadas en anomalías de software plausibles y en cómo descubrir dichas anomalías. En esta directriz se explica cómo desarrollar ideas de prueba para expresiones booleanas y condiciones de límite.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_test_ideas_list_2A0F8E03.html" guid="{45219F27-0F84-4FD5-A7BC-73C19226303B}">Lista de ideas de prueba</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="prueba" text="para booleanos y límites" name="XE_test__developer_testing__test_ideas__for_booleans_and_boundaries" id="XE_test__developer_testing__test_ideas__for_booleans_and_boundaries" class="index"></a><a key="ideas de prueba" text="para booleanos y límites" name="XE_test-ideas__for_booleans_and_boundaries" id="XE_test-ideas__for_booleans_and_boundaries" class="index"></a><a key="diseño" text="para booleanos y límites" name="XE_design__developer_testing__test_ideas__for_booleans_and_boundaries" id="XE_design__developer_testing__test_ideas__for_booleans_and_boundaries" class="index"></a> 
+<h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    Las ideas de prueba se basan en <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/fault_model_C99EBECA.html" target="_blank" guid="_yJJZCdnmEdmO6L4XMImrsA">modelos de anomalía</a>, nociones de qué anomalías son plausibles en software y cómo se
+    pueden descubrir estas anomalías. En esta directriz se muestra como crear las ideas de prueba de expresiones booleanas
+    y relacionales. Primero motiva las técnicas mirando el código, luego describe cómo aplicarlas si el código todavía no
+    se ha escrito o si no está disponible.
+</p>
+<h3>
+    <a id="BooleanExpressions" name="BooleanExpressions"></a><b>Expresiones booleanas</b>
+</h3>
+<p>
+    Tenga en cuenta el extracto de código siguiente, tomado de un sistema (imaginario) para gestionar la detonación de
+    bombas. Forma parte del sistema de seguridad y controla si se obedece el pulsador del botón "detonar bomba".
+</p>
+<blockquote>
+<pre>
+ si (publicIsClear || technicianClear) {
+    bomb.detonate();
+}
+</pre>
+</blockquote>
+<p>
+    El código es incorrecto. <font size="+0">||</font> debería ser <font size="+0">&&</font>. Este error tendrá
+    efectos negativos. En lugar de detonar la bomba cuando ambos, el técnico de bombas y el público, estén fuera de
+    alcance, el sistema detonará cuando <i>cualquiera de los dos</i> esté fuera de alcance.
+</p>
+<p>
+    ¿Qué prueba encontraría este error?
+</p>
+<p>
+    Imagine una prueba en que el botón se pulsa cuando el técnico y el público estén fuera del alcance. El código
+    permitiría detonar la bomba. Pero -y esto es importante - el código <i>correcto</i> (el que utiliza un <font     size="+0">&&</font>) haría lo mismo. Entonces la prueba no sirve para encontrar esta anomalía.
+</p>
+<p>
+    De forma similar, este código incorrecto se comporta correctamente cuando el técnico y el público están junto a la
+    bomba: la bomba no se detona.
+</p>
+<p>
+    Para encontrar el error, debe tener un caso en que el código escrito se evalúe diferentemente del código que debería
+    estar escrito. Por ejemplo el público debe estar fuera de alcance, per el técnico de bombas sigue junto a la bomba.
+    Estas son todas las pruebas en forma de tabla:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="20%">
+                    <p align="center">
+                        publicIsClear
+                    </p>
+                </th>
+                <th scope="col" width="20%">
+                    <p align="center">
+                        technicianClear
+                    </p>
+                </th>
+                <th scope="col" width="20%">
+                    <p align="center">
+                        Código según escrito...
+                    </p>
+                </th>
+                <th scope="col" width="20%">
+                    <p align="center">
+                        El código correcto tendría...
+                    </p>
+                </th>
+                <th width="20%">
+                    &nbsp;
+                </th>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        <font color="#008000">detona</font>
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        <font color="#008000">detonado</font>
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        la prueba es inútil (para esta anomalía)
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        <font color="#ff0000">detona</font>
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        <font color="#ff0000">no detonado</font>
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        prueba útil
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        <font color="#ff0000">detona</font>
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        <font color="#ff0000">no detonado</font>
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        prueba útil
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        <font color="#008000">no detona</font>
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        <font color="#008000">no detonado</font>
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        la prueba es inútil (para esta anomalía)
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Las dos pruebas intermedias son útiles para encontrar este error concreto. Tenga en cuenta, sin embargo, que son
+    redundantes: como cualquiera de las dos encontrará el error, no es necesario que ejecute las dos.
+</p>
+<p>
+    Existen otros modos en que la expresión puede ser incorrecta. Estas son dos listas de errores comunes en expresiones
+    booleanas. Las anomalías de la izquierda se han capturado con la técnica que se discute aquí. Las anomalías de la
+    derecha pueden no aparecer. Por lo tanto, esta técnica no captura todas las anomalías que deseamos, pero sigue siendo
+    útil.
+</p>
+<div align="right">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="50%">
+                    <p align="center">
+                        <b>Anomalías seleccionadas</b>
+                    </p>
+                </th>
+                <th scope="col" width="50%">
+                    <p align="center">
+                        <b>Anomalías que posiblemente no se detectarán</b>
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="50%">
+                    Utilización del operador incorrecto: una <font color="#ff0000"><b>||</b></font> b debería ser a<font                     color="#ff0000"><b>&&</b></font>b
+                </td>
+                <td width="50%">
+                    Variable incorrecta utilizada: a&&<font color="#ff0000"><b>b</b></font>&&c debería ser
+                    a&& <font color="#ff0000"><b>x</b></font>&&d
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    La negación se omite o es incorrecta: a||b debería ser <font color="#ff0000"><b>!</b></font>a||b, o
+                    <font color="#ff0000"><b>!</b></font> a||b debería ser a||b
+                </td>
+                <td width="50%">
+                    Expresión demasiado sencilla: a&&b debería ser a&&b<font                     color="#ff0000"><b>&&c</b></font>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    La expresión entre paréntesis está configurada de forma incorrecta: &&b||c debería ser
+                    &&<font color="#ff0000"><b>(</b></font>b||c<font color="#ff0000"><b>)</b></font>
+                </td>
+                <td width="50%">
+                    Las expresiones con más de una de las anomalías de la columna izquierda
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    La expresión es demasiado compleja: a&&b<b>&&c</b> debería ser <font                     size="+0">a&&b<br />
+                    </font> (Esta anomalía es poco probable, pero fácil de detectar con pruebas útiles por otros motivos).
+                </td>
+                <td width="50%">
+                    &nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    ¿Cómo se utilizan estas ideas? Imagine que tiene una expresión booleana como <font size="+0">a&&!b</font>.
+    Puede construir una tabla de la verdad como la siguiente:
+</p>
+<div align="right">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="14%">
+                    <p align="center">
+                        a
+                    </p>
+                </th>
+                <th scope="col" width="14%">
+                    <p align="center">
+                        b
+                    </p>
+                </th>
+                <th scope="col" width="14%">
+                    <p align="center">
+                        a&&!b<br />
+                         (código según escrito)
+                    </p>
+                </th>
+                <th scope="col" width="14%">
+                    <p align="center">
+                        quizás debería ser<br />
+                         a<font color="#ff0000"><b>||</b></font>!b
+                    </p>
+                </th>
+                <th scope="col" width="14%">
+                    <p align="center">
+                        quizás debería ser<br />
+                         <font color="#ff0000"><b>!</b></font>a&&!b
+                    </p>
+                </th>
+                <th scope="col" width="15%">
+                    <p align="center">
+                        quizás debería ser<br />
+                         a&&b
+                    </p>
+                </th>
+                <th scope="col" width="15%">
+                    <p align="center">
+                        ...
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="14%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        <font color="#ff0000">true</font>
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="15%">
+                    <p align="center">
+                        <font color="#ff0000">true</font>
+                    </p>
+                </td>
+                <td width="15%">
+                    <p align="center">
+                        ...
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="14%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        <font color="#ff0000">false</font>
+                    </p>
+                </td>
+                <td width="15%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="15%">
+                    <p align="center">
+                        ...
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="15%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="15%">
+                    <p align="center">
+                        ...
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        <font color="#ff0000">true</font>
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        <font color="#ff0000">true</font>
+                    </p>
+                </td>
+                <td width="15%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="15%">
+                    <p align="center">
+                        ...
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Si ha revisado todas las posibilidades, verá que la primera, la segunda y la cuarta posibilidad son todas las
+    necesarias. La tercera expresión no encontrará anomalías que no encuentren las demás, así que no necesita intentarla.
+    (A medida que las expresiones sean más complicadas, los ahorros debidos a casos innecesarios aumentarán rápidamente).
+</p>
+<p>
+    Por supuesto, nadie sano construiría una tabla como esta. Por suerte, no tendrá que hacerlo. Es fácil de recordar los
+    casos necesarios para expresiones simples. (Consulte la sección siguiente). Para expresiones más complejas, como <font     size="+0">A&&B||C</font>, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_ideas_for_booleans_ands_and_ors_BB81527B.html" target="_blank" guid="9.407283892342409E-306">Ideas de pruebas para combinaciones de AND y OR</a>, que lista ideas de prueba para
+    expresiones con dos o tres operadores. Para expresiones más complejas, un <a href="http://www.testing.com/tools/multi/README.html" target="_blank">programa</a> se puede utilizar para generar ideas
+    de prueba.
+</p>
+<h3>
+    <a id="SimpleExpressionTables" name="SimpleExpressionTables"></a><b>Tablas para expresiones booleanas simples</b>
+</h3>
+<p>
+    Si la expresión es <font size="+0">A&&B</font>, pruebe con:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="50%">
+                    <p align="center">
+                        A
+                    </p>
+                </th>
+                <th scope="col" width="50%">
+                    <p align="center">
+                        B
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="50%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="50%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Si la expresión es <font size="+0">A||B</font>, pruebe con:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="50%">
+                    <p align="center">
+                        A
+                    </p>
+                </th>
+                <th scope="col" width="50%">
+                    <p align="center">
+                        B
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="50%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="50%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Si la expresión es <font size="+0">A<sub>1</sub> && A<sub>2</sub> && ... &&
+    A<sub>n</sub></font>, pruebe con:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A<sub>1,</sub> A<sub>2</sub>, ..., y A<sub>n</sub> son todos true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A<sub>1</sub> es false, el resto son true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A<sub>2</sub> es false, el resto son true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        ...
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A<sub>n</sub> es false, el resto son true
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p align="left">
+    Si la expresión es <font size="+0">A<sub>1</sub> || A<sub>2</sub> || ... || A<sub>n</sub></font>, pruebe con:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A<sub>1,</sub> A<sub>2</sub>, ..., y A<sub>n</sub> son todos false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A<sub>1</sub> es true, el resto son false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A<sub>2</sub> es true, el resto son false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        ...
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A<sub>n</sub> es true, el resto son false
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Si la expresión es <font size="+0">A</font>, pruebe con:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Por lo tanto, cuando necesite probar <font size="+0">a&&!b</font>, Puede aplicar la primera tabla anterior,
+    invirtiendo el sentido de b (porque está negado), y obtener esta lista de <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/test-ideas_list_A6CEF011.html" guid="6.149711039531016E-305">Ideas de
+    prueba</a>:
+</p>
+<ul>
+    <li>
+        A true, B false
+    </li>
+    <li>
+        A true, B true
+    </li>
+    <li>
+        A false, B false
+    </li>
+</ul>
+<h3>
+    <a id="RelationalExpressions" name="RelationalExpressions"></a><b>Expresiones relacionales</b>
+</h3>
+<p align="left">
+    Este es otro ejemplo de código con una anomalía:
+</p>
+<blockquote>
+<pre>
+ if (finished &lt; required) {
+    siren.sound();
+}
+</pre>
+</blockquote>
+<p align="left">
+    <font size="+0">&lt;</font> debería ser un <font size="+0">&lt;=</font>. Estos errores suelen ser habituales. Igual que
+    en las expresiones booleanas, puede construir una tabla de valores de prueba y ver cuales detecta la anomalía:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        finalizado
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        necesario
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        código según escrito...
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        el código correcto tendría...
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        1
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        5
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        suena la sirena
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        sonaba la sirena
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        5
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        5
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        <font color="#ff0000">no suena la sirena</font>
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        <font color="#ff0000">sonaba la sirena</font>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        5
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        1
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        no suena la sirena
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        no sonaba la sirena
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Más generalmente, la anomalía se puede detectar siempre que <font size="+0">finished=required</font>. En los análisis
+    de anomalías plausibles, podemos obtener estas normas para ideas de prueba:
+</p>
+<p>
+    Si la expresión es A&lt;B o A&gt;=B, pruebe con lo siguiente:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A=B
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A ligeramente menos que B
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Si la expresión es A&gt;B o A&lt;=B, pruebe con lo siguiente:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A=B
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A ligeramente más que B
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    ¿Qué significa "ligeramente"? Si A y B son enteros, A debe ser uno menos o más que B. Si son números de punto flotante,
+    A debe ser un número cercano a B. (Probablemente no es necesario que sea el número de punto flotante más cercano a B).
+</p>
+<h3>
+    <a id="CombinedExpressions" name="CombinedExpressions"></a><b>Reglas para expresiones booleanas y relacionales
+    combinadas</b>
+</h3>
+<p>
+    La mayoría de operadores relacionales ocurren dentro de expresiones booleanas, como en este ejemplo:
+</p>
+<blockquote>
+<pre>
+ if (finished &lt; required) {
+    siren.sound();
+}
+</pre>
+</blockquote>
+<p>
+    Las reglas de las expresiones relacionales conducirían a estas ideas de prueba:
+</p>
+<ol>
+    <li>
+        <font size="+0">finalizado</font> equivale a necesario
+    </li>
+    <li>
+        <font size="+0">finalizado</font> es ligeramente menos que esta expresión: <font size="+0">necesario</font>
+    </li>
+</ol>
+<p>
+    Las reglas de las expresiones booleanas conducirían a lo siguiente:
+</p>
+<ol>
+    <li>
+        <font size="+0">finalizado &lt; necesario</font> debería ser true
+    </li>
+    <li>
+        <font size="+0">finalizado &lt; necesario</font> debería ser false
+    </li>
+</ol>
+<p>
+    Puede ser que esta expresión: <font size="+0">finalizado</font> es ligeramente menos que esta expresión: <font     size="+0">necesario</font>, <font size="+0">finalizado &lt; necesario</font> es true, así que no es necesario escribir
+    la última.
+</p>
+<p>
+    Si esta expresión es false no es necesario escribirla: <font size="+0">finalizado</font> equivale <font     size="+0">necesario</font>, <font size="+0">, finalizado &lt; necesario</font> .
+</p>
+<p>
+    Si una expresión relacional no contiene operadores booleanos (<font size="+0">&&</font> and <font     size="+0">||</font>), omita el hecho de que también es una expresión booleana.
+</p>
+<p>
+    Las cosas son más complicadas con combinaciones de operadores booleanos y relacionales, como el siguiente:
+</p>
+<blockquote>
+<pre>
+ if (count&lt;5 || always) {
+   siren.sound();
+}
+</pre>
+</blockquote>
+<p>
+    Desde la expresión relacional, obtiene:
+</p>
+<ul>
+    <li>
+        <font size="+0">count</font> ligeramente menos que 5
+    </li>
+    <li>
+        <font size="+0">count</font> igual a 5
+    </li>
+</ul>
+<p>
+    Desde la expresión booleana, obtiene:
+</p>
+<ul>
+    <li>
+        <font size="+0">count&lt;5</font> true, siempre false
+    </li>
+    <li>
+        <font size="+0">count&lt;5</font> false, siempre true
+    </li>
+    <li>
+        <font size="+0">count&lt;5</font> false, siempre false
+    </li>
+</ul>
+<p>
+    Esto se puede combinar en tres ideas de prueba más específicas. (Aquí, tenga en cuenta que <font size="+0">count</font>
+    es un entero).
+</p>
+<ol>
+    <li>
+        <font size="+0">count=4</font>, siempre false
+    </li>
+    <li>
+        <font size="+0">count=5</font>, siempre true
+    </li>
+    <li>
+        <font size="+0">count=5</font>, siempre false
+    </li>
+</ol>
+<p>
+    Tenga en cuenta que <font size="+0">count=5</font> se utiliza dos veces. Puede parecer mejor utilizarlo sólo una vez;
+    para permitir el uso de algún otro valor - después de todo, por qué probar esta expresión con 5 dos veces: <font     size="+0">count</font> ? ¿No sería mejor intentarlo una vez con 5 y otra con algún otro valor para que el resultado sea
+    false? (Ejemplo: <font size="+0">count&lt;5</font> Lo sería, pero es peligroso intentarlo. Esto es porque es fácil
+    equivocarse. Imagine que ha intentado lo siguiente:
+</p>
+<ol>
+    <li>
+        <font size="+0">count=4</font>, siempre false
+    </li>
+    <li>
+        <font size="+0">count=5</font>, siempre true
+    </li>
+    <li>
+        <font size="+0"><b>count&lt;5</b></font> <b>false</b>, siempre false
+    </li>
+</ol>
+<p>
+    Imagine que existe una anomalía que sólo se puede capturar con el valor siguiente: <font size="+0">count=5</font>. Esto
+    significa que el valor 5 producirá "false" en la expresión <font size="+0">count&lt;5</font>, cuando el código correcto
+    habría producido true. Sin embargo, este valor false se convierte inmediatamente en OR con el valor de siempre, que es
+    true. Esto significa que el valor de toda la expresión es correcto, aunque el valor de la subexpresión relacional fuera
+    incorrecto. La anomalía no se descubrirá.
+</p>
+<p>
+    La anomalía se descubre si es el <i>otro</i> count=5 que se deja menos específico.
+</p>
+<p>
+    Ocurren problemas similares cuando la expresión relacional se encuentra a la derecha del operador booleano.
+</p>
+<p>
+    Como resulta complicado conocer qué subexpresiones deben ser exactas y cuáles pueden ser generales, es mejor hacerlas
+    todas exactas. La alternativa es utilizar el <a href="http://www.testing.com/tools/multi/README.html" target="_blank">programa de expresión booleana</a> mencionado anteriormente. Produce ideas de prueba correctas para
+    expresiones booleanas y relacionales combinadas.
+</p>
+<h3>
+    <a id="TestIdeasWithoutCode" name="TestIdeasWithoutCode"></a><b>Ideas de prueba sin código</b>
+</h3>
+<p>
+    Tal como se explica en <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/test-first_design_6124EA6D.html" guid="2.5962561793181055E-305">Concepto:
+    Diseño de primera prueba</a>, suele ser preferible diseñar las pruebas antes de implementar código. Así que, aunque las
+    técnicas se motivan con ejemplos de códigos, se aplicarán habitualmente sin código. ¿Cómo?
+</p>
+<p>
+    Ciertos artefactos de diseño, como gráficos de estado y diagramas de secuencia, utilizan las expresiones booleanas como
+    vigilancias. Estos casos son directos: simplemente añaden ideas de prueba de las expresiones booleanas a la lista de
+    comprobación de ideas de prueba del artefacto. Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_ideas_for_statechart_and_flow_diagrams_B881354C.html" guid="3.794638918140148E-305">Directriz de producto de trabajo: Ideas de prueba para gráficos de estado y diagramas de
+    actividad</a>.
+</p>
+<p>
+    El caso más complica aparece cuando las expresiones booleanas son implícitas en lugar de explícitas. Esto suele ocurrir
+    en las descripciones de las API. A continuación se muestra un ejemplo. Imagine este método:
+</p>
+<blockquote>
+<pre>
+ List matchList(Directory d1, Directory d1,
+       FilenameFilter excluder);
+</pre>
+</blockquote>
+<p>
+    La descripción del comportamiento de este método sería la siguiente:
+</p>
+<blockquote>
+    <p>
+        Devuelve una lista de los nombres de vía de acceso absolutos de todos los archivos que aparecen en ambos
+        directorios. Los subdirectorios descienden. [...] Nombres de archivo que coinciden con el <font         size="+0">excluyente</font> se excluyen de la lista devuelta. El excluyente sólo se aplica a los directorios de
+        nivel superior, no a los nombres de archivo de los subdirectorios.
+    </p>
+</blockquote>
+<p>
+    Las palabras "and", "or" no aparecen. ¿Pero cuando es un nombre de archivo incluido en la lista devuelta? Cuando
+    aparece en el primer directorio <b>y</b> aparece en el segundo directorio <b>y</b> se encuentra en un directorio de
+    nivel inferior <b>o</b> no se excluye específicamente. En el código:
+</p>
+<blockquote>
+<pre>
+ if (appearsInFirst && appearsInSecond &&
+    (inLowerLevel || !excluded)) {
+  add to list
+}
+</pre>
+</blockquote>
+<p>
+    Estas son las ideas de prueba para esta expresión, en forma de tabla:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        appearsInFirst
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        appearsInSecond
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        inLower
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        excluded
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p>
+    <br />
+     El enfoque general para descubrir expresiones booleanas implícitas a partir del texto es listar primero las acciones
+    descritas (como "devuelve un nombre coincidente"). A continuación, escriba la expresión booleana que describe los casos
+    en que se realiza alguna acción. Derive las ideas de prueba de todas las expresiones.
+</p>
+<p>
+    Los desacuerdos tienen cabida en este proceso. Por ejemplo, una persona puede escribir la expresión booleana que se ha
+    utilizado anteriormente. Otra puede decir que realmente hay dos acciones distintas: primero, el programa descubre los
+    nombres coincidentes y, a continuación, los filtra. Por lo tanto, en lugar de una expresión, hay dos:
+</p>
+<dl>
+    <dt>
+        descubrir una coincidencia:
+    </dt>
+    <dd>
+        ocurre cuando un archivo está en el primer directorio <b>y</b> un archivo con el mismo nombre está en el segundo
+        directorio
+    </dd>
+    <dt>
+        filtrar una coincidencia:
+    </dt>
+    <dd>
+        ocurre cuando los archivos coincidentes se encuentran en el nivel superior <b>y</b> el nombre coincide con el <font         size="+0">excluyente</font>
+    </dd>
+</dl>
+<p>
+    Estas diferencias pueden llevar a diferentes ideas de prueba y, por lo tanto, a diferentes pruebas. Pero las
+    diferencias es más probable que no sean especialmente importantes. Es decir, el tiempo que se dedica a preocuparse
+    sobre si la expresión es correcta, probando alternativas, sería mejor dedicarlo a otras técnicas y a producir más
+    pruebas. Si tiene curiosidad sobre los tipos de diferencias, continúe leyendo.
+</p>
+<p>
+    La segunda personas obtendrá dos conjuntos de ideas de prueba.
+</p>
+<blockquote>
+    <p>
+        ideas de prueba sobre el descubrimiento de una coincidencia:
+    </p>
+    <ul>
+        <li>
+            archivo en el primer directorio, archivo en el segundo directorio (true, true)
+        </li>
+        <li>
+            archivo en el primer directorio, no hay archivo en el segundo directorio (true, false)
+        </li>
+        <li>
+            no hay archivo en el primer directorio, archivo en el segundo directorio (false, true)
+        </li>
+    </ul>
+    <p>
+        ideas de prueba sobre el filtrado de una coincidencia (una vez que se haya descubierto):
+    </p>
+    <ul>
+        <li>
+            los archivos coincidentes se encuentran en el nivel superior, el nombre coincide con el <font             size="+0">excluyente</font> (true, true)
+        </li>
+        <li>
+            los archivos coincidentes se encuentran en el nivel superior, el nombre no coincide con el <font             size="+0">excluyente</font> (true, false)
+        </li>
+        <li>
+            los archivos coincidentes se encuentran en algún nivel inferior, el nombre coincide con el <font             size="+0">excluyente</font> (false, true)
+        </li>
+    </ul>
+</blockquote>
+<p>
+    Imagine que se combinan estos dos conjuntos de ideas de prueba. Los del segundo conjunto sólo importan cuando el
+    archivo está en ambos directorios, así que sólo se pueden combinar con la primera idea del primer conjunto. Esto nos da
+    lo siguiente:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        archivo en el primer directorio
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        archivo en el segundo directorio
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        nivel superior
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        coincide con el excluyente
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Dos de las ideas de prueba sobre el descubrimiento de una coincidencia no aparecen en esta tabla. Podemos añadirlas del
+    modo siguiente:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        archivo en el primer directorio
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        archivo en el segundo directorio
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        nivel superior
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        coincide con el excluyente
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        -
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        -
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        -
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        -
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Las celdas en blanco indican que las columnas son irrelevantes.
+</p>
+<p>
+    Esta tabla ahora es parecida a la tabla de la primera persona. El parecido se puede enfatizar mediante la misma
+    terminología. La tabla de la primera persona tiene una columna denominada "inLower", y la segunda persona tiene una
+    denominada "en el nivel superior". Se pueden convertir invirtiendo el sentido de los valores. De este modo, obtenemos
+    esta versión de la segunda tabla:
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th width="25%">
+                    <p align="center">
+                        appearsInFirst
+                    </p>
+                </th>
+                <th width="25%">
+                    <p align="center">
+                        appearsInSecond
+                    </p>
+                </th>
+                <th width="25%">
+                    <p align="center">
+                        inLower
+                    </p>
+                </th>
+                <th width="25%">
+                    <p align="center">
+                        excluded
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        -
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        -
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        -
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        -
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    Las tres primeras filas son idénticas a la tabla de la primera persona. Las dos últimas difieren sólo en que esta
+    versión no especifica valores que especifica la primera. Esto equivale a una suposición sobre el modo en que se
+    escribió el código. La primera asume una expresión booleana complicada:
+</p>
+<blockquote>
+<pre>
+ if (appearsInFirst && appearsInSecond &&
+    (inLowerLevel || !excluded)) {
+  add to list
+}
+</pre>
+</blockquote>
+<p>
+    La segunda asume expresiones booleanas anidadas:
+</p>
+<blockquote>
+<pre>
+ if (appearsInFirst && appearsInSecond) {
+    // found match.    
+   if (inTopLevel && excluded) {
+// filter it
+    }
+}     
+</pre>
+</blockquote>
+<p>
+    La diferencia entre las dos es que las ideas de prueba de la primera detectan dos anomalías que las ideas de la segunda
+    no detectan, porque esas anomalías no son aplicables.
+</p>
+<ol>
+    <li>
+        En la primera implementación, puede existir un error en los paréntesis. ¿Los paréntesis que rodean a <font         size="+0">||</font> son correctos o incorrectos? Como en la segunda implementación no hay paréntesis ni <font         size="+0">||</font>, la anomalía no puede existir.
+    </li>
+    <li>
+        Los requisitos de prueba de la primera implementación comprueban si la segunda expresión, <font         size="+0">&&</font>debería ser <font size="+0">||</font>. En la segunda implementación, que detalla <font         size="+0">&&</font> se reemplaza con el explícito <font size="+0">&&</font>. No hay ningún error
+        <font size="+0">||</font>-for-<font size="+0">&&</font> , per se. (Puede ocurrir que el anidado sea
+        incorrecto, pero esta técnica no lo soluciona).
+    </li>
+</ol><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

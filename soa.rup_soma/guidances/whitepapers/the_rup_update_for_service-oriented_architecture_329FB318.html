@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Documentaci&oacute;n: La actualizaci&oacute;n de RUP para la arquitectura orientada a servicios</title>
+<meta content="Whitepaper" name="uma.type">
+<meta content="the_rup_update_for_service-oriented_architecture" name="uma.name">
+<meta content="La actualizaci&oacute;n de RUP para la arquitectura orientada a servicios" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "3.271868778372756E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_EiiR4DIdEdqDs_9ORT1Rig", "3.271868778372756E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "3.271868778372756E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "3.271868778372756E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_PYyDkE7OEduvcvbnLvkXhA", "3.271868778372756E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.271868778372756E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Documentaci&oacute;n: La actualizaci&oacute;n de RUP para la arquitectura orientada a servicios</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/whitepaper.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Este documento describe una actualización a Rational Unified Process (RUP) con el objetivo de presentar instrucciones para el arquitecto y el diseñador de software en el desarrollo de un modelo de servicio, un modelo que representa una cartera de servicios que se puede utilizar como base para tareas de implementación que ya están en RUP.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Arquitecto de software</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Descripci&oacute;n principal</th><td class="sectionTableCell"><p>
+    Por <a href="mailto:arsanjan@us.ibm.com">Ali Arsanjani</a>, <a href="mailto:skjohn@us.ibm.com">Simon Johnston</a>, <a href="mailto:jsmith@au1.ibm.com">John Smith</a>, IBM &copy; Copyright 2005, 2006&nbsp;de IBM Corporation. Reservados todos
+    los derechos.
+</p>
+<h3>
+    Temas
+</h3>
+<ul>
+    <li>
+        <a href="#Motivation">Introducción</a>
+    </li>
+    <li>
+        <a href="#overview">Visión general de integración de método</a>
+    </li>
+    <li>
+        <a href="#principles">Principios</a>
+    </li>
+    <li>
+        <a href="#scope">Ámbito</a>
+    </li>
+    <li>
+        <a href="#decisions">Decisiones clave</a>
+    </li>
+    <li>
+        <a href="#acknowledgements">Reconocimientos</a>
+    </li>
+</ul>
+<h3>
+    <a id="Motivation" name="Motivation">Introducción</a>
+</h3>
+<p>
+    Este documento describe la tercera actualización a Rational Unified Process (RUP) centrándose en la arquitectura
+    orientada a servicios (SOA). Esta actualización representa un objetivo importante en las instrucciones de RUP sobre SOA
+    ya que proporciona un método unificado que combina contenido anterior de RUP para SOA con contenido del método <a href="http://www-1.ibm.com/services/us/bcs/html/bcs_index.html" target="_blank">Arquitectura y modelado orientados a
+    servicios</a> (SOMA) de IBM <a href="http://www-1.ibm.com/services/us/bcs/pdf/g510-5060-ibm-service-oriented-modeling-arch.pdf" target="blank">Global
+    Business Services</a> (GBS). El método SOMA ha sido utilizado con gran éxito por IBM en un gran número de compromisos
+    con el cliente, y aunque inicialmente de desarrolló aprovechando al máximo el método IBM Global Services (Método GS)
+    existente, se sintió que en el área de la arquitectura orientada a servicios tanto IBM como nuestros clientes podrían
+    beneficiarse más de un enfoque de método unificado en lugar de disponer de dos métodos independientes. Cuando
+    observamos los dos métodos, resulta claro que los autores tenían objetivos similares en mente y que estructuraron los
+    métodos de forma parecida (de hecho, los dos equipos se reunieron en 2004 e hicieron algunos cambios en ambos métodos
+    para alinear la terminología). Aunque esta alineación no es del todo sorprendente, ya que ambos métodos se centran en
+    actividades programáticas de desarrollo de una solución orientada a servicios, se observó que podría extraerse una
+    infraestructura genérica que pudiese describir ambos métodos en un nivel alto.
+</p>
+<p>
+    Los clientes familiarizados con el RUP clásico puede que deseen revisar el <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/guidances/concepts/developing_service-oriented_solutions_38D3FA86.html" guid="3.300952218919066E-305">Concepto: Desarrollo de soluciones orientadas a servicios</a>.
+</p>
+<p>
+    El personal de IBM familiarizado con SOMA puede que desee revisar la <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/guidances/roadmaps/soa_soma_E6FE4BE1.html" guid="_dI9coExiEdumvs0NuKFubw">Guía básica: Transición desde IBM SOMA</a>.
+</p>
+<h3>
+    <a id="overview" name="overview">Visión general de integración de método</a>
+</h3>
+<p>
+    El siguiente diagrama ilustra la infraestructura mencionada anteriormente. Representa un conjunto neutral metódico de
+    actividades necesarias en todo proceso para el desarrollo de soluciones orientadas a servicios. Ahora, este diagrama se
+    ha simplificado enormemente a partir del contenido de ambos métodos, pero representa nítidamente las actividades clave
+    de los dos métodos: identificación de servicio, especificación de servicio y realización de servicio<em>.</em> En el
+    área de los productos de trabajo, estaba claro que existía mucha alineación conceptual. Se necesitaban productos de
+    trabajo parecidos con roles e interesados similares, pero en algunos casos se ejecutaban de forma distinta; por
+    ejemplo, como modelo UML o como documento de Word. Esto se observaba como una simple alineación que debía hacerse. De
+    nuevo, las influencias principales se corresponden en general con las actividades aunque, por supuesto, la realidad es
+    que todos los requisitos tienen alguna relación con las actividades.
+</p>
+<p align="center">
+    &nbsp;<img height="289" alt="Visión general del método" src="./../../../soa.rup_soma/guidances/whitepapers/./resources/method_overview.png" width="506" />
+</p>
+<p align="center">
+    <font size="-2">Figura: la infraestructura de método de SOA unificado</font>
+</p>
+<p>
+    Se puede expandir un nivel mayor de la infraestructura ya que las actividades aquí identificadas son cubiertas por
+    varias técnicas y es realmente en el área de las técnicas detalladas donde tiene lugar la integración de los métodos.
+    Este documento no proporcionará detalles sobre la integración de técnicas, sin embargo, es importante observar que el
+    desarrollo de un único método coherente introdujo algunos cambios en ambos métodos usados como puntos de partida para
+    garantizar que el lector vea una coherencia en las definiciones de concepto, enfoque, tarea y producto de trabajo. Una
+    decisión, por ejemplo, que proporciona un nivel de coherencia al contenido es utilizar el RUP existente para el
+    producto de trabajo de SOA: el modelo de servicio como origen principal desde el que un gran número de tablas e
+    informes textuales pueden generarse para ofrecer los productos de trabajo esperados por los expertos en SOMA. En
+    general, este cambio suministra el valor de que el modelo de servicio UML tiene semántica adicional y se puede utilizar
+    para desarrollar modelos de especificación y realización de servicio; sin embargo el modelo de servicio debe ampliarse
+    para capturar información adicional necesaria para los productos de trabajo de SOMA existentes; por ejemplo, el
+    Producto de trabajo: Especificación de servicio se ha ampliado con origen y estado de propiedades adicionales que
+    capturan información habitualmente utilizada por las propiedades de SOMA.
+</p>
+<h3>
+    <a id="principles" name="principles">Principios</a>
+</h3>
+<p>
+    El conector se basa de las siguientes ideas:
+</p>
+<ol>
+    <li>
+        <div>
+            Permitir un crecimiento posterior; minimizar o evitar restricciones en adiciones futuras de actividades,
+            productos de trabajo, roles, etc.
+        </div>
+    </li>
+    <li>
+        Mantener la posibilidad de agregar extensiones de propietario en los métodos comerciales actuales o futuros: por
+        ejemplo, extensiones específicas del sector o activos en SOMA; el contenido de propietario también se puede añadir
+        a la infraestructura para sacar el máximo partido al servicio.
+    </li>
+    <li>
+        Hacer converger el cliente y la mensajería interna de IBM
+    </li>
+    <li>
+        El método debe ser agnóstico con las herramientas pero ofrecer directrices de integración para mentores de
+        herramientas, favoreciendo la cartera de IBM
+    </li>
+    <li>
+        Permitir las funciones de las actividades del método en lugar de restringirlas según el método GS o RUP u otros
+        métodos heredados.
+    </li>
+</ol>
+<h3>
+    <a id="scope" name="scope">Ámbito</a>
+</h3>
+<p>
+    Esta actualización a Rational Unified Process (RUP) tiene como objetivo presentar instrucciones para el <i><a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">arquitecto de software</a></i> y el <i><a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">diseñador de software</a></i> en el desarrollo de un <i><a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_service_model_623494B9.html" guid="{E24679B7-19F1-483B-A1F1-578839C43888}">modelo de servicio</a></i>, un modelo que representa una cartera de
+    servicios que puede utilizarse para la implementación de tareas ya existentes en RUP. Nuestro interés consiste también
+    en describir la conexión entre el modelado empresarial y el modelo de servicios. Muchos proyectos de arquitectura
+    orientada a servicios utilizan modelos de proceso empresarial a la hora de entender sus requisitos empresariales,
+    funcionales y los servicios necesarios para dar soporte a un proceso.
+</p>
+<p>
+    El ámbito de esta actualización se trató brevemente en la introducción, pero he aquí un conjunto de requisitos y
+    sentencias de ámbito utilizados para guiar el proyecto.
+</p>
+<ul>
+    <li>
+        <strong>Aprovechar el RUP existente;</strong> en este caso esto quiere decir que allí donde sea posible, deberíamos
+        describir los nuevos productos de trabajo y tareas en relación con los existentes en RUP y no añadir de forma
+        innecesaria nuevos conceptos. Igualmente, deberían añadirse nuevos elementos para que coincidan con al flujo global
+        de RUP.
+    </li>
+    <li>
+        <strong>Esperar futuras funciones de herramienta;</strong> aunque el RUP no depende de herramientas, debería
+        entenderse que no hay ningún motivo para desarrollar contenido en áreas en las que no vayan a existir nunca
+        herramientas y, por tanto, no hay necesidad de no escribir un tema porque la herramienta no está en el mercado
+        aunque podamos esperar que salga pronto.
+    </li>
+    <li>
+        <strong>Integración de otra experiencia de IBM en SOA;</strong> queda claro que otros grupos dentro de IBM tienen
+        experiencia que se puede aprovechar, sacar y añadir a los conceptos, directrices y prácticas que estamos
+        presentando.
+    </li>
+    <li>
+        <strong>Cambios de ámbito en análisis y diseño;</strong> hemos observado la literatura que describe la aplicación
+        de SOA en el diseño y la implementación empresarial de SOA en modelos empresariales, organización operacional e
+        integración empresarial. También hemos estudiado las diferencias que SOA tiende a llevar a cabo en las fases de
+        implementación, despliegue y gestión operativa. Se trata de un ámbito muy amplio para la primera iteración, así que
+        sólo nos hemos centrado en los problemas de arquitectura y diseño.
+    </li>
+    <li>
+        <strong>Ofrecer una base;</strong> se trata de la primera iteración. Esperamos que se puedan añadir instrucciones
+        adicionales en la infraestructura aquí presentada y la conexión realizada entre este contenido y el resto del RUP
+        en iteraciones posteriores.
+    </li>
+    <li>
+        <strong>Observar los cambios que deben realizarse en la base pero cambian en futuros releases;</strong> sabemos que
+        algunos de los conceptos presentados encajarían mejor con terminología u otros cambios menores del RUP básico.
+        Aunque sería deseable cambiar el RUP, esto conllevaría mayores implicaciones y más tiempo.
+    </li>
+</ul>
+<h3>
+    <a id="decisions" name="decisions">Decisiones clave</a>
+</h3>
+<p>
+    Pretendemos que este contenido forme parte del RUP básico en el siguiente release comercial del producto. Mientras
+    tanto, queremos poner el contenido a disposición de los clientes, así que el contenido aquí descrito se empaquetará
+    como un conector de RUP y se pondrá a disposición del cliente en forma de descarga.
+</p>
+<p>
+    En paralelo, se realizarán cambios en la disciplina Modelado empresarial (BM) que realicen una mayor conexión entre BM
+    y SOA; sin embargo, se tomó la decisión de esperar los cambios de BM antes de realizar el conector de SOA. La
+    integración de ambos grupos de cambios se llevará a cabo en el release comercial.
+</p>
+<p>
+    Se incorporarán un número de ideas clave de la <a href="http://www.ibm.com/developerworks/webservices/library/ws-soa-design1">Arquitectura y modelado orientados a
+    servicios (SOMA)</a> de GBS. Aunque no es posible incorporar todas las ideas e instrucciones en SOMA, sobre todo allí
+    donde queda fuera del ámbito establecido, ha sido útil para guiar nuestro trabajo.
+</p>
+<p>
+    Se han introducido algunos principios nuevos, como conceptos que han afectado a la forma de enfocar el resto del
+    contenido, uno de los cuales es el concepto de cartera de servicios y una vista a nivel de toda la empresa de los
+    servicios suministrados en la empresa.
+</p>
+<h3>
+    <a id="acknowledgements" name="acknowledgements">Reconocimientos</a>
+</h3>
+<p>
+    Los autores quisieran dar las gracias a las siguientes personas por su valiosa contribución en este trabajo.A Alan
+    Brown y Sky Matthews por su apoyo y por la revisión del contenido. A Eoin Lane, Steve Graham, Ed Kahan y Grant Larsen
+    por ofrecer no sólo comentarios sobre el trabajo sino muchos ejemplos que nos ayudaron y, a veces, nos dejaron sin
+    respuesta. Quisiéramos dar las gracias también a nuestros colegas que trabajan con esfuerzo en SOMA, Ali Arsanjani,
+    Luba Cherbakov y Kerrie Holley. El material adicional fue incluido en revisión por Maryann Hondo, arquitecta de
+    seguridad de servicios web en IBM.
+</p>
+<p>
+    Por último, nos gustaría dar las gracias a Claus Torp Jensen&nbsp;y a su equipo del&nbsp;Danske Bank por su abierto y
+    franco diálogo sobre la experiencia del banco a la hora de aplicar SOA en el mundo real.&nbsp;&nbsp;
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

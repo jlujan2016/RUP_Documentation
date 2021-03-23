@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concepto: Configuraci&oacute;n del m&eacute;todo</title>
+<meta content="Concept" name="uma.type">
+<meta content="configuration" name="uma.name">
+<meta content="Configuraci&oacute;n del m&eacute;todo" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:3.2329841703462285E-305", path: ["3.2329841703462285E-305", "_uDU1oASEEdq61bDkWg1SXw", "_Tp3S0BTQEdqrUt4zetC1gg", "_d698IBUFEdqrUt4zetC1gg"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "3.2329841703462285E-305", "_uDU1oASEEdq61bDkWg1SXw", "_Tp3S0BTQEdqrUt4zetC1gg", "_d698IBUFEdqrUt4zetC1gg"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "_d698IBUFEdqrUt4zetC1gg"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_d698IBUFEdqrUt4zetC1gg"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concepto: Configuraci&oacute;n del m&eacute;todo</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Una configuración del método especifica la selección de un subconjunto lógico de una biblioteca de métodos.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    Una configuración del método es una recopilación de <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/method_plugin_B417B6A2.html" guid="_0KeEMBUFEdqrUt4zetC1gg">plug-ins
+    de método</a>, <a class="elementLinkWithUserText" href="./../../../core.base_concepts/customcategories/method_package_CD28C7B8.html" guid="_R5Vk4BtpEdqSLrJ4Ij2LVA">paquetes
+    del método</a> y procesos seleccionados (consulte <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/capability_pattern_ECA78A86.html" guid="1.7072348895114264E-305">Concepto: Patrón de posibilidad</a>, <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/delivery_process_CFEBBC78.html" guid="_EhgqwO8MEdmKSqa_gSYthg">Concepto: Proceso de entrega</a>). Una configuración puede exportarse en su propia
+    biblioteca autónoma cuando incluye el cierre transitivo completo de todos los elementos de los que depende. Una
+    configuración del método define un subconjunto lógico de una <a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/method_library_CC7515AF.html" guid="_m8lGkBUFEdqrUt4zetC1gg">biblioteca de métodos</a>.
+</p>
+<h3>
+    Aplicaciones
+</h3>
+<p>
+    Una configuración acostumbra a crearse en torno a uno o más procesos de entrega. Un proceso de entrega puede ser válido
+    para distintas configuraciones del método, pero cada configuración puede incluir o excluir contenido específico para
+    situaciones concretas. Por ejemplo, puede definirse un proceso de entrega para que incluya contenido de esquemas de
+    desarrollo para distintos tipos de sistemas de gestión de base de datos, como el contenido de RDBMS y OODBMS. Cuando
+    utilicen un proceso de entrega de este tipo, los usuarios pueden seleccionar simplemente el tipo de DBMS empleado en su
+    proyecto y, por lo tanto, excluir todo el contenido relativo a otros tipos de DBMS. Pueden conseguirlo seleccionando
+    una configuración que excluya el contenido respectivo o creando una nueva si no existe ya una de ese tipo.<br />
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2005&nbsp;Reservados todos los derechos
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

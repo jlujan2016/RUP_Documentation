@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Ejecuci&oacute;n de casos de uso</title>
+<meta content="Guideline" name="uma.type">
+<meta content="use-case_realization" name="uma.name">
+<meta content="Ejecuci&oacute;n de casos de uso" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "1.6790343052744206E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "1.6790343052744206E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{87EB094F-095B-4981-ACC3-319B3B298641}", "1.6790343052744206E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.6790343052744206E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "1.6790343052744206E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "1.6790343052744206E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "1.6790343052744206E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.6790343052744206E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Ejecuci&oacute;n de casos de uso</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Una ejecución de guiones de uso representa cómo un guión de uso se implementará en términos de objetos de colaboración. En esta directriz se describe su objetivo y la notación UML.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Diseñador</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_capsule_designer_F3E66EDF.html" guid="{86253FE7-0036-4D14-8BD7-C18CE86A5E14}">Diseñador de cápsulas</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">Análisis de caso de uso</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">Diseño de caso de uso</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">Ejecución de casos de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="ejecución de guiones de uso" text="directrices para" name="XE_use-case_realization__guidelines_for" id="XE_use-case_realization__guidelines_for" class="index"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">Introducción</a>
+</h3>
+<p>
+    Una ejecución de guiones de uso representa cómo un guión de uso se implementará en términos de objetos de colaboración.
+    Este artefacto puede tener varias formas. Puede incluir, por ejemplo, una descripción textual (un documento), diagramas
+    de clase de clases participantes y subsistemas, y diagramas de interacción (diagramas de comunicación y de secuencia)
+    que ilustran el flujo de interacciones entre instancias de clase y de subsistema.
+</p>
+<p>
+    En un modelo, una ejecución de guiones de uso se representa como colaboración UML que agrupa los diagramas y otras
+    informaciones (como descripciones textuales) que forman parte de la ejecución de guiones de uso.
+</p>
+<p>
+    La razón para separar la ejecución de guiones de uso de este guión de uso es que, de este modo, los guiones de uso se
+    pueden gestionar separadamente de sus realizaciones. Esto es especialmente importante para proyectos grandes, o
+    familias de sistemas donde los mismos guiones de uso se pueden diseñar diferentemente en diferentes productos dentro de
+    la familia de productos. Imagine el caso de una familia de conmutadores telefónicos que tienen muchos guiones de uso en
+    común, pero que se diseñan e implementan diferentemente de acuerdo con el posicionamiento del producto, el rendimiento
+    y el precio.
+</p>
+<p>
+    Para proyectos más grandes, separar el guión de uso y sus realizaciones permite cambios en el diseño del guión de uso
+    sin afectar al propio guión de uso de línea de base.
+</p>
+<p>
+    Para cada guión de uso en el modelo de guión de uso, existe una ejecución de guiones de uso en el modelo de
+    análisis/diseño con una relación de realización al guión de uso. En el UML esto se muestra como una flecha de guiones,
+    con una punta de flecha como una relación de generalización, que indica que una realización es un tipo de herencia, así
+    como una dependencia (es decir, se podría haber mostrado como dependencia estereotipada con &lt;&lt;realizar&gt;&gt;).
+</p>
+<p class="picturecenter" align="center">
+    <img height="109" alt="Diagrama descrito en el título." src="./../../../core.base_rup/guidances/guidelines/resources/ucrea1.gif" width="291" border="0" />
+</p>
+<p class="picturetext">
+    Una ejecución de guiones de uso en el modelo de análisis/diseño se puede rastrear hasta un guión de uso en el modelo de
+    guión de uso.
+</p>
+<h3>
+    <a id="Class Diagrams" name="Class Diagrams">Diagramas de clase propiedad de una ejecución de guiones de uso</a>
+</h3>
+<p>
+    Para cada ejecución de guiones de uso puede haber uno o más diagramas de clase que ilustren sus clases participantes.
+    La figura siguiente muestra un diagrama de clase para la ejecución del guión de uso <b>Recibir elemento de
+    depósito</b>. Una clase y sus objetos suelen participar en varias ejecuciones de guiones de uso. Es importante durante
+    el diseño coordinar todos los requisitos en una clase y sus objetos que diferentes ejecuciones de guiones de uso pueden
+    tener.
+</p>
+<p class="picturecenter" align="center">
+    <img height="213" alt="un diagrama de comunicación que ilustra una ejecución de guiones de uso"     src="./../../../core.base_rup/guidances/guidelines/resources/md_ucre3.gif" width="328" />
+</p>
+<p class="picturetext">
+    El guión de uso Recibir elemento de depósito y su diagrama de clase.
+</p>
+<h3>
+    <a id="Sequence Diagrams" name="Sequence Diagrams">Diagramas de secuencia y de comunicación propiedad de una ejecución
+    de guiones de uso</a>
+</h3>
+<p>
+    Para cada ejecución de guiones de uso hay uno o más diagramas de interacción que ilustran sus objetos participantes y
+    sus interacciones. Hay dos tipos de diagramas de interacción: diagramas de secuencia y diagramas de comunicación.
+    Expresan una información similar, pero de modos diferentes. Los diagramas de secuencia muestran la secuencia explícita
+    de mensajes y son mejores cuando es importante visualizar el orden de tiempo de los mensajes, mientras que los
+    diagramas de comunicación muestran los enlaces de comunicación entre objetos y son mejores para comprender todos los
+    efectos de un objeto determinado y para el diseño de algoritmos. Consulte los apartados <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/sequence_diagram_AFA76EBB.html" guid="3.211008403369512E-306">Técnica: Diagrama de secuencias</a> y <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/communication_diagram_FFFEA1B5.html" guid="4.5194432001390347E-305">Técnica:
+    Diagrama de comunicación</a> siguientes para obtener más información.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

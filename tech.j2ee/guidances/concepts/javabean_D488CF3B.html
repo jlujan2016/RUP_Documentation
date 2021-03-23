@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Concepto: JavaBean</title>
+<meta content="Concept" name="uma.type">
+<meta content="javabean" name="uma.name">
+<meta content="JavaBean" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "7.536447688812142E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="7.536447688812142E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Concepto: JavaBean</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta directriz se proporciona una visión general de los JavaBeans, un modelo de componentes potente y simple para Java. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Clase de diseño</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introducción
+</h3>
+<p>
+    Los JavaBeans definen un modelo de componentes potente y simple para Java. El objetivo de los JavaBeans es proporcionar
+    unas unidades reutilizables y autosuficientes que los desarrolladores puedan manipular mediante programación o que las
+    herramientas de construcción puedan manipular de forma visual.
+</p>
+<p>
+    Los JavaBeans pueden ser controles de interfaz gráfica de usuario o pueden no tener representación visual alguna. Los
+    controles de interfaz gráfica de usuario en Java habitualmente son JavaBeans para que las herramientas de construcción
+    puedan manipularlos. En J2EE, los JavaBeans sencillos se utilizan habitualmente desde JSP, donde proporcionan una
+    separación de la presentación en HTML y el código Java, que lo contienen los JavaBeans.
+</p>
+<p>
+    Un JavaBean es una clase Java con tres características distintivas:
+</p>
+<ul>
+    <li>
+        <a href="#JavaBean_Properties">Propiedades</a>
+    </li>
+    <li>
+        <a href="#Events_and_Notification">Sucesos</a>
+    </li>
+    <li>
+        Métodos
+    </li>
+</ul>
+<h3>
+    <a id="JavaBean_Properties" name="JavaBean_Properties"></a>Propiedades de los JavaBean
+</h3>
+<p>
+    Otros componentes pueden acceder a las propiedades de un JavaBean. Normalmente, una propiedad corresponde a un valor
+    privado al que se accede mediante los métodos setter y getter, pero también puede ser un valor calculado. La
+    actualización de propiedades puede dar lugar a algunos efectos colaterales.
+</p>
+<p>
+    Los accesores son métodos para acceder a las propiedades. Los accesores pueden ser getter o setter, y siguen los
+    siguientes convenios de denominación:
+</p>
+<p>
+    <font size="+0"><font size="2">void set<i>Nombre_propiedad</i>(<i>Tipo_propiedad</i> valor); // setter<br />
+     <i>Tipo_propiedad</i> get<i>Nombre_propiedad</i>() // getter</font></font>
+</p>
+<p>
+    Para una propiedad booleana, un método getter podría ser:<br />
+    <br />
+     <font size="2">boolean is<i>Nombre_propiedad</i>() // getter para una propiedad booleana</font>
+</p>
+<p>
+    <b>Ejemplo</b>: Bean Customer
+</p>
+<p>
+    A continuación se muestra un ejemplo de un JavaBean simple (Customer) con dos propiedades simples: name y email.
+    Observe que las propiedades se definen mediante parejas de métodos set/get.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama UML mostrando las propiedades de Customer." src="./../../../tech.j2ee/guidances/concepts/resources/customer.gif" />
+    </p>
+    <p>
+        public class Customer {<br />
+         private String name;<br />
+         private String email;<br />
+        <br />
+         public String getName() {<br />
+         return name;<br />
+         }<br />
+        <br />
+         public void setName(String aName) {<br />
+         name = aName;<br />
+         }<br />
+        <br />
+         public String getEmail() {<br />
+         return email;<br />
+         }<br />
+        <br />
+         public void setEmail(String aEmail) {<br />
+         email = aEmail;<br />
+         }<br />
+        <br />
+         }
+    </p>
+</blockquote>
+<p>
+    JavaBeans simples como el del ejemplo se utilizan a menudo en JSP, ya que ofrecen la posibilidad de transportar valores
+    de formularios en páginas web.<br />
+</p>
+<h4>
+    <a id="Indexed_Properties" name="Indexed_Properties"></a>Propiedades indexadas
+</h4>
+<p>
+    Junto con las propiedades simples, que tienen un único valor, una propiedad puede ser un conjunto de valores dentro de
+    una matriz.
+</p>
+<p>
+    Las propiedades indexadas permiten devolver un valor de la matriz con el índice especificado o bien toda la matriz de
+    valores.
+</p>
+<p>
+    Las propiedades indexadas tienen las siguientes firmas:
+</p>
+<blockquote>
+    <p>
+        <font size="2">void set<i>Nombre_propiedad</i>(int índice, <i>Tipo_propiedad</i> valor); // setter indexado<br />
+         <i>Tipo_propiedad</i> getter(int índice); // getter indexado<br />
+         void set<i>Nombre_propiedad</i>(<i>Tipo_propiedad</i> valores[]); // setter de matriz<br />
+         <i>Tipo_propiedad</i>[]get<i>Nombre_propiedad</i>(); // getter de matriz</font>
+    </p>
+</blockquote>
+<h4>
+    <a id="Bound_Properties" name="Bound_Properties"></a>Propiedades vinculadas
+</h4>
+<p>
+    El mecanismo de propiedad vinculada proporciona un aviso un servicio de notificación cuando la propiedad cambia. Los
+    objetos a los que interesa ser avisados del cambio se deben registrar anticipadamente y, cuando la propiedad cambia, se
+    envía una notificación a los objetos registrados. Habitualmente, esta notificación se realiza mediante un <a href="#Events_and_Notification">suceso</a> que el componente desencadena con la propiedad vinculada después de que se
+    haya establecido la propiedad.
+</p>
+<p>
+    Un JavaBean con una propiedad vinculada expone métodos de registro y anulación del registro de los objetos interesados,
+    denominados escuchas. Los desarrolladores pueden definir su propio mecanismo de notificación, sin embargo, las
+    bibliotecas Java proporcionan varias clases de soporte en el paquete <i>java.beans</i> que se utilizan de forma
+    habitual.
+</p>
+<h4>
+    <a id="Constrained_Properties" name="Constrained_Properties"></a>Propiedades restringidas
+</h4>
+<p>
+    Las propiedades restringidas son similares a las propiedades vinculadas, sin embargo, la notificación se da antes que
+    se establezca realmente la propiedad. De esta forma se consigue que quien esté interesado pueda no permitir el cambio
+    de la propiedad mediante el lanzamiento de <i>PropertyVetoException</i>.
+</p>
+<h3>
+    <a id="Events_and_Notification" name="Events_and_Notification"></a>Sucesos y notificación
+</h3>
+<p>
+    Los sucesos son una característica de los JavaBeans que permite que los componentes desarrollados de forma
+    independiente se puedan comunicar entre sí mediante la propagación de la información acerca de su estado. En este
+    modelo, algunos componentes desencadenan sucesos, que otros componentes manejan, desempeñando el rol de escuchas de
+    sucesos.
+</p>
+<p>
+    Para poder dar soporte a este modelo de comunicación, el modelo de componentes de JavaBeans proporciona:
+</p>
+<ul>
+    <li>
+        Propiedades que pueden desencadenar sucesos (propiedades <a href="#Bound_Properties">vinculadas</a> y <a href="#Constrained_Properties">restringidas</a>).
+    </li>
+    <li>
+        Métodos de registro, de forma que los escuchas se puedan registrar por sí mismos.
+    </li>
+    <li>
+        Sucesos, que llevan la información sobre el cambio.
+    </li>
+    <li>
+        Escuchas, que pueden reaccionar en relación con el suceso entregado.
+    </li>
+</ul>
+<p>
+    El siguiente diagrama de clase ilustra estos conceptos para un JavaBean denominado <i>EventSource</i> con una propiedad
+    <i>int</i> simple.
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/concepts/resources/event_example.gif" />
+    </p>
+</blockquote>
+<p>
+    Durante la configuración, determinados escuchas se registran con el JavaBean. Posteriormente, algún otro objeto llama
+    al método <i>setProperty</i>, que iniciará el proceso de notificación mediante la creación del objeto de suceso. El
+    JavaBean EventSource invocará al método <i>propertyChange</i> en todos los escuchas registrados. Los escuchas de
+    sucesos recibirán el suceso, leerán sus valores y reaccionarán en relación con dicho suceso.
+</p>
+<p>
+    En el siguiente diagrama de acontecimientos se muestra el orden en el que se realizan las invocaciones:
+</p>
+<blockquote>
+    <p>
+        <img alt="Diagrama descrito en el texto adjunto." src="./../../../tech.j2ee/guidances/concepts/resources/event_sequ_example.gif" />
+    </p>
+</blockquote>
+<p>
+    La notificación de los escuchas se realiza de forma síncrona en relación con la instancia del JavaBean, que es el
+    origen del suceso, sin embargo el escucha de sucesos puede realizar el proceso de los sucesos en otra hebra.
+</p>
+<h3>
+    <a id="Introspection" name="Introspection"></a>Introspección
+</h3>
+<p>
+    La introspección es un mecanismo de tiempo de ejecución que habilita la detección de <a href="#JavaBean_Properties">propiedades</a>, <a href="#Events_and_Notification">sucesos</a> y métodos de un JavaBean.
+    Los programas y las herramientas de desarrollo utilizan la introspección para no utilizar dependencias codificadas por
+    programa en otros componentes. La introspección se logra mediante la reflexión y un conjunto de convenios de
+    denominación de métodos e interfaces. La clase <i>BeanInfo</i> da soporte a características adicionales de
+    introspección. Los convenios de denominación que se utilizan para la introspección a veces son denominados "patrones de
+    diseño", que no se deberían confundir con la noción de patrón de diseño en el diseño orientado a objetos.
+</p>
+<h3>
+    <a id="Persistence" name="Persistence"></a>Persistencia
+</h3>
+<p>
+    Un JavaBean puede ser persistente mediante un mecanismo de serialización. La serialización puede ser automática o
+    personalizada dependiendo de si el JavaBean implementa una interfaz <i>serializable</i> o <i>externalizable</i>. JDK
+    1.4 presenta las clases <i>XMLEncoder</i> y <i>XMLDecoder</i> que se proporcionan para almacenar instancias de
+    JavaBeans en formato XML.
+</p>
+<h3>
+    <a id="Customization" name="Customization"></a>Personalización
+</h3>
+<p>
+    La apariencia y comportamiento de un JavaBean se puede personalizar en el momento de diseñarlo. Esto es particularmente
+    importante con JavaBeans visuales que se utilizan en interfaces gráficas de usuario. La personalización se lleva a cabo
+    mediante un editor de propiedades o utilizando personalizadores. Los personalizadores proporcionan una interfaz de
+    usuario personalizada para configurar una instancia de JavaBean en el momento de diseñarlo.
+</p>
+<h3>
+    <a id="BeanContext" name="BeanContext"></a>Contexto de bean
+</h3>
+<p>
+    El contexto de bean define una jerarquía de contención lógica que permite que los JavaBeans interroguen a su entorno
+    acerca de posibilidades y servicios. Los mecanismos de contexto de bean proporcionan el soporte para la jerarquía de
+    contención lógica y la búsqueda de servicios que los JavaBeans ofrecen en la jerarquía.
+</p>
+<h3>
+    <a id="JavaBeans_Activation_Framework" name="JavaBeans_Activation_Framework"></a>JavaBeans&trade; Activation Framework (JAF)
+</h3>
+<p>
+    JAF (Java Activation Framework) es una ampliación Java estándar que permite determinar el tipo de un dato,
+    encapsularlo, o descubrir sus operaciones disponibles y crear instancias de un componente de software que corresponde a
+    la operación deseada en el dato.
+</p>
+<h3>
+    <a id="More_Information" name="More_Information"></a>Información adicional
+</h3>
+<p>
+    Consulte la especificación de la API de JavaBeans, versión 1.01 en la página <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> para obtener más información sobre los JavaBeans. Siga los enlaces <b>Docs
+    & Training &gt; Java 2 Platform, Standard Edition &gt; Java 2 SDK, SE v1.3 documentation &gt; JavaBeans &gt;
+    JavaBeans Specification</b>.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.inferdata.com" target="_blank"><img alt="logotipo de Inferdata"                 src="./../../../tech.j2ee/guidances/supportingmaterials/resources/inferdata.gif" width="100" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Contenido desarrollado o parcialmente desarrollado por <a href="http://www.inferdata.com/" target="_blank">Inferdata Corporation</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; Copyright&nbsp;IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

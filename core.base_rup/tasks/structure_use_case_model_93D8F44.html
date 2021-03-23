@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Tarea: Estructurar el modelo de gui&oacute;n de uso</title>
+<meta content="Task" name="uma.type">
+<meta content="structure_use_case_model" name="uma.name">
+<meta content="Estructurar el modelo de gui&oacute;n de uso" name="uma.presentationName">
+<meta content="Discipline:rup_requirements_discipline:Requisitos" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="Analista de sistemas">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_kus_YN7DEdmsEI4YDGX2ag", "{F1F206DF-3AA0-4AC0-92EF-8E4A01B6C5B5}", "{F7D9D038-B184-43CC-9353-15BA154F87B5}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_ydt60dnmEdmO6L4XMImrsA", "{F7D9D038-B184-43CC-9353-15BA154F87B5}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_kus_YN7DEdmsEI4YDGX2ag", "{F1F206DF-3AA0-4AC0-92EF-8E4A01B6C5B5}", "{F7D9D038-B184-43CC-9353-15BA154F87B5}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_26PQIAIMEdq-_NKqZM1EhA", "_ydt60dnmEdmO6L4XMImrsA", "{F7D9D038-B184-43CC-9353-15BA154F87B5}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', true, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="{F7D9D038-B184-43CC-9353-15BA154F87B5}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Tarea: Estructurar el modelo de gui&oacute;n de uso</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">En esta tarea es donde se estructura el modelo de guión de uso para que los requisitos sean más fáciles de entender y mantener. Esto incluye promover la similitud entre los guiones de uso y los actores, e identificar el comportamiento opcional y excepcional.</td>
+</tr>
+<tr>
+<td>Disciplinas: <a href="./../../core.base_rup/disciplines/rup_requirements_discipline_8EEB5209.html" guid="_ydt60dnmEdmO6L4XMImrsA">Requisitos</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Objetivo</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="modelo de guión de uso" text="estructuración de" name="XE_use-case_model__structuring_of" id="XE_use-case_model__structuring_of" class="index"></a><a key="estructuración" text="de modelos de guión de uso" name="XE_structuring___of_use-case_models" id="XE_structuring___of_use-case_models" class="index"></a> 
+<p>
+    El objetivo de esta tarea es:
+</p>
+<ul>
+    <li>
+        Extraer el comportamiento en los casos de uso que se deban considerar casos de uso abstractos. Este tipo de
+        comportamiento puede ser, por ejemplo, comportamiento común, comportamiento opcional, comportamiento excepcional y
+        comportamiento que se va a desarrollar en iteraciones posteriores.
+    </li>
+    <li>
+        Encontrar nuevos actores abstractos que definan roles que estén compartidos por varios actores.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Roles</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Realizador principal:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_system_analyst_C3C9C9AC.html" guid="{F1F206DF-3AA0-4AC0-92EF-8E4A01B6C5B5}">Analista de sistemas</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Otras actividades adicionales que realiza:
+								</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Entradas</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Obligatoria:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">Modelo de caso de uso</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Opcional:
+								</span>
+<ul>
+<li>Ninguno</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Salidas</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_requirements_attributes_EFE5ABAC.html" guid="{D0E2E7A1-4179-470E-AA18-419D5FEA275D}">Atributos de requisitos</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">Especificaciones suplementarias</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_glossary_A5D79A0C.html" guid="{3BF8CC04-9101-47A4-9473-C8205EA588B6}">Glosario</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">Modelo de caso de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Uso del proceso</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/requirements_4EE062EE.html" guid="{38A9C609-9A59-4D03-B835-AA84A716E626}">Requisitos</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/manage_changing_requirements_FF6AC18D.html" guid="{28B39D62-9D73-4254-9CB8-26CFA737D45E}">Gestionar cambios de requisitos</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/structure_use_case_model_5A6AA6D8.html" guid="_IbNc8kohEdqrjq4i3fchvA">Estructurar el modelo de guión de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Pasos</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableSingleCell">
+<div class="stepHeading">Identificar requisitos comunes </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Identify Common Requirements" name="Identify Common Requirements"></a> 
+<p>
+    El primer paso para estructurar el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">Modelo de
+    caso de uso</a> &nbsp;es entender los requisitos que son comunes para más de un <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">Caso de uso</a>
+    . Revise cada caso de uso y tome nota de las similitudes.
+</p>
+<p>
+    Utilice estas notas en los últimos pasos (crear casos de uso incluidos, ampliados y generalizados) para minimizar la
+    redundancia. El objetivo es que los requisitos sean más fáciles de entender y mantener, NO definir una descomposición
+    funcional que se transfiera al diseño.
+</p>
+<p>
+    Los requisitos comunes no se manejan siempre mejor creando nuevos casos de uso . También puede a mover contenido común
+    a otros productos de trabajo de requisitos como, por ejemplo, el <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_glossary_A5D79A0C.html" guid="{3BF8CC04-9101-47A4-9473-C8205EA588B6}">Glosario</a> y
+    las&nbsp;<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">Especificaciones suplementarias</a>, y hacer referencia a éstos según sea
+    necesario en los casos de uso .
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Establecer relaciones de inclusi&oacute;n entre casos de uso  </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="relación de inclusión" text="establecer entre guiones de uso" name="XE_include-relationship__establish_between_use_cases" id="XE_include-relationship__establish_between_use_cases" class="index"></a><a id="Establish Include-Relationships Between Use Cases" name="Establish Include-Relationships Between Use Cases"></a> 
+<p>
+    Si un caso de uso contiene un segmento de comportamiento en el que sólo el resultado, no el método para obtener el
+    resultado, es importante para el resto del caso de uso , este comportamiento se puede descomponer en factores en un
+    nuevo <b>caso de uso de inclusión</b>. El caso de uso original se convierte entonces en el <b>caso de uso de base</b>
+    en una relación de inclusión con el caso de uso de inclusión. Consulte también <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/use-case_model_CC121CF4.html" guid="1.7617672560167394E-305">Directriz: Modelo
+    de caso de uso</a> y <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/include-relationship_5AE2718.html" guid="7.259881398615376E-305">Directriz:
+    Relación de inclusión</a>.
+</p>
+<p>
+    Una relación de inclusión entre dos casos de uso significa que una instancia de caso de uso que sigue a la descripción
+    del caso de uso de base también tiene que seguir a la descripción del caso de uso de inclusión para estar completa.
+</p>
+<p>
+    La relación de inclusión permite aclarar un caso de uso ya que:
+</p>
+<ul>
+    <li>
+        Aísla y encapsula los detalles complejos para que no oculten el significado real del caso de uso .
+    </li>
+    <li>
+        Aumenta la coherencia al incluir el comportamiento contenido en varios casos de uso de base.
+    </li>
+</ul>
+<p>
+    Generalmente, más de un caso de uso debe incluir un caso de uso de inclusión para que valga la pena mantener un caso de
+    uso adicional y la relación de inclusión.
+</p>
+<p>
+    Sólo el caso de uso de base conoce la relación entre los dos casos de uso ; ningún caso de uso de inclusión sabe qué
+    otros casos de uso lo incluyen.
+</p>
+<p>
+    Describa la relación de inclusión indicando brevemente el objetivo de la inclusión, así como la ubicación en el caso de
+    uso de base donde se va a insertar la inclusión.
+</p>
+<p>
+    Cuando describa el flujo de sucesos del caso de uso de base, debe hacer referencia a la inclusión en la ubicación donde
+    se va a insertar la inclusión.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Establecer relaciones de ampliaci&oacute;n entre casos de uso  </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="relación de ampliación" text="establecer entre guiones de uso" name="XE_extend-relationship__establish_between_use_cases" id="XE_extend-relationship__establish_between_use_cases" class="index"></a><a id="Establish Extend-Relationships Between Use Cases" name="Establish Extend-Relationships Between Use Cases"></a> 
+<p>
+    Si un caso de uso tiene segmentos de comportamiento de carácter opcional o excepcional que no añaden nada a la
+    comprensión del objetivo principal del caso de uso , descompóngalos en factores en un nuevo <b>caso de uso de
+    ampliación</b>. El caso de uso original se convierte entonces en un <b>caso de uso de base</b> con el que el caso de
+    uso de ampliación tiene una relación de ampliación. Consulte también <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/use-case_model_CC121CF4.html" guid="1.7617672560167394E-305">Directriz: Modelo
+    de caso de uso</a> y <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/extend-relationship_EF38D814.html" guid="3.679940320411645E-305">Directriz:
+    Relación de ampliación</a>.
+</p>
+<p>
+    En el caso de uso de base se declaran los puntos de ampliación, que definen dónde se pueden realizar las ampliaciones
+    del caso de uso de base. Consulte también <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/use_case_CC89870D.html" guid="4.1983217662266927E-305">Directriz: Caso de
+    uso</a> .
+</p>
+<p>
+    Los subflujos complejos y el comportamiento opcional son los primeros candidatos para crear particiones en casos de uso
+    de ampliación. A menudo, este comportamiento puede ser muy complejo y difícil de describir: incluirlo en el flujo de
+    sucesos de un caso de uso puede hacer que el comportamiento "normal" sea más difícil de ver. Si extrae este
+    comportamiento, aumentará la inteligibilidad del modelo de caso de uso .
+</p>
+<p>
+    Asegúrese de que el flujo de sucesos del caso de uso de base continúa completo e inteligible por sí solo, sin necesidad
+    de ninguna referencia al caso de uso de ampliación.
+</p>
+<p>
+    Sólo el caso de uso de ampliación conoce la relación entre los dos casos de uso . El caso de uso de base sólo sabe que
+    tiene puntos de ampliación, no sabe qué casos de uso de ampliación los están utilizando.
+</p>
+<p>
+    Describa brevemente toda relación de ampliación que defina. Defina las condiciones que se deben cumplir para que se
+    produzca la ampliación. Asegúrese de definir el punto de ampliación en el caso de uso de base en el que se debe
+    insertar la ampliación.
+</p>
+<ul>
+    <li>
+        Si no define condiciones, significa que la ampliación siempre se ejecuta.&nbsp;
+    </li>
+    <li>
+        Si el caso de uso de ampliación tiene varios segmentos de comportamiento que se deben insertar en distintos puntos
+        de ampliación en el caso de uso de base, asegúrese de definir estos segmentos y el punto de ampliación para cada
+        segmento en el caso de uso de base.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Establecer generalizaciones entre casos de uso  </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="generalización de guiones de uso" text="establecer entre guiones de uso" name="XE_use-case-generalization__establish_between_use_cases" id="XE_use-case-generalization__establish_between_use_cases" class="index"></a><a id="Establish Generalizations Between Use Cases" name="Establish Generalizations Between Use Cases"></a> 
+<p>
+    Si dos o más casos de uso tienen similitudes en estructura y comportamiento, puede descomponer en factores el
+    comportamiento común para crear un nuevo <b>caso de uso padre</b>. Los casos de uso originales serán <b>casos de uso
+    hijo</b> en relaciones de generalización con el padre. El caso de uso hijo hereda todo el comportamiento descrito para
+    el caso de uso padre. Consulte también <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/use-case_model_CC121CF4.html" guid="1.7617672560167394E-305">Directriz: Modelo
+    de caso de uso</a> y <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/use-case_generalization_B301F53B.html" guid="3.7061366529594173E-305">Directriz:
+    Generalización de caso de uso</a> .
+</p>
+<p>
+    Una relación de generalización entre dos casos de uso significa que cuando una instancia de caso de uso sigue la
+    descripción de un caso de uso hijo, también tiene que seguir la descripción del caso de uso padre para que se considere
+    completa.
+</p>
+<p>
+    Generalmente, para que valga la pena mantener un caso de uso padre y una relación de generalización con un hijo, deben
+    existir al menos dos casos de uso hijo que hereden del mismo padre. Una excepción es si tiene dos casos de uso donde
+    uno es una especialización del otro, pero se deben poder crear instancias de ambos por separado.
+</p>
+<p>
+    Sólo el caso de uso hijo conoce la relación entre los dos casos de uso ; ningún caso de uso padre sabe qué casos de uso
+    hijo lo especializan.
+</p>
+<p>
+    Para ayudar a los demás a entender el modelo, debe describir brevemente la relación de generalización. Explique por qué
+    ha creado la relación de generalización.
+</p>
+<p>
+    En el flujo de sucesos del caso de uso hijo debe explicar cómo modificará el hijo las secuencias de comportamiento
+    heredado insertando nuevos segmentos de comportamiento.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Establecer generalizaciones entre actores </div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a key="generalización de actor" text="establecer" name="XE_actor-generalization__establishing" id="XE_actor-generalization__establishing" class="index"></a><a id="Establish Generalizations Between Actors" name="Establish Generalizations Between Actors"></a> 
+<p>
+    Los actores tendrán características comunes que debe modelar utilizando generalizaciones de actor. Esta parte del
+    trabajo se ejecuta mejor cuando se han hecho los primeros intentos en un modelo de caso de uso .
+</p>
+<p>
+    Escriba una breve descripción de las generalizaciones de actor e inclúyalas en los diagramas de caso de uso para que
+    sirvan de aclaración.
+</p>
+<p>
+    Para obtener más información, consulte el apartado <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/actor-generalization_2AFC6BE3.html" guid="2.144844789747145E-305">Directriz:
+    Generalización de actor</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Organizar el contendido del caso de uso  en paquetes</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Si el modelo de caso de uso tiene un gran número de elementos, puede organizar los casos de uso en <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_usecase_package_A96DDE65.html" guid="{102E424E-98DE-4F54-B1A0-8F8FD54D6BEE}">paquetes de casos de uso</a> . Consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/use-case_package_1EFD6458.html" guid="9.871865834975133E-306">Directriz: Paquete de casos de uso</a> para obtener más información sobre cuándo debe
+    considerar esta opción.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Evaluar los resultados</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Evaluate Your Results" name="Evaluate Your Results"></a> 
+<p>
+    Debe analizar de forma continua la incorporación de relaciones de inclusión, ampliación y generalización con el cliente
+    y los usuarios, y comprobar que tienen una percepción clara de los casos de uso y los actores, y que están de acuerdo
+    con sus descripciones.
+</p>
+<p>
+    Compruebe el modelo de caso de uso en esta fase para verificar que el trabajo está al día, pero no revise el modelo en
+    detalle. Debe revisar y analizar los casos de uso recién incorporados y las relaciones con el cliente y los usuarios,
+    para que tengan una percepción clara de los casos de uso y estén de acuerdo con sus descripciones.
+</p>
+<p>
+    Para obtener recomendaciones específicas sobre qué debe buscar en esta revisión, consulte <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/checklists/use-case_model_7737BEDD.html" guid="2.490702647892324E-305">Lista de comprobación: Modelo de uso</a>.
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Factores clave</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    To support the review of the <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">Use-Case
+    Model</a>, you may want to generate a use-case model survey report. For more information, see the&nbsp;<a class="elementLinkWithUserText" href="./../../extend.formal_resources/guidances/reports/use-case_model_survey_F909BC71.html" guid="5.732873433575423E-305">Report: Use-Case Model Survey</a>&nbsp;and <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/toolmentors/create_use_case_model_survey_3B750D9E.html" guid="{90C8A4CE-2C86-44D2-929F-8C1AB1AB1363}">Tool Mentor: Creating a Use-Case Model Survey Using Rational SoDA</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">M&aacute;s informaci&oacute;n</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Directrices</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/actor-generalization_2AFC6BE3.html" guid="2.144844789747145E-305">Generalización de actor</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/extend-relationship_EF38D814.html" guid="3.679940320411645E-305">Relación ampliada</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/include-relationship_5AE2718.html" guid="7.259881398615376E-305">Relación de inclusión</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/use_case_CC89870D.html" guid="4.1983217662266927E-305">Caso de uso</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/use-case_generalization_B301F53B.html" guid="3.7061366529594173E-305">Generalización de guión de uso</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/use-case_model_CC121CF4.html" guid="1.7617672560167394E-305">Modelo de caso de uso</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/use-case_package_1EFD6458.html" guid="9.871865834975133E-306">Paquete de guiones de uso</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Instrucciones de la herramienta</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/structure_use_case_model_tm_E88F776C.html" guid="{5A5948AA-9F9A-4752-A337-F0A1845974A7}">Estructuración del modelo de guión de uso utilizando Rational Rose</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/structuring_the_use_case_model_rup_xde_uc_CB274AAC.html" guid="{D0259E78-EE08-4DBC-93AF-F056054B4A05}">Estructuración del modelo de guión de uso utilizando Rational XDE Developer</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_use_cases_69796AD.html" guid="{F07848AD-3E5B-4061-9E6D-E02FB823763C}">Gestión de guiones de uso utilizando Rational Rose y Rational RequisitePro</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/toolmentors/structuring_the_use_case_model_using_rsa_ext_B2062393.html" guid="_buxHMK4MEdqFg48R_ivTjA">Estructuración del modelo de guión de uso mediante Rational Software Architect</a>
+</li>
+<li>
+<a href="./../../tech.rsa/guidances/toolmentors/structuring_the_use_case_model_using_rsd_FC82D8C7.html" guid="_eprZIK4MEdqFg48R_ivTjA">Estructuración del modelo de guión de uso utilizando Rational Systems Developer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

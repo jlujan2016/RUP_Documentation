@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Prueba de unidad</title>
+<meta content="Guideline" name="uma.type">
+<meta content="unit_test" name="uma.name">
+<meta content="Prueba de unidad" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_M6RHkN7IEdm8G6yT7-Wdqw", "{74C60DFE-7221-45F1-BB8B-922A81C5AA98}", "9.315724622037552E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_OKm3oN7UEdmjRZts2c4ZjQ", "{74C60DFE-7221-45F1-BB8B-922A81C5AA98}", "9.315724622037552E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "9.315724622037552E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_M6RHkN7IEdm8G6yT7-Wdqw", "{74C60DFE-7221-45F1-BB8B-922A81C5AA98}", "9.315724622037552E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="9.315724622037552E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Prueba de unidad</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">La prueba de unidades es una prueba detallada de la estructura interna de un módulo de software. En esta directriz se discuten los enfoques de caja blanca y de caja negra para la prueba de unidades.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_developer_test_66FE6BEE.html" guid="{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}">Implementar la prueba de desarrollador</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_developer_test_44109C5.html" guid="{74C60DFE-7221-45F1-BB8B-922A81C5AA98}">Prueba de desarrollador</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="prueba" text="directrices para" name="XE_test__developer_testing__unit_test__guidelines_for" id="XE_test__developer_testing__unit_test__guidelines_for" class="index"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">Introducción</a>
+</h3>
+<p>
+    Las pruebas de unidades se implementan contra los elementos más pequeños que se pueden probar (unidades) del software,
+    e implica probar la estructura interna como por ejemplo los flujos lógicos y de datos, y los comportamientos de función
+    y observables de la unidad. Las pruebas de diseño y de implementación que se centran en la estructura interna de una
+    unidad se basan en el conocimiento de la implementación de la unidad (enfoque de caja blanca). El diseño y la
+    implementación de pruebas para verificar los comportamientos observables de una unidad y sus funciones no se basan en
+    el conocimiento de la implementación y por lo tanto se conocen como enfoque de caja negra. &nbsp;
+</p>
+<p>
+    Ambos enfoques se utilizan para diseñar e implementar diferentes tipos de pruebas (consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/types_of_test_8AB94831.html" guid="1.6037730846300355E-307">Técnica: Tipo de pruebas</a>) necesarios para probar las unidades satisfactoriamente y
+    completamente.&nbsp;
+</p>
+<p>
+    Consulte también el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_case_81FD1D9F.html" guid="1.3981505661923931E-304">Técnica: Guión de
+    prueba</a> para obtener información adicional sobre derivar guiones de prueba para las pruebas de unidad.
+</p>
+<h4>
+    <a id="WhiteBox_Test" name="WhiteBox_Test">Enfoque de prueba de caja blanca</a><a key="prueba de unidad" text="prueba de caja blanca" name="XE_unit_test__white-box_test" id="XE_unit_test__white-box_test" class="index"></a><a key="prueba" text="de unidades" name="XE_test__white-box_test__of_units" id="XE_test__white-box_test__of_units" class="index"></a>
+</h4>
+<p>
+    Un enfoque de prueba de caja blanca debe adoptarse para verificar la estructura interna de una unidad. Teóricamente,
+    debe probar todas las vías de acceso a través del código, pero esto sólo es posible en unidades muy simples. Como
+    mínimo, debe ejercer todas las <b>vías de acceso decisión a decisión</b> (vía de acceso DD) por lo menos una vez porque
+    entonces ejecuta todas las sentencias una vez. Una decisión suele ser una sentencia if, y una vía de acceso DD es una
+    vía de acceso entre dos decisiones.
+</p>
+<p>
+    Para alcanzar este nivel de cobertura de la prueba, se recomienda que escoja los datos de prueba para que todas las
+    decisiones se evalúen de todos los modos posibles.&nbsp;
+</p>
+<p>
+    Utilice herramientas de cobertura de código para identificar el código que no se ha ejercido en las pruebas de caja
+    blanca. Las pruebas de fiabilidad deben efectuarse simultáneamente con las pruebas de caja blanca.
+</p>
+<p>
+    Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_case_81FD1D9F.html" guid="1.3981505661923931E-304">Técnica: Guión de
+    prueba</a> para obtener información adicional&nbsp;
+</p>
+<h4>
+    <a id="BlackBox_Test" name="BlackBox_Test">Enfoque de prueba de caja negra</a><a key="prueba de unidad" text="prueba de caja negra" name="XE_unit_test__black-box_test" id="XE_unit_test__black-box_test" class="index"></a><a key="prueba" text="de unidades" name="XE_test__black-box_test__of_units" id="XE_test__black-box_test__of_units" class="index"></a>
+</h4>
+<p>
+    El objetivo de una prueba de caja negra es verificar la función y el comportamiento observable especificado de la
+    unidad sin conocer <b>cómo</b> implementa la unidad la función y el comportamiento. Las pruebas de caja negra se
+    centran y se basan en la entrada y la salida de la unidad.
+</p>
+<p>
+    Derivar las pruebas de la unidad basándose en el enfoque de caja negra, utiliza los argumentos de entrada y de salida
+    de las operaciones de la unidad, y/o el estado de salida para su evaluación. Por ejemplo, la operación puede incluir un
+    algoritmo (que requiere dos valores como entrada y devolución de una tercera como salida), o iniciar el cambio en el
+    estado de un objeto o de un componente, como añadir o suprimir un registro de base de datos. &nbsp; Deben probarse
+    totalmente. Para probar una operación, debe derivar suficientes guiones de prueba para verificar lo siguiente:
+</p>
+<blockquote>
+    <ul>
+        <li>
+            la operación ha devuelto un valor apropiado para cada valor válido utilizado como entrada
+        </li>
+        <li>
+            la operación ha devuelto un valor apropiado para cada valor no válido utilizado como entrada
+        </li>
+        <li>
+            un estado de salida apropiado ocurre para cada estado de entrada válido
+        </li>
+        <li>
+            un estado de salida apropiado ocurre para cada estado de entrada no válido
+        </li>
+    </ul>
+</blockquote>
+<p>
+    Utilice herramientas de cobertura de código para identificar el código que no se ha ejercido en las pruebas de caja
+    blanca. Las pruebas de fiabilidad deben efectuarse simultáneamente con las pruebas de caja negra.
+</p>
+<p>
+    Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_case_81FD1D9F.html" guid="1.3981505661923931E-304">Técnica: Guión de
+    prueba</a> para obtener información adicional&nbsp;
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="es" xml:lang="es">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directriz: Clase de dise&ntilde;o</title>
+<meta content="Guideline" name="uma.type">
+<meta content="design_class" name="uma.name">
+<meta content="Clase de dise&ntilde;o" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "2.914882084937444E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "2.914882084937444E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{1C78947B-33D4-49AF-9E1F-655E7D74C53F}", "2.914882084937444E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "2.914882084937444E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.914882084937444E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "2.914882084937444E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "2.914882084937444E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "2.914882084937444E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.914882084937444E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Directriz: Clase de dise&ntilde;o</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Una clase de diseño representa un elemento de diseño que se correlacionará directamente con código. En esta directriz se explica cómo desarrollar una clase de Diseño.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Relaciones</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Elementos relacionados</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_test_class_790117F2.html" guid="{1C78947B-33D4-49AF-9E1F-655E7D74C53F}">Clase de comprobabilidad</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Clase de diseño</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Diseñador</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_capsule_designer_F3E66EDF.html" guid="{86253FE7-0036-4D14-8BD7-C18CE86A5E14}">Diseñador de cápsulas</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Descripci&oacute;n principal</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a key="clase" text="directrices para" name="XE_class__guidelines_for" id="XE_class__guidelines_for" class="index"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">Definición</a>
+</h3>
+<p>
+    <a key="clase" text="definición" name="XE_class__definition" id="XE_class__definition" class="index"></a>Una <b>clase
+    de diseño</b> representa una abstracción de una o varias clases en la implementación del sistema; exactamente, a qué
+    corresponde depende del lenguaje de implementación. Por ejemplo, en un lenguaje orientado a objetos como C++, una clase
+    puede corresponder a una clase plana. O en Ada, una clase puede corresponder a un tipo etiquetado definido en la parte
+    visible del paquete.
+</p>
+<p>
+    Las clases definen <b>objetos</b>, que a su vez realizan (implementan) los guiones de uso. Una clase se origina a
+    partir de los requisitos que las ejecuciones de guiones de uso hacen en los objetos necesarios en el sistema, así como
+    cualquier modelo de objeto desarrollado anteriormente.
+</p>
+<p>
+    Si una clase es buena o no depende esencialmente del entorno de implementación. El tamaño adecuado de la clase y sus
+    objetos depende del lenguaje de programación, por ejemplo. Lo que se considera correcta al utilizar Ada puede ser
+    incorrecto cuando utilice Smalltalk. Las clases deben correlacionarse con un fenómeno concreto en el lenguaje de
+    implementación, y las clases deben estructurarse para que la correlación resulte en un código correcto.
+</p>
+<p>
+    Aunque las peculiaridades del lenguaje de implementación afectan al modelo de diseño, debe mantener la estructura de
+    clase fácil de comprender y de modificar. Debe diseñar como como si tuviera clases y encapsulación, incluso si el
+    lenguaje de implementación no lo soporta.
+</p>
+<h3>
+    <a id="operations" name="operations">Operaciones</a>
+</h3>
+<p>
+    El único modo de que los otros objetos puedan acceder o afectar a los atributos o relaciones de un objeto es a través
+    de sus <b>operaciones</b>. Las operaciones de un objeto se definen a través de su clase. Un comportamiento específico
+    se puede llevar a cabo a través de las operaciones, que pueden afectar a los atributos y relaciones que el objeto
+    mantiene y que provoca que se efectúen otras operaciones. Una operación corresponde a una función miembro en C++ o a
+    una función o procedimiento en Ada. El comportamiento que asigne a un objeto depende del rol que tiene en las
+    ejecuciones de guión de uso.
+</p>
+<h4>
+    <a id="parameters" name="parameters">Parámetros</a>
+</h4>
+<p>
+    En la especificación de una operación, los parámetros constituyen <b>parámetros formales</b>. Cada parámetro tiene un
+    nombre y un tipo. Puede utilizar la sintaxis y la semántica del lenguaje de implementación para especificar las
+    operaciones y sus parámetros para que ya estén especificados en el lenguaje de implementación cuando empiece la
+    codificación.
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    En el <b>sistema de máquina de reciclaje</b>, los objetos de una clase <b>Base de recibo</b> mantienen el seguimiento
+    de cuántos elementos de depósito de un cierto tipo ha entregado un cliente. El comportamiento de un objeto de <b>Base
+    de recibo</b> incluye el incremento del número de objetos devueltos. La operación <b>insertItem</b>, que recibe una
+    referencia del elemento manejado, cumple el objetivo.
+</p>
+<p class="picturecenter" align="center">
+    <img height="44" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_clas3.gif" width="210" />
+</p>
+<p class="picturetext">
+    Utilice la sintaxis y la semántica del lenguaje de implementación cuando especifique operaciones.
+</p>
+<h4>
+    <a key="clase" text="operaciones en" name="XE_class__operations_on" id="XE_class__operations_on" class="index"></a><b><a id="Class Operations" name="Class Operations">Operaciones de clase</a></b>
+</h4>
+<p>
+    Una operación casi siempre denota el comportamiento de un objeto. Una operación también puede denotar el comportamiento
+    de una clase, en cuyo caso es una <b>operación de clase</b>. Se puede modelar en el UML definiendo el ámbito de la
+    operación.
+</p>
+<h4>
+    <a id="Operation Visibility" name="Operation Visibility">Visibilidad de la operación</a>
+</h4>
+<p align="left">
+    Las visibilidades siguientes son posibles en una operación:
+</p>
+<ul>
+    <li>
+        <b>Pública</b>: la operación es visible para modelar elementos diferentes de la propia clase.
+    </li>
+    <li>
+        <b>Protegida</b>: la operación es visible sólo para la clase, sus subclases, o para <b>amigos</b> de la clase
+        (dependientes del lenguaje)
+    </li>
+    <li>
+        <b>Privada</b>: la operación sólo es visible para la clase o los <b>amigos</b> de la clase
+    </li>
+    <li>
+        <b>Implementación</b>: la operación es visible sólo dentro de la misma clase.
+    </li>
+</ul>
+<p>
+    La visibilidad <b>pública</b> debe utilizarse <b>con</b> <b>moderación</b>, sólo cuando es necesaria una operación por
+    parte de otra clase.
+</p>
+<p>
+    La visibilidad <b>protegida</b> debe ser el valor <b>por omisión</b>; protege las operaciones del uso de clases
+    externas, lo que promueve el acoplamiento y la encapsulación libres del comportamiento.
+</p>
+<p>
+    La visibilidad <b>privada</b> debe utilizarse en los casos en que desee evitar que las <b>subclases</b> hereden la
+    operación. Esto proporciona un modo de desacoplar las subclases de las superclases y de reducir la necesidad de
+    eliminar o excluir las operaciones heredadas no utilizadas.
+</p>
+<p>
+    La visibilidad de <b>implementación</b> es la <b>más restrictiva</b>; se utiliza en los casos en que sólo la propia
+    clase puede utilizar la operación. Es una <b>variante de la visibilidad Privada</b>, que es adecuada para la mayoría de
+    los casos.
+</p>
+<h3>
+    <a id="States" name="States">Estados</a>
+</h3>
+<p>
+    Un objeto puede reaccionar diferentemente a un mensaje específico dependiendo del estado en que se encuentre; el
+    comportamiento dependiente del estado de un objeto se define con un diagrama de gráfico de estados asociado. Para cada
+    estado que el objeto puede entrar, el diagrama de gráfico de estados describe qué mensajes puede recibir, qué
+    operaciones se desarrollarán y en qué estado estará el objeto a continuación. Consulte el apartado <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/statechart_diagram_640B5D0B.html" guid="1.4528459404144188E-304">Técnica: Diagrama de gráfico de estados</a> para obtener más información.
+</p>
+<h3>
+    <a id="Interaction Between Objects" name="Interaction Between Objects">Colaboraciones</a>
+</h3>
+<p>
+    Una colaboración es un conjunto dinámico de interacciones de objetos en que un conjunto de objetos se comunica enviando
+    <b>mensajes</b> entre si. Enviar un mensaje es directo en Smalltalk; en Ada, se realiza como llamada de subprograma. Un
+    mensaje se envía a un objeto receptor que invoca una operación dentro del objeto. El mensaje indica el nombre de la
+    operación a efectuar, junto con los parámetros requeridos. Cuando se envían mensajes, los <b>parámetros reales</b>
+    (valores para los <b>parámetro</b>s formales) se proporcionan para todos los <b>parámetro</b>s.
+</p>
+<p>
+    La transmisión de mensajes entre objetos en una ejecución de guión de uso y el foco de control que los objetos siguen a
+    medida que se invocan las operaciones, se describen en los diagramas de interacción. Consulte los apartados <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/sequence_diagram_AFA76EBB.html" guid="3.211008403369512E-306">Técnica: Diagrama de secuencias</a> y <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/communication_diagram_FFFEA1B5.html" guid="4.5194432001390347E-305">Técnica:
+    Diagrama de comunicación</a> para obtener información sobre estos diagramas.
+</p>
+<h3>
+    <a key="atributo de clase" text="definición" name="XE_class_attribute__definition" id="XE_class_attribute__definition" class="index"></a><a id="Attributes" name="Attributes"></a><a key="atributo" text="definición para" name="XE_attribute__definition_for" id="XE_attribute__definition_for" class="index"></a>
+</h3>
+<p>
+    Un atributo es una propiedad denominada de un objeto. El nombre de atributo que describe el rol del atributo en
+    relación con el objeto. Un atributo puede tener un valor inicial cuando el objeto se crea.
+</p>
+<p>
+    Debe modelar los atributos sólo si al hacer el objeto resulta más comprensible. Debe modelar la propiedad de un objeto
+    como un atributo sólo si es una propiedad de <b>ese objeto exclusivamente</b>. Si no, debe modelar la propiedad con una
+    relación de asociación o agregación a una clase cuyos objetos representan la propiedad.
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="picturecenter" align="center">
+    <img height="63" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_clas4.gif" width="162" />
+</p>
+<p class="example">
+    Un ejemplo de cómo se modela un atributo. Cada miembro de una familia tiene un nombre y una dirección. Aquí, hemos
+    identificado los atributos <b>mi nombre</b> y <b>dirección de cada</b> del tipo <b>Nombre</b> y <b>Dirección</b>,
+    respectivamente:
+</p>
+<p class="picturecenter" align="center">
+    <img height="45" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_clas5.gif" width="308" />
+</p>
+<p class="example">
+    En este ejemplo, se utiliza una asociación en lugar de un atributo. La propiedad <b>mi nombre</b> es probablemente
+    exclusiva de cada miembro de una familia. Por lo tanto, podemos modelarla como atributo del tipo de atributo
+    <b>Nombre</b>. Una dirección, no obstante, es compartida por todos los miembros de la familia, para que se pueda
+    modelar mejor la asociación entre la clase <b>Miembro de la familia</b> y la clase <b>Dirección</b>.
+</p>
+<p>
+    No siempre es fácil decidir inmediatamente si modelar algún concepto como objeto separado o como un atributo de otro
+    objeto. Tener objetos innecesarios en el modelo de objeto genera documentación innecesaria y sobrecarga en el
+    desarrollo. Por lo tanto, debe establecer ciertos criterios para determinar la importancia de un concepto para el
+    sistema.
+</p>
+<ul>
+    <li>
+        <b>Accesibilidad</b>. Lo que gobierna la elección del objeto ante el atributo no es la importancia del concepto en
+        la vida real, sino la necesidad de acceder a este durante el guión de uso. Si se accede a la unidad con frecuencia,
+        modélela como objeto.
+    </li>
+    <li>
+        <b>Separación durante la ejecución</b>. Modelar conceptos que se manejan separadamente en la ejecución de guiones
+        de uso como objetos.
+    </li>
+    <li>
+        <b>Enlaza con otros conceptos</b>. Los conceptos de modelo se enlazan estrictamente con otros ciertos conceptos y
+        nunca se utilizan separadamente, pero siempre a través de un objeto, como un atributo de objeto.
+    </li>
+    <li>
+        <b>Demandas de relaciones</b>. Si, por cualquier motivo, debe relacionar una unidad de dos direcciones, vuelva a
+        examinar la unidad para ver si debe ser un objeto separado. Dos objetos no pueden asociar la misma instancia de un
+        tipo de atributo.
+    </li>
+    <li>
+        <b>Frecuencia de aparición.</b> Si una unidad existe sólo durante un guión de uso, no la modele como objeto. En
+        cambio, modélela como un atributo de objeto que efectúa el comportamiento en cuestión, o simplemente menciónela en
+        la descripción del objeto afectado.
+    </li>
+    <li>
+        <b>Complejidad</b>. Si un objeto se convierte en demasiado complicado a causa de sus atributos, puede extraer
+        algunos de los atributos en objetos separados. Hágalo con moderación, para no tener demasiados objetos. Por otro
+        lado, las unidades pueden ser muy directas. Por ejemplo, clasificadas como atributos se encuentran (1) las unidades
+        que son suficientemente sencillas para ser soportadas directamente por tipos primitivos del lenguaje de
+        implementación, como enteros en C++, y (2) las unidades que son suficientemente simples para implementarse con los
+        componentes independientes de la aplicación del entorno de implementación como <b>Cadena de caracteres</b> en C++ y
+        Smalltalk-80.
+    </li>
+</ul>
+<p>
+    Probablemente modelará un concepto de forma diferente para diferentes sistemas. En un sistema, el concepto puede ser
+    tan vital que lo modelará como objeto. En otro, puede ser de menor importancia, y lo modelará como atributo de un
+    objeto.
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    Por ejemplo, para unas líneas aéreas desarrollará un sistema que dé soporte a las salidas.
+</p>
+<p class="picturecenter" align="center">
+    <img height="75" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_clas6.gif" width="146" />
+</p>
+<p class="picturetext">
+    Un sistema que da soporte a las salidas. Imagine que el personal del aeropuerto desea un sistema que dé soporte a las
+    salidas. Para cada salida, debe definir la hora de salida, la compañía, y el destino. Puede modelar esto como objeto de
+    una clase <b>Salida</b>, con los atributos <b>hora de salida</b>, <b>compañía</b> y <b>destino</b>.
+</p>
+<p class="example">
+    Si, en cambio, el sistema se desarrolla para una agencia de viajes, la situación será algo distinta.
+</p>
+<p class="picturecenter" align="center">
+    <img height="65" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_clas7.gif" width="391" />
+</p>
+<p class="picturetext">
+    Los destinos de los vuelos forman su propio objeto, <b>Destino</b>.
+</p>
+<p class="example">
+    La hora de salida, la compañía y el destino serán siendo necesarios. Sin embargo, existen otros requisitos, porque la
+    agencia de viajes está interesada en encontrar una salida con un destino concreto. Por lo tanto, debe crear un objeto
+    separado para <b>Destino</b>. Los objetos de <b>Salida</b> y <b>Destino</b> deben conocerse entre si, lo que se
+    habilita con una asociación entre sus clases.
+</p>
+<p>
+    El argumento de la importancia de ciertos conceptos también es válido para determinar qué atributos deben definirse en
+    una clase. La clase <b>Coche</b> sin duda definirá diferentes atributos si sus objetos forman parte de un sistema de
+    registro de vehículos de motor, o bien si los objetos forman parte de un sistema de fabricación de automóviles.
+</p>
+<p>
+    Finalmente, las normas sobre qué representar como objetos y qué representar como atributos no son absolutas.
+    Teóricamente, puede modelarlo todo como objetos, pero esto es muy difícil. Como norma general, un objeto se ve como
+    algo que en algún momento se utiliza independientemente de los otros objetos. Además, no tiene que modelar todas las
+    propiedades de objeto mediante un atributo, sólo las propiedades necesarias para comprender el objeto. No debe modelar
+    los detalles del modelo que sean específicos de la implementación, ya que los manejará mejor el implementador.
+</p>
+<h4>
+    <a key="atributo" text="clase, definición para" name="XE_attribute__class,_definition_for" id="XE_attribute__class,_definition_for" class="index"></a><a id="Class_Attributes" name="Class_Attributes"></a>Atributos de clase
+</h4>
+<p>
+    Un atributo casi siempre denota las propiedades de un objeto. Un atributo también puede denotar las propiedades de una
+    clase, en cuyo caso es un <b>atributo de clase</b>. Se puede modelar en el UML definiendo el ámbito del atributo.
+</p>
+<h4>
+    <a key="unidades externas" text="modelar con atributos" name="XE_external_units__modeling_with_attributes" id="XE_external_units__modeling_with_attributes" class="index"></a><a id="Modeling_External" name="Modeling_External"></a><a key="atributo" text="modelar unidades externas con" name="XE_attribute__modeling_external_units_with" id="XE_attribute__modeling_external_units_with" class="index"></a>
+</h4>
+<p>
+    Un objeto puede encapsular algo cuyo valor puede cambiar sin que el objeto efectúe ningún comportamiento. Puede ser
+    algo que sea realmente realmente una unidad externa, pero que no se ha modelado como actor. Por ejemplo, los límites
+    del sistema pueden escogerse para que contengan alguna forma de equipamiento sensor. El sensor se puede encapsular en
+    un objeto, para que el valor que mide constituya un atributo. Este valor puede cambiar continuamente, o a ciertos
+    intervalos, sin que el objeto se vea afectado por ningún otro objeto en el sistema.
+</p>
+<p class="exampleheading">
+    Ejemplo:
+</p>
+<p class="example">
+    Puede modelar un termómetro como un objeto; el objeto tiene un atributo que representa temperatura, y los valores de
+    cambio en respuesta a los cambios en la temperatura del entorno. Otros objetos pueden solicitar la temperatura actual
+    efectuando una operación en el objeto de termómetro.
+</p>
+<p class="picturecenter" align="center">
+    <img height="45" alt="Diagrama descrito en el texto adjunto." src="./../../../core.base_rup/guidances/guidelines/resources/md_clas8.gif" width="153" />
+</p>
+<p class="picturetext">
+    El valor del atributo <b>temperatura</b> cambia espontáneamente en el objeto <b>Termómetro</b>.
+</p>
+<p>
+    Todavía puede modelar un valor encapsulado que cambia a su manera como atributo ordinario, pero debe describir en la
+    clase del objeto al que cambia <b>espontáneamente</b>.
+</p>
+<h4>
+    <a id="Attribute Visibility" name="Attribute Visibility">Visibilidad del atributo</a>
+</h4>
+<p>
+    La visibilidad del atributo asume uno de los valores siguientes:
+</p>
+<ul>
+    <li>
+        <b>Pública</b>: el atributo es visible desde dentro y fuera del paquete que contiene la clase.
+    </li>
+    <li>
+        <b>Protegida</b>: el atributo es visible sólo para la clase, sus subclases, o para <b>amigos</b> de la clase
+        (dependientes del lenguaje).
+    </li>
+    <li>
+        <b>Privada</b>: el atributo sólo es visible para la clase o los <b>amigos</b> de la clase
+    </li>
+    <li>
+        <b>Implementación</b>: el atributo es visible para la clase.
+    </li>
+</ul>
+<p>
+    La visibilidad <b>pública</b> debe utilizarse <b>con</b> <b>moderación</b>, sólo cuando un atributo es directamente
+    accesible por parte de otra clase. La definición de la visibilidad pública es efectivamente una notación abreviada para
+    definir la visibilidad del atributo como protegido, privado o de implementación, con operaciones públicas asociadas
+    para obtener y establecer el valor del atributo. La visibilidad del atributo público se puede utilizar como una
+    declaración a un generador de código que estas operaciones obtener/establecer deben generar automáticamente, ahorrando
+    tiempo durante la definición de la clase.
+</p>
+<p>
+    La visibilidad <b>protegida</b> debe ser el valor <b>por omisión</b>; protege al atributo del uso de clases externas,
+    lo que promueve el acoplamiento y la encapsulación libres del comportamiento.
+</p>
+<p>
+    La visibilidad <b>privada</b> debe utilizarse en los casos en que desee evitar que las <b>subclases</b> hereden el
+    atributo. Esto proporciona un modo de desacoplar las subclases de las superclases y de reducir la necesidad de eliminar
+    o excluir los atributos heredados no utilizados.
+</p>
+<p>
+    La visibilidad de <b>implementación</b> es la <b>más restrictiva</b>; se utiliza en los casos en que sólo la propia
+    clase puede utilizar el atributo. Es una <b>variante de la visibilidad Privada</b>, que es adecuada para la mayoría de
+    los casos.
+</p>
+<h3>
+    <a id="Internal Structure" name="Internal Structure">Estructura interna</a>
+</h3>
+<p>
+    Algunas clases pueden representar abstracciones complejas y pueden tener una estructura compleja. Cuando se modela una
+    clase, el diseñador puede desear representar los elementos de participación interna y sus relaciones, para asegurarse
+    de que el implementador implementa las colaboraciones que se producen dentro de la clase como corresponde.
+</p>
+<p>
+    En UML 2.0, las clases se definen como <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/structured_class_4BB99B12.html" guid="_yW3E4NnmEdmO6L4XMImrsA">clases
+    estructuradas</a>, con la posibilidad de tener una estructura interna y puertos. Las clases se pueden descomponer en
+    recopilaciones de componentes conectados que se pueden a descomponer, a su vez. Una clase se puede encapsular forzando
+    las comunicaciones desde el exterior para pasar a través de los puertos que obedecen a las interfaces declaradas.
+</p>
+<p>
+    Por lo tanto, además de utilizar los diagramas de clase para representar relaciones de clase (por ej., asociaciones,
+    composiciones y agregaciones) y atributos, es posible que el diseñador desee utilizar un diagrama de estructura
+    compuesta. En este diagrama se proporciona al diseñador un mecanismo para mostrar cómo las instancias de los
+    componentes internos desarrollan sus roles en una instancia de una clave determinada.
+</p>
+<p>
+    Para obtener más información sobre este tema y ejemplos de diagramas de estructura compuesta, consulte <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/structured_class_FF8DB16F.html" guid="1.1994826813129747E-304">Concepto: Clase estructurada</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Reservados todos los derechos.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>
